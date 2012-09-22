@@ -2,13 +2,16 @@ Source: switchboard-plug-about
 Section: x11
 Priority: optional
 Maintainer: Ivo Nunes <ivo@elementaryos.org>
-Build-Depends: debhelper (>= 7.0.50~), cmake, libpantheon-dev, valac-0.16 | valac (>= 0.16)
+Build-Depends: cmake,
+               debhelper (>= 7.0.50~),
+               libpantheon-dev,
+               valac-0.16 | valac (>= 0.16)
 Standards-Version: 3.9.2
 Homepage: https://launchpad.net/pantheon-plugs
 
 Package: switchboard-plug-about
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Description: About plug for Switchboard
  This plug displays information about the system.
