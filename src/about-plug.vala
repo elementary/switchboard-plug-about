@@ -1,0 +1,206 @@
+//  
+//  Copyright (C) 2012 Ivo Nunes
+// 
+//  This program is free software: you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation, either version 3 of the License, or
+//  (at your option) any later version.
+// 
+//  This program is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+// 
+//  You should have received a copy of the GNU General Public License
+//  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+// 
+
+// Main Class, acts pretty much like a Gtk.Window because it's a Gtk.Plug with some magic behind the scenes
+public class AboutPlug : Pantheon.Switchboard.Plug {
+
+    private string arch;
+    private string processor;
+    private string memory;
+    private string graphics;
+    private string hdd;
+
+    public AboutPlug () {
+        setup_info ();
+        setup_ui ();
+    }
+
+    // Gets all the hardware info
+    private void setup_info () {
+
+        // Architecture
+        Process.spawn_command_line_sync("uname -m", out arch);
+        if (arch == "x86_64\n") {
+            arch = "64 bits";
+        } else {
+            arch = "32 bits";
+        }
+
+        // Processor
+        Process.spawn_command_line_sync("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
+        processor = processor.split("\n")[0];
+
+        // Memory
+        Process.spawn_command_line_sync("""awk '/MemTotal/ {printf( "%.2f\n", $2 / 1024 )}' /proc/meminfo""", out memory);
+        memory = memory.replace ("\n", " MB");
+
+        // Graphics
+        Process.spawn_command_line_sync("lspci", out graphics);
+        graphics = graphics.split("VGA")[1];
+        graphics = graphics.split(":")[1];
+        graphics = graphics.split("[")[1];
+        graphics = graphics.split("]")[0];
+
+        // Hard Drive
+        Process.spawn_command_line_sync("df -h", out hdd);
+        foreach (string partition in hdd.split("\n")) {
+            if ("/\n" in partition + "\n") {
+                hdd = partition;
+            }
+        }
+        hdd = hdd.split ("G")[0];
+        hdd = hdd.reverse().split (" ")[0].reverse();
+        hdd = hdd + " GB";
+    }
+
+    // Wires up and configures initial UI
+    private void setup_ui () {
+
+        // Let's make sure this looks like the About dialogs
+        this.get_style_context ().add_class (Granite.STYLE_CLASS_CONTENT_VIEW);
+
+        // Create the section about elementary OS
+        var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 100, 100));
+
+        var title = new Gtk.Label (null);
+        title.set_markup ("<span font=\"Raleway 36\">elementary OS</span>");
+        title.set_alignment (0, 0);
+
+        var version = new Gtk.Label ("Version: 0.2 \"Luna\" (" + arch + ")");
+        version.set_alignment (0, 0);
+
+        var website = new Gtk.Label (null);
+        website.set_markup ("<span foreground=\"blue\">http://elementaryos.org</span>");
+        website.set_alignment (0, 0);
+
+        var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
+        details.pack_start (title, false, false, 0);
+        details.pack_start (version, false, false, 0);
+        details.pack_start (website, false, false, 0);
+
+        var elementary_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+        elementary_box.pack_start (logo, false, false, 0);
+        elementary_box.pack_start (details, false, false, 0);
+
+        // Hardware title 
+        var hardware_title = new Gtk.Label (null);
+        hardware_title.set_markup ("<b><span size=\"x-large\">Hardware:</span></b>");
+        hardware_title.set_alignment (0, 0);
+
+        // Hardware labels
+        var processor_label = new Gtk.Label ("Processor: ");
+        processor_label.set_alignment (1, 0);
+
+        var memory_label = new Gtk.Label ("Memory: ");
+        memory_label.set_alignment (1, 0);
+
+        var graphics_label = new Gtk.Label ("Graphics: ");  
+        graphics_label.set_alignment (1, 0);      
+
+        var hdd_label = new Gtk.Label ("Hard Drive: ");    
+        hdd_label.set_alignment (1, 0); 
+
+        // Hardware info
+        var processor_info = new Gtk.Label (processor);
+        processor_info.set_alignment (0, 0);
+
+        var memory_info = new Gtk.Label (memory);
+        memory_info.set_alignment (0, 0);
+
+        var graphics_info = new Gtk.Label (graphics);
+        graphics_info.set_alignment (0, 0);
+
+        var hdd_info = new Gtk.Label (hdd);
+        hdd_info.set_alignment (0, 0);
+
+        // Hardware grid
+        var hardware_grid = new Gtk.Grid ();
+        hardware_grid.set_row_spacing (1);
+        hardware_grid.attach (hardware_title, 0, 0, 100, 30);
+        hardware_grid.attach (processor_label, 0, 40, 100, 25);
+        hardware_grid.attach (memory_label, 0, 80, 100, 25);
+        hardware_grid.attach (graphics_label, 0, 120, 100, 25);
+        hardware_grid.attach (hdd_label, 0, 160, 100, 25);
+        hardware_grid.attach (processor_info, 100, 40, 100, 25);
+        hardware_grid.attach (memory_info, 100, 80, 100, 25);
+        hardware_grid.attach (graphics_info, 100, 120, 100, 25);
+        hardware_grid.attach (hdd_info, 100, 160, 100, 25);
+
+        // Help button
+        const string HELP_BUTTON_STYLESHEET = """
+            .help_button {
+                border-radius: 200px;
+            }
+        """;
+
+        var help_button = new Gtk.Button.with_label ("?");
+
+        Granite.Widgets.Utils.set_theming (help_button, HELP_BUTTON_STYLESHEET, "help_button",
+                           Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        help_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser http://elementaryos.org/support/answers"); });
+
+        help_button.size_allocate.connect ( (alloc) => {
+            help_button.set_size_request (alloc.height, -1);
+        });
+
+        // Translate button
+        var translate_button = new Gtk.Button.with_label ("Translate");
+        translate_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser http://translations.launchpad.net/elementary"); });
+
+        // Bug button
+        var bug_button = new Gtk.Button.with_label ("Report a Problem");
+        bug_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser http://bugs.launchpad.net/elementary/+filebug"); });
+
+        // Upgrade button
+        var upgrade_button = new Gtk.Button.with_label ("Check for Upgrades");
+        upgrade_button.clicked.connect (() => { Process.spawn_command_line_async("update-manager"); });
+
+        // Create a box for the buttons
+        var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+        button_box.pack_start (help_button, false, false, 0);
+        button_box.pack_start (translate_button, true, true, 0);
+        button_box.pack_start (bug_button, true, true, 0);
+        button_box.pack_start (upgrade_button, true, true, 0);
+
+        // Fit everything in a box
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
+        box.pack_start (elementary_box, false, false, 25);
+        box.pack_start (hardware_grid, false, false, 45);
+        box.pack_end (button_box, false, false, 0);
+
+        // Let's align the box and add it to the plug
+        var halign = new Gtk.Alignment ((float) 0.5, 0, 0, 0);
+        halign.add (box);
+        this.add (halign);
+    }
+}
+
+public static int main (string[] args) {
+
+    Gtk.init (ref args);
+    // Instantiate the plug, which handles
+    // connecting to Switchboard.
+    var plug = new AboutPlug ();
+    // Connect to Switchboard and identify
+    // as "About". (For debugging)
+    plug.register ("About");
+    plug.show_all ();
+    // Start the GTK+ main loop.
+    Gtk.main ();
+    return 0;
+}

@@ -1,0 +1,25 @@
+Source: switchboard-plug-about
+Section: x11
+Priority: optional
+Maintainer: Ivo Nunes <ivo@elementaryos.org>
+Build-Depends: debhelper (>= 7.0.50~), cmake, libpantheon-dev
+Standards-Version: 3.9.2
+Homepage: https://launchpad.net/pantheon-plugs
+
+Package: switchboard-plug-about
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Enhances: switchboard
+Description: About plug for Switchboard
+ This plug displays information about the system.
+
+Package: switchboard-plug-about-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: switchboard-plug-about (= ${binary:Version}), ${misc:Depends}
+Enhances: switchboard-plug-about
+Description: About plug for Switchboard (debugging symbols)
+ This plug displays information about the system.
+ .
+ This package contains debugging symbols for switchboard-plug-about.
