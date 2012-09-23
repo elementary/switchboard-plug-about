@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Ivo Nunes <ivo@elementaryos.org>
 Build-Depends: cmake,
                debhelper (>= 7.0.50~),
+               libgranite-dev,
                libpantheon-dev,
                valac-0.16 | valac (>= 0.16)
 Standards-Version: 3.9.2
