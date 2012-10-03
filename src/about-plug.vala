@@ -41,30 +41,50 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         }
 
         // Processor
-        Process.spawn_command_line_sync("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
-        processor = processor.split("\n")[0];
+        try {
+            Process.spawn_command_line_sync("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
+            processor = processor.split("\n")[0];
+        }
+        catch (GLib.Error e) {
+            processor = "Unknown";
+        }
 
         // Memory
-        Process.spawn_command_line_sync("""awk '/MemTotal/ {printf( "%.2f\n", $2 / 1024 )}' /proc/meminfo""", out memory);
-        memory = memory.replace ("\n", " MB");
+        try {
+            Process.spawn_command_line_sync("""awk '/MemTotal/ {printf( "%.2f\n", $2 / 1024 )}' /proc/meminfo""", out memory);
+            memory = memory.replace ("\n", " MB");
+        }
+        catch (GLib.Error e) {
+            processor = "Unknown";
+        }
 
         // Graphics
-        Process.spawn_command_line_sync("lspci", out graphics);
-        graphics = graphics.split("VGA")[1];
-        graphics = graphics.split(":")[1];
-        graphics = graphics.split("[")[1];
-        graphics = graphics.split("]")[0];
+        try {
+            Process.spawn_command_line_sync("lspci", out graphics);
+            graphics = graphics.split("VGA")[1];
+            graphics = graphics.split(":")[1];
+            graphics = graphics.split("[")[1];
+            graphics = graphics.split("]")[0];
+        }
+        catch (GLib.Error e) {
+            processor = "Unknown";
+        }
 
         // Hard Drive
-        Process.spawn_command_line_sync("df -h", out hdd);
-        foreach (string partition in hdd.split("\n")) {
-            if ("/\n" in partition + "\n") {
-                hdd = partition;
+        try {
+            Process.spawn_command_line_sync("df -h", out hdd);
+            foreach (string partition in hdd.split("\n")) {
+                if ("/\n" in partition + "\n") {
+                    hdd = partition;
+                }
             }
+            hdd = hdd.split ("G")[0];
+            hdd = hdd.reverse().split (" ")[0].reverse();
+            hdd = hdd + " GB";
         }
-        hdd = hdd.split ("G")[0];
-        hdd = hdd.reverse().split (" ")[0].reverse();
-        hdd = hdd + " GB";
+        catch (GLib.Error e) {
+            processor = "Unknown";
+        }
     }
 
     // Wires up and configures initial UI
@@ -80,7 +100,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         title.set_markup ("<span font=\"Raleway 36\">elementary OS</span>");
         title.set_alignment (0, 0);
 
-        var version = new Gtk.Label ("Version: 0.2 \"Luna\" (" + arch + ")");
+        var version = new Gtk.Label (_("Version") + ": 0.2 \"Luna\" (" + arch + ")");
         version.set_alignment (0, 0);
 
         var website = new Gtk.Label (null);
@@ -102,16 +122,16 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         hardware_title.set_alignment (0, 0);
 
         // Hardware labels
-        var processor_label = new Gtk.Label ("Processor: ");
+        var processor_label = new Gtk.Label (_("Processor") + ": ");
         processor_label.set_alignment (1, 0);
 
-        var memory_label = new Gtk.Label ("Memory: ");
+        var memory_label = new Gtk.Label (_("Memory") + ": ");
         memory_label.set_alignment (1, 0);
 
-        var graphics_label = new Gtk.Label ("Graphics: ");  
+        var graphics_label = new Gtk.Label (_("Graphics") + ": ");  
         graphics_label.set_alignment (1, 0);      
 
-        var hdd_label = new Gtk.Label ("Hard Drive: ");    
+        var hdd_label = new Gtk.Label (_("Disk") + ": ");    
         hdd_label.set_alignment (1, 0); 
 
         // Hardware info
@@ -159,15 +179,15 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         });
 
         // Translate button
-        var translate_button = new Gtk.Button.with_label ("Translate");
+        var translate_button = new Gtk.Button.with_label (_("Translate"));
         translate_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser http://translations.launchpad.net/elementary"); });
 
         // Bug button
-        var bug_button = new Gtk.Button.with_label ("Report a Problem");
+        var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
         bug_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser http://bugs.launchpad.net/elementary/+filebug"); });
 
         // Upgrade button
-        var upgrade_button = new Gtk.Button.with_label ("Check for Upgrades");
+        var upgrade_button = new Gtk.Button.with_label (_("Check for Upgrades"));
         upgrade_button.clicked.connect (() => { Process.spawn_command_line_async("update-manager"); });
 
         // Create a box for the buttons
