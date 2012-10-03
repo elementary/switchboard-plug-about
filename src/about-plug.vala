@@ -55,7 +55,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
             memory = memory.replace ("\n", " MB");
         }
         catch (GLib.Error e) {
-            processor = "Unknown";
+            memory = "Unknown";
         }
 
         // Graphics
@@ -67,7 +67,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
             graphics = graphics.split("]")[0];
         }
         catch (GLib.Error e) {
-            processor = "Unknown";
+            graphics = "Unknown";
         }
 
         // Hard Drive
@@ -83,7 +83,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
             hdd = hdd + " GB";
         }
         catch (GLib.Error e) {
-            processor = "Unknown";
+            hdd = "Unknown";
         }
     }
 
