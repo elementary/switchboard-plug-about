@@ -176,11 +176,11 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
         // Translate button
         var translate_button = new Gtk.Button.with_label (_("Translate"));
-        translate_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser http://translations.launchpad.net/elementary"); });
+        translate_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser https://translations.launchpad.net/elementary"); });
 
         // Bug button
         var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
-        bug_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser http://bugs.launchpad.net/elementary/+filebug"); });
+        bug_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser https://bugs.launchpad.net/elementary/+filebug"); });
 
         // Upgrade button
         var upgrade_button = new Gtk.Button.with_label (_("Check for Upgrades"));
