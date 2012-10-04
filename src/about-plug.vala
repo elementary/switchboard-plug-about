@@ -41,50 +41,46 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         }
 
         // Processor
-        try {
-            Process.spawn_command_line_sync("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
+        Process.spawn_command_line_sync("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
+        if ("\n" in processor) {
             processor = processor.split("\n")[0];
-        }
-        catch (GLib.Error e) {
-            processor = "Unknown";
         }
 
         // Memory
-        try {
-            Process.spawn_command_line_sync("""awk '/MemTotal/ {printf( "%.2f\n", $2 / 1024 )}' /proc/meminfo""", out memory);
+        Process.spawn_command_line_sync("""awk '/MemTotal/ {printf( "%.2f\n", $2 / 1024 )}' /proc/meminfo""", out memory);
+        if ("\n" in memory) {
             memory = memory.replace ("\n", " MB");
-        }
-        catch (GLib.Error e) {
-            memory = "Unknown";
         }
 
         // Graphics
-        try {
-            Process.spawn_command_line_sync("lspci", out graphics);
+        Process.spawn_command_line_sync("lspci", out graphics);
+        if ("VGA" in graphics) {
             graphics = graphics.split("VGA")[1];
-            graphics = graphics.split(":")[1];
-            graphics = graphics.split("[")[1];
-            graphics = graphics.split("]")[0];
-        }
-        catch (GLib.Error e) {
+            if (":" in graphics) {
+                graphics = graphics.split(":")[1];
+            } if ("[" in graphics) {
+                graphics = graphics.split("[")[1];
+            } if ("]" in graphics) {
+                graphics = graphics.split("]")[0];
+            } if ("(" in graphics) {
+                graphics = graphics.split("(")[0];
+            } if ("Chipset" in graphics) {
+                graphics = graphics.split("Chipset")[0];
+            }
+        } else {
             graphics = "Unknown";
         }
 
         // Hard Drive
-        try {
-            Process.spawn_command_line_sync("df -h", out hdd);
-            foreach (string partition in hdd.split("\n")) {
-                if ("/\n" in partition + "\n") {
-                    hdd = partition;
-                }
+        Process.spawn_command_line_sync("df -h", out hdd);
+        foreach (string partition in hdd.split("\n")) {
+            if ("/\n" in partition + "\n") {
+                hdd = partition;
             }
-            hdd = hdd.split ("G")[0];
-            hdd = hdd.reverse().split (" ")[0].reverse();
-            hdd = hdd + " GB";
         }
-        catch (GLib.Error e) {
-            hdd = "Unknown";
-        }
+        hdd = hdd.split ("G")[0];
+        hdd = hdd.reverse().split (" ")[0].reverse();
+        hdd = hdd + " GB";
     }
 
     // Wires up and configures initial UI
@@ -131,7 +127,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         var graphics_label = new Gtk.Label (_("Graphics") + ": ");  
         graphics_label.set_alignment (1, 0);      
 
-        var hdd_label = new Gtk.Label (_("Disk") + ": ");    
+        var hdd_label = new Gtk.Label (_("Hard Drive") + ": ");    
         hdd_label.set_alignment (1, 0); 
 
         // Hardware info
