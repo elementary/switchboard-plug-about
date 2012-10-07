@@ -33,7 +33,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
     private void setup_info () {
 
         // Architecture
-        Process.spawn_command_line_sync("uname -m", out arch);
+        Process.spawn_command_line_sync ("uname -m", out arch);
         if (arch == "x86_64\n") {
             arch = "64 bits";
         } else {
@@ -41,45 +41,58 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         }
 
         // Processor
-        Process.spawn_command_line_sync("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
+        Process.spawn_command_line_sync ("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
+        int cores = 0;
+        foreach (string core in processor.split ("\n")) {
+            if (core != "") {
+                cores++;
+            }
+        }
         if ("\n" in processor) {
-            processor = processor.split("\n")[0];
+            processor = processor.split ("\n")[0];
+        } if ("(R)" in processor) {
+            processor = processor.replace ("(R)", "®");
+        } if ("(TM)" in processor) {
+            processor = processor.replace ("(TM)", "™");
+        } if (cores > 1) {
+            processor = processor + " × " + cores.to_string ();
         }
 
         // Memory
-        Process.spawn_command_line_sync("""awk '/MemTotal/ {printf( "%.2f\n", $2 / 1024 )}' /proc/meminfo""", out memory);
+        Process.spawn_command_line_sync ("""awk '/MemTotal/ {print $2 }' /proc/meminfo""", out memory);
         if ("\n" in memory) {
-            memory = memory.replace ("\n", " MB");
+            memory = memory.replace ("\n", "");
         }
+        memory = GLib.format_size (memory.to_uint64 () * 1000);
 
         // Graphics
-        Process.spawn_command_line_sync("lspci", out graphics);
+        Process.spawn_command_line_sync ("lspci", out graphics);
         if ("VGA" in graphics) {
             graphics = graphics.split("VGA")[1];
             if (":" in graphics) {
-                graphics = graphics.split(":")[1];
+                graphics = graphics.split (":")[1];
             } if ("[" in graphics) {
-                graphics = graphics.split("[")[1];
+                graphics = graphics.split ("[")[1];
             } if ("]" in graphics) {
-                graphics = graphics.split("]")[0];
+                graphics = graphics.split ("]")[0];
             } if ("(" in graphics) {
-                graphics = graphics.split("(")[0];
+                graphics = graphics.split ("(")[0];
             } if ("Chipset" in graphics) {
-                graphics = graphics.split("Chipset")[0];
+                graphics = graphics.split ("Chipset")[0];
             }
         } else {
             graphics = "Unknown";
         }
 
         // Hard Drive
-        Process.spawn_command_line_sync("df -h", out hdd);
-        foreach (string partition in hdd.split("\n")) {
+        Process.spawn_command_line_sync ("df -h", out hdd);
+        foreach (string partition in hdd.split ("\n")) {
             if ("/\n" in partition + "\n") {
                 hdd = partition;
             }
         }
         hdd = hdd.split ("G")[0];
-        hdd = hdd.reverse().split (" ")[0].reverse();
+        hdd = hdd.reverse ().split (" ")[0].reverse ();
         hdd = hdd + " GB";
     }
 
@@ -98,10 +111,14 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
         var version = new Gtk.Label (_("Version") + ": 0.2 \"Luna\" (" + arch + ")");
         version.set_alignment (0, 0);
+        version.set_selectable (true);
 
-        var website = new Gtk.Label (null);
-        website.set_markup ("<span foreground=\"blue\">http://elementaryos.org</span>");
-        website.set_alignment (0, 0);
+        var website_label = new Gtk.Label (null);
+        website_label.set_markup ("<span foreground=\"blue\">http://elementaryos.org</span>");
+        website_label.set_alignment (0, 0);
+        var website = new Gtk.EventBox ();
+        website.add (website_label);
+        website.button_press_event.connect (() => { Process.spawn_command_line_async("x-www-browser http://elementaryos.org"); return true; });
 
         var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         details.pack_start (title, false, false, 0);
@@ -133,15 +150,19 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         // Hardware info
         var processor_info = new Gtk.Label (processor);
         processor_info.set_alignment (0, 0);
+        processor_info.set_selectable (true);
 
         var memory_info = new Gtk.Label (memory);
         memory_info.set_alignment (0, 0);
+        memory_info.set_selectable (true);
 
         var graphics_info = new Gtk.Label (graphics);
         graphics_info.set_alignment (0, 0);
+        graphics_info.set_selectable (true);
 
         var hdd_info = new Gtk.Label (hdd);
         hdd_info.set_alignment (0, 0);
+        hdd_info.set_selectable (true);
 
         // Hardware grid
         var hardware_grid = new Gtk.Grid ();
