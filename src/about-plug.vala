@@ -18,6 +18,9 @@
 // Main Class, acts pretty much like a Gtk.Window because it's a Gtk.Plug with some magic behind the scenes
 public class AboutPlug : Pantheon.Switchboard.Plug {
 
+    private string os;
+    private string codename;
+    private string version;
     private string arch;
     private string processor;
     private string memory;
@@ -29,8 +32,54 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         setup_ui ();
     }
 
+    private string capitalize (string str) {
+        var result_builder = new StringBuilder ("");
+
+        weak string i = str;
+
+        bool first = true;
+        while (i.length > 0) {
+            unichar c = i.get_char ();
+            if (first) {
+                result_builder.append_unichar (c.toupper ());
+                first = false;
+            } else {
+                result_builder.append_unichar (c);
+            }
+                     
+            i = i.next_char ();
+        }
+
+        return result_builder.str;
+    }
+
     // Gets all the hardware info
     private void setup_info () {
+
+        // Operating System
+        File file = File.new_for_path("/etc/lsb-release");
+        try {
+            var dis = new DataInputStream (file.read ());
+            string line;
+            // Read lines until end of file (null) is reached
+            while ((line = dis.read_line (null)) != null) {
+                if ("DISTRIB_ID=" in line) {
+                    os = line.replace ("DISTRIB_ID=", "");
+                    if ("\"" in os) {
+                        os = os.replace ("\"", "");
+                    }
+                } else if ("DISTRIB_RELEASE=" in line) {
+                    version = line.replace ("DISTRIB_RELEASE=", "");
+                } else if ("DISTRIB_CODENAME=" in line) {
+                    codename = line.replace ("DISTRIB_CODENAME=", "");
+                    codename = capitalize (codename);
+                }
+            }
+        } catch (Error e) {
+            os = "elementary OS";
+            version = "0.2";
+            codename = "Luna";
+        }
 
         // Architecture
         Process.spawn_command_line_sync ("uname -m", out arch);
@@ -108,10 +157,10 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 100, 100));
 
         var title = new Gtk.Label (null);
-        title.set_markup ("<span font=\"Raleway 36\">elementary OS</span>");
+        title.set_markup ("<span font=\"Raleway 36\">" + os + "</span>");
         title.set_alignment (0, 0);
 
-        var version = new Gtk.Label (_("Version") + ": 0.2 \"Luna\" (" + arch + ")");
+        var version = new Gtk.Label (_("Version") + ": " + version + " \"" + codename + "\" (" + arch + ")");
         version.set_alignment (0, 0);
         version.set_selectable (true);
 
