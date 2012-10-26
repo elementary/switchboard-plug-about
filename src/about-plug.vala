@@ -108,7 +108,6 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         } if (cores > 1) {
             processor = processor + " × " + cores.to_string ();
         }
-        processor.set_line_wrap (false);
 
         // Memory
         Process.spawn_command_line_sync ("""awk '/MemTotal/ {print $2 }' /proc/meminfo""", out memory);
@@ -135,7 +134,6 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         } else {
             graphics = "Unknown";
         }
-        graphics.set_line_wrap (false);
 
         // Hard Drive
         Process.spawn_command_line_sync ("df -h", out hdd);
@@ -205,6 +203,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         processor_info.set_alignment (0, 0);
         processor_info.set_margin_left (6);
         processor_info.set_selectable (true);
+        processor_info.set_line_wrap (false);
 
         var memory_info = new Gtk.Label (memory);
         memory_info.set_alignment (0, 0);
@@ -215,6 +214,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         graphics_info.set_alignment (0, 0);
         graphics_info.set_margin_left (6);
         graphics_info.set_selectable (true);
+        graphics_info.set_line_wrap (false);
 
         var hdd_info = new Gtk.Label (hdd);
         hdd_info.set_alignment (0, 0);
