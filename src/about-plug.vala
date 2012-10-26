@@ -93,7 +93,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         }
         hdd = hdd.split ("G")[0];
         hdd = hdd.reverse ().split (" ")[0].reverse ();
-        hdd = hdd + " GB";
+        hdd = GLib.format_size (hdd.to_uint64 () * 1000000000);
     }
 
     // Wires up and configures initial UI
@@ -131,37 +131,41 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
         // Hardware title 
         var hardware_title = new Gtk.Label (null);
-        hardware_title.set_markup ("<b><span size=\"x-large\">Hardware:</span></b>");
+        hardware_title.set_markup (("<b><span size=\"x-large\">%s</span></b>").printf(_("Hardware:")));
         hardware_title.set_alignment (0, 0);
 
         // Hardware labels
-        var processor_label = new Gtk.Label (_("Processor") + ": ");
+        var processor_label = new Gtk.Label (_("Processor:"));
         processor_label.set_alignment (1, 0);
 
-        var memory_label = new Gtk.Label (_("Memory") + ": ");
+        var memory_label = new Gtk.Label (_("Memory:"));
         memory_label.set_alignment (1, 0);
 
-        var graphics_label = new Gtk.Label (_("Graphics") + ": ");  
-        graphics_label.set_alignment (1, 0);      
+        var graphics_label = new Gtk.Label (_("Graphics:"));
+        graphics_label.set_alignment (1, 0);
 
-        var hdd_label = new Gtk.Label (_("Hard Drive") + ": ");    
+        var hdd_label = new Gtk.Label (_("Hard Drive:"));
         hdd_label.set_alignment (1, 0); 
 
         // Hardware info
         var processor_info = new Gtk.Label (processor);
         processor_info.set_alignment (0, 0);
+        processor_info.set_margin_left (6);
         processor_info.set_selectable (true);
 
         var memory_info = new Gtk.Label (memory);
         memory_info.set_alignment (0, 0);
+        memory_info.set_margin_left (6);
         memory_info.set_selectable (true);
 
         var graphics_info = new Gtk.Label (graphics);
         graphics_info.set_alignment (0, 0);
+        graphics_info.set_margin_left (6);
         graphics_info.set_selectable (true);
 
         var hdd_info = new Gtk.Label (hdd);
         hdd_info.set_alignment (0, 0);
+        hdd_info.set_margin_left (6);
         hdd_info.set_selectable (true);
 
         // Hardware grid
