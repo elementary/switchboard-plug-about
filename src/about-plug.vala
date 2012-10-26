@@ -108,6 +108,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         } if (cores > 1) {
             processor = processor + " × " + cores.to_string ();
         }
+        processor.set_line_wrap (false);
 
         // Memory
         Process.spawn_command_line_sync ("""awk '/MemTotal/ {print $2 }' /proc/meminfo""", out memory);
@@ -134,6 +135,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         } else {
             graphics = "Unknown";
         }
+        graphics.set_line_wrap (false);
 
         // Hard Drive
         Process.spawn_command_line_sync ("df -h", out hdd);
