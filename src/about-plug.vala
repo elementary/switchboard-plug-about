@@ -36,6 +36,8 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         Process.spawn_command_line_sync ("uname -m", out arch);
         if (arch == "x86_64\n") {
             arch = "64 bits";
+        } else if ("arm" in arch) {
+            arch = "ARM";
         } else {
             arch = "32 bits";
         }
