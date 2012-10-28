@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-10-26 19:22+0200\n"
-"PO-Revision-Date: 2012-10-21 14:31+0000\n"
+"PO-Revision-Date: 2012-10-27 11:49+0000\n"
 "Last-Translator: Adrian Widerski <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-10-27 05:28+0000\n"
+"X-Launchpad-Export-Date: 2012-10-28 05:03+0000\n"
 "X-Generator: Launchpad (build 16194)\n"
 
 #: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:112
@@ -24,23 +24,23 @@ msgstr "Wersja"
 #: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:134
 #, c-format
 msgid "Hardware:"
-msgstr ""
+msgstr "Sprzęt:"
 
 #: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:138
 msgid "Processor:"
-msgstr ""
+msgstr "Procesor:"
 
 #: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:141
 msgid "Memory:"
-msgstr ""
+msgstr "Pamięć operacyjna:"
 
 #: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:144
 msgid "Graphics:"
-msgstr ""
+msgstr "Grafika:"
 
 #: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:147
 msgid "Hard Drive:"
-msgstr ""
+msgstr "Dysk twardy:"
 
 #: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:203
 msgid "Translate"
