@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-26 19:22+0200\n"
+"POT-Creation-Date: 2012-11-07 20:37+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,39 +17,43 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:112
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:163
 msgid "Version"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:134
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:185
 #, c-format
 msgid "Hardware:"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:138
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:189
 msgid "Processor:"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:141
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:192
 msgid "Memory:"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:144
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:195
 msgid "Graphics:"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:147
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:198
 msgid "Hard Drive:"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:203
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:256
 msgid "Translate"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:207
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:260
 msgid "Report a Problem"
 msgstr ""
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:211
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:264
 msgid "Check for Upgrades"
+msgstr ""
+
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:303
+msgid "About"
 msgstr ""

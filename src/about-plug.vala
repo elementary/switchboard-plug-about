@@ -298,3 +298,7 @@ public static int main (string[] args) {
     Gtk.main ();
     return 0;
 }
+
+public static void translations () {
+    string plug_name = _("About");
+}
