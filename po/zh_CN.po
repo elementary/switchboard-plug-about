@@ -7,50 +7,54 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-26 19:22+0200\n"
+"POT-Creation-Date: 2012-11-07 21:23+0100\n"
 "PO-Revision-Date: 2012-10-31 12:56+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-01 05:25+0000\n"
-"X-Generator: Launchpad (build 16218)\n"
+"X-Launchpad-Export-Date: 2012-11-08 05:19+0000\n"
+"X-Generator: Launchpad (build 16232)\n"
 "Language: \n"
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:112
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:163
 msgid "Version"
 msgstr "版本"
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:134
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:185
 #, c-format
 msgid "Hardware:"
 msgstr "硬件："
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:138
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:189
 msgid "Processor:"
 msgstr "处理器:"
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:141
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:192
 msgid "Memory:"
 msgstr "内存:"
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:144
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:195
 msgid "Graphics:"
 msgstr "图形:"
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:147
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:198
 msgid "Hard Drive:"
 msgstr "硬盘:"
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:203
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:256
 msgid "Translate"
 msgstr "翻译"
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:207
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:260
 msgid "Report a Problem"
 msgstr "报告问题"
 
-#: /home/noelco/switchboard-plug-about/po/../src//about-plug.vala:211
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:264
 msgid "Check for Upgrades"
 msgstr "检查更新"
+
+#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:303
+msgid "About"
+msgstr ""
