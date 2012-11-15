@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-11-07 21:23+0100\n"
-"PO-Revision-Date: 2012-10-26 22:03+0000\n"
-"Last-Translator: Corentin Noël <tintou@mailoo.org>\n"
+"PO-Revision-Date: 2012-11-14 17:07+0000\n"
+"Last-Translator: Rax <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-08 05:19+0000\n"
-"X-Generator: Launchpad (build 16232)\n"
+"X-Launchpad-Export-Date: 2012-11-15 05:18+0000\n"
+"X-Generator: Launchpad (build 16265)\n"
 "Language: uk\n"
 
 #: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:163
@@ -25,7 +25,7 @@ msgstr "Версія"
 #: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:185
 #, c-format
 msgid "Hardware:"
-msgstr ""
+msgstr "Апаратне забезпечення:"
 
 #: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:189
 msgid "Processor:"
@@ -57,4 +57,4 @@ msgstr "Перевірити на наявність оновлень"
 
 #: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:303
 msgid "About"
-msgstr ""
+msgstr "Про програму"
