@@ -84,11 +84,11 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         // Architecture
         Process.spawn_command_line_sync ("uname -m", out arch);
         if (arch == "x86_64\n") {
-            arch = "64 bits";
+            arch = "64-bit";
         } else if ("arm" in arch) {
             arch = "ARM";
         } else {
-            arch = "32 bits";
+            arch = "32-bit";
         }
 
         // Processor
