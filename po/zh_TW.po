@@ -7,54 +7,54 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-07 21:23+0100\n"
+"POT-Creation-Date: 2012-11-16 03:08-0600\n"
 "PO-Revision-Date: 2012-11-15 13:41+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-11-16 05:01+0000\n"
-"X-Generator: Launchpad (build 16272)\n"
+"X-Launchpad-Export-Date: 2012-11-24 07:43+0000\n"
+"X-Generator: Launchpad (build 16293)\n"
 "Language: \n"
 
-#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:163
+#: /home/codygarver/about-plug/po/../src//about-plug.vala:163
 msgid "Version"
 msgstr "版本"
 
-#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:185
+#: /home/codygarver/about-plug/po/../src//about-plug.vala:185
 #, c-format
 msgid "Hardware:"
 msgstr "硬體："
 
-#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:189
+#: /home/codygarver/about-plug/po/../src//about-plug.vala:189
 msgid "Processor:"
 msgstr "處理器:"
 
-#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:192
+#: /home/codygarver/about-plug/po/../src//about-plug.vala:192
 msgid "Memory:"
 msgstr "記憶體:"
 
-#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:195
+#: /home/codygarver/about-plug/po/../src//about-plug.vala:195
 msgid "Graphics:"
 msgstr "顯示卡:"
 
-#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:198
+#: /home/codygarver/about-plug/po/../src//about-plug.vala:198
 msgid "Hard Drive:"
 msgstr "硬碟機:"
 
-#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:256
+#: /home/codygarver/about-plug/po/../src//about-plug.vala:256
 msgid "Translate"
 msgstr "翻譯"
 
-#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:260
+#: /home/codygarver/about-plug/po/../src//about-plug.vala:260
 msgid "Report a Problem"
 msgstr "回報問題"
 
-#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:264
+#: /home/codygarver/about-plug/po/../src//about-plug.vala:264
 msgid "Check for Upgrades"
 msgstr "檢查更新"
 
-#: /home/jaapz/Programmeren/Elementary/switchboard-plug-about/po/../src//about-plug.vala:303
+#: /home/codygarver/about-plug/po/../src//about-plug.vala:303
 msgid "About"
 msgstr "關於"
