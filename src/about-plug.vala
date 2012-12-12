@@ -156,8 +156,9 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         // Create the section about elementary OS
         var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 100, 100));
 
-        var title = new Gtk.Label (null);
-        title.set_markup ("<span face='Raleway' weight='100' font='36'>" + os + "</span>");
+        var title = new Gtk.Label (os);
+        title.use_markup = false;
+        Granite.Widgets.Utils.apply_text_style_to_label (Granite.TextStyle.TITLE, title);
         title.set_alignment (0, 0);
 
         var version = new Gtk.Label (_("Version") + ": " + version + " \"" + codename + "\" (" + arch + ")");
