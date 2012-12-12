@@ -157,7 +157,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 100, 100));
 
         var title = new Gtk.Label (null);
-        title.set_markup ("<span font=\"Raleway 36\">" + os + "</span>");
+        title.set_markup ("<span face='Raleway' weight='100' font='36'>" + os + "</span>");
         title.set_alignment (0, 0);
 
         var version = new Gtk.Label (_("Version") + ": " + version + " \"" + codename + "\" (" + arch + ")");
