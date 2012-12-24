@@ -151,7 +151,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
     private void setup_ui () {
 
         // Let's make sure this looks like the About dialogs
-        this.get_style_context ().add_class (Granite.STYLE_CLASS_CONTENT_VIEW);
+        this.get_style_context ().add_class (Granite.StyleClass.CONTENT_VIEW);
 
         // Create the section about elementary OS
         var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 100, 100));
