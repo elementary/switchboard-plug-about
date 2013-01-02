@@ -1,60 +1,60 @@
-# Italian translation for switchboard-plug-about
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
-# This file is distributed under the same license as the switchboard-plug-about package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Mohammad Zali <mohamadzali@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: switchboard-plug-about\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-11-16 03:08-0600\n"
-"PO-Revision-Date: 2013-01-02 00:08+0000\n"
-"Last-Translator: Mattia Buscema <mattia.buscema@hotmail.it>\n"
-"Language-Team: Italian <it@li.org>\n"
+"PO-Revision-Date: 2013-01-01 16:31+0000\n"
+"Last-Translator: Mohammad Zali <mohamadzali@gmail.com>\n"
+"Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2013-01-02 05:11+0000\n"
 "X-Generator: Launchpad (build 16378)\n"
-"Language: it\n"
+"Language: \n"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:163
 msgid "Version"
-msgstr "Versione"
+msgstr "نسخه"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:185
 #, c-format
 msgid "Hardware:"
-msgstr "Hardware:"
+msgstr "سخت‌افزار:"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:189
 msgid "Processor:"
-msgstr "Processore:"
+msgstr "پردازنده:"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:192
 msgid "Memory:"
-msgstr "Memoria:"
+msgstr "حافظه:"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:195
 msgid "Graphics:"
-msgstr "Scheda Video:"
+msgstr "گرافیک:"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:198
 msgid "Hard Drive:"
-msgstr "Disco rigido:"
+msgstr "هارد دیسک:"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:256
 msgid "Translate"
-msgstr "Traduci"
+msgstr "ترجمه"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:260
 msgid "Report a Problem"
-msgstr "Segnala un Problema"
+msgstr "گزارش ایراد"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:264
 msgid "Check for Upgrades"
-msgstr "Controlla Aggiornamenti"
+msgstr "بررسی به روزرسانی"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:303
 msgid "About"
-msgstr "Informazioni"
+msgstr "درباره"
