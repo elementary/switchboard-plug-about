@@ -247,7 +247,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         Granite.Widgets.Utils.set_theming (help_button, HELP_BUTTON_STYLESHEET, "help_button",
                            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        help_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser http://elementaryos.org/support/answers"); });
+        help_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser http://elementaryos.org/support"); });
 
         help_button.size_allocate.connect ( (alloc) => {
             help_button.set_size_request (alloc.height, -1);
