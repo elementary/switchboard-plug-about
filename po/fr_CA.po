@@ -1,16 +1,16 @@
-# English (Canada) translation for switchboard-plug-about
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# French (Canada) translation for switchboard-plug-about
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the switchboard-plug-about package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-11-16 03:08-0600\n"
-"PO-Revision-Date: 2013-01-07 06:09+0000\n"
+"PO-Revision-Date: 2013-01-07 06:08+0000\n"
 "Last-Translator: Nicolas Boivin <nakilio@live.ca>\n"
-"Language-Team: English (Canada) <en_CA@li.org>\n"
+"Language-Team: French (Canada) <fr_CA@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,36 +24,36 @@ msgstr "Version"
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:185
 #, c-format
 msgid "Hardware:"
-msgstr "Hardware:"
+msgstr "Matériel :"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:189
 msgid "Processor:"
-msgstr "Processor:"
+msgstr "Processeur :"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:192
 msgid "Memory:"
-msgstr "Memory:"
+msgstr "Mémoire vive :"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:195
 msgid "Graphics:"
-msgstr "Graphics:"
+msgstr "Carte graphique :"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:198
 msgid "Hard Drive:"
-msgstr "Hard Drive:"
+msgstr "Disque dur :"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:256
 msgid "Translate"
-msgstr "Translate"
+msgstr "Traduire"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:260
 msgid "Report a Problem"
-msgstr "Report a Problem"
+msgstr "Signaler un problème"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:264
 msgid "Check for Upgrades"
-msgstr "Check for Upgrades"
+msgstr "Vérifier la présence de Mises à jour"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:303
 msgid "About"
-msgstr "About"
+msgstr "À propos"
