@@ -170,7 +170,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         website_label.set_alignment (0, 0);
         var website = new Gtk.EventBox ();
         website.add (website_label);
-        website.button_press_event.connect (() => { Process.spawn_command_line_async("x-www-browser http://elementaryos.org"); return true; });
+        website.button_press_event.connect (() => { AppInfo.launch_default_for_uri ("http://elementaryos.org", null); return true; });
 
         var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         details.pack_start (title, false, false, 0);
@@ -247,7 +247,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         Granite.Widgets.Utils.set_theming (help_button, HELP_BUTTON_STYLESHEET, "help_button",
                            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        help_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser http://elementaryos.org/support"); });
+        help_button.clicked.connect (() => { AppInfo.launch_default_for_uri ("http://elementaryos.org/support", null); });
 
         help_button.size_allocate.connect ( (alloc) => {
             help_button.set_size_request (alloc.height, -1);
@@ -255,11 +255,11 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
         // Translate button
         var translate_button = new Gtk.Button.with_label (_("Translate"));
-        translate_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser https://translations.launchpad.net/elementary"); });
+        translate_button.clicked.connect (() => { AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null); });
 
         // Bug button
         var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
-        bug_button.clicked.connect (() => { Process.spawn_command_line_async("x-www-browser https://bugs.launchpad.net/elementary/+filebug"); });
+        bug_button.clicked.connect (() => { AppInfo.launch_default_for_uri ("https://bugs.launchpad.net/elementary/+filebug", null); });
 
         // Upgrade button
         var upgrade_button = new Gtk.Button.with_label (_("Check for Upgrades"));
