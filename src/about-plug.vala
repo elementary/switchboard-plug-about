@@ -118,19 +118,16 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
         // Graphics
         Process.spawn_command_line_sync ("lspci", out graphics);
-        if ("VGA" in graphics) {
-            graphics = graphics.split("VGA")[1];
-            if (":" in graphics) {
-                graphics = graphics.split (":")[1];
-            } if ("[" in graphics) {
-                graphics = graphics.split ("[")[1];
-            } if ("]" in graphics) {
-                graphics = graphics.split ("]")[0];
-            } if ("(" in graphics) {
-                graphics = graphics.split ("(")[0];
-            } if ("Chipset" in graphics) {
-                graphics = graphics.split ("Chipset")[0];
+        if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
+            string[] lines = graphics.split("\n");
+            foreach (var s in lines) {
+                if("VGA" in s)
+                    graphics = s;
             }
+            //at this line we have the correct line of lspci
+            //as the line has now the form of "00:01.0 VGA compatible controller:Info"
+            //and we want the <Info> part, we split with ":" and get the 3rd part
+            graphics = graphics.split(":")[2];
         } else {
             graphics = "Unknown";
         }
