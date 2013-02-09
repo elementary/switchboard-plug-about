@@ -120,16 +120,28 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         Process.spawn_command_line_sync ("lspci", out graphics);
         if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
             string[] lines = graphics.split("\n");
+            graphics=_("Unknown");
             foreach (var s in lines) {
                 if("VGA" in s)
                     graphics = s;
             }
-            //at this line we have the correct line of lspci
-            //as the line has now the form of "00:01.0 VGA compatible controller:Info"
-            //and we want the <Info> part, we split with ":" and get the 3rd part
-            graphics = graphics.split(":")[2];
-        } else {
-            graphics = "Unknown";
+            if(graphics != _("Unknown")) {
+                //at this line we have the correct line of lspci
+                //as the line has now the form of "00:01.0 VGA compatible controller:Info"
+                //and we want the <Info> part, we split with ":" and get the 3rd part
+                lines = graphics.split(":");
+                if (lines.length == 3)
+                    graphics = lines[2];
+                else if (lines.length > 3) {
+                    graphics = lines[2];
+                    for (int i = 2; i < lines.length; i++) {
+                        graphics = graphics + lines[i];
+                    }
+                else {
+                    warning("Unknown lspci format: "+lines[0]+lines[1]);
+                    graphics = _("Unknown"); //set back to unkown
+                }
+            }
         }
 
         // Hard Drive
