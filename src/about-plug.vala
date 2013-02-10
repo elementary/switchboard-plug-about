@@ -277,6 +277,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         box.pack_start (elementary_box, false, false, 25);
         box.pack_start (hardware_grid, false, false, 50);
         box.pack_end (button_box, false, false, 0);
+        box.set_margin_bottom(20);
 
         // Let's align the box and add it to the plug
         var halign = new Gtk.Alignment ((float) 0.5, 0, 0, 0);
