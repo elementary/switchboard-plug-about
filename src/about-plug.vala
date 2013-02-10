@@ -19,6 +19,8 @@
 public class AboutPlug : Pantheon.Switchboard.Plug {
 
     private string os;
+    private string website;
+    private string bugtracker;
     private string codename;
     private string version;
     private string arch;
@@ -76,10 +78,13 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
                 }
             }
         } catch (Error e) {
+            warning("Couldn't read lsb-release file, assuming elementary OS 0.2");
             os = "elementary OS";
             version = "0.2";
             codename = "Luna";
         }
+
+        //Bugtracker and e-mail
 
         // Architecture
         Process.spawn_command_line_sync ("uname -m", out arch);
