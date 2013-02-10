@@ -292,12 +292,13 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
         // Fit everything in a box
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-        box.pack_start (elementary_box, false, false, 25);
-        box.pack_start (hardware_grid, false, false, 50);
+        box.pack_start (elementary_box, false, false, 20);
+        box.pack_start (hardware_grid, false, false, 40);
         box.pack_end (button_box, false, false, 0);
+        box.set_margin_bottom(20);
 
         // Let's align the box and add it to the plug
-        var halign = new Gtk.Alignment ((float) 0.5, 0, 0, 0);
+        var halign = new Gtk.Alignment ((float) 0.5, 0, 0, 1);
         halign.add (box);
         this.add (halign);
     }
