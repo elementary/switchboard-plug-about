@@ -109,12 +109,8 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
             processor = processor + " × " + cores.to_string ();
         }
 
-        // Memory
-        Process.spawn_command_line_sync ("""awk '/MemTotal/ {print $2 }' /proc/meminfo""", out memory);
-        if ("\n" in memory) {
-            memory = memory.replace ("\n", "");
-        }
-        memory = GLib.format_size (memory.to_uint64 () * 1000);
+        //Memory
+        memory = GLib.format_size (get_mem_info_for("MemTotal:") * 1000);
 
         // Graphics
         Process.spawn_command_line_sync ("lspci", out graphics);
@@ -283,6 +279,24 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         halign.add (box);
         this.add (halign);
     }
+}
+
+private uint64 get_mem_info_for(string name) {
+    uint64 result = 0;
+    File file = File.new_for_path ("/proc/meminfo");
+    DataInputStream dis = new DataInputStream (file.read());
+    string? line;
+    while ((line = dis.read_line (null,null)) != null) {
+        if(line.has_prefix(name)) {
+            //get the kb-part of the string with witespaces
+            line = line.substring(name.length,
+                                  line.last_index_of("kB")-name.length);
+            result = uint64.parse(line.strip());
+            break;
+        }
+   }
+
+    return result;
 }
 
 public static int main (string[] args) {
