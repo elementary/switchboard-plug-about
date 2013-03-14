@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-11-16 03:08-0600\n"
-"PO-Revision-Date: 2013-03-10 15:24+0000\n"
+"PO-Revision-Date: 2013-03-13 10:13+0000\n"
 "Last-Translator: Dani Pratomo <Unknown>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-03-11 05:32+0000\n"
-"X-Generator: Launchpad (build 16523)\n"
+"X-Launchpad-Export-Date: 2013-03-14 05:23+0000\n"
+"X-Generator: Launchpad (build 16532)\n"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:163
 msgid "Version"
@@ -24,7 +24,7 @@ msgstr "Versi"
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:185
 #, c-format
 msgid "Hardware:"
-msgstr "Perangkat keras:"
+msgstr "Perangkat Keras:"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:189
 msgid "Processor:"
