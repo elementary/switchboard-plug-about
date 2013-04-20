@@ -19,6 +19,8 @@
 public class AboutPlug : Pantheon.Switchboard.Plug {
 
     private string os;
+    private string website_url;
+    private string bugtracker_url;
     private string codename;
     private string version;
     private string arch;
@@ -76,9 +78,34 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
                 }
             }
         } catch (Error e) {
+            warning("Couldn't read lsb-release file, assuming elementary OS 0.2");
             os = "elementary OS";
             version = "0.2";
             codename = "Luna";
+        }
+
+        //Bugtracker and website
+        file = File.new_for_path("/etc/dpkg/origins/"+os);
+        bugtracker_url = "";
+        website_url = "";
+        try {
+            var dis = new DataInputStream (file.read ());
+            string line;
+            // Read lines until end of file (null) is reached
+            while ((line = dis.read_line (null)) != null) {
+                if (line.has_prefix("Vendor-URL:")) {
+                    website_url = line.replace ("Vendor-URL: ", "");
+                } else if (line.has_prefix("Bugs:")) {
+                    bugtracker_url = line.replace ("Bugs: ", "");
+                }
+            }
+        } catch (Error e) {
+            warning(e.message);
+            warning("Couldn't find bugtracker/website, using elementary OS defaults");
+            if (website_url == "")
+                website_url = "http://elementaryos.org";
+            if (bugtracker_url == "")
+                bugtracker_url = "https://bugs.launchpad.net/elementary/+filebug";
         }
 
         // Architecture
@@ -180,11 +207,11 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         version.set_selectable (true);
 
         var website_label = new Gtk.Label (null);
-        website_label.set_markup ("<span foreground=\"blue\">http://elementaryos.org</span>");
+        website_label.set_markup ("<span foreground=\"blue\">"+website_url+"</span>");
         website_label.set_alignment (0, 0);
         var website = new Gtk.EventBox ();
         website.add (website_label);
-        website.button_press_event.connect (() => { AppInfo.launch_default_for_uri ("http://elementaryos.org", null); return true; });
+        website.button_press_event.connect (() => { AppInfo.launch_default_for_uri (website_url, null); return true; });
 
         var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         details.pack_start (title, false, false, 0);
@@ -273,7 +300,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
         // Bug button
         var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
-        bug_button.clicked.connect (() => { AppInfo.launch_default_for_uri ("https://bugs.launchpad.net/elementary/+filebug", null); });
+        bug_button.clicked.connect (() => { AppInfo.launch_default_for_uri (bugtracker_url, null); });
 
         // Upgrade button
         var upgrade_button = new Gtk.Button.with_label (_("Check for Upgrades"));
