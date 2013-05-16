@@ -1,19 +1,19 @@
-//  
+//
 //  Copyright (C) 2012 Ivo Nunes
-// 
+//
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
 //  the Free Software Foundation, either version 3 of the License, or
 //  (at your option) any later version.
-// 
+//
 //  This program is distributed in the hope that it will be useful,
 //  but WITHOUT ANY WARRANTY; without even the implied warranty of
 //  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //  GNU General Public License for more details.
-// 
+//
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
-// 
+//
 
 // Main Class, acts pretty much like a Gtk.Window because it's a Gtk.Plug with some magic behind the scenes
 public class AboutPlug : Pantheon.Switchboard.Plug {
@@ -48,7 +48,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
             } else {
                 result_builder.append_unichar (c);
             }
-                     
+
             i = i.next_char ();
         }
 
@@ -222,7 +222,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         elementary_box.pack_start (logo, false, false, 0);
         elementary_box.pack_start (details, false, false, 0);
 
-        // Hardware title 
+        // Hardware title
         var hardware_title = new Gtk.Label (null);
         hardware_title.set_markup (("<b><span size=\"x-large\">%s</span></b>").printf(_("Hardware:")));
         hardware_title.set_alignment (0, 0);
@@ -238,7 +238,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         graphics_label.set_alignment (1, 0);
 
         var hdd_label = new Gtk.Label (_("Hard Drive:"));
-        hdd_label.set_alignment (1, 0); 
+        hdd_label.set_alignment (1, 0);
 
         // Hardware info
         var processor_info = new Gtk.Label (processor);
