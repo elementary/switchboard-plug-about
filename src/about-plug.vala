@@ -157,11 +157,10 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
         // Hard Drive
         Process.spawn_command_line_sync ("df", out hdd);
-        Regex device_regex = /^\/dev\/.*$/;
         Regex hdd_size_regex = /^\S+\s+(\d+)\s+\d+/;
         uint64 hdd_size = 0;
         foreach (string partition in hdd.split ("\n")) {
-            if (device_regex.match(partition)) {
+            if (partition.has_prefix ("/dev/")) {
                 MatchInfo match_info;
                 if (hdd_size_regex.match (partition, 0, out match_info)) {
                     hdd_size += match_info.fetch (1).to_uint64 ();
