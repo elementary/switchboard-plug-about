@@ -167,7 +167,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
                 }
             }
         }
-        hdd = GLib.format_size (hdd_size * 1000);
+        hdd = GLib.format_size (hdd_size * 1024, FormatSizeFlags.IEC_UNITS);
     }
 
     private string get_graphics_from_string(string graphics) {
