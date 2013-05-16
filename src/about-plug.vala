@@ -137,7 +137,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         }
 
         //Memory
-        memory = GLib.format_size (get_mem_info_for("MemTotal:") * 1000);
+        memory = GLib.format_size (get_mem_info_for("MemTotal:") * 1024, FormatSizeFlags.IEC_UNITS);
 
         // Graphics
         Process.spawn_command_line_sync ("lspci", out graphics);
@@ -156,15 +156,19 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         }
 
         // Hard Drive
-        Process.spawn_command_line_sync ("df -h", out hdd);
+        Process.spawn_command_line_sync ("df", out hdd);
+        Regex device_regex = /^\/dev\/.*$/;
+        Regex hdd_size_regex = /^\S+\s+(\d+)\s+\d+/;
+        uint64 hdd_size = 0;
         foreach (string partition in hdd.split ("\n")) {
-            if ("/\n" in partition + "\n") {
-                hdd = partition;
+            if (device_regex.match(partition)) {
+                MatchInfo match_info;
+                if (hdd_size_regex.match (partition, 0, out match_info)) {
+                    hdd_size += match_info.fetch (1).to_uint64 ();
+                }
             }
         }
-        hdd = hdd.split ("G")[0];
-        hdd = hdd.reverse ().split (" ")[0].reverse ();
-        hdd = GLib.format_size (hdd.to_uint64 () * 1000000000);
+        hdd = GLib.format_size (hdd_size * 1000);
     }
 
     private string get_graphics_from_string(string graphics) {
