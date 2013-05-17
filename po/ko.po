@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2012-11-16 03:08-0600\n"
-"PO-Revision-Date: 2013-05-01 13:47+0000\n"
+"PO-Revision-Date: 2013-05-17 03:59+0000\n"
 "Last-Translator: LeeHoseok <neochain@naver.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-02 05:52+0000\n"
-"X-Generator: Launchpad (build 16580)\n"
+"X-Launchpad-Export-Date: 2013-05-17 05:54+0000\n"
+"X-Generator: Launchpad (build 16626)\n"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:163
 msgid "Version"
@@ -36,7 +36,7 @@ msgstr "메모리:"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:195
 msgid "Graphics:"
-msgstr ""
+msgstr "그래픽:"
 
 #: /home/codygarver/about-plug/po/../src//about-plug.vala:198
 msgid "Hard Drive:"
