@@ -240,7 +240,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         var graphics_label = new Gtk.Label (_("Graphics:"));
         graphics_label.set_alignment (1, 0);
 
-        var hdd_label = new Gtk.Label (_("Hard Drive:"));
+        var hdd_label = new Gtk.Label (_("Storage:"));
         hdd_label.set_alignment (1, 0);
 
         // Hardware info
