@@ -188,7 +188,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
             warning("Unknown lspci format: "+parts[0]+parts[1]);
             result = _("Unknown"); //set back to unkown
         }
-        return result;
+        return result.strip ();
     }
 
     // Wires up and configures initial UI
