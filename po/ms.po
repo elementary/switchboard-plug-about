@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-18 13:48+0300\n"
-"PO-Revision-Date: 2012-11-16 05:08+0000\n"
-"Last-Translator: Nicholas Ng <nbliang@gmail.com>\n"
+"PO-Revision-Date: 2013-06-18 08:38+0000\n"
+"Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-19 05:33+0000\n"
-"X-Generator: Launchpad (build 16626)\n"
+"X-Launchpad-Export-Date: 2013-06-19 05:46+0000\n"
+"X-Generator: Launchpad (build 16673)\n"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:189
 msgid "Unknown"
-msgstr ""
+msgstr "Tidak diketahui"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:208
 msgid "Version"
@@ -44,7 +44,7 @@ msgstr "Grafik"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:243
 msgid "Storage:"
-msgstr ""
+msgstr "Storan:"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:301
 msgid "Translate"
