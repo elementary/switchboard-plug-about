@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-18 13:48+0300\n"
-"PO-Revision-Date: 2013-05-17 03:59+0000\n"
-"Last-Translator: LeeHoseok <neochain@naver.com>\n"
+"PO-Revision-Date: 2013-06-27 14:35+0000\n"
+"Last-Translator: Kyu-Seok Yang <lklk9110@gmail.com>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-19 05:33+0000\n"
-"X-Generator: Launchpad (build 16626)\n"
+"X-Launchpad-Export-Date: 2013-06-28 06:18+0000\n"
+"X-Generator: Launchpad (build 16681)\n"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:189
 msgid "Unknown"
-msgstr ""
+msgstr "알 수 없음"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:208
 msgid "Version"
@@ -44,7 +44,7 @@ msgstr "그래픽:"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:243
 msgid "Storage:"
-msgstr ""
+msgstr "저장소:"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:301
 msgid "Translate"
