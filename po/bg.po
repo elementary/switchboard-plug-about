@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-18 13:48+0300\n"
-"PO-Revision-Date: 2013-01-05 11:10+0000\n"
-"Last-Translator: Veselin Trakiyski <Unknown>\n"
+"PO-Revision-Date: 2013-06-29 20:00+0000\n"
+"Last-Translator: KVG <kvgkvg@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-19 05:33+0000\n"
-"X-Generator: Launchpad (build 16626)\n"
+"X-Launchpad-Export-Date: 2013-06-30 06:34+0000\n"
+"X-Generator: Launchpad (build 16692)\n"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:189
 msgid "Unknown"
@@ -44,7 +44,7 @@ msgstr "Графики:"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:243
 msgid "Storage:"
-msgstr ""
+msgstr "Място за съхранение"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:301
 msgid "Translate"
