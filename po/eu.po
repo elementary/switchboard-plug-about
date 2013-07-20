@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-18 13:48+0300\n"
-"PO-Revision-Date: 2012-11-15 21:07+0000\n"
-"Last-Translator: Ibai Oihanguren <Unknown>\n"
+"PO-Revision-Date: 2013-07-19 15:02+0000\n"
+"Last-Translator: Ibai Oihanguren Sala <Unknown>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-19 05:33+0000\n"
-"X-Generator: Launchpad (build 16626)\n"
+"X-Launchpad-Export-Date: 2013-07-20 06:19+0000\n"
+"X-Generator: Launchpad (build 16696)\n"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:189
 msgid "Unknown"
-msgstr ""
+msgstr "Ezezaguna"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:208
 msgid "Version"
@@ -44,7 +44,7 @@ msgstr "Grafikoak:"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:243
 msgid "Storage:"
-msgstr ""
+msgstr "Biltegiratzea:"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:301
 msgid "Translate"
