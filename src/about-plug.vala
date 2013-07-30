@@ -208,7 +208,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         version.set_selectable (true);
 
         var website_label = new Gtk.Label (null);
-        website_label.set_markup ("<a href=\"http://elementaryos.org/\">http://elementaryos.org/</a>");
+        website_label.set_markup ("<a href=\"http://elementaryos.org/\">http://elementaryos.org</a>");
         website_label.set_alignment (0, 0);
 
         var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
