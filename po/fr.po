@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-05-18 13:48+0300\n"
-"PO-Revision-Date: 2012-11-22 03:03+0000\n"
-"Last-Translator: pmd <Unknown>\n"
+"PO-Revision-Date: 2013-07-29 20:32+0000\n"
+"Last-Translator: Nikos <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-19 05:33+0000\n"
-"X-Generator: Launchpad (build 16626)\n"
+"X-Launchpad-Export-Date: 2013-07-30 04:56+0000\n"
+"X-Generator: Launchpad (build 16700)\n"
 "Language: fr\n"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:189
 msgid "Unknown"
-msgstr ""
+msgstr "Inconnu"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:208
 msgid "Version"
@@ -45,7 +45,7 @@ msgstr "Carte graphique :"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:243
 msgid "Storage:"
-msgstr ""
+msgstr "Stockage :"
 
 #: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:301
 msgid "Translate"
