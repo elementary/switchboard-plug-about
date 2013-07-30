@@ -93,9 +93,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
             string line;
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
-                if (line.has_prefix("Vendor-URL:")) {
-                    website_url = line.replace ("Vendor-URL: ", "");
-                } else if (line.has_prefix("Bugs:")) {
+                 if (line.has_prefix("Bugs:")) {
                     bugtracker_url = line.replace ("Bugs: ", "");
                 }
             }
@@ -210,16 +208,13 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         version.set_selectable (true);
 
         var website_label = new Gtk.Label (null);
-        website_label.set_markup ("<span foreground=\"blue\">"+website_url+"</span>");
+        website_label.set_markup ("<a href=\"http://elementaryos.org/\">http://elementaryos.org</a>");
         website_label.set_alignment (0, 0);
-        var website = new Gtk.EventBox ();
-        website.add (website_label);
-        website.button_press_event.connect (() => { AppInfo.launch_default_for_uri (website_url, null); return true; });
 
         var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         details.pack_start (title, false, false, 0);
         details.pack_start (version, false, false, 0);
-        details.pack_start (website, false, false, 0);
+        details.pack_start (website_label, false, false, 0);
 
         var elementary_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
         elementary_box.pack_start (logo, false, false, 0);
