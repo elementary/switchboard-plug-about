@@ -93,9 +93,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
             string line;
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
-                if (line.has_prefix("Vendor-URL:")) {
-                    website_url = line.replace ("Vendor-URL: ", "");
-                } else if (line.has_prefix("Bugs:")) {
+                 if (line.has_prefix("Bugs:")) {
                     bugtracker_url = line.replace ("Bugs: ", "");
                 }
             }
@@ -210,7 +208,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         version.set_selectable (true);
 
         var website_label = new Gtk.Label (null);
-        website_label.set_markup ("<a href=\"+website_url+\">http://elementaryos.org/</a>");
+        website_label.set_markup ("<a href=\"http://elementaryos.org/\">http://elementaryos.org/</a>");
         website_label.set_alignment (0, 0);
 
         var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
