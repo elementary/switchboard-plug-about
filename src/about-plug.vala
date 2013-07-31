@@ -28,6 +28,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
     private string memory;
     private string graphics;
     private string hdd;
+    private string ubuntu_base;
 
     public AboutPlug () {
         setup_info ();
@@ -59,6 +60,9 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
     private void setup_info () {
 
         // Operating System
+        
+        ubuntu_base = "Ubuntu 12.04";
+        
         File file = File.new_for_path("/etc/lsb-release");
         try {
             var dis = new DataInputStream (file.read ());
@@ -82,6 +86,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
             os = "elementary OS";
             version = "0.2";
             codename = "Luna";
+            ubuntu_base = "Ubuntu 12.04";
         }
 
         //Bugtracker and website
@@ -203,9 +208,13 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         Granite.Widgets.Utils.apply_text_style_to_label (Granite.TextStyle.TITLE, title);
         title.set_alignment (0, 0);
 
-        var version = new Gtk.Label (_("Version") + ": " + version + " \"" + codename + "\" (" + arch + ")");
+        var version = new Gtk.Label (_("Version") + ": " + version + " \"" + codename + "\" ( " + arch + " )");
         version.set_alignment (0, 0);
         version.set_selectable (true);
+        
+        var based_off = new Gtk.Label (_("Based off") + ": " + ubuntu_base);
+        based_off.set_alignment (0, 0);
+        based_off.set_selectable (true);
 
         var website_label = new Gtk.Label (null);
         website_label.set_markup ("<a href=\"http://elementaryos.org/\">http://elementaryos.org</a>");
@@ -214,6 +223,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         details.pack_start (title, false, false, 0);
         details.pack_start (version, false, false, 0);
+        details.pack_start (based_off, false, false, 0);
         details.pack_start (website_label, false, false, 0);
 
         var elementary_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
