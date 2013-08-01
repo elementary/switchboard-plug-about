@@ -238,7 +238,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         version.set_selectable (true);
         
         if (is_ubuntu != null) {
-            based_off = new Gtk.Label (_("Based off") + ": " + is_ubuntu + " " + ubuntu_version + " ( \"" + ubuntu_codename + "\" )");
+            based_off = new Gtk.Label (_("Built on") + ": " + is_ubuntu + " " + ubuntu_version + " ( \"" + ubuntu_codename + "\" )");
             based_off.set_alignment (0, 0);
             based_off.set_selectable (true);
         }
