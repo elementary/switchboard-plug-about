@@ -28,6 +28,13 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
     private string memory;
     private string graphics;
     private string hdd;
+    private string ubuntu_base;
+    private Gtk.Label based_off;
+    
+    
+    private string is_ubuntu;
+    private string ubuntu_version;
+    private string ubuntu_codename;
 
     public AboutPlug () {
         setup_info ();
@@ -59,6 +66,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
     private void setup_info () {
 
         // Operating System
+        
         File file = File.new_for_path("/etc/lsb-release");
         try {
             var dis = new DataInputStream (file.read ());
@@ -82,6 +90,28 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
             os = "elementary OS";
             version = "0.2";
             codename = "Luna";
+        }
+        
+        file = File.new_for_path("/etc/upstream-release/lsb-release");
+        try {
+            var dis = new DataInputStream (file.read ());
+            string line;
+            // Read lines until end of file (null) is reached
+            while ((line = dis.read_line (null)) != null) {
+                if ("DISTRIB_ID=" in line) {
+                    is_ubuntu = line.replace ("DISTRIB_ID=", "");
+                } else if ("DISTRIB_RELEASE=" in line) {
+                    ubuntu_version = line.replace ("DISTRIB_RELEASE=", "");
+                } else if ("DISTRIB_CODENAME=" in line) {
+                    ubuntu_codename = line.replace ("DISTRIB_CODENAME=", "");
+                    ubuntu_codename = capitalize (ubuntu_codename);
+                }
+            }
+        } catch (Error e) {
+            warning("Couldn't read upstream lsb-release file, assuming none");
+            is_ubuntu = null;
+            ubuntu_version = null;
+            ubuntu_codename = null;
         }
 
         //Bugtracker and website
@@ -203,9 +233,15 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         Granite.Widgets.Utils.apply_text_style_to_label (Granite.TextStyle.TITLE, title);
         title.set_alignment (0, 0);
 
-        var version = new Gtk.Label (_("Version") + ": " + version + " \"" + codename + "\" (" + arch + ")");
+        var version = new Gtk.Label (_("Version") + ": " + version + " \"" + codename + "\" ( " + arch + " )");
         version.set_alignment (0, 0);
         version.set_selectable (true);
+        
+        if (is_ubuntu != null) {
+            based_off = new Gtk.Label (_("Based off") + ": " + is_ubuntu + " " + ubuntu_version + " ( \"" + ubuntu_codename + "\" )");
+            based_off.set_alignment (0, 0);
+            based_off.set_selectable (true);
+        }
 
         var website_label = new Gtk.Label (null);
         website_label.set_markup ("<a href=\"http://elementaryos.org/\">http://elementaryos.org</a>");
@@ -214,6 +250,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         details.pack_start (title, false, false, 0);
         details.pack_start (version, false, false, 0);
+        details.pack_start (based_off, false, false, 0);
         details.pack_start (website_label, false, false, 0);
 
         var elementary_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
