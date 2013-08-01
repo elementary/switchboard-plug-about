@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-01 12:23-0500\n"
+"POT-Creation-Date: 2013-08-01 15:23-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,51 +17,51 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:217
+#: /home/codygarver/a/po/../src//about-plug.vala:217
 msgid "Unknown"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:236
+#: /home/codygarver/a/po/../src//about-plug.vala:236
 msgid "Version"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:241
-msgid "Based off"
+#: /home/codygarver/a/po/../src//about-plug.vala:241
+msgid "Built on"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:262
+#: /home/codygarver/a/po/../src//about-plug.vala:262
 #, c-format
 msgid "Hardware:"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:266
+#: /home/codygarver/a/po/../src//about-plug.vala:266
 msgid "Processor:"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:269
+#: /home/codygarver/a/po/../src//about-plug.vala:269
 msgid "Memory:"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:272
+#: /home/codygarver/a/po/../src//about-plug.vala:272
 msgid "Graphics:"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:275
+#: /home/codygarver/a/po/../src//about-plug.vala:275
 msgid "Storage:"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:333
+#: /home/codygarver/a/po/../src//about-plug.vala:333
 msgid "Translate"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:337
+#: /home/codygarver/a/po/../src//about-plug.vala:337
 msgid "Report a Problem"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:341
+#: /home/codygarver/a/po/../src//about-plug.vala:341
 msgid "Check for Upgrades"
 msgstr ""
 
-#: /home/codygarver/switchboard-plug-about/po/../src//about-plug.vala:399
+#: /home/codygarver/a/po/../src//about-plug.vala:399
 msgid "About"
 msgstr ""
