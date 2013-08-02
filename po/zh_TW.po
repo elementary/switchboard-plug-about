@@ -7,57 +7,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-18 13:48+0300\n"
+"POT-Creation-Date: 2013-08-01 15:23-0500\n"
 "PO-Revision-Date: 2013-06-23 07:06+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-24 04:58+0000\n"
-"X-Generator: Launchpad (build 16677)\n"
+"X-Launchpad-Export-Date: 2013-08-02 05:57+0000\n"
+"X-Generator: Launchpad (build 16718)\n"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:189
+#: /home/codygarver/a/po/../src//about-plug.vala:217
 msgid "Unknown"
 msgstr "未知"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:208
+#: /home/codygarver/a/po/../src//about-plug.vala:236
 msgid "Version"
 msgstr "版本"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:230
+#: /home/codygarver/a/po/../src//about-plug.vala:241
+msgid "Built on"
+msgstr ""
+
+#: /home/codygarver/a/po/../src//about-plug.vala:262
 #, c-format
 msgid "Hardware:"
 msgstr "硬體："
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:234
+#: /home/codygarver/a/po/../src//about-plug.vala:266
 msgid "Processor:"
 msgstr "處理器:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:237
+#: /home/codygarver/a/po/../src//about-plug.vala:269
 msgid "Memory:"
 msgstr "記憶體:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:240
+#: /home/codygarver/a/po/../src//about-plug.vala:272
 msgid "Graphics:"
 msgstr "顯示卡:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:243
+#: /home/codygarver/a/po/../src//about-plug.vala:275
 msgid "Storage:"
 msgstr "儲存空間："
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:301
+#: /home/codygarver/a/po/../src//about-plug.vala:333
 msgid "Translate"
 msgstr "翻譯"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:305
+#: /home/codygarver/a/po/../src//about-plug.vala:337
 msgid "Report a Problem"
 msgstr "回報問題"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:309
+#: /home/codygarver/a/po/../src//about-plug.vala:341
 msgid "Check for Upgrades"
 msgstr "檢查更新"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:367
+#: /home/codygarver/a/po/../src//about-plug.vala:399
 msgid "About"
 msgstr "關於"

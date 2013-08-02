@@ -7,57 +7,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-18 13:48+0300\n"
+"POT-Creation-Date: 2013-08-01 15:23-0500\n"
 "PO-Revision-Date: 2013-05-31 15:58+0000\n"
 "Last-Translator: Miguel Anxo Bouzada <mbouzada@gmail.com>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-01 05:41+0000\n"
-"X-Generator: Launchpad (build 16660)\n"
+"X-Launchpad-Export-Date: 2013-08-02 05:57+0000\n"
+"X-Generator: Launchpad (build 16718)\n"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:189
+#: /home/codygarver/a/po/../src//about-plug.vala:217
 msgid "Unknown"
 msgstr "Descoñecido"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:208
+#: /home/codygarver/a/po/../src//about-plug.vala:236
 msgid "Version"
 msgstr "Versión"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:230
+#: /home/codygarver/a/po/../src//about-plug.vala:241
+msgid "Built on"
+msgstr ""
+
+#: /home/codygarver/a/po/../src//about-plug.vala:262
 #, c-format
 msgid "Hardware:"
 msgstr "Hardware:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:234
+#: /home/codygarver/a/po/../src//about-plug.vala:266
 msgid "Processor:"
 msgstr "Procesador:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:237
+#: /home/codygarver/a/po/../src//about-plug.vala:269
 msgid "Memory:"
 msgstr "Memoria:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:240
+#: /home/codygarver/a/po/../src//about-plug.vala:272
 msgid "Graphics:"
 msgstr "Gráficos:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:243
+#: /home/codygarver/a/po/../src//about-plug.vala:275
 msgid "Storage:"
 msgstr "Almacenamento:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:301
+#: /home/codygarver/a/po/../src//about-plug.vala:333
 msgid "Translate"
 msgstr "Traducir"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:305
+#: /home/codygarver/a/po/../src//about-plug.vala:337
 msgid "Report a Problem"
 msgstr "Informar dun problema"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:309
+#: /home/codygarver/a/po/../src//about-plug.vala:341
 msgid "Check for Upgrades"
 msgstr "Buscar anovacións"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:367
+#: /home/codygarver/a/po/../src//about-plug.vala:399
 msgid "About"
 msgstr "Sobre"

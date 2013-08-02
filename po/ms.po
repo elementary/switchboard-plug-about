@@ -7,57 +7,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-18 13:48+0300\n"
+"POT-Creation-Date: 2013-08-01 15:23-0500\n"
 "PO-Revision-Date: 2013-06-18 08:38+0000\n"
 "Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-06-19 05:46+0000\n"
-"X-Generator: Launchpad (build 16673)\n"
+"X-Launchpad-Export-Date: 2013-08-02 05:57+0000\n"
+"X-Generator: Launchpad (build 16718)\n"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:189
+#: /home/codygarver/a/po/../src//about-plug.vala:217
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:208
+#: /home/codygarver/a/po/../src//about-plug.vala:236
 msgid "Version"
 msgstr "Versi"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:230
+#: /home/codygarver/a/po/../src//about-plug.vala:241
+msgid "Built on"
+msgstr ""
+
+#: /home/codygarver/a/po/../src//about-plug.vala:262
 #, c-format
 msgid "Hardware:"
 msgstr "Perkakas"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:234
+#: /home/codygarver/a/po/../src//about-plug.vala:266
 msgid "Processor:"
 msgstr "Pemproses"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:237
+#: /home/codygarver/a/po/../src//about-plug.vala:269
 msgid "Memory:"
 msgstr "Ingatan:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:240
+#: /home/codygarver/a/po/../src//about-plug.vala:272
 msgid "Graphics:"
 msgstr "Grafik"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:243
+#: /home/codygarver/a/po/../src//about-plug.vala:275
 msgid "Storage:"
 msgstr "Storan:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:301
+#: /home/codygarver/a/po/../src//about-plug.vala:333
 msgid "Translate"
 msgstr "Terjemah"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:305
+#: /home/codygarver/a/po/../src//about-plug.vala:337
 msgid "Report a Problem"
 msgstr "Laporkan Masalah"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:309
+#: /home/codygarver/a/po/../src//about-plug.vala:341
 msgid "Check for Upgrades"
 msgstr "Periksa Naik Taraf"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:367
+#: /home/codygarver/a/po/../src//about-plug.vala:399
 msgid "About"
 msgstr "Perihal"

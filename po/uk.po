@@ -7,58 +7,62 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-18 13:48+0300\n"
+"POT-Creation-Date: 2013-08-01 15:23-0500\n"
 "PO-Revision-Date: 2012-11-14 17:07+0000\n"
 "Last-Translator: Rax <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-05-19 05:33+0000\n"
-"X-Generator: Launchpad (build 16626)\n"
+"X-Launchpad-Export-Date: 2013-08-02 05:57+0000\n"
+"X-Generator: Launchpad (build 16718)\n"
 "Language: uk\n"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:189
+#: /home/codygarver/a/po/../src//about-plug.vala:217
 msgid "Unknown"
 msgstr ""
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:208
+#: /home/codygarver/a/po/../src//about-plug.vala:236
 msgid "Version"
 msgstr "Версія"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:230
+#: /home/codygarver/a/po/../src//about-plug.vala:241
+msgid "Built on"
+msgstr ""
+
+#: /home/codygarver/a/po/../src//about-plug.vala:262
 #, c-format
 msgid "Hardware:"
 msgstr "Апаратне забезпечення:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:234
+#: /home/codygarver/a/po/../src//about-plug.vala:266
 msgid "Processor:"
 msgstr "Процесор:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:237
+#: /home/codygarver/a/po/../src//about-plug.vala:269
 msgid "Memory:"
 msgstr "Пам'ять:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:240
+#: /home/codygarver/a/po/../src//about-plug.vala:272
 msgid "Graphics:"
 msgstr "Графіка:"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:243
+#: /home/codygarver/a/po/../src//about-plug.vala:275
 msgid "Storage:"
 msgstr ""
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:301
+#: /home/codygarver/a/po/../src//about-plug.vala:333
 msgid "Translate"
 msgstr "Перекласти"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:305
+#: /home/codygarver/a/po/../src//about-plug.vala:337
 msgid "Report a Problem"
 msgstr "Повідомити про проблему"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:309
+#: /home/codygarver/a/po/../src//about-plug.vala:341
 msgid "Check for Upgrades"
 msgstr "Перевірити на наявність оновлень"
 
-#: /home/kristjan/switchboard-plug-about/po/../src//about-plug.vala:367
+#: /home/codygarver/a/po/../src//about-plug.vala:399
 msgid "About"
 msgstr "Про програму"
