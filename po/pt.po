@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-08-01 15:23-0500\n"
-"PO-Revision-Date: 2013-05-18 14:06+0000\n"
-"Last-Translator: Sérgio Marques <Unknown>\n"
+"PO-Revision-Date: 2013-08-12 08:35+0000\n"
+"Last-Translator: Pedro Monteiro <Unknown>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-02 05:57+0000\n"
-"X-Generator: Launchpad (build 16718)\n"
+"X-Launchpad-Export-Date: 2013-08-13 06:05+0000\n"
+"X-Generator: Launchpad (build 16723)\n"
 
 #: /home/codygarver/a/po/../src//about-plug.vala:217
 msgid "Unknown"
@@ -27,7 +27,7 @@ msgstr "Versão"
 
 #: /home/codygarver/a/po/../src//about-plug.vala:241
 msgid "Built on"
-msgstr ""
+msgstr "Baseado em"
 
 #: /home/codygarver/a/po/../src//about-plug.vala:262
 #, c-format
