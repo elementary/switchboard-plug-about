@@ -8,19 +8,19 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-01 15:23-0500\n"
-"PO-Revision-Date: 2012-11-21 19:59+0000\n"
-"Last-Translator: Ferhat TUNÇTAN <ferhattnctn66@gmail.com>\n"
+"PO-Revision-Date: 2013-09-23 19:10+0000\n"
+"Last-Translator: Ebubekir KARUL <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-02 05:57+0000\n"
-"X-Generator: Launchpad (build 16718)\n"
+"X-Launchpad-Export-Date: 2013-09-24 06:35+0000\n"
+"X-Generator: Launchpad (build 16771)\n"
 "Language: tr\n"
 
 #: /home/codygarver/a/po/../src//about-plug.vala:217
 msgid "Unknown"
-msgstr ""
+msgstr "Bilinmeyen"
 
 #: /home/codygarver/a/po/../src//about-plug.vala:236
 msgid "Version"
@@ -49,7 +49,7 @@ msgstr "Grafikler:"
 
 #: /home/codygarver/a/po/../src//about-plug.vala:275
 msgid "Storage:"
-msgstr ""
+msgstr "Depolama:"
 
 #: /home/codygarver/a/po/../src//about-plug.vala:333
 msgid "Translate"
