@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-01 15:23-0500\n"
-"PO-Revision-Date: 2013-06-23 07:06+0000\n"
+"PO-Revision-Date: 2013-10-11 11:01+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2013-08-02 05:57+0000\n"
-"X-Generator: Launchpad (build 16718)\n"
+"X-Launchpad-Export-Date: 2013-10-12 05:52+0000\n"
+"X-Generator: Launchpad (build 16799)\n"
 
 #: /home/codygarver/a/po/../src//about-plug.vala:217
 msgid "Unknown"
@@ -27,7 +27,7 @@ msgstr "版本"
 
 #: /home/codygarver/a/po/../src//about-plug.vala:241
 msgid "Built on"
-msgstr ""
+msgstr "組建日期"
 
 #: /home/codygarver/a/po/../src//about-plug.vala:262
 #, c-format
