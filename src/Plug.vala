@@ -15,8 +15,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-// Main Class, acts pretty much like a Gtk.Window because it's a Gtk.Plug with some magic behind the scenes
-public class AboutPlug : Pantheon.Switchboard.Plug {
+public class About.Plug : Switchboard.Plug {
 
     private string os;
     private string website_url;
@@ -35,10 +34,31 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
     private string is_ubuntu;
     private string ubuntu_version;
     private string ubuntu_codename;
+    private Gtk.EventBox main_grid;
 
-    public AboutPlug () {
-        setup_info ();
-        setup_ui ();
+    public Plug () {
+        category = Category.SYSTEM;
+        code_name = "system-pantheon-about"; // The name it is recognised with the open-plug command
+        display_name = _("About");
+        description = _("Shows System Informations…");
+        icon = "help-info";
+    }
+    
+    public override Gtk.Widget get_widget () {
+        if (main_grid == null) {
+            setup_info ();
+            setup_ui ();
+        }
+        return main_grid;
+    }
+    
+    public override void close () {
+    
+    }
+    
+    // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
+    public override async Gee.TreeMap<string, string> search (string search) {
+        return new Gee.TreeMap<string, string> (null, null);
     }
 
     private string capitalize (string str) {
@@ -221,9 +241,9 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
     // Wires up and configures initial UI
     private void setup_ui () {
-
+        main_grid = new Gtk.EventBox ();
         // Let's make sure this looks like the About dialogs
-        this.get_style_context ().add_class (Granite.StyleClass.CONTENT_VIEW);
+        main_grid.get_style_context ().add_class (Granite.StyleClass.CONTENT_VIEW);
 
         // Create the section about elementary OS
         var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 100, 100));
@@ -358,7 +378,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         // Let's align the box and add it to the plug
         var halign = new Gtk.Alignment ((float) 0.5, 0, 0, 1);
         halign.add (box);
-        this.add (halign);
+        main_grid.add (halign);
     }
 }
 
@@ -378,23 +398,4 @@ private uint64 get_mem_info_for(string name) {
    }
 
     return result;
-}
-
-public static int main (string[] args) {
-
-    Gtk.init (ref args);
-    // Instantiate the plug, which handles
-    // connecting to Switchboard.
-    var plug = new AboutPlug ();
-    // Connect to Switchboard and identify
-    // as "About". (For debugging)
-    plug.register ("About");
-    plug.show_all ();
-    // Start the GTK+ main loop.
-    Gtk.main ();
-    return 0;
-}
-
-public static void translations () {
-    string plug_name = _("About");
 }
