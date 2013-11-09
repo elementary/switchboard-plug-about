@@ -204,18 +204,15 @@ public class About.Plug : Switchboard.Plug {
         }
 
         // Hard Drive
-        Process.spawn_command_line_sync ("df", out hdd);
-        Regex hdd_size_regex = /^\S+\s+(\d+)\s+\d+/;
-        uint64 hdd_size = 0;
-        foreach (string partition in hdd.split ("\n")) {
-            if (partition.has_prefix ("/dev/sda")) {
-                MatchInfo match_info;
-                if (hdd_size_regex.match (partition, 0, out match_info)) {
-                    hdd_size += match_info.fetch (1).to_uint64 ();
-                }
-            }
+        
+        var file_root = GLib.File.new_for_path ("/");
+        try {
+            var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
+            hdd = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
+        } catch (Error e) {
+            critical (e.message);
+            hdd = _("Unknown");
         }
-        hdd = GLib.format_size (hdd_size * 1024, FormatSizeFlags.IEC_UNITS);
     }
 
     private string get_graphics_from_string(string graphics) {
@@ -367,7 +364,7 @@ public class About.Plug : Switchboard.Plug {
         button_box.pack_start (translate_button, true, true, 0);
         button_box.pack_start (bug_button, true, true, 0);
         button_box.pack_start (upgrade_button, true, true, 0);
-
+        
         // Fit everything in a box
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         box.pack_start (elementary_box, false, false, 20);
@@ -379,6 +376,7 @@ public class About.Plug : Switchboard.Plug {
         var halign = new Gtk.Alignment ((float) 0.5, 0, 0, 1);
         halign.add (box);
         main_grid.add (halign);
+        main_grid.show_all ();
     }
 }
 
