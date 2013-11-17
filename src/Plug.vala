@@ -52,7 +52,11 @@ public class About.Plug : Switchboard.Plug {
         return main_grid;
     }
     
-    public override void close () {
+    public override void shown () {
+    
+    }
+    
+    public override void hidden () {
     
     }
     
