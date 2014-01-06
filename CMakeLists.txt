@@ -23,7 +23,8 @@ project (${PLUGNAME})
 # Only alter stuff below if you know what you are doing #
 #########################################################
 
-set (DATADIR "${CMAKE_INSTALL_PREFIX}/lib/switchboard")
+include (GNUInstallDirs)
+set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
 set (PKGDATADIR "${DATADIR}/system/pantheon-${PLUGNAME}")
 set (GETTEXT_PACKAGE "${PLUGNAME}-plug")
 

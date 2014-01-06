@@ -27,7 +27,6 @@ public class About.Plug : Switchboard.Plug {
     private string memory;
     private string graphics;
     private string hdd;
-    private string ubuntu_base;
     private Gtk.Label based_off;
     
     
@@ -37,11 +36,11 @@ public class About.Plug : Switchboard.Plug {
     private Gtk.EventBox main_grid;
 
     public Plug () {
-        category = Category.SYSTEM;
-        code_name = "system-pantheon-about"; // The name it is recognised with the open-plug command
-        display_name = _("About");
-        description = _("Shows System Informations…");
-        icon = "help-info";
+        Object (category: Category.SYSTEM,
+                code_name: "system-pantheon-about",
+                display_name: _("About"),
+                description: _("Shows System Informations…"),
+                icon: "help-info");
     }
     
     public override Gtk.Widget get_widget () {
@@ -57,6 +56,10 @@ public class About.Plug : Switchboard.Plug {
     }
     
     public override void hidden () {
+    
+    }
+    
+    public override void search_callback (string location) {
     
     }
     
@@ -161,50 +164,65 @@ public class About.Plug : Switchboard.Plug {
         }
 
         // Architecture
-        Process.spawn_command_line_sync ("uname -m", out arch);
-        if (arch == "x86_64\n") {
-            arch = "64-bit";
-        } else if ("arm" in arch) {
-            arch = "ARM";
-        } else {
-            arch = "32-bit";
+        try {
+            Process.spawn_command_line_sync ("uname -m", out arch);
+            if (arch == "x86_64\n") {
+                arch = "64-bit";
+            } else if ("arm" in arch) {
+                arch = "ARM";
+            } else {
+                arch = "32-bit";
+            }
+        } catch (Error e) {
+            warning (e.message);
+            arch = _("Unknown");
         }
 
         // Processor
-        Process.spawn_command_line_sync ("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
-        int cores = 0;
-        foreach (string core in processor.split ("\n")) {
-            if (core != "") {
-                cores++;
+        try {
+            Process.spawn_command_line_sync ("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
+            int cores = 0;
+            foreach (string core in processor.split ("\n")) {
+                if (core != "") {
+                    cores++;
+                }
             }
-        }
-        if ("\n" in processor) {
-            processor = processor.split ("\n")[0];
-        } if ("(R)" in processor) {
-            processor = processor.replace ("(R)", "®");
-        } if ("(TM)" in processor) {
-            processor = processor.replace ("(TM)", "™");
-        } if (cores > 1) {
-            processor = processor + " × " + cores.to_string ();
+            if ("\n" in processor) {
+                processor = processor.split ("\n")[0];
+            } if ("(R)" in processor) {
+                processor = processor.replace ("(R)", "®");
+            } if ("(TM)" in processor) {
+                processor = processor.replace ("(TM)", "™");
+            } if (cores > 1) {
+                processor = processor + " × " + cores.to_string ();
+            }
+        } catch (Error e) {
+            warning (e.message);
+            processor = _("Unknown");
         }
 
         //Memory
         memory = GLib.format_size (get_mem_info_for("MemTotal:") * 1024, FormatSizeFlags.IEC_UNITS);
 
         // Graphics
-        Process.spawn_command_line_sync ("lspci", out graphics);
-        if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
-            string[] lines = graphics.split("\n");
-            graphics="";
-            foreach (var s in lines) {
-                if("VGA" in s) {
-                    string model = get_graphics_from_string(s);
-                    if(graphics=="")
-                        graphics = model;
-                    else
-                        graphics += "\n" + model;
+        try {
+            Process.spawn_command_line_sync ("lspci", out graphics);
+            if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
+                string[] lines = graphics.split("\n");
+                graphics="";
+                foreach (var s in lines) {
+                    if("VGA" in s) {
+                        string model = get_graphics_from_string(s);
+                        if(graphics=="")
+                            graphics = model;
+                        else
+                            graphics += "\n" + model;
+                    }
                 }
             }
+        } catch (Error e) {
+            warning (e.message);
+            graphics = _("Unknown");
         }
 
         // Hard Drive
@@ -344,7 +362,13 @@ public class About.Plug : Switchboard.Plug {
         Granite.Widgets.Utils.set_theming (help_button, HELP_BUTTON_STYLESHEET, "help_button",
                            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        help_button.clicked.connect (() => { AppInfo.launch_default_for_uri ("http://elementaryos.org/support", null); });
+        help_button.clicked.connect (() => {
+            try {
+                AppInfo.launch_default_for_uri ("http://elementaryos.org/support", null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         help_button.size_allocate.connect ( (alloc) => {
             help_button.set_size_request (alloc.height, -1);
@@ -352,15 +376,33 @@ public class About.Plug : Switchboard.Plug {
 
         // Translate button
         var translate_button = new Gtk.Button.with_label (_("Translate"));
-        translate_button.clicked.connect (() => { AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null); });
+        translate_button.clicked.connect (() => {
+            try {
+                AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         // Bug button
         var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
-        bug_button.clicked.connect (() => { AppInfo.launch_default_for_uri (bugtracker_url, null); });
+        bug_button.clicked.connect (() => {
+            try {
+                AppInfo.launch_default_for_uri (bugtracker_url, null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         // Upgrade button
         var upgrade_button = new Gtk.Button.with_label (_("Check for Upgrades"));
-        upgrade_button.clicked.connect (() => { Process.spawn_command_line_async("update-manager"); });
+        upgrade_button.clicked.connect (() => {
+            try {
+                Process.spawn_command_line_async("update-manager");
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         // Create a box for the buttons
         var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
@@ -387,17 +429,27 @@ public class About.Plug : Switchboard.Plug {
 private uint64 get_mem_info_for(string name) {
     uint64 result = 0;
     File file = File.new_for_path ("/proc/meminfo");
-    DataInputStream dis = new DataInputStream (file.read());
-    string? line;
-    while ((line = dis.read_line (null,null)) != null) {
-        if(line.has_prefix(name)) {
-            //get the kb-part of the string with witespaces
-            line = line.substring(name.length,
-                                  line.last_index_of("kB")-name.length);
-            result = uint64.parse(line.strip());
-            break;
+    try {
+        DataInputStream dis = new DataInputStream (file.read());
+        string? line;
+        while ((line = dis.read_line (null,null)) != null) {
+            if(line.has_prefix(name)) {
+                //get the kb-part of the string with witespaces
+                line = line.substring(name.length,
+                                      line.last_index_of("kB")-name.length);
+                result = uint64.parse(line.strip());
+                break;
+            }
         }
-   }
+    } catch (Error e) {
+        warning (e.message);
+    }
 
     return result;
+}
+
+public Switchboard.Plug get_plug (Module module) {
+    debug ("Activating About plug");
+    var plug = new About.Plug ();
+    return plug;
 }

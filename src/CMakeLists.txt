@@ -8,12 +8,11 @@ link_directories (${DEPS_LIBRARY_DIRS})
 
 find_package (Vala REQUIRED)
 include (ValaVersion)
-ensure_vala_version ("0.12.0" MINIMUM)
+ensure_vala_version ("0.22.0" MINIMUM)
 
 include (ValaPrecompile)
 # Add all your vala files and requires packages to the List below to include them in the build
 vala_precompile (VALA_C
-    About.vala
     Plug.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
