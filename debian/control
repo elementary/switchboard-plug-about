@@ -3,12 +3,12 @@ Section: x11
 Priority: optional
 Maintainer: Ivo Nunes <ivo@elementaryos.org>
 Build-Depends: cmake,
-               debhelper (>= 7.0.50~),
+               debhelper (>= 9),
                libgranite-dev,
-               libpantheon-dev,
-               valac-0.16 | valac (>= 0.16)
+               libswitchboard-2.0-dev,
+               valac (>= 0.22)
 Standards-Version: 3.9.2
-Homepage: https://launchpad.net/pantheon-plugs
+Homepage: https://launchpad.net/switchboard-plug-about
 
 Package: switchboard-plug-about
 Architecture: any

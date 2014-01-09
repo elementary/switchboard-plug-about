@@ -14,6 +14,3 @@
 
 override_dh_strip:
 	dh_strip --dbg-package=switchboard-plug-about-dbg
-
-override_dh_auto_install:
-	dh_auto_install --destdir=debian/switchboard-plug-about
