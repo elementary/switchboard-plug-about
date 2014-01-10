@@ -13,6 +13,7 @@ set (PLUGNAME "about")
 set (PLUGCATEGORY "system")
 # Set the Title to use for the Plug in the Overview and in the Titlebar
 set (PLUGTITLE "About")
+set (PLUGDESCRIPTION "About")
 # The symbolic name of the Icon to use for the plug
 set (PLUGICON "help-info")
 
@@ -22,17 +23,21 @@ project (${PLUGNAME})
 # Only alter stuff below if you know what you are doing #
 #########################################################
 
-set (DATADIR "${CMAKE_INSTALL_PREFIX}/lib/plugs")
-set (PKGDATADIR "${DATADIR}/pantheon/${PLUGNAME}")
+include (GNUInstallDirs)
+set (DATADIR "${CMAKE_INSTALL_FULL_LIBDIR}/switchboard")
+set (PKGDATADIR "${DATADIR}/system/pantheon-${PLUGNAME}")
 set (GETTEXT_PACKAGE "${PLUGNAME}-plug")
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 # Configure file
-configure_file (plug.plug ${CMAKE_BINARY_DIR}/${PLUGNAME}.plug)
-install (FILES ${CMAKE_BINARY_DIR}/${PLUGNAME}.plug DESTINATION ${PKGDATADIR})
+configure_file (plug.plugin ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin)
+install (FILES ${CMAKE_BINARY_DIR}/${PLUGNAME}.plugin DESTINATION ${PKGDATADIR})
 configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_BINARY_DIR}/src/config.vala)
 add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
+
+# Comment this out to enable C compiler warnings
+add_definitions (-w)
 
 # Files
 file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")

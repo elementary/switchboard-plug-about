@@ -15,8 +15,7 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-// Main Class, acts pretty much like a Gtk.Window because it's a Gtk.Plug with some magic behind the scenes
-public class AboutPlug : Pantheon.Switchboard.Plug {
+public class About.Plug : Switchboard.Plug {
 
     private string os;
     private string website_url;
@@ -28,17 +27,45 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
     private string memory;
     private string graphics;
     private string hdd;
-    private string ubuntu_base;
     private Gtk.Label based_off;
     
     
     private string is_ubuntu;
     private string ubuntu_version;
     private string ubuntu_codename;
+    private Gtk.EventBox main_grid;
 
-    public AboutPlug () {
-        setup_info ();
-        setup_ui ();
+    public Plug () {
+        Object (category: Category.SYSTEM,
+                code_name: "system-pantheon-about",
+                display_name: _("About"),
+                description: _("Shows System Informations…"),
+                icon: "help-info");
+    }
+    
+    public override Gtk.Widget get_widget () {
+        if (main_grid == null) {
+            setup_info ();
+            setup_ui ();
+        }
+        return main_grid;
+    }
+    
+    public override void shown () {
+    
+    }
+    
+    public override void hidden () {
+    
+    }
+    
+    public override void search_callback (string location) {
+    
+    }
+    
+    // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
+    public override async Gee.TreeMap<string, string> search (string search) {
+        return new Gee.TreeMap<string, string> (null, null);
     }
 
     private string capitalize (string str) {
@@ -137,65 +164,77 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         }
 
         // Architecture
-        Process.spawn_command_line_sync ("uname -m", out arch);
-        if (arch == "x86_64\n") {
-            arch = "64-bit";
-        } else if ("arm" in arch) {
-            arch = "ARM";
-        } else {
-            arch = "32-bit";
+        try {
+            Process.spawn_command_line_sync ("uname -m", out arch);
+            if (arch == "x86_64\n") {
+                arch = "64-bit";
+            } else if ("arm" in arch) {
+                arch = "ARM";
+            } else {
+                arch = "32-bit";
+            }
+        } catch (Error e) {
+            warning (e.message);
+            arch = _("Unknown");
         }
 
         // Processor
-        Process.spawn_command_line_sync ("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
-        int cores = 0;
-        foreach (string core in processor.split ("\n")) {
-            if (core != "") {
-                cores++;
+        try {
+            Process.spawn_command_line_sync ("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
+            int cores = 0;
+            foreach (string core in processor.split ("\n")) {
+                if (core != "") {
+                    cores++;
+                }
             }
-        }
-        if ("\n" in processor) {
-            processor = processor.split ("\n")[0];
-        } if ("(R)" in processor) {
-            processor = processor.replace ("(R)", "®");
-        } if ("(TM)" in processor) {
-            processor = processor.replace ("(TM)", "™");
-        } if (cores > 1) {
-            processor = processor + " × " + cores.to_string ();
+            if ("\n" in processor) {
+                processor = processor.split ("\n")[0];
+            } if ("(R)" in processor) {
+                processor = processor.replace ("(R)", "®");
+            } if ("(TM)" in processor) {
+                processor = processor.replace ("(TM)", "™");
+            } if (cores > 1) {
+                processor = processor + " × " + cores.to_string ();
+            }
+        } catch (Error e) {
+            warning (e.message);
+            processor = _("Unknown");
         }
 
         //Memory
         memory = GLib.format_size (get_mem_info_for("MemTotal:") * 1024, FormatSizeFlags.IEC_UNITS);
 
         // Graphics
-        Process.spawn_command_line_sync ("lspci", out graphics);
-        if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
-            string[] lines = graphics.split("\n");
-            graphics="";
-            foreach (var s in lines) {
-                if("VGA" in s) {
-                    string model = get_graphics_from_string(s);
-                    if(graphics=="")
-                        graphics = model;
-                    else
-                        graphics += "\n" + model;
+        try {
+            Process.spawn_command_line_sync ("lspci", out graphics);
+            if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
+                string[] lines = graphics.split("\n");
+                graphics="";
+                foreach (var s in lines) {
+                    if("VGA" in s) {
+                        string model = get_graphics_from_string(s);
+                        if(graphics=="")
+                            graphics = model;
+                        else
+                            graphics += "\n" + model;
+                    }
                 }
             }
+        } catch (Error e) {
+            warning (e.message);
+            graphics = _("Unknown");
         }
 
         // Hard Drive
-        Process.spawn_command_line_sync ("df", out hdd);
-        Regex hdd_size_regex = /^\S+\s+(\d+)\s+\d+/;
-        uint64 hdd_size = 0;
-        foreach (string partition in hdd.split ("\n")) {
-            if (partition.has_prefix ("/dev/sda")) {
-                MatchInfo match_info;
-                if (hdd_size_regex.match (partition, 0, out match_info)) {
-                    hdd_size += match_info.fetch (1).to_uint64 ();
-                }
-            }
+        
+        var file_root = GLib.File.new_for_path ("/");
+        try {
+            var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
+            hdd = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
+        } catch (Error e) {
+            critical (e.message);
+            hdd = _("Unknown");
         }
-        hdd = GLib.format_size (hdd_size * 1024, FormatSizeFlags.IEC_UNITS);
     }
 
     private string get_graphics_from_string(string graphics) {
@@ -221,9 +260,9 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
     // Wires up and configures initial UI
     private void setup_ui () {
-
+        main_grid = new Gtk.EventBox ();
         // Let's make sure this looks like the About dialogs
-        this.get_style_context ().add_class (Granite.StyleClass.CONTENT_VIEW);
+        main_grid.get_style_context ().add_class (Granite.StyleClass.CONTENT_VIEW);
 
         // Create the section about elementary OS
         var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 100, 100));
@@ -323,7 +362,13 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         Granite.Widgets.Utils.set_theming (help_button, HELP_BUTTON_STYLESHEET, "help_button",
                            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        help_button.clicked.connect (() => { AppInfo.launch_default_for_uri ("http://elementaryos.org/support", null); });
+        help_button.clicked.connect (() => {
+            try {
+                AppInfo.launch_default_for_uri ("http://elementaryos.org/support", null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         help_button.size_allocate.connect ( (alloc) => {
             help_button.set_size_request (alloc.height, -1);
@@ -331,15 +376,33 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
 
         // Translate button
         var translate_button = new Gtk.Button.with_label (_("Translate"));
-        translate_button.clicked.connect (() => { AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null); });
+        translate_button.clicked.connect (() => {
+            try {
+                AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         // Bug button
         var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
-        bug_button.clicked.connect (() => { AppInfo.launch_default_for_uri (bugtracker_url, null); });
+        bug_button.clicked.connect (() => {
+            try {
+                AppInfo.launch_default_for_uri (bugtracker_url, null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         // Upgrade button
         var upgrade_button = new Gtk.Button.with_label (_("Check for Upgrades"));
-        upgrade_button.clicked.connect (() => { Process.spawn_command_line_async("update-manager"); });
+        upgrade_button.clicked.connect (() => {
+            try {
+                Process.spawn_command_line_async("update-manager");
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         // Create a box for the buttons
         var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
@@ -347,7 +410,7 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         button_box.pack_start (translate_button, true, true, 0);
         button_box.pack_start (bug_button, true, true, 0);
         button_box.pack_start (upgrade_button, true, true, 0);
-
+        
         // Fit everything in a box
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         box.pack_start (elementary_box, false, false, 20);
@@ -358,43 +421,35 @@ public class AboutPlug : Pantheon.Switchboard.Plug {
         // Let's align the box and add it to the plug
         var halign = new Gtk.Alignment ((float) 0.5, 0, 0, 1);
         halign.add (box);
-        this.add (halign);
+        main_grid.add (halign);
+        main_grid.show_all ();
     }
 }
 
 private uint64 get_mem_info_for(string name) {
     uint64 result = 0;
     File file = File.new_for_path ("/proc/meminfo");
-    DataInputStream dis = new DataInputStream (file.read());
-    string? line;
-    while ((line = dis.read_line (null,null)) != null) {
-        if(line.has_prefix(name)) {
-            //get the kb-part of the string with witespaces
-            line = line.substring(name.length,
-                                  line.last_index_of("kB")-name.length);
-            result = uint64.parse(line.strip());
-            break;
+    try {
+        DataInputStream dis = new DataInputStream (file.read());
+        string? line;
+        while ((line = dis.read_line (null,null)) != null) {
+            if(line.has_prefix(name)) {
+                //get the kb-part of the string with witespaces
+                line = line.substring(name.length,
+                                      line.last_index_of("kB")-name.length);
+                result = uint64.parse(line.strip());
+                break;
+            }
         }
-   }
+    } catch (Error e) {
+        warning (e.message);
+    }
 
     return result;
 }
 
-public static int main (string[] args) {
-
-    Gtk.init (ref args);
-    // Instantiate the plug, which handles
-    // connecting to Switchboard.
-    var plug = new AboutPlug ();
-    // Connect to Switchboard and identify
-    // as "About". (For debugging)
-    plug.register ("About");
-    plug.show_all ();
-    // Start the GTK+ main loop.
-    Gtk.main ();
-    return 0;
-}
-
-public static void translations () {
-    string plug_name = _("About");
+public Switchboard.Plug get_plug (Module module) {
+    debug ("Activating About plug");
+    var plug = new About.Plug ();
+    return plug;
 }
