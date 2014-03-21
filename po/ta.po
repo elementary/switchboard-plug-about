@@ -1,0 +1,67 @@
+# Tamil translation for switchboard-plug-about
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the switchboard-plug-about package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: switchboard-plug-about\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-01 15:23-0500\n"
+"PO-Revision-Date: 2014-03-20 09:22+0000\n"
+"Last-Translator: SyedKhaleel Jageer <jskcse4@gmail.com>\n"
+"Language-Team: Tamil <ta@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-03-21 06:48+0000\n"
+"X-Generator: Launchpad (build 16967)\n"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:217
+msgid "Unknown"
+msgstr "அறியப்படாத"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:236
+msgid "Version"
+msgstr "பதிப்பு"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:241
+msgid "Built on"
+msgstr "மீது அமைக்கப்பட்டு"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:262
+#, c-format
+msgid "Hardware:"
+msgstr "வன்பொருள்:"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:266
+msgid "Processor:"
+msgstr "நுண்செயலி:"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:269
+msgid "Memory:"
+msgstr "நினைவகம்:"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:272
+msgid "Graphics:"
+msgstr "வரைகலைகள்:"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:275
+msgid "Storage:"
+msgstr "நினைவகம்:"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:333
+msgid "Translate"
+msgstr "மொழிபெயர்க்க"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:337
+msgid "Report a Problem"
+msgstr "பிரச்சனையை புகார் செய்"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:341
+msgid "Check for Upgrades"
+msgstr "மேம்படுத்தல்களுக்கு பரிசோதிக்க"
+
+#: /home/codygarver/a/po/../src//about-plug.vala:399
+msgid "About"
+msgstr "பற்றி"
