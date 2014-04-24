@@ -40,8 +40,9 @@ add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 add_definitions (-w)
 
 # Files
-file (GLOB desktops "${CMAKE_CURRENT_SOURCE_DIR}/data/pantheon-plug-about.desktop")
-install (FILES ${desktops} DESTINATION "/usr/share/applications")
+file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
+
+install (FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/pantheon-plug-about.desktop" DESTINATION "${CMAKE_INSTALL_FULL_DATAROOTDIR}/applications")
 
 # Traslation stuff
 add_subdirectory (po)
