@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=About
+Comment=Shows System Informations…
+Exec=switchboard -o system-pantheon-about
+Icon=help-info
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=X-PANTHEON-Switchboard-Plugs;
+OnlyShowIn=Pantheon;
+Keywords=About;Info;
+X-GNOME-Gettext-Domain=switchboard
