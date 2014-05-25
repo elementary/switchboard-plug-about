@@ -160,7 +160,7 @@ public class About.Plug : Switchboard.Plug {
             if (website_url == "")
                 website_url = "http://elementaryos.org";
             if (bugtracker_url == "")
-                bugtracker_url = "https://bugs.launchpad.net/elementary/+filebug";
+                bugtracker_url = "https://bugs.launchpad.net/elementaryos/+filebug";
         }
 
         // Architecture
