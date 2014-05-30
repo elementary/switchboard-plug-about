@@ -7,61 +7,68 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-08-01 15:23-0500\n"
+"POT-Creation-Date: 2014-05-29 09:48-0500\n"
 "PO-Revision-Date: 2014-02-13 22:31+0000\n"
 "Last-Translator: MinSik CHO <Unknown>\n"
 "Language-Team: Korean <ko@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-02-14 07:42+0000\n"
-"X-Generator: Launchpad (build 16916)\n"
+"X-Launchpad-Export-Date: 2014-05-30 05:54+0000\n"
+"X-Generator: Launchpad (build 17023)\n"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:217
+#: /home/codygarver/a/po/../src//Plug.vala:41
+msgid "About"
+msgstr "정보"
+
+#: /home/codygarver/a/po/../src//Plug.vala:42
+msgid "Shows System Informations…"
+msgstr ""
+
+#: /home/codygarver/a/po/../src//Plug.vala:178
+#: /home/codygarver/a/po/../src//Plug.vala:201
+#: /home/codygarver/a/po/../src//Plug.vala:225
+#: /home/codygarver/a/po/../src//Plug.vala:236
+#: /home/codygarver/a/po/../src//Plug.vala:256
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:236
+#: /home/codygarver/a/po/../src//Plug.vala:275
 msgid "Version"
 msgstr "버전"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:241
+#: /home/codygarver/a/po/../src//Plug.vala:280
 msgid "Built on"
 msgstr "기반"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:262
-#, c-format
+#: /home/codygarver/a/po/../src//Plug.vala:301
 msgid "Hardware:"
 msgstr "하드웨어:"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:266
+#: /home/codygarver/a/po/../src//Plug.vala:305
 msgid "Processor:"
 msgstr "프로세서:"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:269
+#: /home/codygarver/a/po/../src//Plug.vala:308
 msgid "Memory:"
 msgstr "메모리:"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:272
+#: /home/codygarver/a/po/../src//Plug.vala:311
 msgid "Graphics:"
 msgstr "그래픽:"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:275
+#: /home/codygarver/a/po/../src//Plug.vala:314
 msgid "Storage:"
 msgstr "저장소:"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:333
+#: /home/codygarver/a/po/../src//Plug.vala:378
 msgid "Translate"
 msgstr "번역"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:337
+#: /home/codygarver/a/po/../src//Plug.vala:388
 msgid "Report a Problem"
 msgstr "문제 보고하기"
 
-#: /home/codygarver/a/po/../src//about-plug.vala:341
+#: /home/codygarver/a/po/../src//Plug.vala:398
 msgid "Check for Upgrades"
 msgstr "업그레이드 확인하기"
-
-#: /home/codygarver/a/po/../src//about-plug.vala:399
-msgid "About"
-msgstr "정보"
