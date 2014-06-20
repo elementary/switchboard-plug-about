@@ -113,10 +113,10 @@ public class About.Plug : Switchboard.Plug {
                 }
             }
         } catch (Error e) {
-            warning("Couldn't read lsb-release file, assuming elementary OS 0.2");
+            warning("Couldn't read lsb-release file, assuming elementary OS 0.3");
             os = "elementary OS";
-            version = "0.2";
-            codename = "Luna";
+            version = "0.3";
+            codename = "Isis";
         }
         
         file = File.new_for_path("/etc/upstream-release/lsb-release");
@@ -272,12 +272,12 @@ public class About.Plug : Switchboard.Plug {
         Granite.Widgets.Utils.apply_text_style_to_label (Granite.TextStyle.TITLE, title);
         title.set_alignment (0, 0);
 
-        var version = new Gtk.Label (_("Version") + ": " + version + " \"" + codename + "\" ( " + arch + " )");
+        var version = new Gtk.Label (_("Version: %s \"%s\" ( %s )").printf(version, codename, arch));
         version.set_alignment (0, 0);
         version.set_selectable (true);
         
         if (is_ubuntu != null) {
-            based_off = new Gtk.Label (_("Built on") + ": " + is_ubuntu + " " + ubuntu_version + " ( \"" + ubuntu_codename + "\" )");
+            based_off = new Gtk.Label (_("Built on: %s %s ( \"%s\" )").printf(is_ubuntu, ubuntu_version, ubuntu_codename));
             based_off.set_alignment (0, 0);
             based_off.set_selectable (true);
         }

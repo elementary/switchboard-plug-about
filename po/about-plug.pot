@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-29 09:48-0500\n"
+"POT-Creation-Date: 2014-06-20 16:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,58 +17,60 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/codygarver/a/po/../src//Plug.vala:41
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:41
 msgid "About"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:42
-msgid "Shows System Informations…"
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:42
+msgid "Shows System Information…"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:178
-#: /home/codygarver/a/po/../src//Plug.vala:201
-#: /home/codygarver/a/po/../src//Plug.vala:225
-#: /home/codygarver/a/po/../src//Plug.vala:236
-#: /home/codygarver/a/po/../src//Plug.vala:256
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:178
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:201
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:225
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:236
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:256
 msgid "Unknown"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:275
-msgid "Version"
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:275
+#, c-format
+msgid "Version: %s \"%s\" ( %s )"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:280
-msgid "Built on"
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:280
+#, c-format
+msgid "Built on: %s %s ( \"%s\" )"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:301
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:301
 msgid "Hardware:"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:305
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:305
 msgid "Processor:"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:308
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:308
 msgid "Memory:"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:311
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:311
 msgid "Graphics:"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:314
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:314
 msgid "Storage:"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:378
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:378
 msgid "Translate"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:388
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:388
 msgid "Report a Problem"
 msgstr ""
 
-#: /home/codygarver/a/po/../src//Plug.vala:398
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:398
 msgid "Check for Upgrades"
 msgstr ""
