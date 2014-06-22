@@ -116,7 +116,7 @@ public class About.Plug : Switchboard.Plug {
             warning("Couldn't read lsb-release file, assuming elementary OS 0.3");
             os = "elementary OS";
             version = "0.3";
-            codename = "Isis";
+            codename = "Freya";
         }
         
         file = File.new_for_path("/etc/upstream-release/lsb-release");
