@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-20 16:48+0200\n"
+"POT-Creation-Date: 2014-06-22 21:15+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,44 +33,58 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:275
+#. make sure to keep all three %s in the string, otherwise switchboard will crash!
+#. the first %s will be replaced by the version, the second by the codename (e.g "Freya") and the third by the CPU architecture (e.g. "64-bit")
+#. keep both \" if you want to use " as quote
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:278
 #, c-format
 msgid "Version: %s \"%s\" ( %s )"
 msgstr ""
 
-#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:280
+#. make sure to keep all three %s in the string, otherwise switchboard will crash!
+#. the first %s will be replaced by the OS (e.g. "Ubuntu"), the second by the version and the third by the codename (e.g. "Trusty")
+#. keep both \" if you want to use " as quote
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:286
 #, c-format
 msgid "Built on: %s %s ( \"%s\" )"
 msgstr ""
 
-#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:301
+#. Hardware title
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:307
 msgid "Hardware:"
 msgstr ""
 
-#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:305
+#. Hardware label
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:311
 msgid "Processor:"
 msgstr ""
 
-#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:308
+#. Hardware label
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:315
 msgid "Memory:"
 msgstr ""
 
-#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:311
+#. Hardware label
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:319
 msgid "Graphics:"
 msgstr ""
 
-#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:314
+#. Hardware label
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:323
 msgid "Storage:"
 msgstr ""
 
-#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:378
+#. Translate button
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:387
 msgid "Translate"
 msgstr ""
 
-#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:388
+#. Bug button
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:397
 msgid "Report a Problem"
 msgstr ""
 
-#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:398
+#. Upgrade button
+#: /home/phillip/switchboard-plug-about/more-translatable/po/../src//Plug.vala:407
 msgid "Check for Upgrades"
 msgstr ""
