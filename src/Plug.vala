@@ -275,7 +275,7 @@ public class About.Plug : Switchboard.Plug {
         // make sure to keep all three %s in the string, otherwise switchboard will crash!
         // the first %s will be replaced by the version, the second by the codename (e.g "Freya") and the third by the CPU architecture (e.g. "64-bit")        
         // keep both \" if you want to use " as quote        
-        var version = new Gtk.Label (_("Version: %s \"%s\" ( %s )").printf(version, codename, arch));
+        var version = new Gtk.Label (_("Version: %s \"%s\" ( %s )").printf (version, codename, arch));
         version.set_alignment (0, 0);
         version.set_selectable (true);
         
@@ -283,7 +283,7 @@ public class About.Plug : Switchboard.Plug {
             // make sure to keep all three %s in the string, otherwise switchboard will crash!
             // the first %s will be replaced by the OS (e.g. "Ubuntu"), the second by the version and the third by the codename (e.g. "Trusty")
             // keep both \" if you want to use " as quote          
-            based_off = new Gtk.Label (_("Built on: %s %s ( \"%s\" )").printf(is_ubuntu, ubuntu_version, ubuntu_codename));
+            based_off = new Gtk.Label (_("Built on: %s %s ( \"%s\" )").printf (is_ubuntu, ubuntu_version, ubuntu_codename));
             based_off.set_alignment (0, 0);
             based_off.set_selectable (true);
         }
