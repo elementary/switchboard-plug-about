@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-07-08 06:52+0000\n"
-"X-Generator: Launchpad (build 17086)\n"
+"X-Launchpad-Export-Date: 2014-07-09 06:28+0000\n"
+"X-Generator: Launchpad (build 17100)\n"
 
 #: /home/codygarver/a/po/../src//Plug.vala:41
 msgid "About"
@@ -88,9 +88,3 @@ msgstr "Rapportér eit problem"
 #: /home/codygarver/a/po/../src//Plug.vala:407
 msgid "Check for Upgrades"
 msgstr "Sjå etter oppdateringar"
-
-#~ msgid "Version"
-#~ msgstr "Versjon"
-
-#~ msgid "Built on"
-#~ msgstr "Bygd på"
