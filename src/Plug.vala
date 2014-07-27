@@ -359,17 +359,9 @@ public class About.Plug : Switchboard.Plug {
         hardware_grid.attach (graphics_info, 100, 120, 100, 25);
         hardware_grid.attach (hdd_info, 100, 160, 100, 25);
 
-        // Help button
-        const string HELP_BUTTON_STYLESHEET = """
-            .help_button {
-                border-radius: 200px;
-            }
-        """;
-
         var help_button = new Gtk.Button.with_label ("?");
-
-        Granite.Widgets.Utils.set_theming (help_button, HELP_BUTTON_STYLESHEET, "help_button",
-                           Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        help_button.get_style_context ().add_class ("help_button");
+        help_button.halign = Gtk.Align.CENTER;
 
         help_button.clicked.connect (() => {
             try {
