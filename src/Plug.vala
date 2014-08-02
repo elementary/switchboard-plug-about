@@ -39,7 +39,7 @@ public class About.Plug : Switchboard.Plug {
         Object (category: Category.SYSTEM,
                 code_name: "system-pantheon-about",
                 display_name: _("About"),
-                description: _("Shows System Information…"),
+                description: _("View System Information"),
                 icon: "help-info");
     }
     
@@ -194,7 +194,13 @@ public class About.Plug : Switchboard.Plug {
             } if ("(TM)" in processor) {
                 processor = processor.replace ("(TM)", "™");
             } if (cores > 1) {
-                processor = processor + " × " + cores.to_string ();
+                if (cores == 2) {
+                    processor = _("Dual-Core") + " " + processor;
+                } else if (cores == 4) {
+                    processor = _("Quad-Core") + " " + processor;
+                } else {
+                    processor = processor + " × " + cores.to_string ();
+                }
             }
         } catch (Error e) {
             warning (e.message);
@@ -261,40 +267,27 @@ public class About.Plug : Switchboard.Plug {
     // Wires up and configures initial UI
     private void setup_ui () {
         main_grid = new Gtk.EventBox ();
-        // Let's make sure this looks like the About dialogs
-        main_grid.get_style_context ().add_class (Granite.StyleClass.CONTENT_VIEW);
 
         // Create the section about elementary OS
-        var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 100, 100));
+        var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 128, 128));
 
-        var title = new Gtk.Label (os);
-        title.use_markup = false;
-        Granite.Widgets.Utils.apply_text_style_to_label (Granite.TextStyle.TITLE, title);
+        var title = new Gtk.Label (null);
+        title.set_markup (("%s %s %s <sup><small>(%s)</small></sup>").printf (os, version, codename, arch));
+        title.get_style_context ().add_class ("h2");
         title.set_alignment (0, 0);
-
-        // make sure to keep all three %s in the string, otherwise switchboard will crash!
-        // the first %s will be replaced by the version, the second by the codename (e.g "Freya") and the third by the CPU architecture (e.g. "64-bit")        
-        // keep both \" if you want to use " as quote        
-        var version = new Gtk.Label (_("Version: %s \"%s\" ( %s )").printf (version, codename, arch));
-        version.set_alignment (0, 0);
-        version.set_selectable (true);
+        title.set_selectable (true);
         
         if (is_ubuntu != null) {
-            // make sure to keep all three %s in the string, otherwise switchboard will crash!
-            // the first %s will be replaced by the OS (e.g. "Ubuntu"), the second by the version and the third by the codename (e.g. "Trusty")
-            // keep both \" if you want to use " as quote          
-            based_off = new Gtk.Label (_("Built on: %s %s ( \"%s\" )").printf (is_ubuntu, ubuntu_version, ubuntu_codename));
+            based_off = new Gtk.Label (_("Built on %s %s").printf (is_ubuntu, ubuntu_version));
             based_off.set_alignment (0, 0);
             based_off.set_selectable (true);
         }
 
-        var website_label = new Gtk.Label (null);
-        website_label.set_markup ("<a href=\"http://elementaryos.org/\">http://elementaryos.org</a>");
+        var website_label = new Gtk.LinkButton.with_label ("http://elementaryos.org", "Website");
         website_label.set_alignment (0, 0);
 
         var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         details.pack_start (title, false, false, 0);
-        details.pack_start (version, false, false, 0);
         details.pack_start (based_off, false, false, 0);
         details.pack_start (website_label, false, false, 0);
 
@@ -406,18 +399,20 @@ public class About.Plug : Switchboard.Plug {
         });
 
         // Create a box for the buttons
-        var button_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
+        var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
         button_box.pack_start (help_button, false, false, 0);
-        button_box.pack_start (translate_button, true, true, 0);
-        button_box.pack_start (bug_button, true, true, 0);
-        button_box.pack_start (upgrade_button, true, true, 0);
+        button_box.set_child_non_homogeneous (help_button, true);
+        button_box.pack_end (translate_button, false, false, 0);
+        button_box.pack_end (bug_button, false, false, 0);
+        button_box.pack_end (upgrade_button, false, false, 0);
         
         // Fit everything in a box
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-        box.pack_start (elementary_box, false, false, 20);
-        box.pack_start (hardware_grid, false, false, 40);
-        box.pack_end (button_box, false, false, 0);
-        box.set_margin_bottom(20);
+        box.pack_start (elementary_box, false, false, 24);
+        box.pack_start (hardware_grid, false, false, 48);
+        box.pack_end (button_box, false, false, 0);;
+        box.set_margin_top (24);
+        box.set_margin_bottom (24);
 
         // Let's align the box and add it to the plug
         var halign = new Gtk.Alignment ((float) 0.5, 0, 0, 1);
