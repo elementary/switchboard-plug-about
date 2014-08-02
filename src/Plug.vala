@@ -388,9 +388,9 @@ public class About.Plug : Switchboard.Plug {
             }
         });
 
-        // Upgrade button
-        var upgrade_button = new Gtk.Button.with_label (_("Check for Updates"));
-        upgrade_button.clicked.connect (() => {
+        // Update button
+        var update_button = new Gtk.Button.with_label (_("Check for Updates"));
+        update_button.clicked.connect (() => {
             try {
                 Process.spawn_command_line_async("update-manager");
             } catch (Error e) {
@@ -404,7 +404,7 @@ public class About.Plug : Switchboard.Plug {
         button_box.set_child_non_homogeneous (help_button, true);
         button_box.pack_end (translate_button, false, false, 0);
         button_box.pack_end (bug_button, false, false, 0);
-        button_box.pack_end (upgrade_button, false, false, 0);
+        button_box.pack_end (update_button, false, false, 0);
         
         // Fit everything in a box
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
