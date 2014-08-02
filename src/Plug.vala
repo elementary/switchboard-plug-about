@@ -389,7 +389,7 @@ public class About.Plug : Switchboard.Plug {
         });
 
         // Upgrade button
-        var upgrade_button = new Gtk.Button.with_label (_("Check for Upgrades"));
+        var upgrade_button = new Gtk.Button.with_label (_("Check for Updates"));
         upgrade_button.clicked.connect (() => {
             try {
                 Process.spawn_command_line_async("update-manager");
