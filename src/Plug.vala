@@ -194,7 +194,13 @@ public class About.Plug : Switchboard.Plug {
             } if ("(TM)" in processor) {
                 processor = processor.replace ("(TM)", "™");
             } if (cores > 1) {
-                processor = processor + " × " + cores.to_string ();
+                if (cores == 2) {
+                    processor = _("Dual-Core") + " " + processor;
+                } else if (cores == 4) {
+                    processor = _("Quad-Core") + " " + processor;
+                } else {
+                    processor = processor + " × " + cores.to_string ();
+                }
             }
         } catch (Error e) {
             warning (e.message);
