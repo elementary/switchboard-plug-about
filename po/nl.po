@@ -7,84 +7,81 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-07-06 18:54-0500\n"
+"POT-Creation-Date: 2014-08-02 14:54-0500\n"
 "PO-Revision-Date: 2014-07-08 06:16+0000\n"
 "Last-Translator: elementary Apps team <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-07-09 06:28+0000\n"
-"X-Generator: Launchpad (build 17100)\n"
+"X-Launchpad-Export-Date: 2014-08-03 06:05+0000\n"
+"X-Generator: Launchpad (build 17147)\n"
 
 #: /home/codygarver/a/po/../src//Plug.vala:41
 msgid "About"
 msgstr "Over"
 
 #: /home/codygarver/a/po/../src//Plug.vala:42
-msgid "Shows System Information…"
+msgid "View System Information"
 msgstr ""
 
 #: /home/codygarver/a/po/../src//Plug.vala:178
-#: /home/codygarver/a/po/../src//Plug.vala:201
-#: /home/codygarver/a/po/../src//Plug.vala:225
-#: /home/codygarver/a/po/../src//Plug.vala:236
-#: /home/codygarver/a/po/../src//Plug.vala:256
+#: /home/codygarver/a/po/../src//Plug.vala:207
+#: /home/codygarver/a/po/../src//Plug.vala:231
+#: /home/codygarver/a/po/../src//Plug.vala:242
+#: /home/codygarver/a/po/../src//Plug.vala:262
 msgid "Unknown"
 msgstr "Onbekend"
 
-#. make sure to keep all three %s in the string, otherwise switchboard will crash!
-#. the first %s will be replaced by the version, the second by the codename (e.g "Freya") and the third by the CPU architecture (e.g. "64-bit")
-#. keep both \" if you want to use " as quote
-#: /home/codygarver/a/po/../src//Plug.vala:278
-#, c-format
-msgid "Version: %s \"%s\" ( %s )"
+#: /home/codygarver/a/po/../src//Plug.vala:198
+msgid "Dual-Core"
 msgstr ""
 
-#. make sure to keep all three %s in the string, otherwise switchboard will crash!
-#. the first %s will be replaced by the OS (e.g. "Ubuntu"), the second by the version and the third by the codename (e.g. "Trusty")
-#. keep both \" if you want to use " as quote
-#: /home/codygarver/a/po/../src//Plug.vala:286
+#: /home/codygarver/a/po/../src//Plug.vala:200
+msgid "Quad-Core"
+msgstr ""
+
+#: /home/codygarver/a/po/../src//Plug.vala:281
 #, c-format
-msgid "Built on: %s %s ( \"%s\" )"
+msgid "Built on %s %s"
 msgstr ""
 
 #. Hardware title
-#: /home/codygarver/a/po/../src//Plug.vala:307
+#: /home/codygarver/a/po/../src//Plug.vala:300
 msgid "Hardware:"
 msgstr "Hardware:"
 
 #. Hardware label
-#: /home/codygarver/a/po/../src//Plug.vala:311
+#: /home/codygarver/a/po/../src//Plug.vala:304
 msgid "Processor:"
 msgstr "Processor:"
 
 #. Hardware label
-#: /home/codygarver/a/po/../src//Plug.vala:315
+#: /home/codygarver/a/po/../src//Plug.vala:308
 msgid "Memory:"
 msgstr "Geheugen:"
 
 #. Hardware label
-#: /home/codygarver/a/po/../src//Plug.vala:319
+#: /home/codygarver/a/po/../src//Plug.vala:312
 msgid "Graphics:"
 msgstr "Videokaart:"
 
 #. Hardware label
-#: /home/codygarver/a/po/../src//Plug.vala:323
+#: /home/codygarver/a/po/../src//Plug.vala:316
 msgid "Storage:"
 msgstr "Opslag"
 
 #. Translate button
-#: /home/codygarver/a/po/../src//Plug.vala:387
+#: /home/codygarver/a/po/../src//Plug.vala:372
 msgid "Translate"
 msgstr "Vertalen"
 
 #. Bug button
-#: /home/codygarver/a/po/../src//Plug.vala:397
+#: /home/codygarver/a/po/../src//Plug.vala:382
 msgid "Report a Problem"
 msgstr "Meld een probleem"
 
-#. Upgrade button
-#: /home/codygarver/a/po/../src//Plug.vala:407
-msgid "Check for Upgrades"
-msgstr "Controleer op updates"
+#. Update button
+#: /home/codygarver/a/po/../src//Plug.vala:392
+msgid "Check for Updates"
+msgstr ""
