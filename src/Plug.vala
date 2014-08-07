@@ -369,7 +369,7 @@ public class About.Plug : Switchboard.Plug {
         });
 
         // Translate button
-        var translate_button = new Gtk.Button.with_label (_("Translate"));
+        var translate_button = new Gtk.Button.with_label (_("Suggest Translations"));
         translate_button.clicked.connect (() => {
             try {
                 AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
