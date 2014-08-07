@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-02 14:54-0500\n"
-"PO-Revision-Date: 2014-07-13 10:09+0000\n"
+"PO-Revision-Date: 2014-08-06 21:13+0000\n"
 "Last-Translator: Mark Lutring <marcus@elitemail.hu>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-03 06:05+0000\n"
+"X-Launchpad-Export-Date: 2014-08-07 06:21+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 
 #: /home/codygarver/a/po/../src//Plug.vala:41
@@ -23,7 +23,7 @@ msgstr "Részletek"
 
 #: /home/codygarver/a/po/../src//Plug.vala:42
 msgid "View System Information"
-msgstr ""
+msgstr "Rendszer információk megtekintése"
 
 #: /home/codygarver/a/po/../src//Plug.vala:178
 #: /home/codygarver/a/po/../src//Plug.vala:207
@@ -35,11 +35,11 @@ msgstr "Ismeretlen"
 
 #: /home/codygarver/a/po/../src//Plug.vala:198
 msgid "Dual-Core"
-msgstr ""
+msgstr "Kétmagos"
 
 #: /home/codygarver/a/po/../src//Plug.vala:200
 msgid "Quad-Core"
-msgstr ""
+msgstr "négymagos"
 
 #: /home/codygarver/a/po/../src//Plug.vala:281
 #, c-format
@@ -84,4 +84,4 @@ msgstr "Hibajelentés"
 #. Update button
 #: /home/codygarver/a/po/../src//Plug.vala:392
 msgid "Check for Updates"
-msgstr ""
+msgstr "Frissítések keresése"

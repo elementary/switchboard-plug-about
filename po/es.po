@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-02 14:54-0500\n"
-"PO-Revision-Date: 2014-08-01 00:33+0000\n"
-"Last-Translator: Alfredo Hernández <Unknown>\n"
+"PO-Revision-Date: 2014-08-07 05:25+0000\n"
+"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-03 06:05+0000\n"
+"X-Launchpad-Export-Date: 2014-08-07 06:21+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 "Language: es\n"
 
@@ -24,7 +24,7 @@ msgstr "Acerca de"
 
 #: /home/codygarver/a/po/../src//Plug.vala:42
 msgid "View System Information"
-msgstr ""
+msgstr "Ver información del sistema"
 
 #: /home/codygarver/a/po/../src//Plug.vala:178
 #: /home/codygarver/a/po/../src//Plug.vala:207
@@ -36,11 +36,11 @@ msgstr "Desconocido"
 
 #: /home/codygarver/a/po/../src//Plug.vala:198
 msgid "Dual-Core"
-msgstr ""
+msgstr "Doble núcleo"
 
 #: /home/codygarver/a/po/../src//Plug.vala:200
 msgid "Quad-Core"
-msgstr ""
+msgstr "Cuádruple núcleo"
 
 #: /home/codygarver/a/po/../src//Plug.vala:281
 #, c-format
@@ -85,4 +85,4 @@ msgstr "Informar de un problema"
 #. Update button
 #: /home/codygarver/a/po/../src//Plug.vala:392
 msgid "Check for Updates"
-msgstr ""
+msgstr "Buscar actualizaciones"
