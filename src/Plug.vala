@@ -25,6 +25,7 @@ public class About.Plug : Switchboard.Plug {
     private string arch;
     private string processor;
     private string memory;
+    private string vmemory;
     private string graphics;
     private string hdd;
     private Gtk.Label based_off;
@@ -210,6 +211,13 @@ public class About.Plug : Switchboard.Plug {
         //Memory
         memory = GLib.format_size (get_mem_info_for("MemTotal:") * 1024, FormatSizeFlags.IEC_UNITS);
 
+        //Swap
+        uint64 swap = get_mem_info_for ("SwapTotal:");
+        if (swap != 0)
+            vmemory = GLib.format_size (swap * 1024, FormatSizeFlags.IEC_UNITS);
+        else
+            vmemory = _("Disabled");
+
         // Graphics
         try {
             Process.spawn_command_line_sync ("lspci", out graphics);
@@ -308,6 +316,10 @@ public class About.Plug : Switchboard.Plug {
         var memory_label = new Gtk.Label (_("Memory:"));
         memory_label.set_alignment (1, 0);
 
+        // VMemory label
+        var vmemory_label = new Gtk.Label (_("Virtual Memory:"));
+        vmemory_label.set_alignment (1, 0);
+
         // Hardware label
         var graphics_label = new Gtk.Label (_("Graphics:"));
         graphics_label.set_alignment (1, 0);
@@ -328,6 +340,11 @@ public class About.Plug : Switchboard.Plug {
         memory_info.set_margin_left (6);
         memory_info.set_selectable (true);
 
+        var vmemory_info = new Gtk.Label (vmemory);
+        vmemory_info.set_alignment (0, 0);
+        vmemory_info.set_margin_left (6);
+        vmemory_info.set_selectable (true);
+
         var graphics_info = new Gtk.Label (graphics);
         graphics_info.set_alignment (0, 0);
         graphics_info.set_margin_left (6);
@@ -345,12 +362,14 @@ public class About.Plug : Switchboard.Plug {
         hardware_grid.attach (hardware_title, 0, 0, 100, 30);
         hardware_grid.attach (processor_label, 0, 40, 100, 25);
         hardware_grid.attach (memory_label, 0, 80, 100, 25);
-        hardware_grid.attach (graphics_label, 0, 120, 100, 25);
-        hardware_grid.attach (hdd_label, 0, 160, 100, 25);
+        hardware_grid.attach (vmemory_label, 0, 120, 100, 25);
+        hardware_grid.attach (graphics_label, 0, 160, 100, 25);
+        hardware_grid.attach (hdd_label, 0, 200, 100, 25);
         hardware_grid.attach (processor_info, 100, 40, 100, 25);
         hardware_grid.attach (memory_info, 100, 80, 100, 25);
-        hardware_grid.attach (graphics_info, 100, 120, 100, 25);
-        hardware_grid.attach (hdd_info, 100, 160, 100, 25);
+        hardware_grid.attach (vmemory_info, 100, 120, 100, 25);
+        hardware_grid.attach (graphics_info, 100, 160, 100, 25);
+        hardware_grid.attach (hdd_info, 100, 200, 100, 25);
 
         var help_button = new Gtk.Button.with_label ("?");
         help_button.get_style_context ().add_class ("help_button");
