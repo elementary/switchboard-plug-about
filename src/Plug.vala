@@ -217,7 +217,7 @@ public class About.Plug : Switchboard.Plug {
                 string[] lines = graphics.split("\n");
                 graphics="";
                 foreach (var s in lines) {
-                    if("VGA" in s) {
+                    if (("VGA" in s) || ("3D" in s)) {
                         string model = get_graphics_from_string(s);
                         if(graphics=="")
                             graphics = model;
