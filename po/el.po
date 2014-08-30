@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-07 18:08-0500\n"
-"PO-Revision-Date: 2014-08-02 16:33+0000\n"
-"Last-Translator: James Spentzos <Unknown>\n"
+"PO-Revision-Date: 2014-08-28 10:41+0000\n"
+"Last-Translator: Jim Spentzos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-08-08 06:54+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-08-30 07:30+0000\n"
+"X-Generator: Launchpad (build 17176)\n"
 "Language: el\n"
 
 #: /home/codygarver/a/po/../src//Plug.vala:41
@@ -24,7 +24,7 @@ msgstr "Περί"
 
 #: /home/codygarver/a/po/../src//Plug.vala:42
 msgid "View System Information"
-msgstr ""
+msgstr "Προβολή Πληροφοριών Συστήματος"
 
 #: /home/codygarver/a/po/../src//Plug.vala:178
 #: /home/codygarver/a/po/../src//Plug.vala:207
@@ -36,16 +36,16 @@ msgstr "Άγνωστο"
 
 #: /home/codygarver/a/po/../src//Plug.vala:198
 msgid "Dual-Core"
-msgstr ""
+msgstr "Διπύρηνος"
 
 #: /home/codygarver/a/po/../src//Plug.vala:200
 msgid "Quad-Core"
-msgstr ""
+msgstr "Τετραπύρηνος"
 
 #: /home/codygarver/a/po/../src//Plug.vala:281
 #, c-format
 msgid "Built on %s %s"
-msgstr ""
+msgstr "Βασισμένο σε %s %s"
 
 #. Hardware title
 #: /home/codygarver/a/po/../src//Plug.vala:300
@@ -75,7 +75,7 @@ msgstr "Αποθηκευτικός χώρος:"
 #. Translate button
 #: /home/codygarver/a/po/../src//Plug.vala:372
 msgid "Suggest Translations"
-msgstr ""
+msgstr "Πρόταση Μεταφράσεων"
 
 #. Bug button
 #: /home/codygarver/a/po/../src//Plug.vala:382
@@ -85,4 +85,4 @@ msgstr "Αναφορά προβλήματος"
 #. Update button
 #: /home/codygarver/a/po/../src//Plug.vala:392
 msgid "Check for Updates"
-msgstr ""
+msgstr "Έλεγχος για Ενημερώσεις"
