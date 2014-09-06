@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-07 18:08-0500\n"
-"PO-Revision-Date: 2014-09-04 19:54+0000\n"
-"Last-Translator: Artem Anufrij <Unknown>\n"
+"PO-Revision-Date: 2014-09-05 16:17+0000\n"
+"Last-Translator: Alex <JWo1F@yandex.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-09-05 07:37+0000\n"
+"X-Launchpad-Export-Date: 2014-09-06 07:26+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: /home/codygarver/a/po/../src//Plug.vala:41
@@ -69,7 +69,7 @@ msgstr "Графика:"
 #. Hardware label
 #: /home/codygarver/a/po/../src//Plug.vala:316
 msgid "Storage:"
-msgstr "Жесткий диск"
+msgstr "Жесткий диск:"
 
 #. Translate button
 #: /home/codygarver/a/po/../src//Plug.vala:372
@@ -84,4 +84,4 @@ msgstr "Сообщить о проблеме"
 #. Update button
 #: /home/codygarver/a/po/../src//Plug.vala:392
 msgid "Check for Updates"
-msgstr ""
+msgstr "Проверить наличие обновлений"
