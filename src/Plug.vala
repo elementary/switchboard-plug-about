@@ -283,7 +283,7 @@ public class About.Plug : Switchboard.Plug {
             based_off.set_selectable (true);
         }
 
-        var website_label = new Gtk.LinkButton.with_label ("http://elementaryos.org", "Website");
+        var website_label = new Gtk.LinkButton.with_label ("http://elementaryos.org", _("Website"));
         website_label.set_alignment (0, 0);
 
         var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
