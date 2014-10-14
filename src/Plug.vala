@@ -400,6 +400,7 @@ public class About.Plug : Switchboard.Plug {
 
         // Create a box for the buttons
         var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
+        button_box.spacing = 6;
         button_box.pack_start (help_button, false, false, 0);
         button_box.set_child_non_homogeneous (help_button, true);
         button_box.pack_end (translate_button, false, false, 0);
