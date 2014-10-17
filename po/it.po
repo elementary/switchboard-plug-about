@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-09 13:31-0500\n"
-"PO-Revision-Date: 2014-10-09 19:57+0000\n"
+"PO-Revision-Date: 2014-10-16 18:14+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-10 05:18+0000\n"
+"X-Launchpad-Export-Date: 2014-10-17 06:15+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 "Language: it\n"
 
@@ -84,7 +84,7 @@ msgstr "Suggerisci traduzioni"
 #. Bug button
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:382
 msgid "Report a Problem"
-msgstr "Segnala un Problema"
+msgstr "Segnala un problema"
 
 #. Update button
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:392
