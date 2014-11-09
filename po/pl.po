@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-09 13:31-0500\n"
-"PO-Revision-Date: 2014-08-04 10:17+0000\n"
-"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
+"PO-Revision-Date: 2014-11-08 12:55+0000\n"
+"Last-Translator: Damian Dygulski <dygulski13@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-10 05:18+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-11-09 06:48+0000\n"
+"X-Generator: Launchpad (build 17231)\n"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:41
 msgid "About"
@@ -48,7 +48,7 @@ msgstr "Zbudowany na %s %s"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:286
 msgid "Website"
-msgstr ""
+msgstr "Strona internetowa"
 
 #. Hardware title
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:300
@@ -78,7 +78,7 @@ msgstr "Pamięć masowa:"
 #. Translate button
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:372
 msgid "Suggest Translations"
-msgstr ""
+msgstr "Zaproponuj tłumaczenie"
 
 #. Bug button
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:382
