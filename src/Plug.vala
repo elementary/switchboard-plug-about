@@ -410,7 +410,7 @@ public class About.Plug : Switchboard.Plug {
         // Fit everything in a box
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         box.pack_start (elementary_box, false, false, 24);
-        box.pack_start (hardware_grid, false, false, 48);
+        box.pack_start (hardware_grid, false, false, 8);
         box.pack_end (button_box, false, false, 0);;
         box.set_margin_top (24);
         box.set_margin_bottom (24);
