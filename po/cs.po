@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-09 13:31-0500\n"
-"PO-Revision-Date: 2014-12-06 21:37+0000\n"
-"Last-Translator: Long Do Hai <mailbox@thinky.cz>\n"
+"PO-Revision-Date: 2014-12-23 17:55+0000\n"
+"Last-Translator: Marek Doležel <marekdolezel@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-12-07 06:07+0000\n"
-"X-Generator: Launchpad (build 17274)\n"
+"X-Launchpad-Export-Date: 2014-12-24 06:49+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:41
 msgid "About"
@@ -31,7 +31,7 @@ msgstr "Zobrazit systémové informace"
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:242
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:262
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámý"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:198
 msgid "Dual-Core"
@@ -44,7 +44,7 @@ msgstr "Čtyřjádrový"
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:281
 #, c-format
 msgid "Built on %s %s"
-msgstr ""
+msgstr "Postaveno na %s %s"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:286
 msgid "Website"
@@ -88,4 +88,4 @@ msgstr "Nahlásit problém"
 #. Update button
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:392
 msgid "Check for Updates"
-msgstr ""
+msgstr "Zkontrolovat aktualizace"
