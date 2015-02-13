@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-09 13:31-0500\n"
-"PO-Revision-Date: 2014-07-08 06:14+0000\n"
-"Last-Translator: elementary Apps team <Unknown>\n"
+"PO-Revision-Date: 2015-02-12 22:34+0000\n"
+"Last-Translator: Hamza <info@hckrtech.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-05 06:47+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-02-13 06:49+0000\n"
+"X-Generator: Launchpad (build 17336)\n"
 "Language: tr\n"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:41
@@ -24,7 +24,7 @@ msgstr "Hakkında"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:42
 msgid "View System Information"
-msgstr ""
+msgstr "Sistem Bilgilerini Göster"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:178
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:207
@@ -69,7 +69,7 @@ msgstr "Bellek:"
 #. Hardware label
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:312
 msgid "Graphics:"
-msgstr "Grafikler:"
+msgstr "Grafik:"
 
 #. Hardware label
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:316
@@ -79,7 +79,7 @@ msgstr "Depolama:"
 #. Translate button
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:372
 msgid "Suggest Translations"
-msgstr ""
+msgstr "Çeviri Öner"
 
 #. Bug button
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:382
