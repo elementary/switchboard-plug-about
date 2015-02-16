@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-10-09 13:31-0500\n"
-"PO-Revision-Date: 2014-11-13 13:21+0000\n"
+"PO-Revision-Date: 2015-02-15 14:02+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-05 06:47+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-02-16 06:47+0000\n"
+"X-Generator: Launchpad (build 17341)\n"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:41
 msgid "About"
@@ -58,17 +58,17 @@ msgstr "硬體："
 #. Hardware label
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:304
 msgid "Processor:"
-msgstr "處理器:"
+msgstr "處理器："
 
 #. Hardware label
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:308
 msgid "Memory:"
-msgstr "記憶體:"
+msgstr "記憶體："
 
 #. Hardware label
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:312
 msgid "Graphics:"
-msgstr "顯示卡:"
+msgstr "顯示卡："
 
 #. Hardware label
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:316
