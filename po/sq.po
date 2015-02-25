@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-09 13:31-0500\n"
-"PO-Revision-Date: 2015-02-21 12:30+0000\n"
+"PO-Revision-Date: 2015-02-24 13:13+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-22 05:30+0000\n"
+"X-Launchpad-Export-Date: 2015-02-25 05:57+0000\n"
 "X-Generator: Launchpad (build 17355)\n"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:41
 msgid "About"
-msgstr ""
+msgstr "Rreth"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:42
 msgid "View System Information"
@@ -35,11 +35,11 @@ msgstr "E panjohur"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:198
 msgid "Dual-Core"
-msgstr ""
+msgstr "Dual-Core"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:200
 msgid "Quad-Core"
-msgstr ""
+msgstr "Quad-Core"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:281
 #, c-format
