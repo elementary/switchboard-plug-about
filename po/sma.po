@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-09 13:31-0500\n"
-"PO-Revision-Date: 2014-11-13 23:04+0000\n"
+"PO-Revision-Date: 2015-03-06 10:25+0000\n"
 "Last-Translator: Skandee <Unknown>\n"
 "Language-Team: Southern Sami <sma@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-05 06:47+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-03-07 05:40+0000\n"
+"X-Generator: Launchpad (build 17383)\n"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:41
 msgid "About"
@@ -44,7 +44,7 @@ msgstr "Quad-Core"
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:281
 #, c-format
 msgid "Built on %s %s"
-msgstr ""
+msgstr "%s %s bïekedh"
 
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:286
 msgid "Website"
@@ -58,7 +58,7 @@ msgstr "Domhpe:"
 #. Hardware label
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:304
 msgid "Processor:"
-msgstr ""
+msgstr "Faamoe:"
 
 #. Hardware label
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:308
@@ -73,7 +73,7 @@ msgstr "Grafihke:"
 #. Hardware label
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:316
 msgid "Storage:"
-msgstr ""
+msgstr "Sijjie:"
 
 #. Translate button
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:372
@@ -83,9 +83,9 @@ msgstr "uvtedidh ﻿jarkoestidh"
 #. Bug button
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:382
 msgid "Report a Problem"
-msgstr ""
+msgstr "Dåeriesmoere reektehtem"
 
 #. Update button
 #: /tmp/tmp.Fkknl4H5Vu/a/po/../src//Plug.vala:392
 msgid "Check for Updates"
-msgstr ""
+msgstr "oppdatering vuartasjidh"
