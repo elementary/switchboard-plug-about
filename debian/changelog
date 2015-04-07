@@ -1,4 +1,10 @@
-switchboard-plug-about (0.1.2) UNRELEASED; urgency=low
+switchboard-plug-about (0.2.0) trusty; urgency=low
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementaryos.org>  Mon, 06 Apr 2015 19:07:09 -0500
+
+switchboard-plug-about (0.1.2) trusty; urgency=low
 
   * New upstream release.
 
