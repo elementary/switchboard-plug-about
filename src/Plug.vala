@@ -28,8 +28,8 @@ public class About.Plug : Switchboard.Plug {
     private string graphics;
     private string hdd;
     private Gtk.Label based_off;
-    
-    
+
+
     private string is_ubuntu;
     private string ubuntu_version;
     private string ubuntu_codename;
@@ -42,7 +42,7 @@ public class About.Plug : Switchboard.Plug {
                 description: _("View System Information"),
                 icon: "help-info");
     }
-    
+
     public override Gtk.Widget get_widget () {
         if (main_grid == null) {
             setup_info ();
@@ -50,19 +50,19 @@ public class About.Plug : Switchboard.Plug {
         }
         return main_grid;
     }
-    
+
     public override void shown () {
-    
+
     }
-    
+
     public override void hidden () {
-    
+
     }
-    
+
     public override void search_callback (string location) {
-    
+
     }
-    
+
     // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
     public override async Gee.TreeMap<string, string> search (string search) {
         return new Gee.TreeMap<string, string> (null, null);
@@ -93,7 +93,7 @@ public class About.Plug : Switchboard.Plug {
     private void setup_info () {
 
         // Operating System
-        
+
         File file = File.new_for_path("/etc/lsb-release");
         try {
             var dis = new DataInputStream (file.read ());
@@ -118,7 +118,7 @@ public class About.Plug : Switchboard.Plug {
             version = "0.3";
             codename = "Freya";
         }
-        
+
         file = File.new_for_path("/etc/upstream-release/lsb-release");
         try {
             var dis = new DataInputStream (file.read ());
@@ -150,7 +150,7 @@ public class About.Plug : Switchboard.Plug {
             string line;
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
-                 if (line.has_prefix("Bugs:")) {
+                if (line.has_prefix("Bugs:")) {
                     bugtracker_url = line.replace ("Bugs: ", "");
                 }
             }
@@ -232,7 +232,7 @@ public class About.Plug : Switchboard.Plug {
         }
 
         // Hard Drive
-        
+
         var file_root = GLib.File.new_for_path ("/");
         try {
             var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
@@ -276,7 +276,7 @@ public class About.Plug : Switchboard.Plug {
         title.get_style_context ().add_class ("h2");
         title.set_alignment (0, 0);
         title.set_selectable (true);
-        
+
         if (is_ubuntu != null) {
             based_off = new Gtk.Label (_("Built on %s %s").printf (is_ubuntu, ubuntu_version));
             based_off.set_alignment (0, 0);
@@ -357,56 +357,61 @@ public class About.Plug : Switchboard.Plug {
         help_button.halign = Gtk.Align.CENTER;
 
         help_button.clicked.connect (() => {
-            try {
-                AppInfo.launch_default_for_uri ("http://elementary.io/support", null);
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
+                try {
+                    AppInfo.launch_default_for_uri ("http://elementary.io/support", null);
+                } catch (Error e) {
+                    warning (e.message);
+                }
+            });
 
         help_button.size_allocate.connect ( (alloc) => {
-            help_button.set_size_request (alloc.height, -1);
-        });
+                help_button.set_size_request (alloc.height, -1);
+            });
 
         // Translate button
         var translate_button = new Gtk.Button.with_label (_("Suggest Translations"));
         translate_button.clicked.connect (() => {
-            try {
-                AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
+                try {
+                    AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
+                } catch (Error e) {
+                    warning (e.message);
+                }
+            });
 
         // Bug button
         var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
         bug_button.clicked.connect (() => {
-            try {
-                AppInfo.launch_default_for_uri (bugtracker_url, null);
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
+                try {
+                    AppInfo.launch_default_for_uri (bugtracker_url, null);
+                } catch (Error e) {
+                    warning (e.message);
+                }
+            });
 
         // Update button
         var update_button = new Gtk.Button.with_label (_("Check for Updates"));
         update_button.clicked.connect (() => {
-            try {
-                Process.spawn_command_line_async("update-manager");
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
+                try {
+                    Process.spawn_command_line_async("update-manager");
+                } catch (Error e) {
+                    warning (e.message);
+                }
+            });
+
+        // Reset settings button
+        var settings_reset_button = new Gtk.Button.with_label (_("Reset to default settings"));
+        settings_reset_button.clicked.connect (settings_reset_clicked);
 
         // Create a box for the buttons
         var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
         button_box.spacing = 6;
         button_box.pack_start (help_button, false, false, 0);
         button_box.set_child_non_homogeneous (help_button, true);
+        button_box.pack_end (settings_reset_button, false, false, 0);
         button_box.pack_end (translate_button, false, false, 0);
         button_box.pack_end (bug_button, false, false, 0);
         button_box.pack_end (update_button, false, false, 0);
-        
+
         // Fit everything in a box
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         box.pack_start (elementary_box, false, false, 24);
@@ -443,6 +448,55 @@ private uint64 get_mem_info_for(string name) {
     }
 
     return result;
+}
+
+private void reset_all_keys (GLib.Settings settings) {
+    var keys = settings.list_keys ();
+    foreach (var key in keys) {
+        settings.reset (key);
+    }
+}
+
+private string[] get_pantheon_schemas () {
+    string[] schemas = {};
+    string[] pantheon_schemas = {};
+
+    var prefix = "org.pantheon";
+    var sss = SettingsSchemaSource.get_default ();
+
+    sss.list_schemas (true, out schemas, null);
+
+    foreach (var schema in schemas) {
+        if (schema.has_prefix (prefix)) {
+            pantheon_schemas += schema;
+        }
+    }
+    return pantheon_schemas;
+}
+
+private void reset_recursively (string schema) {
+    var settings = new GLib.Settings (schema);
+    // change into delay apply mode
+    settings.delay ();
+
+	reset_all_keys (settings);
+	
+    var children = settings.list_children ();
+    foreach (var child in children) {
+        var child_settings = settings.get_child (child);
+
+        reset_all_keys (child_settings);
+    }
+    settings.apply ();
+	GLib.Settings.sync ();
+}
+
+private void settings_reset_clicked () {
+    var all_schemas = get_pantheon_schemas ();
+
+    foreach (var schema in all_schemas) {
+		reset_recursively (schema);
+    }
 }
 
 public Switchboard.Plug get_plug (Module module) {
