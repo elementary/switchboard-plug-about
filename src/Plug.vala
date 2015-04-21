@@ -399,15 +399,16 @@ public class About.Plug : Switchboard.Plug {
             });
 
         // Reset settings button
-        var settings_reset_button = new Gtk.Button.with_label (_("Reset to default settings"));
-        settings_reset_button.clicked.connect (settings_reset_clicked);
+        var settings_restore_button = new Gtk.Button.with_label (_("Restore to default settings"));
+        settings_restore_button.get_style_context ().add_class ("destructive-action");
+        settings_restore_button.clicked.connect (settings_restore_clicked);
 
         // Create a box for the buttons
         var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
         button_box.spacing = 6;
         button_box.pack_start (help_button, false, false, 0);
         button_box.set_child_non_homogeneous (help_button, true);
-        button_box.pack_end (settings_reset_button, false, false, 0);
+        button_box.pack_end (settings_restore_button, false, false, 0);
         button_box.pack_end (translate_button, false, false, 0);
         button_box.pack_end (bug_button, false, false, 0);
         button_box.pack_end (update_button, false, false, 0);
@@ -460,15 +461,17 @@ private void reset_all_keys (GLib.Settings settings) {
 private string[] get_pantheon_schemas () {
     string[] schemas = {};
     string[] pantheon_schemas = {};
+    string[] prefixes = { "org.pantheon.desktop", "org.gnome.desktop" };
 
-    var prefix = "org.pantheon";
     var sss = SettingsSchemaSource.get_default ();
 
     sss.list_schemas (true, out schemas, null);
 
     foreach (var schema in schemas) {
-        if (schema.has_prefix (prefix)) {
-            pantheon_schemas += schema;
+        foreach (var prefix in prefixes) {
+            if (schema.has_prefix (prefix)) {
+                pantheon_schemas += schema;
+            }
         }
     }
     return pantheon_schemas;
@@ -479,8 +482,8 @@ private void reset_recursively (string schema) {
     // change into delay apply mode
     settings.delay ();
 
-	reset_all_keys (settings);
-	
+    reset_all_keys (settings);
+
     var children = settings.list_children ();
     foreach (var child in children) {
         var child_settings = settings.get_child (child);
@@ -488,14 +491,71 @@ private void reset_recursively (string schema) {
         reset_all_keys (child_settings);
     }
     settings.apply ();
-	GLib.Settings.sync ();
+    GLib.Settings.sync ();
 }
 
-private void settings_reset_clicked () {
-    var all_schemas = get_pantheon_schemas ();
+/**
+ * return true if should restore, false to cancel
+ */
+private bool confirm_restore_action () {
+    var dialog = new Gtk.Dialog ();
 
-    foreach (var schema in all_schemas) {
-		reset_recursively (schema);
+    Gtk.Box box = dialog.get_content_area () as Gtk.Box;
+
+    var grid = new Gtk.Grid ();
+    grid.column_spacing = 12;
+
+    var text = new Gtk.Label ("");
+    text.set_markup ("<span weight='bold' size='larger'>" +
+                     _("System settings will be restored to the factory defaults") + "</span>\n\n"+
+                     _("All system settings and data will be reset to the default values.") + "\n" +
+                     _("Personal data, such as music and pictures, will be uneffected."));
+    text.margin_bottom = 24;
+
+    var image = new Gtk.Image.from_icon_name ("dialog-warning",
+                                              Gtk.IconSize.DIALOG);
+    image.valign = Gtk.Align.START;
+    image.show ();
+
+    grid.add (image);
+    grid.add (text);
+
+    box.margin = 12;
+    box.pack_start (grid);
+
+    var continue_button = new Gtk.Button.with_label (_("Restore Settings"));
+    continue_button.get_style_context ().add_class ("destructive-action");
+
+    var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+    continue_button.show ();
+    cancel_button.show ();
+
+    dialog.deletable = false;
+    dialog.add_action_widget (cancel_button, 0);
+    dialog.add_action_widget (continue_button, 1);
+
+    dialog.show_all ();
+    var result = dialog.run ();
+    dialog.destroy ();
+
+    if (result == 1) {
+        // continue was clicked
+        return true;
+    } else {
+        // cancel was clicked
+        return false;
+    }
+}
+
+private void settings_restore_clicked () {
+    var should_display = confirm_restore_action ();
+
+    if (should_display) {
+        var all_schemas = get_pantheon_schemas ();
+
+        foreach (var schema in all_schemas) {
+            reset_recursively (schema);
+        }
     }
 }
 
