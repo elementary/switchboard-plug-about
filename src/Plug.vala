@@ -1,5 +1,5 @@
 //
-//  Copyright (C) 2012 Ivo Nunes
+//  Copyright (C) 2015 Ivo Nunes, Akshay Shekher
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -399,8 +399,7 @@ public class About.Plug : Switchboard.Plug {
         });
 
         // Restore settings button
-        var settings_restore_button = new Gtk.Button.with_label (_("Restore to default settings"));
-        settings_restore_button.get_style_context ().add_class ("destructive-action");
+        var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Dettings"));
         settings_restore_button.clicked.connect (settings_restore_clicked);
 
         // Create a box for the buttons
@@ -516,9 +515,9 @@ private bool confirm_restore_action () {
     image.show ();
 
     layout.set_column_spacing (12);
-    layout.set_margin_right (12);
-    layout.set_margin_bottom (24);
-    layout.set_margin_left (12);
+    layout.set_margin_right (6);
+    layout.set_margin_bottom (18);
+    layout.set_margin_left (6);
 
     layout.add (image);
     layout.add (text);
@@ -532,7 +531,7 @@ private bool confirm_restore_action () {
     continue_button.show ();
     cancel_button.show ();
 
-	dialog.border_width = 0;
+    dialog.border_width = 6;
     dialog.deletable = false;
     dialog.add_action_widget (cancel_button, 0);
     dialog.add_action_widget (continue_button, 1);
