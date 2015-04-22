@@ -399,7 +399,7 @@ public class About.Plug : Switchboard.Plug {
         });
 
         // Restore settings button
-        var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Dettings"));
+        var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
         settings_restore_button.clicked.connect (settings_restore_clicked);
 
         // Create a box for the buttons
