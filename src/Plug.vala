@@ -502,27 +502,28 @@ private bool confirm_restore_action () {
     var dialog = new Gtk.Dialog ();
 
     Gtk.Box box = dialog.get_content_area () as Gtk.Box;
-
-    var grid = new Gtk.Grid ();
-    grid.column_spacing = 12;
-
+    var layout = new Gtk.Grid ();
     var text = new Gtk.Label ("");
+
     text.set_markup ("<span weight='bold' size='larger'>" +
                      _("System settings will be restored to the factory defaults") + "</span>\n\n"+
                      _("All system settings and data will be reset to the default values.") + "\n" +
                      _("Personal data, such as music and pictures, will be uneffected."));
-    text.margin_bottom = 24;
 
     var image = new Gtk.Image.from_icon_name ("dialog-warning",
                                               Gtk.IconSize.DIALOG);
-    image.valign = Gtk.Align.START;
+    image.yalign = 0;
     image.show ();
 
-    grid.add (image);
-    grid.add (text);
+    layout.set_column_spacing (12);
+    layout.set_margin_right (12);
+    layout.set_margin_bottom (24);
+    layout.set_margin_left (12);
 
-    box.margin = 12;
-    box.pack_start (grid);
+    layout.add (image);
+    layout.add (text);
+
+    box.pack_start (layout);
 
     var continue_button = new Gtk.Button.with_label (_("Restore Settings"));
     continue_button.get_style_context ().add_class ("destructive-action");
@@ -531,6 +532,7 @@ private bool confirm_restore_action () {
     continue_button.show ();
     cancel_button.show ();
 
+	dialog.border_width = 0;
     dialog.deletable = false;
     dialog.add_action_widget (cancel_button, 0);
     dialog.add_action_widget (continue_button, 1);
