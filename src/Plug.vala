@@ -1,5 +1,5 @@
 //
-//  Copyright (C) 2012 Ivo Nunes
+//  Copyright (C) 2015 Ivo Nunes, Akshay Shekher
 //
 //  This program is free software: you can redistribute it and/or modify
 //  it under the terms of the GNU General Public License as published by
@@ -28,8 +28,8 @@ public class About.Plug : Switchboard.Plug {
     private string graphics;
     private string hdd;
     private Gtk.Label based_off;
-    
-    
+
+
     private string is_ubuntu;
     private string ubuntu_version;
     private string ubuntu_codename;
@@ -42,7 +42,7 @@ public class About.Plug : Switchboard.Plug {
                 description: _("View System Information"),
                 icon: "help-info");
     }
-    
+
     public override Gtk.Widget get_widget () {
         if (main_grid == null) {
             setup_info ();
@@ -50,19 +50,19 @@ public class About.Plug : Switchboard.Plug {
         }
         return main_grid;
     }
-    
+
     public override void shown () {
-    
+
     }
-    
+
     public override void hidden () {
-    
+
     }
-    
+
     public override void search_callback (string location) {
-    
+
     }
-    
+
     // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
     public override async Gee.TreeMap<string, string> search (string search) {
         return new Gee.TreeMap<string, string> (null, null);
@@ -93,7 +93,7 @@ public class About.Plug : Switchboard.Plug {
     private void setup_info () {
 
         // Operating System
-        
+
         File file = File.new_for_path("/etc/lsb-release");
         try {
             var dis = new DataInputStream (file.read ());
@@ -118,7 +118,7 @@ public class About.Plug : Switchboard.Plug {
             version = "0.3";
             codename = "Freya";
         }
-        
+
         file = File.new_for_path("/etc/upstream-release/lsb-release");
         try {
             var dis = new DataInputStream (file.read ());
@@ -150,7 +150,7 @@ public class About.Plug : Switchboard.Plug {
             string line;
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
-                 if (line.has_prefix("Bugs:")) {
+                if (line.has_prefix("Bugs:")) {
                     bugtracker_url = line.replace ("Bugs: ", "");
                 }
             }
@@ -232,7 +232,7 @@ public class About.Plug : Switchboard.Plug {
         }
 
         // Hard Drive
-        
+
         var file_root = GLib.File.new_for_path ("/");
         try {
             var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
@@ -276,7 +276,7 @@ public class About.Plug : Switchboard.Plug {
         title.get_style_context ().add_class ("h2");
         title.set_alignment (0, 0);
         title.set_selectable (true);
-        
+
         if (is_ubuntu != null) {
             based_off = new Gtk.Label (_("Built on %s %s").printf (is_ubuntu, ubuntu_version));
             based_off.set_alignment (0, 0);
@@ -398,15 +398,20 @@ public class About.Plug : Switchboard.Plug {
             }
         });
 
+        // Restore settings button
+        var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
+        settings_restore_button.clicked.connect (settings_restore_clicked);
+
         // Create a box for the buttons
         var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
         button_box.spacing = 6;
         button_box.pack_start (help_button, false, false, 0);
         button_box.set_child_non_homogeneous (help_button, true);
+        button_box.pack_end (settings_restore_button, false, false, 0);
         button_box.pack_end (translate_button, false, false, 0);
         button_box.pack_end (bug_button, false, false, 0);
         button_box.pack_end (update_button, false, false, 0);
-        
+
         // Fit everything in a box
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
         box.pack_start (elementary_box, false, false, 24);
@@ -443,6 +448,117 @@ private uint64 get_mem_info_for(string name) {
     }
 
     return result;
+}
+
+private void reset_all_keys (GLib.Settings settings) {
+    var keys = settings.list_keys ();
+    foreach (var key in keys) {
+        settings.reset (key);
+    }
+}
+
+private string[] get_pantheon_schemas () {
+    string[] schemas = {};
+    string[] pantheon_schemas = {};
+    string[] prefixes = { "org.pantheon.desktop", "org.gnome.desktop" };
+
+    var sss = SettingsSchemaSource.get_default ();
+
+    sss.list_schemas (true, out schemas, null);
+
+    foreach (var schema in schemas) {
+        foreach (var prefix in prefixes) {
+            if (schema.has_prefix (prefix)) {
+                pantheon_schemas += schema;
+            }
+        }
+    }
+    return pantheon_schemas;
+}
+
+private void reset_recursively (string schema) {
+    var settings = new GLib.Settings (schema);
+    // change into delay mode
+	// so changes take place when apply () is called
+    settings.delay ();
+
+    reset_all_keys (settings);
+
+    var children = settings.list_children ();
+    foreach (var child in children) {
+        var child_settings = settings.get_child (child);
+
+        reset_all_keys (child_settings);
+    }
+    settings.apply ();
+    GLib.Settings.sync ();
+}
+
+/**
+ * returns true to continue, false to cancel
+ */
+private bool confirm_restore_action () {
+    var dialog = new Gtk.Dialog ();
+
+    Gtk.Box box = dialog.get_content_area () as Gtk.Box;
+    var layout = new Gtk.Grid ();
+    var text = new Gtk.Label ("");
+
+    text.set_markup ("<span weight='bold' size='larger'>" +
+                     _("System settings will be restored to the factory defaults") + "</span>\n\n"+
+                     _("All system settings and data will be reset to the default values.") + "\n" +
+                     _("Personal data, such as music and pictures, will be uneffected."));
+
+    var image = new Gtk.Image.from_icon_name ("dialog-warning",
+                                              Gtk.IconSize.DIALOG);
+    image.yalign = 0;
+    image.show ();
+
+    layout.set_column_spacing (12);
+    layout.set_margin_right (6);
+    layout.set_margin_bottom (18);
+    layout.set_margin_left (6);
+
+    layout.add (image);
+    layout.add (text);
+
+    box.pack_start (layout);
+
+    var continue_button = new Gtk.Button.with_label (_("Restore Settings"));
+    continue_button.get_style_context ().add_class ("destructive-action");
+
+    var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+    continue_button.show ();
+    cancel_button.show ();
+
+    dialog.border_width = 6;
+    dialog.deletable = false;
+    dialog.add_action_widget (cancel_button, 0);
+    dialog.add_action_widget (continue_button, 1);
+
+    dialog.show_all ();
+    var result = dialog.run ();
+    dialog.destroy ();
+
+    if (result == 1) {
+        // continue was clicked
+        return true;
+    } else {
+        // cancel was clicked
+        return false;
+    }
+}
+
+private void settings_restore_clicked () {
+    var should_display = confirm_restore_action ();
+
+    if (should_display) {
+        var all_schemas = get_pantheon_schemas ();
+
+        foreach (var schema in all_schemas) {
+            reset_recursively (schema);
+        }
+    }
 }
 
 public Switchboard.Plug get_plug (Module module) {
