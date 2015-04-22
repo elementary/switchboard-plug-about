@@ -357,48 +357,48 @@ public class About.Plug : Switchboard.Plug {
         help_button.halign = Gtk.Align.CENTER;
 
         help_button.clicked.connect (() => {
-                try {
-                    AppInfo.launch_default_for_uri ("http://elementary.io/support", null);
-                } catch (Error e) {
-                    warning (e.message);
-                }
-            });
+            try {
+                AppInfo.launch_default_for_uri ("http://elementary.io/support", null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         help_button.size_allocate.connect ( (alloc) => {
-                help_button.set_size_request (alloc.height, -1);
-            });
+            help_button.set_size_request (alloc.height, -1);
+        });
 
         // Translate button
         var translate_button = new Gtk.Button.with_label (_("Suggest Translations"));
         translate_button.clicked.connect (() => {
-                try {
-                    AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
-                } catch (Error e) {
-                    warning (e.message);
-                }
-            });
+            try {
+                AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         // Bug button
         var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
         bug_button.clicked.connect (() => {
-                try {
-                    AppInfo.launch_default_for_uri (bugtracker_url, null);
-                } catch (Error e) {
-                    warning (e.message);
-                }
-            });
+            try {
+                AppInfo.launch_default_for_uri (bugtracker_url, null);
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
         // Update button
         var update_button = new Gtk.Button.with_label (_("Check for Updates"));
         update_button.clicked.connect (() => {
-                try {
-                    Process.spawn_command_line_async("update-manager");
-                } catch (Error e) {
-                    warning (e.message);
-                }
-            });
+            try {
+                Process.spawn_command_line_async("update-manager");
+            } catch (Error e) {
+                warning (e.message);
+            }
+        });
 
-        // Reset settings button
+        // Restore settings button
         var settings_restore_button = new Gtk.Button.with_label (_("Restore to default settings"));
         settings_restore_button.get_style_context ().add_class ("destructive-action");
         settings_restore_button.clicked.connect (settings_restore_clicked);
@@ -479,7 +479,8 @@ private string[] get_pantheon_schemas () {
 
 private void reset_recursively (string schema) {
     var settings = new GLib.Settings (schema);
-    // change into delay apply mode
+    // change into delay mode
+	// so changes take place when apply () is called
     settings.delay ();
 
     reset_all_keys (settings);
@@ -495,7 +496,7 @@ private void reset_recursively (string schema) {
 }
 
 /**
- * return true if should restore, false to cancel
+ * returns true to continue, false to cancel
  */
 private bool confirm_restore_action () {
     var dialog = new Gtk.Dialog ();
