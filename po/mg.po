@@ -1,16 +1,16 @@
-# Korean translation for switchboard-plug-about
-# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# Malagasy translation for switchboard-plug-about
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-about package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-04-22 16:02-0500\n"
-"PO-Revision-Date: 2015-05-16 18:10+0000\n"
-"Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>\n"
-"Language-Team: Korean <ko@li.org>\n"
+"PO-Revision-Date: 2015-05-17 01:05+0000\n"
+"Last-Translator: akoho <Unknown>\n"
+"Language-Team: Malagasy <mg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,85 +19,85 @@ msgstr ""
 
 #: ../src//Plug.vala:41
 msgid "About"
-msgstr "정보"
+msgstr "Mombamomba"
 
 #: ../src//Plug.vala:42
 msgid "View System Information"
-msgstr "시스템 정보 보기"
+msgstr "Mijery ny mombamomba ny system"
 
 #: ../src//Plug.vala:178 ../src//Plug.vala:207 ../src//Plug.vala:231
 #: ../src//Plug.vala:242 ../src//Plug.vala:262
 msgid "Unknown"
-msgstr "알 수 없음"
+msgstr "Tsy fahita"
 
 #: ../src//Plug.vala:198
 msgid "Dual-Core"
-msgstr "듀얼 코어"
+msgstr "Roy-loha"
 
 #: ../src//Plug.vala:200
 msgid "Quad-Core"
-msgstr "쿼드 코어"
+msgstr "Efa-doha"
 
 #: ../src//Plug.vala:281
 msgid "Built on %s %s"
-msgstr "%s %s 에서 빌드함"
+msgstr "Vita amin'ny %$ %$"
 
 #: ../src//Plug.vala:286
 msgid "Website"
-msgstr "웹 사이트"
+msgstr "Tranonkala"
 
 #: ../src//Plug.vala:300
 msgid "Hardware:"
-msgstr "하드웨어:"
+msgstr "Fitaovana"
 
 #: ../src//Plug.vala:304
 msgid "Processor:"
-msgstr "프로세서:"
+msgstr "Atidoha"
 
 #: ../src//Plug.vala:308
 msgid "Memory:"
-msgstr "메모리:"
+msgstr "Tadidy"
 
 #: ../src//Plug.vala:312
 msgid "Graphics:"
-msgstr "그래픽:"
+msgstr "Loko"
 
 #: ../src//Plug.vala:316
 msgid "Storage:"
-msgstr "저장소:"
+msgstr "Fitahirizana"
 
 #: ../src//Plug.vala:372
 msgid "Suggest Translations"
-msgstr "번역 제안하기"
+msgstr "Tondrozotram-pandikana"
 
 #: ../src//Plug.vala:382
 msgid "Report a Problem"
-msgstr "문제 보고하기"
+msgstr "Hampita olana"
 
 #: ../src//Plug.vala:392
 msgid "Check for Updates"
-msgstr "업데이트 확인"
+msgstr "Hijery vaovao"
 
 #: ../src//Plug.vala:402
 msgid "Restore Default Settings"
-msgstr "기본 설정으로 복원"
+msgstr "Avereno tamin'ny voalohany"
 
 #: ../src//Plug.vala:508
 msgid "System settings will be restored to the factory defaults"
-msgstr "시스템 설정이 공장 초기화 됩니다"
+msgstr "Ho averina tamin'ny volohany ny firafitry ny system"
 
 #: ../src//Plug.vala:509
 msgid "All system settings and data will be reset to the default values."
-msgstr "모든 시스템 설정과 데이터가 기본 값으로 초기화됩니다"
+msgstr "Hiverina amin'ny voalohany daholo ny firafitra sy ny tahiry rehetra"
 
 #: ../src//Plug.vala:510
 msgid "Personal data, such as music and pictures, will be uneffected."
-msgstr "음악과 사진등, 사용자 데이터는 영향 받지 않습니다."
+msgstr "Ny firafitra sy tahiry manokana dia tsy ho voakasika"
 
 #: ../src//Plug.vala:527
 msgid "Restore Settings"
-msgstr "설정 복원"
+msgstr "Avereno ny firafitra"
 
 #: ../src//Plug.vala:530
 msgid "Cancel"
-msgstr "취소"
+msgstr "Foano"
