@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-04-22 16:02-0500\n"
-"PO-Revision-Date: 2015-04-28 21:22+0000\n"
-"Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
+"PO-Revision-Date: 2015-08-16 19:14+0000\n"
+"Last-Translator: Denis Ju <Unknown>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-04-29 05:24+0000\n"
-"X-Generator: Launchpad (build 17453)\n"
+"X-Launchpad-Export-Date: 2015-08-17 06:05+0000\n"
+"X-Generator: Launchpad (build 17686)\n"
 
 #: ../src//Plug.vala:41
 msgid "About"
@@ -32,11 +32,11 @@ msgstr "E panjohur"
 
 #: ../src//Plug.vala:198
 msgid "Dual-Core"
-msgstr "Dual-Core"
+msgstr "Dopjo-Bërthamë"
 
 #: ../src//Plug.vala:200
 msgid "Quad-Core"
-msgstr "Quad-Core"
+msgstr "Katër-Bërthamë"
 
 #: ../src//Plug.vala:281
 msgid "Built on %s %s"
@@ -48,23 +48,23 @@ msgstr "Faqja web"
 
 #: ../src//Plug.vala:300
 msgid "Hardware:"
-msgstr ""
+msgstr "Aparat"
 
 #: ../src//Plug.vala:304
 msgid "Processor:"
-msgstr "Procesori:"
+msgstr "Proçesori:"
 
 #: ../src//Plug.vala:308
 msgid "Memory:"
-msgstr "Memoria:"
+msgstr "Kujtesa:"
 
 #: ../src//Plug.vala:312
 msgid "Graphics:"
-msgstr "Grafika:"
+msgstr ""
 
 #: ../src//Plug.vala:316
 msgid "Storage:"
-msgstr ""
+msgstr "Depozitë"
 
 #: ../src//Plug.vala:372
 msgid "Suggest Translations"
@@ -99,8 +99,8 @@ msgstr "Të dhënat personale, si muzika dhe fotografitë, nuk do të preken."
 
 #: ../src//Plug.vala:527
 msgid "Restore Settings"
-msgstr "Rikthe parametrat"
+msgstr "Rikthe Rregullimet"
 
 #: ../src//Plug.vala:530
 msgid "Cancel"
-msgstr "Anulo"
+msgstr "Ndërpre"
