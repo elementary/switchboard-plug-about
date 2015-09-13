@@ -39,11 +39,6 @@ add_definitions (-DGETTEXT_PACKAGE=\"${GETTEXT_PACKAGE}\")
 # Comment this out to enable C compiler warnings
 add_definitions (-w)
 
-# Files
-file (GLOB resources "${CMAKE_CURRENT_SOURCE_DIR}/data/*")
-
-install (FILES "${CMAKE_CURRENT_SOURCE_DIR}/data/pantheon-plug-about.desktop" DESTINATION "${CMAKE_INSTALL_FULL_DATAROOTDIR}/applications")
-
 # Traslation stuff
 add_subdirectory (po)
 # Info-plug
