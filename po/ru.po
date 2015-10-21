@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-04-22 16:02-0500\n"
-"PO-Revision-Date: 2015-09-03 09:08+0000\n"
-"Last-Translator: Artem Anufrij <Unknown>\n"
+"PO-Revision-Date: 2015-10-20 12:00+0000\n"
+"Last-Translator: Alex <JWo1F@yandex.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-04 05:30+0000\n"
-"X-Generator: Launchpad (build 17706)\n"
+"X-Launchpad-Export-Date: 2015-10-21 06:13+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
 #: ../src//Plug.vala:41
 msgid "About"
-msgstr "Сведения о системе"
+msgstr "О системе"
 
 #: ../src//Plug.vala:42
 msgid "View System Information"
@@ -40,11 +40,11 @@ msgstr "4-х ядерный"
 
 #: ../src//Plug.vala:281
 msgid "Built on %s %s"
-msgstr "Основан на %s %s"
+msgstr "Основана на %s %s"
 
 #: ../src//Plug.vala:286
 msgid "Website"
-msgstr "Сайт"
+msgstr "Домашняя страница"
 
 #: ../src//Plug.vala:300
 msgid "Hardware:"
@@ -72,11 +72,11 @@ msgstr "Предложить перевод"
 
 #: ../src//Plug.vala:382
 msgid "Report a Problem"
-msgstr "Сообщить о проблеме"
+msgstr "Сообщить об ошибке"
 
 #: ../src//Plug.vala:392
 msgid "Check for Updates"
-msgstr "Обновление приложений"
+msgstr "Проверить наличие обновлений"
 
 #: ../src//Plug.vala:402
 msgid "Restore Default Settings"
@@ -84,12 +84,11 @@ msgstr "Восстановить настройки по умолчанию"
 
 #: ../src//Plug.vala:508
 msgid "System settings will be restored to the factory defaults"
-msgstr "Система будет восстановлена к первоначальным настройкам."
+msgstr "Восстановление настроек по умолчанию"
 
 #: ../src//Plug.vala:509
 msgid "All system settings and data will be reset to the default values."
-msgstr ""
-"Все настройки и данные системы будут сброшены к параметрам по умолчанию."
+msgstr "Все настройки системы будут сброшены на настройки по умолчанию."
 
 #: ../src//Plug.vala:510
 msgid "Personal data, such as music and pictures, will be uneffected."
