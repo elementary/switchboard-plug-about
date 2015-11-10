@@ -407,7 +407,7 @@ public class About.Plug : Switchboard.Plug {
         button_box.spacing = 6;
         button_box.pack_start (help_button, false, false, 0);
         button_box.set_child_non_homogeneous (help_button, true);
-        button_box.pack_end (settings_restore_button, false, false, 0);
+        //button_box.pack_end (settings_restore_button, false, false, 0);
         button_box.pack_end (translate_button, false, false, 0);
         button_box.pack_end (bug_button, false, false, 0);
         button_box.pack_end (update_button, false, false, 0);
