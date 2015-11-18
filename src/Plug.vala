@@ -270,87 +270,58 @@ public class About.Plug : Switchboard.Plug {
 
         // Create the section about elementary OS
         var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 128, 128));
+        logo.halign = Gtk.Align.END;
 
         var title = new Gtk.Label (null);
         title.set_markup (("%s %s %s <sup><small>(%s)</small></sup>").printf (os, version, codename, arch));
         title.get_style_context ().add_class ("h2");
-        title.set_alignment (0, 0);
+        title.halign = Gtk.Align.START;
         title.set_selectable (true);
 
         if (is_ubuntu != null) {
             based_off = new Gtk.Label (_("Built on %s %s").printf (is_ubuntu, ubuntu_version));
-            based_off.set_alignment (0, 0);
+            based_off.halign = Gtk.Align.START;
             based_off.set_selectable (true);
         }
 
         var website_label = new Gtk.LinkButton.with_label ("http://elementary.io", _("Website"));
-        website_label.set_alignment (0, 0);
+        website_label.halign = Gtk.Align.START;
 
-        var details = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-        details.pack_start (title, false, false, 0);
-        details.pack_start (based_off, false, false, 0);
-        details.pack_start (website_label, false, false, 0);
-
-        var elementary_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
-        elementary_box.pack_start (logo, false, false, 0);
-        elementary_box.pack_start (details, false, false, 0);
-
-        // Hardware title
         var hardware_title = new Gtk.Label (null);
-        hardware_title.set_markup (("<b><span size=\"x-large\">%s</span></b>").printf(_("Hardware:")));
-        hardware_title.set_alignment (0, 0);
+        hardware_title.set_label (_("Hardware:"));
+        hardware_title.get_style_context ().add_class ("h3");
+        hardware_title.halign = Gtk.Align.END;
+        hardware_title.margin_top = 24;
 
-        // Hardware label
         var processor_label = new Gtk.Label (_("Processor:"));
-        processor_label.set_alignment (1, 0);
+        processor_label.halign = Gtk.Align.END;
 
-        // Hardware label
         var memory_label = new Gtk.Label (_("Memory:"));
-        memory_label.set_alignment (1, 0);
+        memory_label.halign = Gtk.Align.END;
 
-        // Hardware label
         var graphics_label = new Gtk.Label (_("Graphics:"));
-        graphics_label.set_alignment (1, 0);
+        graphics_label.halign = Gtk.Align.END;
 
-        // Hardware label
         var hdd_label = new Gtk.Label (_("Storage:"));
-        hdd_label.set_alignment (1, 0);
+        hdd_label.halign = Gtk.Align.END;
 
-        // Hardware info
         var processor_info = new Gtk.Label (processor);
-        processor_info.set_alignment (0, 0);
-        processor_info.set_margin_left (6);
+        processor_info.halign = Gtk.Align.START;
         processor_info.set_selectable (true);
         processor_info.set_line_wrap (false);
 
         var memory_info = new Gtk.Label (memory);
-        memory_info.set_alignment (0, 0);
-        memory_info.set_margin_left (6);
+        memory_info.halign = Gtk.Align.START;
         memory_info.set_selectable (true);
 
         var graphics_info = new Gtk.Label (graphics);
-        graphics_info.set_alignment (0, 0);
-        graphics_info.set_margin_left (6);
+        graphics_info.halign = Gtk.Align.START;
         graphics_info.set_selectable (true);
         graphics_info.set_line_wrap (false);
 
         var hdd_info = new Gtk.Label (hdd);
-        hdd_info.set_alignment (0, 0);
-        hdd_info.set_margin_left (6);
+        hdd_info.halign = Gtk.Align.START;
         hdd_info.set_selectable (true);
-
-        // Hardware grid
-        var hardware_grid = new Gtk.Grid ();
-        hardware_grid.set_row_spacing (1);
-        hardware_grid.attach (hardware_title, 0, 0, 100, 30);
-        hardware_grid.attach (processor_label, 0, 40, 100, 25);
-        hardware_grid.attach (memory_label, 0, 80, 100, 25);
-        hardware_grid.attach (graphics_label, 0, 120, 100, 25);
-        hardware_grid.attach (hdd_label, 0, 160, 100, 25);
-        hardware_grid.attach (processor_info, 100, 40, 100, 25);
-        hardware_grid.attach (memory_info, 100, 80, 100, 25);
-        hardware_grid.attach (graphics_info, 100, 120, 100, 25);
-        hardware_grid.attach (hdd_info, 100, 160, 100, 25);
 
         var help_button = new Gtk.Button.with_label ("?");
         help_button.get_style_context ().add_class ("help_button");
@@ -413,10 +384,28 @@ public class About.Plug : Switchboard.Plug {
         button_box.pack_end (update_button, false, false, 0);
 
         // Fit everything in a box
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-        box.pack_start (elementary_box, false, false, 24);
-        box.pack_start (hardware_grid, false, false, 8);
-        box.pack_end (button_box, false, false, 0);;
+        var layout = new Gtk.Grid ();
+        layout.column_spacing = 6;
+        layout.row_spacing = 6;
+
+        layout.attach (logo, 0, 0, 1, 3);
+        layout.attach (title, 1, 0, 1, 1);
+        layout.attach (based_off, 1, 1, 1, 1);
+        layout.attach (website_label, 1, 2, 1, 1);
+
+        layout.attach (hardware_title, 0, 3, 1, 1);
+        layout.attach (processor_label, 0, 4, 1, 1);
+        layout.attach (processor_info, 1, 4, 1, 1);
+        layout.attach (memory_label, 0, 5, 1, 1);
+        layout.attach (memory_info, 1, 5, 1, 1);
+        layout.attach (graphics_label, 0, 6, 1, 1);
+        layout.attach (graphics_info, 1, 6, 1, 1);
+        layout.attach (hdd_label, 0, 7, 1, 1);
+        layout.attach (hdd_info, 1, 7, 1, 1);
+
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 24);
+        box.pack_start (layout, false, false, 0);
+        box.pack_end (button_box, false, false, 0);
         box.set_margin_top (24);
         box.set_margin_bottom (24);
 
