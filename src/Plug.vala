@@ -363,7 +363,7 @@ public class About.Plug : Switchboard.Plug {
         var update_button = new Gtk.Button.with_label (_("Check for Updates"));
         update_button.clicked.connect (() => {
             try {
-                Process.spawn_command_line_async("update-manager");
+                Process.spawn_command_line_async("appcenter --show-updates");
             } catch (Error e) {
                 warning (e.message);
             }
