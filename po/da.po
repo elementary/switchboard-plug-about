@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-04-22 16:02-0500\n"
-"PO-Revision-Date: 2014-07-08 05:58+0000\n"
-"Last-Translator: Mathias Lindberg <mathverden@gmail.com>\n"
+"PO-Revision-Date: 2015-12-07 19:15+0000\n"
+"Last-Translator: Jimmy Merrild Krag <jimmy@kragenet.dk>\n"
 "Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-26 05:31+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-08 05:42+0000\n"
+"X-Generator: Launchpad (build 17862)\n"
 
 #: ../src//Plug.vala:41
 msgid "About"
@@ -23,36 +23,36 @@ msgstr "Om"
 
 #: ../src//Plug.vala:42
 msgid "View System Information"
-msgstr ""
+msgstr "Vis Systeminformation"
 
 #: ../src//Plug.vala:178 ../src//Plug.vala:207 ../src//Plug.vala:231
 #: ../src//Plug.vala:242 ../src//Plug.vala:262
 msgid "Unknown"
-msgstr ""
+msgstr "Ukendt"
 
 #: ../src//Plug.vala:198
 msgid "Dual-Core"
-msgstr ""
+msgstr "Dual-Core"
 
 #: ../src//Plug.vala:200
 msgid "Quad-Core"
-msgstr ""
+msgstr "Quad-Core"
 
 #: ../src//Plug.vala:281
 msgid "Built on %s %s"
-msgstr ""
+msgstr "Bygget den %s %s"
 
 #: ../src//Plug.vala:286
 msgid "Website"
-msgstr ""
+msgstr "Hjemmeside"
 
 #: ../src//Plug.vala:300
 msgid "Hardware:"
-msgstr ""
+msgstr "Hardware:"
 
 #: ../src//Plug.vala:304
 msgid "Processor:"
-msgstr ""
+msgstr "Processor:"
 
 #: ../src//Plug.vala:308
 msgid "Memory:"
@@ -64,11 +64,11 @@ msgstr "Grafik:"
 
 #: ../src//Plug.vala:316
 msgid "Storage:"
-msgstr ""
+msgstr "Lager:"
 
 #: ../src//Plug.vala:372
 msgid "Suggest Translations"
-msgstr ""
+msgstr "Foreslå oversættelser"
 
 #: ../src//Plug.vala:382
 msgid "Report a Problem"
@@ -76,28 +76,30 @@ msgstr "Rapportér et problem"
 
 #: ../src//Plug.vala:392
 msgid "Check for Updates"
-msgstr ""
+msgstr "Søg efter opdateringer"
 
 #: ../src//Plug.vala:402
 msgid "Restore Default Settings"
-msgstr ""
+msgstr "Gendan standardindstillingerne"
 
 #: ../src//Plug.vala:508
 msgid "System settings will be restored to the factory defaults"
 msgstr ""
+"Systemindstillingerne vil blive gendannet til installationsstandarden"
 
 #: ../src//Plug.vala:509
 msgid "All system settings and data will be reset to the default values."
 msgstr ""
+"Alle systemindstillinger og -data vil blive nulstilled til standardværdierne."
 
 #: ../src//Plug.vala:510
 msgid "Personal data, such as music and pictures, will be uneffected."
-msgstr ""
+msgstr "Personlig data, som f.eks. musik og billeder, vil ikke blive ændret."
 
 #: ../src//Plug.vala:527
 msgid "Restore Settings"
-msgstr ""
+msgstr "Gendan indstillinger"
 
 #: ../src//Plug.vala:530
 msgid "Cancel"
-msgstr ""
+msgstr "Annullér"

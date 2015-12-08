@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-04-22 16:02-0500\n"
-"PO-Revision-Date: 2014-11-08 12:55+0000\n"
-"Last-Translator: Damian Dygulski <dygulski13@gmail.com>\n"
+"PO-Revision-Date: 2015-12-07 11:46+0000\n"
+"Last-Translator: Marek Pikuła <marek@pikula.co>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-26 05:31+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-08 05:42+0000\n"
+"X-Generator: Launchpad (build 17862)\n"
 
 #: ../src//Plug.vala:41
 msgid "About"
@@ -80,24 +80,25 @@ msgstr "Sprawdź aktualizacje"
 
 #: ../src//Plug.vala:402
 msgid "Restore Default Settings"
-msgstr ""
+msgstr "Przywróć ustawienia domyślne"
 
 #: ../src//Plug.vala:508
 msgid "System settings will be restored to the factory defaults"
-msgstr ""
+msgstr "Zostaną przywrócone początkowe ustawienia systemu."
 
 #: ../src//Plug.vala:509
 msgid "All system settings and data will be reset to the default values."
 msgstr ""
+"Wszystkie ustawienia systemowe oraz dane zostaną zresetowane do domyślnych."
 
 #: ../src//Plug.vala:510
 msgid "Personal data, such as music and pictures, will be uneffected."
-msgstr ""
+msgstr "Dane osobiste, takie jak muzyka czy zdjęcia, zostaną nienaruszone."
 
 #: ../src//Plug.vala:527
 msgid "Restore Settings"
-msgstr ""
+msgstr "Przywróć ustawienia"
 
 #: ../src//Plug.vala:530
 msgid "Cancel"
-msgstr ""
+msgstr "Anuluj"
