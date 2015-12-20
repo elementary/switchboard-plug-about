@@ -39,7 +39,7 @@ public class About.Plug : Switchboard.Plug {
         Object (category: Category.SYSTEM,
                 code_name: "system-pantheon-about",
                 display_name: _("About"),
-                description: _("View System Information"),
+                description: _("View operating system and hardware information"),
                 icon: "help-info");
     }
 
