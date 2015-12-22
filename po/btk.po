@@ -7,97 +7,97 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-04-22 16:02-0500\n"
+"POT-Creation-Date: 2015-12-21 12:17-0200\n"
 "PO-Revision-Date: 2014-07-08 06:08+0000\n"
 "Last-Translator: Eduard Gotwig <g@ox.io>\n"
 "Language-Team: Batak (Indonesia) <btk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-11-26 05:31+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-22 05:01+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 
-#: ../src//Plug.vala:41
+#: ../src/Plug.vala:41
 msgid "About"
 msgstr ""
 
-#: ../src//Plug.vala:42
-msgid "View System Information"
+#: ../src/Plug.vala:42
+msgid "View operating system and hardware information"
 msgstr ""
 
-#: ../src//Plug.vala:178 ../src//Plug.vala:207 ../src//Plug.vala:231
-#: ../src//Plug.vala:242 ../src//Plug.vala:262
+#: ../src/Plug.vala:178 ../src/Plug.vala:207 ../src/Plug.vala:231
+#: ../src/Plug.vala:242 ../src/Plug.vala:262
 msgid "Unknown"
 msgstr ""
 
-#: ../src//Plug.vala:198
+#: ../src/Plug.vala:198
 msgid "Dual-Core"
 msgstr ""
 
-#: ../src//Plug.vala:200
+#: ../src/Plug.vala:200
 msgid "Quad-Core"
 msgstr ""
 
-#: ../src//Plug.vala:281
+#: ../src/Plug.vala:282
 msgid "Built on %s %s"
 msgstr ""
 
-#: ../src//Plug.vala:286
+#: ../src/Plug.vala:287
 msgid "Website"
 msgstr ""
 
-#: ../src//Plug.vala:300
+#: ../src/Plug.vala:291
 msgid "Hardware:"
 msgstr ""
 
-#: ../src//Plug.vala:304
+#: ../src/Plug.vala:296
 msgid "Processor:"
 msgstr ""
 
-#: ../src//Plug.vala:308
+#: ../src/Plug.vala:299
 msgid "Memory:"
 msgstr ""
 
-#: ../src//Plug.vala:312
+#: ../src/Plug.vala:302
 msgid "Graphics:"
 msgstr ""
 
-#: ../src//Plug.vala:316
+#: ../src/Plug.vala:305
 msgid "Storage:"
 msgstr ""
 
-#: ../src//Plug.vala:372
+#: ../src/Plug.vala:343
 msgid "Suggest Translations"
 msgstr ""
 
-#: ../src//Plug.vala:382
+#: ../src/Plug.vala:353
 msgid "Report a Problem"
 msgstr ""
 
-#: ../src//Plug.vala:392
+#: ../src/Plug.vala:363
 msgid "Check for Updates"
 msgstr ""
 
-#: ../src//Plug.vala:402
+#: ../src/Plug.vala:373
 msgid "Restore Default Settings"
 msgstr ""
 
-#: ../src//Plug.vala:508
+#: ../src/Plug.vala:497
 msgid "System settings will be restored to the factory defaults"
 msgstr ""
 
-#: ../src//Plug.vala:509
+#: ../src/Plug.vala:498
 msgid "All system settings and data will be reset to the default values."
 msgstr ""
 
-#: ../src//Plug.vala:510
+#: ../src/Plug.vala:499
 msgid "Personal data, such as music and pictures, will be uneffected."
 msgstr ""
 
-#: ../src//Plug.vala:527
+#: ../src/Plug.vala:516
 msgid "Restore Settings"
 msgstr ""
 
-#: ../src//Plug.vala:530
+#: ../src/Plug.vala:519
 msgid "Cancel"
 msgstr ""
