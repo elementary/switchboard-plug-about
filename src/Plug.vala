@@ -65,7 +65,13 @@ public class About.Plug : Switchboard.Plug {
 
     // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
     public override async Gee.TreeMap<string, string> search (string search) {
-        return new Gee.TreeMap<string, string> (null, null);
+        var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
+        search_results.set ("%s → %s".printf (display_name, _("System Information")), "");
+        search_results.set ("%s → %s".printf (display_name, _("Restore Default Settings")), "");
+        search_results.set ("%s → %s".printf (display_name, _("Suggest Translation")), "");
+        search_results.set ("%s → %s".printf (display_name, _("Report Problems")), "");
+        search_results.set ("%s → %s".printf (display_name, _("Updates")), "");
+        return search_results;
     }
 
     private string capitalize (string str) {
