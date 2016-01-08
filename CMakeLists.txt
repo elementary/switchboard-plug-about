@@ -15,7 +15,7 @@ set (PLUGCATEGORY "system")
 set (PLUGTITLE "About")
 set (PLUGDESCRIPTION "About")
 # The symbolic name of the Icon to use for the plug
-set (PLUGICON "help-info")
+set (PLUGICON "dialog-information")
 
 project (${PLUGNAME})
 

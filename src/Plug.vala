@@ -40,7 +40,7 @@ public class About.Plug : Switchboard.Plug {
                 code_name: "system-pantheon-about",
                 display_name: _("About"),
                 description: _("View operating system and hardware information"),
-                icon: "help-info");
+                icon: "dialog-information");
     }
 
     public override Gtk.Widget get_widget () {
