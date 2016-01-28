@@ -294,7 +294,7 @@ public class About.Plug : Switchboard.Plug {
         website_label.halign = Gtk.Align.START;
 
         var hardware_title = new Gtk.Label (null);
-        hardware_title.set_label (_("Hardware:"));
+        hardware_title.set_label (_("Hardware"));
         hardware_title.get_style_context ().add_class ("h3");
         hardware_title.halign = Gtk.Align.END;
         hardware_title.margin_top = 24;
