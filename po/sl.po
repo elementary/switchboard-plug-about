@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-21 12:17-0200\n"
+"POT-Creation-Date: 2016-01-28 14:27-0600\n"
 "PO-Revision-Date: 2015-06-23 17:42+0000\n"
 "Last-Translator: Jernej Virag <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:02+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-29 05:37+0000\n"
+"X-Generator: Launchpad (build 17902)\n"
 
 #: ../src/Plug.vala:41
 msgid "About"
@@ -25,80 +25,99 @@ msgstr "O programu"
 msgid "View operating system and hardware information"
 msgstr ""
 
-#: ../src/Plug.vala:178 ../src/Plug.vala:207 ../src/Plug.vala:231
-#: ../src/Plug.vala:242 ../src/Plug.vala:262
-msgid "Unknown"
-msgstr "Neznano"
+#: ../src/Plug.vala:69
+msgid "System Information"
+msgstr ""
 
-#: ../src/Plug.vala:198
-msgid "Dual-Core"
-msgstr "Dvojedrni"
-
-#: ../src/Plug.vala:200
-msgid "Quad-Core"
-msgstr "Štirijedrni"
-
-#: ../src/Plug.vala:282
-msgid "Built on %s %s"
-msgstr "Zgrajen na osnovi %s %s"
-
-#: ../src/Plug.vala:287
-msgid "Website"
-msgstr "Spletna stran"
-
-#: ../src/Plug.vala:291
-msgid "Hardware:"
-msgstr "Strojna oprema:"
-
-#: ../src/Plug.vala:296
-msgid "Processor:"
-msgstr "Procesor:"
-
-#: ../src/Plug.vala:299
-msgid "Memory:"
-msgstr "Pomnilnik:"
-
-#: ../src/Plug.vala:302
-msgid "Graphics:"
-msgstr "Grafika:"
-
-#: ../src/Plug.vala:305
-msgid "Storage:"
-msgstr "Shramba:"
-
-#: ../src/Plug.vala:343
-msgid "Suggest Translations"
-msgstr "Predlagaj prevode"
-
-#: ../src/Plug.vala:353
-msgid "Report a Problem"
-msgstr "Opozorite na težavo"
-
-#: ../src/Plug.vala:363
-msgid "Check for Updates"
-msgstr "Preveri za posodobitve"
-
-#: ../src/Plug.vala:373
+#: ../src/Plug.vala:70 ../src/Plug.vala:379
 msgid "Restore Default Settings"
 msgstr "Povrni tovarniške nastavitve"
 
-#: ../src/Plug.vala:497
+#: ../src/Plug.vala:71
+msgid "Suggest Translation"
+msgstr ""
+
+#: ../src/Plug.vala:72
+msgid "Report Problems"
+msgstr ""
+
+#: ../src/Plug.vala:73
+msgid "Updates"
+msgstr ""
+
+#: ../src/Plug.vala:184 ../src/Plug.vala:213 ../src/Plug.vala:237
+#: ../src/Plug.vala:248 ../src/Plug.vala:268
+msgid "Unknown"
+msgstr "Neznano"
+
+#: ../src/Plug.vala:204
+msgid "Dual-Core"
+msgstr "Dvojedrni"
+
+#: ../src/Plug.vala:206
+msgid "Quad-Core"
+msgstr "Štirijedrni"
+
+#: ../src/Plug.vala:288
+msgid "Built on %s %s"
+msgstr "Zgrajen na osnovi %s %s"
+
+#: ../src/Plug.vala:293
+msgid "Website"
+msgstr "Spletna stran"
+
+#: ../src/Plug.vala:297
+msgid "Hardware"
+msgstr ""
+
+#: ../src/Plug.vala:302
+msgid "Processor:"
+msgstr "Procesor:"
+
+#: ../src/Plug.vala:305
+msgid "Memory:"
+msgstr "Pomnilnik:"
+
+#: ../src/Plug.vala:308
+msgid "Graphics:"
+msgstr "Grafika:"
+
+#: ../src/Plug.vala:311
+msgid "Storage:"
+msgstr "Shramba:"
+
+#: ../src/Plug.vala:349
+msgid "Suggest Translations"
+msgstr "Predlagaj prevode"
+
+#: ../src/Plug.vala:359
+msgid "Report a Problem"
+msgstr "Opozorite na težavo"
+
+#: ../src/Plug.vala:369
+msgid "Check for Updates"
+msgstr "Preveri za posodobitve"
+
+#: ../src/Plug.vala:503
 msgid "System settings will be restored to the factory defaults"
 msgstr "Sistemske nastavitve bodo povrnjene na tovarniške"
 
-#: ../src/Plug.vala:498
+#: ../src/Plug.vala:504
 msgid "All system settings and data will be reset to the default values."
 msgstr ""
 "Vsi podatki in sistemske nastavitve bodo povrnjene na privzete vrednosti."
 
-#: ../src/Plug.vala:499
+#: ../src/Plug.vala:505
 msgid "Personal data, such as music and pictures, will be uneffected."
 msgstr "Osebni podatki, kot npr. glasba ali slike, bodo ostali."
 
-#: ../src/Plug.vala:516
+#: ../src/Plug.vala:522
 msgid "Restore Settings"
 msgstr "Povrni nastavitve"
 
-#: ../src/Plug.vala:519
+#: ../src/Plug.vala:525
 msgid "Cancel"
 msgstr "Prekliči"
+
+#~ msgid "Hardware:"
+#~ msgstr "Strojna oprema:"
