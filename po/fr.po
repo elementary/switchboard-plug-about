@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-28 14:27-0600\n"
-"PO-Revision-Date: 2016-01-19 00:52+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
+"PO-Revision-Date: 2016-04-16 13:00+0000\n"
+"Last-Translator: Nikos <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 05:37+0000\n"
-"X-Generator: Launchpad (build 17902)\n"
+"X-Launchpad-Export-Date: 2016-04-17 05:54+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "Language: fr\n"
 
 #: ../src/Plug.vala:41
@@ -28,7 +28,7 @@ msgstr "Afficher les informations du système d'exploitation et du matériel"
 
 #: ../src/Plug.vala:69
 msgid "System Information"
-msgstr ""
+msgstr "Informations système"
 
 #: ../src/Plug.vala:70 ../src/Plug.vala:379
 msgid "Restore Default Settings"
@@ -36,15 +36,15 @@ msgstr "Restaurer les paramètres par défaut"
 
 #: ../src/Plug.vala:71
 msgid "Suggest Translation"
-msgstr ""
+msgstr "Suggérer une traduction"
 
 #: ../src/Plug.vala:72
 msgid "Report Problems"
-msgstr ""
+msgstr "Rapporter un problème"
 
 #: ../src/Plug.vala:73
 msgid "Updates"
-msgstr ""
+msgstr "Mises à jour"
 
 #: ../src/Plug.vala:184 ../src/Plug.vala:213 ../src/Plug.vala:237
 #: ../src/Plug.vala:248 ../src/Plug.vala:268
@@ -69,7 +69,7 @@ msgstr "Site Internet"
 
 #: ../src/Plug.vala:297
 msgid "Hardware"
-msgstr ""
+msgstr "Matériel"
 
 #: ../src/Plug.vala:302
 msgid "Processor:"
@@ -122,6 +122,3 @@ msgstr "Restaurer les paramètres"
 #: ../src/Plug.vala:525
 msgid "Cancel"
 msgstr "Annuler"
-
-#~ msgid "Hardware:"
-#~ msgstr "Matériel :"
