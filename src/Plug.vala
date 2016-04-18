@@ -330,8 +330,7 @@ public class About.Plug : Switchboard.Plug {
         hdd_info.set_selectable (true);
 
         var help_button = new Gtk.Button.with_label ("?");
-        help_button.get_style_context ().add_class ("help_button");
-        help_button.halign = Gtk.Align.CENTER;
+        help_button.get_style_context ().add_class ("circular");
 
         help_button.clicked.connect (() => {
             try {
