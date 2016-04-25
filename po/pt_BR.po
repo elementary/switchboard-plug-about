@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-28 14:27-0600\n"
-"PO-Revision-Date: 2016-03-22 17:49+0000\n"
+"PO-Revision-Date: 2016-04-25 01:34+0000\n"
 "Last-Translator: Leonardo Lemos <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-23 05:59+0000\n"
-"X-Generator: Launchpad (build 17958)\n"
+"X-Launchpad-Export-Date: 2016-04-25 05:28+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
 #: ../src/Plug.vala:41
 msgid "About"
@@ -100,7 +100,7 @@ msgstr "Verificar se há atualizações"
 
 #: ../src/Plug.vala:503
 msgid "System settings will be restored to the factory defaults"
-msgstr "Configurações do sistema serão restauradas aos padrões de fábrica"
+msgstr "As configurações do sistema serão restauradas aos padrões de fábrica"
 
 #: ../src/Plug.vala:504
 msgid "All system settings and data will be reset to the default values."
