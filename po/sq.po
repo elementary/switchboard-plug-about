@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-28 14:27-0600\n"
-"PO-Revision-Date: 2015-08-16 19:14+0000\n"
-"Last-Translator: Denis Ju <Unknown>\n"
+"PO-Revision-Date: 2016-05-01 13:45+0000\n"
+"Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 05:37+0000\n"
-"X-Generator: Launchpad (build 17902)\n"
+"X-Launchpad-Export-Date: 2016-05-02 05:40+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
 #: ../src/Plug.vala:41
 msgid "About"
@@ -23,11 +23,11 @@ msgstr "Rreth"
 
 #: ../src/Plug.vala:42
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "Shiko informacione të sistemit operativ e të hardware-it"
 
 #: ../src/Plug.vala:69
 msgid "System Information"
-msgstr ""
+msgstr "Informacione të sistemit"
 
 #: ../src/Plug.vala:70 ../src/Plug.vala:379
 msgid "Restore Default Settings"
@@ -35,32 +35,32 @@ msgstr "Rikthe parametrat e parazgjedhur"
 
 #: ../src/Plug.vala:71
 msgid "Suggest Translation"
-msgstr ""
+msgstr "Sugjero përkthim"
 
 #: ../src/Plug.vala:72
 msgid "Report Problems"
-msgstr ""
+msgstr "Raporto probleme"
 
 #: ../src/Plug.vala:73
 msgid "Updates"
-msgstr ""
+msgstr "Përditësime"
 
 #: ../src/Plug.vala:184 ../src/Plug.vala:213 ../src/Plug.vala:237
 #: ../src/Plug.vala:248 ../src/Plug.vala:268
 msgid "Unknown"
-msgstr "E panjohur"
+msgstr "Panjohur"
 
 #: ../src/Plug.vala:204
 msgid "Dual-Core"
-msgstr "Dopjo-Bërthamë"
+msgstr "Dual-Core"
 
 #: ../src/Plug.vala:206
 msgid "Quad-Core"
-msgstr "Katër-Bërthamë"
+msgstr "Quad-Core"
 
 #: ../src/Plug.vala:288
 msgid "Built on %s %s"
-msgstr "I ndërtuar mbi %s %s"
+msgstr "Ndërtuar mbi %s %s"
 
 #: ../src/Plug.vala:293
 msgid "Website"
@@ -68,23 +68,23 @@ msgstr "Faqja web"
 
 #: ../src/Plug.vala:297
 msgid "Hardware"
-msgstr ""
+msgstr "Hardware"
 
 #: ../src/Plug.vala:302
 msgid "Processor:"
-msgstr "Proçesori:"
+msgstr "Procesori:"
 
 #: ../src/Plug.vala:305
 msgid "Memory:"
-msgstr "Kujtesa:"
+msgstr "Memoria:"
 
 #: ../src/Plug.vala:308
 msgid "Graphics:"
-msgstr ""
+msgstr "Grafika:"
 
 #: ../src/Plug.vala:311
 msgid "Storage:"
-msgstr "Depozitë"
+msgstr "Magazinimi:"
 
 #: ../src/Plug.vala:349
 msgid "Suggest Translations"
@@ -96,7 +96,7 @@ msgstr "Raporto një problem"
 
 #: ../src/Plug.vala:369
 msgid "Check for Updates"
-msgstr "Kontrollo për përditësime"
+msgstr "Kontrollo përditësimet"
 
 #: ../src/Plug.vala:503
 msgid "System settings will be restored to the factory defaults"
@@ -115,11 +115,8 @@ msgstr "Të dhënat personale, si muzika dhe fotografitë, nuk do të preken."
 
 #: ../src/Plug.vala:522
 msgid "Restore Settings"
-msgstr "Rikthe Rregullimet"
+msgstr "Rikthe parametrat"
 
 #: ../src/Plug.vala:525
 msgid "Cancel"
-msgstr "Ndërpre"
-
-#~ msgid "Hardware:"
-#~ msgstr "Aparat"
+msgstr "Anulo"
