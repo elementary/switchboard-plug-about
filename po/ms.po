@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-28 14:27-0600\n"
-"PO-Revision-Date: 2014-10-11 07:20+0000\n"
-"Last-Translator: abuyop <Unknown>\n"
+"PO-Revision-Date: 2016-06-07 04:47+0000\n"
+"Last-Translator: Timothy <timothy.wong@rocketmail.com>\n"
 "Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 05:37+0000\n"
-"X-Generator: Launchpad (build 17902)\n"
+"X-Launchpad-Export-Date: 2016-06-07 05:32+0000\n"
+"X-Generator: Launchpad (build 18097)\n"
 
 #: ../src/Plug.vala:41
 msgid "About"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: ../src/Plug.vala:69
 msgid "System Information"
-msgstr ""
+msgstr "Maklumat Sistem"
 
 #: ../src/Plug.vala:70 ../src/Plug.vala:379
 msgid "Restore Default Settings"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../src/Plug.vala:73
 msgid "Updates"
-msgstr ""
+msgstr "Kemas kini"
 
 #: ../src/Plug.vala:184 ../src/Plug.vala:213 ../src/Plug.vala:237
 #: ../src/Plug.vala:248 ../src/Plug.vala:268
@@ -68,7 +68,7 @@ msgstr "Laman Sesawang"
 
 #: ../src/Plug.vala:297
 msgid "Hardware"
-msgstr ""
+msgstr "Perkakasan"
 
 #: ../src/Plug.vala:302
 msgid "Processor:"
@@ -112,11 +112,8 @@ msgstr ""
 
 #: ../src/Plug.vala:522
 msgid "Restore Settings"
-msgstr ""
+msgstr "Kembalikan Tetapan"
 
 #: ../src/Plug.vala:525
 msgid "Cancel"
-msgstr ""
-
-#~ msgid "Hardware:"
-#~ msgstr "Perkakas"
+msgstr "Batal"
