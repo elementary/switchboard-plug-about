@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-28 14:27-0600\n"
-"PO-Revision-Date: 2015-04-22 21:42+0000\n"
+"PO-Revision-Date: 2016-06-30 15:43+0000\n"
 "Last-Translator: Pedro Monteiro <Unknown>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 05:37+0000\n"
-"X-Generator: Launchpad (build 17902)\n"
+"X-Launchpad-Export-Date: 2016-07-01 05:56+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 
 #: ../src/Plug.vala:41
 msgid "About"
@@ -23,11 +23,11 @@ msgstr "Sobre"
 
 #: ../src/Plug.vala:42
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "Ver informações sobre o sistema operativo e hardware"
 
 #: ../src/Plug.vala:69
 msgid "System Information"
-msgstr ""
+msgstr "Informações do Sistema"
 
 #: ../src/Plug.vala:70 ../src/Plug.vala:379
 msgid "Restore Default Settings"
@@ -35,15 +35,15 @@ msgstr "Restaurar Definições por Defeito"
 
 #: ../src/Plug.vala:71
 msgid "Suggest Translation"
-msgstr ""
+msgstr "Sugerir Tradução"
 
 #: ../src/Plug.vala:72
 msgid "Report Problems"
-msgstr ""
+msgstr "Reportar Problemas"
 
 #: ../src/Plug.vala:73
 msgid "Updates"
-msgstr ""
+msgstr "Atualizações"
 
 #: ../src/Plug.vala:184 ../src/Plug.vala:213 ../src/Plug.vala:237
 #: ../src/Plug.vala:248 ../src/Plug.vala:268
@@ -60,7 +60,7 @@ msgstr "Quad-Core"
 
 #: ../src/Plug.vala:288
 msgid "Built on %s %s"
-msgstr "Baseado em %s %s"
+msgstr "Baseado no %s %s"
 
 #: ../src/Plug.vala:293
 msgid "Website"
@@ -68,7 +68,7 @@ msgstr "Página Web"
 
 #: ../src/Plug.vala:297
 msgid "Hardware"
-msgstr ""
+msgstr "Hardware"
 
 #: ../src/Plug.vala:302
 msgid "Processor:"
@@ -120,6 +120,3 @@ msgstr "Restaurar Definições"
 #: ../src/Plug.vala:525
 msgid "Cancel"
 msgstr "Cancelar"
-
-#~ msgid "Hardware:"
-#~ msgstr "Hardware:"
