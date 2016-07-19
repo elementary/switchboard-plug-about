@@ -106,8 +106,8 @@ public class About.Plug : Switchboard.Plug {
             string line;
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
-                if ("DISTRIB_ID=" in line) {
-                    os = line.replace ("DISTRIB_ID=", "");
+                if ("DISTRIB_DESCRIPTION=" in line) {
+                    os = line.replace ("DISTRIB_DESCRIPTION=", "");
                     if ("\"" in os) {
                         os = os.replace ("\"", "");
                     }
