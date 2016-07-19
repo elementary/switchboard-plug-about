@@ -282,6 +282,7 @@ public class About.Plug : Switchboard.Plug {
         title.set_markup (("%s %s %s <sup><small>(%s)</small></sup>").printf (os, version, codename, arch));
         title.get_style_context ().add_class ("h2");
         title.halign = Gtk.Align.START;
+        title.margin_top = 24;
         title.set_selectable (true);
 
         if (is_ubuntu != null) {
@@ -292,6 +293,7 @@ public class About.Plug : Switchboard.Plug {
 
         var website_label = new Gtk.LinkButton.with_label ("http://elementary.io", _("Website"));
         website_label.halign = Gtk.Align.START;
+        website_label.margin_bottom = 24;
 
         var hardware_title = new Gtk.Label (null);
         hardware_title.set_label (_("Hardware"));
