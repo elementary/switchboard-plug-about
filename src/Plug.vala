@@ -20,8 +20,6 @@ public class About.Plug : Switchboard.Plug {
     private string os;
     private string website_url;
     private string bugtracker_url;
-    private string codename;
-    private string version;
     private string arch;
     private string processor;
     private string memory;
@@ -30,9 +28,7 @@ public class About.Plug : Switchboard.Plug {
     private Gtk.Label based_off;
 
 
-    private string is_ubuntu;
-    private string ubuntu_version;
-    private string ubuntu_codename;
+    private string upstream_release;
     private Gtk.EventBox main_grid;
 
     public Plug () {
@@ -74,27 +70,6 @@ public class About.Plug : Switchboard.Plug {
         return search_results;
     }
 
-    private string capitalize (string str) {
-        var result_builder = new StringBuilder ("");
-
-        weak string i = str;
-
-        bool first = true;
-        while (i.length > 0) {
-            unichar c = i.get_char ();
-            if (first) {
-                result_builder.append_unichar (c.toupper ());
-                first = false;
-            } else {
-                result_builder.append_unichar (c);
-            }
-
-            i = i.next_char ();
-        }
-
-        return result_builder.str;
-    }
-
     // Gets all the hardware info
     private void setup_info () {
 
@@ -111,18 +86,11 @@ public class About.Plug : Switchboard.Plug {
                     if ("\"" in os) {
                         os = os.replace ("\"", "");
                     }
-                } else if ("DISTRIB_RELEASE=" in line) {
-                    version = line.replace ("DISTRIB_RELEASE=", "");
-                } else if ("DISTRIB_CODENAME=" in line) {
-                    codename = line.replace ("DISTRIB_CODENAME=", "");
-                    codename = capitalize (codename);
                 }
             }
         } catch (Error e) {
             warning("Couldn't read lsb-release file, assuming elementary OS 0.3");
             os = "elementary OS";
-            version = "0.3";
-            codename = "Freya";
         }
 
         file = File.new_for_path("/etc/upstream-release/lsb-release");
@@ -131,20 +99,13 @@ public class About.Plug : Switchboard.Plug {
             string line;
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
-                if ("DISTRIB_ID=" in line) {
-                    is_ubuntu = line.replace ("DISTRIB_ID=", "");
-                } else if ("DISTRIB_RELEASE=" in line) {
-                    ubuntu_version = line.replace ("DISTRIB_RELEASE=", "");
-                } else if ("DISTRIB_CODENAME=" in line) {
-                    ubuntu_codename = line.replace ("DISTRIB_CODENAME=", "");
-                    ubuntu_codename = capitalize (ubuntu_codename);
+                if ("DISTRIB_DESCRIPTION=" in line) {
+                    upstream_release = line.replace ("DISTRIB_DESCRIPTION=", "");
                 }
             }
         } catch (Error e) {
             warning("Couldn't read upstream lsb-release file, assuming none");
-            is_ubuntu = null;
-            ubuntu_version = null;
-            ubuntu_codename = null;
+            upstream_release = null;
         }
 
         //Bugtracker and website
@@ -279,13 +240,13 @@ public class About.Plug : Switchboard.Plug {
         logo.halign = Gtk.Align.END;
 
         var title = new Gtk.Label (null);
-        title.set_markup (("%s %s %s <sup><small>(%s)</small></sup>").printf (os, version, codename, arch));
+        title.set_markup (("%s <sup><small>(%s)</small></sup>").printf (os, arch));
         title.get_style_context ().add_class ("h2");
         title.halign = Gtk.Align.START;
         title.set_selectable (true);
 
-        if (is_ubuntu != null) {
-            based_off = new Gtk.Label (_("Built on %s %s").printf (is_ubuntu, ubuntu_version));
+        if (upstream_release != null) {
+            based_off = new Gtk.Label (_("Built on %s").printf (upstream_release));
             based_off.halign = Gtk.Align.START;
             based_off.set_selectable (true);
         }
