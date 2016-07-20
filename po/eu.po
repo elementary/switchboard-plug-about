@@ -7,116 +7,113 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-28 14:27-0600\n"
+"POT-Creation-Date: 2016-07-19 08:28-0500\n"
 "PO-Revision-Date: 2014-07-08 05:58+0000\n"
 "Last-Translator: elementary Apps team <Unknown>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-29 05:37+0000\n"
-"X-Generator: Launchpad (build 17902)\n"
+"X-Launchpad-Export-Date: 2016-07-20 05:59+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 
-#: ../src/Plug.vala:41
+#: ../src/Plug.vala:37
 msgid "About"
 msgstr "Honi buruz"
 
-#: ../src/Plug.vala:42
+#: ../src/Plug.vala:38
 msgid "View operating system and hardware information"
 msgstr ""
 
-#: ../src/Plug.vala:69
+#: ../src/Plug.vala:65
 msgid "System Information"
 msgstr ""
 
-#: ../src/Plug.vala:70 ../src/Plug.vala:379
+#: ../src/Plug.vala:66 ../src/Plug.vala:339
 msgid "Restore Default Settings"
 msgstr ""
 
-#: ../src/Plug.vala:71
+#: ../src/Plug.vala:67
 msgid "Suggest Translation"
 msgstr ""
 
-#: ../src/Plug.vala:72
+#: ../src/Plug.vala:68
 msgid "Report Problems"
 msgstr ""
 
-#: ../src/Plug.vala:73
+#: ../src/Plug.vala:69
 msgid "Updates"
 msgstr ""
 
-#: ../src/Plug.vala:184 ../src/Plug.vala:213 ../src/Plug.vala:237
-#: ../src/Plug.vala:248 ../src/Plug.vala:268
+#: ../src/Plug.vala:145 ../src/Plug.vala:174 ../src/Plug.vala:198
+#: ../src/Plug.vala:209 ../src/Plug.vala:229
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: ../src/Plug.vala:204
+#: ../src/Plug.vala:165
 msgid "Dual-Core"
 msgstr ""
 
-#: ../src/Plug.vala:206
+#: ../src/Plug.vala:167
 msgid "Quad-Core"
 msgstr ""
 
-#: ../src/Plug.vala:288
-msgid "Built on %s %s"
+#: ../src/Plug.vala:249
+msgid "Built on %s"
 msgstr ""
 
-#: ../src/Plug.vala:293
+#: ../src/Plug.vala:254
 msgid "Website"
 msgstr ""
 
-#: ../src/Plug.vala:297
+#: ../src/Plug.vala:258
 msgid "Hardware"
 msgstr ""
 
-#: ../src/Plug.vala:302
+#: ../src/Plug.vala:263
 msgid "Processor:"
 msgstr "Prozesagailua:"
 
-#: ../src/Plug.vala:305
+#: ../src/Plug.vala:266
 msgid "Memory:"
 msgstr "Memoria:"
 
-#: ../src/Plug.vala:308
+#: ../src/Plug.vala:269
 msgid "Graphics:"
 msgstr "Grafikoak:"
 
-#: ../src/Plug.vala:311
+#: ../src/Plug.vala:272
 msgid "Storage:"
 msgstr "Biltegiratzea:"
 
-#: ../src/Plug.vala:349
+#: ../src/Plug.vala:309
 msgid "Suggest Translations"
 msgstr ""
 
-#: ../src/Plug.vala:359
+#: ../src/Plug.vala:319
 msgid "Report a Problem"
 msgstr "Arazo baten berri eman"
 
-#: ../src/Plug.vala:369
+#: ../src/Plug.vala:329
 msgid "Check for Updates"
 msgstr ""
 
-#: ../src/Plug.vala:503
+#: ../src/Plug.vala:463
 msgid "System settings will be restored to the factory defaults"
 msgstr ""
 
-#: ../src/Plug.vala:504
+#: ../src/Plug.vala:464
 msgid "All system settings and data will be reset to the default values."
 msgstr ""
 
-#: ../src/Plug.vala:505
+#: ../src/Plug.vala:465
 msgid "Personal data, such as music and pictures, will be uneffected."
 msgstr ""
 
-#: ../src/Plug.vala:522
+#: ../src/Plug.vala:482
 msgid "Restore Settings"
 msgstr ""
 
-#: ../src/Plug.vala:525
+#: ../src/Plug.vala:485
 msgid "Cancel"
 msgstr ""
-
-#~ msgid "Hardware:"
-#~ msgstr "Hardwarea:"

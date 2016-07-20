@@ -7,116 +7,119 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-28 14:27-0600\n"
+"POT-Creation-Date: 2016-07-19 08:28-0500\n"
 "PO-Revision-Date: 2016-01-31 09:39+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-01 05:30+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-07-20 05:59+0000\n"
+"X-Generator: Launchpad (build 18147)\n"
 "Language: it\n"
 
-#: ../src/Plug.vala:41
+#: ../src/Plug.vala:37
 msgid "About"
 msgstr "Informazioni"
 
-#: ../src/Plug.vala:42
+#: ../src/Plug.vala:38
 msgid "View operating system and hardware information"
 msgstr "Guarda il sistema operativo e le informazioni sull'hardware"
 
-#: ../src/Plug.vala:69
+#: ../src/Plug.vala:65
 msgid "System Information"
 msgstr "Informazioni di sistema"
 
-#: ../src/Plug.vala:70 ../src/Plug.vala:379
+#: ../src/Plug.vala:66 ../src/Plug.vala:339
 msgid "Restore Default Settings"
 msgstr "Ripristina impostazioni predefinite"
 
-#: ../src/Plug.vala:71
+#: ../src/Plug.vala:67
 msgid "Suggest Translation"
 msgstr "Suggerisci traduzioni"
 
-#: ../src/Plug.vala:72
+#: ../src/Plug.vala:68
 msgid "Report Problems"
 msgstr "Segnala un problema"
 
-#: ../src/Plug.vala:73
+#: ../src/Plug.vala:69
 msgid "Updates"
 msgstr "Aggiornamenti"
 
-#: ../src/Plug.vala:184 ../src/Plug.vala:213 ../src/Plug.vala:237
-#: ../src/Plug.vala:248 ../src/Plug.vala:268
+#: ../src/Plug.vala:145 ../src/Plug.vala:174 ../src/Plug.vala:198
+#: ../src/Plug.vala:209 ../src/Plug.vala:229
 msgid "Unknown"
 msgstr "Sconosciuto"
 
-#: ../src/Plug.vala:204
+#: ../src/Plug.vala:165
 msgid "Dual-Core"
 msgstr "Dual-Core"
 
-#: ../src/Plug.vala:206
+#: ../src/Plug.vala:167
 msgid "Quad-Core"
 msgstr "Quad-Core"
 
-#: ../src/Plug.vala:288
-msgid "Built on %s %s"
-msgstr "Costruito su %s %s"
+#: ../src/Plug.vala:249
+msgid "Built on %s"
+msgstr ""
 
-#: ../src/Plug.vala:293
+#: ../src/Plug.vala:254
 msgid "Website"
 msgstr "Sito web"
 
-#: ../src/Plug.vala:297
+#: ../src/Plug.vala:258
 msgid "Hardware"
 msgstr "Hardware"
 
-#: ../src/Plug.vala:302
+#: ../src/Plug.vala:263
 msgid "Processor:"
 msgstr "Processore:"
 
-#: ../src/Plug.vala:305
+#: ../src/Plug.vala:266
 msgid "Memory:"
 msgstr "Memoria:"
 
-#: ../src/Plug.vala:308
+#: ../src/Plug.vala:269
 msgid "Graphics:"
 msgstr "Scheda video:"
 
-#: ../src/Plug.vala:311
+#: ../src/Plug.vala:272
 msgid "Storage:"
 msgstr "Disco:"
 
-#: ../src/Plug.vala:349
+#: ../src/Plug.vala:309
 msgid "Suggest Translations"
 msgstr "Suggerisci traduzioni"
 
-#: ../src/Plug.vala:359
+#: ../src/Plug.vala:319
 msgid "Report a Problem"
 msgstr "Segnala un problema"
 
-#: ../src/Plug.vala:369
+#: ../src/Plug.vala:329
 msgid "Check for Updates"
 msgstr "Verifica aggiornamenti"
 
-#: ../src/Plug.vala:503
+#: ../src/Plug.vala:463
 msgid "System settings will be restored to the factory defaults"
 msgstr "Le impostazioni di sistema verrano riportate ai valori predefiniti"
 
-#: ../src/Plug.vala:504
+#: ../src/Plug.vala:464
 msgid "All system settings and data will be reset to the default values."
 msgstr ""
 "Le impostazioni di sistema e i dati saranno ripristinati ai valori "
 "predefiniti."
 
-#: ../src/Plug.vala:505
+#: ../src/Plug.vala:465
 msgid "Personal data, such as music and pictures, will be uneffected."
 msgstr "I dati personali come musica e foto non saranno influenzati."
 
-#: ../src/Plug.vala:522
+#: ../src/Plug.vala:482
 msgid "Restore Settings"
 msgstr "Ripristina impostazioni"
 
-#: ../src/Plug.vala:525
+#: ../src/Plug.vala:485
 msgid "Cancel"
 msgstr "Annulla"
+
+#~ msgid "Built on %s %s"
+#~ msgstr "Costruito su %s %s"
