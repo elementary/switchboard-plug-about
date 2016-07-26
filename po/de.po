@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 08:28-0500\n"
-"PO-Revision-Date: 2016-03-08 14:30+0000\n"
-"Last-Translator: Artem Anufrij <Unknown>\n"
+"PO-Revision-Date: 2016-07-25 22:31+0000\n"
+"Last-Translator: UweS <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-20 05:59+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-07-26 05:32+0000\n"
+"X-Generator: Launchpad (build 18153)\n"
 "Language: de\n"
 
 #: ../src/Plug.vala:37
@@ -24,7 +24,7 @@ msgstr "Info"
 
 #: ../src/Plug.vala:38
 msgid "View operating system and hardware information"
-msgstr "Zeige Betriebssystem- und Hardware-Informationen"
+msgstr "Betriebssystem- und Hardware-Informationen anzeigen"
 
 #: ../src/Plug.vala:65
 msgid "System Information"
@@ -40,7 +40,7 @@ msgstr "Übersetzung vorschlagen"
 
 #: ../src/Plug.vala:68
 msgid "Report Problems"
-msgstr "Problem berichten"
+msgstr "Problem melden"
 
 #: ../src/Plug.vala:69
 msgid "Updates"
@@ -61,7 +61,7 @@ msgstr "Vierfachkern"
 
 #: ../src/Plug.vala:249
 msgid "Built on %s"
-msgstr ""
+msgstr "Auf Basis von %s"
 
 #: ../src/Plug.vala:254
 msgid "Website"
@@ -101,12 +101,13 @@ msgstr "Nach Aktualisierungen suchen"
 
 #: ../src/Plug.vala:463
 msgid "System settings will be restored to the factory defaults"
-msgstr "Die System-Einstellungen werden auf Werkseinstellung zurückgesetzt"
+msgstr ""
+"Die Systemeinstellungen werden auf die Werkseinstellung zurückgesetzt"
 
 #: ../src/Plug.vala:464
 msgid "All system settings and data will be reset to the default values."
 msgstr ""
-"Alle System-Einstellungen und Daten werden auf die Standardwerte "
+"Alle Systemeinstellungen und Daten werden auf die Standardwerte "
 "zurückgesetzt."
 
 #: ../src/Plug.vala:465
@@ -120,6 +121,3 @@ msgstr "Einstellungen wiederherstellen"
 #: ../src/Plug.vala:485
 msgid "Cancel"
 msgstr "Abbrechen"
-
-#~ msgid "Built on %s %s"
-#~ msgstr "Erstellt auf Basis von %s %s"
