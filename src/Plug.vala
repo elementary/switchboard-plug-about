@@ -125,7 +125,7 @@ public class About.Plug : Switchboard.Plug {
             warning(e.message);
             warning("Couldn't find bugtracker/website, using elementary OS defaults");
             if (website_url == "")
-                website_url = "http://elementary.io";
+                website_url = "https://elementary.io";
             if (bugtracker_url == "")
                 bugtracker_url = "https://bugs.launchpad.net/elementaryos/+filebug";
         }
@@ -252,7 +252,7 @@ public class About.Plug : Switchboard.Plug {
             based_off.set_selectable (true);
         }
 
-        var website_label = new Gtk.LinkButton.with_label ("http://elementary.io", _("Website"));
+        var website_label = new Gtk.LinkButton.with_label ("https://elementary.io", _("Website"));
         website_label.halign = Gtk.Align.START;
         website_label.margin_bottom = 24;
 
@@ -297,7 +297,7 @@ public class About.Plug : Switchboard.Plug {
 
         help_button.clicked.connect (() => {
             try {
-                AppInfo.launch_default_for_uri ("http://elementary.io/support", null);
+                AppInfo.launch_default_for_uri ("https://elementary.io/support", null);
             } catch (Error e) {
                 warning (e.message);
             }
