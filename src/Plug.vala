@@ -20,6 +20,7 @@ public class About.Plug : Switchboard.Plug {
     private string os;
     private string website_url;
     private string bugtracker_url;
+    private string support_url;
     private string arch;
     private string processor;
     private string memory;
@@ -75,24 +76,49 @@ public class About.Plug : Switchboard.Plug {
 
         // Operating System
 
-        File file = File.new_for_path("/etc/lsb-release");
+        File file = File.new_for_path("/etc/os-release");
         try {
             var dis = new DataInputStream (file.read ());
             string line;
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
-                if ("DISTRIB_DESCRIPTION=" in line) {
-                    os = line.replace ("DISTRIB_DESCRIPTION=", "");
+                if ("PRETTY_NAME=" in line) {
+                    os = line.replace ("PRETTY_NAME=", "");
                     if ("\"" in os) {
                         os = os.replace ("\"", "");
                     }
                 }
+                if ("HOME_URL=" in line) {
+                    website_url = line.replace ("HOME_URL=", "");
+                    if ("\"" in website_url) {
+                        website_url = website_url.replace ("\"", "");
+                    }
+                }
+                if ("BUG_REPORT_URL=" in line) {
+                    bugtracker_url = line.replace ("BUG_REPORT_URL=", "");
+                    if ("\"" in bugtracker_url) {
+                        bugtracker_url = bugtracker_url.replace ("\"", "");
+                    }
+                }
+                if ("SUPPORT_URL=" in line) {
+                    support_url = line.replace ("SUPPORT_URL=", "");
+                    if ("\"" in support_url) {
+                        support_url = support_url.replace ("\"", "");
+                    }
+                }
             }
         } catch (Error e) {
-            warning("Couldn't read lsb-release file, assuming elementary OS 0.3");
+            warning("Couldn't read os-release file, assuming elementary OS");
             os = "elementary OS";
+            website_url = "https://elementary.io";
+            bugtracker_url = "https://bugs.launchpad.net/elementaryos/+filebug";
+            support_url = "https://elementary.io/support";
+
         }
 
+        //Upstream distro version (for "Built on" text)
+        //FIXME: Add distro specific field to /etc/os-release and use that instead
+        // Like "ELEMENTARYOS_UPSTREAM_PRETTY_ID" or something
         file = File.new_for_path("/etc/upstream-release/lsb-release");
         try {
             var dis = new DataInputStream (file.read ());
@@ -106,28 +132,6 @@ public class About.Plug : Switchboard.Plug {
         } catch (Error e) {
             warning("Couldn't read upstream lsb-release file, assuming none");
             upstream_release = null;
-        }
-
-        //Bugtracker and website
-        file = File.new_for_path("/etc/dpkg/origins/"+os);
-        bugtracker_url = "";
-        website_url = "";
-        try {
-            var dis = new DataInputStream (file.read ());
-            string line;
-            // Read lines until end of file (null) is reached
-            while ((line = dis.read_line (null)) != null) {
-                if (line.has_prefix("Bugs:")) {
-                    bugtracker_url = line.replace ("Bugs: ", "");
-                }
-            }
-        } catch (Error e) {
-            warning(e.message);
-            warning("Couldn't find bugtracker/website, using elementary OS defaults");
-            if (website_url == "")
-                website_url = "https://elementary.io";
-            if (bugtracker_url == "")
-                bugtracker_url = "https://bugs.launchpad.net/elementaryos/+filebug";
         }
 
         // Architecture
@@ -252,7 +256,7 @@ public class About.Plug : Switchboard.Plug {
             based_off.set_selectable (true);
         }
 
-        var website_label = new Gtk.LinkButton.with_label ("https://elementary.io", _("Website"));
+        var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
         website_label.halign = Gtk.Align.START;
         website_label.margin_bottom = 24;
 
@@ -297,7 +301,7 @@ public class About.Plug : Switchboard.Plug {
 
         help_button.clicked.connect (() => {
             try {
-                AppInfo.launch_default_for_uri ("https://elementary.io/support", null);
+                AppInfo.launch_default_for_uri (support_url, null);
             } catch (Error e) {
                 warning (e.message);
             }
