@@ -30,7 +30,7 @@ public class About.Plug : Switchboard.Plug {
 
 
     private string upstream_release;
-    private Gtk.EventBox main_grid;
+    private Gtk.Grid main_grid;
 
     public Plug () {
         Object (category: Category.SYSTEM,
@@ -45,14 +45,16 @@ public class About.Plug : Switchboard.Plug {
             setup_info ();
             setup_ui ();
         }
+
         return main_grid;
     }
 
     public override void shown () {
-
+        main_grid.show ();
     }
 
     public override void hidden () {
+        main_grid.hide ();
 
     }
 
@@ -135,36 +137,53 @@ public class About.Plug : Switchboard.Plug {
         }
 
         // Architecture
-        try {
-            Process.spawn_command_line_sync ("uname -m", out arch);
-            if (arch == "x86_64\n") {
+        Posix.UtsName uts_name;
+        Posix.UtsName.get_default (out uts_name);
+        switch (uts_name.machine) {
+            case "x86_64":
                 arch = "64-bit";
-            } else if ("arm" in arch) {
+                break;
+            case "arm":
                 arch = "ARM";
-            } else {
+                break;
+            default:
                 arch = "32-bit";
-            }
-        } catch (Error e) {
-            warning (e.message);
-            arch = _("Unknown");
+                break;
         }
 
         // Processor
+        var cpu_file = File.new_for_path ("/proc/cpuinfo");
+        uint cores = 0U;
         try {
-            Process.spawn_command_line_sync ("sed -n 's/^model name[ \t]*: *//p' /proc/cpuinfo", out processor);
-            int cores = 0;
-            foreach (string core in processor.split ("\n")) {
-                if (core != "") {
+            var dis = new DataInputStream (cpu_file.read ());
+            string line;
+            while ((line = dis.read_line ()) != null) {
+                if (line.has_prefix ("model name")) {
                     cores++;
+                    if (processor == null) {
+                        var parts = line.split (":", 2);
+                        if (parts.length > 1) {
+                            processor = parts[1].strip ();
+                        }
+                    }
                 }
             }
-            if ("\n" in processor) {
-                processor = processor.split ("\n")[0];
-            } if ("(R)" in processor) {
+        } catch (Error e) {
+            warning (e.message);
+        }
+
+        if (processor == null) {
+            processor = _("Unknown");
+        } else {
+            if ("(R)" in processor) {
                 processor = processor.replace ("(R)", "®");
-            } if ("(TM)" in processor) {
+            }
+
+            if ("(TM)" in processor) {
                 processor = processor.replace ("(TM)", "™");
-            } if (cores > 1) {
+            }
+
+            if (cores > 1) {
                 if (cores == 2) {
                     processor = _("Dual-Core") + " " + processor;
                 } else if (cores == 4) {
@@ -173,13 +192,10 @@ public class About.Plug : Switchboard.Plug {
                     processor = processor + " × " + cores.to_string ();
                 }
             }
-        } catch (Error e) {
-            warning (e.message);
-            processor = _("Unknown");
         }
 
         //Memory
-        memory = GLib.format_size (get_mem_info_for("MemTotal:") * 1024, FormatSizeFlags.IEC_UNITS);
+        memory = GLib.format_size (get_mem_info ());
 
         // Graphics
         try {
@@ -237,63 +253,72 @@ public class About.Plug : Switchboard.Plug {
 
     // Wires up and configures initial UI
     private void setup_ui () {
-        main_grid = new Gtk.EventBox ();
-
         // Create the section about elementary OS
         var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 128, 128));
         logo.halign = Gtk.Align.END;
 
-        var title = new Gtk.Label (null);
-        title.set_markup (("%s <sup><small>(%s)</small></sup>").printf (os, arch));
+        var title = new Gtk.Label (os);
         title.get_style_context ().add_class ("h2");
-        title.halign = Gtk.Align.START;
-        title.margin_top = 24;
         title.set_selectable (true);
+
+        var arch_name = new Gtk.Label ("(%s)".printf (arch));
+        arch_name.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+        arch_name.valign = Gtk.Align.CENTER;
+
+        var title_grid = new Gtk.Grid ();
+        title_grid.column_spacing = 6;
+        title_grid.valign = Gtk.Align.END;
+        title_grid.halign = Gtk.Align.START;
+        title_grid.vexpand = true;
+        title_grid.add (title);
+        title_grid.add (arch_name);
 
         if (upstream_release != null) {
             based_off = new Gtk.Label (_("Built on %s").printf (upstream_release));
+            based_off.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
             based_off.halign = Gtk.Align.START;
             based_off.set_selectable (true);
         }
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
         website_label.halign = Gtk.Align.START;
-        website_label.margin_bottom = 24;
+        website_label.valign = Gtk.Align.START;
+        website_label.vexpand = true;
 
         var hardware_title = new Gtk.Label (null);
         hardware_title.set_label (_("Hardware"));
-        hardware_title.get_style_context ().add_class ("h3");
-        hardware_title.halign = Gtk.Align.END;
+        hardware_title.get_style_context ().add_class ("h4");
+        hardware_title.halign = Gtk.Align.START;
         hardware_title.margin_top = 24;
 
         var processor_label = new Gtk.Label (_("Processor:"));
-        processor_label.halign = Gtk.Align.END;
+        processor_label.xalign = 1;
 
         var memory_label = new Gtk.Label (_("Memory:"));
-        memory_label.halign = Gtk.Align.END;
+        memory_label.xalign = 1;
 
         var graphics_label = new Gtk.Label (_("Graphics:"));
-        graphics_label.halign = Gtk.Align.END;
+        graphics_label.xalign = 1;
 
         var hdd_label = new Gtk.Label (_("Storage:"));
-        hdd_label.halign = Gtk.Align.END;
+        hdd_label.xalign = 1;
 
         var processor_info = new Gtk.Label (processor);
-        processor_info.halign = Gtk.Align.START;
+        processor_info.xalign = 0;
         processor_info.set_selectable (true);
         processor_info.set_line_wrap (false);
 
         var memory_info = new Gtk.Label (memory);
-        memory_info.halign = Gtk.Align.START;
+        memory_info.xalign = 0;
         memory_info.set_selectable (true);
 
         var graphics_info = new Gtk.Label (graphics);
-        graphics_info.halign = Gtk.Align.START;
+        graphics_info.xalign = 0;
         graphics_info.set_selectable (true);
         graphics_info.set_line_wrap (false);
 
         var hdd_info = new Gtk.Label (hdd);
-        hdd_info.halign = Gtk.Align.START;
+        hdd_info.xalign = 0;
         hdd_info.set_selectable (true);
 
         var help_button = new Gtk.Button.with_label ("?");
@@ -346,69 +371,74 @@ public class About.Plug : Switchboard.Plug {
         settings_restore_button.clicked.connect (settings_restore_clicked);
 
         // Create a box for the buttons
-        var button_box = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
-        button_box.spacing = 6;
-        button_box.pack_start (help_button, false, false, 0);
-        button_box.set_child_non_homogeneous (help_button, true);
-        button_box.pack_end (settings_restore_button, false, false, 0);
-        button_box.pack_end (translate_button, false, false, 0);
-        button_box.pack_end (bug_button, false, false, 0);
-        button_box.pack_end (update_button, false, false, 0);
+        var button_grid = new Gtk.Grid ();
+        button_grid.column_spacing = 6;
+        button_grid.halign = Gtk.Align.CENTER;
+        button_grid.valign = Gtk.Align.CENTER;
+        button_grid.add (help_button);
+        button_grid.add (settings_restore_button);
+        button_grid.add (translate_button);
+        button_grid.add (bug_button);
+        button_grid.add (update_button);
 
-        // Fit everything in a box
-        var layout = new Gtk.Grid ();
-        layout.column_spacing = 6;
-        layout.row_spacing = 6;
+        var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+        size_group.add_widget (settings_restore_button);
+        size_group.add_widget (translate_button);
+        size_group.add_widget (bug_button);
+        size_group.add_widget (update_button);
 
-        layout.attach (logo, 0, 0, 1, 3);
-        layout.attach (title, 1, 0, 1, 1);
-        layout.attach (based_off, 1, 1, 1, 1);
-        layout.attach (website_label, 1, 2, 1, 1);
+        // Fit everything in a grid
+        var description_grid = new Gtk.Grid ();
+        description_grid.halign = Gtk.Align.CENTER;
+        description_grid.valign = Gtk.Align.CENTER;
+        description_grid.column_spacing = 12;
+        description_grid.row_spacing = 6;
+        description_grid.orientation = Gtk.Orientation.VERTICAL;
+        description_grid.attach (logo, 0, 0, 1, 3);
+        description_grid.attach (title_grid, 1, 0, 1, 1);
+        if (upstream_release != null) {
+            description_grid.attach (based_off, 1, 1, 1, 1);
+        }
 
-        layout.attach (hardware_title, 0, 3, 1, 1);
-        layout.attach (processor_label, 0, 4, 1, 1);
-        layout.attach (processor_info, 1, 4, 1, 1);
-        layout.attach (memory_label, 0, 5, 1, 1);
-        layout.attach (memory_info, 1, 5, 1, 1);
-        layout.attach (graphics_label, 0, 6, 1, 1);
-        layout.attach (graphics_info, 1, 6, 1, 1);
-        layout.attach (hdd_label, 0, 7, 1, 1);
-        layout.attach (hdd_info, 1, 7, 1, 1);
+        description_grid.attach (website_label, 1, 2, 1, 1);
+        description_grid.attach (hardware_title, 0, 3, 2, 1);
+        description_grid.attach (processor_label, 0, 4, 1, 1);
+        description_grid.attach (processor_info, 1, 4, 1, 1);
+        description_grid.attach (memory_label, 0, 5, 1, 1);
+        description_grid.attach (memory_info, 1, 5, 1, 1);
+        description_grid.attach (graphics_label, 0, 6, 1, 1);
+        description_grid.attach (graphics_info, 1, 6, 1, 1);
+        description_grid.attach (hdd_label, 0, 7, 1, 1);
+        description_grid.attach (hdd_info, 1, 7, 1, 1);
 
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 24);
-        box.pack_start (layout, false, false, 0);
-        box.pack_end (button_box, false, false, 0);
-        box.set_margin_top (24);
-        box.set_margin_bottom (24);
-
-        // Let's align the box and add it to the plug
-        var halign = new Gtk.Alignment ((float) 0.5, 0, 0, 1);
-        halign.add (box);
-        main_grid.add (halign);
+        main_grid = new Gtk.Grid ();
+        main_grid.orientation = Gtk.Orientation.VERTICAL;
+        main_grid.halign = Gtk.Align.CENTER;
+        main_grid.row_spacing = 12;
+        main_grid.margin = 12;
+        main_grid.add (description_grid);
+        main_grid.add (button_grid);
         main_grid.show_all ();
     }
 }
 
-private uint64 get_mem_info_for(string name) {
-    uint64 result = 0;
+private uint64 get_mem_info () {
     File file = File.new_for_path ("/proc/meminfo");
     try {
-        DataInputStream dis = new DataInputStream (file.read());
+        DataInputStream dis = new DataInputStream (file.read ());
         string? line;
+        string name = "MemTotal:";
         while ((line = dis.read_line (null,null)) != null) {
-            if(line.has_prefix(name)) {
-                //get the kb-part of the string with witespaces
-                line = line.substring(name.length,
-                                      line.last_index_of("kB")-name.length);
-                result = uint64.parse(line.strip());
-                break;
+            if (line.has_prefix (name)) {
+                var number = line.replace ("kB", "").replace (name, "").strip ();
+                return uint64.parse (number) * 1000;
             }
         }
     } catch (Error e) {
         warning (e.message);
     }
 
-    return result;
+    return 0;
 }
 
 private void reset_all_keys (GLib.Settings settings) {
