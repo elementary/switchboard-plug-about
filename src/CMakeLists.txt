@@ -19,6 +19,8 @@ PACKAGES
     gtk+-3.0
     switchboard-2.0
     granite
+CUSTOM_VAPIS
+    ${CMAKE_SOURCE_DIR}/vapi/utsname.vapi
 OPTIONS
     --thread
 )
