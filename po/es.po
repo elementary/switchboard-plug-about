@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-07-19 08:28-0500\n"
-"PO-Revision-Date: 2016-03-03 05:48+0000\n"
-"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
+"PO-Revision-Date: 2017-01-05 23:39+0000\n"
+"Last-Translator: Félix Brezo <felixbrezo@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-28 06:53+0000\n"
-"X-Generator: Launchpad (build 18204)\n"
+"X-Launchpad-Export-Date: 2017-01-06 06:11+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 "Language: es\n"
 
 #: ../src/Plug.vala:37
@@ -61,7 +61,7 @@ msgstr "Cuádruple núcleo"
 
 #: ../src/Plug.vala:249
 msgid "Built on %s"
-msgstr ""
+msgstr "Basado en %s"
 
 #: ../src/Plug.vala:254
 msgid "Website"
@@ -69,7 +69,7 @@ msgstr "Sitio web"
 
 #: ../src/Plug.vala:258
 msgid "Hardware"
-msgstr ""
+msgstr "Hardware"
 
 #: ../src/Plug.vala:263
 msgid "Processor:"
