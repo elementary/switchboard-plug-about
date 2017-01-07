@@ -7,113 +7,113 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-19 08:28-0500\n"
+"POT-Creation-Date: 2017-01-06 08:38+0100\n"
 "PO-Revision-Date: 2016-10-18 20:29+0000\n"
 "Last-Translator: Noam Sellam <noam.sellam@hotmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-19 06:26+0000\n"
-"X-Generator: Launchpad (build 18232)\n"
+"X-Launchpad-Export-Date: 2017-01-07 06:20+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 
-#: ../src/Plug.vala:37
+#: ../src/Plug.vala:38
 msgid "About"
 msgstr "על אודות"
 
-#: ../src/Plug.vala:38
+#: ../src/Plug.vala:39
 msgid "View operating system and hardware information"
 msgstr "צפייה במידע חומרה ומערכת ההפעלה"
 
-#: ../src/Plug.vala:65
+#: ../src/Plug.vala:68
 msgid "System Information"
 msgstr "מידע מערכת"
 
-#: ../src/Plug.vala:66 ../src/Plug.vala:339
+#: ../src/Plug.vala:69 ../src/Plug.vala:370
 msgid "Restore Default Settings"
 msgstr "שחזור הגדרות בררת המחדל"
 
-#: ../src/Plug.vala:67
+#: ../src/Plug.vala:70
 msgid "Suggest Translation"
 msgstr "הצעת תרגום"
 
-#: ../src/Plug.vala:68
+#: ../src/Plug.vala:71
 msgid "Report Problems"
 msgstr "דיווח בעיות"
 
-#: ../src/Plug.vala:69
+#: ../src/Plug.vala:72
 msgid "Updates"
 msgstr "עדכונים"
 
-#: ../src/Plug.vala:145 ../src/Plug.vala:174 ../src/Plug.vala:198
-#: ../src/Plug.vala:209 ../src/Plug.vala:229
+#: ../src/Plug.vala:176 ../src/Plug.vala:218 ../src/Plug.vala:229
+#: ../src/Plug.vala:249
 msgid "Unknown"
 msgstr "לא ידוע"
 
-#: ../src/Plug.vala:165
+#: ../src/Plug.vala:188
 msgid "Dual-Core"
 msgstr "ליבה כפולה"
 
-#: ../src/Plug.vala:167
+#: ../src/Plug.vala:190
 msgid "Quad-Core"
 msgstr "ליבה מרובעת"
 
-#: ../src/Plug.vala:249
+#: ../src/Plug.vala:277
 msgid "Built on %s"
 msgstr "נבנה על גבי %s"
 
-#: ../src/Plug.vala:254
+#: ../src/Plug.vala:283
 msgid "Website"
 msgstr "אתר אינטרנט"
 
-#: ../src/Plug.vala:258
+#: ../src/Plug.vala:289
 msgid "Hardware"
 msgstr "חומרה"
 
-#: ../src/Plug.vala:263
+#: ../src/Plug.vala:294
 msgid "Processor:"
 msgstr "מעבד:"
 
-#: ../src/Plug.vala:266
+#: ../src/Plug.vala:297
 msgid "Memory:"
 msgstr "זיכרון:"
 
-#: ../src/Plug.vala:269
+#: ../src/Plug.vala:300
 msgid "Graphics:"
 msgstr "גרפיקה:"
 
-#: ../src/Plug.vala:272
+#: ../src/Plug.vala:303
 msgid "Storage:"
 msgstr "אחסון"
 
-#: ../src/Plug.vala:309
+#: ../src/Plug.vala:340
 msgid "Suggest Translations"
 msgstr "הצעת תרגום"
 
-#: ../src/Plug.vala:319
+#: ../src/Plug.vala:350
 msgid "Report a Problem"
 msgstr "דיווח על בעיה"
 
-#: ../src/Plug.vala:329
+#: ../src/Plug.vala:360
 msgid "Check for Updates"
 msgstr "בדיקה עבור עדכונים"
 
-#: ../src/Plug.vala:463
+#: ../src/Plug.vala:499
 msgid "System settings will be restored to the factory defaults"
 msgstr "הגדרות המערכת ישוחזרו לברירת המחדל של היצרן"
 
-#: ../src/Plug.vala:464
+#: ../src/Plug.vala:500
 msgid "All system settings and data will be reset to the default values."
 msgstr "כל הנתונים והגדרות המערכת יתאפסו לערכי ברירת המחדל."
 
-#: ../src/Plug.vala:465
+#: ../src/Plug.vala:501
 msgid "Personal data, such as music and pictures, will be uneffected."
 msgstr "מידע אישי, כגון מוזיקה ותמונות יישאר ללא שינוי."
 
-#: ../src/Plug.vala:482
+#: ../src/Plug.vala:518
 msgid "Restore Settings"
 msgstr "שחזור הגדרות"
 
-#: ../src/Plug.vala:485
+#: ../src/Plug.vala:521
 msgid "Cancel"
 msgstr "ביטול"

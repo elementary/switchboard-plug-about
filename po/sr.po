@@ -7,113 +7,113 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-19 08:28-0500\n"
-"PO-Revision-Date: 2016-05-16 12:25+0000\n"
-"Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
+"POT-Creation-Date: 2017-01-06 08:38+0100\n"
+"PO-Revision-Date: 2017-01-06 06:39+0000\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-28 06:53+0000\n"
-"X-Generator: Launchpad (build 18204)\n"
-
-#: ../src/Plug.vala:37
-msgid "About"
-msgstr "О"
+"X-Launchpad-Export-Date: 2017-01-07 06:21+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/Plug.vala:38
+msgid "About"
+msgstr "Подаци"
+
+#: ../src/Plug.vala:39
 msgid "View operating system and hardware information"
-msgstr "Преглед радног склопа и подаци о уређају"
+msgstr "Прегледајте податке о оперативном систему и хардверу"
 
-#: ../src/Plug.vala:65
+#: ../src/Plug.vala:68
 msgid "System Information"
-msgstr "Подаци о склопу"
+msgstr "Подаци о систему"
 
-#: ../src/Plug.vala:66 ../src/Plug.vala:339
+#: ../src/Plug.vala:69 ../src/Plug.vala:370
 msgid "Restore Default Settings"
-msgstr "Поврати подразумеване поставке"
+msgstr "Повратите основна подешавања"
 
-#: ../src/Plug.vala:67
+#: ../src/Plug.vala:70
 msgid "Suggest Translation"
 msgstr "Предложите превод"
 
-#: ../src/Plug.vala:68
+#: ../src/Plug.vala:71
 msgid "Report Problems"
-msgstr "Пријавите потешкоће"
+msgstr "Известите о проблемима"
 
-#: ../src/Plug.vala:69
+#: ../src/Plug.vala:72
 msgid "Updates"
-msgstr "Надградње"
+msgstr "Освежења"
 
-#: ../src/Plug.vala:145 ../src/Plug.vala:174 ../src/Plug.vala:198
-#: ../src/Plug.vala:209 ../src/Plug.vala:229
+#: ../src/Plug.vala:176 ../src/Plug.vala:218 ../src/Plug.vala:229
+#: ../src/Plug.vala:249
 msgid "Unknown"
 msgstr "Непознато"
 
-#: ../src/Plug.vala:165
+#: ../src/Plug.vala:188
 msgid "Dual-Core"
 msgstr "Двојезгрални"
 
-#: ../src/Plug.vala:167
+#: ../src/Plug.vala:190
 msgid "Quad-Core"
 msgstr "Четворојезгрални"
 
-#: ../src/Plug.vala:249
+#: ../src/Plug.vala:277
 msgid "Built on %s"
-msgstr ""
+msgstr "Изграђено %s"
 
-#: ../src/Plug.vala:254
+#: ../src/Plug.vala:283
 msgid "Website"
-msgstr "Страница Веба"
+msgstr "Веб страница"
 
-#: ../src/Plug.vala:258
+#: ../src/Plug.vala:289
 msgid "Hardware"
-msgstr "Уређаји"
+msgstr "Хардвер"
 
-#: ../src/Plug.vala:263
+#: ../src/Plug.vala:294
 msgid "Processor:"
 msgstr "Процесор:"
 
-#: ../src/Plug.vala:266
+#: ../src/Plug.vala:297
 msgid "Memory:"
 msgstr "Меморија:"
 
-#: ../src/Plug.vala:269
+#: ../src/Plug.vala:300
 msgid "Graphics:"
 msgstr "Графика:"
 
-#: ../src/Plug.vala:272
+#: ../src/Plug.vala:303
 msgid "Storage:"
-msgstr "Складиште"
+msgstr "Smeètaj:"
 
-#: ../src/Plug.vala:309
+#: ../src/Plug.vala:340
 msgid "Suggest Translations"
 msgstr "Предложите преводе"
 
-#: ../src/Plug.vala:319
+#: ../src/Plug.vala:350
 msgid "Report a Problem"
-msgstr "Пријавите потешкоћу"
+msgstr "Известите о проблему"
 
-#: ../src/Plug.vala:329
+#: ../src/Plug.vala:360
 msgid "Check for Updates"
-msgstr "Провери надоградње"
+msgstr "Проверите освежења"
 
-#: ../src/Plug.vala:463
+#: ../src/Plug.vala:499
 msgid "System settings will be restored to the factory defaults"
-msgstr "Поставке склопа ће се вратити на подразумеване вредности"
+msgstr "Подешавања система биће враћена на фабричка"
 
-#: ../src/Plug.vala:464
+#: ../src/Plug.vala:500
 msgid "All system settings and data will be reset to the default values."
-msgstr "Све поставке склопа ће се вратити на подразумеване вредности"
+msgstr "Сва подешавања система биће враћена на основне вредности."
 
-#: ../src/Plug.vala:465
+#: ../src/Plug.vala:501
 msgid "Personal data, such as music and pictures, will be uneffected."
 msgstr "Лични подаци, као што су песме и слике неће бити угрожени."
 
-#: ../src/Plug.vala:482
+#: ../src/Plug.vala:518
 msgid "Restore Settings"
-msgstr "Поврати поставке"
+msgstr "Поврати подешавања"
 
-#: ../src/Plug.vala:485
+#: ../src/Plug.vala:521
 msgid "Cancel"
 msgstr "Откажи"
