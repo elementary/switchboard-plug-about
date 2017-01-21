@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-06 08:38+0100\n"
-"PO-Revision-Date: 2015-02-10 22:51+0000\n"
-"Last-Translator: George Chalkitis <chalkitisge@gmail.com>\n"
+"PO-Revision-Date: 2017-01-19 17:33+0000\n"
+"Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-07 06:20+0000\n"
+"X-Launchpad-Export-Date: 2017-01-21 06:44+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 "Language: el\n"
 
@@ -24,27 +24,27 @@ msgstr "Περί"
 
 #: ../src/Plug.vala:39
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "Προβολή πληροφοριών λειτουργικού συστήματος και υλικού"
 
 #: ../src/Plug.vala:68
 msgid "System Information"
-msgstr ""
+msgstr "Πληροφορίες συστήματος"
 
 #: ../src/Plug.vala:69 ../src/Plug.vala:370
 msgid "Restore Default Settings"
-msgstr ""
+msgstr "Επαναφορά προεπιλεγμένων ρυθμίσεων"
 
 #: ../src/Plug.vala:70
 msgid "Suggest Translation"
-msgstr ""
+msgstr "Πρόταση μεταφράσεων"
 
 #: ../src/Plug.vala:71
 msgid "Report Problems"
-msgstr ""
+msgstr "Αναφορά προβλημάτων"
 
 #: ../src/Plug.vala:72
 msgid "Updates"
-msgstr ""
+msgstr "Ενημερώσεις"
 
 #: ../src/Plug.vala:176 ../src/Plug.vala:218 ../src/Plug.vala:229
 #: ../src/Plug.vala:249
@@ -61,7 +61,7 @@ msgstr "Τετραπύρηνος"
 
 #: ../src/Plug.vala:277
 msgid "Built on %s"
-msgstr ""
+msgstr "Χτισμένο πάνω στο %s"
 
 #: ../src/Plug.vala:283
 msgid "Website"
@@ -69,7 +69,7 @@ msgstr "Ιστότοπος"
 
 #: ../src/Plug.vala:289
 msgid "Hardware"
-msgstr ""
+msgstr "Υλικό"
 
 #: ../src/Plug.vala:294
 msgid "Processor:"
@@ -102,19 +102,23 @@ msgstr "Έλεγχος για Ενημερώσεις"
 #: ../src/Plug.vala:499
 msgid "System settings will be restored to the factory defaults"
 msgstr ""
+"Οι ρυθμίσεις του συστήματος θα επαναφερθούν στις εργοστασιακές προεπιλογές"
 
 #: ../src/Plug.vala:500
 msgid "All system settings and data will be reset to the default values."
 msgstr ""
+"Όλες οι ρυθμίσεις και τα δεδομένα του συστήματος θα επαναφερθούν στις "
+"προεπιλεγμένες τιμές."
 
 #: ../src/Plug.vala:501
 msgid "Personal data, such as music and pictures, will be uneffected."
 msgstr ""
+"Προσωπικά δεδομένα, όπως η μουσική και οι εικόνες σας, δεν θα επηρεαστούν."
 
 #: ../src/Plug.vala:518
 msgid "Restore Settings"
-msgstr ""
+msgstr "Επαναφορά ρυθμίσεων"
 
 #: ../src/Plug.vala:521
 msgid "Cancel"
-msgstr ""
+msgstr "Ακύρωση"
