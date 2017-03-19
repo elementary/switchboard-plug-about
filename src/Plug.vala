@@ -489,45 +489,9 @@ private void reset_recursively (string schema) {
  * returns true to continue, false to cancel
  */
 private bool confirm_restore_action () {
-    var dialog = new Gtk.Dialog ();
-
-    Gtk.Box box = dialog.get_content_area () as Gtk.Box;
-    var layout = new Gtk.Grid ();
-    var text = new Gtk.Label ("");
-
-    text.set_markup ("<span weight='bold' size='larger'>" +
-                     _("System settings will be restored to the factory defaults") + "</span>\n\n"+
-                     _("All system settings and data will be reset to the default values.") + "\n" +
-                     _("Personal data, such as music and pictures, will be uneffected."));
-
-    var image = new Gtk.Image.from_icon_name ("dialog-warning",
-                                              Gtk.IconSize.DIALOG);
-    image.yalign = 0;
-    image.show ();
-
-    layout.set_column_spacing (12);
-    layout.set_margin_right (6);
-    layout.set_margin_bottom (18);
-    layout.set_margin_left (6);
-
-    layout.add (image);
-    layout.add (text);
-
-    box.pack_start (layout);
-
-    var continue_button = new Gtk.Button.with_label (_("Restore Settings"));
-    continue_button.get_style_context ().add_class ("destructive-action");
-
-    var cancel_button = new Gtk.Button.with_label (_("Cancel"));
-    continue_button.show ();
-    cancel_button.show ();
-
-    dialog.border_width = 6;
-    dialog.deletable = false;
-    dialog.add_action_widget (cancel_button, 0);
-    dialog.add_action_widget (continue_button, 1);
-
+    var dialog = new RestoreDialog ();
     dialog.show_all ();
+
     var result = dialog.run ();
     dialog.destroy ();
 
