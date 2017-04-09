@@ -80,35 +80,21 @@ public class About.Plug : Switchboard.Plug {
 
         File file = File.new_for_path("/etc/os-release");
         try {
+            var osrel = new Gee.HashMap<string, string> ();
             var dis = new DataInputStream (file.read ());
             string line;
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
-                if ("PRETTY_NAME=" in line) {
-                    os = line.replace ("PRETTY_NAME=", "");
-                    if ("\"" in os) {
-                        os = os.replace ("\"", "");
-                    }
-                }
-                if ("HOME_URL=" in line) {
-                    website_url = line.replace ("HOME_URL=", "");
-                    if ("\"" in website_url) {
-                        website_url = website_url.replace ("\"", "");
-                    }
-                }
-                if ("BUG_REPORT_URL=" in line) {
-                    bugtracker_url = line.replace ("BUG_REPORT_URL=", "");
-                    if ("\"" in bugtracker_url) {
-                        bugtracker_url = bugtracker_url.replace ("\"", "");
-                    }
-                }
-                if ("SUPPORT_URL=" in line) {
-                    support_url = line.replace ("SUPPORT_URL=", "");
-                    if ("\"" in support_url) {
-                        support_url = support_url.replace ("\"", "");
-                    }
+                var osrel_component = line.split ("=", 2);
+                if ( osrel_component.length == 2 ) {
+                    osrel[osrel_component[0]] = osrel_component[1].replace ("\"", "");
                 }
             }
+
+            os = osrel["PRETTY_NAME"];
+            website_url = osrel["HOME_URL"];
+            bugtracker_url = osrel["BUG_REPORT_URL"];
+            support_url = osrel["SUPPORT_URL"];
         } catch (Error e) {
             warning("Couldn't read os-release file, assuming elementary OS");
             os = "elementary OS";
@@ -120,7 +106,7 @@ public class About.Plug : Switchboard.Plug {
 
         //Upstream distro version (for "Built on" text)
         //FIXME: Add distro specific field to /etc/os-release and use that instead
-        // Like "ELEMENTARYOS_UPSTREAM_PRETTY_ID" or something
+        // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
         file = File.new_for_path("/etc/upstream-release/lsb-release");
         try {
             var dis = new DataInputStream (file.read ());
