@@ -272,6 +272,7 @@ public class About.Plug : Switchboard.Plug {
         gtk_version_label.set_selectable (true);
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
+        website_label.halign = Gtk.Align.CENTER;
         website_label.margin_top = 12;
 
         var processor_info = new Gtk.Label (processor);
