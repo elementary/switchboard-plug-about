@@ -389,7 +389,7 @@ public class About.Plug : Switchboard.Plug {
         description_grid.column_spacing = 12;
         description_grid.row_spacing = 6;
         description_grid.orientation = Gtk.Orientation.VERTICAL;
-        description_grid.attach (logo, 0, 0, 1, 3);
+        description_grid.attach (logo, 0, 0, 1, 4);
         description_grid.attach (title_grid, 1, 0, 1, 1);
         if (upstream_release != null) {
             description_grid.attach (based_off, 1, 1, 1, 1);
@@ -397,15 +397,15 @@ public class About.Plug : Switchboard.Plug {
 
         description_grid.attach (gtk_version_label, 1, 2, 1, 1);
         description_grid.attach (website_label, 1, 3, 1, 1);
-        description_grid.attach (hardware_title, 0, 3, 2, 1);
-        description_grid.attach (processor_label, 0, 4, 1, 1);
-        description_grid.attach (processor_info, 1, 4, 1, 1);
-        description_grid.attach (memory_label, 0, 5, 1, 1);
-        description_grid.attach (memory_info, 1, 5, 1, 1);
-        description_grid.attach (graphics_label, 0, 6, 1, 1);
-        description_grid.attach (graphics_info, 1, 6, 1, 1);
-        description_grid.attach (hdd_label, 0, 7, 1, 1);
-        description_grid.attach (hdd_info, 1, 7, 1, 1);
+        description_grid.attach (hardware_title, 0, 4, 2, 1);
+        description_grid.attach (processor_label, 0, 5, 1, 1);
+        description_grid.attach (processor_info, 1, 5, 1, 1);
+        description_grid.attach (memory_label, 0, 6, 1, 1);
+        description_grid.attach (memory_info, 1, 6, 1, 1);
+        description_grid.attach (graphics_label, 0, 7, 1, 1);
+        description_grid.attach (graphics_info, 1, 7, 1, 1);
+        description_grid.attach (hdd_label, 0, 8, 1, 1);
+        description_grid.attach (hdd_info, 1, 8, 1, 1);
 
         main_grid = new Gtk.Grid ();
         main_grid.orientation = Gtk.Orientation.VERTICAL;
