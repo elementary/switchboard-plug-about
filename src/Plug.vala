@@ -19,6 +19,7 @@ public class About.Plug : Switchboard.Plug {
 
     private string os;
     private string gtk_version;
+    private string kernel_version;
     private string website_url;
     private string bugtracker_url;
     private string support_url;
@@ -140,6 +141,8 @@ public class About.Plug : Switchboard.Plug {
                 break;
         }
 
+        kernel_version = uts_name.release;
+
         // Processor
         var cpu_file = File.new_for_path ("/proc/cpuinfo");
         uint cores = 0U;
@@ -259,8 +262,14 @@ public class About.Plug : Switchboard.Plug {
             based_off = new Gtk.Label (_("Built on %s").printf (upstream_release));
             based_off.set_selectable (true);
         }
+        
+        var kernel_version_label = new Gtk.Label (_("Kernel version: %s").printf (kernel_version));
+        kernel_version_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+        kernel_version_label.halign = Gtk.Align.START;
+        kernel_version_label.valign = Gtk.Align.START;
+        kernel_version_label.set_selectable (true);
 
-        var gtk_version_label = new Gtk.Label (_("GTK+ %s").printf (gtk_version));
+        var gtk_version_label = new Gtk.Label (_("GTK+ %s").printf (gtk_version));        
         gtk_version_label.set_selectable (true);
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
@@ -298,7 +307,7 @@ public class About.Plug : Switchboard.Plug {
         var translate_button = new Gtk.Button.with_label (_("Suggest Translations"));
         translate_button.clicked.connect (() => {
             try {
-                AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
+                AppInfo.launch_default_for_uri ("https://l10n.elementary.io/projects/", null);
             } catch (Error e) {
                 warning (e.message);
             }
@@ -351,13 +360,14 @@ public class About.Plug : Switchboard.Plug {
         software_grid.attach (logo, 0, 0, 2, 1);
         software_grid.attach (title, 0, 1, 1, 1);
         software_grid.attach (arch_name, 1, 1, 1, 1);
-        
+
         if (upstream_release != null) {
             software_grid.attach (based_off, 0, 2, 2, 1);
         }
         
         software_grid.attach (gtk_version_label, 0, 3, 2, 1);
-        software_grid.attach (website_label, 0, 4, 2, 1);
+        software_grid.attach (kernel_version_label, 0, 4, 2, 1);
+        software_grid.attach (website_label, 0, 5, 2, 1);
 
         var manufacturer_logo = new Gtk.Image ();
         manufacturer_logo.pixel_size = 128;
