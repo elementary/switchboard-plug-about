@@ -257,14 +257,10 @@ public class About.Plug : Switchboard.Plug {
 
         if (upstream_release != null) {
             based_off = new Gtk.Label (_("Built on %s").printf (upstream_release));
-            based_off.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
             based_off.set_selectable (true);
         }
 
-        var gtk_version_label = new Gtk.Label (_("GTK version: %s").printf (gtk_version));
-        gtk_version_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-        gtk_version_label.halign = Gtk.Align.START;
-        gtk_version_label.valign = Gtk.Align.START;
+        var gtk_version_label = new Gtk.Label (_("Gtk+ %s").printf (gtk_version));
         gtk_version_label.set_selectable (true);
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
