@@ -252,10 +252,12 @@ public class About.Plug : Switchboard.Plug {
         var title = new Gtk.Label (os);
         title.get_style_context ().add_class ("h2");
         title.set_selectable (true);
+        title.margin_bottom = 12;
         title.xalign = 1;
 
         var arch_name = new Gtk.Label ("(%s)".printf (arch));
         arch_name.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+        arch_name.margin_bottom = 12;
         arch_name.xalign = 0;
 
         if (upstream_release != null) {
@@ -365,10 +367,15 @@ public class About.Plug : Switchboard.Plug {
         manufacturer_logo.pixel_size = 128;
         manufacturer_logo.icon_name = "computer";
 
+
+        var model_name = new Gtk.Label (Environment.get_host_name ());
+        model_name.get_style_context ().add_class ("h2");
+
         var hardware_grid = new Gtk.Grid ();
         hardware_grid.column_spacing = 6;
         hardware_grid.row_spacing = 6;
         hardware_grid.attach (manufacturer_logo, 0, 0, 2, 1);
+        hardware_grid.attach (model_name, 0, 1, 2, 1);
         hardware_grid.attach (processor_info, 0, 3, 2, 1);
         hardware_grid.attach (graphics_info, 0, 4, 2, 1);
         hardware_grid.attach (memory_info, 0, 5, 2, 1);
