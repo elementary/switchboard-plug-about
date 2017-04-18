@@ -141,7 +141,7 @@ public class About.Plug : Switchboard.Plug {
                 break;
         }
 
-        kernel_version = uts_name.release;
+        kernel_version = "%s %s".printf (uts_name.sysname, uts_name.release);
 
         // Processor
         var cpu_file = File.new_for_path ("/proc/cpuinfo");
@@ -263,7 +263,7 @@ public class About.Plug : Switchboard.Plug {
             based_off.set_selectable (true);
         }
         
-        var kernel_version_label = new Gtk.Label (_("Linux %s").printf (kernel_version));
+        var kernel_version_label = new Gtk.Label (kernel_version);
         kernel_version_label.set_selectable (true);
 
         var gtk_version_label = new Gtk.Label (_("GTK+ %s").printf (gtk_version));        
