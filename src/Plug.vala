@@ -335,7 +335,7 @@ public class About.Plug : Switchboard.Plug {
         var translate_button = new Gtk.Button.with_label (_("Suggest Translations"));
         translate_button.clicked.connect (() => {
             try {
-                AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
+                AppInfo.launch_default_for_uri ("https://l10n.elementary.io/projects/", null);
             } catch (Error e) {
                 warning (e.message);
             }
