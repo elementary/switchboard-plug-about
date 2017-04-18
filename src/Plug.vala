@@ -18,6 +18,7 @@
 public class About.Plug : Switchboard.Plug {
 
     private string os;
+    private string gtk_version;
     private string website_url;
     private string bugtracker_url;
     private string support_url;
@@ -103,6 +104,8 @@ public class About.Plug : Switchboard.Plug {
             support_url = "https://elementary.io/support";
 
         }
+
+        gtk_version = "%u.%u.%u".printf (Gtk.get_major_version (), Gtk.get_minor_version (), Gtk.get_micro_version ());
 
         //Upstream distro version (for "Built on" text)
         //FIXME: Add distro specific field to /etc/os-release and use that instead
@@ -258,6 +261,12 @@ public class About.Plug : Switchboard.Plug {
             based_off.set_selectable (true);
         }
 
+        var gtk_version_label = new Gtk.Label (_("GTK version: %s").printf (gtk_version));
+        gtk_version_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+        gtk_version_label.halign = Gtk.Align.START;
+        gtk_version_label.valign = Gtk.Align.START;
+        gtk_version_label.set_selectable (true);
+
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
         website_label.margin_top = 12;
 
@@ -346,12 +355,13 @@ public class About.Plug : Switchboard.Plug {
         software_grid.attach (logo, 0, 0, 2, 1);
         software_grid.attach (title, 0, 1, 1, 1);
         software_grid.attach (arch_name, 1, 1, 1, 1);
-
+        
         if (upstream_release != null) {
             software_grid.attach (based_off, 0, 2, 2, 1);
         }
-
-        software_grid.attach (website_label, 0, 3, 2, 1);
+        
+        software_grid.attach (gtk_version_label, 0, 3, 2, 1);
+        software_grid.attach (website_label, 0, 4, 2, 1);
 
         var manufacturer_logo = new Gtk.Image ();
         manufacturer_logo.pixel_size = 128;
