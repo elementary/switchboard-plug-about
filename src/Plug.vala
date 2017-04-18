@@ -287,6 +287,7 @@ public class About.Plug : Switchboard.Plug {
 
         var help_button = new Gtk.Button.with_label ("?");
         help_button.get_style_context ().add_class ("circular");
+        help_button.halign = Gtk.Align.END;
 
         help_button.clicked.connect (() => {
             try {
@@ -335,21 +336,15 @@ public class About.Plug : Switchboard.Plug {
         settings_restore_button.clicked.connect (settings_restore_clicked);
 
         // Create a box for the buttons
-        var button_grid = new Gtk.Grid ();
-        button_grid.column_spacing = 6;
+        var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
         button_grid.halign = Gtk.Align.CENTER;
-        button_grid.valign = Gtk.Align.CENTER;
+        button_grid.spacing = 6;
         button_grid.add (help_button);
         button_grid.add (settings_restore_button);
         button_grid.add (translate_button);
         button_grid.add (bug_button);
         button_grid.add (update_button);
-
-        var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
-        size_group.add_widget (settings_restore_button);
-        size_group.add_widget (translate_button);
-        size_group.add_widget (bug_button);
-        size_group.add_widget (update_button);
+        button_grid.set_child_non_homogeneous (help_button, true);
 
         var software_grid = new Gtk.Grid ();
         software_grid.column_spacing = 6;
