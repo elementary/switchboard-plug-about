@@ -241,70 +241,37 @@ public class About.Plug : Switchboard.Plug {
     private void setup_ui () {
         // Create the section about elementary OS
         var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 128, 128));
-        logo.halign = Gtk.Align.END;
+        logo.hexpand = true;
 
         var title = new Gtk.Label (os);
         title.get_style_context ().add_class ("h2");
         title.set_selectable (true);
+        title.xalign = 1;
 
         var arch_name = new Gtk.Label ("(%s)".printf (arch));
         arch_name.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-        arch_name.valign = Gtk.Align.CENTER;
-
-        var title_grid = new Gtk.Grid ();
-        title_grid.column_spacing = 6;
-        title_grid.valign = Gtk.Align.END;
-        title_grid.halign = Gtk.Align.START;
-        title_grid.vexpand = true;
-        title_grid.add (title);
-        title_grid.add (arch_name);
+        arch_name.xalign = 0;
 
         if (upstream_release != null) {
             based_off = new Gtk.Label (_("Built on %s").printf (upstream_release));
             based_off.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-            based_off.halign = Gtk.Align.START;
             based_off.set_selectable (true);
         }
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
-        website_label.halign = Gtk.Align.START;
-        website_label.valign = Gtk.Align.START;
-        website_label.vexpand = true;
-
-        var hardware_title = new Gtk.Label (null);
-        hardware_title.set_label (_("Hardware"));
-        hardware_title.get_style_context ().add_class ("h4");
-        hardware_title.halign = Gtk.Align.START;
-        hardware_title.margin_top = 24;
-
-        var processor_label = new Gtk.Label (_("Processor:"));
-        processor_label.xalign = 1;
-
-        var memory_label = new Gtk.Label (_("Memory:"));
-        memory_label.xalign = 1;
-
-        var graphics_label = new Gtk.Label (_("Graphics:"));
-        graphics_label.xalign = 1;
-
-        var hdd_label = new Gtk.Label (_("Storage:"));
-        hdd_label.xalign = 1;
+        website_label.margin_top = 12;
 
         var processor_info = new Gtk.Label (processor);
-        processor_info.xalign = 0;
+        processor_info.margin_top = 12;
         processor_info.set_selectable (true);
-        processor_info.set_line_wrap (false);
 
-        var memory_info = new Gtk.Label (memory);
-        memory_info.xalign = 0;
+        var memory_info = new Gtk.Label (_("%s memory").printf (memory));
         memory_info.set_selectable (true);
 
         var graphics_info = new Gtk.Label (graphics);
-        graphics_info.xalign = 0;
         graphics_info.set_selectable (true);
-        graphics_info.set_line_wrap (false);
 
-        var hdd_info = new Gtk.Label (hdd);
-        hdd_info.xalign = 0;
+        var hdd_info = new Gtk.Label (_("%s storage").printf (hdd));
         hdd_info.set_selectable (true);
 
         var help_button = new Gtk.Button.with_label ("?");
@@ -373,29 +340,44 @@ public class About.Plug : Switchboard.Plug {
         size_group.add_widget (bug_button);
         size_group.add_widget (update_button);
 
-        // Fit everything in a grid
+        var software_grid = new Gtk.Grid ();
+        software_grid.column_spacing = 6;
+        software_grid.row_spacing = 6;
+        software_grid.attach (logo, 0, 0, 2, 1);
+        software_grid.attach (title, 0, 1, 1, 1);
+        software_grid.attach (arch_name, 1, 1, 1, 1);
+
+        if (upstream_release != null) {
+            software_grid.attach (based_off, 0, 2, 2, 1);
+        }
+
+        software_grid.attach (website_label, 0, 3, 2, 1);
+
+        var manufacturer_logo = new Gtk.Image ();
+        manufacturer_logo.pixel_size = 128;
+        manufacturer_logo.icon_name = "computer";
+
+        var hardware_grid = new Gtk.Grid ();
+        hardware_grid.column_spacing = 6;
+        hardware_grid.row_spacing = 6;
+        hardware_grid.attach (manufacturer_logo, 0, 0, 2, 1);
+        hardware_grid.attach (processor_info, 0, 3, 2, 1);
+        hardware_grid.attach (graphics_info, 0, 4, 2, 1);
+        hardware_grid.attach (memory_info, 0, 5, 2, 1);
+        hardware_grid.attach (hdd_info, 0, 6, 2, 1);
+
+        var description_size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+        description_size_group.add_widget (hardware_grid);
+        description_size_group.add_widget (software_grid);
+
         var description_grid = new Gtk.Grid ();
         description_grid.halign = Gtk.Align.CENTER;
         description_grid.valign = Gtk.Align.CENTER;
-        description_grid.column_spacing = 12;
-        description_grid.row_spacing = 6;
-        description_grid.orientation = Gtk.Orientation.VERTICAL;
-        description_grid.attach (logo, 0, 0, 1, 3);
-        description_grid.attach (title_grid, 1, 0, 1, 1);
-        if (upstream_release != null) {
-            description_grid.attach (based_off, 1, 1, 1, 1);
-        }
-
-        description_grid.attach (website_label, 1, 2, 1, 1);
-        description_grid.attach (hardware_title, 0, 3, 2, 1);
-        description_grid.attach (processor_label, 0, 4, 1, 1);
-        description_grid.attach (processor_info, 1, 4, 1, 1);
-        description_grid.attach (memory_label, 0, 5, 1, 1);
-        description_grid.attach (memory_info, 1, 5, 1, 1);
-        description_grid.attach (graphics_label, 0, 6, 1, 1);
-        description_grid.attach (graphics_info, 1, 6, 1, 1);
-        description_grid.attach (hdd_label, 0, 7, 1, 1);
-        description_grid.attach (hdd_info, 1, 7, 1, 1);
+        description_grid.vexpand = true;
+        description_grid.column_spacing = 24;
+        description_grid.add (software_grid);
+        description_grid.add (new Gtk.Separator (Gtk.Orientation.VERTICAL));
+        description_grid.add (hardware_grid);
 
         main_grid = new Gtk.Grid ();
         main_grid.orientation = Gtk.Orientation.VERTICAL;
