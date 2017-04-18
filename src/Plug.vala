@@ -19,6 +19,7 @@ public class About.Plug : Switchboard.Plug {
 
     private string os;
     private string gtk_version;
+    private string kernel_version;
     private string website_url;
     private string bugtracker_url;
     private string support_url;
@@ -139,6 +140,8 @@ public class About.Plug : Switchboard.Plug {
                 arch = "32-bit";
                 break;
         }
+
+        kernel_version = uts_name.release;
 
         // Processor
         var cpu_file = File.new_for_path ("/proc/cpuinfo");
@@ -269,6 +272,12 @@ public class About.Plug : Switchboard.Plug {
             based_off.set_selectable (true);
         }
 
+        var kernel_version_label = new Gtk.Label (_("Kernel version: %s").printf (kernel_version));
+        kernel_version_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+        kernel_version_label.halign = Gtk.Align.START;
+        kernel_version_label.valign = Gtk.Align.START;
+        kernel_version_label.set_selectable (true);
+
         var gtk_version_label = new Gtk.Label (_("GTK version: %s").printf (gtk_version));
         gtk_version_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
         gtk_version_label.halign = Gtk.Align.START;
@@ -389,23 +398,24 @@ public class About.Plug : Switchboard.Plug {
         description_grid.column_spacing = 12;
         description_grid.row_spacing = 6;
         description_grid.orientation = Gtk.Orientation.VERTICAL;
-        description_grid.attach (logo, 0, 0, 1, 4);
+        description_grid.attach (logo, 0, 0, 1, 5);
         description_grid.attach (title_grid, 1, 0, 1, 1);
         if (upstream_release != null) {
             description_grid.attach (based_off, 1, 1, 1, 1);
         }
 
-        description_grid.attach (gtk_version_label, 1, 2, 1, 1);
-        description_grid.attach (website_label, 1, 3, 1, 1);
-        description_grid.attach (hardware_title, 0, 4, 2, 1);
-        description_grid.attach (processor_label, 0, 5, 1, 1);
-        description_grid.attach (processor_info, 1, 5, 1, 1);
-        description_grid.attach (memory_label, 0, 6, 1, 1);
-        description_grid.attach (memory_info, 1, 6, 1, 1);
-        description_grid.attach (graphics_label, 0, 7, 1, 1);
-        description_grid.attach (graphics_info, 1, 7, 1, 1);
-        description_grid.attach (hdd_label, 0, 8, 1, 1);
-        description_grid.attach (hdd_info, 1, 8, 1, 1);
+        description_grid.attach (kernel_version_label, 1, 2, 1, 1);
+        description_grid.attach (gtk_version_label, 1, 3, 1, 1);
+        description_grid.attach (website_label, 1, 4, 1, 1);
+        description_grid.attach (hardware_title, 0, 5, 2, 1);
+        description_grid.attach (processor_label, 0, 6, 1, 1);
+        description_grid.attach (processor_info, 1, 6, 1, 1);
+        description_grid.attach (memory_label, 0, 7, 1, 1);
+        description_grid.attach (memory_info, 1, 7, 1, 1);
+        description_grid.attach (graphics_label, 0, 8, 1, 1);
+        description_grid.attach (graphics_info, 1, 8, 1, 1);
+        description_grid.attach (hdd_label, 0, 9, 1, 1);
+        description_grid.attach (hdd_info, 1, 9, 1, 1);
 
         main_grid = new Gtk.Grid ();
         main_grid.orientation = Gtk.Orientation.VERTICAL;
