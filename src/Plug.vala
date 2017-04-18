@@ -263,10 +263,7 @@ public class About.Plug : Switchboard.Plug {
             based_off.set_selectable (true);
         }
         
-        var kernel_version_label = new Gtk.Label (_("Kernel version: %s").printf (kernel_version));
-        kernel_version_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-        kernel_version_label.halign = Gtk.Align.START;
-        kernel_version_label.valign = Gtk.Align.START;
+        var kernel_version_label = new Gtk.Label (_("Linux %s").printf (kernel_version));
         kernel_version_label.set_selectable (true);
 
         var gtk_version_label = new Gtk.Label (_("GTK+ %s").printf (gtk_version));        
@@ -364,9 +361,9 @@ public class About.Plug : Switchboard.Plug {
         if (upstream_release != null) {
             software_grid.attach (based_off, 0, 2, 2, 1);
         }
-        
-        software_grid.attach (gtk_version_label, 0, 3, 2, 1);
-        software_grid.attach (kernel_version_label, 0, 4, 2, 1);
+
+        software_grid.attach (kernel_version_label, 0, 3, 2, 1);        
+        software_grid.attach (gtk_version_label, 0, 4, 2, 1);
         software_grid.attach (website_label, 0, 5, 2, 1);
 
         var manufacturer_logo = new Gtk.Image ();
