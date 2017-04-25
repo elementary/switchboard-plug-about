@@ -19,6 +19,7 @@ public class About.Plug : Switchboard.Plug {
 
     private string os;
     private string gtk_version;
+    private string kernel_version;
     private string website_url;
     private string bugtracker_url;
     private string support_url;
@@ -145,6 +146,8 @@ public class About.Plug : Switchboard.Plug {
                 arch = "32-bit";
                 break;
         }
+
+        kernel_version = "%s %s".printf (uts_name.sysname, uts_name.release);
 
         // Processor
         var cpu_file = File.new_for_path ("/proc/cpuinfo");
@@ -285,34 +288,37 @@ public class About.Plug : Switchboard.Plug {
         title.get_style_context ().add_class ("h2");
         title.xalign = 1;
         title.set_selectable (true);
+        title.margin_bottom = 12;
+        title.xalign = 1;
 
         var arch_name = new Gtk.Label ("(%s)".printf (arch));
         arch_name.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+        arch_name.margin_bottom = 12;
         arch_name.xalign = 0;
 
         if (upstream_release != null) {
             based_off = new Gtk.Label (_("Built on %s").printf (upstream_release));
-            based_off.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
             based_off.set_selectable (true);
         }
+        
+        var kernel_version_label = new Gtk.Label (kernel_version);
+        kernel_version_label.set_selectable (true);
 
-        var gtk_version_label = new Gtk.Label (_("GTK version: %s").printf (gtk_version));
-        gtk_version_label.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-        gtk_version_label.halign = Gtk.Align.START;
-        gtk_version_label.valign = Gtk.Align.START;
+        var gtk_version_label = new Gtk.Label (_("GTK+ %s").printf (gtk_version));        
         gtk_version_label.set_selectable (true);
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
+        website_label.halign = Gtk.Align.CENTER;
         website_label.margin_top = 12;
 
-        var processor_info = new Gtk.Label (_("%s processor").printf (processor));
+        var processor_info = new Gtk.Label (processor);
         processor_info.margin_top = 12;
         processor_info.set_selectable (true);
 
         var memory_info = new Gtk.Label (_("%s memory").printf (memory));
         memory_info.set_selectable (true);
 
-        var graphics_info = new Gtk.Label (_("%s graphics").printf (graphics));
+        var graphics_info = new Gtk.Label (graphics);
         graphics_info.set_selectable (true);
 
         var hdd_info = new Gtk.Label (_("%s storage").printf (hdd));
@@ -320,6 +326,7 @@ public class About.Plug : Switchboard.Plug {
 
         var help_button = new Gtk.Button.with_label ("?");
         help_button.get_style_context ().add_class ("circular");
+        help_button.halign = Gtk.Align.END;
 
         help_button.clicked.connect (() => {
             try {
@@ -337,7 +344,7 @@ public class About.Plug : Switchboard.Plug {
         var translate_button = new Gtk.Button.with_label (_("Suggest Translations"));
         translate_button.clicked.connect (() => {
             try {
-                AppInfo.launch_default_for_uri ("https://translations.launchpad.net/elementary", null);
+                AppInfo.launch_default_for_uri ("https://l10n.elementary.io/projects/", null);
             } catch (Error e) {
                 warning (e.message);
             }
@@ -368,21 +375,15 @@ public class About.Plug : Switchboard.Plug {
         settings_restore_button.clicked.connect (settings_restore_clicked);
 
         // Create a box for the buttons
-        var button_grid = new Gtk.Grid ();
-        button_grid.column_spacing = 6;
+        var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
         button_grid.halign = Gtk.Align.CENTER;
-        button_grid.valign = Gtk.Align.CENTER;
+        button_grid.spacing = 6;
         button_grid.add (help_button);
         button_grid.add (settings_restore_button);
         button_grid.add (translate_button);
         button_grid.add (bug_button);
         button_grid.add (update_button);
-
-        var button_size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
-        button_size_group.add_widget (settings_restore_button);
-        button_size_group.add_widget (translate_button);
-        button_size_group.add_widget (bug_button);
-        button_size_group.add_widget (update_button);
+        button_grid.set_child_non_homogeneous (help_button, true);
 
         var software_grid = new Gtk.Grid ();
         software_grid.column_spacing = 6;
@@ -394,18 +395,24 @@ public class About.Plug : Switchboard.Plug {
         if (upstream_release != null) {
             software_grid.attach (based_off, 0, 2, 2, 1);
         }
-        
-        software_grid.attach (gtk_version_label, 0, 3, 2, 1);
-        software_grid.attach (website_label, 0, 4, 2, 1);
+
+        software_grid.attach (kernel_version_label, 0, 3, 2, 1);        
+        software_grid.attach (gtk_version_label, 0, 4, 2, 1);
+        software_grid.attach (website_label, 0, 5, 2, 1);
 
         var manufacturer_logo = new Gtk.Image ();
         manufacturer_logo.pixel_size = 128;
         manufacturer_logo.icon_name = "computer";
 
+
+        var model_name = new Gtk.Label (Environment.get_host_name ());
+        model_name.get_style_context ().add_class ("h2");
+
         var hardware_grid = new Gtk.Grid ();
         hardware_grid.column_spacing = 6;
         hardware_grid.row_spacing = 6;
         hardware_grid.attach (manufacturer_logo, 0, 0, 2, 1);
+        hardware_grid.attach (model_name, 0, 1, 2, 1);
         hardware_grid.attach (processor_info, 0, 3, 2, 1);
         hardware_grid.attach (graphics_info, 0, 4, 2, 1);
         hardware_grid.attach (memory_info, 0, 5, 2, 1);
@@ -423,7 +430,7 @@ public class About.Plug : Switchboard.Plug {
         description_grid.add (software_grid);
         description_grid.add (new Gtk.Separator (Gtk.Orientation.VERTICAL));
         description_grid.add (hardware_grid);
-
+        
         if (oem_enabled) {
             var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
 
