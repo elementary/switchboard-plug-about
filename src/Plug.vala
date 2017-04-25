@@ -405,14 +405,14 @@ public class About.Plug : Switchboard.Plug {
         manufacturer_logo.icon_name = "computer";
 
 
-        var model_name = new Gtk.Label (Environment.get_host_name ());
-        model_name.get_style_context ().add_class ("h2");
+        var product_name_info = new Gtk.Label (Environment.get_host_name ());
+        product_name_info.get_style_context ().add_class ("h2");
+        product_name_info.set_selectable (true);
 
         var hardware_grid = new Gtk.Grid ();
         hardware_grid.column_spacing = 6;
         hardware_grid.row_spacing = 6;
         hardware_grid.attach (manufacturer_logo, 0, 0, 2, 1);
-        hardware_grid.attach (model_name, 0, 1, 2, 1);
         hardware_grid.attach (processor_info, 0, 3, 2, 1);
         hardware_grid.attach (graphics_info, 0, 4, 2, 1);
         hardware_grid.attach (memory_info, 0, 5, 2, 1);
@@ -446,11 +446,8 @@ public class About.Plug : Switchboard.Plug {
             hardware_grid.attach (manufacturer_info, 0, 2, 2, 1);
 
             if (product_name != null) {
-                var product_name_info = new Gtk.Label (product_name);
-                product_name_info.get_style_context ().add_class ("h2");
-                product_name_info.set_selectable (true);
+                product_name_info.label = product_name;
                 product_name_info.xalign = 1;
-                hardware_grid.attach (product_name_info, 0, 1, 1, 1);
             }
 
             if (product_version != null) {
@@ -458,13 +455,18 @@ public class About.Plug : Switchboard.Plug {
                 product_version_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
                 product_version_info.set_selectable (true);
                 product_version_info.xalign = 0;
+                hardware_grid.attach (product_name_info, 0, 1, 1, 1);
                 hardware_grid.attach (product_version_info, 1, 1, 1, 1);
+            } else {
+                hardware_grid.attach (product_name_info, 0, 1, 2, 1);
             }
 
             if (manufacturer_support_url != null) {
                 var manufacturer_website_info = new Gtk.LinkButton.with_label (manufacturer_support_url, _("Manufacturer Website"));
                 hardware_grid.attach (manufacturer_website_info, 0, 7, 2, 1);
             }
+        } else {
+            hardware_grid.attach (product_name_info, 0, 1, 2, 1);
         }
 
         main_grid = new Gtk.Grid ();
