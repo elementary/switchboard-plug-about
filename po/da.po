@@ -6,116 +6,123 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-06 08:38+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-03 17:14-0700\n"
 "PO-Revision-Date: 2017-03-14 17:44+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <da@li.org>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: ../src/Plug.vala:38
-msgid "About"
-msgstr "Om"
+#: ../src/RestoreDialog.vala:29
+#, fuzzy
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "Systemindstillingerne vil blive gendannet til installationsstandarden"
 
-#: ../src/Plug.vala:39
-msgid "View operating system and hardware information"
-msgstr "Vis information om styresystem og hardware"
-
-#: ../src/Plug.vala:68
-msgid "System Information"
-msgstr "Systeminformation"
-
-#: ../src/Plug.vala:69 ../src/Plug.vala:370
-msgid "Restore Default Settings"
-msgstr "Gendan standardindstillingerne"
-
-#: ../src/Plug.vala:70
-msgid "Suggest Translation"
-msgstr "Foreslå oversættelse"
-
-#: ../src/Plug.vala:71
-msgid "Report Problems"
-msgstr "Rapportér problemer"
-
-#: ../src/Plug.vala:72
-msgid "Updates"
-msgstr "Opdateringer"
-
-#: ../src/Plug.vala:176 ../src/Plug.vala:218 ../src/Plug.vala:229
-#: ../src/Plug.vala:249
-msgid "Unknown"
-msgstr "Ukendt"
-
-#: ../src/Plug.vala:188
-msgid "Dual-Core"
-msgstr "Dual-Core"
-
-#: ../src/Plug.vala:190
-msgid "Quad-Core"
-msgstr "Quad-Core"
-
-#: ../src/Plug.vala:277
-msgid "Built on %s"
-msgstr "Bygget den %s"
-
-#: ../src/Plug.vala:283
-msgid "Website"
-msgstr "Hjemmeside"
-
-#: ../src/Plug.vala:289
-msgid "Hardware"
-msgstr "Hardware"
-
-#: ../src/Plug.vala:294
-msgid "Processor:"
-msgstr "Processor:"
-
-#: ../src/Plug.vala:297
-msgid "Memory:"
-msgstr "Hukommelse:"
-
-#: ../src/Plug.vala:300
-msgid "Graphics:"
-msgstr "Grafik:"
-
-#: ../src/Plug.vala:303
-msgid "Storage:"
-msgstr "Lager:"
-
-#: ../src/Plug.vala:340
-msgid "Suggest Translations"
-msgstr "Foreslå oversættelser"
-
-#: ../src/Plug.vala:350
-msgid "Report a Problem"
-msgstr "Rapportér et problem"
-
-#: ../src/Plug.vala:360
-msgid "Check for Updates"
-msgstr "Søg efter opdateringer"
-
-#: ../src/Plug.vala:499
-msgid "System settings will be restored to the factory defaults"
-msgstr ""
-"Systemindstillingerne vil blive gendannet til installationsstandarden"
-
-#: ../src/Plug.vala:500
-msgid "All system settings and data will be reset to the default values."
+#: ../src/RestoreDialog.vala:35
+#, fuzzy
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be uneffected."
 msgstr ""
 "Alle systemindstillinger og -data vil blive nulstilled til standardværdierne."
 
-#: ../src/Plug.vala:501
-msgid "Personal data, such as music and pictures, will be uneffected."
-msgstr "Personlig data, som f.eks. musik og billeder, vil ikke blive ændret."
-
-#: ../src/Plug.vala:518
+#: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Gendan indstillinger"
 
-#: ../src/Plug.vala:521
+#: ../src/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "Annullér"
+
+#: ../src/Plug.vala:40
+msgid "About"
+msgstr "Om"
+
+#: ../src/Plug.vala:41
+msgid "View operating system and hardware information"
+msgstr "Vis information om styresystem og hardware"
+
+#: ../src/Plug.vala:70
+msgid "System Information"
+msgstr "Systeminformation"
+
+#: ../src/Plug.vala:71 ../src/Plug.vala:338
+msgid "Restore Default Settings"
+msgstr "Gendan standardindstillingerne"
+
+#: ../src/Plug.vala:72
+msgid "Suggest Translation"
+msgstr "Foreslå oversættelse"
+
+#: ../src/Plug.vala:73
+msgid "Report Problems"
+msgstr "Rapportér problemer"
+
+#: ../src/Plug.vala:74
+msgid "Updates"
+msgstr "Opdateringer"
+
+#: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
+#: ../src/Plug.vala:241
+msgid "Unknown"
+msgstr "Ukendt"
+
+#: ../src/Plug.vala:180
+msgid "Dual-Core"
+msgstr "Dual-Core"
+
+#: ../src/Plug.vala:182
+msgid "Quad-Core"
+msgstr "Quad-Core"
+
+#: ../src/Plug.vala:264
+msgid "Built on %s"
+msgstr "Bygget den %s"
+
+#: ../src/Plug.vala:271
+msgid "GTK+ %s"
+msgstr ""
+
+#: ../src/Plug.vala:274
+msgid "Website"
+msgstr "Hjemmeside"
+
+#: ../src/Plug.vala:282
+#, fuzzy
+msgid "%s memory"
+msgstr "Hukommelse:"
+
+#: ../src/Plug.vala:288
+#, fuzzy
+msgid "%s storage"
+msgstr "Lager:"
+
+#: ../src/Plug.vala:308
+msgid "Suggest Translations"
+msgstr "Foreslå oversættelser"
+
+#: ../src/Plug.vala:318
+msgid "Report a Problem"
+msgstr "Rapportér et problem"
+
+#: ../src/Plug.vala:328
+msgid "Check for Updates"
+msgstr "Søg efter opdateringer"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
+
+#~ msgid "Processor:"
+#~ msgstr "Processor:"
+
+#~ msgid "Graphics:"
+#~ msgstr "Grafik:"
+
+#~ msgid "Personal data, such as music and pictures, will be uneffected."
+#~ msgstr ""
+#~ "Personlig data, som f.eks. musik og billeder, vil ikke blive ændret."

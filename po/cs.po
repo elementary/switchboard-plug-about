@@ -6,115 +6,121 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-06 08:38+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-03 17:14-0700\n"
 "PO-Revision-Date: 2016-08-06 22:00+0000\n"
 "Last-Translator: Marek Suchánek <suchm@seznam.cz>\n"
 "Language-Team: Czech <cs@li.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: ../src/Plug.vala:38
-msgid "About"
-msgstr "O systému"
-
-#: ../src/Plug.vala:39
-msgid "View operating system and hardware information"
-msgstr "Zobrazit informace o  operačním systému a hardwaru"
-
-#: ../src/Plug.vala:68
-msgid "System Information"
-msgstr "Informace o systému"
-
-#: ../src/Plug.vala:69 ../src/Plug.vala:370
-msgid "Restore Default Settings"
-msgstr "Obnovit výchozí nastavení"
-
-#: ../src/Plug.vala:70
-msgid "Suggest Translation"
-msgstr "Navrhněte překlad"
-
-#: ../src/Plug.vala:71
-msgid "Report Problems"
-msgstr "Nahlašte problémy"
-
-#: ../src/Plug.vala:72
-msgid "Updates"
-msgstr "Aktualizace"
-
-#: ../src/Plug.vala:176 ../src/Plug.vala:218 ../src/Plug.vala:229
-#: ../src/Plug.vala:249
-msgid "Unknown"
-msgstr "Neznámý"
-
-#: ../src/Plug.vala:188
-msgid "Dual-Core"
-msgstr "Dvoujádrový"
-
-#: ../src/Plug.vala:190
-msgid "Quad-Core"
-msgstr "Čtyřjádrový"
-
-#: ../src/Plug.vala:277
-msgid "Built on %s"
-msgstr "Postaveno na %s"
-
-#: ../src/Plug.vala:283
-msgid "Website"
-msgstr "Webová stránka"
-
-#: ../src/Plug.vala:289
-msgid "Hardware"
-msgstr "Hardware"
-
-#: ../src/Plug.vala:294
-msgid "Processor:"
-msgstr "Procesor:"
-
-#: ../src/Plug.vala:297
-msgid "Memory:"
-msgstr "Paměť:"
-
-#: ../src/Plug.vala:300
-msgid "Graphics:"
-msgstr "Grafika:"
-
-#: ../src/Plug.vala:303
-msgid "Storage:"
-msgstr "Úložiště:"
-
-#: ../src/Plug.vala:340
-msgid "Suggest Translations"
-msgstr "Pomoc s překladem"
-
-#: ../src/Plug.vala:350
-msgid "Report a Problem"
-msgstr "Nahlásit problém"
-
-#: ../src/Plug.vala:360
-msgid "Check for Updates"
-msgstr "Zkontrolovat aktualizace"
-
-#: ../src/Plug.vala:499
-msgid "System settings will be restored to the factory defaults"
+#: ../src/RestoreDialog.vala:29
+#, fuzzy
+msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systémová nastavení budou obnovena do továrního stavu"
 
-#: ../src/Plug.vala:500
-msgid "All system settings and data will be reset to the default values."
-msgstr ""
-"Veškerá systémová nastavení a data budou obnovena do výchozího stavu."
+#: ../src/RestoreDialog.vala:35
+#, fuzzy
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be uneffected."
+msgstr "Veškerá systémová nastavení a data budou obnovena do výchozího stavu."
 
-#: ../src/Plug.vala:501
-msgid "Personal data, such as music and pictures, will be uneffected."
-msgstr "Osobní data, jako hudba nebo obrázky, nebudou změněna."
-
-#: ../src/Plug.vala:518
+#: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Obnovit nastavení"
 
-#: ../src/Plug.vala:521
+#: ../src/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "Zrušit"
+
+#: ../src/Plug.vala:40
+msgid "About"
+msgstr "O systému"
+
+#: ../src/Plug.vala:41
+msgid "View operating system and hardware information"
+msgstr "Zobrazit informace o  operačním systému a hardwaru"
+
+#: ../src/Plug.vala:70
+msgid "System Information"
+msgstr "Informace o systému"
+
+#: ../src/Plug.vala:71 ../src/Plug.vala:338
+msgid "Restore Default Settings"
+msgstr "Obnovit výchozí nastavení"
+
+#: ../src/Plug.vala:72
+msgid "Suggest Translation"
+msgstr "Navrhněte překlad"
+
+#: ../src/Plug.vala:73
+msgid "Report Problems"
+msgstr "Nahlašte problémy"
+
+#: ../src/Plug.vala:74
+msgid "Updates"
+msgstr "Aktualizace"
+
+#: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
+#: ../src/Plug.vala:241
+msgid "Unknown"
+msgstr "Neznámý"
+
+#: ../src/Plug.vala:180
+msgid "Dual-Core"
+msgstr "Dvoujádrový"
+
+#: ../src/Plug.vala:182
+msgid "Quad-Core"
+msgstr "Čtyřjádrový"
+
+#: ../src/Plug.vala:264
+msgid "Built on %s"
+msgstr "Postaveno na %s"
+
+#: ../src/Plug.vala:271
+msgid "GTK+ %s"
+msgstr ""
+
+#: ../src/Plug.vala:274
+msgid "Website"
+msgstr "Webová stránka"
+
+#: ../src/Plug.vala:282
+#, fuzzy
+msgid "%s memory"
+msgstr "Paměť:"
+
+#: ../src/Plug.vala:288
+#, fuzzy
+msgid "%s storage"
+msgstr "Úložiště:"
+
+#: ../src/Plug.vala:308
+msgid "Suggest Translations"
+msgstr "Pomoc s překladem"
+
+#: ../src/Plug.vala:318
+msgid "Report a Problem"
+msgstr "Nahlásit problém"
+
+#: ../src/Plug.vala:328
+msgid "Check for Updates"
+msgstr "Zkontrolovat aktualizace"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
+
+#~ msgid "Processor:"
+#~ msgstr "Procesor:"
+
+#~ msgid "Graphics:"
+#~ msgstr "Grafika:"
+
+#~ msgid "Personal data, such as music and pictures, will be uneffected."
+#~ msgstr "Osobní data, jako hudba nebo obrázky, nebudou změněna."

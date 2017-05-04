@@ -7,118 +7,124 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-06 08:38+0100\n"
+"POT-Creation-Date: 2017-05-03 17:14-0700\n"
 "PO-Revision-Date: 2017-02-07 12:15+0000\n"
 "Last-Translator: iakovos athanasiadhs <liam21iakovos@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
-"Language: el\n"
 
-#: ../src/Plug.vala:38
-msgid "About"
-msgstr "Σχετικά"
-
-#: ../src/Plug.vala:39
-msgid "View operating system and hardware information"
-msgstr "Προβολή πληροφοριών λειτουργικού συστήματος και υλικού"
-
-#: ../src/Plug.vala:68
-msgid "System Information"
-msgstr "Πληροφορίες συστήματος"
-
-#: ../src/Plug.vala:69 ../src/Plug.vala:370
-msgid "Restore Default Settings"
-msgstr "Επαναφορά προεπιλεγμένων ρυθμίσεων"
-
-#: ../src/Plug.vala:70
-msgid "Suggest Translation"
-msgstr "Πρόταση μεταφράσεων"
-
-#: ../src/Plug.vala:71
-msgid "Report Problems"
-msgstr "Αναφορά προβλημάτων"
-
-#: ../src/Plug.vala:72
-msgid "Updates"
-msgstr "Ενημερώσεις"
-
-#: ../src/Plug.vala:176 ../src/Plug.vala:218 ../src/Plug.vala:229
-#: ../src/Plug.vala:249
-msgid "Unknown"
-msgstr "Άγνωστο"
-
-#: ../src/Plug.vala:188
-msgid "Dual-Core"
-msgstr "Διπύρηνος"
-
-#: ../src/Plug.vala:190
-msgid "Quad-Core"
-msgstr "Τετραπύρηνος"
-
-#: ../src/Plug.vala:277
-msgid "Built on %s"
-msgstr "Χτισμένο πάνω στο %s"
-
-#: ../src/Plug.vala:283
-msgid "Website"
-msgstr "Ιστοσελίδα"
-
-#: ../src/Plug.vala:289
-msgid "Hardware"
-msgstr "Υλικό"
-
-#: ../src/Plug.vala:294
-msgid "Processor:"
-msgstr "Επεξεργαστής:"
-
-#: ../src/Plug.vala:297
-msgid "Memory:"
-msgstr "Μνήμη:"
-
-#: ../src/Plug.vala:300
-msgid "Graphics:"
-msgstr "Γραφικά:"
-
-#: ../src/Plug.vala:303
-msgid "Storage:"
-msgstr "Αποθηκευτικός χώρος:"
-
-#: ../src/Plug.vala:340
-msgid "Suggest Translations"
-msgstr "Πρόταση μεταφράσεων"
-
-#: ../src/Plug.vala:350
-msgid "Report a Problem"
-msgstr "Αναφορά προβλήματος"
-
-#: ../src/Plug.vala:360
-msgid "Check for Updates"
-msgstr "Έλεγχος για ενημερώσεις"
-
-#: ../src/Plug.vala:499
-msgid "System settings will be restored to the factory defaults"
+#: ../src/RestoreDialog.vala:29
+#, fuzzy
+msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 "Οι ρυθμίσεις του συστήματος θα επαναφερθούν στις εργοστασιακές προεπιλογές"
 
-#: ../src/Plug.vala:500
-msgid "All system settings and data will be reset to the default values."
+#: ../src/RestoreDialog.vala:35
+#, fuzzy
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be uneffected."
 msgstr ""
 "Όλες οι ρυθμίσεις και τα δεδομένα του συστήματος θα επαναφερθούν στις "
 "προεπιλεγμένες τιμές."
 
-#: ../src/Plug.vala:501
-msgid "Personal data, such as music and pictures, will be uneffected."
-msgstr ""
-"Προσωπικά δεδομένα, όπως η μουσική και οι εικόνες σας, δεν θα επηρεαστούν."
-
-#: ../src/Plug.vala:518
+#: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Επαναφορά ρυθμίσεων"
 
-#: ../src/Plug.vala:521
+#: ../src/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "Ακύρωση"
+
+#: ../src/Plug.vala:40
+msgid "About"
+msgstr "Σχετικά"
+
+#: ../src/Plug.vala:41
+msgid "View operating system and hardware information"
+msgstr "Προβολή πληροφοριών λειτουργικού συστήματος και υλικού"
+
+#: ../src/Plug.vala:70
+msgid "System Information"
+msgstr "Πληροφορίες συστήματος"
+
+#: ../src/Plug.vala:71 ../src/Plug.vala:338
+msgid "Restore Default Settings"
+msgstr "Επαναφορά προεπιλεγμένων ρυθμίσεων"
+
+#: ../src/Plug.vala:72
+msgid "Suggest Translation"
+msgstr "Πρόταση μεταφράσεων"
+
+#: ../src/Plug.vala:73
+msgid "Report Problems"
+msgstr "Αναφορά προβλημάτων"
+
+#: ../src/Plug.vala:74
+msgid "Updates"
+msgstr "Ενημερώσεις"
+
+#: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
+#: ../src/Plug.vala:241
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+#: ../src/Plug.vala:180
+msgid "Dual-Core"
+msgstr "Διπύρηνος"
+
+#: ../src/Plug.vala:182
+msgid "Quad-Core"
+msgstr "Τετραπύρηνος"
+
+#: ../src/Plug.vala:264
+msgid "Built on %s"
+msgstr "Χτισμένο πάνω στο %s"
+
+#: ../src/Plug.vala:271
+msgid "GTK+ %s"
+msgstr ""
+
+#: ../src/Plug.vala:274
+msgid "Website"
+msgstr "Ιστοσελίδα"
+
+#: ../src/Plug.vala:282
+#, fuzzy
+msgid "%s memory"
+msgstr "Μνήμη:"
+
+#: ../src/Plug.vala:288
+#, fuzzy
+msgid "%s storage"
+msgstr "Αποθηκευτικός χώρος:"
+
+#: ../src/Plug.vala:308
+msgid "Suggest Translations"
+msgstr "Πρόταση μεταφράσεων"
+
+#: ../src/Plug.vala:318
+msgid "Report a Problem"
+msgstr "Αναφορά προβλήματος"
+
+#: ../src/Plug.vala:328
+msgid "Check for Updates"
+msgstr "Έλεγχος για ενημερώσεις"
+
+#~ msgid "Hardware"
+#~ msgstr "Υλικό"
+
+#~ msgid "Processor:"
+#~ msgstr "Επεξεργαστής:"
+
+#~ msgid "Graphics:"
+#~ msgstr "Γραφικά:"
+
+#~ msgid "Personal data, such as music and pictures, will be uneffected."
+#~ msgstr ""
+#~ "Προσωπικά δεδομένα, όπως η μουσική και οι εικόνες σας, δεν θα επηρεαστούν."

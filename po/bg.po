@@ -6,117 +6,123 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-06 08:38+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-03 17:14-0700\n"
 "PO-Revision-Date: 2016-08-06 17:24+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: ../src/Plug.vala:38
-msgid "About"
-msgstr "Относно"
+#: ../src/RestoreDialog.vala:29
+#, fuzzy
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "Настройките на системата ще бъдат върнати към първоначалните стойности"
 
-#: ../src/Plug.vala:39
-msgid "View operating system and hardware information"
-msgstr "Преглед на сведения за операционната системата и апаратурата"
-
-#: ../src/Plug.vala:68
-msgid "System Information"
-msgstr "Сведения за системата"
-
-#: ../src/Plug.vala:69 ../src/Plug.vala:370
-msgid "Restore Default Settings"
-msgstr "Възстановяване на първоначалните настройки"
-
-#: ../src/Plug.vala:70
-msgid "Suggest Translation"
-msgstr "Предлагане на превод"
-
-#: ../src/Plug.vala:71
-msgid "Report Problems"
-msgstr "Докладване на проблеми"
-
-#: ../src/Plug.vala:72
-msgid "Updates"
-msgstr "Обновления"
-
-#: ../src/Plug.vala:176 ../src/Plug.vala:218 ../src/Plug.vala:229
-#: ../src/Plug.vala:249
-msgid "Unknown"
-msgstr "Неизвестен"
-
-#: ../src/Plug.vala:188
-msgid "Dual-Core"
-msgstr "Двуядрен"
-
-#: ../src/Plug.vala:190
-msgid "Quad-Core"
-msgstr "Четириядрен"
-
-#: ../src/Plug.vala:277
-msgid "Built on %s"
-msgstr "Базирана на %s"
-
-#: ../src/Plug.vala:283
-msgid "Website"
-msgstr "Мрежова страница"
-
-#: ../src/Plug.vala:289
-msgid "Hardware"
-msgstr "Апаратура"
-
-#: ../src/Plug.vala:294
-msgid "Processor:"
-msgstr "Процесор:"
-
-#: ../src/Plug.vala:297
-msgid "Memory:"
-msgstr "Памет:"
-
-#: ../src/Plug.vala:300
-msgid "Graphics:"
-msgstr "Видеокарта"
-
-#: ../src/Plug.vala:303
-msgid "Storage:"
-msgstr "Постоянна памет"
-
-#: ../src/Plug.vala:340
-msgid "Suggest Translations"
-msgstr "Предлагане на превод"
-
-#: ../src/Plug.vala:350
-msgid "Report a Problem"
-msgstr "Докладване на проблем"
-
-#: ../src/Plug.vala:360
-msgid "Check for Updates"
-msgstr "Проверка за обновления"
-
-#: ../src/Plug.vala:499
-msgid "System settings will be restored to the factory defaults"
-msgstr ""
-"Настройките на системата ще бъдат върнати към първоначалните стойности"
-
-#: ../src/Plug.vala:500
-msgid "All system settings and data will be reset to the default values."
+#: ../src/RestoreDialog.vala:35
+#, fuzzy
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be uneffected."
 msgstr ""
 "Всички данни и настройки на системата ще бъдат върнати към първоначалните "
 "стойности."
 
-#: ../src/Plug.vala:501
-msgid "Personal data, such as music and pictures, will be uneffected."
-msgstr "Лични данни, например музика и снимки, няма да бъдат повлияни."
-
-#: ../src/Plug.vala:518
+#: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Възстановяване на настройките"
 
-#: ../src/Plug.vala:521
+#: ../src/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "Отказ"
+
+#: ../src/Plug.vala:40
+msgid "About"
+msgstr "Относно"
+
+#: ../src/Plug.vala:41
+msgid "View operating system and hardware information"
+msgstr "Преглед на сведения за операционната системата и апаратурата"
+
+#: ../src/Plug.vala:70
+msgid "System Information"
+msgstr "Сведения за системата"
+
+#: ../src/Plug.vala:71 ../src/Plug.vala:338
+msgid "Restore Default Settings"
+msgstr "Възстановяване на първоначалните настройки"
+
+#: ../src/Plug.vala:72
+msgid "Suggest Translation"
+msgstr "Предлагане на превод"
+
+#: ../src/Plug.vala:73
+msgid "Report Problems"
+msgstr "Докладване на проблеми"
+
+#: ../src/Plug.vala:74
+msgid "Updates"
+msgstr "Обновления"
+
+#: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
+#: ../src/Plug.vala:241
+msgid "Unknown"
+msgstr "Неизвестен"
+
+#: ../src/Plug.vala:180
+msgid "Dual-Core"
+msgstr "Двуядрен"
+
+#: ../src/Plug.vala:182
+msgid "Quad-Core"
+msgstr "Четириядрен"
+
+#: ../src/Plug.vala:264
+msgid "Built on %s"
+msgstr "Базирана на %s"
+
+#: ../src/Plug.vala:271
+msgid "GTK+ %s"
+msgstr ""
+
+#: ../src/Plug.vala:274
+msgid "Website"
+msgstr "Мрежова страница"
+
+#: ../src/Plug.vala:282
+#, fuzzy
+msgid "%s memory"
+msgstr "Памет:"
+
+#: ../src/Plug.vala:288
+#, fuzzy
+msgid "%s storage"
+msgstr "Постоянна памет"
+
+#: ../src/Plug.vala:308
+msgid "Suggest Translations"
+msgstr "Предлагане на превод"
+
+#: ../src/Plug.vala:318
+msgid "Report a Problem"
+msgstr "Докладване на проблем"
+
+#: ../src/Plug.vala:328
+msgid "Check for Updates"
+msgstr "Проверка за обновления"
+
+#~ msgid "Hardware"
+#~ msgstr "Апаратура"
+
+#~ msgid "Processor:"
+#~ msgstr "Процесор:"
+
+#~ msgid "Graphics:"
+#~ msgstr "Видеокарта"
+
+#~ msgid "Personal data, such as music and pictures, will be uneffected."
+#~ msgstr "Лични данни, например музика и снимки, няма да бъдат повлияни."

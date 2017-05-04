@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-06 08:38+0100\n"
+"POT-Creation-Date: 2017-05-03 17:14-0700\n"
 "PO-Revision-Date: 2017-04-21 09:56+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
-"Language-Team: Korean <https://l10n.elementary.io/projects/switchboard"
-"/switchboard-plug-about/ko/>\n"
+"Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-about/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,103 +20,109 @@ msgstr ""
 "X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: ../src/Plug.vala:38
-msgid "About"
-msgstr "정보"
-
-#: ../src/Plug.vala:39
-msgid "View operating system and hardware information"
-msgstr "운영체제 및 하드웨어 정보 보기"
-
-#: ../src/Plug.vala:68
-msgid "System Information"
-msgstr "시스템 정보"
-
-#: ../src/Plug.vala:69 ../src/Plug.vala:370
-msgid "Restore Default Settings"
-msgstr "기본 설정으로 복원"
-
-#: ../src/Plug.vala:70
-msgid "Suggest Translation"
-msgstr "번역 제안"
-
-#: ../src/Plug.vala:71
-msgid "Report Problems"
-msgstr "오류 보고"
-
-#: ../src/Plug.vala:72
-msgid "Updates"
-msgstr "업데이트"
-
-#: ../src/Plug.vala:176 ../src/Plug.vala:218 ../src/Plug.vala:229
-#: ../src/Plug.vala:249
-msgid "Unknown"
-msgstr "알 수 없음"
-
-#: ../src/Plug.vala:188
-msgid "Dual-Core"
-msgstr "듀얼 코어"
-
-#: ../src/Plug.vala:190
-msgid "Quad-Core"
-msgstr "쿼드 코어"
-
-#: ../src/Plug.vala:277
-msgid "Built on %s"
-msgstr "%s 기반"
-
-#: ../src/Plug.vala:283
-msgid "Website"
-msgstr "웹 사이트"
-
-#: ../src/Plug.vala:289
-msgid "Hardware"
-msgstr "하드웨어"
-
-#: ../src/Plug.vala:294
-msgid "Processor:"
-msgstr "프로세서:"
-
-#: ../src/Plug.vala:297
-msgid "Memory:"
-msgstr "메모리:"
-
-#: ../src/Plug.vala:300
-msgid "Graphics:"
-msgstr "그래픽:"
-
-#: ../src/Plug.vala:303
-msgid "Storage:"
-msgstr "저장장치:"
-
-#: ../src/Plug.vala:340
-msgid "Suggest Translations"
-msgstr "번역 제안하기"
-
-#: ../src/Plug.vala:350
-msgid "Report a Problem"
-msgstr "버그 리포트 작성"
-
-#: ../src/Plug.vala:360
-msgid "Check for Updates"
-msgstr "업데이트 확인"
-
-#: ../src/Plug.vala:499
-msgid "System settings will be restored to the factory defaults"
+#: ../src/RestoreDialog.vala:29
+#, fuzzy
+msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "시스템 설정이 공장 초기화 됩니다"
 
-#: ../src/Plug.vala:500
-msgid "All system settings and data will be reset to the default values."
+#: ../src/RestoreDialog.vala:35
+#, fuzzy
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be uneffected."
 msgstr "모든 시스템 설정과 데이터가 기본 값으로 초기화됩니다."
 
-#: ../src/Plug.vala:501
-msgid "Personal data, such as music and pictures, will be uneffected."
-msgstr "음악과 사진등, 사용자 데이터는 영향 받지 않습니다."
-
-#: ../src/Plug.vala:518
+#: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "설정 복원"
 
-#: ../src/Plug.vala:521
+#: ../src/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "취소"
+
+#: ../src/Plug.vala:40
+msgid "About"
+msgstr "정보"
+
+#: ../src/Plug.vala:41
+msgid "View operating system and hardware information"
+msgstr "운영체제 및 하드웨어 정보 보기"
+
+#: ../src/Plug.vala:70
+msgid "System Information"
+msgstr "시스템 정보"
+
+#: ../src/Plug.vala:71 ../src/Plug.vala:338
+msgid "Restore Default Settings"
+msgstr "기본 설정으로 복원"
+
+#: ../src/Plug.vala:72
+msgid "Suggest Translation"
+msgstr "번역 제안"
+
+#: ../src/Plug.vala:73
+msgid "Report Problems"
+msgstr "오류 보고"
+
+#: ../src/Plug.vala:74
+msgid "Updates"
+msgstr "업데이트"
+
+#: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
+#: ../src/Plug.vala:241
+msgid "Unknown"
+msgstr "알 수 없음"
+
+#: ../src/Plug.vala:180
+msgid "Dual-Core"
+msgstr "듀얼 코어"
+
+#: ../src/Plug.vala:182
+msgid "Quad-Core"
+msgstr "쿼드 코어"
+
+#: ../src/Plug.vala:264
+msgid "Built on %s"
+msgstr "%s 기반"
+
+#: ../src/Plug.vala:271
+msgid "GTK+ %s"
+msgstr ""
+
+#: ../src/Plug.vala:274
+msgid "Website"
+msgstr "웹 사이트"
+
+#: ../src/Plug.vala:282
+#, fuzzy
+msgid "%s memory"
+msgstr "메모리:"
+
+#: ../src/Plug.vala:288
+#, fuzzy
+msgid "%s storage"
+msgstr "저장장치:"
+
+#: ../src/Plug.vala:308
+msgid "Suggest Translations"
+msgstr "번역 제안하기"
+
+#: ../src/Plug.vala:318
+msgid "Report a Problem"
+msgstr "버그 리포트 작성"
+
+#: ../src/Plug.vala:328
+msgid "Check for Updates"
+msgstr "업데이트 확인"
+
+#~ msgid "Hardware"
+#~ msgstr "하드웨어"
+
+#~ msgid "Processor:"
+#~ msgstr "프로세서:"
+
+#~ msgid "Graphics:"
+#~ msgstr "그래픽:"
+
+#~ msgid "Personal data, such as music and pictures, will be uneffected."
+#~ msgstr "음악과 사진등, 사용자 데이터는 영향 받지 않습니다."

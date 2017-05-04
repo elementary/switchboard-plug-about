@@ -6,114 +6,121 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-06 08:38+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-03 17:14-0700\n"
 "PO-Revision-Date: 2016-10-15 07:09+0000\n"
 "Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: ../src/Plug.vala:38
-msgid "About"
-msgstr "情報"
-
-#: ../src/Plug.vala:39
-msgid "View operating system and hardware information"
-msgstr "OS とハードウェアの情報を見ます"
-
-#: ../src/Plug.vala:68
-msgid "System Information"
-msgstr "システム情報"
-
-#: ../src/Plug.vala:69 ../src/Plug.vala:370
-msgid "Restore Default Settings"
-msgstr "デフォルト設定の復元"
-
-#: ../src/Plug.vala:70
-msgid "Suggest Translation"
-msgstr "翻訳を提案する"
-
-#: ../src/Plug.vala:71
-msgid "Report Problems"
-msgstr "問題を報告する"
-
-#: ../src/Plug.vala:72
-msgid "Updates"
-msgstr "アップデート"
-
-#: ../src/Plug.vala:176 ../src/Plug.vala:218 ../src/Plug.vala:229
-#: ../src/Plug.vala:249
-msgid "Unknown"
-msgstr "不明"
-
-#: ../src/Plug.vala:188
-msgid "Dual-Core"
-msgstr "デュアルコア"
-
-#: ../src/Plug.vala:190
-msgid "Quad-Core"
-msgstr "クアッドコア"
-
-#: ../src/Plug.vala:277
-msgid "Built on %s"
-msgstr "Built on %s"
-
-#: ../src/Plug.vala:283
-msgid "Website"
-msgstr "Web サイト"
-
-#: ../src/Plug.vala:289
-msgid "Hardware"
-msgstr "ハードウェア"
-
-#: ../src/Plug.vala:294
-msgid "Processor:"
-msgstr "プロセッサー:"
-
-#: ../src/Plug.vala:297
-msgid "Memory:"
-msgstr "メモリー:"
-
-#: ../src/Plug.vala:300
-msgid "Graphics:"
-msgstr "グラフィック:"
-
-#: ../src/Plug.vala:303
-msgid "Storage:"
-msgstr "ストレージ:"
-
-#: ../src/Plug.vala:340
-msgid "Suggest Translations"
-msgstr "翻訳を提案"
-
-#: ../src/Plug.vala:350
-msgid "Report a Problem"
-msgstr "問題点を報告"
-
-#: ../src/Plug.vala:360
-msgid "Check for Updates"
-msgstr "アップデートを確認"
-
-#: ../src/Plug.vala:499
-msgid "System settings will be restored to the factory defaults"
+#: ../src/RestoreDialog.vala:29
+#, fuzzy
+msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "システム設定は初期の状態にリセットされます"
 
-#: ../src/Plug.vala:500
-msgid "All system settings and data will be reset to the default values."
+#: ../src/RestoreDialog.vala:35
+#, fuzzy
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be uneffected."
 msgstr "全てのシステム設定とファイルを初期状態にリセットします。"
 
-#: ../src/Plug.vala:501
-msgid "Personal data, such as music and pictures, will be uneffected."
-msgstr "音楽や写真などの個人用ファイルは影響を受けません。"
-
-#: ../src/Plug.vala:518
+#: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "設定の復元"
 
-#: ../src/Plug.vala:521
+#: ../src/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "キャンセル"
+
+#: ../src/Plug.vala:40
+msgid "About"
+msgstr "情報"
+
+#: ../src/Plug.vala:41
+msgid "View operating system and hardware information"
+msgstr "OS とハードウェアの情報を見ます"
+
+#: ../src/Plug.vala:70
+msgid "System Information"
+msgstr "システム情報"
+
+#: ../src/Plug.vala:71 ../src/Plug.vala:338
+msgid "Restore Default Settings"
+msgstr "デフォルト設定の復元"
+
+#: ../src/Plug.vala:72
+msgid "Suggest Translation"
+msgstr "翻訳を提案する"
+
+#: ../src/Plug.vala:73
+msgid "Report Problems"
+msgstr "問題を報告する"
+
+#: ../src/Plug.vala:74
+msgid "Updates"
+msgstr "アップデート"
+
+#: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
+#: ../src/Plug.vala:241
+msgid "Unknown"
+msgstr "不明"
+
+#: ../src/Plug.vala:180
+msgid "Dual-Core"
+msgstr "デュアルコア"
+
+#: ../src/Plug.vala:182
+msgid "Quad-Core"
+msgstr "クアッドコア"
+
+#: ../src/Plug.vala:264
+msgid "Built on %s"
+msgstr "Built on %s"
+
+#: ../src/Plug.vala:271
+msgid "GTK+ %s"
+msgstr ""
+
+#: ../src/Plug.vala:274
+msgid "Website"
+msgstr "Web サイト"
+
+#: ../src/Plug.vala:282
+#, fuzzy
+msgid "%s memory"
+msgstr "メモリー:"
+
+#: ../src/Plug.vala:288
+#, fuzzy
+msgid "%s storage"
+msgstr "ストレージ:"
+
+#: ../src/Plug.vala:308
+msgid "Suggest Translations"
+msgstr "翻訳を提案"
+
+#: ../src/Plug.vala:318
+msgid "Report a Problem"
+msgstr "問題点を報告"
+
+#: ../src/Plug.vala:328
+msgid "Check for Updates"
+msgstr "アップデートを確認"
+
+#~ msgid "Hardware"
+#~ msgstr "ハードウェア"
+
+#~ msgid "Processor:"
+#~ msgstr "プロセッサー:"
+
+#~ msgid "Graphics:"
+#~ msgstr "グラフィック:"
+
+#~ msgid "Personal data, such as music and pictures, will be uneffected."
+#~ msgstr "音楽や写真などの個人用ファイルは影響を受けません。"
