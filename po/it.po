@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-05-04 20:20+0000\n"
+"PO-Revision-Date: 2017-05-04 20:24+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-about/it/>\n"
@@ -30,7 +30,7 @@ msgid ""
 "data, such as music and pictures, will be uneffected."
 msgstr ""
 "Le impostazioni e i dati di sistema saranno ripristinati ai valori "
-"predefiniti. I dati personali come foto e musica non saranno influenzati."
+"predefiniti. I dati personali, come foto e musica, non saranno influenzati."
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
@@ -46,7 +46,7 @@ msgstr "Informazioni"
 
 #: ../src/Plug.vala:41
 msgid "View operating system and hardware information"
-msgstr "Guarda le informazioni sul sistema operativo e sull'hardware"
+msgstr "Guarda le informazioni del sistema operativo e dell'hardware"
 
 #: ../src/Plug.vala:70
 msgid "System Information"
@@ -75,11 +75,11 @@ msgstr "Sconosciuto"
 
 #: ../src/Plug.vala:180
 msgid "Dual-Core"
-msgstr "Dual-Core"
+msgstr "Dual Core"
 
 #: ../src/Plug.vala:182
 msgid "Quad-Core"
-msgstr "Quad-Core"
+msgstr "Quad Core"
 
 #: ../src/Plug.vala:264
 msgid "Built on %s"
