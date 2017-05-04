@@ -243,10 +243,10 @@ public class About.Plug : Switchboard.Plug {
         software_grid.attach (gtk_version_label, 0, 4, 2, 1);
         software_grid.attach (website_label, 0, 5, 2, 1);
 
-        var hardware_grid = new HardwareView ();
+        var hardware_view = new HardwareView ();
 
         var description_size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
-        description_size_group.add_widget (hardware_grid);
+        description_size_group.add_widget (hardware_view);
         description_size_group.add_widget (software_grid);
 
         var description_grid = new Gtk.Grid ();
@@ -256,7 +256,7 @@ public class About.Plug : Switchboard.Plug {
         description_grid.column_spacing = 24;
         description_grid.add (software_grid);
         description_grid.add (new Gtk.Separator (Gtk.Orientation.VERTICAL));
-        description_grid.add (hardware_grid);
+        description_grid.add (hardware_view);
 
         main_grid = new Gtk.Grid ();
         main_grid.orientation = Gtk.Orientation.VERTICAL;
