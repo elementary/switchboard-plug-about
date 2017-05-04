@@ -231,19 +231,19 @@ public class About.Plug : Switchboard.Plug {
             var oem_file = new KeyFile ();
             oem_file.load_from_file ("/etc/oem.conf", KeyFileFlags.NONE);
             // Assume we get the manufacturer name
-            manufacturer_name = oem_file.get_string ("OEM", "MANUFACTURER");
+            manufacturer_name = oem_file.get_string ("OEM", "Manufacturer");
 
             // We need to check if the key is here because get_string throws an error if the key isn't available.
-            if (oem_file.has_key ("OEM", "PRODUCT")) {
-                product_name = oem_file.get_string ("OEM", "PRODUCT");
+            if (oem_file.has_key ("OEM", "Product")) {
+                product_name = oem_file.get_string ("OEM", "Product");
             }
 
-            if (oem_file.has_key ("OEM", "VERSION")) {
-                product_version = oem_file.get_string ("OEM", "VERSION");
+            if (oem_file.has_key ("OEM", "Version")) {
+                product_version = oem_file.get_string ("OEM", "Version");
             }
 
-            if (oem_file.has_key ("OEM", "LOGO")) {
-                manufacturer_icon_path = oem_file.get_string ("OEM", "LOGO");
+            if (oem_file.has_key ("OEM", "Logo")) {
+                manufacturer_icon_path = oem_file.get_string ("OEM", "Logo");
             }
 
             if (oem_file.has_key ("OEM", "URL")) {
@@ -403,7 +403,6 @@ public class About.Plug : Switchboard.Plug {
         var manufacturer_logo = new Gtk.Image ();
         manufacturer_logo.pixel_size = 128;
         manufacturer_logo.icon_name = "computer";
-
 
         var product_name_info = new Gtk.Label (Environment.get_host_name ());
         product_name_info.get_style_context ().add_class ("h2");
