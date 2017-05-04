@@ -8,28 +8,30 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2016-08-13 07:24+0000\n"
-"Last-Translator: ProsjektX <Unknown>\n"
-"Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"PO-Revision-Date: 2017-05-04 08:09+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål "
+"<https://l10n.elementary.io/projects/switchboard/switchboard-plug-about/nb/>"
+"\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: ../src/RestoreDialog.vala:29
-#, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Systeminnstillinger vil bli gjenopprettet til standardinnstillinger"
+msgstr "Systeminnstillinger vil bli gjenopprettet til forvalg"
 
 #: ../src/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
 msgstr ""
-"Alle systeminnstillinger og data vil bli tilbakestilt til standardverdiene."
+"Alle systeminnstillinger og data vil bli tilbakestilt til forvalg. Personlig "
+"data, som musikk og bilder, vil ikke bli endret."
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
@@ -86,21 +88,19 @@ msgstr "Bygget på %s"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: ../src/Plug.vala:274
 msgid "Website"
 msgstr "Nettside"
 
 #: ../src/Plug.vala:282
-#, fuzzy
 msgid "%s memory"
-msgstr "Minne:"
+msgstr "%s minne"
 
 #: ../src/Plug.vala:288
-#, fuzzy
 msgid "%s storage"
-msgstr "Lagring:"
+msgstr "%s lagring"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
