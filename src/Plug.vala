@@ -28,6 +28,12 @@ public class About.Plug : Switchboard.Plug {
     private string memory;
     private string graphics;
     private string hdd;
+    private bool oem_enabled;
+    private string manufacturer_name;
+    private string manufacturer_icon_path;
+    private string manufacturer_support_url;
+    private string product_name;
+    private string product_version;
     private Gtk.Label based_off;
 
 
@@ -220,6 +226,35 @@ public class About.Plug : Switchboard.Plug {
             critical (e.message);
             hdd = _("Unknown");
         }
+
+        try {
+            var oem_file = new KeyFile ();
+            oem_file.load_from_file ("/etc/oem.conf", KeyFileFlags.NONE);
+            // Assume we get the manufacturer name
+            manufacturer_name = oem_file.get_string ("OEM", "Manufacturer");
+
+            // We need to check if the key is here because get_string throws an error if the key isn't available.
+            if (oem_file.has_key ("OEM", "Product")) {
+                product_name = oem_file.get_string ("OEM", "Product");
+            }
+
+            if (oem_file.has_key ("OEM", "Version")) {
+                product_version = oem_file.get_string ("OEM", "Version");
+            }
+
+            if (oem_file.has_key ("OEM", "Logo")) {
+                manufacturer_icon_path = oem_file.get_string ("OEM", "Logo");
+            }
+
+            if (oem_file.has_key ("OEM", "URL")) {
+                manufacturer_support_url = oem_file.get_string ("OEM", "URL");
+            }
+
+            oem_enabled = true;
+        } catch (Error e) {
+            debug (e.message);
+            oem_enabled = false;
+        }
     }
 
     private string get_graphics_from_string(string graphics) {
@@ -251,6 +286,7 @@ public class About.Plug : Switchboard.Plug {
 
         var title = new Gtk.Label (os);
         title.get_style_context ().add_class ("h2");
+        title.xalign = 1;
         title.set_selectable (true);
         title.margin_bottom = 12;
         title.xalign = 1;
@@ -368,15 +404,14 @@ public class About.Plug : Switchboard.Plug {
         manufacturer_logo.pixel_size = 128;
         manufacturer_logo.icon_name = "computer";
 
-
-        var model_name = new Gtk.Label (Environment.get_host_name ());
-        model_name.get_style_context ().add_class ("h2");
+        var product_name_info = new Gtk.Label (Environment.get_host_name ());
+        product_name_info.get_style_context ().add_class ("h2");
+        product_name_info.set_selectable (true);
 
         var hardware_grid = new Gtk.Grid ();
         hardware_grid.column_spacing = 6;
         hardware_grid.row_spacing = 6;
         hardware_grid.attach (manufacturer_logo, 0, 0, 2, 1);
-        hardware_grid.attach (model_name, 0, 1, 2, 1);
         hardware_grid.attach (processor_info, 0, 3, 2, 1);
         hardware_grid.attach (graphics_info, 0, 4, 2, 1);
         hardware_grid.attach (memory_info, 0, 5, 2, 1);
@@ -394,6 +429,44 @@ public class About.Plug : Switchboard.Plug {
         description_grid.add (software_grid);
         description_grid.add (new Gtk.Separator (Gtk.Orientation.VERTICAL));
         description_grid.add (hardware_grid);
+        
+        if (oem_enabled) {
+            var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
+
+            if (manufacturer_icon_path != null) {
+                manufacturer_logo.icon_name = null;
+                manufacturer_logo.gicon = fileicon;
+            }
+
+            var manufacturer_info = new Gtk.Label (manufacturer_name);
+            manufacturer_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            manufacturer_info.set_selectable (true);
+
+            hardware_grid.attach (manufacturer_info, 0, 2, 2, 1);
+
+            if (product_name != null) {
+                product_name_info.label = product_name;
+                product_name_info.xalign = 1;
+            }
+
+            if (product_version != null) {
+                var product_version_info = new Gtk.Label ("(" + product_version + ")");
+                product_version_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+                product_version_info.set_selectable (true);
+                product_version_info.xalign = 0;
+                hardware_grid.attach (product_name_info, 0, 1, 1, 1);
+                hardware_grid.attach (product_version_info, 1, 1, 1, 1);
+            } else {
+                hardware_grid.attach (product_name_info, 0, 1, 2, 1);
+            }
+
+            if (manufacturer_support_url != null) {
+                var manufacturer_website_info = new Gtk.LinkButton.with_label (manufacturer_support_url, _("Manufacturer Website"));
+                hardware_grid.attach (manufacturer_website_info, 0, 7, 2, 1);
+            }
+        } else {
+            hardware_grid.attach (product_name_info, 0, 1, 2, 1);
+        }
 
         main_grid = new Gtk.Grid ();
         main_grid.orientation = Gtk.Orientation.VERTICAL;
