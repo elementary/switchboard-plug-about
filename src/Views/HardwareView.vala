@@ -150,16 +150,20 @@ public class About.HardwareView : Gtk.Grid {
         // Graphics
         try {
             Process.spawn_command_line_sync ("lspci", out graphics);
+
             if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
                 string[] lines = graphics.split("\n");
                 graphics="";
+
                 foreach (var s in lines) {
                     if ("VGA" in s || "3D" in s) {
                         string model = get_graphics_from_string(s);
-                        if(graphics=="")
+
+                        if (graphics=="") {
                             graphics = model;
-                        else
+                        } else {
                             graphics += "\n" + model;
+                        }
                     }
                 }
             }
