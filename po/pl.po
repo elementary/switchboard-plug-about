@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-05-01 00:55+0000\n"
+"PO-Revision-Date: 2017-05-04 09:08+0000\n"
 "Last-Translator: Piotr Strebski <strebski@o2.pl>\n"
-"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-about/pl/>\n"
+"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-about/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,17 +22,17 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: ../src/RestoreDialog.vala:29
-#, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Zostaną przywrócone początkowe ustawienia systemu."
+msgstr ""
+"Ustawienia systemowe zostaną przywrócone do domyślnych wartości fabrycznych"
 
 #: ../src/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
 msgstr ""
-"Wszystkie ustawienia systemowe oraz dane zostaną zresetowane do domyślnych."
+"Wszystkie ustawienia systemu i dane zostaną przywrócone do wartości "
+"domyślnych. Dane osobiste, takie jak muzyka i zdjęcia, nie będą naruszone."
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
@@ -89,21 +89,19 @@ msgstr "Zbudowano na %s"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: ../src/Plug.vala:274
 msgid "Website"
 msgstr "Strona internetowa"
 
 #: ../src/Plug.vala:282
-#, fuzzy
 msgid "%s memory"
-msgstr "Pamięć operacyjna:"
+msgstr "%s pamięci"
 
 #: ../src/Plug.vala:288
-#, fuzzy
 msgid "%s storage"
-msgstr "Pamięć masowa:"
+msgstr "%s pojemności dysku"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
