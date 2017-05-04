@@ -218,15 +218,14 @@ public class About.HardwareView : Gtk.Grid {
         //and we want the <Info> part, we split with ":" and get the 3rd part
         string[] parts = graphics.split(":");
         string result = graphics;
-        if (parts.length == 3)
+        if (parts.length == 3) {
             result = parts[2];
-        else if (parts.length > 3) {
+        } else if (parts.length > 3) {
             result = parts[2];
             for (int i = 2; i < parts.length; i++) {
                 result+=parts[i];
             }
-        }
-        else {
+        } else {
             warning("Unknown lspci format: "+parts[0]+parts[1]);
             result = _("Unknown"); //set back to unkown
         }
