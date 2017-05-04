@@ -25,3 +25,14 @@ To install, use `make install`, then execute with `switchboard`
 
     sudo make install
     switchboard
+
+## OEM Configuration
+
+The Switchboard About plug can load OEM information supplied by an `oem.conf` file placed in `/etc` with the following format:
+
+    [OEM]
+    Manufacturer=System76 Inc.
+    Product=Meerkat
+    Version=meer1
+    Logo=/etc/oem/logo.png
+    URL=https://support.system76.com
