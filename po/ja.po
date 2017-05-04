@@ -8,27 +8,27 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2016-10-15 07:09+0000\n"
-"Last-Translator: Ryo Nakano <Unknown>\n"
-"Language-Team: Japanese <ja@li.org>\n"
+"PO-Revision-Date: 2017-05-04 12:32+0000\n"
+"Last-Translator: Jun Takeda <takeda.jun@gmail.com>\n"
+"Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-about/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: ../src/RestoreDialog.vala:29
-#, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "システム設定は初期の状態にリセットされます"
+msgstr "システム設定は出荷時のデフォルトに復元されます"
 
 #: ../src/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
-msgstr "全てのシステム設定とファイルを初期状態にリセットします。"
+msgstr "全てのシステム設定とデータはデフォルト値にリセットされます。音楽や画像のような個人のデータは影響を受けません。"
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
@@ -84,22 +84,21 @@ msgid "Built on %s"
 msgstr "Built on %s"
 
 #: ../src/Plug.vala:271
+#, fuzzy
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: ../src/Plug.vala:274
 msgid "Website"
 msgstr "Web サイト"
 
 #: ../src/Plug.vala:282
-#, fuzzy
 msgid "%s memory"
-msgstr "メモリー:"
+msgstr "%s メモリー"
 
 #: ../src/Plug.vala:288
-#, fuzzy
 msgid "%s storage"
-msgstr "ストレージ:"
+msgstr "%s ストレージ"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
