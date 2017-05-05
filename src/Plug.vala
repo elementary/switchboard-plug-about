@@ -179,7 +179,7 @@ public class About.Plug : Switchboard.Plug {
             }
         });
 
-        help_button.width_request = help_button.get_allocated_height ();
+        help_button.show ();
 
         help_button.size_allocate.connect ((alloc) => {
             help_button.width_request = alloc.height;
