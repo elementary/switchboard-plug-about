@@ -180,7 +180,7 @@ public class About.Plug : Switchboard.Plug {
         });
 
         help_button.size_allocate.connect ( (alloc) => {
-            help_button.set_size_request (alloc.height, -1);
+            help_button.set_size_request (alloc.height, alloc.height);
         });
 
         // Translate button
