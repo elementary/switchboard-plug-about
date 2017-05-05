@@ -15,6 +15,7 @@ include (ValaPrecompile)
 vala_precompile (VALA_C
     Plug.vala
     RestoreDialog.vala
+    Views/HardwareView.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0

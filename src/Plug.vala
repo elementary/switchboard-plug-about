@@ -16,7 +16,6 @@
 //
 
 public class About.Plug : Switchboard.Plug {
-
     private string os;
     private string gtk_version;
     private string kernel_version;
@@ -24,18 +23,7 @@ public class About.Plug : Switchboard.Plug {
     private string bugtracker_url;
     private string support_url;
     private string arch;
-    private string processor;
-    private string memory;
-    private string graphics;
-    private string hdd;
-    private bool oem_enabled;
-    private string manufacturer_name;
-    private string manufacturer_icon_path;
-    private string manufacturer_support_url;
-    private string product_name;
-    private string product_version;
     private Gtk.Label based_off;
-
 
     private string upstream_release;
     private Gtk.Grid main_grid;
@@ -63,11 +51,9 @@ public class About.Plug : Switchboard.Plug {
 
     public override void hidden () {
         main_grid.hide ();
-
     }
 
     public override void search_callback (string location) {
-
     }
 
     // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
@@ -81,11 +67,9 @@ public class About.Plug : Switchboard.Plug {
         return search_results;
     }
 
-    // Gets all the hardware info
     private void setup_info () {
 
         // Operating System
-
         File file = File.new_for_path("/etc/os-release");
         try {
             var osrel = new Gee.HashMap<string, string> ();
@@ -148,134 +132,6 @@ public class About.Plug : Switchboard.Plug {
         }
 
         kernel_version = "%s %s".printf (uts_name.sysname, uts_name.release);
-
-        // Processor
-        var cpu_file = File.new_for_path ("/proc/cpuinfo");
-        uint cores = 0U;
-        try {
-            var dis = new DataInputStream (cpu_file.read ());
-            string line;
-            while ((line = dis.read_line ()) != null) {
-                if (line.has_prefix ("model name")) {
-                    cores++;
-                    if (processor == null) {
-                        var parts = line.split (":", 2);
-                        if (parts.length > 1) {
-                            processor = parts[1].strip ();
-                        }
-                    }
-                }
-            }
-        } catch (Error e) {
-            warning (e.message);
-        }
-
-        if (processor == null) {
-            processor = _("Unknown");
-        } else {
-            if ("(R)" in processor) {
-                processor = processor.replace ("(R)", "®");
-            }
-
-            if ("(TM)" in processor) {
-                processor = processor.replace ("(TM)", "™");
-            }
-
-            if (cores > 1) {
-                if (cores == 2) {
-                    processor = _("Dual-Core") + " " + processor;
-                } else if (cores == 4) {
-                    processor = _("Quad-Core") + " " + processor;
-                } else {
-                    processor = processor + " × " + cores.to_string ();
-                }
-            }
-        }
-
-        //Memory
-        memory = GLib.format_size (get_mem_info ());
-
-        // Graphics
-        try {
-            Process.spawn_command_line_sync ("lspci", out graphics);
-            if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
-                string[] lines = graphics.split("\n");
-                graphics="";
-                foreach (var s in lines) {
-                    if ("VGA" in s || "3D" in s) {
-                        string model = get_graphics_from_string(s);
-                        if(graphics=="")
-                            graphics = model;
-                        else
-                            graphics += "\n" + model;
-                    }
-                }
-            }
-        } catch (Error e) {
-            warning (e.message);
-            graphics = _("Unknown");
-        }
-
-        // Hard Drive
-
-        var file_root = GLib.File.new_for_path ("/");
-        try {
-            var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
-            hdd = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
-        } catch (Error e) {
-            critical (e.message);
-            hdd = _("Unknown");
-        }
-
-        try {
-            var oem_file = new KeyFile ();
-            oem_file.load_from_file ("/etc/oem.conf", KeyFileFlags.NONE);
-            // Assume we get the manufacturer name
-            manufacturer_name = oem_file.get_string ("OEM", "Manufacturer");
-
-            // We need to check if the key is here because get_string throws an error if the key isn't available.
-            if (oem_file.has_key ("OEM", "Product")) {
-                product_name = oem_file.get_string ("OEM", "Product");
-            }
-
-            if (oem_file.has_key ("OEM", "Version")) {
-                product_version = oem_file.get_string ("OEM", "Version");
-            }
-
-            if (oem_file.has_key ("OEM", "Logo")) {
-                manufacturer_icon_path = oem_file.get_string ("OEM", "Logo");
-            }
-
-            if (oem_file.has_key ("OEM", "URL")) {
-                manufacturer_support_url = oem_file.get_string ("OEM", "URL");
-            }
-
-            oem_enabled = true;
-        } catch (Error e) {
-            debug (e.message);
-            oem_enabled = false;
-        }
-    }
-
-    private string get_graphics_from_string(string graphics) {
-        //at this line we have the correct line of lspci
-        //as the line has now the form of "00:01.0 VGA compatible controller:Info"
-        //and we want the <Info> part, we split with ":" and get the 3rd part
-        string[] parts = graphics.split(":");
-        string result = graphics;
-        if (parts.length == 3)
-            result = parts[2];
-        else if (parts.length > 3) {
-            result = parts[2];
-            for (int i = 2; i < parts.length; i++) {
-                result+=parts[i];
-            }
-        }
-        else {
-            warning("Unknown lspci format: "+parts[0]+parts[1]);
-            result = _("Unknown"); //set back to unkown
-        }
-        return result.strip ();
     }
 
     // Wires up and configures initial UI
@@ -310,19 +166,6 @@ public class About.Plug : Switchboard.Plug {
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
         website_label.halign = Gtk.Align.CENTER;
         website_label.margin_top = 12;
-
-        var processor_info = new Gtk.Label (processor);
-        processor_info.margin_top = 12;
-        processor_info.set_selectable (true);
-
-        var memory_info = new Gtk.Label (_("%s memory").printf (memory));
-        memory_info.set_selectable (true);
-
-        var graphics_info = new Gtk.Label (graphics);
-        graphics_info.set_selectable (true);
-
-        var hdd_info = new Gtk.Label (_("%s storage").printf (hdd));
-        hdd_info.set_selectable (true);
 
         var help_button = new Gtk.Button.with_label ("?");
         help_button.get_style_context ().add_class ("circular");
@@ -400,25 +243,10 @@ public class About.Plug : Switchboard.Plug {
         software_grid.attach (gtk_version_label, 0, 4, 2, 1);
         software_grid.attach (website_label, 0, 5, 2, 1);
 
-        var manufacturer_logo = new Gtk.Image ();
-        manufacturer_logo.pixel_size = 128;
-        manufacturer_logo.icon_name = "computer";
-
-        var product_name_info = new Gtk.Label (Environment.get_host_name ());
-        product_name_info.get_style_context ().add_class ("h2");
-        product_name_info.set_selectable (true);
-
-        var hardware_grid = new Gtk.Grid ();
-        hardware_grid.column_spacing = 6;
-        hardware_grid.row_spacing = 6;
-        hardware_grid.attach (manufacturer_logo, 0, 0, 2, 1);
-        hardware_grid.attach (processor_info, 0, 3, 2, 1);
-        hardware_grid.attach (graphics_info, 0, 4, 2, 1);
-        hardware_grid.attach (memory_info, 0, 5, 2, 1);
-        hardware_grid.attach (hdd_info, 0, 6, 2, 1);
+        var hardware_view = new HardwareView ();
 
         var description_size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
-        description_size_group.add_widget (hardware_grid);
+        description_size_group.add_widget (hardware_view);
         description_size_group.add_widget (software_grid);
 
         var description_grid = new Gtk.Grid ();
@@ -428,45 +256,7 @@ public class About.Plug : Switchboard.Plug {
         description_grid.column_spacing = 24;
         description_grid.add (software_grid);
         description_grid.add (new Gtk.Separator (Gtk.Orientation.VERTICAL));
-        description_grid.add (hardware_grid);
-        
-        if (oem_enabled) {
-            var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
-
-            if (manufacturer_icon_path != null) {
-                manufacturer_logo.icon_name = null;
-                manufacturer_logo.gicon = fileicon;
-            }
-
-            var manufacturer_info = new Gtk.Label (manufacturer_name);
-            manufacturer_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-            manufacturer_info.set_selectable (true);
-
-            hardware_grid.attach (manufacturer_info, 0, 2, 2, 1);
-
-            if (product_name != null) {
-                product_name_info.label = product_name;
-                product_name_info.xalign = 1;
-            }
-
-            if (product_version != null) {
-                var product_version_info = new Gtk.Label ("(" + product_version + ")");
-                product_version_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-                product_version_info.set_selectable (true);
-                product_version_info.xalign = 0;
-                hardware_grid.attach (product_name_info, 0, 1, 1, 1);
-                hardware_grid.attach (product_version_info, 1, 1, 1, 1);
-            } else {
-                hardware_grid.attach (product_name_info, 0, 1, 2, 1);
-            }
-
-            if (manufacturer_support_url != null) {
-                var manufacturer_website_info = new Gtk.LinkButton.with_label (manufacturer_support_url, _("Manufacturer Website"));
-                hardware_grid.attach (manufacturer_website_info, 0, 7, 2, 1);
-            }
-        } else {
-            hardware_grid.attach (product_name_info, 0, 1, 2, 1);
-        }
+        description_grid.add (hardware_view);
 
         main_grid = new Gtk.Grid ();
         main_grid.orientation = Gtk.Orientation.VERTICAL;
@@ -477,25 +267,6 @@ public class About.Plug : Switchboard.Plug {
         main_grid.add (button_grid);
         main_grid.show_all ();
     }
-}
-
-private uint64 get_mem_info () {
-    File file = File.new_for_path ("/proc/meminfo");
-    try {
-        DataInputStream dis = new DataInputStream (file.read ());
-        string? line;
-        string name = "MemTotal:";
-        while ((line = dis.read_line (null,null)) != null) {
-            if (line.has_prefix (name)) {
-                var number = line.replace ("kB", "").replace (name, "").strip ();
-                return uint64.parse (number) * 1000;
-            }
-        }
-    } catch (Error e) {
-        warning (e.message);
-    }
-
-    return 0;
 }
 
 private void reset_all_keys (GLib.Settings settings) {
