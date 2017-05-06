@@ -104,12 +104,20 @@ public class About.HardwareView : Gtk.Grid {
         // Processor
         var cpu_file = File.new_for_path ("/proc/cpuinfo");
         uint cores = 0U;
+        bool cores_found = false;
         try {
             var dis = new DataInputStream (cpu_file.read ());
             string line;
             while ((line = dis.read_line ()) != null) {
+                if (line.has_prefix ("cpu cores")) {
+                    var core_count = line.split (":")[1];
+                    cores = int.parse (core_count);
+                    cores_found = true;
+                }
                 if (line.has_prefix ("model name")) {
-                    cores++;
+                    if (!cores_found) {
+                        cores++;
+                    }
                     if (processor == null) {
                         var parts = line.split (":", 2);
                         if (parts.length > 1) {
