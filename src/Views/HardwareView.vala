@@ -110,10 +110,15 @@ public class About.HardwareView : Gtk.Grid {
             string line;
             while ((line = dis.read_line ()) != null) {
                 if (line.has_prefix ("cpu cores")) {
-                    var core_count = line.split (":")[1];
-                    cores = int.parse (core_count);
-                    cores_found = true;
+                    var core_count = line.split (":", 2);
+                    if (core_count.length > 1) {
+                        cores = int.parse (core_count[1]);
+                        if (cores != 0) {
+                            cores_found = true;
+                        }
+                    }
                 }
+
                 if (line.has_prefix ("model name")) {
                     if (!cores_found) {
                         cores++;
