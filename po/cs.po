@@ -8,27 +8,29 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2016-08-06 22:00+0000\n"
-"Last-Translator: Marek Suchánek <suchm@seznam.cz>\n"
-"Language-Team: Czech <cs@li.org>\n"
+"PO-Revision-Date: 2017-05-18 19:58+0000\n"
+"Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
+"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-about/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: ../src/RestoreDialog.vala:29
-#, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Systémová nastavení budou obnovena do továrního stavu"
+msgstr "Systémová nastavení budou obnovena do výchozího stavu"
 
 #: ../src/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
-msgstr "Veškerá systémová nastavení a data budou obnovena do výchozího stavu."
+msgstr ""
+"Veškerá systémová nastavení a data budou obnovena do výchozího stavu. Osobní "
+"data, jako například hudba či obrázky, tím nebudou ovlivněna."
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
@@ -85,21 +87,19 @@ msgstr "Postaveno na %s"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: ../src/Plug.vala:274
 msgid "Website"
 msgstr "Webová stránka"
 
 #: ../src/Plug.vala:282
-#, fuzzy
 msgid "%s memory"
-msgstr "Paměť:"
+msgstr "%s paměti"
 
 #: ../src/Plug.vala:288
-#, fuzzy
 msgid "%s storage"
-msgstr "Úložiště:"
+msgstr "%s úložiště"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
