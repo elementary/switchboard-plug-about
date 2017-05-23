@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-03-14 17:44+0000\n"
+"PO-Revision-Date: 2017-05-23 21:32+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
-"Language-Team: Danish <da@li.org>\n"
+"Language-Team: Danish <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-about/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: ../src/RestoreDialog.vala:29
 #, fuzzy
@@ -82,7 +84,7 @@ msgstr "Quad-Core"
 
 #: ../src/Plug.vala:264
 msgid "Built on %s"
-msgstr "Bygget den %s"
+msgstr "Bygget på %s"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
@@ -90,7 +92,7 @@ msgstr ""
 
 #: ../src/Plug.vala:274
 msgid "Website"
-msgstr "Hjemmeside"
+msgstr "Websted"
 
 #: ../src/Plug.vala:282
 #, fuzzy
