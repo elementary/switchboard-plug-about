@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
 "PO-Revision-Date: 2017-05-29 22:26+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-about/nl/>\n"
 "Language: nl\n"
@@ -47,7 +47,7 @@ msgstr "Over"
 
 #: ../src/Plug.vala:41
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "Bekijk besturings systeem en hardware informatie"
 
 #: ../src/Plug.vala:70
 msgid "System Information"
