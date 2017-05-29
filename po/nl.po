@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
 "PO-Revision-Date: 2017-05-29 22:27+0000\n"
-"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
+"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-about/nl/>\n"
 "Language: nl\n"
@@ -55,7 +55,7 @@ msgstr "Systeeminformatie"
 
 #: ../src/Plug.vala:71 ../src/Plug.vala:338
 msgid "Restore Default Settings"
-msgstr "Herstel standaard instellingen"
+msgstr "Herstel standaardinstellingen"
 
 #: ../src/Plug.vala:72
 msgid "Suggest Translation"
