@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
 "PO-Revision-Date: 2017-05-29 22:27+0000\n"
-"Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
+"Last-Translator: Kay van der Zander <kay20@hotmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-about/nl/>\n"
 "Language: nl\n"
@@ -59,15 +59,15 @@ msgstr "Herstel standaardinstellingen"
 
 #: ../src/Plug.vala:72
 msgid "Suggest Translation"
-msgstr ""
+msgstr "Vertaling voorstellen"
 
 #: ../src/Plug.vala:73
 msgid "Report Problems"
-msgstr ""
+msgstr "Meld problemen"
 
 #: ../src/Plug.vala:74
 msgid "Updates"
-msgstr ""
+msgstr "Updates"
 
 #: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
 #: ../src/Plug.vala:241
@@ -84,11 +84,11 @@ msgstr "Quad-Core"
 
 #: ../src/Plug.vala:264
 msgid "Built on %s"
-msgstr ""
+msgstr "Gebouwd op %s"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: ../src/Plug.vala:274
 msgid "Website"
