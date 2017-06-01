@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-06-01 13:40+0000\n"
+"PO-Revision-Date: 2017-06-01 13:45+0000\n"
 "Last-Translator: Jonathan GN <jonathan@jamdigitalstudio.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-about/es/>\n"
@@ -49,7 +49,7 @@ msgstr "Acerca de"
 
 #: ../src/Plug.vala:41
 msgid "View operating system and hardware information"
-msgstr "Vea información del sistema operativo y el equipo"
+msgstr "Ver información del sistema operativo y hardware"
 
 #: ../src/Plug.vala:70
 msgid "System Information"
@@ -57,15 +57,15 @@ msgstr "Información del sistema"
 
 #: ../src/Plug.vala:71 ../src/Plug.vala:338
 msgid "Restore Default Settings"
-msgstr "Restaurar configuración predeterminada"
+msgstr "Restaurar configuraciones predeterminadas"
 
 #: ../src/Plug.vala:72
 msgid "Suggest Translation"
-msgstr "Sugerir traducciones"
+msgstr "Sugerir traducción"
 
 #: ../src/Plug.vala:73
 msgid "Report Problems"
-msgstr "Informar de problemas"
+msgstr "Reportar problemas"
 
 #: ../src/Plug.vala:74
 msgid "Updates"
@@ -86,7 +86,7 @@ msgstr "Cuádruple núcleo"
 
 #: ../src/Plug.vala:264
 msgid "Built on %s"
-msgstr "Basado en %s"
+msgstr "Construido un %s"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
@@ -98,11 +98,11 @@ msgstr "Sitio web"
 
 #: ../src/Plug.vala:282
 msgid "%s memory"
-msgstr "%s memoria"
+msgstr "%s de memoria"
 
 #: ../src/Plug.vala:288
 msgid "%s storage"
-msgstr "%s almacenamiento"
+msgstr "%s de almacenamiento"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
@@ -110,7 +110,7 @@ msgstr "Sugerir traducciones"
 
 #: ../src/Plug.vala:318
 msgid "Report a Problem"
-msgstr "Informar de un problema"
+msgstr "Reportar un problema"
 
 #: ../src/Plug.vala:328
 msgid "Check for Updates"
