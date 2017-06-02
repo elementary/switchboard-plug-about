@@ -30,7 +30,7 @@ public class About.Plug : Switchboard.Plug {
 
     public Plug () {
         var settings = new Gee.TreeMap<string, string?> (null, null);
-        settings.set ("about", "null");
+        settings.set ("about", null);
         Object (category: Category.SYSTEM,
                 code_name: "system-pantheon-about",
                 display_name: _("About"),
