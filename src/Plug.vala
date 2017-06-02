@@ -29,11 +29,14 @@ public class About.Plug : Switchboard.Plug {
     private Gtk.Grid main_grid;
 
     public Plug () {
+        var settings = new Gee.TreeMap<string, string?> (null, null);
+        settings.set ("about", "null");
         Object (category: Category.SYSTEM,
                 code_name: "system-pantheon-about",
                 display_name: _("About"),
                 description: _("View operating system and hardware information"),
-                icon: "dialog-information");
+                icon: "dialog-information",
+                supported_settings: settings);
     }
 
     public override Gtk.Widget get_widget () {
