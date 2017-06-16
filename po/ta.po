@@ -8,33 +8,37 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2014-07-08 06:19+0000\n"
-"Last-Translator: Khaleel Jageer <jskcse4@gmail.com>\n"
-"Language-Team: Tamil <ta@li.org>\n"
+"PO-Revision-Date: 2017-06-16 17:24+0000\n"
+"Last-Translator: Rajeev Kumar <irajeevankumar@gmail.com>\n"
+"Language-Team: Tamil <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-about/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: ../src/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr ""
+msgstr "கணினி அமைப்புகள் இயல்புநிலைக்கு மீட்டமைக்கப்படும்"
 
 #: ../src/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
 msgstr ""
+"அனைத்து கணினி அமைப்புகள் மற்றும் தரவு இயல்புநிலை மதிப்புகள் மீட்டமைக்கப்படும்"
+". இசை மற்றும் படங்கள் போன்ற தனிப்பட்ட தரவு பாதிக்கப்படாது."
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
-msgstr ""
+msgstr "அமைப்புகளை மீட்டெடுக்கவும்"
 
 #: ../src/RestoreDialog.vala:53
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்துசெய்"
 
 #: ../src/Plug.vala:40
 msgid "About"
@@ -42,27 +46,27 @@ msgstr "பற்றி"
 
 #: ../src/Plug.vala:41
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "இயக்க முறைமை மற்றும் வன்பொருள் தகவலைக் காண்க"
 
 #: ../src/Plug.vala:70
 msgid "System Information"
-msgstr ""
+msgstr "கணினி தகவல்"
 
 #: ../src/Plug.vala:71 ../src/Plug.vala:338
 msgid "Restore Default Settings"
-msgstr ""
+msgstr "இயல்புநிலை அமைப்புகளை மீட்டமை"
 
 #: ../src/Plug.vala:72
 msgid "Suggest Translation"
-msgstr ""
+msgstr "மொழிபெயர்ப்பு பரிந்துரைக்க"
 
 #: ../src/Plug.vala:73
 msgid "Report Problems"
-msgstr ""
+msgstr "சிக்கல்களைப் புகாரளி"
 
 #: ../src/Plug.vala:74
 msgid "Updates"
-msgstr ""
+msgstr "மேம்படுத்தல்கள்"
 
 #: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
 #: ../src/Plug.vala:241
@@ -71,28 +75,27 @@ msgstr "அறியப்படாத"
 
 #: ../src/Plug.vala:180
 msgid "Dual-Core"
-msgstr ""
+msgstr "இரட்டை- கோர்"
 
 #: ../src/Plug.vala:182
 msgid "Quad-Core"
-msgstr ""
+msgstr "குவாட்-கோர்"
 
 #: ../src/Plug.vala:264
 msgid "Built on %s"
-msgstr ""
+msgstr "%s இல் கட்டப்பட்டது"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
-msgstr ""
+msgstr "ஜிடிகே+ %s"
 
 #: ../src/Plug.vala:274
 msgid "Website"
-msgstr ""
+msgstr "வலைத்தளம்"
 
 #: ../src/Plug.vala:282
-#, fuzzy
 msgid "%s memory"
-msgstr "நினைவகம்:"
+msgstr "%s நினைவகம்"
 
 #: ../src/Plug.vala:288
 #, fuzzy
@@ -101,7 +104,7 @@ msgstr "நினைவகம்:"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
-msgstr ""
+msgstr "மொழிபெயர்ப்பு பரிந்துரைக்க"
 
 #: ../src/Plug.vala:318
 msgid "Report a Problem"
@@ -109,7 +112,7 @@ msgstr "பிரச்சனையை புகார் செய்"
 
 #: ../src/Plug.vala:328
 msgid "Check for Updates"
-msgstr ""
+msgstr "புதுப்பிப்புகளுக்குச் சரிபார்க்கவும்"
 
 #~ msgid "Processor:"
 #~ msgstr "நுண்செயலி:"
