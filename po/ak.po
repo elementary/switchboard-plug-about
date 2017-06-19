@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2016-08-17 14:41+0000\n"
-"Last-Translator: aberba <karabutaworld@gmail.com>\n"
-"Language-Team: Akan <ak@li.org>\n"
+"PO-Revision-Date: 2017-06-19 14:23+0000\n"
+"Last-Translator: Lawrence Aberba <karabutaworld@gmail.com>\n"
+"Language-Team: Akan <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-about/ak/>\n"
 "Language: ak\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: ../src/RestoreDialog.vala:29
 #, fuzzy
@@ -32,7 +34,7 @@ msgstr "Wo kɔmputa no ho nhyehyɛee nyinaa bɛsan ayɛ sɛnea na ɛte kan no"
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
-msgstr "Yɛ Ɛho Nhyehyɛee No Sɛnea Na Ɛte Kan No."
+msgstr "Fa Kan Nhyehyɛe Ahoroɔ No Di Dwuma"
 
 #: ../src/RestoreDialog.vala:53
 msgid "Cancel"
@@ -44,15 +46,15 @@ msgstr "Ɛho Nsɛm"
 
 #: ../src/Plug.vala:41
 msgid "View operating system and hardware information"
-msgstr "Hwɛ wo operating system no ne wo hardware no ho nsɛm"
+msgstr "Hwɛ w'afidie no ho nsɛm"
 
 #: ../src/Plug.vala:70
 msgid "System Information"
-msgstr "Wo kɔmputa no ho nsɛm"
+msgstr "Wo Kɔmputa No Ho Nsɛm"
 
 #: ../src/Plug.vala:71 ../src/Plug.vala:338
 msgid "Restore Default Settings"
-msgstr "Fa Nhyehyɛee a Na Ɛwɔ Ho Kan No Di Dwuma"
+msgstr "Fa Nhyehyɛee a Na Ɛwɔ Hɔ Kan No Di Dwuma"
 
 #: ../src/Plug.vala:72
 msgid "Suggest Translation"
@@ -60,16 +62,16 @@ msgstr "Fa Wo NkyerɛaseTo Dwa"
 
 #: ../src/Plug.vala:73
 msgid "Report Problems"
-msgstr "Bo Yɛn Amaneɛ Wɔ Nsɛnnenen Bi a Worehyia Ho"
+msgstr "Bɔ Yɛn Amaneɛ Wɔ Nsɛnnenen Bi a Worehyia Ho"
 
 #: ../src/Plug.vala:74
 msgid "Updates"
-msgstr "Nneɛma Foforɔ"
+msgstr "Nneɛma Foforɔ a Aba"
 
 #: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
 #: ../src/Plug.vala:241
 msgid "Unknown"
-msgstr "Nea wɔnnim ho hwee"
+msgstr "Ɛho asɛm nni hɔ"
 
 #: ../src/Plug.vala:180
 msgid "Dual-Core"
@@ -81,15 +83,15 @@ msgstr "Quad-Core"
 
 #: ../src/Plug.vala:264
 msgid "Built on %s"
-msgstr "% na wɔde yɛee"
+msgstr "Wɔde %s na ɛyɛe"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: ../src/Plug.vala:274
 msgid "Website"
-msgstr "Websaet"
+msgstr "Wɛbsaet"
 
 #: ../src/Plug.vala:282
 #, fuzzy
@@ -107,11 +109,11 @@ msgstr "Fa Wo Nkyerease To Dwa"
 
 #: ../src/Plug.vala:318
 msgid "Report a Problem"
-msgstr "Fa nsɛnenen bi a w'ahyia to dwa"
+msgstr "Fa nsɛnenen bi a woahyia to dwa"
 
 #: ../src/Plug.vala:328
 msgid "Check for Updates"
-msgstr "Hwɛ sɛ nneɛma foforɔ aba a."
+msgstr "Hwɛ Sɛ Nneɛma Foforɔ Aba Anaa"
 
 #~ msgid "Hardware"
 #~ msgstr "Hardware"
