@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-06-19 14:23+0000\n"
+"PO-Revision-Date: 2017-06-19 14:33+0000\n"
 "Last-Translator: Lawrence Aberba <karabutaworld@gmail.com>\n"
 "Language-Team: Akan <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-about/ak/>\n"
@@ -21,16 +21,16 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: ../src/RestoreDialog.vala:29
-#, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Wo kɔmputa no ho nhyehyɛee bɛsan ayɛ sɛnea na ɛte wɔ mmerɛ a wɔyɛe no"
+msgstr "Wo Kɔmputa No Ho Nhyehyɛe Bɛsan Ayɛ Sɛnea Na Ɛte Ahyɛase No"
 
 #: ../src/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
-msgstr "Wo kɔmputa no ho nhyehyɛee nyinaa bɛsan ayɛ sɛnea na ɛte kan no"
+msgstr ""
+"Wo kɔmputa no ho nhyehyɛe nyinaa bɛsan ayɛ sɛnea na ɛte ahyɛase no.  Wo "
+"nnwom, mfonyin ne nea  aka no deɛ, ɛbɛwɔ so saa ara a hwee nnyɛ no."
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
@@ -94,14 +94,12 @@ msgid "Website"
 msgstr "Wɛbsaet"
 
 #: ../src/Plug.vala:282
-#, fuzzy
 msgid "%s memory"
-msgstr "Memory:"
+msgstr "Memory %s"
 
 #: ../src/Plug.vala:288
-#, fuzzy
 msgid "%s storage"
-msgstr "Nkoraeɛ:"
+msgstr "Akoraeɛ %s"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
