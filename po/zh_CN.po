@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-05-08 03:15+0000\n"
+"PO-Revision-Date: 2017-06-21 00:25+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://l10n.elementary.io/projects/switchboard/switchboard-plug-"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: ../src/RestoreDialog.vala:29
@@ -85,23 +85,20 @@ msgid "Built on %s"
 msgstr "基于 %s 构建"
 
 #: ../src/Plug.vala:271
-#, fuzzy
 msgid "GTK+ %s"
-msgstr "GTK+ %s"
+msgstr "GTK+ 版本：%s"
 
 #: ../src/Plug.vala:274
 msgid "Website"
 msgstr "项目主页"
 
 #: ../src/Plug.vala:282
-#, fuzzy
 msgid "%s memory"
-msgstr "内存："
+msgstr "内存：%s"
 
 #: ../src/Plug.vala:288
-#, fuzzy
 msgid "%s storage"
-msgstr "硬盘："
+msgstr "硬盘：%s"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
