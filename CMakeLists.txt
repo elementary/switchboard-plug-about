@@ -17,7 +17,7 @@ set (PLUGDESCRIPTION "About")
 # The symbolic name of the Icon to use for the plug
 set (PLUGICON "dialog-information")
 # Set the version for the plug
-set (VERSION "0.2.3")
+set (VERSION "0.2.3.1")
 
 project (${PLUGNAME})
 
