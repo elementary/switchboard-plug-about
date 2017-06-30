@@ -158,7 +158,7 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         //Memory
-        memory = GLib.format_size (get_mem_info ());
+        memory = get_mem_info ();
 
         // Graphics
         try {
@@ -245,7 +245,27 @@ public class About.HardwareView : Gtk.Grid {
         return result.strip ();
     }
 
-    private uint64 get_mem_info () {
+    private string get_mem_info () {
+        string dmesg_line;
+        try {
+            Process.spawn_command_line_sync ("dmesg -P", out dmesg_line);
+        } catch (Error e) {
+            warning (e.message);
+            return GLib.format_size (get_mem_info_fallback ());
+        }
+        int mempos = dmesg_line.index_of("Memory");
+        int start = dmesg_line.index_of("/", mempos);
+        int end = dmesg_line.index_of("K", start);
+        string size = dmesg_line.substring (start+1, end - start -1);
+        double total = double.parse (size);
+        int64 rounded = Math.llround (total / 1024.0 / 1024.0);
+        if (rounded == 0) {
+            return GLib.format_size (get_mem_info_fallback ());
+        }
+        return rounded.to_string () + " GB";
+    }
+
+    private uint64 get_mem_info_fallback () {
         File file = File.new_for_path ("/proc/meminfo");
         try {
             DataInputStream dis = new DataInputStream (file.read ());
