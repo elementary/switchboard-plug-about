@@ -262,7 +262,7 @@ public class About.HardwareView : Gtk.Grid {
         if (rounded == 0) {
             return GLib.format_size (get_mem_info_fallback ());
         }
-        return rounded.to_string () + " GB";
+        return _("%s GB").printf (rounded.to_string ());
     }
 
     private uint64 get_mem_info_fallback () {
