@@ -246,17 +246,17 @@ public class About.HardwareView : Gtk.Grid {
     }
 
     private string get_mem_info () {
-        string dmesg_line;
+        string dmesg_lines;
         try {
-            Process.spawn_command_line_sync ("dmesg -P", out dmesg_line);
+            Process.spawn_command_line_sync ("dmesg -P", out dmesg_lines);
         } catch (Error e) {
             warning (e.message);
             return GLib.format_size (get_mem_info_fallback ());
         }
-        int mempos = dmesg_line.index_of("Memory");
-        int start = dmesg_line.index_of("/", mempos);
-        int end = dmesg_line.index_of("K", start);
-        string size = dmesg_line.substring (start+1, end - start -1);
+        int mempos = dmesg_lines.index_of ("Memory");
+        int start = dmesg_lines.index_of ("/", mempos);
+        int end = dmesg_lines.index_of ("K", start);
+        string size = dmesg_lines.substring (start + 1, end - start -1);
         double total = double.parse (size);
         int64 rounded = Math.llround (total / 1024.0 / 1024.0);
         if (rounded == 0) {
