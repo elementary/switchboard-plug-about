@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-06-01 13:45+0000\n"
-"Last-Translator: Jonathan GN <jonathan@jamdigitalstudio.com>\n"
+"PO-Revision-Date: 2017-07-03 11:01+0000\n"
+"Last-Translator: derkomai <dvilelaf@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-about/es/>\n"
 "Language: es\n"
@@ -85,8 +85,9 @@ msgid "Quad-Core"
 msgstr "Cuádruple núcleo"
 
 #: ../src/Plug.vala:264
+#, fuzzy
 msgid "Built on %s"
-msgstr "Construido un %s"
+msgstr "Construido sobre %s"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
