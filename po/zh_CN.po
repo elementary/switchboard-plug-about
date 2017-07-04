@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-06-21 00:25+0000\n"
+"PO-Revision-Date: 2017-07-04 08:59+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://l10n.elementary.io/projects/switchboard/switchboard-plug-"
@@ -94,11 +94,11 @@ msgstr "项目主页"
 
 #: ../src/Plug.vala:282
 msgid "%s memory"
-msgstr "内存：%s"
+msgstr "%s 内存"
 
 #: ../src/Plug.vala:288
 msgid "%s storage"
-msgstr "硬盘：%s"
+msgstr "%s 硬盘"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
