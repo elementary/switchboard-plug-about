@@ -28,6 +28,7 @@ public class About.HardwareView : Gtk.Grid {
     private string processor;
     private string product_name;
     private string product_version;
+    private string display;
 
     construct {
         fetch_hardware_info ();
@@ -53,6 +54,9 @@ public class About.HardwareView : Gtk.Grid {
         var hdd_info = new Gtk.Label (_("%s storage").printf (hdd));
         hdd_info.set_selectable (true);
 
+        var display_info = new Gtk.Label (_("%s display").printf (display));
+        display_info.set_selectable (true);
+
         column_spacing = 6;
         row_spacing = 6;
         attach (manufacturer_logo, 0, 0, 2, 1);
@@ -60,6 +64,7 @@ public class About.HardwareView : Gtk.Grid {
         attach (graphics_info, 0, 4, 2, 1);
         attach (memory_info, 0, 5, 2, 1);
         attach (hdd_info, 0, 6, 2, 1);
+        attach (display_info, 0, 7, 2, 1);
 
         if (oem_enabled) {
             var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
@@ -93,7 +98,7 @@ public class About.HardwareView : Gtk.Grid {
 
             if (manufacturer_support_url != null) {
                 var manufacturer_website_info = new Gtk.LinkButton.with_label (manufacturer_support_url, _("Manufacturer Website"));
-                attach (manufacturer_website_info, 0, 7, 2, 1);
+                attach (manufacturer_website_info, 0, 8, 2, 1);
             }
         } else {
             attach (product_name_info, 0, 1, 2, 1);
@@ -223,6 +228,9 @@ public class About.HardwareView : Gtk.Grid {
             debug (e.message);
             oem_enabled = false;
         }
+
+        //Display
+        display = get_display_info ();
     }
 
     private string get_graphics_from_string(string graphics) {
@@ -262,5 +270,52 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         return 0;
+    }
+
+    private string get_display_info () {
+        string model = "";
+        string resolution = "";
+
+        File file = File.new_for_path ("/var/log/Xorg.0.log");
+        try {
+            DataInputStream dis = new DataInputStream (file.read ());
+            string? line;
+            string name = "Monitor name: ";
+            while ((line = dis.read_line (null,null)) != null) {
+                if (line.contains (name)) {
+                    model = line.substring (line.index_of (name) + name.length);
+                    break;
+                }
+            }
+        } catch (Error e) {
+            warning (e.message);
+        }
+
+        try {
+            string xrandr_output;
+            Process.spawn_command_line_sync ("xrandr --listmonitors", out xrandr_output);
+
+            int first_slash_pos = xrandr_output.index_of ("/");
+            string [] split_x = xrandr_output.substring (0, first_slash_pos).split (" ");
+            string x_resolution = split_x.length > 0 ? split_x[split_x.length - 1] : "";
+
+            int second_slash_pos = xrandr_output.index_of ("/", first_slash_pos + 1);
+            string [] split_y = xrandr_output.substring (0, second_slash_pos).split ("x");
+            string y_resolution = split_y.length > 0 ? split_y[split_y.length - 1] : "";
+
+            if (x_resolution.length > 0 && y_resolution.length > 0) {
+                resolution = x_resolution + " × " + y_resolution;
+            }
+        } catch (Error e) {
+            warning (e.message);
+        }
+
+        if (model.length == 0 && resolution.length == 0) {
+            return _("Unknown");
+        }
+
+        bool spacer = model.length > 0 && resolution.length > 0;
+
+        return "%s%s%s".printf (model, spacer ? " " : "", resolution);
     }
 }
