@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-05-23 21:32+0000\n"
+"PO-Revision-Date: 2017-07-01 22:11+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-about/da/>\n"
@@ -39,7 +39,7 @@ msgstr "Gendan indstillinger"
 
 #: ../src/RestoreDialog.vala:53
 msgid "Cancel"
-msgstr "Annullér"
+msgstr "Annuller"
 
 #: ../src/Plug.vala:40
 msgid "About"
