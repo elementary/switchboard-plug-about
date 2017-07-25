@@ -2,39 +2,41 @@
 # Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the switchboard-plug-about package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2014-12-17 04:52+0000\n"
-"Last-Translator: Yudha Yudhistira <yudhayudhistira94@yahoo.co.id>\n"
+"PO-Revision-Date: 2017-07-25 15:16+0700\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: ../src/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr ""
+msgstr "Pengaturan Sistem Akan Dipulihkan ke Bawaan Pabrik"
 
 #: ../src/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
 msgstr ""
+"Semua pengaturan sistem dan data akan diatur ulang ke nilai bawaan. Data "
+"pribadi, seperti musik dan gambar, tidak akan terpengaruh."
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
-msgstr ""
+msgstr "Kembalikan Pengaturan"
 
 #: ../src/RestoreDialog.vala:53
 msgid "Cancel"
-msgstr ""
+msgstr "Batal"
 
 #: ../src/Plug.vala:40
 msgid "About"
@@ -42,61 +44,60 @@ msgstr "Keterangan"
 
 #: ../src/Plug.vala:41
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "Lihat informasi sistem operasi dan perangkat keras"
 
 #: ../src/Plug.vala:70
 msgid "System Information"
-msgstr ""
+msgstr "Informasi Sistem"
 
 #: ../src/Plug.vala:71 ../src/Plug.vala:338
 msgid "Restore Default Settings"
-msgstr ""
+msgstr "Kembalikan Pengaturan Bawaan"
 
 #: ../src/Plug.vala:72
 msgid "Suggest Translation"
-msgstr ""
+msgstr "Sarankan Terjemahan"
 
 #: ../src/Plug.vala:73
 msgid "Report Problems"
-msgstr ""
+msgstr "Laporkan Masalah"
 
 #: ../src/Plug.vala:74
 msgid "Updates"
-msgstr ""
+msgstr "Pembaruan"
 
 #: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
 #: ../src/Plug.vala:241
 msgid "Unknown"
-msgstr ""
+msgstr "Tidak Diketahui"
 
 #: ../src/Plug.vala:180
 msgid "Dual-Core"
-msgstr ""
+msgstr "Dua Inti (Dual-Core)"
 
 #: ../src/Plug.vala:182
 msgid "Quad-Core"
-msgstr ""
+msgstr "Empat Inti (Quad-Core)"
 
 #: ../src/Plug.vala:264
 msgid "Built on %s"
-msgstr ""
+msgstr "Dibangun di %s"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: ../src/Plug.vala:274
 msgid "Website"
-msgstr ""
+msgstr "Situs web"
 
 #: ../src/Plug.vala:282
-#, fuzzy
 msgid "%s memory"
-msgstr "Memori:"
+msgstr "Memori %s"
 
 #: ../src/Plug.vala:288
 msgid "%s storage"
-msgstr ""
+msgstr "Penyimpanan %s"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
@@ -108,7 +109,7 @@ msgstr "Laporkan Masalah"
 
 #: ../src/Plug.vala:328
 msgid "Check for Updates"
-msgstr ""
+msgstr "Periksa Pembaruan"
 
 #~ msgid "Processor:"
 #~ msgstr "Prosesor:"
