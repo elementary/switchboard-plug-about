@@ -146,9 +146,9 @@ public class About.Plug : Switchboard.Plug {
 
         var title = new Gtk.Label (os);
         title.get_style_context ().add_class ("h2");
-        title.xalign = 1;
         title.set_selectable (true);
         title.margin_bottom = 12;
+        title.ellipsize = Pango.EllipsizeMode.END;
         title.xalign = 1;
 
         var arch_name = new Gtk.Label ("(%s)".printf (arch));
