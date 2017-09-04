@@ -120,8 +120,7 @@ public class About.Plug : Switchboard.Plug {
         }
 
         // Architecture
-        Posix.UtsName uts_name;
-        Posix.UtsName.get_default (out uts_name);
+        var uts_name = Posix.utsname ();
         switch (uts_name.machine) {
             case "x86_64":
                 arch = "64-bit";
