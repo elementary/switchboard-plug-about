@@ -21,10 +21,7 @@ PACKAGES
     gtk+-3.0
     switchboard-2.0
     granite
-CUSTOM_VAPIS
-    ../vapi/utsname.vapi
-OPTIONS
-    --thread
+    posix
 )
 
 add_library (${PLUGNAME} MODULE ${VALA_C})
