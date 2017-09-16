@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-08-28 08:06+0000\n"
-"Last-Translator: Flyus Fly <fly_fly@popstar.com>\n"
+"PO-Revision-Date: 2017-09-16 01:02+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
 "about/en_GB/>\n"
@@ -23,28 +23,27 @@ msgstr ""
 
 #: ../src/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Les paramètres systèmes d'usine seront remis par défaut"
+msgstr "System Settings Will Be Restored to The Factory Defaults"
 
 #: ../src/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
 msgstr ""
-"Tous les paramétrages systèmes ainsi que les données seront remises aux "
-"valeurs par défaut. Les données personnelles, comme la musique et les photos "
-"ne seront pas affectées."
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
-msgstr "Restauration des paramètres"
+msgstr "Restore Settings"
 
 #: ../src/RestoreDialog.vala:53
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Cancel"
 
 #: ../src/Plug.vala:40
 msgid "About"
-msgstr "A propos"
+msgstr "About"
 
 #: ../src/Plug.vala:41
 msgid "View operating system and hardware information"
@@ -89,21 +88,19 @@ msgstr "Built on %s"
 
 #: ../src/Plug.vala:271
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: ../src/Plug.vala:274
 msgid "Website"
 msgstr "Website"
 
 #: ../src/Plug.vala:282
-#, fuzzy
 msgid "%s memory"
-msgstr "Memory:"
+msgstr "%s memory"
 
 #: ../src/Plug.vala:288
-#, fuzzy
 msgid "%s storage"
-msgstr "Storage:"
+msgstr "%s storage"
 
 #: ../src/Plug.vala:308
 msgid "Suggest Translations"
