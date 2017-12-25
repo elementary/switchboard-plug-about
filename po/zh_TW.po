@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 17:14-0700\n"
-"PO-Revision-Date: 2017-12-15 00:11+0000\n"
+"PO-Revision-Date: 2017-12-25 03:10+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
@@ -18,20 +18,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.17.1\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: ../src/RestoreDialog.vala:29
-#, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "系統設定值將還原成出廠預設值"
 
 #: ../src/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
-msgstr "所有系統設定值和資料都會重設回預設值。"
+msgstr "所有系統設定值和資料都會重設回預設值。個人資料，例如音樂或圖片等，都不會受到影響。"
 
 #: ../src/RestoreDialog.vala:50
 msgid "Restore Settings"
