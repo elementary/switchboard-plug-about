@@ -139,7 +139,8 @@ public class About.Plug : Switchboard.Plug {
     // Wires up and configures initial UI
     private void setup_ui () {
         // Create the section about elementary OS
-        var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 128, 128));
+        var logo = new Gtk.Image ();
+        logo.icon_name = "distributor-logo";
         logo.pixel_size = 128;
         logo.hexpand = true;
 
