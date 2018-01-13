@@ -29,12 +29,19 @@ public class About.HardwareView : Gtk.Grid {
     private string product_name;
     private string product_version;
 
+    private const string LAPTOP_DETECT_NAME = "laptop-detect";
+
     construct {
         fetch_hardware_info ();
 
         var manufacturer_logo = new Gtk.Image ();
         manufacturer_logo.pixel_size = 128;
-        manufacturer_logo.icon_name = "computer";
+
+        if (laptop_detect ()) {
+            manufacturer_logo.icon_name = "computer-notebook";
+        } else {
+            manufacturer_logo.icon_name = "computer";
+        }
 
         var product_name_info = new Gtk.Label (Environment.get_host_name ());
         product_name_info.get_style_context ().add_class ("h2");
@@ -262,5 +269,27 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         return 0;
+    }
+
+    private static bool laptop_detect () {
+        string? laptop_detect_executable = Environment.find_program_in_path (LAPTOP_DETECT_NAME);
+        if (laptop_detect_executable == null) {
+            warning ("laptop-detect not found");
+            return false;
+        }
+
+        int exit_status;
+
+        try {
+            Process.spawn_command_line_sync (laptop_detect_executable, null, null, out exit_status);
+            if (exit_status == 0) {
+                debug ("Detected a laptop");
+                return true;
+            }
+        } catch (SpawnError err) {
+            warning (err.message);
+        }
+
+        return false;
     }
 }
