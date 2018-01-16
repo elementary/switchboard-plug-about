@@ -30,8 +30,6 @@ public class About.HardwareView : Gtk.Grid {
     private string product_version;
     private SystemInterface system_interface;
 
-    private const string LAPTOP_DETECT_NAME = "laptop-detect";
-
     construct {
         fetch_hardware_info ();
 
