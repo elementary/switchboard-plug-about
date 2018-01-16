@@ -40,8 +40,9 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         var manufacturer_logo = new Gtk.Image ();
-        manufacturer_logo.pixel_size = 128;
         manufacturer_logo.icon_name = system_interface.icon_name;
+        manufacturer_logo.pixel_size = 128;
+        manufacturer_logo.use_fallback = true;
 
         var product_name_info = new Gtk.Label (Environment.get_host_name ());
         product_name_info.get_style_context ().add_class ("h2");
