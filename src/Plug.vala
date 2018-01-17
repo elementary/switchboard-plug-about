@@ -120,8 +120,7 @@ public class About.Plug : Switchboard.Plug {
         }
 
         // Architecture
-        Posix.UtsName uts_name;
-        Posix.UtsName.get_default (out uts_name);
+        var uts_name = Posix.utsname ();
         switch (uts_name.machine) {
             case "x86_64":
                 arch = "64-bit";
@@ -140,15 +139,16 @@ public class About.Plug : Switchboard.Plug {
     // Wires up and configures initial UI
     private void setup_ui () {
         // Create the section about elementary OS
-        var logo = new Gtk.Image.from_icon_name ("distributor-logo", Gtk.icon_size_register ("LOGO", 128, 128));
+        var logo = new Gtk.Image ();
+        logo.icon_name = "distributor-logo";
         logo.pixel_size = 128;
         logo.hexpand = true;
 
         var title = new Gtk.Label (os);
         title.get_style_context ().add_class ("h2");
-        title.xalign = 1;
         title.set_selectable (true);
         title.margin_bottom = 12;
+        title.ellipsize = Pango.EllipsizeMode.END;
         title.xalign = 1;
 
         var arch_name = new Gtk.Label ("(%s)".printf (arch));
@@ -211,7 +211,7 @@ public class About.Plug : Switchboard.Plug {
         var update_button = new Gtk.Button.with_label (_("Check for Updates"));
         update_button.clicked.connect (() => {
             try {
-                Process.spawn_command_line_async("appcenter --show-updates");
+                Process.spawn_command_line_async ("io.elementary.appcenter --show-updates");
             } catch (Error e) {
                 warning (e.message);
             }
