@@ -28,13 +28,21 @@ public class About.HardwareView : Gtk.Grid {
     private string processor;
     private string product_name;
     private string product_version;
+    private SystemInterface system_interface;
 
     construct {
         fetch_hardware_info ();
 
+        try {
+            system_interface = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.hostname1", "/org/freedesktop/hostname1");
+        } catch (IOError e) {
+            critical (e.message);
+        }
+
         var manufacturer_logo = new Gtk.Image ();
+        manufacturer_logo.icon_name = system_interface.icon_name;
         manufacturer_logo.pixel_size = 128;
-        manufacturer_logo.icon_name = "computer";
+        manufacturer_logo.use_fallback = true;
 
         var product_name_info = new Gtk.Label (Environment.get_host_name ());
         product_name_info.get_style_context ().add_class ("h2");
@@ -263,4 +271,10 @@ public class About.HardwareView : Gtk.Grid {
 
         return 0;
     }
+}
+
+[DBus (name = "org.freedesktop.hostname1")]
+public interface SystemInterface : Object {
+    [DBus (name = "IconName")]
+    public abstract string icon_name { owned get; }
 }
