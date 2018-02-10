@@ -84,6 +84,7 @@ public class About.HardwareView : Gtk.Grid {
             }
 
             var manufacturer_info = new Gtk.Label (manufacturer_name);
+            manufacturer_info.ellipsize = Pango.EllipsizeMode.END;
             manufacturer_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
             manufacturer_info.set_selectable (true);
 
@@ -91,14 +92,15 @@ public class About.HardwareView : Gtk.Grid {
 
             if (product_name != null) {
                 product_name_info.label = product_name;
-                product_name_info.xalign = 1;
             }
 
             if (product_version != null) {
                 var product_version_info = new Gtk.Label ("(" + product_version + ")");
                 product_version_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
                 product_version_info.set_selectable (true);
+                product_version_info.ellipsize = Pango.EllipsizeMode.END;
                 product_version_info.xalign = 0;
+                product_name_info.xalign = 1;
                 attach (product_name_info, 0, 1, 1, 1);
                 attach (product_version_info, 1, 1, 1, 1);
             } else {
