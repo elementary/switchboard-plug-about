@@ -258,8 +258,8 @@ public class About.Plug : Switchboard.Plug {
         description_grid.valign = Gtk.Align.CENTER;
         description_grid.vexpand = true;
         description_grid.column_spacing = 24;
-        description_grid.margin_left = 12;
-        description_grid.margin_right = 12;
+        description_grid.margin_start = 12;
+        description_grid.margin_end = 12;
         description_grid.add (software_grid);
         description_grid.add (new Gtk.Separator (Gtk.Orientation.VERTICAL));
         description_grid.add (hardware_view);
