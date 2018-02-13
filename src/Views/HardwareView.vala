@@ -41,24 +41,30 @@ public class About.HardwareView : Gtk.Grid {
 
         var manufacturer_logo = new Gtk.Image ();
         manufacturer_logo.icon_name = system_interface.icon_name;
+        manufacturer_logo.hexpand = true;
         manufacturer_logo.pixel_size = 128;
         manufacturer_logo.use_fallback = true;
 
         var product_name_info = new Gtk.Label (Environment.get_host_name ());
+        product_name_info.ellipsize = Pango.EllipsizeMode.END;
         product_name_info.get_style_context ().add_class ("h2");
         product_name_info.set_selectable (true);
 
         var processor_info = new Gtk.Label (processor);
+        processor_info.ellipsize = Pango.EllipsizeMode.END;
         processor_info.margin_top = 12;
         processor_info.set_selectable (true);
 
         var memory_info = new Gtk.Label (_("%s memory").printf (memory));
+        memory_info.ellipsize = Pango.EllipsizeMode.END;
         memory_info.set_selectable (true);
 
         var graphics_info = new Gtk.Label (graphics);
+        graphics_info.ellipsize = Pango.EllipsizeMode.END;
         graphics_info.set_selectable (true);
 
         var hdd_info = new Gtk.Label (_("%s storage").printf (hdd));
+        hdd_info.ellipsize = Pango.EllipsizeMode.END;
         hdd_info.set_selectable (true);
 
         column_spacing = 6;
@@ -78,6 +84,7 @@ public class About.HardwareView : Gtk.Grid {
             }
 
             var manufacturer_info = new Gtk.Label (manufacturer_name);
+            manufacturer_info.ellipsize = Pango.EllipsizeMode.END;
             manufacturer_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
             manufacturer_info.set_selectable (true);
 
@@ -85,14 +92,15 @@ public class About.HardwareView : Gtk.Grid {
 
             if (product_name != null) {
                 product_name_info.label = product_name;
-                product_name_info.xalign = 1;
             }
 
             if (product_version != null) {
                 var product_version_info = new Gtk.Label ("(" + product_version + ")");
                 product_version_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
                 product_version_info.set_selectable (true);
+                product_version_info.ellipsize = Pango.EllipsizeMode.END;
                 product_version_info.xalign = 0;
+                product_name_info.xalign = 1;
                 attach (product_name_info, 0, 1, 1, 1);
                 attach (product_version_info, 1, 1, 1, 1);
             } else {
@@ -165,7 +173,7 @@ public class About.HardwareView : Gtk.Grid {
             }
         }
 
-        //Memory
+        // Memory
         memory = GLib.format_size (get_mem_info ());
 
         // Graphics
