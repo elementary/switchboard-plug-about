@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-03 17:14-0700\n"
+"POT-Creation-Date: 2018-02-20 14:40-0800\n"
 "PO-Revision-Date: 2017-05-04 14:51+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard"
-"/switchboard-plug-about/ca/>\n"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-about/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: ../src/RestoreDialog.vala:29
+#: src/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Els paràmetres del sistema es restauraran als valors de fàbrica"
 
-#: ../src/RestoreDialog.vala:35
+#: src/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
@@ -32,86 +32,94 @@ msgstr ""
 "Tots els paràmetres i les dades del sistema s'establiran als valors per "
 "defecte. Això no afectarà dades personals, com ara música i imatges."
 
-#: ../src/RestoreDialog.vala:50
+#: src/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Restaura els paràmetres"
 
-#: ../src/RestoreDialog.vala:53
+#: src/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: ../src/Plug.vala:40
+#: src/Plug.vala:36
 msgid "About"
 msgstr "Quant a"
 
-#: ../src/Plug.vala:41
+#: src/Plug.vala:37
 msgid "View operating system and hardware information"
 msgstr "Mostra la informació del sistema operatiu i del maquinari"
 
-#: ../src/Plug.vala:70
+#: src/Plug.vala:65
 msgid "System Information"
 msgstr "Informació del sistema"
 
-#: ../src/Plug.vala:71 ../src/Plug.vala:338
+#: src/Plug.vala:66 src/Plug.vala:221
 msgid "Restore Default Settings"
 msgstr "Restaura els paràmetres per defecte"
 
-#: ../src/Plug.vala:72
+#: src/Plug.vala:67
 msgid "Suggest Translation"
 msgstr "Suggeriu una traducció"
 
-#: ../src/Plug.vala:73
+#: src/Plug.vala:68
 msgid "Report Problems"
 msgstr "Informeu de problemes"
 
-#: ../src/Plug.vala:74
+#: src/Plug.vala:69
 msgid "Updates"
 msgstr "Actualitzacions"
 
-#: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
-#: ../src/Plug.vala:241
-msgid "Unknown"
-msgstr "Desconegut"
-
-#: ../src/Plug.vala:180
-msgid "Dual-Core"
-msgstr "Nucli doble"
-
-#: ../src/Plug.vala:182
-msgid "Quad-Core"
-msgstr "Nucli quàdruple"
-
-#: ../src/Plug.vala:264
+#: src/Plug.vala:160
+#, c-format
 msgid "Built on %s"
 msgstr "Muntat el %s"
 
-#: ../src/Plug.vala:271
+#: src/Plug.vala:167
+#, c-format
 msgid "GTK+ %s"
 msgstr "GTK+ %s"
 
-#: ../src/Plug.vala:274
+#: src/Plug.vala:170
 msgid "Website"
 msgstr "Lloc web"
 
-#: ../src/Plug.vala:282
-msgid "%s memory"
-msgstr "Memòria: %s"
-
-#: ../src/Plug.vala:288
-msgid "%s storage"
-msgstr "Emmagatzematge: %s"
-
-#: ../src/Plug.vala:308
+#: src/Plug.vala:191
 msgid "Suggest Translations"
 msgstr "Suggeriu traduccions"
 
-#: ../src/Plug.vala:318
+#: src/Plug.vala:201
 msgid "Report a Problem"
 msgstr "Informeu d'un problema"
 
-#: ../src/Plug.vala:328
+#: src/Plug.vala:211
 msgid "Check for Updates"
 msgstr "Comprova si hi ha actualitzacions"
+
+#: src/Views/HardwareView.vala:58
+#, c-format
+msgid "%s memory"
+msgstr "Memòria: %s"
+
+#: src/Views/HardwareView.vala:66
+#, c-format
+msgid "%s storage"
+msgstr "Emmagatzematge: %s"
+
+#: src/Views/HardwareView.vala:111
+msgid "Manufacturer Website"
+msgstr ""
+
+#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
+#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+msgid "Unknown"
+msgstr "Desconegut"
+
+#: src/Views/HardwareView.vala:167
+msgid "Dual-Core"
+msgstr "Nucli doble"
+
+#: src/Views/HardwareView.vala:169
+msgid "Quad-Core"
+msgstr "Nucli quàdruple"
 
 #~ msgid "Hardware"
 #~ msgstr "Maquinari"
