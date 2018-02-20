@@ -1,14 +1,15 @@
 Source: switchboard-plug-about
 Section: x11
 Priority: optional
-Maintainer: Ivo Nunes <ivo@elementaryos.org>
-Build-Depends: cmake,
-               debhelper (>= 9),
+Maintainer: elementary OS Team <builds@elementary.io>
+Build-Depends: debhelper (>= 10.5.1),
+               gettext,
                libgranite-dev,
                libswitchboard-2.0-dev,
+               meson,
                valac (>= 0.22)
-Standards-Version: 3.9.2
-Homepage: https://launchpad.net/switchboard-plug-about
+Standards-Version: 4.1.1
+Homepage: https://github.com/elementary/switchboard-plug-about
 
 Package: switchboard-plug-about
 Architecture: any
@@ -16,14 +17,3 @@ Depends: ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Description: About plug for Switchboard
  This plug displays information about the system.
-
-Package: switchboard-plug-about-dbg
-Architecture: any
-Section: debug
-Priority: extra
-Depends: switchboard-plug-about (= ${binary:Version}), ${misc:Depends}
-Enhances: switchboard-plug-about
-Description: About plug for Switchboard (debugging symbols)
- This plug displays information about the system.
- .
- This package contains debugging symbols for switchboard-plug-about.
