@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-03 17:14-0700\n"
+"POT-Creation-Date: 2018-02-20 14:40-0800\n"
 "PO-Revision-Date: 2017-01-02 03:38+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: ../src/RestoreDialog.vala:29
+#: src/RestoreDialog.vala:29
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "سىستېما تەڭشەكلىرى زاۋۇتتىن چىققاندىكى ھالىتىگە قايتىدۇ"
 
-#: ../src/RestoreDialog.vala:35
+#: src/RestoreDialog.vala:35
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -31,88 +31,94 @@ msgid ""
 msgstr ""
 "بارلىق سىستېما تەڭشەكلىرى ۋە سانلىق مەلۇماتلار سۈكۈتتىكى ھالىتىگە قايتىدۇ"
 
-#: ../src/RestoreDialog.vala:50
+#: src/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
 
-#: ../src/RestoreDialog.vala:53
+#: src/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "ئەمەلدىن قالدۇرۇش"
 
-#: ../src/Plug.vala:40
+#: src/Plug.vala:36
 msgid "About"
 msgstr "ھەققىدە"
 
-#: ../src/Plug.vala:41
+#: src/Plug.vala:37
 msgid "View operating system and hardware information"
 msgstr "مەشغۇلات سىستېمىسى ۋە قاتتىق دىتال ئۇچۇرلىرىنى كۆرۈش"
 
-#: ../src/Plug.vala:70
+#: src/Plug.vala:65
 msgid "System Information"
 msgstr "سىستېما ئۇچۇرى"
 
-#: ../src/Plug.vala:71 ../src/Plug.vala:338
+#: src/Plug.vala:66 src/Plug.vala:221
 msgid "Restore Default Settings"
 msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
 
-#: ../src/Plug.vala:72
+#: src/Plug.vala:67
 msgid "Suggest Translation"
 msgstr "تەۋسىيە قىلىنغان تەرجىمىلەر"
 
-#: ../src/Plug.vala:73
+#: src/Plug.vala:68
 msgid "Report Problems"
 msgstr "مەسىلە دوكلات قىلىش"
 
-#: ../src/Plug.vala:74
+#: src/Plug.vala:69
 msgid "Updates"
 msgstr "يېڭىلانمىلار"
 
-#: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
-#: ../src/Plug.vala:241
-msgid "Unknown"
-msgstr "نامەلۇم"
-
-#: ../src/Plug.vala:180
-msgid "Dual-Core"
-msgstr "قوش يادرو"
-
-#: ../src/Plug.vala:182
-msgid "Quad-Core"
-msgstr "تۆت يادرو"
-
-#: ../src/Plug.vala:264
+#: src/Plug.vala:160
+#, c-format
 msgid "Built on %s"
 msgstr "%s نىڭ ئاساسىدا قۇرۇلغان"
 
-#: ../src/Plug.vala:271
+#: src/Plug.vala:167
+#, c-format
 msgid "GTK+ %s"
 msgstr ""
 
-#: ../src/Plug.vala:274
+#: src/Plug.vala:170
 msgid "Website"
 msgstr "توربىكەت"
 
-#: ../src/Plug.vala:282
-#, fuzzy
-msgid "%s memory"
-msgstr "ئەسلەك:"
-
-#: ../src/Plug.vala:288
-#, fuzzy
-msgid "%s storage"
-msgstr "ساقلىغۇچ"
-
-#: ../src/Plug.vala:308
+#: src/Plug.vala:191
 msgid "Suggest Translations"
 msgstr "تەۋسىيە قىلىنغان تەرجىمىلەر"
 
-#: ../src/Plug.vala:318
+#: src/Plug.vala:201
 msgid "Report a Problem"
 msgstr "مەسىلە مەلۇم قىلىش"
 
-#: ../src/Plug.vala:328
+#: src/Plug.vala:211
 msgid "Check for Updates"
 msgstr "يېڭىلانمىنى تەكشۈرۈش"
+
+#: src/Views/HardwareView.vala:58
+#, fuzzy, c-format
+msgid "%s memory"
+msgstr "ئەسلەك:"
+
+#: src/Views/HardwareView.vala:66
+#, fuzzy, c-format
+msgid "%s storage"
+msgstr "ساقلىغۇچ"
+
+#: src/Views/HardwareView.vala:111
+msgid "Manufacturer Website"
+msgstr ""
+
+#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
+#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+msgid "Unknown"
+msgstr "نامەلۇم"
+
+#: src/Views/HardwareView.vala:167
+msgid "Dual-Core"
+msgstr "قوش يادرو"
+
+#: src/Views/HardwareView.vala:169
+msgid "Quad-Core"
+msgstr "تۆت يادرو"
 
 #~ msgid "Hardware"
 #~ msgstr "قاتتىق دېتال"

@@ -5,26 +5,21 @@
 
 You'll need the following dependencies:
 
-* cmake
 * libswitchboard-2.0-dev
 * libgranite-dev
 * libgtk-3-dev
+* meson
 * valac
 
-It's recommended to create a clean build environment
+Run `meson` to configure the build environment and then `ninja` to build
 
-    mkdir build
-    cd build/
-    
-Run `cmake` to configure the build environment and then `make` to build
+    meson build --prefix=/usr
+    cd build
+    ninja
 
-    cmake -DCMAKE_INSTALL_PREFIX=/usr ..
-    make
-    
-To install, use `make install`, then execute with `switchboard`
+To install, use `ninja install`
 
-    sudo make install
-    switchboard
+    sudo ninja install
 
 ## OEM Configuration
 

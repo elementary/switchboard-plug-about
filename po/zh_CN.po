@@ -7,12 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-03 17:14-0700\n"
+"POT-Creation-Date: 2018-02-20 14:40-0800\n"
 "PO-Revision-Date: 2017-07-04 08:59+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
-"Language-Team: Chinese (Simplified) "
-"<https://l10n.elementary.io/projects/switchboard/switchboard-plug-"
-"about/zh_CN/>\n"
+"Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
+"switchboard/switchboard-plug-about/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,96 +20,104 @@ msgstr ""
 "X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: ../src/RestoreDialog.vala:29
+#: src/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "系统设置将会被重置为出厂默认值"
 
-#: ../src/RestoreDialog.vala:35
+#: src/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be uneffected."
 msgstr "所有系统设置参数将会被重置为默认值。"
 
-#: ../src/RestoreDialog.vala:50
+#: src/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "重置设置"
 
-#: ../src/RestoreDialog.vala:53
+#: src/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "取消"
 
-#: ../src/Plug.vala:40
+#: src/Plug.vala:36
 msgid "About"
 msgstr "关于"
 
-#: ../src/Plug.vala:41
+#: src/Plug.vala:37
 msgid "View operating system and hardware information"
 msgstr "查看操作系统和硬件信息"
 
-#: ../src/Plug.vala:70
+#: src/Plug.vala:65
 msgid "System Information"
 msgstr "系统信息"
 
-#: ../src/Plug.vala:71 ../src/Plug.vala:338
+#: src/Plug.vala:66 src/Plug.vala:221
 msgid "Restore Default Settings"
 msgstr "重置设置"
 
-#: ../src/Plug.vala:72
+#: src/Plug.vala:67
 msgid "Suggest Translation"
 msgstr "助力翻译"
 
-#: ../src/Plug.vala:73
+#: src/Plug.vala:68
 msgid "Report Problems"
 msgstr "反馈问题"
 
-#: ../src/Plug.vala:74
+#: src/Plug.vala:69
 msgid "Updates"
 msgstr "检查更新"
 
-#: ../src/Plug.vala:168 ../src/Plug.vala:210 ../src/Plug.vala:221
-#: ../src/Plug.vala:241
-msgid "Unknown"
-msgstr "未知"
-
-#: ../src/Plug.vala:180
-msgid "Dual-Core"
-msgstr "双核"
-
-#: ../src/Plug.vala:182
-msgid "Quad-Core"
-msgstr "四核"
-
-#: ../src/Plug.vala:264
+#: src/Plug.vala:160
+#, c-format
 msgid "Built on %s"
 msgstr "基于 %s 构建"
 
-#: ../src/Plug.vala:271
+#: src/Plug.vala:167
+#, c-format
 msgid "GTK+ %s"
 msgstr "GTK+ 版本：%s"
 
-#: ../src/Plug.vala:274
+#: src/Plug.vala:170
 msgid "Website"
 msgstr "项目主页"
 
-#: ../src/Plug.vala:282
-msgid "%s memory"
-msgstr "%s 内存"
-
-#: ../src/Plug.vala:288
-msgid "%s storage"
-msgstr "%s 硬盘"
-
-#: ../src/Plug.vala:308
+#: src/Plug.vala:191
 msgid "Suggest Translations"
 msgstr "助力翻译"
 
-#: ../src/Plug.vala:318
+#: src/Plug.vala:201
 msgid "Report a Problem"
 msgstr "报告问题"
 
-#: ../src/Plug.vala:328
+#: src/Plug.vala:211
 msgid "Check for Updates"
 msgstr "检查更新"
+
+#: src/Views/HardwareView.vala:58
+#, c-format
+msgid "%s memory"
+msgstr "%s 内存"
+
+#: src/Views/HardwareView.vala:66
+#, c-format
+msgid "%s storage"
+msgstr "%s 硬盘"
+
+#: src/Views/HardwareView.vala:111
+msgid "Manufacturer Website"
+msgstr ""
+
+#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
+#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+msgid "Unknown"
+msgstr "未知"
+
+#: src/Views/HardwareView.vala:167
+msgid "Dual-Core"
+msgstr "双核"
+
+#: src/Views/HardwareView.vala:169
+msgid "Quad-Core"
+msgstr "四核"
 
 #~ msgid "Hardware"
 #~ msgstr "硬件信息："
