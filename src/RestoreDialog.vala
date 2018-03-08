@@ -32,7 +32,7 @@ public class RestoreDialog : Gtk.Dialog {
         primary_label.wrap = true;
         primary_label.xalign = 0;
 
-        var secondary_label = new Gtk.Label (_("All system settings and data will be reset to the default values. Personal data, such as music and pictures, will be uneffected."));
+        var secondary_label = new Gtk.Label (_("All system settings and data will be reset to the default values. Personal data, such as music and pictures, will be unaffected."));
         secondary_label.max_width_chars = 50;
         secondary_label.wrap = true;
         secondary_label.xalign = 0;
