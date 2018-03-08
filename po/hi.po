@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 14:40-0800\n"
+"POT-Creation-Date: 2018-03-08 10:01-0800\n"
 "PO-Revision-Date: 2015-09-17 10:51+0000\n"
 "Last-Translator: Vishal Biswas <vshlbiswas@ymail.com>\n"
 "Language-Team: Hindi <hi@li.org>\n"
@@ -27,7 +27,7 @@ msgstr "सिस्टम सेटिंग फ़ैक्टरी डिफ
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be uneffected."
+"data, such as music and pictures, will be unaffected."
 msgstr "सभी सिस्टम सेटिंग और डेटा मूलभूत मूल्यों को रीसेट किया जाएगा।"
 
 #: src/RestoreDialog.vala:50

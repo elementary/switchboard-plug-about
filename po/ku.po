@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 14:40-0800\n"
+"POT-Creation-Date: 2018-03-08 10:01-0800\n"
 "PO-Revision-Date: 2018-02-05 00:11+0000\n"
 "Last-Translator: Rokar <mail@rokar.de>\n"
 "Language-Team: Kurdish <https://weblate.elementary.io/projects/switchboard/"
@@ -22,7 +22,7 @@ msgstr "Mîhenge pergale de bûe vegerandiye ji kêmasî fabrîqe"
 #: src/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be uneffected."
+"data, such as music and pictures, will be unaffected."
 msgstr ""
 
 #: src/RestoreDialog.vala:50

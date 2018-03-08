@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 14:40-0800\n"
+"POT-Creation-Date: 2018-03-08 10:01-0800\n"
 "PO-Revision-Date: 2017-01-02 03:38+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -27,7 +27,7 @@ msgstr "سىستېما تەڭشەكلىرى زاۋۇتتىن چىققاندىك�
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be uneffected."
+"data, such as music and pictures, will be unaffected."
 msgstr ""
 "بارلىق سىستېما تەڭشەكلىرى ۋە سانلىق مەلۇماتلار سۈكۈتتىكى ھالىتىگە قايتىدۇ"
 

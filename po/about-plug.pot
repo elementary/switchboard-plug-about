@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: about-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 14:40-0800\n"
+"POT-Creation-Date: 2018-03-08 10:01-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: src/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be uneffected."
+"data, such as music and pictures, will be unaffected."
 msgstr ""
 
 #: src/RestoreDialog.vala:50
