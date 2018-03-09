@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2018-03-09 08:13+0000\n"
+"PO-Revision-Date: 2018-03-10 00:04+0000\n"
 "Last-Translator: Piotr Strebski <strebski@o2.pl>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/pl/>\n"
@@ -48,7 +48,7 @@ msgstr "Informacje"
 
 #: src/Plug.vala:37
 msgid "View operating system and hardware information"
-msgstr "Zobacz informacje o systemie oraz sprzęcie"
+msgstr "Wyświetl informacje o systemie oraz sprzęcie"
 
 #: src/Plug.vala:65
 msgid "System Information"
