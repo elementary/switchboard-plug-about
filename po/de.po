@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2017-08-19 13:22+0000\n"
-"Last-Translator: Jörg Arnold <j0ar@posteo.de>\n"
-"Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-about/de/>\n"
+"PO-Revision-Date: 2018-03-10 16:21+0000\n"
+"Last-Translator: Felix Günther <felix.gnthr@gmail.com>\n"
+"Language-Team: German <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-about/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/RestoreDialog.vala:29
@@ -25,13 +25,13 @@ msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Die Systemeinstellungen werden auf die Werkseinstellung zurückgesetzt"
 
 #: src/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 "Alle Systemeinstellungen und Daten werden auf die Standardwerte "
-"zurückgesetzt. Persönliche Daten wie Musik oder Bilder bleiben unverändert."
+"zurückgesetzt. Persönliche Daten wie Musik oder Bilder bleiben hiervon "
+"unberührt."
 
 #: src/RestoreDialog.vala:50
 msgid "Restore Settings"
@@ -107,7 +107,7 @@ msgstr "%s Massenspeicherplatz"
 
 #: src/Views/HardwareView.vala:111
 msgid "Manufacturer Website"
-msgstr ""
+msgstr "Hersteller Webseite"
 
 #: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
 #: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
