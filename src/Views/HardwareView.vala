@@ -61,6 +61,7 @@ public class About.HardwareView : Gtk.Grid {
 
         var graphics_info = new Gtk.Label (graphics);
         graphics_info.ellipsize = Pango.EllipsizeMode.END;
+        graphics_info.justify = Gtk.Justification.CENTER;
         graphics_info.set_selectable (true);
 
         var hdd_info = new Gtk.Label (_("%s storage").printf (hdd));
