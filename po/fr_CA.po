@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 14:40-0800\n"
+"POT-Creation-Date: 2018-03-08 10:01-0800\n"
 "PO-Revision-Date: 2014-07-08 06:26+0000\n"
 "Last-Translator: Nicolas Boivin <nakilio@live.ca>\n"
 "Language-Team: French (Canada) <fr_CA@li.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: src/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be uneffected."
+"data, such as music and pictures, will be unaffected."
 msgstr ""
 
 #: src/RestoreDialog.vala:50
