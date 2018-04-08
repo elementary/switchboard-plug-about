@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2018-04-08 10:00+0000\n"
+"PO-Revision-Date: 2018-04-09 00:04+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/nl/>\n"
@@ -107,7 +107,7 @@ msgstr "%s opslagruimte"
 
 #: src/Views/HardwareView.vala:111
 msgid "Manufacturer Website"
-msgstr "Website Fabrikant"
+msgstr "Website fabrikant"
 
 #: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
 #: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
