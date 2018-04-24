@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2017-05-18 19:58+0000\n"
+"PO-Revision-Date: 2018-04-24 09:50+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
-"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-about/cs/>\n"
+"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-about/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/RestoreDialog.vala:29
@@ -25,13 +25,12 @@ msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systémová nastavení budou obnovena do výchozího stavu"
 
 #: src/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 "Veškerá systémová nastavení a data budou obnovena do výchozího stavu. Osobní "
-"data, jako například hudba či obrázky, tím nebudou ovlivněna."
+"data, jako hudba či obrázky, tím nebudou ovlivněna."
 
 #: src/RestoreDialog.vala:50
 msgid "Restore Settings"
@@ -107,7 +106,7 @@ msgstr "%s úložiště"
 
 #: src/Views/HardwareView.vala:111
 msgid "Manufacturer Website"
-msgstr ""
+msgstr "Webová stránka výrobce"
 
 #: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
 #: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
