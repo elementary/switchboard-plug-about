@@ -34,51 +34,51 @@ public class About.IssueDialog : Granite.MessageDialog {
 
     static construct {
         repo_info = {
-            {_("AppCenter"), "default-apps", "appcenter"},
-            {_("Calculator"), "default-apps", "calculator"},
-            {_("Calendar"), "default-apps", "calendar"},
-            {_("Camera"), "default-apps", "camera"},
-            {_("Code"), "default-apps", "code"},
-            {_("Files"), "default-apps", "files"},
-            {_("Mail"), "default-apps", "mail"},
-            {_("Music"), "default-apps", "music"},
-            {_("Photos"), "default-apps", "photos"},
-            {_("Screenshot"), "default-apps", "screenshot-tool"},
-            {_("Terminal"), "default-apps", "terminal"},
-            {_("Videos"), "default-apps", "videos"},
-            {_("Applications Menu"), "system", "applications-menu"},
-            {_("Lock or Login Screen"), "system", "greeter"},
-            {_("Look & Feel"), "system", "stylesheet"},
-            {_("Multitasking or Window Management"), "system", "gala"},
-            {_("Notifications"), "system", "gala"},
-            {_("Bluetooth"), "panel", "wingpanel-indicator-bluetooth"},
-            {_("Date & Time"), "panel", "wingpanel-indicator-datetime"},
-            {_("Keyboard"), "panel", "wingpanel-indicator-keyboard"},
-            {_("Night Light"), "panel", "wingpanel-indicator-nightlight"},
-            {_("Notifications"), "panel", "wingpanel-indicator-notifications"},
-            {_("Power"), "panel", "wingpanel-indicator-power"},
-            {_("Session"), "panel", "wingpanel-indicator-session"},
-            {_("Sound Indicator"), "panel", "wingpanel-indicator-sound"},
-            {_("Applications"), "settings", "switchboard-plug-applications"},
-            {_("Desktop"), "settings", "switchboard-plug-pantheon-shell"},
-            {_("Language & Region"), "settings", "switchboard-plug-locale"},
-            {_("Notifications"), "settings", "switchboard-plug-notifications"},
-            {_("Security & Privacy"), "settings", "switchboard-plug-security-privacy"},
-            {_("Displays"), "settings", "switchboard-plug-displays"},
-            {_("Keyboard"), "settings", "switchboard-plug-keyboard"},
-            {_("Mouse & Touchpad"), "settings", "switchboard-plug-mouse-touchpad"},
-            {_("Power"), "settings", "switchboard-plug-power"},
-            {_("Printers"), "settings", "switchboard-plug-printers"},
-            {_("Sound"), "settings", "switchboard-plug-sound"},
-            {_("Bluetooth"), "settings", "switchboard-plug-bluetooth"},
-            {_("Network"), "settings", "switchboard-plug-networking"},
-            {_("Online Accounts"), "settings", "switchboard-plug-online-accounts"},
-            {_("Sharing"), "settings", "switchboard-plug-sharing"},
-            {_("About"), "settings", "switchboard-plug-about"},
-            {_("Date & Time"), "settings", "switchboard-plug-datetime"},
-            {_("Parental Control"), "settings", "switchboard-plug-parental-controls"},
-            {_("Universal Access"), "settings", "switchboard-plug-a11y"},
-            {_("User Accounts"), "settings", "switchboard-plug-accounts"}
+            {_("AppCenter"), "system-software-install", "default-apps", "appcenter"},
+            {_("Calculator"), "accessories-calculator", "default-apps", "calculator"},
+            {_("Calendar"), "office-calendar", "default-apps", "calendar"},
+            {_("Camera"), "accessories-camera", "default-apps", "camera"},
+            {_("Code"), "io.elementary.code", "default-apps", "code"},
+            {_("Files"), "system-file-manager", "default-apps", "files"},
+            {_("Mail"), "internet-mail", "default-apps", "mail"},
+            {_("Music"), "multimedia-audio-player", "default-apps", "music"},
+            {_("Photos"), "multimedia-photo-manager", "default-apps", "photos"},
+            {_("Screenshot"), "accessories-screenshot", "default-apps", "screenshot-tool"},
+            {_("Terminal"), "utilities-terminal", "default-apps", "terminal"},
+            {_("Videos"), "multimedia-video-player", "default-apps", "videos"},
+            {_("Applications Menu"), "", "system", "applications-menu"},
+            {_("Lock or Login Screen"), "", "system", "greeter"},
+            {_("Look & Feel"), "system", "", "stylesheet"},
+            {_("Multitasking or Window Management"), "", "system", "gala"},
+            {_("Notifications"), "", "system", "gala"},
+            {_("Bluetooth"), "bluetooth-active-symbolic", "panel", "wingpanel-indicator-bluetooth"},
+            {_("Date & Time"), "appointment-symbolic", "panel", "wingpanel-indicator-datetime"},
+            {_("Keyboard"), "input-keyboard-symbolic", "panel", "wingpanel-indicator-keyboard"},
+            {_("Night Light"), "night-light-symbolic", "panel", "wingpanel-indicator-nightlight"},
+            {_("Notifications"), "notification-symbolic", "panel", "wingpanel-indicator-notifications"},
+            {_("Power"), "battery-full-symbolic", "panel", "wingpanel-indicator-power"},
+            {_("Session"), "system-shutdown-symbolic", "panel", "wingpanel-indicator-session"},
+            {_("Sound"), "audio-volume-high-symbolic", "panel", "wingpanel-indicator-sound"},
+            {_("Applications"), "preferences-desktop-applications", "settings", "switchboard-plug-applications"},
+            {_("Desktop"), "preferences-desktop-wallpaper", "settings", "switchboard-plug-pantheon-shell"},
+            {_("Language & Region"), "preferences-desktop-locale", "settings", "switchboard-plug-locale"},
+            {_("Notifications"), "preferences-system-notifications", "settings", "switchboard-plug-notifications"},
+            {_("Security & Privacy"), "preferences-system-privacy", "settings", "switchboard-plug-security-privacy"},
+            {_("Displays"), "preferences-desktop-display", "settings", "switchboard-plug-displays"},
+            {_("Keyboard"), "preferences-desktop-keyboard", "settings", "switchboard-plug-keyboard"},
+            {_("Mouse & Touchpad"), "preferences-desktop-peripherals", "settings", "switchboard-plug-mouse-touchpad"},
+            {_("Power"), "preferences-system-power", "settings", "switchboard-plug-power"},
+            {_("Printers"), "printer", "settings", "switchboard-plug-printers"},
+            {_("Sound"), "preferences-desktop-sound", "settings", "switchboard-plug-sound"},
+            {_("Bluetooth"), "preferences-bluetooth", "settings", "switchboard-plug-bluetooth"},
+            {_("Network"), "preferences-system-network", "settings", "switchboard-plug-networking"},
+            {_("Online Accounts"), "preferences-desktop-online-accounts", "settings", "switchboard-plug-online-accounts"},
+            {_("Sharing"), "preferences-system-sharing", "settings", "switchboard-plug-sharing"},
+            {_("About"), "dialog-information", "settings", "switchboard-plug-about"},
+            {_("Date & Time"), "preferences-system-time", "settings", "switchboard-plug-datetime"},
+            {_("Parental Control"), "preferences-system-parental-controls", "settings", "switchboard-plug-parental-controls"},
+            {_("Universal Access"), "preferences-desktop-accessibility", "settings", "switchboard-plug-a11y"},
+            {_("User Accounts"), "system-users", "settings", "switchboard-plug-accounts"}
         };
     }
 
@@ -112,7 +112,7 @@ public class About.IssueDialog : Granite.MessageDialog {
         listbox.set_filter_func ((Gtk.ListBoxFilterFunc) filter_function);
 
         for (int i = 0; i < repo_info.length[0]; i++) {
-            var repo_row = new RepoRow (repo_info[i, 0], repo_info[i, 1], repo_info[i, 2]);
+            var repo_row = new RepoRow (repo_info[i, 0], repo_info[i, 1], repo_info[i, 2], repo_info[i, 3]);
             listbox.add (repo_row);
         }
 
@@ -222,12 +222,14 @@ public class About.IssueDialog : Granite.MessageDialog {
     private class RepoRow : Gtk.ListBoxRow {
         public bool selected { get; set; }
         public string category { get; construct; }
+        public string icon_name { get; construct; }
         public string title { get; construct; }
         public string url { get; construct; }
 
-        public RepoRow (string title, string category, string url) {
+        public RepoRow (string title, string icon_name, string category, string url) {
             Object (
                 category: category,
+                icon_name: icon_name,
                 title: title,
                 url: url
             );
@@ -238,20 +240,27 @@ public class About.IssueDialog : Granite.MessageDialog {
             label.hexpand = true;
             label.xalign = 0;
 
-            var icon = new Gtk.Image.from_icon_name ("object-select-symbolic", Gtk.IconSize.MENU);
-            icon.no_show_all = true;
-            icon.visible = false;
+            var selection_icon = new Gtk.Image.from_icon_name ("object-select-symbolic", Gtk.IconSize.MENU);
+            selection_icon.no_show_all = true;
+            selection_icon.visible = false;
 
             var grid = new Gtk.Grid ();
+            grid.column_spacing = 6;
             grid.margin = 3;
             grid.margin_start = grid.margin_end = 6;
+
+            if (icon_name != "") {
+                var icon = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.LARGE_TOOLBAR);
+                icon.pixel_size = 24;
+                grid.add (icon);
+            }
             grid.add (label);
-            grid.add (icon);
+            grid.add (selection_icon);
 
             add (grid);
 
             notify["selected"].connect (() => {
-                icon.visible = selected;
+                selection_icon.visible = selected;
             });
         }
     }
