@@ -34,10 +34,50 @@ public class About.IssueDialog : Granite.MessageDialog {
     static construct {
         repo_info = {
             {_("AppCenter"), "appcenter"},
+            {_("Calculator"), "calculator"},
+            {_("Calendar"), "calendar"},
+            {_("Camera"), "camera"},
+            {_("Code"), "code"},
+            {_("Files"), "files"},
+            {_("Mail"), "mail"},
             {_("Music"), "music"},
+            {_("Photos"), "photos"},
+            {_("Screenshot"), "screenshot-tool"},
+            {_("Terminal"), "terminal"},
+            {_("Videos"), "videos"},
+            {_("Applications Menu"), "applications-menu"},
+            {_("Lock or Login Screen"), "greeter"},
+            {_("Look & Feel"), "stylesheet"},
+            {_("Multitasking or Window Management"), "gala"},
+            {_("Notifications"), "gala"},
+            {_("Bluetooth Indicator"), "wingpanel-indicator-bluetooth"},
+            {_("Date & Time Indicator"), "wingpanel-indicator-datetime"},
+            {_("Keyboard Indicator"), "wingpanel-indicator-keyboard"},
+            {_("Night Light Indicator"), "wingpanel-indicator-nightlight"},
+            {_("Notifications Indicator"), "wingpanel-indicator-notifications"},
+            {_("Power Indicator"), "wingpanel-indicator-power"},
+            {_("Session Indicator"), "wingpanel-indicator-session"},
+            {_("Sound Indicator"), "wingpanel-indicator-sound"},
             {_("System Settings → Applications"), "switchboard-plug-applications"},
-            {_("System Settings → Language & Region"), "switchboard-plug-locale"}
-            
+            {_("System Settings → Desktop"), "switchboard-plug-pantheon-shell"},
+            {_("System Settings → Language & Region"), "switchboard-plug-locale"},
+            {_("System Settings → Notifications"), "switchboard-plug-notifications"},
+            {_("System Settings → Security & Privacy"), "switchboard-plug-security-privacy"},
+            {_("System Settings → Displays"), "switchboard-plug-displays"},
+            {_("System Settings → Keyboard"), "switchboard-plug-keyboard"},
+            {_("System Settings → Mouse & Touchpad"), "switchboard-plug-mouse-touchpad"},
+            {_("System Settings → Power"), "switchboard-plug-power"},
+            {_("System Settings → Printers"), "switchboard-plug-printers"},
+            {_("System Settings → Sound"), "switchboard-plug-sound"},
+            {_("System Settings → Bluetooth"), "switchboard-plug-bluetooth"},
+            {_("System Settings → Network"), "switchboard-plug-networking"},
+            {_("System Settings → Online Accounts"), "switchboard-plug-online-accounts"},
+            {_("System Settings → Sharing"), "switchboard-plug-sharing"},
+            {_("System Settings → About"), "switchboard-plug-about"},
+            {_("System Settings → Date & Time"), "switchboard-plug-datetime"},
+            {_("System Settings → Parental Control"), "switchboard-plug-parental-controls"},
+            {_("System Settings → Universal Access"), "switchboard-plug-a11y"},
+            {_("System Settings → User Accounts"), "switchboard-plug-accounts"}
         };
     }
 
@@ -50,18 +90,25 @@ public class About.IssueDialog : Granite.MessageDialog {
             listbox.add (repo_row);
         }
 
+        var scrolled = new Gtk.ScrolledWindow (null, null);
+        scrolled.add (listbox);
+
         var frame = new Gtk.Frame (null);
-        frame.add (listbox);
+        frame.add (scrolled);
 
         custom_bin.add (frame);
         custom_bin.show_all ();
 
+        height_request = 500;
+
         add_button ("Cancel", Gtk.ResponseType.CANCEL);
-        add_button ("Report Problem", 0);
+
+        var report_button = add_button ("Report Problem", 0);
+        report_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
         listbox.selected_rows_changed.connect (() => {
             foreach (var repo_row in listbox.get_children ()) {
-            ((RepoRow) repo_row).selected = false;
+                ((RepoRow) repo_row).selected = false;
             }
             ((RepoRow) listbox.get_selected_row ()).selected = true;
         });
