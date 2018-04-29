@@ -198,6 +198,7 @@ public class About.Plug : Switchboard.Plug {
         var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
         bug_button.clicked.connect (() => {
             var issue_dialog = new IssueDialog ();
+            issue_dialog.transient_for = (Gtk.Window) main_grid.get_toplevel ();
             issue_dialog.run ();
         });
 
