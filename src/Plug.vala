@@ -20,7 +20,6 @@ public class About.Plug : Switchboard.Plug {
     private string gtk_version;
     private string kernel_version;
     private string website_url;
-    private string bugtracker_url;
     private string support_url;
     private string arch;
     private Gtk.Label based_off;
@@ -88,13 +87,11 @@ public class About.Plug : Switchboard.Plug {
 
             os = osrel["PRETTY_NAME"];
             website_url = osrel["HOME_URL"];
-            bugtracker_url = osrel["BUG_REPORT_URL"];
             support_url = osrel["SUPPORT_URL"];
         } catch (Error e) {
             warning("Couldn't read os-release file, assuming elementary OS");
             os = "elementary OS";
             website_url = "https://elementary.io";
-            bugtracker_url = "https://bugs.launchpad.net/elementaryos/+filebug";
             support_url = "https://elementary.io/support";
 
         }
@@ -200,11 +197,9 @@ public class About.Plug : Switchboard.Plug {
         // Bug button
         var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
         bug_button.clicked.connect (() => {
-            try {
-                AppInfo.launch_default_for_uri (bugtracker_url, null);
-            } catch (Error e) {
-                warning (e.message);
-            }
+            var issue_dialog = new IssueDialog ();
+            issue_dialog.transient_for = (Gtk.Window) main_grid.get_toplevel ();
+            issue_dialog.run ();
         });
 
         // Update button

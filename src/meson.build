@@ -1,6 +1,7 @@
 plug_files = files(
-    'RestoreDialog.vala',
     'Plug.vala',
+    'Dialogs/IssueDialog.vala',
+    'Dialogs/RestoreDialog.vala',
     'Views/HardwareView.vala'
 )
 
