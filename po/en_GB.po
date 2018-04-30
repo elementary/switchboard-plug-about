@@ -8,10 +8,11 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-30 09:47-0700\n"
-"PO-Revision-Date: 2018-04-29 14:20+0000\n"
-"Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
-"Language-Team: English (United Kingdom) <https://weblate.elementary.io/"
-"projects/switchboard/switchboard-plug-about/en_GB/>\n"
+"PO-Revision-Date: 2018-04-30 17:40+0000\n"
+"Last-Translator: Ciaran Ainsworth <cda@whistlingkappa.com>\n"
+"Language-Team: English (United Kingdom) "
+"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
+"about/en_GB/>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,181 +77,180 @@ msgstr "Check for Updates"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "Which of the Following Are You Seeing an Issue With?"
 
 #: src/Dialogs/IssueDialog.vala:29
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "Please select a component from the list."
 
 #: src/Dialogs/IssueDialog.vala:37
 msgid "AppCenter"
-msgstr ""
+msgstr "AppCentre"
 
 #: src/Dialogs/IssueDialog.vala:38
 msgid "Calculator"
-msgstr ""
+msgstr "Calculator"
 
 #: src/Dialogs/IssueDialog.vala:39
 msgid "Calendar"
-msgstr ""
+msgstr "Calendar"
 
 #: src/Dialogs/IssueDialog.vala:40
 msgid "Camera"
-msgstr ""
+msgstr "Camera"
 
 #: src/Dialogs/IssueDialog.vala:41
 msgid "Code"
-msgstr ""
+msgstr "Code"
 
 #: src/Dialogs/IssueDialog.vala:42
 msgid "Files"
-msgstr ""
+msgstr "Files"
 
 #: src/Dialogs/IssueDialog.vala:43
 msgid "Mail"
-msgstr ""
+msgstr "Mail"
 
 #: src/Dialogs/IssueDialog.vala:44
 msgid "Music"
-msgstr ""
+msgstr "Music"
 
 #: src/Dialogs/IssueDialog.vala:45
 msgid "Photos"
-msgstr ""
+msgstr "Photos"
 
 #: src/Dialogs/IssueDialog.vala:46
 msgid "Screenshot"
-msgstr ""
+msgstr "Screenshot"
 
 #: src/Dialogs/IssueDialog.vala:47
 msgid "Terminal"
-msgstr ""
+msgstr "Terminal"
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Videos"
-msgstr ""
+msgstr "Videos"
 
 #: src/Dialogs/IssueDialog.vala:49
 msgid "Applications Menu"
-msgstr ""
+msgstr "Applications Menu"
 
 #: src/Dialogs/IssueDialog.vala:50
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "Lock or Login Screen"
 
 #: src/Dialogs/IssueDialog.vala:51
 msgid "Look & Feel"
-msgstr ""
+msgstr "Look & Feel"
 
 #: src/Dialogs/IssueDialog.vala:52
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "Multitasking or Window Management"
 
 #: src/Dialogs/IssueDialog.vala:53 src/Dialogs/IssueDialog.vala:58
 #: src/Dialogs/IssueDialog.vala:65
 msgid "Notifications"
-msgstr ""
+msgstr "Notifications"
 
 #: src/Dialogs/IssueDialog.vala:54 src/Dialogs/IssueDialog.vala:73
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: src/Dialogs/IssueDialog.vala:55 src/Dialogs/IssueDialog.vala:78
 msgid "Date & Time"
-msgstr ""
+msgstr "Date & Time"
 
 #: src/Dialogs/IssueDialog.vala:56 src/Dialogs/IssueDialog.vala:68
 msgid "Keyboard"
-msgstr ""
+msgstr "Keyboard"
 
 #: src/Dialogs/IssueDialog.vala:57
 msgid "Night Light"
-msgstr ""
+msgstr "Night Light"
 
 #: src/Dialogs/IssueDialog.vala:59 src/Dialogs/IssueDialog.vala:70
 msgid "Power"
-msgstr ""
+msgstr "Power"
 
 #: src/Dialogs/IssueDialog.vala:60
 msgid "Session"
-msgstr ""
+msgstr "Session"
 
 #: src/Dialogs/IssueDialog.vala:61 src/Dialogs/IssueDialog.vala:72
 msgid "Sound"
-msgstr ""
+msgstr "Sound"
 
 #: src/Dialogs/IssueDialog.vala:62
 msgid "Applications"
-msgstr ""
+msgstr "Applications"
 
 #: src/Dialogs/IssueDialog.vala:63
 msgid "Desktop"
-msgstr ""
+msgstr "Desktop"
 
 #: src/Dialogs/IssueDialog.vala:64
 msgid "Language & Region"
-msgstr ""
+msgstr "Language & Region"
 
 #: src/Dialogs/IssueDialog.vala:66
 msgid "Security & Privacy"
-msgstr ""
+msgstr "Security & Privacy"
 
 #: src/Dialogs/IssueDialog.vala:67
 msgid "Displays"
-msgstr ""
+msgstr "Displays"
 
 #: src/Dialogs/IssueDialog.vala:69
 msgid "Mouse & Touchpad"
-msgstr ""
+msgstr "Mouse & Touchpad"
 
 #: src/Dialogs/IssueDialog.vala:71
 msgid "Printers"
-msgstr ""
+msgstr "Printers"
 
 #: src/Dialogs/IssueDialog.vala:74
 msgid "Network"
-msgstr ""
+msgstr "Network"
 
 #: src/Dialogs/IssueDialog.vala:75
 msgid "Online Accounts"
-msgstr ""
+msgstr "Online Accounts"
 
 #: src/Dialogs/IssueDialog.vala:76
 msgid "Sharing"
-msgstr ""
+msgstr "Sharing"
 
 #: src/Dialogs/IssueDialog.vala:79
 msgid "Parental Control"
-msgstr ""
+msgstr "Parental Control"
 
 #: src/Dialogs/IssueDialog.vala:80
 msgid "Universal Access"
-msgstr ""
+msgstr "Universal Access"
 
 #: src/Dialogs/IssueDialog.vala:81
 msgid "User Accounts"
-msgstr ""
+msgstr "User Accounts"
 
 #: src/Dialogs/IssueDialog.vala:86
 msgid "Default Apps"
-msgstr ""
+msgstr "Default Apps"
 
 #: src/Dialogs/IssueDialog.vala:87
 msgid "Panel Indicators"
-msgstr ""
+msgstr "Panel Indicators"
 
 #: src/Dialogs/IssueDialog.vala:88
-#, fuzzy
 msgid "System Settings"
-msgstr "Restore Settings"
+msgstr "System Settings"
 
 #: src/Dialogs/IssueDialog.vala:89
 msgid "Desktop Components"
-msgstr ""
+msgstr "Desktop Components"
 
 #: src/Dialogs/IssueDialog.vala:99
 msgid "Categories"
-msgstr ""
+msgstr "Categories"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
