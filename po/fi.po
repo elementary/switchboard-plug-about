@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-30 09:47-0700\n"
-"PO-Revision-Date: 2018-03-26 00:08+0000\n"
+"PO-Revision-Date: 2018-05-04 00:06+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-about/fi/>\n"
+"Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-about/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,11 +76,11 @@ msgstr "Tarkista päivitykset"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "Minkä seuraavista kanssa kohtasit ongelman?"
 
 #: src/Dialogs/IssueDialog.vala:29
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "Valitse osa luettelosta."
 
 #: src/Dialogs/IssueDialog.vala:37
 msgid "AppCenter"
@@ -88,15 +88,15 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:38
 msgid "Calculator"
-msgstr ""
+msgstr "Laskin"
 
 #: src/Dialogs/IssueDialog.vala:39
 msgid "Calendar"
-msgstr ""
+msgstr "Kalenteri"
 
 #: src/Dialogs/IssueDialog.vala:40
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 #: src/Dialogs/IssueDialog.vala:41
 msgid "Code"
@@ -104,153 +104,152 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:42
 msgid "Files"
-msgstr ""
+msgstr "Tiedostot"
 
 #: src/Dialogs/IssueDialog.vala:43
 msgid "Mail"
-msgstr ""
+msgstr "Sähköposti"
 
 #: src/Dialogs/IssueDialog.vala:44
 msgid "Music"
-msgstr ""
+msgstr "Musiikki"
 
 #: src/Dialogs/IssueDialog.vala:45
 msgid "Photos"
-msgstr ""
+msgstr "Kuvat"
 
 #: src/Dialogs/IssueDialog.vala:46
 msgid "Screenshot"
-msgstr ""
+msgstr "Kuvakaappaus"
 
 #: src/Dialogs/IssueDialog.vala:47
 msgid "Terminal"
-msgstr ""
+msgstr "Pääte"
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Videos"
-msgstr ""
+msgstr "Videot"
 
 #: src/Dialogs/IssueDialog.vala:49
 msgid "Applications Menu"
-msgstr ""
+msgstr "Sovellukset-valikko"
 
 #: src/Dialogs/IssueDialog.vala:50
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "Lukitus- tai kirjautumisnäkymä"
 
 #: src/Dialogs/IssueDialog.vala:51
 msgid "Look & Feel"
-msgstr ""
+msgstr "Ulkoasu"
 
 #: src/Dialogs/IssueDialog.vala:52
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "Moniajo tai ikkunahallinta"
 
 #: src/Dialogs/IssueDialog.vala:53 src/Dialogs/IssueDialog.vala:58
 #: src/Dialogs/IssueDialog.vala:65
 msgid "Notifications"
-msgstr ""
+msgstr "Ilmoitukset"
 
 #: src/Dialogs/IssueDialog.vala:54 src/Dialogs/IssueDialog.vala:73
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: src/Dialogs/IssueDialog.vala:55 src/Dialogs/IssueDialog.vala:78
 msgid "Date & Time"
-msgstr ""
+msgstr "Päivä ja aika"
 
 #: src/Dialogs/IssueDialog.vala:56 src/Dialogs/IssueDialog.vala:68
 msgid "Keyboard"
-msgstr ""
+msgstr "Näppäimistö"
 
 #: src/Dialogs/IssueDialog.vala:57
 msgid "Night Light"
-msgstr ""
+msgstr "Yövalo"
 
 #: src/Dialogs/IssueDialog.vala:59 src/Dialogs/IssueDialog.vala:70
 msgid "Power"
-msgstr ""
+msgstr "Virranhallinta"
 
 #: src/Dialogs/IssueDialog.vala:60
 msgid "Session"
-msgstr ""
+msgstr "Istunto"
 
 #: src/Dialogs/IssueDialog.vala:61 src/Dialogs/IssueDialog.vala:72
 msgid "Sound"
-msgstr ""
+msgstr "Ääni"
 
 #: src/Dialogs/IssueDialog.vala:62
 msgid "Applications"
-msgstr ""
+msgstr "Sovellukset"
 
 #: src/Dialogs/IssueDialog.vala:63
 msgid "Desktop"
-msgstr ""
+msgstr "Työpöytä"
 
 #: src/Dialogs/IssueDialog.vala:64
 msgid "Language & Region"
-msgstr ""
+msgstr "Kieli ja alue"
 
 #: src/Dialogs/IssueDialog.vala:66
 msgid "Security & Privacy"
-msgstr ""
+msgstr "Turvallisuus ja yksityisyys"
 
 #: src/Dialogs/IssueDialog.vala:67
 msgid "Displays"
-msgstr ""
+msgstr "Näytöt"
 
 #: src/Dialogs/IssueDialog.vala:69
 msgid "Mouse & Touchpad"
-msgstr ""
+msgstr "Hiiri ja kosketuslevy"
 
 #: src/Dialogs/IssueDialog.vala:71
 msgid "Printers"
-msgstr ""
+msgstr "Tulostimet"
 
 #: src/Dialogs/IssueDialog.vala:74
 msgid "Network"
-msgstr ""
+msgstr "Verkko"
 
 #: src/Dialogs/IssueDialog.vala:75
 msgid "Online Accounts"
-msgstr ""
+msgstr "Verkkotilit"
 
 #: src/Dialogs/IssueDialog.vala:76
 msgid "Sharing"
-msgstr ""
+msgstr "Jakaminen"
 
 #: src/Dialogs/IssueDialog.vala:79
 msgid "Parental Control"
-msgstr ""
+msgstr "Käytönvalvonta"
 
 #: src/Dialogs/IssueDialog.vala:80
 msgid "Universal Access"
-msgstr ""
+msgstr "Esteettömyys"
 
 #: src/Dialogs/IssueDialog.vala:81
 msgid "User Accounts"
-msgstr ""
+msgstr "Käyttäjätilit"
 
 #: src/Dialogs/IssueDialog.vala:86
 msgid "Default Apps"
-msgstr ""
+msgstr "Oletussovellukset"
 
 #: src/Dialogs/IssueDialog.vala:87
 msgid "Panel Indicators"
-msgstr ""
+msgstr "Paneelin ilmaisimet"
 
 #: src/Dialogs/IssueDialog.vala:88
-#, fuzzy
 msgid "System Settings"
-msgstr "Palauta oletusasetukset"
+msgstr "Järjestelmäasetukset"
 
 #: src/Dialogs/IssueDialog.vala:89
 msgid "Desktop Components"
-msgstr ""
+msgstr "Työpöydän osat"
 
 #: src/Dialogs/IssueDialog.vala:99
 msgid "Categories"
-msgstr ""
+msgstr "Luokat"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
