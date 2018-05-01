@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-30 09:47-0700\n"
-"PO-Revision-Date: 2018-05-01 10:47+0000\n"
+"PO-Revision-Date: 2018-05-04 00:06+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/ja/>\n"
@@ -38,11 +38,11 @@ msgstr "デフォルト設定の復元"
 
 #: src/Plug.vala:66
 msgid "Suggest Translation"
-msgstr "翻訳を提案する"
+msgstr "翻訳を提案"
 
 #: src/Plug.vala:67
 msgid "Report Problems"
-msgstr "問題を報告する"
+msgstr "問題を報告"
 
 #: src/Plug.vala:68
 msgid "Updates"
@@ -68,7 +68,7 @@ msgstr "翻訳を提案"
 
 #: src/Plug.vala:198
 msgid "Report a Problem"
-msgstr "問題点を報告"
+msgstr "問題を報告"
 
 #: src/Plug.vala:206
 msgid "Check for Updates"
