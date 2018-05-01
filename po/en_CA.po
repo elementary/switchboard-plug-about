@@ -8,10 +8,11 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-30 09:47-0700\n"
-"PO-Revision-Date: 2018-03-08 18:04+0000\n"
+"PO-Revision-Date: 2018-05-04 00:06+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
-"Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-about/en_CA/>\n"
+"Language-Team: English (Canada) "
+"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
+"about/en_CA/>\n"
 "Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,67 +77,67 @@ msgstr "Check for Updates"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "Which of the Following Are You Seeing an Issue With?"
 
 #: src/Dialogs/IssueDialog.vala:29
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "Please select a component from the list."
 
 #: src/Dialogs/IssueDialog.vala:37
 msgid "AppCenter"
-msgstr ""
+msgstr "AppCentre"
 
 #: src/Dialogs/IssueDialog.vala:38
 msgid "Calculator"
-msgstr ""
+msgstr "Calculator"
 
 #: src/Dialogs/IssueDialog.vala:39
 msgid "Calendar"
-msgstr ""
+msgstr "Calendar"
 
 #: src/Dialogs/IssueDialog.vala:40
 msgid "Camera"
-msgstr ""
+msgstr "Camera"
 
 #: src/Dialogs/IssueDialog.vala:41
 msgid "Code"
-msgstr ""
+msgstr "Code"
 
 #: src/Dialogs/IssueDialog.vala:42
 msgid "Files"
-msgstr ""
+msgstr "Files"
 
 #: src/Dialogs/IssueDialog.vala:43
 msgid "Mail"
-msgstr ""
+msgstr "Mail"
 
 #: src/Dialogs/IssueDialog.vala:44
 msgid "Music"
-msgstr ""
+msgstr "Music"
 
 #: src/Dialogs/IssueDialog.vala:45
 msgid "Photos"
-msgstr ""
+msgstr "Photos"
 
 #: src/Dialogs/IssueDialog.vala:46
 msgid "Screenshot"
-msgstr ""
+msgstr "Screenshot"
 
 #: src/Dialogs/IssueDialog.vala:47
 msgid "Terminal"
-msgstr ""
+msgstr "Terminal"
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Videos"
-msgstr ""
+msgstr "Videos"
 
 #: src/Dialogs/IssueDialog.vala:49
 msgid "Applications Menu"
-msgstr ""
+msgstr "Applications Menu"
 
 #: src/Dialogs/IssueDialog.vala:50
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "Lock or Login Screen"
 
 #: src/Dialogs/IssueDialog.vala:51
 msgid "Look & Feel"
