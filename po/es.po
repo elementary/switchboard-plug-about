@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-30 09:47-0700\n"
-"PO-Revision-Date: 2018-03-09 03:43+0000\n"
-"Last-Translator: haggen svastian <h2gn@openmailbox.org>\n"
-"Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-about/es/>\n"
+"PO-Revision-Date: 2018-05-03 05:45+0000\n"
+"Last-Translator: Iuninefrendor <iuninefrendor@gmail.com>\n"
+"Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-about/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -80,63 +80,63 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:29
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "Por favor seleccione un componente de la lista."
 
 #: src/Dialogs/IssueDialog.vala:37
 msgid "AppCenter"
-msgstr ""
+msgstr "Centro de Aplicaciones"
 
 #: src/Dialogs/IssueDialog.vala:38
 msgid "Calculator"
-msgstr ""
+msgstr "Calculadora"
 
 #: src/Dialogs/IssueDialog.vala:39
 msgid "Calendar"
-msgstr ""
+msgstr "Calendario"
 
 #: src/Dialogs/IssueDialog.vala:40
 msgid "Camera"
-msgstr ""
+msgstr "Cámara"
 
 #: src/Dialogs/IssueDialog.vala:41
 msgid "Code"
-msgstr ""
+msgstr "Code"
 
 #: src/Dialogs/IssueDialog.vala:42
 msgid "Files"
-msgstr ""
+msgstr "Archivos"
 
 #: src/Dialogs/IssueDialog.vala:43
 msgid "Mail"
-msgstr ""
+msgstr "Correo"
 
 #: src/Dialogs/IssueDialog.vala:44
 msgid "Music"
-msgstr ""
+msgstr "Música"
 
 #: src/Dialogs/IssueDialog.vala:45
 msgid "Photos"
-msgstr ""
+msgstr "Fotos"
 
 #: src/Dialogs/IssueDialog.vala:46
 msgid "Screenshot"
-msgstr ""
+msgstr "Captura de pantalla"
 
 #: src/Dialogs/IssueDialog.vala:47
 msgid "Terminal"
-msgstr ""
+msgstr "Terminal"
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Videos"
-msgstr ""
+msgstr "Vídeos"
 
 #: src/Dialogs/IssueDialog.vala:49
 msgid "Applications Menu"
-msgstr ""
+msgstr "Menú de aplicaciones"
 
 #: src/Dialogs/IssueDialog.vala:50
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "Bloqueo o pantalla de inicio de sesión"
 
 #: src/Dialogs/IssueDialog.vala:51
 msgid "Look & Feel"
@@ -144,72 +144,72 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:52
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "Multitarea o Gestor de ventanas"
 
 #: src/Dialogs/IssueDialog.vala:53 src/Dialogs/IssueDialog.vala:58
 #: src/Dialogs/IssueDialog.vala:65
 msgid "Notifications"
-msgstr ""
+msgstr "Notificaciones"
 
 #: src/Dialogs/IssueDialog.vala:54 src/Dialogs/IssueDialog.vala:73
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: src/Dialogs/IssueDialog.vala:55 src/Dialogs/IssueDialog.vala:78
 msgid "Date & Time"
-msgstr ""
+msgstr "Fecha y hora"
 
 #: src/Dialogs/IssueDialog.vala:56 src/Dialogs/IssueDialog.vala:68
 msgid "Keyboard"
-msgstr ""
+msgstr "Teclado"
 
 #: src/Dialogs/IssueDialog.vala:57
 msgid "Night Light"
-msgstr ""
+msgstr "Night Light"
 
 #: src/Dialogs/IssueDialog.vala:59 src/Dialogs/IssueDialog.vala:70
 msgid "Power"
-msgstr ""
+msgstr "Energía"
 
 #: src/Dialogs/IssueDialog.vala:60
 msgid "Session"
-msgstr ""
+msgstr "Sesión"
 
 #: src/Dialogs/IssueDialog.vala:61 src/Dialogs/IssueDialog.vala:72
 msgid "Sound"
-msgstr ""
+msgstr "Sonido"
 
 #: src/Dialogs/IssueDialog.vala:62
 msgid "Applications"
-msgstr ""
+msgstr "Aplicaciones"
 
 #: src/Dialogs/IssueDialog.vala:63
 msgid "Desktop"
-msgstr ""
+msgstr "Escritorio"
 
 #: src/Dialogs/IssueDialog.vala:64
 msgid "Language & Region"
-msgstr ""
+msgstr "Idioma y región"
 
 #: src/Dialogs/IssueDialog.vala:66
 msgid "Security & Privacy"
-msgstr ""
+msgstr "Seguridad y privacidad"
 
 #: src/Dialogs/IssueDialog.vala:67
 msgid "Displays"
-msgstr ""
+msgstr "Monitores"
 
 #: src/Dialogs/IssueDialog.vala:69
 msgid "Mouse & Touchpad"
-msgstr ""
+msgstr "Ratón y panel táctil"
 
 #: src/Dialogs/IssueDialog.vala:71
 msgid "Printers"
-msgstr ""
+msgstr "Impresoras"
 
 #: src/Dialogs/IssueDialog.vala:74
 msgid "Network"
-msgstr ""
+msgstr "Red"
 
 #: src/Dialogs/IssueDialog.vala:75
 msgid "Online Accounts"
