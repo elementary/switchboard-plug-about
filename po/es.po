@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-30 09:47-0700\n"
-"PO-Revision-Date: 2018-05-03 05:45+0000\n"
-"Last-Translator: Iuninefrendor <iuninefrendor@gmail.com>\n"
+"PO-Revision-Date: 2018-05-04 00:06+0000\n"
+"Last-Translator: Alain M. <alain23@protonmail.com>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/es/>\n"
 "Language: es\n"
@@ -76,7 +76,7 @@ msgstr "Buscar actualizaciones"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "¿Con cuál de los siguientes está teniendo problemas?"
 
 #: src/Dialogs/IssueDialog.vala:29
 msgid "Please select a component from the list."
@@ -213,31 +213,31 @@ msgstr "Red"
 
 #: src/Dialogs/IssueDialog.vala:75
 msgid "Online Accounts"
-msgstr ""
+msgstr "Cuentas en línea"
 
 #: src/Dialogs/IssueDialog.vala:76
 msgid "Sharing"
-msgstr ""
+msgstr "Compartiendo"
 
 #: src/Dialogs/IssueDialog.vala:79
 msgid "Parental Control"
-msgstr ""
+msgstr "Control Parental"
 
 #: src/Dialogs/IssueDialog.vala:80
 msgid "Universal Access"
-msgstr ""
+msgstr "Acceso universal"
 
 #: src/Dialogs/IssueDialog.vala:81
 msgid "User Accounts"
-msgstr ""
+msgstr "Cuentas de usuario"
 
 #: src/Dialogs/IssueDialog.vala:86
 msgid "Default Apps"
-msgstr ""
+msgstr "Aplicaciones predeterminadas"
 
 #: src/Dialogs/IssueDialog.vala:87
 msgid "Panel Indicators"
-msgstr ""
+msgstr "Panel de Indicadores"
 
 #: src/Dialogs/IssueDialog.vala:88
 #, fuzzy
@@ -246,11 +246,11 @@ msgstr "Restaurar configuración"
 
 #: src/Dialogs/IssueDialog.vala:89
 msgid "Desktop Components"
-msgstr ""
+msgstr "Componentes de escritorio"
 
 #: src/Dialogs/IssueDialog.vala:99
 msgid "Categories"
-msgstr ""
+msgstr "Categorías"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
