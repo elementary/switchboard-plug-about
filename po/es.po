@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-30 09:47-0700\n"
-"PO-Revision-Date: 2018-05-04 00:06+0000\n"
-"Last-Translator: Alain M. <alain23@protonmail.com>\n"
+"PO-Revision-Date: 2018-05-04 20:41+0000\n"
+"Last-Translator: Iuninefrendor <iuninefrendor@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/es/>\n"
 "Language: es\n"
@@ -140,7 +140,7 @@ msgstr "Bloqueo o pantalla de inicio de sesión"
 
 #: src/Dialogs/IssueDialog.vala:51
 msgid "Look & Feel"
-msgstr ""
+msgstr "Personalización"
 
 #: src/Dialogs/IssueDialog.vala:52
 msgid "Multitasking or Window Management"
@@ -240,9 +240,8 @@ msgid "Panel Indicators"
 msgstr "Panel de Indicadores"
 
 #: src/Dialogs/IssueDialog.vala:88
-#, fuzzy
 msgid "System Settings"
-msgstr "Restaurar configuración"
+msgstr "Ajustes del sistema"
 
 #: src/Dialogs/IssueDialog.vala:89
 msgid "Desktop Components"
