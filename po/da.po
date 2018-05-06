@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-30 09:47-0700\n"
-"PO-Revision-Date: 2018-05-04 00:06+0000\n"
+"PO-Revision-Date: 2018-05-07 00:02+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/da/>\n"
@@ -149,19 +149,19 @@ msgstr ""
 #: src/Dialogs/IssueDialog.vala:53 src/Dialogs/IssueDialog.vala:58
 #: src/Dialogs/IssueDialog.vala:65
 msgid "Notifications"
-msgstr ""
+msgstr "Notifikationer"
 
 #: src/Dialogs/IssueDialog.vala:54 src/Dialogs/IssueDialog.vala:73
 msgid "Bluetooth"
-msgstr ""
+msgstr "Bluetooth"
 
 #: src/Dialogs/IssueDialog.vala:55 src/Dialogs/IssueDialog.vala:78
 msgid "Date & Time"
-msgstr ""
+msgstr "Dato & Tid"
 
 #: src/Dialogs/IssueDialog.vala:56 src/Dialogs/IssueDialog.vala:68
 msgid "Keyboard"
-msgstr ""
+msgstr "Tastatur"
 
 #: src/Dialogs/IssueDialog.vala:57
 msgid "Night Light"
@@ -173,27 +173,27 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:60
 msgid "Session"
-msgstr ""
+msgstr "Session"
 
 #: src/Dialogs/IssueDialog.vala:61 src/Dialogs/IssueDialog.vala:72
 msgid "Sound"
-msgstr ""
+msgstr "Lyd"
 
 #: src/Dialogs/IssueDialog.vala:62
 msgid "Applications"
-msgstr ""
+msgstr "Applikationer"
 
 #: src/Dialogs/IssueDialog.vala:63
 msgid "Desktop"
-msgstr ""
+msgstr "Skrivebord"
 
 #: src/Dialogs/IssueDialog.vala:64
 msgid "Language & Region"
-msgstr ""
+msgstr "Sprog & Region"
 
 #: src/Dialogs/IssueDialog.vala:66
 msgid "Security & Privacy"
-msgstr ""
+msgstr "Sikkerhed & Privatliv"
 
 #: src/Dialogs/IssueDialog.vala:67
 msgid "Displays"
@@ -201,35 +201,35 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:69
 msgid "Mouse & Touchpad"
-msgstr ""
+msgstr "Mus & Touchpad"
 
 #: src/Dialogs/IssueDialog.vala:71
 msgid "Printers"
-msgstr ""
+msgstr "Printere"
 
 #: src/Dialogs/IssueDialog.vala:74
 msgid "Network"
-msgstr ""
+msgstr "Netværk"
 
 #: src/Dialogs/IssueDialog.vala:75
 msgid "Online Accounts"
-msgstr ""
+msgstr "Online Konti"
 
 #: src/Dialogs/IssueDialog.vala:76
 msgid "Sharing"
-msgstr ""
+msgstr "Deling"
 
 #: src/Dialogs/IssueDialog.vala:79
 msgid "Parental Control"
-msgstr ""
+msgstr "Forældre Kontrol"
 
 #: src/Dialogs/IssueDialog.vala:80
 msgid "Universal Access"
-msgstr ""
+msgstr "Universel Adgang"
 
 #: src/Dialogs/IssueDialog.vala:81
 msgid "User Accounts"
-msgstr ""
+msgstr "Bruger Konti"
 
 #: src/Dialogs/IssueDialog.vala:86
 msgid "Default Apps"
@@ -237,12 +237,11 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:87
 msgid "Panel Indicators"
-msgstr ""
+msgstr "Panelindikatorer"
 
 #: src/Dialogs/IssueDialog.vala:88
-#, fuzzy
 msgid "System Settings"
-msgstr "Gendan indstillinger"
+msgstr "Systemindstillinger"
 
 #: src/Dialogs/IssueDialog.vala:89
 msgid "Desktop Components"
@@ -250,7 +249,7 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:99
 msgid "Categories"
-msgstr ""
+msgstr "Kategorier"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
