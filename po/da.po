@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-30 09:47-0700\n"
-"PO-Revision-Date: 2018-05-07 00:02+0000\n"
+"PO-Revision-Date: 2018-05-07 15:31+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/da/>\n"
@@ -169,7 +169,7 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:59 src/Dialogs/IssueDialog.vala:70
 msgid "Power"
-msgstr ""
+msgstr "Strøm"
 
 #: src/Dialogs/IssueDialog.vala:60
 msgid "Session"
@@ -197,7 +197,7 @@ msgstr "Sikkerhed & Privatliv"
 
 #: src/Dialogs/IssueDialog.vala:67
 msgid "Displays"
-msgstr ""
+msgstr "Skærme"
 
 #: src/Dialogs/IssueDialog.vala:69
 msgid "Mouse & Touchpad"
@@ -233,7 +233,7 @@ msgstr "Bruger Konti"
 
 #: src/Dialogs/IssueDialog.vala:86
 msgid "Default Apps"
-msgstr ""
+msgstr "Standard Apps"
 
 #: src/Dialogs/IssueDialog.vala:87
 msgid "Panel Indicators"
