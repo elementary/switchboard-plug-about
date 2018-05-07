@@ -8,10 +8,11 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2018-05-04 00:06+0000\n"
+"PO-Revision-Date: 2018-05-07 15:50+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
-"Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-about/en_CA/>\n"
+"Language-Team: English (Canada) "
+"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
+"about/en_CA/>\n"
 "Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,16 +85,15 @@ msgstr "Please select a component from the list."
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Categories"
-msgstr ""
+msgstr "Categories"
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "Cancel"
 
 #: src/Dialogs/IssueDialog.vala:110
-#, fuzzy
 msgid "Report Problem"
-msgstr "Report Problems"
+msgstr "Report Problem"
 
 #: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
@@ -105,36 +105,35 @@ msgstr "Lock or Login Screen"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
-msgstr ""
+msgstr "Look & Feel"
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "Multitasking or Window Management"
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
-msgstr ""
+msgstr "Notifications"
 
 #: src/Dialogs/IssueDialog.vala:424
 msgid "Session"
-msgstr ""
+msgstr "Session"
 
 #: src/Dialogs/IssueDialog.vala:446
 msgid "Panel Indicators"
-msgstr ""
+msgstr "Panel Indicators"
 
 #: src/Dialogs/IssueDialog.vala:448
-#, fuzzy
 msgid "System Settings"
-msgstr "Restore Settings"
+msgstr "System Settings"
 
 #: src/Dialogs/IssueDialog.vala:450
 msgid "Desktop Components"
-msgstr ""
+msgstr "Desktop Components"
 
 #: src/Dialogs/IssueDialog.vala:452
 msgid "Default Apps"
-msgstr ""
+msgstr "Default Apps"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
