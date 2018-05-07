@@ -18,9 +18,8 @@
 */
 
 public class About.IssueDialog : Granite.MessageDialog {
-    private static string[,] repo_info;
     private Gtk.ListBox listbox;
-    private string? category_filter;
+    private Category? category_filter;
 
     public IssueDialog () {
         Object (
@@ -32,61 +31,11 @@ public class About.IssueDialog : Granite.MessageDialog {
         );
     }
 
-    static construct {
-        repo_info = {
-            {_("AppCenter"), "system-software-install", "default-apps", "appcenter"},
-            {_("Calculator"), "accessories-calculator", "default-apps", "calculator"},
-            {_("Calendar"), "office-calendar", "default-apps", "calendar"},
-            {_("Camera"), "accessories-camera", "default-apps", "camera"},
-            {_("Code"), "io.elementary.code", "default-apps", "code"},
-            {_("Files"), "system-file-manager", "default-apps", "files"},
-            {_("Mail"), "internet-mail", "default-apps", "mail"},
-            {_("Music"), "multimedia-audio-player", "default-apps", "music"},
-            {_("Photos"), "multimedia-photo-manager", "default-apps", "photos"},
-            {_("Screenshot"), "accessories-screenshot", "default-apps", "screenshot-tool"},
-            {_("Terminal"), "utilities-terminal", "default-apps", "terminal"},
-            {_("Videos"), "multimedia-video-player", "default-apps", "videos"},
-            {_("Applications Menu"), "", "system", "applications-menu"},
-            {_("Lock or Login Screen"), "", "system", "greeter"},
-            {_("Look & Feel"), "system", "", "stylesheet"},
-            {_("Multitasking or Window Management"), "", "system", "gala"},
-            {_("Notifications"), "", "system", "gala"},
-            {_("Bluetooth"), "bluetooth-active-symbolic", "panel", "wingpanel-indicator-bluetooth"},
-            {_("Date & Time"), "appointment-symbolic", "panel", "wingpanel-indicator-datetime"},
-            {_("Keyboard"), "input-keyboard-symbolic", "panel", "wingpanel-indicator-keyboard"},
-            {_("Night Light"), "night-light-symbolic", "panel", "wingpanel-indicator-nightlight"},
-            {_("Notifications"), "notification-symbolic", "panel", "wingpanel-indicator-notifications"},
-            {_("Power"), "battery-full-symbolic", "panel", "wingpanel-indicator-power"},
-            {_("Session"), "system-shutdown-symbolic", "panel", "wingpanel-indicator-session"},
-            {_("Sound"), "audio-volume-high-symbolic", "panel", "wingpanel-indicator-sound"},
-            {_("Applications"), "preferences-desktop-applications", "settings", "switchboard-plug-applications"},
-            {_("Desktop"), "preferences-desktop-wallpaper", "settings", "switchboard-plug-pantheon-shell"},
-            {_("Language & Region"), "preferences-desktop-locale", "settings", "switchboard-plug-locale"},
-            {_("Notifications"), "preferences-system-notifications", "settings", "switchboard-plug-notifications"},
-            {_("Security & Privacy"), "preferences-system-privacy", "settings", "switchboard-plug-security-privacy"},
-            {_("Displays"), "preferences-desktop-display", "settings", "switchboard-plug-displays"},
-            {_("Keyboard"), "preferences-desktop-keyboard", "settings", "switchboard-plug-keyboard"},
-            {_("Mouse & Touchpad"), "preferences-desktop-peripherals", "settings", "switchboard-plug-mouse-touchpad"},
-            {_("Power"), "preferences-system-power", "settings", "switchboard-plug-power"},
-            {_("Printers"), "printer", "settings", "switchboard-plug-printers"},
-            {_("Sound"), "preferences-desktop-sound", "settings", "switchboard-plug-sound"},
-            {_("Bluetooth"), "preferences-bluetooth", "settings", "switchboard-plug-bluetooth"},
-            {_("Network"), "preferences-system-network", "settings", "switchboard-plug-networking"},
-            {_("Online Accounts"), "preferences-desktop-online-accounts", "settings", "switchboard-plug-online-accounts"},
-            {_("Sharing"), "preferences-system-sharing", "settings", "switchboard-plug-sharing"},
-            {_("About"), "dialog-information", "settings", "switchboard-plug-about"},
-            {_("Date & Time"), "preferences-system-time", "settings", "switchboard-plug-datetime"},
-            {_("Parental Control"), "preferences-system-parental-controls", "settings", "switchboard-plug-parental-controls"},
-            {_("Universal Access"), "preferences-desktop-accessibility", "settings", "switchboard-plug-a11y"},
-            {_("User Accounts"), "system-users", "settings", "switchboard-plug-accounts"}
-        };
-    }
-
     construct {
-        var apps_category = new CategoryRow (_("Default Apps"), "default-apps");
-        var panel_category = new CategoryRow (_("Panel Indicators"), "panel");
-        var settings_category = new CategoryRow (_("System Settings"), "settings");
-        var system_category = new CategoryRow (_("Desktop Components"), "system");
+        var apps_category = new CategoryRow (Category.DEFAULT_APPS);
+        var panel_category = new CategoryRow (Category.PANEL);
+        var settings_category = new CategoryRow (Category.SETTINGS);
+        var system_category = new CategoryRow (Category.SYSTEM);
 
         var category_list = new Gtk.ListBox ();
         category_list.activate_on_single_click = true;
@@ -109,10 +58,27 @@ public class About.IssueDialog : Granite.MessageDialog {
 
         listbox = new Gtk.ListBox ();
         listbox.expand = true;
-        listbox.set_filter_func ((Gtk.ListBoxFilterFunc) filter_function);
+        listbox.set_filter_func (filter_function);
+        listbox.set_sort_func (sort_function);
 
-        for (int i = 0; i < repo_info.length[0]; i++) {
-            var repo_row = new RepoRow (repo_info[i, 0], repo_info[i, 1], repo_info[i, 2], repo_info[i, 3]);
+        foreach (var app in app_entries) {
+            var desktop_info = new DesktopAppInfo (app.app_id + ".desktop");
+            var repo_row = new RepoRow (desktop_info.get_display_name (), desktop_info.get_icon (), Category.DEFAULT_APPS, app.github_suffix);
+            listbox.add (repo_row);
+        }
+
+        foreach (var entry in system_entries) {
+            var repo_row = new RepoRow (entry.name, null, Category.SYSTEM, entry.github_suffix);
+            listbox.add (repo_row);
+        }
+
+        foreach (var entry in switchboard_entries) {
+            var repo_row = new RepoRow (dgettext (entry.gettext_domain, entry.name), new ThemedIcon (entry.icon), Category.SETTINGS, entry.github_suffix);
+            listbox.add (repo_row);
+        }
+
+        foreach (var entry in wingpanel_entries) {
+            var repo_row = new RepoRow (dgettext (entry.gettext_domain, entry.name), new ThemedIcon (entry.icon), Category.PANEL, entry.github_suffix);
             listbox.add (repo_row);
         }
 
@@ -139,16 +105,16 @@ public class About.IssueDialog : Granite.MessageDialog {
 
         height_request = 500;
 
-        add_button ("Cancel", Gtk.ResponseType.CANCEL);
+        add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 
-        var report_button = add_button ("Report Problem", 0);
+        var report_button = add_button (_("Report Problem"), 0);
         report_button.sensitive = false;
         report_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
         category_list.row_activated.connect ((row) => {
             stack.visible_child = repo_list_grid;
             category_filter = ((CategoryRow) row).category;
-            category_title.label = ((CategoryRow) row).title;
+            category_title.label = ((CategoryRow) row).category.to_string ();
             listbox.invalidate_filter ();
             var adjustment = scrolled.get_vadjustment ();
             adjustment.set_value (adjustment.lower);
@@ -174,7 +140,7 @@ public class About.IssueDialog : Granite.MessageDialog {
         if (response_id == 0) {
             try {
                 var url = ((RepoRow) listbox.get_selected_row ()).url;
-                AppInfo.launch_default_for_uri ("https://github.com/elementary/%s/issues/new".printf (url), null);
+                AppInfo.launch_default_for_uri ("https://github.com/elementary/%s/issues".printf (url), null);
             } catch (Error e) {
                 critical (e.message);
             }
@@ -184,26 +150,319 @@ public class About.IssueDialog : Granite.MessageDialog {
     }
 
     [CCode (instance_pos = -1)]
-    private bool filter_function (RepoRow row) {
-        if (row.category == category_filter) {
+    private bool filter_function (Gtk.ListBoxRow row) {
+        if (((RepoRow) row).category == category_filter) {
             return true;
         }
         return false;
     }
 
-    private class CategoryRow : Gtk.ListBoxRow {
-        public string category { get; construct; }
-        public string title { get; construct; }
+    [CCode (instance_pos = -1)]
+    private int sort_function (Gtk.ListBoxRow row1, Gtk.ListBoxRow row2) {
+        return ((RepoRow) row1).title.collate (((RepoRow) row2).title);
+    }
 
-        public CategoryRow (string title, string category) {
-            Object (
-                category: category,
-                title: title
-            );
+    private struct AppEntry {
+        string app_id;
+        string github_suffix;
+    }
+
+    static AppEntry[] app_entries = {
+        AppEntry () {
+            app_id = "io.elementary.appcenter",
+            github_suffix = "appcenter"
+        },
+        AppEntry () {
+            app_id = "io.elementary.calculator",
+            github_suffix = "calculator"
+        },
+        AppEntry () {
+            app_id = "io.elementary.calendar",
+            github_suffix = "calendar"
+        },
+        AppEntry () {
+            app_id = "org.pantheon.camera",
+            github_suffix = "camera"
+        },
+        AppEntry () {
+            app_id = "io.elementary.code",
+            github_suffix = "code"
+        },
+        AppEntry () {
+            app_id = "io.elementary.files",
+            github_suffix = "files"
+        },
+        AppEntry () {
+            app_id = "org.pantheon.mail",
+            github_suffix = "mail"
+        },
+        AppEntry () {
+            app_id = "io.elementary.music",
+            github_suffix = "music"
+        },
+        AppEntry () {
+            app_id = "io.elementary.photos",
+            github_suffix = "photos"
+        },
+        AppEntry () {
+            app_id = "screenshot-tool",
+            github_suffix = "screenshot-tool"
+        },
+        AppEntry () {
+            app_id = "io.elementary.terminal",
+            github_suffix = "terminal"
+        },
+        AppEntry () {
+            app_id = "io.elementary.videos",
+            github_suffix = "videos"
+        }
+    };
+
+    private struct SystemEntry {
+        string name;
+        string github_suffix;
+    }
+
+    static SystemEntry[] system_entries = {
+        SystemEntry () {
+            name = _("Applications Menu"),
+            github_suffix = "applications-menu"
+        },
+        SystemEntry () {
+            name = _("Lock or Login Screen"),
+            github_suffix = "greeter"
+        },
+        SystemEntry () {
+            name = _("Look & Feel"),
+            github_suffix = "stylesheet"
+        },
+        SystemEntry () {
+            name = _("Multitasking or Window Management"),
+            github_suffix = "gala"
+        },
+        SystemEntry () {
+            name = _("Notifications"),
+            github_suffix = "gala"
+        }
+    };
+
+    private struct SwitchboardEntry {
+        string name;
+        string gettext_domain;
+        string icon;
+        string github_suffix;
+    }
+
+    static SwitchboardEntry[] switchboard_entries = {
+        SwitchboardEntry () {
+            name = "Applications",
+            gettext_domain = "applications-plug",
+            icon = "preferences-desktop-applications",
+            github_suffix = "switchboard-plug-applications"
+        },
+        SwitchboardEntry () {
+            name = "Desktop",
+            gettext_domain = "pantheon-desktop-plug",
+            icon = "preferences-desktop-wallpaper",
+            github_suffix = "switchboard-plug-pantheon-shell"
+        },
+        SwitchboardEntry () {
+            name = "Language & Region",
+            gettext_domain = "locale-plug",
+            icon = "preferences-desktop-locale",
+            github_suffix = "switchboard-plug-locale"
+        },
+        SwitchboardEntry () {
+            name = "Notifications",
+            gettext_domain = "notifications-plug",
+            icon = "preferences-system-notifications",
+            github_suffix = "switchboard-plug-notifications"
+        },
+        SwitchboardEntry () {
+            name = "Security & Privacy",
+            gettext_domain = "pantheon-security-privacy-plug",
+            icon = "preferences-system-privacy",
+            github_suffix = "switchboard-plug-security-privacy"
+        },
+        SwitchboardEntry () {
+            name = "Displays",
+            gettext_domain = "pantheon-display-plug",
+            icon = "preferences-desktop-display",
+            github_suffix = "switchboard-plug-displays"
+        },
+        SwitchboardEntry () {
+            name = "Keyboard",
+            gettext_domain = "keyboard-plug",
+            icon = "preferences-desktop-keyboard",
+            github_suffix = "switchboard-plug-keyboard"
+        },
+        SwitchboardEntry () {
+            name = "Mouse & Touchpad",
+            gettext_domain = "mouse-touchpad-plug",
+            icon = "preferences-desktop-peripherals",
+            github_suffix = "switchboard-plug-mouse-touchpad"
+        },
+        SwitchboardEntry () {
+            name = "Power",
+            gettext_domain = "power-plug",
+            icon = "preferences-system-power",
+            github_suffix = "switchboard-plug-power"
+        },
+        SwitchboardEntry () {
+            name = "Printers",
+            gettext_domain = "printers-plug",
+            icon = "printer",
+            github_suffix = "switchboard-plug-printers"
+        },
+        SwitchboardEntry () {
+            name = "Sound",
+            gettext_domain = "sound-plug",
+            icon = "preferences-desktop-sound",
+            github_suffix = "switchboard-plug-sound"
+        },
+        SwitchboardEntry () {
+            name = "Bluetooth",
+            gettext_domain = "bluetooth-plug",
+            icon = "preferences-bluetooth",
+            github_suffix = "switchboard-plug-bluetooth"
+        },
+        SwitchboardEntry () {
+            name = "Network",
+            gettext_domain = "networking-plug",
+            icon = "preferences-system-network",
+            github_suffix = "switchboard-plug-networking"
+        },
+        SwitchboardEntry () {
+            name = "Online Accounts",
+            gettext_domain = "pantheon-online-accounts",
+            icon = "preferences-desktop-online-accounts",
+            github_suffix = "switchboard-plug-online-accounts"
+        },
+        SwitchboardEntry () {
+            name = "Sharing",
+            gettext_domain = "sharing-plug",
+            icon = "preferences-system-sharing",
+            github_suffix = "switchboard-plug-sharing"
+        },
+        SwitchboardEntry () {
+            name = "About",
+            gettext_domain = "about-plug",
+            icon = "dialog-information",
+            github_suffix = "switchboard-plug-about"
+        },
+        SwitchboardEntry () {
+            name = "Date & Time",
+            gettext_domain = "datetime-plug",
+            icon = "preferences-system-time",
+            github_suffix = "switchboard-plug-datetime"
+        },
+        SwitchboardEntry () {
+            name = "Parental Control",
+            gettext_domain = "parental-controls-plug",
+            icon = "preferences-system-parental-controls",
+            github_suffix = "switchboard-plug-parental-controls"
+        },
+        SwitchboardEntry () {
+            name = "Universal Access",
+            gettext_domain = "accessibility-plug",
+            icon = "preferences-desktop-accessibility",
+            github_suffix = "switchboard-plug-a11y"
+        },
+        SwitchboardEntry () {
+            name = "User Accounts",
+            gettext_domain = "useraccounts-plug",
+            icon = "system-users",
+            github_suffix = "switchboard-plug-accounts"
+        }
+    };
+
+    private struct WingpanelEntry {
+        string name;
+        string gettext_domain;
+        string icon;
+        string github_suffix;
+    }
+
+    static WingpanelEntry[] wingpanel_entries = {
+        WingpanelEntry () {
+            name = "Bluetooth",
+            gettext_domain = "bluetooth-plug",
+            icon = "bluetooth-active-symbolic",
+            github_suffix = "wingpanel-indicator-bluetooth"
+        },
+        WingpanelEntry () {
+            name = "Date & Time",
+            gettext_domain = "datetime-plug",
+            icon = "appointment-symbolic",
+            github_suffix = "wingpanel-indicator-datetime"
+        },
+        WingpanelEntry () {
+            name = "Keyboard",
+            gettext_domain = "keyboard-plug",
+            icon = "input-keyboard-symbolic",
+            github_suffix = "wingpanel-indicator-keyboard"
+        },
+        WingpanelEntry () {
+            name = "Night Light",
+            gettext_domain = "pantheon-display-plug",
+            icon = "night-light-symbolic",
+            github_suffix = "wingpanel-indicator-nightlight"
+        },
+        WingpanelEntry () {
+            name = "Notifications",
+            gettext_domain = "notifications-plug",
+            icon = "notification-symbolic",
+            github_suffix = "wingpanel-indicator-notifications"
+        },
+        WingpanelEntry () {
+            name = "Power",
+            gettext_domain = "power-plug",
+            icon = "battery-full-symbolic",
+            github_suffix = "wingpanel-indicator-power"
+        },
+        WingpanelEntry () {
+            name = N_("Session"),
+            gettext_domain = "about-plug",
+            icon = "system-shutdown-symbolic",
+            github_suffix = "wingpanel-indicator-session"
+        },
+        WingpanelEntry () {
+            name = "Sound",
+            gettext_domain = "sound-plug",
+            icon = "audio-volume-high-symbolic",
+            github_suffix = "wingpanel-indicator-sound"
+        }
+    };
+
+    private enum Category {
+        DEFAULT_APPS,
+        PANEL,
+        SETTINGS,
+        SYSTEM;
+
+        public string to_string () {
+            switch (this) {
+                case PANEL:
+                    return _("Panel Indicators");
+                case SETTINGS:
+                    return _("System Settings");
+                case SYSTEM:
+                    return _("Desktop Components");
+                default:
+                    return _("Default Apps");
+            }
+        }
+    }
+
+    private class CategoryRow : Gtk.ListBoxRow {
+        public Category category { get; construct; }
+
+        public CategoryRow (Category category) {
+            Object (category: category);
         }
 
         construct {
-            var label = new Gtk.Label (title);
+            var label = new Gtk.Label (category.to_string ());
             label.hexpand = true;
             label.xalign = 0;
 
@@ -221,15 +480,15 @@ public class About.IssueDialog : Granite.MessageDialog {
 
     private class RepoRow : Gtk.ListBoxRow {
         public bool selected { get; set; }
-        public string category { get; construct; }
-        public string icon_name { get; construct; }
+        public Category category { get; construct; }
+        public GLib.Icon? icon { get; construct; }
         public string title { get; construct; }
         public string url { get; construct; }
 
-        public RepoRow (string title, string icon_name, string category, string url) {
+        public RepoRow (string title, GLib.Icon? icon, Category category, string url) {
             Object (
                 category: category,
-                icon_name: icon_name,
+                icon: icon,
                 title: title,
                 url: url
             );
@@ -249,8 +508,8 @@ public class About.IssueDialog : Granite.MessageDialog {
             grid.margin = 3;
             grid.margin_start = grid.margin_end = 6;
 
-            if (icon_name != "") {
-                var icon = new Gtk.Image.from_icon_name (icon_name, Gtk.IconSize.LARGE_TOOLBAR);
+            if (icon != null) {
+                var icon = new Gtk.Image.from_gicon (icon, Gtk.IconSize.LARGE_TOOLBAR);
                 icon.pixel_size = 24;
                 grid.add (icon);
             }
