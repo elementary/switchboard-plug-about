@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-30 09:47-0700\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
 "PO-Revision-Date: 2018-05-04 00:06+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
-"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-about/ja/>\n"
+"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-about/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:35 src/Dialogs/IssueDialog.vala:77
+#: src/Plug.vala:35
 msgid "About"
 msgstr "情報"
 
@@ -74,182 +74,66 @@ msgstr "問題を報告"
 msgid "Check for Updates"
 msgstr "アップデートを確認"
 
-#: src/Dialogs/IssueDialog.vala:28
+#: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
 msgstr "以下のどのアプリにおいて問題が発生していますか？"
 
-#: src/Dialogs/IssueDialog.vala:29
+#: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
 msgstr "リストからコンポーネントをお選びください。"
 
-#: src/Dialogs/IssueDialog.vala:37
-msgid "AppCenter"
-msgstr "AppCenter"
-
-#: src/Dialogs/IssueDialog.vala:38
-msgid "Calculator"
-msgstr "電卓"
-
-#: src/Dialogs/IssueDialog.vala:39
-msgid "Calendar"
-msgstr "カレンダー"
-
-#: src/Dialogs/IssueDialog.vala:40
-msgid "Camera"
-msgstr "カメラ"
-
-#: src/Dialogs/IssueDialog.vala:41
-msgid "Code"
-msgstr "Code"
-
-#: src/Dialogs/IssueDialog.vala:42
-msgid "Files"
-msgstr "ファイル"
-
-#: src/Dialogs/IssueDialog.vala:43
-msgid "Mail"
-msgstr "メール"
-
-#: src/Dialogs/IssueDialog.vala:44
-msgid "Music"
-msgstr "ミュージック"
-
-#: src/Dialogs/IssueDialog.vala:45
-msgid "Photos"
-msgstr "フォト"
-
-#: src/Dialogs/IssueDialog.vala:46
-msgid "Screenshot"
-msgstr "スクリーンショット"
-
-#: src/Dialogs/IssueDialog.vala:47
-msgid "Terminal"
-msgstr "ターミナル"
-
 #: src/Dialogs/IssueDialog.vala:48
-msgid "Videos"
-msgstr "ビデオ"
+msgid "Categories"
+msgstr "カテゴリー"
 
-#: src/Dialogs/IssueDialog.vala:49
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: src/Dialogs/IssueDialog.vala:110
+#, fuzzy
+msgid "Report Problem"
+msgstr "問題を報告"
+
+#: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
 msgstr "アプリケーションメニュー"
 
-#: src/Dialogs/IssueDialog.vala:50
+#: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
 msgstr "ロック画面・ログイン画面"
 
-#: src/Dialogs/IssueDialog.vala:51
+#: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
 msgstr "外観および操作感"
 
-#: src/Dialogs/IssueDialog.vala:52
+#: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
 msgstr "マルチタスキングおよびウィンドウ管理"
 
-#: src/Dialogs/IssueDialog.vala:53 src/Dialogs/IssueDialog.vala:58
-#: src/Dialogs/IssueDialog.vala:65
+#: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
 msgstr "通知"
 
-#: src/Dialogs/IssueDialog.vala:54 src/Dialogs/IssueDialog.vala:73
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: src/Dialogs/IssueDialog.vala:55 src/Dialogs/IssueDialog.vala:78
-msgid "Date & Time"
-msgstr "日付と時刻"
-
-#: src/Dialogs/IssueDialog.vala:56 src/Dialogs/IssueDialog.vala:68
-msgid "Keyboard"
-msgstr "キーボード"
-
-#: src/Dialogs/IssueDialog.vala:57
-msgid "Night Light"
-msgstr "Night Light"
-
-#: src/Dialogs/IssueDialog.vala:59 src/Dialogs/IssueDialog.vala:70
-msgid "Power"
-msgstr "電源"
-
-#: src/Dialogs/IssueDialog.vala:60
+#: src/Dialogs/IssueDialog.vala:424
 msgid "Session"
 msgstr "セッション"
 
-#: src/Dialogs/IssueDialog.vala:61 src/Dialogs/IssueDialog.vala:72
-msgid "Sound"
-msgstr "サウンド"
-
-#: src/Dialogs/IssueDialog.vala:62
-msgid "Applications"
-msgstr "アプリケーション"
-
-#: src/Dialogs/IssueDialog.vala:63
-msgid "Desktop"
-msgstr "デスクトップ"
-
-#: src/Dialogs/IssueDialog.vala:64
-msgid "Language & Region"
-msgstr "言語と地域"
-
-#: src/Dialogs/IssueDialog.vala:66
-msgid "Security & Privacy"
-msgstr "セキュリティとプライバシー"
-
-#: src/Dialogs/IssueDialog.vala:67
-msgid "Displays"
-msgstr "ディスプレイ"
-
-#: src/Dialogs/IssueDialog.vala:69
-msgid "Mouse & Touchpad"
-msgstr "マウスとタッチパッド"
-
-#: src/Dialogs/IssueDialog.vala:71
-msgid "Printers"
-msgstr "プリンター"
-
-#: src/Dialogs/IssueDialog.vala:74
-msgid "Network"
-msgstr "ネットワーク"
-
-#: src/Dialogs/IssueDialog.vala:75
-msgid "Online Accounts"
-msgstr "オンラインアカウント"
-
-#: src/Dialogs/IssueDialog.vala:76
-msgid "Sharing"
-msgstr "共有"
-
-#: src/Dialogs/IssueDialog.vala:79
-msgid "Parental Control"
-msgstr "ペアレンタルコントロール"
-
-#: src/Dialogs/IssueDialog.vala:80
-msgid "Universal Access"
-msgstr "ユニバーサルアクセス"
-
-#: src/Dialogs/IssueDialog.vala:81
-msgid "User Accounts"
-msgstr "ユーザーアカウント"
-
-#: src/Dialogs/IssueDialog.vala:86
-msgid "Default Apps"
-msgstr "デフォルトのアプリ"
-
-#: src/Dialogs/IssueDialog.vala:87
+#: src/Dialogs/IssueDialog.vala:446
 msgid "Panel Indicators"
 msgstr "パネルインジケーター"
 
-#: src/Dialogs/IssueDialog.vala:88
+#: src/Dialogs/IssueDialog.vala:448
 msgid "System Settings"
 msgstr "システム設定"
 
-#: src/Dialogs/IssueDialog.vala:89
+#: src/Dialogs/IssueDialog.vala:450
 msgid "Desktop Components"
 msgstr "デスクトップコンポーネント"
 
-#: src/Dialogs/IssueDialog.vala:99
-msgid "Categories"
-msgstr "カテゴリー"
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "デフォルトのアプリ"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -266,10 +150,6 @@ msgstr ""
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "設定の復元"
-
-#: src/Dialogs/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "キャンセル"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
@@ -297,6 +177,99 @@ msgstr "デュアルコア"
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "クアッドコア"
+
+#~ msgid "AppCenter"
+#~ msgstr "AppCenter"
+
+#~ msgid "Calculator"
+#~ msgstr "電卓"
+
+#~ msgid "Calendar"
+#~ msgstr "カレンダー"
+
+#~ msgid "Camera"
+#~ msgstr "カメラ"
+
+#~ msgid "Code"
+#~ msgstr "Code"
+
+#~ msgid "Files"
+#~ msgstr "ファイル"
+
+#~ msgid "Mail"
+#~ msgstr "メール"
+
+#~ msgid "Music"
+#~ msgstr "ミュージック"
+
+#~ msgid "Photos"
+#~ msgstr "フォト"
+
+#~ msgid "Screenshot"
+#~ msgstr "スクリーンショット"
+
+#~ msgid "Terminal"
+#~ msgstr "ターミナル"
+
+#~ msgid "Videos"
+#~ msgstr "ビデオ"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
+
+#~ msgid "Date & Time"
+#~ msgstr "日付と時刻"
+
+#~ msgid "Keyboard"
+#~ msgstr "キーボード"
+
+#~ msgid "Night Light"
+#~ msgstr "Night Light"
+
+#~ msgid "Power"
+#~ msgstr "電源"
+
+#~ msgid "Sound"
+#~ msgstr "サウンド"
+
+#~ msgid "Applications"
+#~ msgstr "アプリケーション"
+
+#~ msgid "Desktop"
+#~ msgstr "デスクトップ"
+
+#~ msgid "Language & Region"
+#~ msgstr "言語と地域"
+
+#~ msgid "Security & Privacy"
+#~ msgstr "セキュリティとプライバシー"
+
+#~ msgid "Displays"
+#~ msgstr "ディスプレイ"
+
+#~ msgid "Mouse & Touchpad"
+#~ msgstr "マウスとタッチパッド"
+
+#~ msgid "Printers"
+#~ msgstr "プリンター"
+
+#~ msgid "Network"
+#~ msgstr "ネットワーク"
+
+#~ msgid "Online Accounts"
+#~ msgstr "オンラインアカウント"
+
+#~ msgid "Sharing"
+#~ msgstr "共有"
+
+#~ msgid "Parental Control"
+#~ msgstr "ペアレンタルコントロール"
+
+#~ msgid "Universal Access"
+#~ msgstr "ユニバーサルアクセス"
+
+#~ msgid "User Accounts"
+#~ msgstr "ユーザーアカウント"
 
 #~ msgid "Hardware"
 #~ msgstr "ハードウェア"

@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-30 09:47-0700\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
 "PO-Revision-Date: 2018-05-01 04:23+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-about/he/>\n"
+"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-about/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:35 src/Dialogs/IssueDialog.vala:77
+#: src/Plug.vala:35
 msgid "About"
 msgstr "על אודות"
 
@@ -74,182 +74,66 @@ msgstr "דיווח על בעיה"
 msgid "Check for Updates"
 msgstr "בדיקה עבור עדכונים"
 
-#: src/Dialogs/IssueDialog.vala:28
+#: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
 msgstr "אילו מהבאים מאפיינים את התקלה שהתרחשה?"
 
-#: src/Dialogs/IssueDialog.vala:29
+#: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
 msgstr "נא לבחור רכיב מהרשימה."
 
-#: src/Dialogs/IssueDialog.vala:37
-msgid "AppCenter"
-msgstr "מרכז היישומים"
-
-#: src/Dialogs/IssueDialog.vala:38
-msgid "Calculator"
-msgstr "מחשבון"
-
-#: src/Dialogs/IssueDialog.vala:39
-msgid "Calendar"
-msgstr "לוח שנה"
-
-#: src/Dialogs/IssueDialog.vala:40
-msgid "Camera"
-msgstr "מצלמה"
-
-#: src/Dialogs/IssueDialog.vala:41
-msgid "Code"
-msgstr "קוד"
-
-#: src/Dialogs/IssueDialog.vala:42
-msgid "Files"
-msgstr "קבצים"
-
-#: src/Dialogs/IssueDialog.vala:43
-msgid "Mail"
-msgstr "דואר"
-
-#: src/Dialogs/IssueDialog.vala:44
-msgid "Music"
-msgstr "מוזיקה"
-
-#: src/Dialogs/IssueDialog.vala:45
-msgid "Photos"
-msgstr "תמונות"
-
-#: src/Dialogs/IssueDialog.vala:46
-msgid "Screenshot"
-msgstr "צילום מסך"
-
-#: src/Dialogs/IssueDialog.vala:47
-msgid "Terminal"
-msgstr "מסוף"
-
 #: src/Dialogs/IssueDialog.vala:48
-msgid "Videos"
-msgstr "סרטונים"
+msgid "Categories"
+msgstr "קטגוריות"
 
-#: src/Dialogs/IssueDialog.vala:49
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "ביטול"
+
+#: src/Dialogs/IssueDialog.vala:110
+#, fuzzy
+msgid "Report Problem"
+msgstr "דיווח בעיות"
+
+#: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
 msgstr "תפריט יישומים"
 
-#: src/Dialogs/IssueDialog.vala:50
+#: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
 msgstr "מסך נעילה או כניסה"
 
-#: src/Dialogs/IssueDialog.vala:51
+#: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
 msgstr "מראה ותחושה"
 
-#: src/Dialogs/IssueDialog.vala:52
+#: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
 msgstr "ריבוי משימות או ניהול חלונות"
 
-#: src/Dialogs/IssueDialog.vala:53 src/Dialogs/IssueDialog.vala:58
-#: src/Dialogs/IssueDialog.vala:65
+#: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
 msgstr "התרעות"
 
-#: src/Dialogs/IssueDialog.vala:54 src/Dialogs/IssueDialog.vala:73
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: src/Dialogs/IssueDialog.vala:55 src/Dialogs/IssueDialog.vala:78
-msgid "Date & Time"
-msgstr "תאריך ושעה"
-
-#: src/Dialogs/IssueDialog.vala:56 src/Dialogs/IssueDialog.vala:68
-msgid "Keyboard"
-msgstr "מקלדת"
-
-#: src/Dialogs/IssueDialog.vala:57
-msgid "Night Light"
-msgstr "תאורת לילה"
-
-#: src/Dialogs/IssueDialog.vala:59 src/Dialogs/IssueDialog.vala:70
-msgid "Power"
-msgstr "חשמל"
-
-#: src/Dialogs/IssueDialog.vala:60
+#: src/Dialogs/IssueDialog.vala:424
 msgid "Session"
 msgstr "הפעלה"
 
-#: src/Dialogs/IssueDialog.vala:61 src/Dialogs/IssueDialog.vala:72
-msgid "Sound"
-msgstr "שמע"
-
-#: src/Dialogs/IssueDialog.vala:62
-msgid "Applications"
-msgstr "יישומים"
-
-#: src/Dialogs/IssueDialog.vala:63
-msgid "Desktop"
-msgstr "שולחן עבודה"
-
-#: src/Dialogs/IssueDialog.vala:64
-msgid "Language & Region"
-msgstr "שפה ואזור"
-
-#: src/Dialogs/IssueDialog.vala:66
-msgid "Security & Privacy"
-msgstr "אבטחה ופרטיות"
-
-#: src/Dialogs/IssueDialog.vala:67
-msgid "Displays"
-msgstr "תצוגות"
-
-#: src/Dialogs/IssueDialog.vala:69
-msgid "Mouse & Touchpad"
-msgstr "עכבר ומשטח מגע"
-
-#: src/Dialogs/IssueDialog.vala:71
-msgid "Printers"
-msgstr "מדפסות"
-
-#: src/Dialogs/IssueDialog.vala:74
-msgid "Network"
-msgstr "רשת"
-
-#: src/Dialogs/IssueDialog.vala:75
-msgid "Online Accounts"
-msgstr "חשבונות מקוונים"
-
-#: src/Dialogs/IssueDialog.vala:76
-msgid "Sharing"
-msgstr "שיתוף"
-
-#: src/Dialogs/IssueDialog.vala:79
-msgid "Parental Control"
-msgstr "בקרת הורים"
-
-#: src/Dialogs/IssueDialog.vala:80
-msgid "Universal Access"
-msgstr "גישה אוניברסלית"
-
-#: src/Dialogs/IssueDialog.vala:81
-msgid "User Accounts"
-msgstr "חשבונות משתמשים"
-
-#: src/Dialogs/IssueDialog.vala:86
-msgid "Default Apps"
-msgstr "יישומי בררת מחדל"
-
-#: src/Dialogs/IssueDialog.vala:87
+#: src/Dialogs/IssueDialog.vala:446
 msgid "Panel Indicators"
 msgstr "מחוונים בלוח"
 
-#: src/Dialogs/IssueDialog.vala:88
+#: src/Dialogs/IssueDialog.vala:448
 msgid "System Settings"
 msgstr "הגדרות מערכת"
 
-#: src/Dialogs/IssueDialog.vala:89
+#: src/Dialogs/IssueDialog.vala:450
 msgid "Desktop Components"
 msgstr "רכיבי שולחן עבודה"
 
-#: src/Dialogs/IssueDialog.vala:99
-msgid "Categories"
-msgstr "קטגוריות"
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "יישומי בררת מחדל"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -266,10 +150,6 @@ msgstr ""
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "שחזור הגדרות"
-
-#: src/Dialogs/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "ביטול"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
@@ -297,6 +177,99 @@ msgstr "ליבה כפולה"
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "ליבה מרובעת"
+
+#~ msgid "AppCenter"
+#~ msgstr "מרכז היישומים"
+
+#~ msgid "Calculator"
+#~ msgstr "מחשבון"
+
+#~ msgid "Calendar"
+#~ msgstr "לוח שנה"
+
+#~ msgid "Camera"
+#~ msgstr "מצלמה"
+
+#~ msgid "Code"
+#~ msgstr "קוד"
+
+#~ msgid "Files"
+#~ msgstr "קבצים"
+
+#~ msgid "Mail"
+#~ msgstr "דואר"
+
+#~ msgid "Music"
+#~ msgstr "מוזיקה"
+
+#~ msgid "Photos"
+#~ msgstr "תמונות"
+
+#~ msgid "Screenshot"
+#~ msgstr "צילום מסך"
+
+#~ msgid "Terminal"
+#~ msgstr "מסוף"
+
+#~ msgid "Videos"
+#~ msgstr "סרטונים"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
+
+#~ msgid "Date & Time"
+#~ msgstr "תאריך ושעה"
+
+#~ msgid "Keyboard"
+#~ msgstr "מקלדת"
+
+#~ msgid "Night Light"
+#~ msgstr "תאורת לילה"
+
+#~ msgid "Power"
+#~ msgstr "חשמל"
+
+#~ msgid "Sound"
+#~ msgstr "שמע"
+
+#~ msgid "Applications"
+#~ msgstr "יישומים"
+
+#~ msgid "Desktop"
+#~ msgstr "שולחן עבודה"
+
+#~ msgid "Language & Region"
+#~ msgstr "שפה ואזור"
+
+#~ msgid "Security & Privacy"
+#~ msgstr "אבטחה ופרטיות"
+
+#~ msgid "Displays"
+#~ msgstr "תצוגות"
+
+#~ msgid "Mouse & Touchpad"
+#~ msgstr "עכבר ומשטח מגע"
+
+#~ msgid "Printers"
+#~ msgstr "מדפסות"
+
+#~ msgid "Network"
+#~ msgstr "רשת"
+
+#~ msgid "Online Accounts"
+#~ msgstr "חשבונות מקוונים"
+
+#~ msgid "Sharing"
+#~ msgstr "שיתוף"
+
+#~ msgid "Parental Control"
+#~ msgstr "בקרת הורים"
+
+#~ msgid "Universal Access"
+#~ msgstr "גישה אוניברסלית"
+
+#~ msgid "User Accounts"
+#~ msgstr "חשבונות משתמשים"
 
 #~ msgid "Hardware"
 #~ msgstr "חומרה"

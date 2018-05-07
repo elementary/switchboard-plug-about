@@ -7,21 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-30 09:47-0700\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
 "PO-Revision-Date: 2018-05-01 09:54+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
-"Language-Team: Lithuanian <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-about/lt/>\n"
+"Language-Team: Lithuanian <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-about/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || "
-"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:35 src/Dialogs/IssueDialog.vala:77
+#: src/Plug.vala:35
 msgid "About"
 msgstr "Apie"
 
@@ -75,182 +75,66 @@ msgstr "Pranešti apie klaidą"
 msgid "Check for Updates"
 msgstr "Tikrinti ar yra atnaujinimų"
 
-#: src/Dialogs/IssueDialog.vala:28
+#: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
 msgstr "Kuriame iš šių matote problemą?"
 
-#: src/Dialogs/IssueDialog.vala:29
+#: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
 msgstr "Pasirinkite komponentą iš sąrašo."
 
-#: src/Dialogs/IssueDialog.vala:37
-msgid "AppCenter"
-msgstr "Programų centras"
-
-#: src/Dialogs/IssueDialog.vala:38
-msgid "Calculator"
-msgstr "Skaičiuotuvas"
-
-#: src/Dialogs/IssueDialog.vala:39
-msgid "Calendar"
-msgstr "Kalendorius"
-
-#: src/Dialogs/IssueDialog.vala:40
-msgid "Camera"
-msgstr "Kamera"
-
-#: src/Dialogs/IssueDialog.vala:41
-msgid "Code"
-msgstr "Kodas"
-
-#: src/Dialogs/IssueDialog.vala:42
-msgid "Files"
-msgstr "Failai"
-
-#: src/Dialogs/IssueDialog.vala:43
-msgid "Mail"
-msgstr "Paštas"
-
-#: src/Dialogs/IssueDialog.vala:44
-msgid "Music"
-msgstr "Muzika"
-
-#: src/Dialogs/IssueDialog.vala:45
-msgid "Photos"
-msgstr "Nuotraukos"
-
-#: src/Dialogs/IssueDialog.vala:46
-msgid "Screenshot"
-msgstr "Ekrano kopija"
-
-#: src/Dialogs/IssueDialog.vala:47
-msgid "Terminal"
-msgstr "Terminalas"
-
 #: src/Dialogs/IssueDialog.vala:48
-msgid "Videos"
-msgstr "Vaizdo įrašai"
+msgid "Categories"
+msgstr "Kategorijos"
 
-#: src/Dialogs/IssueDialog.vala:49
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: src/Dialogs/IssueDialog.vala:110
+#, fuzzy
+msgid "Report Problem"
+msgstr "Pranešti apie klaidas"
+
+#: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
 msgstr "Programų meniu"
 
-#: src/Dialogs/IssueDialog.vala:50
+#: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
 msgstr "Užrakto ar prisijungimo ekranas"
 
-#: src/Dialogs/IssueDialog.vala:51
+#: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
 msgstr "Išvaizda ir turinys"
 
-#: src/Dialogs/IssueDialog.vala:52
+#: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
 msgstr "Daugiaprogramis apdorojimas ar langų tvarkymas"
 
-#: src/Dialogs/IssueDialog.vala:53 src/Dialogs/IssueDialog.vala:58
-#: src/Dialogs/IssueDialog.vala:65
+#: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
 msgstr "Pranešimai"
 
-#: src/Dialogs/IssueDialog.vala:54 src/Dialogs/IssueDialog.vala:73
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: src/Dialogs/IssueDialog.vala:55 src/Dialogs/IssueDialog.vala:78
-msgid "Date & Time"
-msgstr "Data ir laikas"
-
-#: src/Dialogs/IssueDialog.vala:56 src/Dialogs/IssueDialog.vala:68
-msgid "Keyboard"
-msgstr "Klaviatūra"
-
-#: src/Dialogs/IssueDialog.vala:57
-msgid "Night Light"
-msgstr "Naktinis apšvietimas"
-
-#: src/Dialogs/IssueDialog.vala:59 src/Dialogs/IssueDialog.vala:70
-msgid "Power"
-msgstr "Maitinimas"
-
-#: src/Dialogs/IssueDialog.vala:60
+#: src/Dialogs/IssueDialog.vala:424
 msgid "Session"
 msgstr "Seansas"
 
-#: src/Dialogs/IssueDialog.vala:61 src/Dialogs/IssueDialog.vala:72
-msgid "Sound"
-msgstr "Garsas"
-
-#: src/Dialogs/IssueDialog.vala:62
-msgid "Applications"
-msgstr "Programos"
-
-#: src/Dialogs/IssueDialog.vala:63
-msgid "Desktop"
-msgstr "Darbalaukis"
-
-#: src/Dialogs/IssueDialog.vala:64
-msgid "Language & Region"
-msgstr "Kalba ir regionas"
-
-#: src/Dialogs/IssueDialog.vala:66
-msgid "Security & Privacy"
-msgstr "Saugumas ir privatumas"
-
-#: src/Dialogs/IssueDialog.vala:67
-msgid "Displays"
-msgstr "Ekranai"
-
-#: src/Dialogs/IssueDialog.vala:69
-msgid "Mouse & Touchpad"
-msgstr "Pelė ir jutiklinis kilimėlis"
-
-#: src/Dialogs/IssueDialog.vala:71
-msgid "Printers"
-msgstr "Spausdintuvai"
-
-#: src/Dialogs/IssueDialog.vala:74
-msgid "Network"
-msgstr "Tinklas"
-
-#: src/Dialogs/IssueDialog.vala:75
-msgid "Online Accounts"
-msgstr "Internetinės paskyros"
-
-#: src/Dialogs/IssueDialog.vala:76
-msgid "Sharing"
-msgstr "Bendrinimas"
-
-#: src/Dialogs/IssueDialog.vala:79
-msgid "Parental Control"
-msgstr "Tėvų kontrolė"
-
-#: src/Dialogs/IssueDialog.vala:80
-msgid "Universal Access"
-msgstr "Universalioji prieiga"
-
-#: src/Dialogs/IssueDialog.vala:81
-msgid "User Accounts"
-msgstr "Naudotojų paskyros"
-
-#: src/Dialogs/IssueDialog.vala:86
-msgid "Default Apps"
-msgstr "Numatytosios programos"
-
-#: src/Dialogs/IssueDialog.vala:87
+#: src/Dialogs/IssueDialog.vala:446
 msgid "Panel Indicators"
 msgstr "Skydelio indikatoriai"
 
-#: src/Dialogs/IssueDialog.vala:88
+#: src/Dialogs/IssueDialog.vala:448
 msgid "System Settings"
 msgstr "Sistemos nustatymai"
 
-#: src/Dialogs/IssueDialog.vala:89
+#: src/Dialogs/IssueDialog.vala:450
 msgid "Desktop Components"
 msgstr "Darbalaukio komponentai"
 
-#: src/Dialogs/IssueDialog.vala:99
-msgid "Categories"
-msgstr "Kategorijos"
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "Numatytosios programos"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -267,10 +151,6 @@ msgstr ""
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Atkurti nustatymus"
-
-#: src/Dialogs/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "Atsisakyti"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
@@ -298,6 +178,99 @@ msgstr "Dviejų branduolių"
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "Keturių branduolių"
+
+#~ msgid "AppCenter"
+#~ msgstr "Programų centras"
+
+#~ msgid "Calculator"
+#~ msgstr "Skaičiuotuvas"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalendorius"
+
+#~ msgid "Camera"
+#~ msgstr "Kamera"
+
+#~ msgid "Code"
+#~ msgstr "Kodas"
+
+#~ msgid "Files"
+#~ msgstr "Failai"
+
+#~ msgid "Mail"
+#~ msgstr "Paštas"
+
+#~ msgid "Music"
+#~ msgstr "Muzika"
+
+#~ msgid "Photos"
+#~ msgstr "Nuotraukos"
+
+#~ msgid "Screenshot"
+#~ msgstr "Ekrano kopija"
+
+#~ msgid "Terminal"
+#~ msgstr "Terminalas"
+
+#~ msgid "Videos"
+#~ msgstr "Vaizdo įrašai"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
+
+#~ msgid "Date & Time"
+#~ msgstr "Data ir laikas"
+
+#~ msgid "Keyboard"
+#~ msgstr "Klaviatūra"
+
+#~ msgid "Night Light"
+#~ msgstr "Naktinis apšvietimas"
+
+#~ msgid "Power"
+#~ msgstr "Maitinimas"
+
+#~ msgid "Sound"
+#~ msgstr "Garsas"
+
+#~ msgid "Applications"
+#~ msgstr "Programos"
+
+#~ msgid "Desktop"
+#~ msgstr "Darbalaukis"
+
+#~ msgid "Language & Region"
+#~ msgstr "Kalba ir regionas"
+
+#~ msgid "Security & Privacy"
+#~ msgstr "Saugumas ir privatumas"
+
+#~ msgid "Displays"
+#~ msgstr "Ekranai"
+
+#~ msgid "Mouse & Touchpad"
+#~ msgstr "Pelė ir jutiklinis kilimėlis"
+
+#~ msgid "Printers"
+#~ msgstr "Spausdintuvai"
+
+#~ msgid "Network"
+#~ msgstr "Tinklas"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Internetinės paskyros"
+
+#~ msgid "Sharing"
+#~ msgstr "Bendrinimas"
+
+#~ msgid "Parental Control"
+#~ msgstr "Tėvų kontrolė"
+
+#~ msgid "Universal Access"
+#~ msgstr "Universalioji prieiga"
+
+#~ msgid "User Accounts"
+#~ msgstr "Naudotojų paskyros"
 
 #~ msgid "Hardware"
 #~ msgstr "Aparatinė įranga"

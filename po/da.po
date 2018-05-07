@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-30 09:47-0700\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
 "PO-Revision-Date: 2018-05-07 15:31+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
-"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-about/da/>\n"
+"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-about/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:35 src/Dialogs/IssueDialog.vala:77
+#: src/Plug.vala:35
 msgid "About"
 msgstr "Om"
 
@@ -74,182 +74,66 @@ msgstr "Rapportér et problem"
 msgid "Check for Updates"
 msgstr "Søg efter opdateringer"
 
-#: src/Dialogs/IssueDialog.vala:28
+#: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
 msgstr "Hvilket af følgende oplever du problemer med?"
 
-#: src/Dialogs/IssueDialog.vala:29
+#: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
 msgstr "Vælg venligst en komponent fra listen."
 
-#: src/Dialogs/IssueDialog.vala:37
-msgid "AppCenter"
-msgstr "AppCenter"
-
-#: src/Dialogs/IssueDialog.vala:38
-msgid "Calculator"
-msgstr "Lommeregner"
-
-#: src/Dialogs/IssueDialog.vala:39
-msgid "Calendar"
-msgstr "Kalender"
-
-#: src/Dialogs/IssueDialog.vala:40
-msgid "Camera"
-msgstr "Kamera"
-
-#: src/Dialogs/IssueDialog.vala:41
-msgid "Code"
-msgstr "Kode"
-
-#: src/Dialogs/IssueDialog.vala:42
-msgid "Files"
-msgstr "Filer"
-
-#: src/Dialogs/IssueDialog.vala:43
-msgid "Mail"
-msgstr "Mail"
-
-#: src/Dialogs/IssueDialog.vala:44
-msgid "Music"
-msgstr "Musik"
-
-#: src/Dialogs/IssueDialog.vala:45
-msgid "Photos"
-msgstr "Fotos"
-
-#: src/Dialogs/IssueDialog.vala:46
-msgid "Screenshot"
-msgstr "Screenshot"
-
-#: src/Dialogs/IssueDialog.vala:47
-msgid "Terminal"
-msgstr "Terminal"
-
 #: src/Dialogs/IssueDialog.vala:48
-msgid "Videos"
-msgstr "Videoer"
+msgid "Categories"
+msgstr "Kategorier"
 
-#: src/Dialogs/IssueDialog.vala:49
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "Annuller"
+
+#: src/Dialogs/IssueDialog.vala:110
+#, fuzzy
+msgid "Report Problem"
+msgstr "Rapportér problemer"
+
+#: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
 msgstr "Applikationsmenu"
 
-#: src/Dialogs/IssueDialog.vala:50
+#: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:51
+#: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:52
+#: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:53 src/Dialogs/IssueDialog.vala:58
-#: src/Dialogs/IssueDialog.vala:65
+#: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
 msgstr "Notifikationer"
 
-#: src/Dialogs/IssueDialog.vala:54 src/Dialogs/IssueDialog.vala:73
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: src/Dialogs/IssueDialog.vala:55 src/Dialogs/IssueDialog.vala:78
-msgid "Date & Time"
-msgstr "Dato & Tid"
-
-#: src/Dialogs/IssueDialog.vala:56 src/Dialogs/IssueDialog.vala:68
-msgid "Keyboard"
-msgstr "Tastatur"
-
-#: src/Dialogs/IssueDialog.vala:57
-msgid "Night Light"
-msgstr ""
-
-#: src/Dialogs/IssueDialog.vala:59 src/Dialogs/IssueDialog.vala:70
-msgid "Power"
-msgstr "Strøm"
-
-#: src/Dialogs/IssueDialog.vala:60
+#: src/Dialogs/IssueDialog.vala:424
 msgid "Session"
 msgstr "Session"
 
-#: src/Dialogs/IssueDialog.vala:61 src/Dialogs/IssueDialog.vala:72
-msgid "Sound"
-msgstr "Lyd"
-
-#: src/Dialogs/IssueDialog.vala:62
-msgid "Applications"
-msgstr "Applikationer"
-
-#: src/Dialogs/IssueDialog.vala:63
-msgid "Desktop"
-msgstr "Skrivebord"
-
-#: src/Dialogs/IssueDialog.vala:64
-msgid "Language & Region"
-msgstr "Sprog & Region"
-
-#: src/Dialogs/IssueDialog.vala:66
-msgid "Security & Privacy"
-msgstr "Sikkerhed & Privatliv"
-
-#: src/Dialogs/IssueDialog.vala:67
-msgid "Displays"
-msgstr "Skærme"
-
-#: src/Dialogs/IssueDialog.vala:69
-msgid "Mouse & Touchpad"
-msgstr "Mus & Touchpad"
-
-#: src/Dialogs/IssueDialog.vala:71
-msgid "Printers"
-msgstr "Printere"
-
-#: src/Dialogs/IssueDialog.vala:74
-msgid "Network"
-msgstr "Netværk"
-
-#: src/Dialogs/IssueDialog.vala:75
-msgid "Online Accounts"
-msgstr "Online Konti"
-
-#: src/Dialogs/IssueDialog.vala:76
-msgid "Sharing"
-msgstr "Deling"
-
-#: src/Dialogs/IssueDialog.vala:79
-msgid "Parental Control"
-msgstr "Forældre Kontrol"
-
-#: src/Dialogs/IssueDialog.vala:80
-msgid "Universal Access"
-msgstr "Universel Adgang"
-
-#: src/Dialogs/IssueDialog.vala:81
-msgid "User Accounts"
-msgstr "Bruger Konti"
-
-#: src/Dialogs/IssueDialog.vala:86
-msgid "Default Apps"
-msgstr "Standard Apps"
-
-#: src/Dialogs/IssueDialog.vala:87
+#: src/Dialogs/IssueDialog.vala:446
 msgid "Panel Indicators"
 msgstr "Panelindikatorer"
 
-#: src/Dialogs/IssueDialog.vala:88
+#: src/Dialogs/IssueDialog.vala:448
 msgid "System Settings"
 msgstr "Systemindstillinger"
 
-#: src/Dialogs/IssueDialog.vala:89
+#: src/Dialogs/IssueDialog.vala:450
 msgid "Desktop Components"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:99
-msgid "Categories"
-msgstr "Kategorier"
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "Standard Apps"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -266,10 +150,6 @@ msgstr ""
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Gendan indstillinger"
-
-#: src/Dialogs/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "Annuller"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
@@ -297,6 +177,96 @@ msgstr "Dual-Core"
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "Quad-Core"
+
+#~ msgid "AppCenter"
+#~ msgstr "AppCenter"
+
+#~ msgid "Calculator"
+#~ msgstr "Lommeregner"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalender"
+
+#~ msgid "Camera"
+#~ msgstr "Kamera"
+
+#~ msgid "Code"
+#~ msgstr "Kode"
+
+#~ msgid "Files"
+#~ msgstr "Filer"
+
+#~ msgid "Mail"
+#~ msgstr "Mail"
+
+#~ msgid "Music"
+#~ msgstr "Musik"
+
+#~ msgid "Photos"
+#~ msgstr "Fotos"
+
+#~ msgid "Screenshot"
+#~ msgstr "Screenshot"
+
+#~ msgid "Terminal"
+#~ msgstr "Terminal"
+
+#~ msgid "Videos"
+#~ msgstr "Videoer"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
+
+#~ msgid "Date & Time"
+#~ msgstr "Dato & Tid"
+
+#~ msgid "Keyboard"
+#~ msgstr "Tastatur"
+
+#~ msgid "Power"
+#~ msgstr "Strøm"
+
+#~ msgid "Sound"
+#~ msgstr "Lyd"
+
+#~ msgid "Applications"
+#~ msgstr "Applikationer"
+
+#~ msgid "Desktop"
+#~ msgstr "Skrivebord"
+
+#~ msgid "Language & Region"
+#~ msgstr "Sprog & Region"
+
+#~ msgid "Security & Privacy"
+#~ msgstr "Sikkerhed & Privatliv"
+
+#~ msgid "Displays"
+#~ msgstr "Skærme"
+
+#~ msgid "Mouse & Touchpad"
+#~ msgstr "Mus & Touchpad"
+
+#~ msgid "Printers"
+#~ msgstr "Printere"
+
+#~ msgid "Network"
+#~ msgstr "Netværk"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Online Konti"
+
+#~ msgid "Sharing"
+#~ msgstr "Deling"
+
+#~ msgid "Parental Control"
+#~ msgstr "Forældre Kontrol"
+
+#~ msgid "Universal Access"
+#~ msgstr "Universel Adgang"
+
+#~ msgid "User Accounts"
+#~ msgstr "Bruger Konti"
 
 #~ msgid "Hardware"
 #~ msgstr "Hardware"

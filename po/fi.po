@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-30 09:47-0700\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
 "PO-Revision-Date: 2018-05-04 00:06+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-about/fi/>\n"
+"Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-about/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:35 src/Dialogs/IssueDialog.vala:77
+#: src/Plug.vala:35
 msgid "About"
 msgstr "Tietoja"
 
@@ -74,182 +74,66 @@ msgstr "Ilmoita ongelmasta"
 msgid "Check for Updates"
 msgstr "Tarkista päivitykset"
 
-#: src/Dialogs/IssueDialog.vala:28
+#: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
 msgstr "Minkä seuraavista kanssa kohtasit ongelman?"
 
-#: src/Dialogs/IssueDialog.vala:29
+#: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
 msgstr "Valitse osa luettelosta."
 
-#: src/Dialogs/IssueDialog.vala:37
-msgid "AppCenter"
-msgstr ""
-
-#: src/Dialogs/IssueDialog.vala:38
-msgid "Calculator"
-msgstr "Laskin"
-
-#: src/Dialogs/IssueDialog.vala:39
-msgid "Calendar"
-msgstr "Kalenteri"
-
-#: src/Dialogs/IssueDialog.vala:40
-msgid "Camera"
-msgstr "Kamera"
-
-#: src/Dialogs/IssueDialog.vala:41
-msgid "Code"
-msgstr ""
-
-#: src/Dialogs/IssueDialog.vala:42
-msgid "Files"
-msgstr "Tiedostot"
-
-#: src/Dialogs/IssueDialog.vala:43
-msgid "Mail"
-msgstr "Sähköposti"
-
-#: src/Dialogs/IssueDialog.vala:44
-msgid "Music"
-msgstr "Musiikki"
-
-#: src/Dialogs/IssueDialog.vala:45
-msgid "Photos"
-msgstr "Kuvat"
-
-#: src/Dialogs/IssueDialog.vala:46
-msgid "Screenshot"
-msgstr "Kuvakaappaus"
-
-#: src/Dialogs/IssueDialog.vala:47
-msgid "Terminal"
-msgstr "Pääte"
-
 #: src/Dialogs/IssueDialog.vala:48
-msgid "Videos"
-msgstr "Videot"
+msgid "Categories"
+msgstr "Luokat"
 
-#: src/Dialogs/IssueDialog.vala:49
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "Peru"
+
+#: src/Dialogs/IssueDialog.vala:110
+#, fuzzy
+msgid "Report Problem"
+msgstr "Ilmoita ongelmasta"
+
+#: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
 msgstr "Sovellukset-valikko"
 
-#: src/Dialogs/IssueDialog.vala:50
+#: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
 msgstr "Lukitus- tai kirjautumisnäkymä"
 
-#: src/Dialogs/IssueDialog.vala:51
+#: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
 msgstr "Ulkoasu"
 
-#: src/Dialogs/IssueDialog.vala:52
+#: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
 msgstr "Moniajo tai ikkunahallinta"
 
-#: src/Dialogs/IssueDialog.vala:53 src/Dialogs/IssueDialog.vala:58
-#: src/Dialogs/IssueDialog.vala:65
+#: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
 msgstr "Ilmoitukset"
 
-#: src/Dialogs/IssueDialog.vala:54 src/Dialogs/IssueDialog.vala:73
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#: src/Dialogs/IssueDialog.vala:55 src/Dialogs/IssueDialog.vala:78
-msgid "Date & Time"
-msgstr "Päivä ja aika"
-
-#: src/Dialogs/IssueDialog.vala:56 src/Dialogs/IssueDialog.vala:68
-msgid "Keyboard"
-msgstr "Näppäimistö"
-
-#: src/Dialogs/IssueDialog.vala:57
-msgid "Night Light"
-msgstr "Yövalo"
-
-#: src/Dialogs/IssueDialog.vala:59 src/Dialogs/IssueDialog.vala:70
-msgid "Power"
-msgstr "Virranhallinta"
-
-#: src/Dialogs/IssueDialog.vala:60
+#: src/Dialogs/IssueDialog.vala:424
 msgid "Session"
 msgstr "Istunto"
 
-#: src/Dialogs/IssueDialog.vala:61 src/Dialogs/IssueDialog.vala:72
-msgid "Sound"
-msgstr "Ääni"
-
-#: src/Dialogs/IssueDialog.vala:62
-msgid "Applications"
-msgstr "Sovellukset"
-
-#: src/Dialogs/IssueDialog.vala:63
-msgid "Desktop"
-msgstr "Työpöytä"
-
-#: src/Dialogs/IssueDialog.vala:64
-msgid "Language & Region"
-msgstr "Kieli ja alue"
-
-#: src/Dialogs/IssueDialog.vala:66
-msgid "Security & Privacy"
-msgstr "Turvallisuus ja yksityisyys"
-
-#: src/Dialogs/IssueDialog.vala:67
-msgid "Displays"
-msgstr "Näytöt"
-
-#: src/Dialogs/IssueDialog.vala:69
-msgid "Mouse & Touchpad"
-msgstr "Hiiri ja kosketuslevy"
-
-#: src/Dialogs/IssueDialog.vala:71
-msgid "Printers"
-msgstr "Tulostimet"
-
-#: src/Dialogs/IssueDialog.vala:74
-msgid "Network"
-msgstr "Verkko"
-
-#: src/Dialogs/IssueDialog.vala:75
-msgid "Online Accounts"
-msgstr "Verkkotilit"
-
-#: src/Dialogs/IssueDialog.vala:76
-msgid "Sharing"
-msgstr "Jakaminen"
-
-#: src/Dialogs/IssueDialog.vala:79
-msgid "Parental Control"
-msgstr "Käytönvalvonta"
-
-#: src/Dialogs/IssueDialog.vala:80
-msgid "Universal Access"
-msgstr "Esteettömyys"
-
-#: src/Dialogs/IssueDialog.vala:81
-msgid "User Accounts"
-msgstr "Käyttäjätilit"
-
-#: src/Dialogs/IssueDialog.vala:86
-msgid "Default Apps"
-msgstr "Oletussovellukset"
-
-#: src/Dialogs/IssueDialog.vala:87
+#: src/Dialogs/IssueDialog.vala:446
 msgid "Panel Indicators"
 msgstr "Paneelin ilmaisimet"
 
-#: src/Dialogs/IssueDialog.vala:88
+#: src/Dialogs/IssueDialog.vala:448
 msgid "System Settings"
 msgstr "Järjestelmäasetukset"
 
-#: src/Dialogs/IssueDialog.vala:89
+#: src/Dialogs/IssueDialog.vala:450
 msgid "Desktop Components"
 msgstr "Työpöydän osat"
 
-#: src/Dialogs/IssueDialog.vala:99
-msgid "Categories"
-msgstr "Luokat"
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "Oletussovellukset"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -266,10 +150,6 @@ msgstr ""
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Palauta oletusasetukset"
-
-#: src/Dialogs/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "Peru"
 
 #: src/Views/HardwareView.vala:58
 #, fuzzy, c-format
@@ -297,6 +177,93 @@ msgstr "Tuplaydin"
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "Neliydin"
+
+#~ msgid "Calculator"
+#~ msgstr "Laskin"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalenteri"
+
+#~ msgid "Camera"
+#~ msgstr "Kamera"
+
+#~ msgid "Files"
+#~ msgstr "Tiedostot"
+
+#~ msgid "Mail"
+#~ msgstr "Sähköposti"
+
+#~ msgid "Music"
+#~ msgstr "Musiikki"
+
+#~ msgid "Photos"
+#~ msgstr "Kuvat"
+
+#~ msgid "Screenshot"
+#~ msgstr "Kuvakaappaus"
+
+#~ msgid "Terminal"
+#~ msgstr "Pääte"
+
+#~ msgid "Videos"
+#~ msgstr "Videot"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
+
+#~ msgid "Date & Time"
+#~ msgstr "Päivä ja aika"
+
+#~ msgid "Keyboard"
+#~ msgstr "Näppäimistö"
+
+#~ msgid "Night Light"
+#~ msgstr "Yövalo"
+
+#~ msgid "Power"
+#~ msgstr "Virranhallinta"
+
+#~ msgid "Sound"
+#~ msgstr "Ääni"
+
+#~ msgid "Applications"
+#~ msgstr "Sovellukset"
+
+#~ msgid "Desktop"
+#~ msgstr "Työpöytä"
+
+#~ msgid "Language & Region"
+#~ msgstr "Kieli ja alue"
+
+#~ msgid "Security & Privacy"
+#~ msgstr "Turvallisuus ja yksityisyys"
+
+#~ msgid "Displays"
+#~ msgstr "Näytöt"
+
+#~ msgid "Mouse & Touchpad"
+#~ msgstr "Hiiri ja kosketuslevy"
+
+#~ msgid "Printers"
+#~ msgstr "Tulostimet"
+
+#~ msgid "Network"
+#~ msgstr "Verkko"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Verkkotilit"
+
+#~ msgid "Sharing"
+#~ msgstr "Jakaminen"
+
+#~ msgid "Parental Control"
+#~ msgstr "Käytönvalvonta"
+
+#~ msgid "Universal Access"
+#~ msgstr "Esteettömyys"
+
+#~ msgid "User Accounts"
+#~ msgstr "Käyttäjätilit"
 
 #~ msgid "Hardware"
 #~ msgstr "Laitteisto"
