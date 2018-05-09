@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2018-05-07 15:50+0000\n"
-"Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
+"PO-Revision-Date: 2018-05-10 00:09+0000\n"
+"Last-Translator: martin fromont <martin.fromont1@gmail.com>\n"
 "Language-Team: English (Canada) "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
 "about/en_CA/>\n"
@@ -168,7 +168,7 @@ msgstr "Manufacturer Website"
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
 #: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
-msgstr "Unknown"
+msgstr "Inconnu"
 
 #: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
