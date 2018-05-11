@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2015-09-17 10:51+0000\n"
-"Last-Translator: Vishal Biswas <vshlbiswas@ymail.com>\n"
-"Language-Team: Hindi <hi@li.org>\n"
+"PO-Revision-Date: 2018-05-12 00:11+0000\n"
+"Last-Translator: Anand Kumar <anand@anandkumar.net>\n"
+"Language-Team: Hindi <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-about/hi/>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: src/Plug.vala:35
 msgid "About"
@@ -24,11 +26,11 @@ msgstr "परिचय"
 
 #: src/Plug.vala:36
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "ऑपरेटिंग सिस्टम और हार्डवेयर की जानकारी देंखे"
 
 #: src/Plug.vala:64
 msgid "System Information"
-msgstr ""
+msgstr "सिस्टम की जानकारी"
 
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
@@ -36,7 +38,7 @@ msgstr "डिफ़ॉल्ट सेटिंग्स को पुनर्
 
 #: src/Plug.vala:66
 msgid "Suggest Translation"
-msgstr ""
+msgstr "अनुवाद सुझाएँ"
 
 #: src/Plug.vala:67
 msgid "Report Problems"
