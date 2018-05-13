@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2018-03-08 19:31+0000\n"
+"PO-Revision-Date: 2018-05-13 09:51+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
-"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-about/it/>\n"
+"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-about/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,65 +76,63 @@ msgstr "Verifica aggiornamenti"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "Con quale dei seguenti hai stai avendo dei problemi?"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "Seleziona un componente dalla lista."
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Categories"
-msgstr ""
+msgstr "Categorie"
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "Annulla"
 
 #: src/Dialogs/IssueDialog.vala:110
-#, fuzzy
 msgid "Report Problem"
 msgstr "Segnala un problema"
 
 #: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
-msgstr ""
+msgstr "Menu applicazioni"
 
 #: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "Schermata di blocco o di accesso"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
-msgstr ""
+msgstr "Aspetto ed esperienza utente"
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "Gestione del multitasking o delle finestre"
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
-msgstr ""
+msgstr "Notifiche"
 
 #: src/Dialogs/IssueDialog.vala:424
 msgid "Session"
-msgstr ""
+msgstr "Sessione"
 
 #: src/Dialogs/IssueDialog.vala:446
 msgid "Panel Indicators"
-msgstr ""
+msgstr "Indicatori del pannello superiore"
 
 #: src/Dialogs/IssueDialog.vala:448
-#, fuzzy
 msgid "System Settings"
-msgstr "Ripristina impostazioni"
+msgstr "Impostazioni di sistema"
 
 #: src/Dialogs/IssueDialog.vala:450
 msgid "Desktop Components"
-msgstr ""
+msgstr "Componenti del desktop"
 
 #: src/Dialogs/IssueDialog.vala:452
 msgid "Default Apps"
-msgstr ""
+msgstr "Applicazioni predefinite"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
