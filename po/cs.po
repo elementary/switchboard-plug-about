@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2018-05-16 13:53+0000\n"
+"PO-Revision-Date: 2018-05-17 00:04+0000\n"
 "Last-Translator: Daniel Zvir <zvir.daniel@seznam.cz>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/cs/>\n"
@@ -42,7 +42,7 @@ msgstr "Navrhněte překlad"
 
 #: src/Plug.vala:67
 msgid "Report Problems"
-msgstr "Nahlašte problémy"
+msgstr "Nahlásit problémy"
 
 #: src/Plug.vala:68
 msgid "Updates"
