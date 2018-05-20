@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2018-03-11 09:49+0000\n"
+"PO-Revision-Date: 2018-05-20 15:18+0000\n"
 "Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
-"Language-Team: Russian <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-about/ru/>\n"
+"Language-Team: Russian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-about/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
@@ -77,65 +77,63 @@ msgstr "Проверить обновления"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "В чём из нижеперечисленного вы столкнулись с ошибкой?"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "Пожалуйста, выберите компонент из списка."
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Categories"
-msgstr ""
+msgstr "Категории"
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "Отменить"
 
 #: src/Dialogs/IssueDialog.vala:110
-#, fuzzy
 msgid "Report Problem"
 msgstr "Сообщить о проблеме"
 
 #: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
-msgstr ""
+msgstr "Меню приложений"
 
 #: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "Экран входа или блокировки"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
-msgstr ""
+msgstr "Внешний вид"
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "Многозадачность или управление окнами"
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
-msgstr ""
+msgstr "Уведомления"
 
 #: src/Dialogs/IssueDialog.vala:424
 msgid "Session"
-msgstr ""
+msgstr "Сессия"
 
 #: src/Dialogs/IssueDialog.vala:446
 msgid "Panel Indicators"
-msgstr ""
+msgstr "Индикаторы"
 
 #: src/Dialogs/IssueDialog.vala:448
-#, fuzzy
 msgid "System Settings"
-msgstr "Восстановить настройки"
+msgstr "Параметры системы"
 
 #: src/Dialogs/IssueDialog.vala:450
 msgid "Desktop Components"
-msgstr ""
+msgstr "Компоненты рабочего стола"
 
 #: src/Dialogs/IssueDialog.vala:452
 msgid "Default Apps"
-msgstr ""
+msgstr "Стандартные приложения"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
