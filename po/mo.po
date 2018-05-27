@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2018-05-27 11:52+0000\n"
+"PO-Revision-Date: 2018-05-28 00:02+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/mo/>\n"
@@ -81,7 +81,7 @@ msgstr "Categorii"
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
-msgstr "Anulați"
+msgstr "Anulare"
 
 #: src/Dialogs/IssueDialog.vala:110
 msgid "Report Problem"
