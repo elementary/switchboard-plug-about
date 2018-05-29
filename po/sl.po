@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2017-05-31 22:02+0000\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"PO-Revision-Date: 2018-04-02 10:57+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
-"Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-about/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,130 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/RestoreDialog.vala:29
+#: src/Plug.vala:35
+msgid "About"
+msgstr "O programu"
+
+#: src/Plug.vala:36
+msgid "View operating system and hardware information"
+msgstr "Pregled različice operacijskega sistema in strojne opreme"
+
+#: src/Plug.vala:64
+msgid "System Information"
+msgstr "Sistemske informacije"
+
+#: src/Plug.vala:65 src/Plug.vala:216
+msgid "Restore Default Settings"
+msgstr "Povrni tovarniške nastavitve"
+
+#: src/Plug.vala:66
+msgid "Suggest Translation"
+msgstr "Predlagaj prevod"
+
+#: src/Plug.vala:67
+msgid "Report Problems"
+msgstr "Prijavi napake"
+
+#: src/Plug.vala:68
+msgid "Updates"
+msgstr "Posodobitve"
+
+#: src/Plug.vala:157
+#, c-format
+msgid "Built on %s"
+msgstr "Zgrajen na osnovi %s"
+
+#: src/Plug.vala:164
+#, c-format
+msgid "GTK+ %s"
+msgstr "GTK+ %s"
+
+#: src/Plug.vala:167
+msgid "Website"
+msgstr "Spletna stran"
+
+#: src/Plug.vala:188
+msgid "Suggest Translations"
+msgstr "Predlagaj prevode"
+
+#: src/Plug.vala:198
+msgid "Report a Problem"
+msgstr "Opozorite na težavo"
+
+#: src/Plug.vala:206
+msgid "Check for Updates"
+msgstr "Preveri za posodobitve"
+
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: src/Dialogs/IssueDialog.vala:110
+#, fuzzy
+msgid "Report Problem"
+msgstr "Prijavi napake"
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:448
+#, fuzzy
+msgid "System Settings"
+msgstr "Povrni nastavitve"
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr ""
+
+#: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Sistemske nastavitve bodo povrnjene na tovarniško stanje"
 
-#: src/RestoreDialog.vala:35
-#, fuzzy
+#: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -34,92 +149,34 @@ msgstr ""
 "Vsi podatki in sistemske nastavitve bodo povrnjene na privzete vrednosti. "
 "Osebni podatki, kot so npr. slike in glasba, bodo ostali nespremenjeni."
 
-#: src/RestoreDialog.vala:50
+#: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Povrni nastavitve"
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "Prekliči"
-
-#: src/Plug.vala:36
-msgid "About"
-msgstr "O programu"
-
-#: src/Plug.vala:37
-msgid "View operating system and hardware information"
-msgstr "Pregled različice operacijskega sistema in strojne opreme"
-
-#: src/Plug.vala:65
-msgid "System Information"
-msgstr "Sistemske informacije"
-
-#: src/Plug.vala:66 src/Plug.vala:221
-msgid "Restore Default Settings"
-msgstr "Povrni tovarniške nastavitve"
-
-#: src/Plug.vala:67
-msgid "Suggest Translation"
-msgstr "Predlagaj prevod"
-
-#: src/Plug.vala:68
-msgid "Report Problems"
-msgstr "Prijavi napake"
-
-#: src/Plug.vala:69
-msgid "Updates"
-msgstr "Posodobitve"
-
-#: src/Plug.vala:160
-#, c-format
-msgid "Built on %s"
-msgstr "Zgrajen na osnovi %s"
-
-#: src/Plug.vala:167
-#, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
-
-#: src/Plug.vala:170
-msgid "Website"
-msgstr "Spletna stran"
-
-#: src/Plug.vala:191
-msgid "Suggest Translations"
-msgstr "Predlagaj prevode"
-
-#: src/Plug.vala:201
-msgid "Report a Problem"
-msgstr "Opozorite na težavo"
-
-#: src/Plug.vala:211
-msgid "Check for Updates"
-msgstr "Preveri za posodobitve"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "%s pomnilnika"
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
 msgstr "%s shrambe"
 
-#: src/Views/HardwareView.vala:111
+#: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
-msgstr ""
+msgstr "Spletna stran proizvajalca"
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr "Neznano"
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
 msgstr "Dvojedrni"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "Štirijedrni"
 

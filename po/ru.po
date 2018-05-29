@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2018-03-11 09:49+0000\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"PO-Revision-Date: 2018-05-20 15:18+0000\n"
 "Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
 "Language-Team: Russian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/ru/>\n"
@@ -21,11 +21,125 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/RestoreDialog.vala:29
+#: src/Plug.vala:35
+msgid "About"
+msgstr "О системе"
+
+#: src/Plug.vala:36
+msgid "View operating system and hardware information"
+msgstr "Просмотр информации об операционной системе и комплектующих"
+
+#: src/Plug.vala:64
+msgid "System Information"
+msgstr "Сведения о системе"
+
+#: src/Plug.vala:65 src/Plug.vala:216
+msgid "Restore Default Settings"
+msgstr "Восстановить настройки"
+
+#: src/Plug.vala:66
+msgid "Suggest Translation"
+msgstr "Предложить перевод"
+
+#: src/Plug.vala:67
+msgid "Report Problems"
+msgstr "Сообщить о проблеме"
+
+#: src/Plug.vala:68
+msgid "Updates"
+msgstr "Обновления"
+
+#: src/Plug.vala:157
+#, c-format
+msgid "Built on %s"
+msgstr "Построена на базе %s"
+
+#: src/Plug.vala:164
+#, c-format
+msgid "GTK+ %s"
+msgstr "GTK+ %s"
+
+#: src/Plug.vala:167
+msgid "Website"
+msgstr "Веб-сайт"
+
+#: src/Plug.vala:188
+msgid "Suggest Translations"
+msgstr "Предложить перевод"
+
+#: src/Plug.vala:198
+msgid "Report a Problem"
+msgstr "Сообщить об ошибке"
+
+#: src/Plug.vala:206
+msgid "Check for Updates"
+msgstr "Проверить обновления"
+
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr "В чём из нижеперечисленного вы столкнулись с ошибкой?"
+
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr "Пожалуйста, выберите компонент из списка."
+
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr "Категории"
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "Отменить"
+
+#: src/Dialogs/IssueDialog.vala:110
+msgid "Report Problem"
+msgstr "Сообщить о проблеме"
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr "Меню приложений"
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr "Экран входа или блокировки"
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr "Внешний вид"
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr "Многозадачность или управление окнами"
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr "Сессия"
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr "Индикаторы"
+
+#: src/Dialogs/IssueDialog.vala:448
+msgid "System Settings"
+msgstr "Параметры системы"
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr "Компоненты рабочего стола"
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "Стандартные приложения"
+
+#: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Системные настройки будут восстановлены до настроек по умолчанию"
 
-#: src/RestoreDialog.vala:35
+#: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -33,92 +147,34 @@ msgstr ""
 "Все системные настройки и данные будут сброшены до значений по умолчанию. "
 "Личные данные, такие как музыка и изображения, не будут затронуты."
 
-#: src/RestoreDialog.vala:50
+#: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Восстановить настройки"
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "Отменить"
-
-#: src/Plug.vala:36
-msgid "About"
-msgstr "О системе"
-
-#: src/Plug.vala:37
-msgid "View operating system and hardware information"
-msgstr "Просмотр информации об операционной системе и комплектующих"
-
-#: src/Plug.vala:65
-msgid "System Information"
-msgstr "Сведения о системе"
-
-#: src/Plug.vala:66 src/Plug.vala:221
-msgid "Restore Default Settings"
-msgstr "Восстановить настройки"
-
-#: src/Plug.vala:67
-msgid "Suggest Translation"
-msgstr "Предложить перевод"
-
-#: src/Plug.vala:68
-msgid "Report Problems"
-msgstr "Сообщить о проблеме"
-
-#: src/Plug.vala:69
-msgid "Updates"
-msgstr "Обновления"
-
-#: src/Plug.vala:160
-#, c-format
-msgid "Built on %s"
-msgstr "Построена на базе %s"
-
-#: src/Plug.vala:167
-#, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
-
-#: src/Plug.vala:170
-msgid "Website"
-msgstr "Веб-сайт"
-
-#: src/Plug.vala:191
-msgid "Suggest Translations"
-msgstr "Предложить перевод"
-
-#: src/Plug.vala:201
-msgid "Report a Problem"
-msgstr "Сообщить об ошибке"
-
-#: src/Plug.vala:211
-msgid "Check for Updates"
-msgstr "Проверить обновления"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "Память: %s"
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
 msgstr "Системный раздел: %s"
 
-#: src/Views/HardwareView.vala:111
+#: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr "Сайт производителя"
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr "Неизвестно"
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
 msgstr "2-х ядерный"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "4-х ядерный"
 

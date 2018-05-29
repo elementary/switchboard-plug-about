@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
 "PO-Revision-Date: 2017-02-06 04:18+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,76 +13,132 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: src/RestoreDialog.vala:29
+#: src/Plug.vala:35
+msgid "About"
+msgstr ""
+
+#: src/Plug.vala:36
+msgid "View operating system and hardware information"
+msgstr ""
+
+#: src/Plug.vala:64
+msgid "System Information"
+msgstr ""
+
+#: src/Plug.vala:65 src/Plug.vala:216
+msgid "Restore Default Settings"
+msgstr ""
+
+#: src/Plug.vala:66
+msgid "Suggest Translation"
+msgstr ""
+
+#: src/Plug.vala:67
+msgid "Report Problems"
+msgstr ""
+
+#: src/Plug.vala:68
+msgid "Updates"
+msgstr ""
+
+#: src/Plug.vala:157
+#, c-format
+msgid "Built on %s"
+msgstr ""
+
+#: src/Plug.vala:164
+#, c-format
+msgid "GTK+ %s"
+msgstr ""
+
+#: src/Plug.vala:167
+msgid "Website"
+msgstr ""
+
+#: src/Plug.vala:188
+msgid "Suggest Translations"
+msgstr ""
+
+#: src/Plug.vala:198
+msgid "Report a Problem"
+msgstr ""
+
+#: src/Plug.vala:206
+msgid "Check for Updates"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:110
+msgid "Report Problem"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:448
+msgid "System Settings"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr ""
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr ""
+
+#: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 
-#: src/RestoreDialog.vala:35
+#: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 
-#: src/RestoreDialog.vala:50
+#: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
-msgstr ""
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr ""
-
-#: src/Plug.vala:36
-msgid "About"
-msgstr ""
-
-#: src/Plug.vala:37
-msgid "View operating system and hardware information"
-msgstr ""
-
-#: src/Plug.vala:65
-msgid "System Information"
-msgstr ""
-
-#: src/Plug.vala:66 src/Plug.vala:221
-msgid "Restore Default Settings"
-msgstr ""
-
-#: src/Plug.vala:67
-msgid "Suggest Translation"
-msgstr ""
-
-#: src/Plug.vala:68
-msgid "Report Problems"
-msgstr ""
-
-#: src/Plug.vala:69
-msgid "Updates"
-msgstr ""
-
-#: src/Plug.vala:160
-#, c-format
-msgid "Built on %s"
-msgstr ""
-
-#: src/Plug.vala:167
-#, c-format
-msgid "GTK+ %s"
-msgstr ""
-
-#: src/Plug.vala:170
-msgid "Website"
-msgstr ""
-
-#: src/Plug.vala:191
-msgid "Suggest Translations"
-msgstr ""
-
-#: src/Plug.vala:201
-msgid "Report a Problem"
-msgstr ""
-
-#: src/Plug.vala:211
-msgid "Check for Updates"
 msgstr ""
 
 #: src/Views/HardwareView.vala:58
@@ -90,24 +146,24 @@ msgstr ""
 msgid "%s memory"
 msgstr ""
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
 msgstr ""
 
-#: src/Views/HardwareView.vala:111
+#: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr ""
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
 msgstr ""
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr ""

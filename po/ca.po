@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2018-02-21 14:33+0000\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"PO-Revision-Date: 2018-05-08 15:20+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-about/ca/>\n"
+"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-about/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,107 +20,256 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/RestoreDialog.vala:29
+#: src/Plug.vala:35
+msgid "About"
+msgstr "Quant a"
+
+#: src/Plug.vala:36
+msgid "View operating system and hardware information"
+msgstr "Mostra la informació del sistema operatiu i del maquinari"
+
+#: src/Plug.vala:64
+msgid "System Information"
+msgstr "Informació del sistema"
+
+#: src/Plug.vala:65 src/Plug.vala:216
+msgid "Restore Default Settings"
+msgstr "Restaura els paràmetres per defecte"
+
+#: src/Plug.vala:66
+msgid "Suggest Translation"
+msgstr "Suggeriu una traducció"
+
+#: src/Plug.vala:67
+msgid "Report Problems"
+msgstr "Informeu de problemes"
+
+#: src/Plug.vala:68
+msgid "Updates"
+msgstr "Actualitzacions"
+
+#: src/Plug.vala:157
+#, c-format
+msgid "Built on %s"
+msgstr "Muntat el %s"
+
+#: src/Plug.vala:164
+#, c-format
+msgid "GTK+ %s"
+msgstr "GTK+ %s"
+
+#: src/Plug.vala:167
+msgid "Website"
+msgstr "Lloc web"
+
+#: src/Plug.vala:188
+msgid "Suggest Translations"
+msgstr "Suggeriu traduccions"
+
+#: src/Plug.vala:198
+msgid "Report a Problem"
+msgstr "Informeu d'un problema"
+
+#: src/Plug.vala:206
+msgid "Check for Updates"
+msgstr "Comprova si hi ha actualitzacions"
+
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr "Amb quin dels elements següents teniu un problema?"
+
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr "Si us plau, seleccioneu un component de la llista."
+
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr "Categories"
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: src/Dialogs/IssueDialog.vala:110
+msgid "Report Problem"
+msgstr "Informeu d'un problema"
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr "Menú d'aplicacions"
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr "Pantalla d'entrada o de bloqueig"
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr "Aspecte i comportament"
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr "Gestió de finestres o multitasca"
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr "Notificacions"
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr "Sessió"
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr "Indicadors del plafó"
+
+#: src/Dialogs/IssueDialog.vala:448
+msgid "System Settings"
+msgstr "Configuració del sistema"
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr "Components de l'escriptori"
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "Aplicacions per defecte"
+
+#: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Els paràmetres del sistema es restauraran als valors de fàbrica"
 
-#: src/RestoreDialog.vala:35
-#, fuzzy
+#: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 "Tots els paràmetres i les dades del sistema s'establiran als valors per "
-"defecte. Això no afectarà dades personals, com ara música i imatges."
+"defecte. Això no afectarà les dades personals, com ara la música i les "
+"imatges."
 
-#: src/RestoreDialog.vala:50
+#: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Restaura els paràmetres"
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "Cancel·la"
-
-#: src/Plug.vala:36
-msgid "About"
-msgstr "Quant a"
-
-#: src/Plug.vala:37
-msgid "View operating system and hardware information"
-msgstr "Mostra la informació del sistema operatiu i del maquinari"
-
-#: src/Plug.vala:65
-msgid "System Information"
-msgstr "Informació del sistema"
-
-#: src/Plug.vala:66 src/Plug.vala:221
-msgid "Restore Default Settings"
-msgstr "Restaura els paràmetres per defecte"
-
-#: src/Plug.vala:67
-msgid "Suggest Translation"
-msgstr "Suggeriu una traducció"
-
-#: src/Plug.vala:68
-msgid "Report Problems"
-msgstr "Informeu de problemes"
-
-#: src/Plug.vala:69
-msgid "Updates"
-msgstr "Actualitzacions"
-
-#: src/Plug.vala:160
-#, c-format
-msgid "Built on %s"
-msgstr "Muntat el %s"
-
-#: src/Plug.vala:167
-#, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
-
-#: src/Plug.vala:170
-msgid "Website"
-msgstr "Lloc web"
-
-#: src/Plug.vala:191
-msgid "Suggest Translations"
-msgstr "Suggeriu traduccions"
-
-#: src/Plug.vala:201
-msgid "Report a Problem"
-msgstr "Informeu d'un problema"
-
-#: src/Plug.vala:211
-msgid "Check for Updates"
-msgstr "Comprova si hi ha actualitzacions"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "Memòria: %s"
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
 msgstr "Emmagatzematge: %s"
 
-#: src/Views/HardwareView.vala:111
+#: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr "Lloc web del fabricant"
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
 msgstr "Nucli doble"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "Nucli quàdruple"
+
+#~ msgid "AppCenter"
+#~ msgstr "Centre d'aplicacions"
+
+#~ msgid "Calculator"
+#~ msgstr "Calculadora"
+
+#~ msgid "Calendar"
+#~ msgstr "Calendari"
+
+#~ msgid "Camera"
+#~ msgstr "Càmera"
+
+#~ msgid "Code"
+#~ msgstr "Codi"
+
+#~ msgid "Files"
+#~ msgstr "Fitxers"
+
+#~ msgid "Mail"
+#~ msgstr "Correu"
+
+#~ msgid "Music"
+#~ msgstr "Música"
+
+#~ msgid "Photos"
+#~ msgstr "Fotografies"
+
+#~ msgid "Screenshot"
+#~ msgstr "Captures de pantalla"
+
+#~ msgid "Terminal"
+#~ msgstr "Terminal"
+
+#~ msgid "Videos"
+#~ msgstr "Vídeos"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
+
+#~ msgid "Date & Time"
+#~ msgstr "Data i hora"
+
+#~ msgid "Keyboard"
+#~ msgstr "Teclat"
+
+#~ msgid "Night Light"
+#~ msgstr "Llum de nit"
+
+#~ msgid "Power"
+#~ msgstr "Energia"
+
+#~ msgid "Sound"
+#~ msgstr "So"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicacions"
+
+#~ msgid "Desktop"
+#~ msgstr "Escriptori"
+
+#~ msgid "Language & Region"
+#~ msgstr "Llengua i regió"
+
+#~ msgid "Security & Privacy"
+#~ msgstr "Seguretat i privadesa"
+
+#~ msgid "Displays"
+#~ msgstr "Pantalles"
+
+#~ msgid "Mouse & Touchpad"
+#~ msgstr "Ratolí i ratolí tàctil"
+
+#~ msgid "Printers"
+#~ msgstr "Impressores"
+
+#~ msgid "Network"
+#~ msgstr "Xarxa"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Comptes en línia"
+
+#~ msgid "Sharing"
+#~ msgstr "Compartició"
+
+#~ msgid "Parental Control"
+#~ msgstr "Control parental"
+
+#~ msgid "Universal Access"
+#~ msgstr "Accés universal"
+
+#~ msgid "User Accounts"
+#~ msgstr "Comptes d'usuari"
 
 #~ msgid "Hardware"
 #~ msgstr "Maquinari"

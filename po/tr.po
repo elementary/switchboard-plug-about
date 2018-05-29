@@ -7,119 +7,173 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2017-05-04 10:50+0000\n"
-"Last-Translator: Seyit Ali Doğan <seyit822@yandex.com>\n"
-"Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-about/tr/>\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"PO-Revision-Date: 2018-05-25 20:35+0000\n"
+"Last-Translator: İbrahim Ethem Göl <ethem578@gmail.com>\n"
+"Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-about/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/RestoreDialog.vala:29
-#, fuzzy
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Sistem ayarları fabrika ayarlarına geri yüklenecek"
-
-#: src/RestoreDialog.vala:35
-#, fuzzy
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"Tüm sistem ayarları ve kişisel bilgiler, müzik ve resimler varsayılanlarına "
-"dönecek."
-
-#: src/RestoreDialog.vala:50
-msgid "Restore Settings"
-msgstr "Ayarları Geri al"
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "İptal"
-
-#: src/Plug.vala:36
+#: src/Plug.vala:35
 msgid "About"
 msgstr "Hakkında"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:36
 msgid "View operating system and hardware information"
 msgstr "İşletim sistemini ve donanım bilgilerini görüntüle"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:64
 msgid "System Information"
 msgstr "Sistem Bilgisi"
 
-#: src/Plug.vala:66 src/Plug.vala:221
+#: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
 msgstr "Varsayılan ayarlara sıfırla"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:66
 msgid "Suggest Translation"
 msgstr "Çeviri Öner"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:67
 msgid "Report Problems"
 msgstr "Sorun Bildir"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:68
 msgid "Updates"
 msgstr "Güncellemeler"
 
-#: src/Plug.vala:160
+#: src/Plug.vala:157
 #, c-format
 msgid "Built on %s"
 msgstr "%s üzerine kuruldu"
 
-#: src/Plug.vala:167
+#: src/Plug.vala:164
 #, c-format
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
-#: src/Plug.vala:170
+#: src/Plug.vala:167
 msgid "Website"
 msgstr "Web Sitesi"
 
-#: src/Plug.vala:191
+#: src/Plug.vala:188
 msgid "Suggest Translations"
 msgstr "Çeviri Öner"
 
-#: src/Plug.vala:201
+#: src/Plug.vala:198
 msgid "Report a Problem"
 msgstr "Sorun Bildir"
 
-#: src/Plug.vala:211
+#: src/Plug.vala:206
 msgid "Check for Updates"
 msgstr "Güncellemeleri Denetle"
 
-#: src/Views/HardwareView.vala:58
-#, fuzzy, c-format
-msgid "%s memory"
-msgstr "Bellek:"
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr "Aşağıdakilerden hangisi ile ilgili sorun yaşıyorsunuz ?"
 
-#: src/Views/HardwareView.vala:66
-#, fuzzy, c-format
-msgid "%s storage"
-msgstr "Depolama:"
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr "Lütfen listeden bir bileşen seçin."
 
-#: src/Views/HardwareView.vala:111
-msgid "Manufacturer Website"
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr "Kategoriler"
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "İptal"
+
+#: src/Dialogs/IssueDialog.vala:110
+msgid "Report Problem"
+msgstr "Sorun Bildir"
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr "Uygulamalar Menüsü"
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr "Kilit veya Giriş Ekranı"
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr "Bak & Hisset"
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr "Çoklu Görev veya Pencere Yönetimi"
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr "Bildirimler"
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr "Oturum"
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr "Panel Göstergeleri"
+
+#: src/Dialogs/IssueDialog.vala:448
+msgid "System Settings"
+msgstr "Sistem Ayarları"
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr "Masaüstü Bileşenleri"
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "Varsayılan Uygulamalar"
+
+#: src/Dialogs/RestoreDialog.vala:29
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "Sistem Ayarları Fabrika Varsayılanlarına Geri Yüklenecek"
+
+#: src/Dialogs/RestoreDialog.vala:35
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
 msgstr ""
+"Tüm sistem ayarları ve veriler varsayılan değerlere sıfırlanacaktır. Müzik "
+"ve resim gibi kişisel veriler etkilenmez."
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Dialogs/RestoreDialog.vala:50
+msgid "Restore Settings"
+msgstr "Ayarları Geri al"
+
+#: src/Views/HardwareView.vala:58
+#, c-format
+msgid "%s memory"
+msgstr "%s bellek"
+
+#: src/Views/HardwareView.vala:67
+#, c-format
+msgid "%s storage"
+msgstr "%s depolama"
+
+#: src/Views/HardwareView.vala:112
+msgid "Manufacturer Website"
+msgstr "Üretici Web Sitesi"
+
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
 msgstr "Çift Çekirdek"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "Dört-Çekirdek"
 

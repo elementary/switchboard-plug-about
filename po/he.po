@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2018-03-09 08:27+0000\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"PO-Revision-Date: 2018-05-07 15:33+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/he/>\n"
@@ -20,11 +20,125 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/RestoreDialog.vala:29
+#: src/Plug.vala:35
+msgid "About"
+msgstr "על אודות"
+
+#: src/Plug.vala:36
+msgid "View operating system and hardware information"
+msgstr "צפייה במידע חומרה ומערכת ההפעלה"
+
+#: src/Plug.vala:64
+msgid "System Information"
+msgstr "מידע מערכת"
+
+#: src/Plug.vala:65 src/Plug.vala:216
+msgid "Restore Default Settings"
+msgstr "שחזור הגדרות בררת המחדל"
+
+#: src/Plug.vala:66
+msgid "Suggest Translation"
+msgstr "הצעת תרגום"
+
+#: src/Plug.vala:67
+msgid "Report Problems"
+msgstr "דיווח בעיות"
+
+#: src/Plug.vala:68
+msgid "Updates"
+msgstr "עדכונים"
+
+#: src/Plug.vala:157
+#, c-format
+msgid "Built on %s"
+msgstr "נבנה על גבי %s"
+
+#: src/Plug.vala:164
+#, c-format
+msgid "GTK+ %s"
+msgstr "GTK+ %s"
+
+#: src/Plug.vala:167
+msgid "Website"
+msgstr "אתר אינטרנט"
+
+#: src/Plug.vala:188
+msgid "Suggest Translations"
+msgstr "הצעת תרגום"
+
+#: src/Plug.vala:198
+msgid "Report a Problem"
+msgstr "דיווח על בעיה"
+
+#: src/Plug.vala:206
+msgid "Check for Updates"
+msgstr "בדיקה עבור עדכונים"
+
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr "אילו מהבאים מאפיינים את התקלה שהתרחשה?"
+
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr "נא לבחור רכיב מהרשימה."
+
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr "קטגוריות"
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "ביטול"
+
+#: src/Dialogs/IssueDialog.vala:110
+msgid "Report Problem"
+msgstr "דיווח על תקלה"
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr "תפריט יישומים"
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr "מסך נעילה או כניסה"
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr "מראה ותחושה"
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr "ריבוי משימות או ניהול חלונות"
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr "התרעות"
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr "הפעלה"
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr "מחוונים בלוח"
+
+#: src/Dialogs/IssueDialog.vala:448
+msgid "System Settings"
+msgstr "הגדרות מערכת"
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr "רכיבי שולחן עבודה"
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "יישומי בררת מחדל"
+
+#: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "הגדרות המערכת ישוחזרו לבררת המחדל של היצרן"
 
-#: src/RestoreDialog.vala:35
+#: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -32,94 +146,129 @@ msgstr ""
 "כל הנתונים והגדרות המערכת יתאפסו לערכי בררת המחדל. מידע אישי, כגון מוזיקה "
 "ותמונות, לא יושפע."
 
-#: src/RestoreDialog.vala:50
+#: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "שחזור הגדרות"
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "ביטול"
-
-#: src/Plug.vala:36
-msgid "About"
-msgstr "על אודות"
-
-#: src/Plug.vala:37
-msgid "View operating system and hardware information"
-msgstr "צפייה במידע חומרה ומערכת ההפעלה"
-
-#: src/Plug.vala:65
-msgid "System Information"
-msgstr "מידע מערכת"
-
-#: src/Plug.vala:66 src/Plug.vala:221
-msgid "Restore Default Settings"
-msgstr "שחזור הגדרות בררת המחדל"
-
-#: src/Plug.vala:67
-msgid "Suggest Translation"
-msgstr "הצעת תרגום"
-
-#: src/Plug.vala:68
-msgid "Report Problems"
-msgstr "דיווח בעיות"
-
-#: src/Plug.vala:69
-msgid "Updates"
-msgstr "עדכונים"
-
-#: src/Plug.vala:160
-#, c-format
-msgid "Built on %s"
-msgstr "נבנה על גבי %s"
-
-#: src/Plug.vala:167
-#, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
-
-#: src/Plug.vala:170
-msgid "Website"
-msgstr "אתר אינטרנט"
-
-#: src/Plug.vala:191
-msgid "Suggest Translations"
-msgstr "הצעת תרגום"
-
-#: src/Plug.vala:201
-msgid "Report a Problem"
-msgstr "דיווח על בעיה"
-
-#: src/Plug.vala:211
-msgid "Check for Updates"
-msgstr "בדיקה עבור עדכונים"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "%s זיכרון"
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
 msgstr "%s אחסון"
 
-#: src/Views/HardwareView.vala:111
+#: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr "אתר היצרן"
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr "לא ידוע"
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
 msgstr "ליבה כפולה"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "ליבה מרובעת"
+
+#~ msgid "AppCenter"
+#~ msgstr "מרכז היישומים"
+
+#~ msgid "Calculator"
+#~ msgstr "מחשבון"
+
+#~ msgid "Calendar"
+#~ msgstr "לוח שנה"
+
+#~ msgid "Camera"
+#~ msgstr "מצלמה"
+
+#~ msgid "Code"
+#~ msgstr "קוד"
+
+#~ msgid "Files"
+#~ msgstr "קבצים"
+
+#~ msgid "Mail"
+#~ msgstr "דואר"
+
+#~ msgid "Music"
+#~ msgstr "מוזיקה"
+
+#~ msgid "Photos"
+#~ msgstr "תמונות"
+
+#~ msgid "Screenshot"
+#~ msgstr "צילום מסך"
+
+#~ msgid "Terminal"
+#~ msgstr "מסוף"
+
+#~ msgid "Videos"
+#~ msgstr "סרטונים"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
+
+#~ msgid "Date & Time"
+#~ msgstr "תאריך ושעה"
+
+#~ msgid "Keyboard"
+#~ msgstr "מקלדת"
+
+#~ msgid "Night Light"
+#~ msgstr "תאורת לילה"
+
+#~ msgid "Power"
+#~ msgstr "חשמל"
+
+#~ msgid "Sound"
+#~ msgstr "שמע"
+
+#~ msgid "Applications"
+#~ msgstr "יישומים"
+
+#~ msgid "Desktop"
+#~ msgstr "שולחן עבודה"
+
+#~ msgid "Language & Region"
+#~ msgstr "שפה ואזור"
+
+#~ msgid "Security & Privacy"
+#~ msgstr "אבטחה ופרטיות"
+
+#~ msgid "Displays"
+#~ msgstr "תצוגות"
+
+#~ msgid "Mouse & Touchpad"
+#~ msgstr "עכבר ומשטח מגע"
+
+#~ msgid "Printers"
+#~ msgstr "מדפסות"
+
+#~ msgid "Network"
+#~ msgstr "רשת"
+
+#~ msgid "Online Accounts"
+#~ msgstr "חשבונות מקוונים"
+
+#~ msgid "Sharing"
+#~ msgstr "שיתוף"
+
+#~ msgid "Parental Control"
+#~ msgstr "בקרת הורים"
+
+#~ msgid "Universal Access"
+#~ msgstr "גישה אוניברסלית"
+
+#~ msgid "User Accounts"
+#~ msgstr "חשבונות משתמשים"
 
 #~ msgid "Hardware"
 #~ msgstr "חומרה"

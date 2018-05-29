@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2018-03-09 02:12+0000\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"PO-Revision-Date: 2018-05-27 00:05+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/ja/>\n"
@@ -20,104 +20,253 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/RestoreDialog.vala:29
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "システム設定は出荷時のデフォルトに復元されます"
-
-#: src/RestoreDialog.vala:35
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr "すべてのシステム設定とデータはデフォルト値にリセットされます。音楽や画像のような個人のデータは影響を受けません。"
-
-#: src/RestoreDialog.vala:50
-msgid "Restore Settings"
-msgstr "設定の復元"
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "キャンセル"
-
-#: src/Plug.vala:36
+#: src/Plug.vala:35
 msgid "About"
 msgstr "情報"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:36
 msgid "View operating system and hardware information"
-msgstr "OS とハードウェアの情報を見ます"
+msgstr "OS とハードウェアの情報を参照します"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:64
 msgid "System Information"
 msgstr "システム情報"
 
-#: src/Plug.vala:66 src/Plug.vala:221
+#: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
 msgstr "デフォルト設定の復元"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:66
 msgid "Suggest Translation"
-msgstr "翻訳を提案する"
+msgstr "翻訳を提案"
+
+#: src/Plug.vala:67
+msgid "Report Problems"
+msgstr "問題を報告"
 
 #: src/Plug.vala:68
-msgid "Report Problems"
-msgstr "問題を報告する"
-
-#: src/Plug.vala:69
 msgid "Updates"
 msgstr "アップデート"
 
-#: src/Plug.vala:160
+#: src/Plug.vala:157
 #, c-format
 msgid "Built on %s"
 msgstr "Built on %s"
 
-#: src/Plug.vala:167
+#: src/Plug.vala:164
 #, c-format
 msgid "GTK+ %s"
 msgstr "GTK+ %s"
 
-#: src/Plug.vala:170
+#: src/Plug.vala:167
 msgid "Website"
 msgstr "Web サイト"
 
-#: src/Plug.vala:191
+#: src/Plug.vala:188
 msgid "Suggest Translations"
 msgstr "翻訳を提案"
 
-#: src/Plug.vala:201
+#: src/Plug.vala:198
 msgid "Report a Problem"
-msgstr "問題点を報告"
+msgstr "問題を報告"
 
-#: src/Plug.vala:211
+#: src/Plug.vala:206
 msgid "Check for Updates"
 msgstr "アップデートを確認"
+
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr "以下のどのアプリにおいて問題が発生していますか？"
+
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr "リストからコンポーネントをお選びください。"
+
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: src/Dialogs/IssueDialog.vala:110
+msgid "Report Problem"
+msgstr "問題を報告"
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr "アプリケーションメニュー"
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr "ロック画面・ログイン画面"
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr "外観および操作感"
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr "マルチタスキングおよびウィンドウ管理"
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr "通知"
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr "セッション"
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr "パネルインジケーター"
+
+#: src/Dialogs/IssueDialog.vala:448
+msgid "System Settings"
+msgstr "システム設定"
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr "デスクトップコンポーネント"
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "デフォルトのアプリ"
+
+#: src/Dialogs/RestoreDialog.vala:29
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "システム設定は出荷時のデフォルトに復元されます"
+
+#: src/Dialogs/RestoreDialog.vala:35
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr "すべてのシステム設定とデータはデフォルト値にリセットされます。ミュージックやピクチャーなどの個人のデータは影響を受けません。"
+
+#: src/Dialogs/RestoreDialog.vala:50
+msgid "Restore Settings"
+msgstr "設定の復元"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "%s メモリー"
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
 msgstr "%s ストレージ"
 
-#: src/Views/HardwareView.vala:111
+#: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr "製造元の Web サイト"
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr "不明"
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
 msgstr "デュアルコア"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "クアッドコア"
+
+#~ msgid "AppCenter"
+#~ msgstr "AppCenter"
+
+#~ msgid "Calculator"
+#~ msgstr "電卓"
+
+#~ msgid "Calendar"
+#~ msgstr "カレンダー"
+
+#~ msgid "Camera"
+#~ msgstr "カメラ"
+
+#~ msgid "Code"
+#~ msgstr "Code"
+
+#~ msgid "Files"
+#~ msgstr "ファイル"
+
+#~ msgid "Mail"
+#~ msgstr "メール"
+
+#~ msgid "Music"
+#~ msgstr "ミュージック"
+
+#~ msgid "Photos"
+#~ msgstr "フォト"
+
+#~ msgid "Screenshot"
+#~ msgstr "スクリーンショット"
+
+#~ msgid "Terminal"
+#~ msgstr "ターミナル"
+
+#~ msgid "Videos"
+#~ msgstr "ビデオ"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
+
+#~ msgid "Date & Time"
+#~ msgstr "日付と時刻"
+
+#~ msgid "Keyboard"
+#~ msgstr "キーボード"
+
+#~ msgid "Night Light"
+#~ msgstr "Night Light"
+
+#~ msgid "Power"
+#~ msgstr "電源"
+
+#~ msgid "Sound"
+#~ msgstr "サウンド"
+
+#~ msgid "Applications"
+#~ msgstr "アプリケーション"
+
+#~ msgid "Desktop"
+#~ msgstr "デスクトップ"
+
+#~ msgid "Language & Region"
+#~ msgstr "言語と地域"
+
+#~ msgid "Security & Privacy"
+#~ msgstr "セキュリティとプライバシー"
+
+#~ msgid "Displays"
+#~ msgstr "ディスプレイ"
+
+#~ msgid "Mouse & Touchpad"
+#~ msgstr "マウスとタッチパッド"
+
+#~ msgid "Printers"
+#~ msgstr "プリンター"
+
+#~ msgid "Network"
+#~ msgstr "ネットワーク"
+
+#~ msgid "Online Accounts"
+#~ msgstr "オンラインアカウント"
+
+#~ msgid "Sharing"
+#~ msgstr "共有"
+
+#~ msgid "Parental Control"
+#~ msgstr "ペアレンタルコントロール"
+
+#~ msgid "Universal Access"
+#~ msgstr "ユニバーサルアクセス"
+
+#~ msgid "User Accounts"
+#~ msgstr "ユーザーアカウント"
 
 #~ msgid "Hardware"
 #~ msgstr "ハードウェア"

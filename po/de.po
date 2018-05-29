@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2018-03-10 16:21+0000\n"
-"Last-Translator: Felix Günther <felix.gnthr@gmail.com>\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"PO-Revision-Date: 2018-05-16 22:06+0000\n"
+"Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/de/>\n"
 "Language: de\n"
@@ -20,11 +20,125 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/RestoreDialog.vala:29
+#: src/Plug.vala:35
+msgid "About"
+msgstr "Info"
+
+#: src/Plug.vala:36
+msgid "View operating system and hardware information"
+msgstr "Betriebssystem- und Hardware-Informationen anzeigen"
+
+#: src/Plug.vala:64
+msgid "System Information"
+msgstr "Systeminformationen"
+
+#: src/Plug.vala:65 src/Plug.vala:216
+msgid "Restore Default Settings"
+msgstr "Standardeinstellungen wiederherstellen"
+
+#: src/Plug.vala:66
+msgid "Suggest Translation"
+msgstr "Übersetzung vorschlagen"
+
+#: src/Plug.vala:67
+msgid "Report Problems"
+msgstr "Problem melden"
+
+#: src/Plug.vala:68
+msgid "Updates"
+msgstr "Aktualisierungen"
+
+#: src/Plug.vala:157
+#, c-format
+msgid "Built on %s"
+msgstr "Auf Basis von %s"
+
+#: src/Plug.vala:164
+#, c-format
+msgid "GTK+ %s"
+msgstr "GTK+ %s"
+
+#: src/Plug.vala:167
+msgid "Website"
+msgstr "Internetseite"
+
+#: src/Plug.vala:188
+msgid "Suggest Translations"
+msgstr "Übersetzungen vorschlagen"
+
+#: src/Plug.vala:198
+msgid "Report a Problem"
+msgstr "Problem melden"
+
+#: src/Plug.vala:206
+msgid "Check for Updates"
+msgstr "Nach Aktualisierungen suchen"
+
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr "Mit welchem der folgenden Punkte sehen Sie ein Problem?"
+
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr "Bitte wählen Sie eine Komponente aus der Liste aus."
+
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr "Kategorien"
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: src/Dialogs/IssueDialog.vala:110
+msgid "Report Problem"
+msgstr "Problem melden"
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr "Anwendungen"
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr "Sperre oder Anmeldebildschirm"
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr "Erscheinungsbild & Handhabung"
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr "Multitasking oder Fensterverwaltung"
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr "Benachrichtigungen"
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr "Sitzung"
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr "Panel-Indikatoren"
+
+#: src/Dialogs/IssueDialog.vala:448
+msgid "System Settings"
+msgstr "Systemeinstellungen"
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr "Schreibtisch-Komponenten"
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "Voreingestellte Anwendungen"
+
+#: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Die Systemeinstellungen werden auf die Werkseinstellung zurückgesetzt"
 
-#: src/RestoreDialog.vala:35
+#: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -33,94 +147,129 @@ msgstr ""
 "zurückgesetzt. Persönliche Daten wie Musik oder Bilder bleiben hiervon "
 "unberührt."
 
-#: src/RestoreDialog.vala:50
+#: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Einstellungen wiederherstellen"
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: src/Plug.vala:36
-msgid "About"
-msgstr "Info"
-
-#: src/Plug.vala:37
-msgid "View operating system and hardware information"
-msgstr "Betriebssystem- und Hardware-Informationen anzeigen"
-
-#: src/Plug.vala:65
-msgid "System Information"
-msgstr "Systeminformationen"
-
-#: src/Plug.vala:66 src/Plug.vala:221
-msgid "Restore Default Settings"
-msgstr "Standardeinstellungen wiederherstellen"
-
-#: src/Plug.vala:67
-msgid "Suggest Translation"
-msgstr "Übersetzung vorschlagen"
-
-#: src/Plug.vala:68
-msgid "Report Problems"
-msgstr "Problem melden"
-
-#: src/Plug.vala:69
-msgid "Updates"
-msgstr "Aktualisierungen"
-
-#: src/Plug.vala:160
-#, c-format
-msgid "Built on %s"
-msgstr "Auf Basis von %s"
-
-#: src/Plug.vala:167
-#, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
-
-#: src/Plug.vala:170
-msgid "Website"
-msgstr "Internetseite"
-
-#: src/Plug.vala:191
-msgid "Suggest Translations"
-msgstr "Übersetzungen vorschlagen"
-
-#: src/Plug.vala:201
-msgid "Report a Problem"
-msgstr "Problem melden"
-
-#: src/Plug.vala:211
-msgid "Check for Updates"
-msgstr "Nach Aktualisierungen suchen"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "%s Arbeitsspeicher"
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
 msgstr "%s Massenspeicherplatz"
 
-#: src/Views/HardwareView.vala:111
+#: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr "Hersteller Webseite"
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
 msgstr "Doppelkern"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "Vierfachkern"
+
+#~ msgid "AppCenter"
+#~ msgstr "AppCenter"
+
+#~ msgid "Calculator"
+#~ msgstr "Taschenrechner"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalender"
+
+#~ msgid "Camera"
+#~ msgstr "Kamera"
+
+#~ msgid "Code"
+#~ msgstr "Code"
+
+#~ msgid "Files"
+#~ msgstr "Dateien"
+
+#~ msgid "Mail"
+#~ msgstr "Mail"
+
+#~ msgid "Music"
+#~ msgstr "Musik"
+
+#~ msgid "Photos"
+#~ msgstr "Fotos"
+
+#~ msgid "Screenshot"
+#~ msgstr "Bildschirmfoto"
+
+#~ msgid "Terminal"
+#~ msgstr "Terminal"
+
+#~ msgid "Videos"
+#~ msgstr "Videos"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
+
+#~ msgid "Date & Time"
+#~ msgstr "Datum & Uhrzeit"
+
+#~ msgid "Keyboard"
+#~ msgstr "Tastatur"
+
+#~ msgid "Night Light"
+#~ msgstr "Night-Light"
+
+#~ msgid "Power"
+#~ msgstr "Stromversorgung"
+
+#~ msgid "Sound"
+#~ msgstr "Audio"
+
+#~ msgid "Applications"
+#~ msgstr "Anwendungen"
+
+#~ msgid "Desktop"
+#~ msgstr "Schreibtisch"
+
+#~ msgid "Language & Region"
+#~ msgstr "Sprache & Region"
+
+#~ msgid "Security & Privacy"
+#~ msgstr "Sicherheit & Datenschutz"
+
+#~ msgid "Displays"
+#~ msgstr "Bildschirme"
+
+#~ msgid "Mouse & Touchpad"
+#~ msgstr "Maus und Touchpad"
+
+#~ msgid "Printers"
+#~ msgstr "Drucker"
+
+#~ msgid "Network"
+#~ msgstr "Netzwerk"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Internetkonten"
+
+#~ msgid "Sharing"
+#~ msgstr "Freigaben"
+
+#~ msgid "Parental Control"
+#~ msgstr "Kindersicherung"
+
+#~ msgid "Universal Access"
+#~ msgstr "Barriere­frei­heit"
+
+#~ msgid "User Accounts"
+#~ msgstr "Benutzerkonten"
 
 #~ msgid "Hardware"
 #~ msgstr "Hardware"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2018-03-08 19:31+0000\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"PO-Revision-Date: 2018-05-13 09:51+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/it/>\n"
@@ -20,11 +20,125 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/RestoreDialog.vala:29
+#: src/Plug.vala:35
+msgid "About"
+msgstr "Informazioni"
+
+#: src/Plug.vala:36
+msgid "View operating system and hardware information"
+msgstr "Guarda le informazioni del sistema operativo e dell'hardware"
+
+#: src/Plug.vala:64
+msgid "System Information"
+msgstr "Informazioni di sistema"
+
+#: src/Plug.vala:65 src/Plug.vala:216
+msgid "Restore Default Settings"
+msgstr "Ripristina impostazioni predefinite"
+
+#: src/Plug.vala:66
+msgid "Suggest Translation"
+msgstr "Suggerisci traduzioni"
+
+#: src/Plug.vala:67
+msgid "Report Problems"
+msgstr "Segnala un problema"
+
+#: src/Plug.vala:68
+msgid "Updates"
+msgstr "Aggiornamenti"
+
+#: src/Plug.vala:157
+#, c-format
+msgid "Built on %s"
+msgstr "Costruito su %s"
+
+#: src/Plug.vala:164
+#, c-format
+msgid "GTK+ %s"
+msgstr "GTK+ %s"
+
+#: src/Plug.vala:167
+msgid "Website"
+msgstr "Sito web"
+
+#: src/Plug.vala:188
+msgid "Suggest Translations"
+msgstr "Suggerisci traduzioni"
+
+#: src/Plug.vala:198
+msgid "Report a Problem"
+msgstr "Segnala un problema"
+
+#: src/Plug.vala:206
+msgid "Check for Updates"
+msgstr "Verifica aggiornamenti"
+
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr "Con quale dei seguenti hai stai avendo dei problemi?"
+
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr "Seleziona un componente dalla lista."
+
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr "Categorie"
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "Annulla"
+
+#: src/Dialogs/IssueDialog.vala:110
+msgid "Report Problem"
+msgstr "Segnala un problema"
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr "Menu applicazioni"
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr "Schermata di blocco o di accesso"
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr "Aspetto ed esperienza utente"
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr "Gestione del multitasking o delle finestre"
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr "Notifiche"
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr "Sessione"
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr "Indicatori del pannello superiore"
+
+#: src/Dialogs/IssueDialog.vala:448
+msgid "System Settings"
+msgstr "Impostazioni di sistema"
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr "Componenti del desktop"
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "Applicazioni predefinite"
+
+#: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Le impostazioni di sistema verrano riportate ai valori predefiniti"
 
-#: src/RestoreDialog.vala:35
+#: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -32,92 +146,34 @@ msgstr ""
 "Tutte le impostazioni e i dati di sistema saranno ripristinati ai valori "
 "predefiniti. I dati personali, come foto e musica, non saranno influenzati."
 
-#: src/RestoreDialog.vala:50
+#: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Ripristina impostazioni"
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "Annulla"
-
-#: src/Plug.vala:36
-msgid "About"
-msgstr "Informazioni"
-
-#: src/Plug.vala:37
-msgid "View operating system and hardware information"
-msgstr "Guarda le informazioni del sistema operativo e dell'hardware"
-
-#: src/Plug.vala:65
-msgid "System Information"
-msgstr "Informazioni di sistema"
-
-#: src/Plug.vala:66 src/Plug.vala:221
-msgid "Restore Default Settings"
-msgstr "Ripristina impostazioni predefinite"
-
-#: src/Plug.vala:67
-msgid "Suggest Translation"
-msgstr "Suggerisci traduzioni"
-
-#: src/Plug.vala:68
-msgid "Report Problems"
-msgstr "Segnala un problema"
-
-#: src/Plug.vala:69
-msgid "Updates"
-msgstr "Aggiornamenti"
-
-#: src/Plug.vala:160
-#, c-format
-msgid "Built on %s"
-msgstr "Costruito su %s"
-
-#: src/Plug.vala:167
-#, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
-
-#: src/Plug.vala:170
-msgid "Website"
-msgstr "Sito web"
-
-#: src/Plug.vala:191
-msgid "Suggest Translations"
-msgstr "Suggerisci traduzioni"
-
-#: src/Plug.vala:201
-msgid "Report a Problem"
-msgstr "Segnala un problema"
-
-#: src/Plug.vala:211
-msgid "Check for Updates"
-msgstr "Verifica aggiornamenti"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "Memoria: %s"
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
 msgstr "Disco: %s"
 
-#: src/Views/HardwareView.vala:111
+#: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr "Sito web del produttore"
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr "Sconosciuto"
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
 msgstr "Dual Core"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "Quad Core"
 

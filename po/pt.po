@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2018-02-28 10:58+0000\n"
-"Last-Translator: Luís Lima <geral@liqensoft.com>\n"
-"Language-Team: Portuguese <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-about/pt/>\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"PO-Revision-Date: 2018-05-12 00:11+0000\n"
+"Last-Translator: Pedro Ferreira <pmaf.ferreira@gmail.com>\n"
+"Language-Team: Portuguese <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-about/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,13 +20,126 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/RestoreDialog.vala:29
+#: src/Plug.vala:35
+msgid "About"
+msgstr "Sobre"
+
+#: src/Plug.vala:36
+msgid "View operating system and hardware information"
+msgstr "Ver informações sobre o sistema operativo e hardware"
+
+#: src/Plug.vala:64
+msgid "System Information"
+msgstr "Informações do Sistema"
+
+#: src/Plug.vala:65 src/Plug.vala:216
+msgid "Restore Default Settings"
+msgstr "Restaurar Definições por Defeito"
+
+#: src/Plug.vala:66
+msgid "Suggest Translation"
+msgstr "Sugerir Tradução"
+
+#: src/Plug.vala:67
+msgid "Report Problems"
+msgstr "Reportar Problemas"
+
+#: src/Plug.vala:68
+msgid "Updates"
+msgstr "Atualizações"
+
+#: src/Plug.vala:157
+#, c-format
+msgid "Built on %s"
+msgstr "Baseado em %s"
+
+#: src/Plug.vala:164
+#, c-format
+msgid "GTK+ %s"
+msgstr "GTK+ %s"
+
+#: src/Plug.vala:167
+msgid "Website"
+msgstr "Página Web"
+
+#: src/Plug.vala:188
+msgid "Suggest Translations"
+msgstr "Sugerir Traduções"
+
+#: src/Plug.vala:198
+msgid "Report a Problem"
+msgstr "Reportar um problema"
+
+#: src/Plug.vala:206
+msgid "Check for Updates"
+msgstr "Procurar Atualizações"
+
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr "Com qual dos seguintes estás a ter um problema?"
+
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr "Por favor seleciona um componente da lista."
+
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr "Categorias"
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/Dialogs/IssueDialog.vala:110
+msgid "Report Problem"
+msgstr "Reportar Problema"
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr "Menu de Aplicações"
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr "Ecrâ de Bloqueio ou de Inicio de Sessão"
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr "Aparência"
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr "Multitarefa ou Gestor de Janelas"
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr "Notificações"
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr "Sessão"
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr "Indicadores do painel"
+
+#: src/Dialogs/IssueDialog.vala:448
+msgid "System Settings"
+msgstr "Configurações do Sistema"
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr "Componentes da área de trabalho"
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "Aplicações Predefinidas"
+
+#: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 "As definições de sistema serão restauradas para as definições de fábrica"
 
-#: src/RestoreDialog.vala:35
-#, fuzzy
+#: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -34,94 +147,39 @@ msgstr ""
 "Todas as definições e dados do sistema serão substituídos pelos valores por "
 "padrão. Dados pessoais, como músicas e imagens, não são afetadas."
 
-#: src/RestoreDialog.vala:50
+#: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Restaurar Definições"
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: src/Plug.vala:36
-msgid "About"
-msgstr "Sobre"
-
-#: src/Plug.vala:37
-msgid "View operating system and hardware information"
-msgstr "Ver informações sobre o sistema operativo e hardware"
-
-#: src/Plug.vala:65
-msgid "System Information"
-msgstr "Informações do Sistema"
-
-#: src/Plug.vala:66 src/Plug.vala:221
-msgid "Restore Default Settings"
-msgstr "Restaurar Definições por Defeito"
-
-#: src/Plug.vala:67
-msgid "Suggest Translation"
-msgstr "Sugerir Tradução"
-
-#: src/Plug.vala:68
-msgid "Report Problems"
-msgstr "Reportar Problemas"
-
-#: src/Plug.vala:69
-msgid "Updates"
-msgstr "Atualizações"
-
-#: src/Plug.vala:160
-#, c-format
-msgid "Built on %s"
-msgstr "Baseado em %s"
-
-#: src/Plug.vala:167
-#, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
-
-#: src/Plug.vala:170
-msgid "Website"
-msgstr "Página Web"
-
-#: src/Plug.vala:191
-msgid "Suggest Translations"
-msgstr "Sugerir Traduções"
-
-#: src/Plug.vala:201
-msgid "Report a Problem"
-msgstr "Reportar um problema"
-
-#: src/Plug.vala:211
-msgid "Check for Updates"
-msgstr "Procurar Atualizações"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "%s memória"
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
 msgstr "%s armazenamento"
 
-#: src/Views/HardwareView.vala:111
+#: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr "Website do Fabricante"
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
-msgstr "Dual-Core"
+msgstr "Núcleo Duplo"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
-msgstr "Quad-Core"
+msgstr "Núcleo quádruplo"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
 
 #~ msgid "Hardware"
 #~ msgstr "Hardware"

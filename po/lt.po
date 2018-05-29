@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-08 10:01-0800\n"
-"PO-Revision-Date: 2018-03-08 20:23+0000\n"
+"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"PO-Revision-Date: 2018-05-07 20:35+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/lt/>\n"
@@ -21,11 +21,125 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/RestoreDialog.vala:29
+#: src/Plug.vala:35
+msgid "About"
+msgstr "Apie"
+
+#: src/Plug.vala:36
+msgid "View operating system and hardware information"
+msgstr "Rodyti operacinės sistemos ir aparatinės įrangos informaciją"
+
+#: src/Plug.vala:64
+msgid "System Information"
+msgstr "Sistemos informacija"
+
+#: src/Plug.vala:65 src/Plug.vala:216
+msgid "Restore Default Settings"
+msgstr "Atkurti numatytuosius nustatymus"
+
+#: src/Plug.vala:66
+msgid "Suggest Translation"
+msgstr "Siūlyti vertimą"
+
+#: src/Plug.vala:67
+msgid "Report Problems"
+msgstr "Pranešti apie klaidas"
+
+#: src/Plug.vala:68
+msgid "Updates"
+msgstr "Atnaujinimai"
+
+#: src/Plug.vala:157
+#, c-format
+msgid "Built on %s"
+msgstr "Sukurta %s pagrindu"
+
+#: src/Plug.vala:164
+#, c-format
+msgid "GTK+ %s"
+msgstr "GTK+ %s"
+
+#: src/Plug.vala:167
+msgid "Website"
+msgstr "Internetinė svetainė"
+
+#: src/Plug.vala:188
+msgid "Suggest Translations"
+msgstr "Siūlyti vertimus"
+
+#: src/Plug.vala:198
+msgid "Report a Problem"
+msgstr "Pranešti apie klaidą"
+
+#: src/Plug.vala:206
+msgid "Check for Updates"
+msgstr "Tikrinti ar yra atnaujinimų"
+
+#: src/Dialogs/IssueDialog.vala:27
+msgid "Which of the Following Are You Seeing an Issue With?"
+msgstr "Kuriame iš šių matote problemą?"
+
+#: src/Dialogs/IssueDialog.vala:28
+msgid "Please select a component from the list."
+msgstr "Pasirinkite komponentą iš sąrašo."
+
+#: src/Dialogs/IssueDialog.vala:48
+msgid "Categories"
+msgstr "Kategorijos"
+
+#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+msgid "Cancel"
+msgstr "Atsisakyti"
+
+#: src/Dialogs/IssueDialog.vala:110
+msgid "Report Problem"
+msgstr "Pranešti apie problemą"
+
+#: src/Dialogs/IssueDialog.vala:228
+msgid "Applications Menu"
+msgstr "Programų meniu"
+
+#: src/Dialogs/IssueDialog.vala:232
+msgid "Lock or Login Screen"
+msgstr "Užrakto ar prisijungimo ekranas"
+
+#: src/Dialogs/IssueDialog.vala:236
+msgid "Look & Feel"
+msgstr "Išvaizda ir turinys"
+
+#: src/Dialogs/IssueDialog.vala:240
+msgid "Multitasking or Window Management"
+msgstr "Daugiaprogramis apdorojimas ar langų tvarkymas"
+
+#: src/Dialogs/IssueDialog.vala:244
+msgid "Notifications"
+msgstr "Pranešimai"
+
+#: src/Dialogs/IssueDialog.vala:424
+msgid "Session"
+msgstr "Seansas"
+
+#: src/Dialogs/IssueDialog.vala:446
+msgid "Panel Indicators"
+msgstr "Skydelio indikatoriai"
+
+#: src/Dialogs/IssueDialog.vala:448
+msgid "System Settings"
+msgstr "Sistemos nustatymai"
+
+#: src/Dialogs/IssueDialog.vala:450
+msgid "Desktop Components"
+msgstr "Darbalaukio komponentai"
+
+#: src/Dialogs/IssueDialog.vala:452
+msgid "Default Apps"
+msgstr "Numatytosios programos"
+
+#: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Sistemos nustatymai bus atkurti į gamyklines reikšmes"
 
-#: src/RestoreDialog.vala:35
+#: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -33,94 +147,129 @@ msgstr ""
 "Visi sistemos nustatymai ir duomenys bus atstatyti į numatytąsias reikšmes. "
 "Asmeniniai duomenys, tokie kaip muzika ir paveikslai, nebus paveikti."
 
-#: src/RestoreDialog.vala:50
+#: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Atkurti nustatymus"
-
-#: src/RestoreDialog.vala:53
-msgid "Cancel"
-msgstr "Atsisakyti"
-
-#: src/Plug.vala:36
-msgid "About"
-msgstr "Apie"
-
-#: src/Plug.vala:37
-msgid "View operating system and hardware information"
-msgstr "Rodyti operacinės sistemos ir aparatinės įrangos informaciją"
-
-#: src/Plug.vala:65
-msgid "System Information"
-msgstr "Sistemos informacija"
-
-#: src/Plug.vala:66 src/Plug.vala:221
-msgid "Restore Default Settings"
-msgstr "Atkurti numatytuosius nustatymus"
-
-#: src/Plug.vala:67
-msgid "Suggest Translation"
-msgstr "Siūlyti vertimą"
-
-#: src/Plug.vala:68
-msgid "Report Problems"
-msgstr "Pranešti apie klaidas"
-
-#: src/Plug.vala:69
-msgid "Updates"
-msgstr "Atnaujinimai"
-
-#: src/Plug.vala:160
-#, c-format
-msgid "Built on %s"
-msgstr "Sukurta %s pagrindu"
-
-#: src/Plug.vala:167
-#, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
-
-#: src/Plug.vala:170
-msgid "Website"
-msgstr "Internetinė svetainė"
-
-#: src/Plug.vala:191
-msgid "Suggest Translations"
-msgstr "Siūlyti vertimus"
-
-#: src/Plug.vala:201
-msgid "Report a Problem"
-msgstr "Pranešti apie klaidą"
-
-#: src/Plug.vala:211
-msgid "Check for Updates"
-msgstr "Tikrinti ar yra atnaujinimų"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "Atmintis: %s"
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
 msgstr "Kaupiklis: %s"
 
-#: src/Views/HardwareView.vala:111
+#: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr "Gamintojo svetainė"
 
-#: src/Views/HardwareView.vala:155 src/Views/HardwareView.vala:201
-#: src/Views/HardwareView.vala:211 src/Views/HardwareView.vala:259
+#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
+#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
 msgstr "Nežinoma"
 
-#: src/Views/HardwareView.vala:167
+#: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
 msgstr "Dviejų branduolių"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "Keturių branduolių"
+
+#~ msgid "AppCenter"
+#~ msgstr "Programų centras"
+
+#~ msgid "Calculator"
+#~ msgstr "Skaičiuotuvas"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalendorius"
+
+#~ msgid "Camera"
+#~ msgstr "Kamera"
+
+#~ msgid "Code"
+#~ msgstr "Kodas"
+
+#~ msgid "Files"
+#~ msgstr "Failai"
+
+#~ msgid "Mail"
+#~ msgstr "Paštas"
+
+#~ msgid "Music"
+#~ msgstr "Muzika"
+
+#~ msgid "Photos"
+#~ msgstr "Nuotraukos"
+
+#~ msgid "Screenshot"
+#~ msgstr "Ekrano kopija"
+
+#~ msgid "Terminal"
+#~ msgstr "Terminalas"
+
+#~ msgid "Videos"
+#~ msgstr "Vaizdo įrašai"
+
+#~ msgid "Bluetooth"
+#~ msgstr "Bluetooth"
+
+#~ msgid "Date & Time"
+#~ msgstr "Data ir laikas"
+
+#~ msgid "Keyboard"
+#~ msgstr "Klaviatūra"
+
+#~ msgid "Night Light"
+#~ msgstr "Naktinis apšvietimas"
+
+#~ msgid "Power"
+#~ msgstr "Maitinimas"
+
+#~ msgid "Sound"
+#~ msgstr "Garsas"
+
+#~ msgid "Applications"
+#~ msgstr "Programos"
+
+#~ msgid "Desktop"
+#~ msgstr "Darbalaukis"
+
+#~ msgid "Language & Region"
+#~ msgstr "Kalba ir regionas"
+
+#~ msgid "Security & Privacy"
+#~ msgstr "Saugumas ir privatumas"
+
+#~ msgid "Displays"
+#~ msgstr "Ekranai"
+
+#~ msgid "Mouse & Touchpad"
+#~ msgstr "Pelė ir jutiklinis kilimėlis"
+
+#~ msgid "Printers"
+#~ msgstr "Spausdintuvai"
+
+#~ msgid "Network"
+#~ msgstr "Tinklas"
+
+#~ msgid "Online Accounts"
+#~ msgstr "Internetinės paskyros"
+
+#~ msgid "Sharing"
+#~ msgstr "Bendrinimas"
+
+#~ msgid "Parental Control"
+#~ msgstr "Tėvų kontrolė"
+
+#~ msgid "Universal Access"
+#~ msgstr "Universalioji prieiga"
+
+#~ msgid "User Accounts"
+#~ msgstr "Naudotojų paskyros"
 
 #~ msgid "Hardware"
 #~ msgstr "Aparatinė įranga"
