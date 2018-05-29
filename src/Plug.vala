@@ -283,9 +283,7 @@ public class About.Plug : Switchboard.Plug {
     }
 
     private void settings_restore_clicked () {
-        var should_display = confirm_restore_action ();
-
-        if (should_display) {
+        if (confirm_restore_action ()) {
             var all_schemas = get_pantheon_schemas ();
 
             foreach (var schema in all_schemas) {
@@ -295,8 +293,7 @@ public class About.Plug : Switchboard.Plug {
     }
 
     private static void reset_all_keys (GLib.Settings settings) {
-        var keys = settings.list_keys ();
-        foreach (var key in keys) {
+        foreach (var key in settings.list_keys ()) {
             settings.reset (key);
         }
     }
@@ -328,8 +325,7 @@ public class About.Plug : Switchboard.Plug {
     
         reset_all_keys (settings);
     
-        var children = settings.list_children ();
-        foreach (var child in children) {
+        foreach (var child in settings.list_children ()) {
             var child_settings = settings.get_child (child);
     
             reset_all_keys (child_settings);
