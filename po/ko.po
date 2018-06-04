@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2018-06-04 00:09+0000\n"
+"PO-Revision-Date: 2018-06-04 02:25+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/ko/>\n"
@@ -76,40 +76,39 @@ msgstr "업데이트 확인"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "다음 중 어떤 문제와 마주하고 계신가요?"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "목록에서 항목을 선택해 주세요."
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Categories"
-msgstr ""
+msgstr "카테고리"
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "취소"
 
 #: src/Dialogs/IssueDialog.vala:110
-#, fuzzy
 msgid "Report Problem"
-msgstr "오류 보고"
+msgstr "문제 알림"
 
 #: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
-msgstr ""
+msgstr "애플리케이션 메뉴"
 
 #: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "잠금 또는 로그인 화면"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
-msgstr ""
+msgstr "모양새"
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "멀티태스킹 또는 창 관리"
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
@@ -117,37 +116,33 @@ msgstr "알림"
 
 #: src/Dialogs/IssueDialog.vala:424
 msgid "Session"
-msgstr ""
+msgstr "세션"
 
 #: src/Dialogs/IssueDialog.vala:446
 msgid "Panel Indicators"
-msgstr ""
+msgstr "패널 인디케이터"
 
 #: src/Dialogs/IssueDialog.vala:448
-#, fuzzy
 msgid "System Settings"
-msgstr "설정 복원"
+msgstr "시스템 설정"
 
 #: src/Dialogs/IssueDialog.vala:450
 msgid "Desktop Components"
-msgstr ""
+msgstr "데스크톱 항목"
 
 #: src/Dialogs/IssueDialog.vala:452
 msgid "Default Apps"
-msgstr ""
+msgstr "기본 앱"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "시스템 설정이 공장 초기화 됩니다"
 
 #: src/Dialogs/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
-msgstr ""
-"모든 시스템 설정과 데이터가 기본 값으로 초기화됩니다. 음악이나 사진 등의, 개"
-"인 데이터는, 영향받지 않습니다."
+msgstr "모든 시스템 설정과 데이터가 기본 값으로 초기화됩니다. 음악이나 사진 등의, 개인 데이터는, 영향받지 않습니다."
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
