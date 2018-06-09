@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2018-05-27 00:05+0000\n"
+"PO-Revision-Date: 2018-06-10 00:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/ja/>\n"
@@ -34,7 +34,7 @@ msgstr "システム情報"
 
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
-msgstr "デフォルト設定の復元"
+msgstr "デフォルト設定を復元"
 
 #: src/Plug.vala:66
 msgid "Suggest Translation"
@@ -51,7 +51,7 @@ msgstr "アップデート"
 #: src/Plug.vala:157
 #, c-format
 msgid "Built on %s"
-msgstr "Built on %s"
+msgstr "%s ベース"
 
 #: src/Plug.vala:164
 #, c-format
@@ -146,7 +146,7 @@ msgstr "すべてのシステム設定とデータはデフォルト値にリセ
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
-msgstr "設定の復元"
+msgstr "設定を復元"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
