@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2018-06-12 07:46+0000\n"
+"PO-Revision-Date: 2018-06-13 00:07+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-about/id/>\n"
@@ -166,7 +166,7 @@ msgstr "Situs Web Produsen"
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
 #: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
-msgstr "Tidak Diketahui"
+msgstr "Tidak diketahui"
 
 #: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
