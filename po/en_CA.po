@@ -7,12 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"POT-Creation-Date: 2018-07-16 08:40-0700\n"
 "PO-Revision-Date: 2018-05-10 17:18+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
-"Language-Team: English (Canada) "
-"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
-"about/en_CA/>\n"
+"Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-about/en_CA/>\n"
 "Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,6 +32,7 @@ msgstr "View operating system and hardware information"
 msgid "System Information"
 msgstr "System Information"
 
+#. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
 msgstr "Restore Default Settings"
@@ -63,14 +63,17 @@ msgstr "GTK+ %s"
 msgid "Website"
 msgstr "Website"
 
+#. Translate button
 #: src/Plug.vala:188
 msgid "Suggest Translations"
 msgstr "Suggest Translations"
 
+#. Bug button
 #: src/Plug.vala:198
 msgid "Report a Problem"
 msgstr "Report a Problem"
 
+#. Update button
 #: src/Plug.vala:206
 msgid "Check for Updates"
 msgstr "Check for Updates"
@@ -115,23 +118,23 @@ msgstr "Multitasking or Window Management"
 msgid "Notifications"
 msgstr "Notifications"
 
-#: src/Dialogs/IssueDialog.vala:424
+#: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
 msgstr "Session"
 
-#: src/Dialogs/IssueDialog.vala:446
+#: src/Dialogs/IssueDialog.vala:452
 msgid "Panel Indicators"
 msgstr "Panel Indicators"
 
-#: src/Dialogs/IssueDialog.vala:448
+#: src/Dialogs/IssueDialog.vala:454
 msgid "System Settings"
 msgstr "System Settings"
 
-#: src/Dialogs/IssueDialog.vala:450
+#: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
 msgstr "Desktop Components"
 
-#: src/Dialogs/IssueDialog.vala:452
+#: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
 msgstr "Default Apps"
 

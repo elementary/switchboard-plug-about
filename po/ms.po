@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"POT-Creation-Date: 2018-07-16 08:40-0700\n"
 "PO-Revision-Date: 2016-06-07 04:47+0000\n"
 "Last-Translator: Timothy <timothy.wong@rocketmail.com>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -30,6 +30,7 @@ msgstr ""
 msgid "System Information"
 msgstr "Maklumat Sistem"
 
+#. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
 msgstr ""
@@ -60,14 +61,17 @@ msgstr ""
 msgid "Website"
 msgstr "Laman Sesawang"
 
+#. Translate button
 #: src/Plug.vala:188
 msgid "Suggest Translations"
 msgstr "Cadang Terjemahan"
 
+#. Bug button
 #: src/Plug.vala:198
 msgid "Report a Problem"
 msgstr "Laporkan Masalah"
 
+#. Update button
 #: src/Plug.vala:206
 msgid "Check for Updates"
 msgstr "Semak Kemaskini"
@@ -113,24 +117,24 @@ msgstr ""
 msgid "Notifications"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:424
+#: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:446
+#: src/Dialogs/IssueDialog.vala:452
 msgid "Panel Indicators"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:448
+#: src/Dialogs/IssueDialog.vala:454
 #, fuzzy
 msgid "System Settings"
 msgstr "Kembalikan Tetapan"
 
-#: src/Dialogs/IssueDialog.vala:450
+#: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:452
+#: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
 msgstr ""
 

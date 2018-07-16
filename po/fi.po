@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"POT-Creation-Date: 2018-07-16 08:40-0700\n"
 "PO-Revision-Date: 2018-07-04 18:09+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
@@ -32,6 +32,7 @@ msgstr "Katso käyttöjärjestelmän ja laitteiston tiedot"
 msgid "System Information"
 msgstr "Järjestelmän tiedot"
 
+#. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
 msgstr "Palauta oletusasetukset"
@@ -62,14 +63,17 @@ msgstr "GTK+ %s"
 msgid "Website"
 msgstr "Verkkosivusto"
 
+#. Translate button
 #: src/Plug.vala:188
 msgid "Suggest Translations"
 msgstr "Ehdota käännöksiä"
 
+#. Bug button
 #: src/Plug.vala:198
 msgid "Report a Problem"
 msgstr "Ilmoita ongelmasta"
 
+#. Update button
 #: src/Plug.vala:206
 msgid "Check for Updates"
 msgstr "Tarkista päivitykset"
@@ -114,23 +118,23 @@ msgstr "Moniajo tai ikkunahallinta"
 msgid "Notifications"
 msgstr "Ilmoitukset"
 
-#: src/Dialogs/IssueDialog.vala:424
+#: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
 msgstr "Istunto"
 
-#: src/Dialogs/IssueDialog.vala:446
+#: src/Dialogs/IssueDialog.vala:452
 msgid "Panel Indicators"
 msgstr "Paneelin ilmaisimet"
 
-#: src/Dialogs/IssueDialog.vala:448
+#: src/Dialogs/IssueDialog.vala:454
 msgid "System Settings"
 msgstr "Järjestelmäasetukset"
 
-#: src/Dialogs/IssueDialog.vala:450
+#: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
 msgstr "Työpöydän osat"
 
-#: src/Dialogs/IssueDialog.vala:452
+#: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
 msgstr "Oletussovellukset"
 
