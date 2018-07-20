@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2018-05-31 00:02+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2018-07-20 21:07+0000\n"
+"Last-Translator: Nils K <slx@nilsk.net>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-about/nb/>\n"
 "Language: nb\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:35
@@ -79,7 +79,6 @@ msgid "Check for Updates"
 msgstr "Se etter oppdateringer"
 
 #: src/Dialogs/IssueDialog.vala:27
-#, fuzzy
 msgid "Which of the Following Are You Seeing an Issue With?"
 msgstr "Hvilket av følgende har du et problem med?"
 
@@ -96,9 +95,8 @@ msgid "Cancel"
 msgstr "Avbryt"
 
 #: src/Dialogs/IssueDialog.vala:110
-#, fuzzy
 msgid "Report Problem"
-msgstr "Rapporter problemer"
+msgstr "Rapporter problem"
 
 #: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
@@ -129,9 +127,8 @@ msgid "Panel Indicators"
 msgstr "Panelindikatorer"
 
 #: src/Dialogs/IssueDialog.vala:454
-#, fuzzy
 msgid "System Settings"
-msgstr "Gjenopprett instillinger"
+msgstr "Systeminnstillinger"
 
 #: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
@@ -146,13 +143,12 @@ msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systeminnstillinger vil bli gjenopprettet til forvalg"
 
 #: src/Dialogs/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
-"Alle systeminnstillinger og data vil bli tilbakestilt til forvalg. Personlig "
-"data, som musikk og bilder, vil ikke bli endret."
+"Alle systeminnstillinger og data vil bli tilbakestilt til standard. "
+"Personlig data, som musikk og bilder, vil ikke bli endret."
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
