@@ -403,6 +403,12 @@ public class About.IssueDialog : Granite.MessageDialog {
             github_suffix = "wingpanel-indicator-keyboard"
         },
         WingpanelEntry () {
+            name = "Network",
+            gettext_domain = "pantheon-network-plug",
+            icon = "network-wireless-signal-excellent-symbolic",
+            github_suffix = "wingpanel-indicator-network"
+        },
+        WingpanelEntry () {
             name = "Night Light",
             gettext_domain = "pantheon-display-plug",
             icon = "night-light-symbolic",

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"POT-Creation-Date: 2018-07-16 08:40-0700\n"
 "PO-Revision-Date: 2017-08-16 11:33+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://weblate.elementary.io/projects/switchboard/"
@@ -33,6 +33,7 @@ msgstr "Pogledajte informacije operativnog sustava i hardvera"
 msgid "System Information"
 msgstr "Informacije sustava"
 
+#. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
 msgstr "Vrati zadane postavke"
@@ -63,14 +64,17 @@ msgstr "GTK+ %s"
 msgid "Website"
 msgstr "Web stranica"
 
+#. Translate button
 #: src/Plug.vala:188
 msgid "Suggest Translations"
 msgstr "Predloži prijevode"
 
+#. Bug button
 #: src/Plug.vala:198
 msgid "Report a Problem"
 msgstr "Prijavi problem"
 
+#. Update button
 #: src/Plug.vala:206
 msgid "Check for Updates"
 msgstr "Provjeri nadopune"
@@ -116,24 +120,24 @@ msgstr ""
 msgid "Notifications"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:424
+#: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:446
+#: src/Dialogs/IssueDialog.vala:452
 msgid "Panel Indicators"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:448
+#: src/Dialogs/IssueDialog.vala:454
 #, fuzzy
 msgid "System Settings"
 msgstr "Vrati postavke"
 
-#: src/Dialogs/IssueDialog.vala:450
+#: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:452
+#: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
 msgstr ""
 

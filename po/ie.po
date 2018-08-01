@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"POT-Creation-Date: 2018-07-16 08:40-0700\n"
 "PO-Revision-Date: 2017-02-06 04:18+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,7 @@ msgstr ""
 msgid "System Information"
 msgstr ""
 
+#. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
 msgstr ""
@@ -55,14 +56,17 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
+#. Translate button
 #: src/Plug.vala:188
 msgid "Suggest Translations"
 msgstr ""
 
+#. Bug button
 #: src/Plug.vala:198
 msgid "Report a Problem"
 msgstr ""
 
+#. Update button
 #: src/Plug.vala:206
 msgid "Check for Updates"
 msgstr ""
@@ -107,23 +111,23 @@ msgstr ""
 msgid "Notifications"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:424
+#: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:446
+#: src/Dialogs/IssueDialog.vala:452
 msgid "Panel Indicators"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:448
+#: src/Dialogs/IssueDialog.vala:454
 msgid "System Settings"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:450
+#: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:452
+#: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
 msgstr ""
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 08:31-0700\n"
-"PO-Revision-Date: 2018-04-02 10:57+0000\n"
+"POT-Creation-Date: 2018-07-16 08:40-0700\n"
+"PO-Revision-Date: 2018-07-03 19:24+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-about/sl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:35
@@ -33,6 +33,7 @@ msgstr "Pregled različice operacijskega sistema in strojne opreme"
 msgid "System Information"
 msgstr "Sistemske informacije"
 
+#. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
 msgstr "Povrni tovarniške nastavitve"
@@ -63,79 +64,80 @@ msgstr "GTK+ %s"
 msgid "Website"
 msgstr "Spletna stran"
 
+#. Translate button
 #: src/Plug.vala:188
 msgid "Suggest Translations"
 msgstr "Predlagaj prevode"
 
+#. Bug button
 #: src/Plug.vala:198
 msgid "Report a Problem"
 msgstr "Opozorite na težavo"
 
+#. Update button
 #: src/Plug.vala:206
 msgid "Check for Updates"
 msgstr "Preveri za posodobitve"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "S čim imate težavo?"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "Prosimo izberite komponento s seznama."
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Categories"
-msgstr ""
+msgstr "Kategorije"
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "Prekliči"
 
 #: src/Dialogs/IssueDialog.vala:110
-#, fuzzy
 msgid "Report Problem"
-msgstr "Prijavi napake"
+msgstr "Prijavi napako"
 
 #: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
-msgstr ""
+msgstr "Meni z aplikacijami"
 
 #: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "Zaslon za zaklep ali prijavo"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
-msgstr ""
+msgstr "Izgled"
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "Večopravilnost ali upravljanje z okni"
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
-msgstr ""
+msgstr "Obvestila"
 
-#: src/Dialogs/IssueDialog.vala:424
+#: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
-msgstr ""
-
-#: src/Dialogs/IssueDialog.vala:446
-msgid "Panel Indicators"
-msgstr ""
-
-#: src/Dialogs/IssueDialog.vala:448
-#, fuzzy
-msgid "System Settings"
-msgstr "Povrni nastavitve"
-
-#: src/Dialogs/IssueDialog.vala:450
-msgid "Desktop Components"
-msgstr ""
+msgstr "Seja"
 
 #: src/Dialogs/IssueDialog.vala:452
+msgid "Panel Indicators"
+msgstr "Indikatorji"
+
+#: src/Dialogs/IssueDialog.vala:454
+msgid "System Settings"
+msgstr "Sistemske nastavitve"
+
+#: src/Dialogs/IssueDialog.vala:456
+msgid "Desktop Components"
+msgstr "Namizje"
+
+#: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
-msgstr ""
+msgstr "Privzete aplikacije"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"

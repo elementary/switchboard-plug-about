@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-07 08:31-0700\n"
+"POT-Creation-Date: 2018-07-16 08:40-0700\n"
 "PO-Revision-Date: 2018-03-13 02:58+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.elementary.io/projects/"
@@ -32,6 +32,7 @@ msgstr "檢視作業系統和硬體資訊"
 msgid "System Information"
 msgstr "系統資訊"
 
+#. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
 msgstr "還原預設設定"
@@ -62,14 +63,17 @@ msgstr "GTK+ %s"
 msgid "Website"
 msgstr "網站"
 
+#. Translate button
 #: src/Plug.vala:188
 msgid "Suggest Translations"
 msgstr "建議翻譯"
 
+#. Bug button
 #: src/Plug.vala:198
 msgid "Report a Problem"
 msgstr "回報問題"
 
+#. Update button
 #: src/Plug.vala:206
 msgid "Check for Updates"
 msgstr "檢查更新"
@@ -115,24 +119,24 @@ msgstr ""
 msgid "Notifications"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:424
+#: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:446
+#: src/Dialogs/IssueDialog.vala:452
 msgid "Panel Indicators"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:448
+#: src/Dialogs/IssueDialog.vala:454
 #, fuzzy
 msgid "System Settings"
 msgstr "還原設定值"
 
-#: src/Dialogs/IssueDialog.vala:450
+#: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:452
+#: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
 msgstr ""
 
