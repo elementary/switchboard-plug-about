@@ -301,7 +301,7 @@ public class About.Plug : Switchboard.Plug {
     private static string[] get_pantheon_schemas () {
         string[] schemas = {};
         string[] pantheon_schemas = {};
-        string[] prefixes = { "org.pantheon.desktop", "org.gnome.desktop" };
+        string[] prefixes = { "org.pantheon.desktop", "io.elementary.desktop", "org.gnome.desktop" };
     
         var sss = SettingsSchemaSource.get_default ();
     
