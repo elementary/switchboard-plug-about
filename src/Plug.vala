@@ -72,7 +72,7 @@ public class About.Plug : Switchboard.Plug {
     private void setup_info () {
 
         // Operating System
-        File file = File.new_for_path("/etc/os-release");
+        var file = File.new_for_path ("/etc/os-release");
         try {
             var osrel = new Gee.HashMap<string, string> ();
             var dis = new DataInputStream (file.read ());
@@ -80,7 +80,7 @@ public class About.Plug : Switchboard.Plug {
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
                 var osrel_component = line.split ("=", 2);
-                if ( osrel_component.length == 2 ) {
+                if (osrel_component.length == 2) {
                     osrel[osrel_component[0]] = osrel_component[1].replace ("\"", "");
                 }
             }
@@ -89,30 +89,30 @@ public class About.Plug : Switchboard.Plug {
             website_url = osrel["HOME_URL"];
             support_url = osrel["SUPPORT_URL"];
         } catch (Error e) {
-            warning("Couldn't read os-release file, assuming elementary OS");
+            warning ("Couldn't read os-release file, assuming elementary OS");
             os = "elementary OS";
             website_url = "https://elementary.io";
             support_url = "https://elementary.io/support";
-
         }
 
         gtk_version = "%u.%u.%u".printf (Gtk.get_major_version (), Gtk.get_minor_version (), Gtk.get_micro_version ());
 
-        //Upstream distro version (for "Built on" text)
-        //FIXME: Add distro specific field to /etc/os-release and use that instead
+        // Upstream distro version (for "Built on" text)
+        // FIXME: Add distro specific field to /etc/os-release and use that instead
         // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
-        file = File.new_for_path("/etc/upstream-release/lsb-release");
+        file = File.new_for_path ("/etc/upstream-release/lsb-release");
         try {
             var dis = new DataInputStream (file.read ());
             string line;
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
-                if ("DISTRIB_DESCRIPTION=" in line) {
-                    upstream_release = line.replace ("DISTRIB_DESCRIPTION=", "");
+                var distrib_component = line.split ("=", 2);
+                if (distrib_component.length == 2) {
+                    upstream_release = distrib_component[1].replace ("\"", "");
                 }
             }
         } catch (Error e) {
-            warning("Couldn't read upstream lsb-release file, assuming none");
+            warning ("Couldn't read upstream lsb-release file, assuming none");
             upstream_release = null;
         }
 
@@ -268,80 +268,70 @@ public class About.Plug : Switchboard.Plug {
         main_grid.add (button_grid);
         main_grid.show_all ();
     }
-}
 
-private void reset_all_keys (GLib.Settings settings) {
-    var keys = settings.list_keys ();
-    foreach (var key in keys) {
-        settings.reset (key);
+     /**
+     * returns true to continue, false to cancel
+     */
+    private bool confirm_restore_action () {
+        var dialog = new RestoreDialog ();
+        dialog.show_all ();
+
+        var result = dialog.run ();
+        dialog.destroy ();
+
+        return result == 1;
     }
-}
 
-private string[] get_pantheon_schemas () {
-    string[] schemas = {};
-    string[] pantheon_schemas = {};
-    string[] prefixes = { "org.pantheon.desktop", "org.gnome.desktop" };
+    private void settings_restore_clicked () {
+        if (confirm_restore_action ()) {
+            var all_schemas = get_pantheon_schemas ();
 
-    var sss = SettingsSchemaSource.get_default ();
-
-    sss.list_schemas (true, out schemas, null);
-
-    foreach (var schema in schemas) {
-        foreach (var prefix in prefixes) {
-            if (schema.has_prefix (prefix)) {
-                pantheon_schemas += schema;
+            foreach (var schema in all_schemas) {
+                reset_recursively (schema);
             }
         }
     }
-    return pantheon_schemas;
-}
 
-private void reset_recursively (string schema) {
-    var settings = new GLib.Settings (schema);
-    // change into delay mode
-	// so changes take place when apply () is called
-    settings.delay ();
-
-    reset_all_keys (settings);
-
-    var children = settings.list_children ();
-    foreach (var child in children) {
-        var child_settings = settings.get_child (child);
-
-        reset_all_keys (child_settings);
-    }
-    settings.apply ();
-    GLib.Settings.sync ();
-}
-
-/**
- * returns true to continue, false to cancel
- */
-private bool confirm_restore_action () {
-    var dialog = new RestoreDialog ();
-    dialog.show_all ();
-
-    var result = dialog.run ();
-    dialog.destroy ();
-
-    if (result == 1) {
-        // continue was clicked
-        return true;
-    } else {
-        // cancel was clicked
-        return false;
-    }
-}
-
-private void settings_restore_clicked () {
-    var should_display = confirm_restore_action ();
-
-    if (should_display) {
-        var all_schemas = get_pantheon_schemas ();
-
-        foreach (var schema in all_schemas) {
-            reset_recursively (schema);
+    private static void reset_all_keys (GLib.Settings settings) {
+        foreach (var key in settings.list_keys ()) {
+            settings.reset (key);
         }
+    }
+    
+    private static string[] get_pantheon_schemas () {
+        string[] schemas = {};
+        string[] pantheon_schemas = {};
+        string[] prefixes = { "org.pantheon.desktop", "org.gnome.desktop" };
+    
+        var sss = SettingsSchemaSource.get_default ();
+    
+        sss.list_schemas (true, out schemas, null);
+    
+        foreach (var schema in schemas) {
+            foreach (var prefix in prefixes) {
+                if (schema.has_prefix (prefix)) {
+                    pantheon_schemas += schema;
+                }
+            }
+        }
+        return pantheon_schemas;
+    }
+    
+    private static void reset_recursively (string schema) {
+        var settings = new GLib.Settings (schema);
+        // change into delay mode
+        // so changes take place when apply () is called
+        settings.delay ();
+    
+        reset_all_keys (settings);
+    
+        foreach (var child in settings.list_children ()) {
+            var child_settings = settings.get_child (child);
+    
+            reset_all_keys (child_settings);
+        }
+        settings.apply ();
+        GLib.Settings.sync ();
     }
 }
 
