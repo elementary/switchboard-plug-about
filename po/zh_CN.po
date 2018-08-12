@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2017-07-04 08:59+0000\n"
+"PO-Revision-Date: 2018-08-13 00:03+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
-"Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
-"switchboard/switchboard-plug-about/zh_CN/>\n"
+"Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-about/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:35
@@ -80,15 +80,15 @@ msgstr "检查更新"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "您有哪些方面的问题？"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "请从列表中选择一项。"
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Categories"
-msgstr ""
+msgstr "分类"
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
@@ -101,31 +101,31 @@ msgstr "反馈问题"
 
 #: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
-msgstr ""
+msgstr "程序菜单"
 
 #: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "锁屏或登录界面"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
-msgstr ""
+msgstr "外观感受"
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "多任务或窗口管理"
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
-msgstr ""
+msgstr "通知"
 
 #: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
-msgstr ""
+msgstr "用户切换"
 
 #: src/Dialogs/IssueDialog.vala:452
 msgid "Panel Indicators"
-msgstr ""
+msgstr "顶部面板内指示器"
 
 #: src/Dialogs/IssueDialog.vala:454
 #, fuzzy
@@ -134,11 +134,11 @@ msgstr "重置设置"
 
 #: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
-msgstr ""
+msgstr "桌面集成"
 
 #: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
-msgstr ""
+msgstr "默认应用"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -167,12 +167,12 @@ msgstr "%s 硬盘"
 
 #: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
-msgstr ""
+msgstr "项目网站"
 
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
 #: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
 msgid "Unknown"
-msgstr "未知"
+msgstr "未知设备"
 
 #: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
