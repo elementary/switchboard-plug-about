@@ -21,6 +21,7 @@ public class About.HardwareView : Gtk.Grid {
     private bool oem_enabled;
     private string graphics;
     private string hdd;
+    private string storage_type;
     private string manufacturer_icon_path;
     private string manufacturer_name;
     private string manufacturer_support_url;
@@ -64,7 +65,7 @@ public class About.HardwareView : Gtk.Grid {
         graphics_info.justify = Gtk.Justification.CENTER;
         graphics_info.set_selectable (true);
 
-        var hdd_info = new Gtk.Label (_("%s storage").printf (hdd));
+        var hdd_info = new Gtk.Label (_("%s storage %s").printf (hdd, storage_type));
         hdd_info.ellipsize = Pango.EllipsizeMode.END;
         hdd_info.set_selectable (true);
 
@@ -207,6 +208,7 @@ public class About.HardwareView : Gtk.Grid {
         try {
             var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
             hdd = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
+            storage_type = get_storage_type ();
         } catch (Error e) {
             critical (e.message);
             hdd = _("Unknown");
@@ -279,6 +281,25 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         return 0;
+    }
+
+    private string get_storage_type () {
+        string storage = "";
+        var rotational_storage_file = File.new_for_path ("/sys/block/sda/queue/rotational"); 
+        try {
+            var dis = new DataInputStream (rotational_storage_file.read ());
+            string line;
+            while ((line = dis.read_line ()) != null) {
+                if (line.has_prefix ("0")) {
+                    storage = "(SSD)";
+                } else {
+                    storage = "(HDD)";
+                }
+            }
+        } catch (Error e) {
+            warning (e.message);
+        }
+        return storage;
     }
 }
 
