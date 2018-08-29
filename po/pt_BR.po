@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2018-08-29 16:22+0000\n"
+"PO-Revision-Date: 2018-08-30 00:07+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-about/pt_BR/>\n"
@@ -175,11 +175,11 @@ msgstr "Desconhecido"
 
 #: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
-msgstr "Dual-Core"
+msgstr "Dual Core"
 
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
-msgstr "Quad-Core"
+msgstr "Quad Core"
 
 #~ msgid "Hardware"
 #~ msgstr "Hardware"
