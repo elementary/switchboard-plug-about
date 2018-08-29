@@ -9,8 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
 "PO-Revision-Date: 2018-08-29 16:22+0000\n"
-"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
-"\n"
+"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-about/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -128,9 +127,8 @@ msgid "Panel Indicators"
 msgstr "Indicadores de Painel"
 
 #: src/Dialogs/IssueDialog.vala:454
-#, fuzzy
 msgid "System Settings"
-msgstr "Restaurar configurações"
+msgstr "Configurações do Sistema"
 
 #: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
@@ -145,13 +143,12 @@ msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "As configurações do sistema serão restauradas aos padrões de fábrica"
 
 #: src/Dialogs/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
-"Todas as configurações do sistema e dados serão restaurados aos valores "
-"padrões. Arquivos pessoais, como musicas e fotos não serão afetados."
+"Todas as configurações e dados do sistema serão redefinidos para os valores "
+"padrão. Dados pessoais, como músicas e imagens, não serão afetados."
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
