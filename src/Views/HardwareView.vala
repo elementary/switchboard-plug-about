@@ -286,20 +286,17 @@ public class About.HardwareView : Gtk.Grid {
     private string get_storage_type () {
         string partition_name = get_partition_name ();
         string disk_name = get_disk_name (partition_name);
-        string path = "/sys/block/%s/queue/rotational".printf(disk_name);
+        string path = "/sys/block/%s/queue/rotational".printf (disk_name);
         string storage = "";
-        var rotational_storage_file = File.new_for_path (path);
         try {
-            var dis = new DataInputStream (rotational_storage_file.read ());
-            string line;
-            while ((line = dis.read_line ()) != null) {
-                if (line.has_prefix ("0")) {
-                    storage = "(SSD)";
-                } else {
-                    storage = "(HDD)";
-                }
+            string contents;
+            FileUtils.get_contents (path, out contents);
+            if (int.parse (contents) == 0) {
+                storage = _("(SSD)");
+            } else {
+                storage = _("(HDD)");
             }
-        } catch (Error e) {
+        } catch (FileError e) {
             warning (e.message);
         }
         return storage;
@@ -307,22 +304,16 @@ public class About.HardwareView : Gtk.Grid {
 
     private string get_partition_name () {
         string df_stdout;
-        string df_stderr;
         string partition = "";
-        int df_status;
         try {
             Process.spawn_command_line_sync ("df /",
-                out df_stdout,
-                out df_stderr,
-                out df_status);
-            string[] output = df_stdout.split("\n");
-            foreach(string line in output) {
+                out df_stdout);
+            string[] output = df_stdout.split ("\n");
+            foreach (string line in output) {
                 if (line.has_prefix ("/dev/")) {
-                    string[] partition_line = line.split(" ");
-                    foreach(string substr in partition_line){
-                        if (substr.has_prefix ("/dev/")){
-                            partition = substr;
-                        }
+                    int idx = line.index_of (" ");
+                    if (idx != -1) {
+                        partition = line.substring (0, idx);
                     }
                 }
             }
@@ -334,16 +325,12 @@ public class About.HardwareView : Gtk.Grid {
 
     private string get_disk_name (string partition) {
         string lsblk_stout;
-        string lsblk_stderr;
         string disk_name = "";
-        int lsblk_status;
         string command = "lsblk -no pkname " + partition;
         try {
             Process.spawn_command_line_sync (command,
-                out lsblk_stout,
-                out lsblk_stderr,
-                out lsblk_status);
-            disk_name = lsblk_stout.strip();
+                out lsblk_stout);
+            disk_name = lsblk_stout.strip ();
         } catch (Error e) {
             warning (e.message);
         }
