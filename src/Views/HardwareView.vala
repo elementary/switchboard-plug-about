@@ -314,6 +314,7 @@ public class About.HardwareView : Gtk.Grid {
                     int idx = line.index_of (" ");
                     if (idx != -1) {
                         partition = line.substring (0, idx);
+                        return partition;
                     }
                 }
             }
