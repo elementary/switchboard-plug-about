@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2014-11-15 20:35+0000\n"
-"Last-Translator: Sandeep Pinge <spinge@gmail.com>\n"
-"Language-Team: Marathi <mr@li.org>\n"
+"PO-Revision-Date: 2018-10-14 00:03+0000\n"
+"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
+"Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-about/mr/>\n"
 "Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: src/Plug.vala:35
 msgid "About"
@@ -115,7 +117,7 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
-msgstr ""
+msgstr "अधिसूचना"
 
 #: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
