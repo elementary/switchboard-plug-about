@@ -288,7 +288,7 @@ public class About.IssueDialog : Granite.MessageDialog {
             name = "Displays",
             gettext_domain = "pantheon-display-plug",
             icon = "preferences-desktop-display",
-            github_suffix = "switchboard-plug-displays"
+            github_suffix = "switchboard-plug-display"
         },
         SwitchboardEntry () {
             name = "Keyboard",
