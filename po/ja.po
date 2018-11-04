@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2018-10-08 00:05+0000\n"
+"PO-Revision-Date: 2018-11-07 01:48+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -26,7 +26,7 @@ msgstr "情報"
 
 #: src/Plug.vala:36
 msgid "View operating system and hardware information"
-msgstr "OS とハードウェアの情報を参照します"
+msgstr "オペレーティングシステムとハードウェアの情報を参照します"
 
 #: src/Plug.vala:64
 msgid "System Information"
@@ -104,7 +104,7 @@ msgstr "アプリケーションメニュー"
 
 #: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
-msgstr "ロック画面・ログイン画面"
+msgstr "ロック画面およびログイン画面"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
@@ -140,7 +140,7 @@ msgstr "デフォルトのアプリ"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "システム設定は出荷時のデフォルトに復元されます"
+msgstr "システム設定が出荷時のデフォルトに復元されます"
 
 #: src/Dialogs/RestoreDialog.vala:35
 msgid ""
