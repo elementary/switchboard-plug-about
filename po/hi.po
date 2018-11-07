@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2018-05-12 00:11+0000\n"
-"Last-Translator: Anand Kumar <anand@anandkumar.net>\n"
+"PO-Revision-Date: 2018-10-30 08:08+0000\n"
+"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Hindi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-about/hi/>\n"
 "Language: hi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:35
@@ -128,9 +128,8 @@ msgid "Panel Indicators"
 msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:454
-#, fuzzy
 msgid "System Settings"
-msgstr "सेटिंग्स को पुनर्स्थापित करे"
+msgstr "तंत्र विन्यास"
 
 #: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
