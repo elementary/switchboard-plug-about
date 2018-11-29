@@ -137,7 +137,7 @@ public class About.Plug : Switchboard.Plug {
     private void setup_ui () {
         // Create the section about elementary OS
         var logo = new Gtk.Image ();
-        logo.icon_name = "distributor-logo";
+        logo.icon_name = Constants.DISTRO_ICON_NAME;
         logo.pixel_size = 128;
         logo.hexpand = true;
 

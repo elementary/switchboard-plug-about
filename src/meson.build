@@ -1,3 +1,13 @@
+
+conf_data = configuration_data()
+conf_data.set('DISTRO_ICON_NAME', get_option('distributor-icon-name'))
+
+config_header = configure_file (
+    input: 'Config.vala.in',
+    output: 'Config.vala',
+    configuration: conf_data
+)
+
 plug_files = files(
     'Plug.vala',
     'Dialogs/IssueDialog.vala',
@@ -9,6 +19,7 @@ switchboard_dep = dependency('switchboard-2.0')
 
 shared_module(
     meson.project_name(),
+    config_header,
     plug_files,
     dependencies: [
         dependency('glib-2.0'),

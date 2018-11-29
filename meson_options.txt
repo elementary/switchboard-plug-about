@@ -1,0 +1,1 @@
+option('distributor-icon-name', type: 'string', value: 'distributor-logo')
