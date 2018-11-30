@@ -22,6 +22,7 @@ public class About.Plug : Switchboard.Plug {
     private string website_url;
     private string support_url;
     private string arch;
+    private string logo_icon_name;
     private Gtk.Label based_off;
 
     private string upstream_release;
@@ -88,11 +89,13 @@ public class About.Plug : Switchboard.Plug {
             os = osrel["PRETTY_NAME"];
             website_url = osrel["HOME_URL"];
             support_url = osrel["SUPPORT_URL"];
+            logo_icon_name = osrel["LOGO"];
         } catch (Error e) {
             warning ("Couldn't read os-release file, assuming elementary OS");
             os = "elementary OS";
             website_url = "https://elementary.io";
             support_url = "https://elementary.io/support";
+            logo_icon_name = "distributor-logo";
         }
 
         gtk_version = "%u.%u.%u".printf (Gtk.get_major_version (), Gtk.get_minor_version (), Gtk.get_micro_version ());
@@ -137,7 +140,7 @@ public class About.Plug : Switchboard.Plug {
     private void setup_ui () {
         // Create the section about elementary OS
         var logo = new Gtk.Image ();
-        logo.icon_name = "distributor-logo";
+        logo.icon_name = logo_icon_name;
         logo.pixel_size = 128;
         logo.hexpand = true;
 
