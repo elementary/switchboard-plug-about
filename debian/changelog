@@ -1,3 +1,9 @@
+switchboard-plug-about (2.5.2) bionic; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Tue, 04 Dec 2018 10:36:36 -0600
+
 switchboard-plug-about (2.5.1) bionic; urgency=medium
 
   * New upstream release.
