@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2018-10-14 00:03+0000\n"
+"PO-Revision-Date: 2018-12-10 20:34+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-about/mr/>\n"
@@ -129,7 +129,7 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:454
 msgid "System Settings"
-msgstr ""
+msgstr "सिस्टिम सेटिंग्ज"
 
 #: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
