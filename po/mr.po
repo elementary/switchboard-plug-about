@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2018-12-10 20:34+0000\n"
+"PO-Revision-Date: 2018-12-12 09:52+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-about/mr/>\n"
@@ -92,7 +92,7 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द करा"
 
 #: src/Dialogs/IssueDialog.vala:110
 #, fuzzy
