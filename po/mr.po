@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2018-12-12 09:52+0000\n"
+"PO-Revision-Date: 2018-12-23 18:27+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-about/mr/>\n"
@@ -26,38 +26,38 @@ msgstr "माहिती"
 
 #: src/Plug.vala:36
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "ऑपरेटिंग सिस्टम आणि हार्डवेअर माहिती पहा"
 
 #: src/Plug.vala:64
 msgid "System Information"
-msgstr ""
+msgstr "सिस्टम माहिती"
 
 #. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
-msgstr ""
+msgstr "डीफॉल्ट सेटिंग्ज पुनर्संचयित करा"
 
 #: src/Plug.vala:66
 msgid "Suggest Translation"
-msgstr ""
+msgstr "अनुवाद सुचवा"
 
 #: src/Plug.vala:67
 msgid "Report Problems"
-msgstr ""
+msgstr "समस्या नोंदवा"
 
 #: src/Plug.vala:68
 msgid "Updates"
-msgstr ""
+msgstr "अपडेट्स"
 
 #: src/Plug.vala:157
 #, c-format
 msgid "Built on %s"
-msgstr ""
+msgstr "%s वर बनविले"
 
 #: src/Plug.vala:164
 #, c-format
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: src/Plug.vala:167
 msgid "Website"
@@ -80,40 +80,39 @@ msgstr "सुधारणीसाठी तपासा"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "आपणास पुढीलपैकी कोणती समस्या आहे?"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "कृपया सूचीमधील घटक निवडा."
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Categories"
-msgstr ""
+msgstr "श्रेण्या"
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "रद्द करा"
 
 #: src/Dialogs/IssueDialog.vala:110
-#, fuzzy
 msgid "Report Problem"
 msgstr "तक्रार नोंदवा"
 
 #: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
-msgstr ""
+msgstr "अप्लिकेशन मेनू"
 
 #: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "लॉक किंवा लॉग इन स्क्रीन"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
-msgstr ""
+msgstr "दर्शन आणि अनुभव"
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "मल्टीटास्किंग किंवा विंडो व्यवस्थापन"
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
@@ -121,11 +120,11 @@ msgstr "अधिसूचना"
 
 #: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
-msgstr ""
+msgstr "सत्र"
 
 #: src/Dialogs/IssueDialog.vala:452
 msgid "Panel Indicators"
-msgstr ""
+msgstr "पॅनेल निर्देशक"
 
 #: src/Dialogs/IssueDialog.vala:454
 msgid "System Settings"
@@ -133,39 +132,41 @@ msgstr "सिस्टिम सेटिंग्ज"
 
 #: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
-msgstr ""
+msgstr "डेस्कटॉप घटक"
 
 #: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
-msgstr ""
+msgstr "डीफॉल्ट अॅप्स"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr ""
+msgstr "सिस्टम सेटिंग्ज फॅक्टरी डीफॉल्टवर पुनर्संचयित केल्या जातील"
 
 #: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
+"सर्व सिस्टिम सेटिंग्ज आणि डेटा डीफॉल्ट मूल्यांवर रीसेट केले जातील. वैयक्तिक "
+"डेटा, जसे की संगीत आणि चित्र, अप्रभावित असतील."
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
-msgstr ""
+msgstr "सेटिंग्ज पुनर्संचयित करा"
 
 #: src/Views/HardwareView.vala:58
-#, fuzzy, c-format
+#, c-format
 msgid "%s memory"
-msgstr "स्मृती :"
+msgstr "%s मेमरी"
 
 #: src/Views/HardwareView.vala:67
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage"
-msgstr "स्टोरेज :"
+msgstr "%s स्टोरेज"
 
 #: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
-msgstr ""
+msgstr "निर्माता वेबसाइट"
 
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
 #: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
