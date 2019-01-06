@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2019-01-04 00:08+0000\n"
+"PO-Revision-Date: 2019-01-06 00:59+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-about/nn/>\n"
@@ -57,7 +57,7 @@ msgstr "Bygd på %s"
 #: src/Plug.vala:164
 #, c-format
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: src/Plug.vala:167
 msgid "Website"
@@ -80,52 +80,51 @@ msgstr "Sjå etter oppdateringar"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "Kva for av det følgande har du eit problem med?"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "Vel ein komponent frå lista."
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Categories"
-msgstr ""
+msgstr "Kategoriar"
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
 msgstr "Avbryt"
 
 #: src/Dialogs/IssueDialog.vala:110
-#, fuzzy
 msgid "Report Problem"
-msgstr "Rapporter feil"
+msgstr "Rapporter problem"
 
 #: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
-msgstr ""
+msgstr "Applikasjonsmeny"
 
 #: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "Lås- eller innloggingsskjerm"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
-msgstr ""
+msgstr "Utsjånad og åtferd"
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "Fleiroppgåveløysing eller vindaugebehandling"
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
-msgstr ""
+msgstr "Varsel"
 
 #: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
-msgstr ""
+msgstr "Økt"
 
 #: src/Dialogs/IssueDialog.vala:452
 msgid "Panel Indicators"
-msgstr ""
+msgstr "Panelindikatorar"
 
 #: src/Dialogs/IssueDialog.vala:454
 msgid "System Settings"
@@ -133,42 +132,41 @@ msgstr "Systeminnstillingar"
 
 #: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
-msgstr ""
+msgstr "Skrivebordskomponentar"
 
 #: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
-msgstr ""
+msgstr "Standardvalde applikasjonar"
 
 #: src/Dialogs/RestoreDialog.vala:29
-#, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Systeminstillingane vil bli stilt tilbake til fabrikkinstilling"
+msgstr "Systeminnstillingane vil verte stilt tilbake til fabrikkinnstillingane"
 
 #: src/Dialogs/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
-"Alle systeminstillingar og data vil bli stilt tilbake til standardverdiane."
+"Alle systeminstillingar og data vil verte stilt tilbake til "
+"standardverdiane. Personleg data, som musikk og bilete, vil ikkje bli endra."
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
 msgstr "Still tilbake instillingar"
 
 #: src/Views/HardwareView.vala:58
-#, fuzzy, c-format
+#, c-format
 msgid "%s memory"
-msgstr "Minne:"
+msgstr "%s minne"
 
 #: src/Views/HardwareView.vala:67
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage"
-msgstr "Lagring:"
+msgstr "%s lagring"
 
 #: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
-msgstr ""
+msgstr "Utviklarnettstad"
 
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
 #: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
