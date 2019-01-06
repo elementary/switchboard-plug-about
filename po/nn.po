@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2019-01-06 00:59+0000\n"
+"PO-Revision-Date: 2019-01-07 00:03+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-about/nn/>\n"
@@ -26,7 +26,7 @@ msgstr "Om"
 
 #: src/Plug.vala:36
 msgid "View operating system and hardware information"
-msgstr "Vis operativsystem og maskinvareinformasjon"
+msgstr "Vis operativsystem- og maskinvareinformasjon"
 
 #: src/Plug.vala:64
 msgid "System Information"
@@ -35,15 +35,15 @@ msgstr "Systeminformasjon"
 #. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
-msgstr "Still tilbake standardinstillingar"
+msgstr "Still tilbake til standardinnstillingar"
 
 #: src/Plug.vala:66
 msgid "Suggest Translation"
-msgstr "Foreslå oversetting"
+msgstr "Føreslå omsetjing"
 
 #: src/Plug.vala:67
 msgid "Report Problems"
-msgstr "Rapporter feil"
+msgstr "Rapporter problem"
 
 #: src/Plug.vala:68
 msgid "Updates"
@@ -66,12 +66,12 @@ msgstr "Nettstad"
 #. Translate button
 #: src/Plug.vala:188
 msgid "Suggest Translations"
-msgstr "Foreslå oversetting"
+msgstr "Føreslå omsetjingar"
 
 #. Bug button
 #: src/Plug.vala:198
 msgid "Report a Problem"
-msgstr "Rapportér eit problem"
+msgstr "Rapporter eit problem"
 
 #. Update button
 #: src/Plug.vala:206
@@ -136,7 +136,7 @@ msgstr "Skrivebordskomponentar"
 
 #: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
-msgstr "Standardvalde applikasjonar"
+msgstr "Standardapplikasjonar"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -152,7 +152,7 @@ msgstr ""
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
-msgstr "Still tilbake instillingar"
+msgstr "Still tilbake innstillingar"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
@@ -166,7 +166,7 @@ msgstr "%s lagring"
 
 #: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
-msgstr "Utviklarnettstad"
+msgstr "Produsenten sin nettstad"
 
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
 #: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
