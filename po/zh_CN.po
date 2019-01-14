@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2018-08-13 00:03+0000\n"
+"PO-Revision-Date: 2019-01-14 13:23+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
@@ -95,7 +95,6 @@ msgid "Cancel"
 msgstr "取消"
 
 #: src/Dialogs/IssueDialog.vala:110
-#, fuzzy
 msgid "Report Problem"
 msgstr "反馈问题"
 
@@ -128,9 +127,8 @@ msgid "Panel Indicators"
 msgstr "顶部面板内指示器"
 
 #: src/Dialogs/IssueDialog.vala:454
-#, fuzzy
 msgid "System Settings"
-msgstr "重置设置"
+msgstr "系统设置"
 
 #: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
@@ -145,11 +143,10 @@ msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "系统设置将会被重置为出厂默认值"
 
 #: src/Dialogs/RestoreDialog.vala:35
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
-msgstr "所有系统设置参数将会被重置为默认值。"
+msgstr "所有系统设置参数将会被重置为默认值，个人数据，如音乐和照片等不会受影响。"
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
