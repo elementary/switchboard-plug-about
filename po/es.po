@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2018-05-07 21:31+0000\n"
-"Last-Translator: Iuninefrendor <iuninefrendor@gmail.com>\n"
+"PO-Revision-Date: 2019-01-19 00:09+0000\n"
+"Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-about/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:35
@@ -61,7 +61,7 @@ msgstr "GTK+ %s"
 
 #: src/Plug.vala:167
 msgid "Website"
-msgstr "Sitio web"
+msgstr "Página web"
 
 #. Translate button
 #: src/Plug.vala:188
@@ -169,7 +169,7 @@ msgstr "%s de almacenamiento"
 
 #: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
-msgstr "Sitio web del fabricante"
+msgstr "Página web del fabricante"
 
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
 #: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
