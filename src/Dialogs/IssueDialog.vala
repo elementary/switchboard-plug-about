@@ -63,22 +63,22 @@ public class About.IssueDialog : Granite.MessageDialog {
 
         foreach (var app in app_entries) {
             var desktop_info = new DesktopAppInfo (app.app_id + ".desktop");
-            var repo_row = new RepoRow (desktop_info.get_display_name (), desktop_info.get_icon (), Category.DEFAULT_APPS, app.github_suffix);
+            var repo_row = new RepoRow (desktop_info.get_display_name (), desktop_info.get_icon (), Category.DEFAULT_APPS, app.issues_url);
             listbox.add (repo_row);
         }
 
         foreach (var entry in system_entries) {
-            var repo_row = new RepoRow (entry.name, null, Category.SYSTEM, entry.github_suffix);
+            var repo_row = new RepoRow (entry.name, null, Category.SYSTEM, entry.issues_url);
             listbox.add (repo_row);
         }
 
         foreach (var entry in switchboard_entries) {
-            var repo_row = new RepoRow (dgettext (entry.gettext_domain, entry.name), new ThemedIcon (entry.icon), Category.SETTINGS, entry.github_suffix);
+            var repo_row = new RepoRow (dgettext (entry.gettext_domain, entry.name), new ThemedIcon (entry.icon), Category.SETTINGS, entry.issues_url);
             listbox.add (repo_row);
         }
 
         foreach (var entry in wingpanel_entries) {
-            var repo_row = new RepoRow (dgettext (entry.gettext_domain, entry.name), new ThemedIcon (entry.icon), Category.PANEL, entry.github_suffix);
+            var repo_row = new RepoRow (dgettext (entry.gettext_domain, entry.name), new ThemedIcon (entry.icon), Category.PANEL, entry.issues_url);
             listbox.add (repo_row);
         }
 
@@ -140,7 +140,7 @@ public class About.IssueDialog : Granite.MessageDialog {
         if (response_id == 0) {
             try {
                 var url = ((RepoRow) listbox.get_selected_row ()).url;
-                AppInfo.launch_default_for_uri ("https://github.com/elementary/%s/issues".printf (url), null);
+                AppInfo.launch_default_for_uri ("%s".printf (url), null);
             } catch (Error e) {
                 critical (e.message);
             }
@@ -164,85 +164,89 @@ public class About.IssueDialog : Granite.MessageDialog {
 
     private struct AppEntry {
         string app_id;
-        string github_suffix;
+        string issues_url;
     }
 
     static AppEntry[] app_entries = {
         AppEntry () {
             app_id = "io.elementary.appcenter",
-            github_suffix = "appcenter"
+            issues_url = "https://github.com/elementary/appcenter/issues"
         },
         AppEntry () {
             app_id = "io.elementary.calculator",
-            github_suffix = "calculator"
+            issues_url = "https://github.com/elementary/calculator/issues"
         },
         AppEntry () {
             app_id = "io.elementary.calendar",
-            github_suffix = "calendar"
+            issues_url = "https://github.com/elementary/calendar/issues"
         },
         AppEntry () {
             app_id = "org.pantheon.camera",
-            github_suffix = "camera"
+            issues_url = "https://github.com/elementary/camera/issues"
         },
         AppEntry () {
             app_id = "io.elementary.code",
-            github_suffix = "code"
+            issues_url = "https://github.com/elementary/code/issues"
+        },
+        AppEntry () {
+            app_id = "org.gnome.Epiphany",
+            issues_url = "https://gitlab.gnome.org/GNOME/epiphany/blob/master/CONTRIBUTING.md"
         },
         AppEntry () {
             app_id = "io.elementary.files",
-            github_suffix = "files"
+            issues_url = "https://github.com/elementary/files/issues"
         },
         AppEntry () {
             app_id = "org.pantheon.mail",
-            github_suffix = "mail"
+            issues_url = "https://github.com/elementary/mail/issues"
         },
         AppEntry () {
             app_id = "io.elementary.music",
-            github_suffix = "music"
+            issues_url = "https://github.com/elementary/music/issues"
         },
         AppEntry () {
             app_id = "io.elementary.photos",
-            github_suffix = "photos"
+            issues_url = "https://github.com/elementary/photos/issues"
         },
         AppEntry () {
             app_id = "screenshot-tool",
-            github_suffix = "screenshot-tool"
+            issues_url = "https://github.com/elementary/screenshot-tool/issues"
         },
         AppEntry () {
             app_id = "io.elementary.terminal",
-            github_suffix = "terminal"
+            issues_url = "https://github.com/elementary/terminal/issues"
         },
         AppEntry () {
             app_id = "io.elementary.videos",
-            github_suffix = "videos"
+            issues_url = "https://github.com/elementary/videos/issues"
         }
     };
 
     private struct SystemEntry {
         string name;
-        string github_suffix;
+        string issues_url;
     }
 
     static SystemEntry[] system_entries = {
         SystemEntry () {
             name = _("Applications Menu"),
-            github_suffix = "applications-menu"
+            issues_url = "https://github.com/elementary/applications-menu/issues"
         },
         SystemEntry () {
             name = _("Lock or Login Screen"),
-            github_suffix = "greeter"
+            issues_url = "https://github.com/elementary/greeter/issues"
         },
         SystemEntry () {
             name = _("Look & Feel"),
-            github_suffix = "stylesheet"
+            issues_url = "https://github.com/elementary/stylesheet/issues"
         },
         SystemEntry () {
             name = _("Multitasking or Window Management"),
-            github_suffix = "gala"
+            issues_url = "https://github.com/elementary/gala/issues"
         },
         SystemEntry () {
             name = _("Notifications"),
-            github_suffix = "gala"
+            issues_url = "https://github.com/elementary/gala/issues"
         }
     };
 
@@ -250,7 +254,7 @@ public class About.IssueDialog : Granite.MessageDialog {
         string name;
         string gettext_domain;
         string icon;
-        string github_suffix;
+        string issues_url;
     }
 
     static SwitchboardEntry[] switchboard_entries = {
@@ -258,121 +262,121 @@ public class About.IssueDialog : Granite.MessageDialog {
             name = "Applications",
             gettext_domain = "applications-plug",
             icon = "preferences-desktop-applications",
-            github_suffix = "switchboard-plug-applications"
+            issues_url = "https://github.com/elementary/switchboard-plug-applications/issues"
         },
         SwitchboardEntry () {
             name = "Desktop",
             gettext_domain = "pantheon-desktop-plug",
             icon = "preferences-desktop-wallpaper",
-            github_suffix = "switchboard-plug-pantheon-shell"
+            issues_url = "https://github.com/elementary/switchboard-plug-pantheon-shell/issues"
         },
         SwitchboardEntry () {
             name = "Language & Region",
             gettext_domain = "locale-plug",
             icon = "preferences-desktop-locale",
-            github_suffix = "switchboard-plug-locale"
+            issues_url = "https://github.com/elementary/switchboard-plug-locale/issues"
         },
         SwitchboardEntry () {
             name = "Notifications",
             gettext_domain = "notifications-plug",
             icon = "preferences-system-notifications",
-            github_suffix = "switchboard-plug-notifications"
+            issues_url = "https://github.com/elementary/switchboard-plug-notifications/issues"
         },
         SwitchboardEntry () {
             name = "Security & Privacy",
             gettext_domain = "pantheon-security-privacy-plug",
             icon = "preferences-system-privacy",
-            github_suffix = "switchboard-plug-security-privacy"
+            issues_url = "https://github.com/elementary/switchboard-plug-security-privacy/issues"
         },
         SwitchboardEntry () {
             name = "Displays",
             gettext_domain = "pantheon-display-plug",
             icon = "preferences-desktop-display",
-            github_suffix = "switchboard-plug-display"
+            issues_url = "https://github.com/elementary/switchboard-plug-display/issues"
         },
         SwitchboardEntry () {
             name = "Keyboard",
             gettext_domain = "keyboard-plug",
             icon = "preferences-desktop-keyboard",
-            github_suffix = "switchboard-plug-keyboard"
+            issues_url = "https://github.com/elementary/switchboard-plug-keyboard/issues"
         },
         SwitchboardEntry () {
             name = "Mouse & Touchpad",
             gettext_domain = "mouse-touchpad-plug",
             icon = "preferences-desktop-peripherals",
-            github_suffix = "switchboard-plug-mouse-touchpad"
+            issues_url = "https://github.com/elementary/switchboard-plug-mouse-touchpad/issues"
         },
         SwitchboardEntry () {
             name = "Power",
             gettext_domain = "power-plug",
             icon = "preferences-system-power",
-            github_suffix = "switchboard-plug-power"
+            issues_url = "https://github.com/elementary/switchboard-plug-power/issues"
         },
         SwitchboardEntry () {
             name = "Printers",
             gettext_domain = "printers-plug",
             icon = "printer",
-            github_suffix = "switchboard-plug-printers"
+            issues_url = "https://github.com/elementary/switchboard-plug-printers/issues"
         },
         SwitchboardEntry () {
             name = "Sound",
             gettext_domain = "sound-plug",
             icon = "preferences-desktop-sound",
-            github_suffix = "switchboard-plug-sound"
+            issues_url = "https://github.com/elementary/switchboard-plug-sound/issues"
         },
         SwitchboardEntry () {
             name = "Bluetooth",
             gettext_domain = "bluetooth-plug",
             icon = "preferences-bluetooth",
-            github_suffix = "switchboard-plug-bluetooth"
+            issues_url = "https://github.com/elementary/switchboard-plug-bluetooth/issues"
         },
         SwitchboardEntry () {
             name = "Network",
             gettext_domain = "networking-plug",
             icon = "preferences-system-network",
-            github_suffix = "switchboard-plug-networking"
+            issues_url = "https://github.com/elementary/switchboard-plug-networking/issues"
         },
         SwitchboardEntry () {
             name = "Online Accounts",
             gettext_domain = "pantheon-online-accounts",
             icon = "preferences-desktop-online-accounts",
-            github_suffix = "switchboard-plug-online-accounts"
+            issues_url = "https://github.com/elementary/switchboard-plug-online-accounts/issues"
         },
         SwitchboardEntry () {
             name = "Sharing",
             gettext_domain = "sharing-plug",
             icon = "preferences-system-sharing",
-            github_suffix = "switchboard-plug-sharing"
+            issues_url = "https://github.com/elementary/switchboard-plug-sharing/issues"
         },
         SwitchboardEntry () {
             name = "About",
             gettext_domain = "about-plug",
             icon = "dialog-information",
-            github_suffix = "switchboard-plug-about"
+            issues_url = "https://github.com/elementary/switchboard-plug-about/issues"
         },
         SwitchboardEntry () {
             name = "Date & Time",
             gettext_domain = "datetime-plug",
             icon = "preferences-system-time",
-            github_suffix = "switchboard-plug-datetime"
+            issues_url = "https://github.com/elementary/switchboard-plug-datetime/issues"
         },
         SwitchboardEntry () {
             name = "Parental Control",
             gettext_domain = "parental-controls-plug",
             icon = "preferences-system-parental-controls",
-            github_suffix = "switchboard-plug-parental-controls"
+            issues_url = "https://github.com/elementary/switchboard-plug-parental-controls/issues"
         },
         SwitchboardEntry () {
             name = "Universal Access",
             gettext_domain = "accessibility-plug",
             icon = "preferences-desktop-accessibility",
-            github_suffix = "switchboard-plug-a11y"
+            issues_url = "https://github.com/elementary/switchboard-plug-a11y/issues"
         },
         SwitchboardEntry () {
             name = "User Accounts",
             gettext_domain = "useraccounts-plug",
             icon = "system-users",
-            github_suffix = "switchboard-plug-accounts"
+            issues_url = "https://github.com/elementary/switchboard-plug-accounts/issues"
         }
     };
 
@@ -380,7 +384,7 @@ public class About.IssueDialog : Granite.MessageDialog {
         string name;
         string gettext_domain;
         string icon;
-        string github_suffix;
+        string issues_url;
     }
 
     static WingpanelEntry[] wingpanel_entries = {
@@ -388,55 +392,55 @@ public class About.IssueDialog : Granite.MessageDialog {
             name = "Bluetooth",
             gettext_domain = "bluetooth-plug",
             icon = "bluetooth-active-symbolic",
-            github_suffix = "wingpanel-indicator-bluetooth"
+            issues_url = "https://github.com/elementary/wingpanel-indicator-bluetooth/issues"
         },
         WingpanelEntry () {
             name = "Date & Time",
             gettext_domain = "datetime-plug",
             icon = "appointment-symbolic",
-            github_suffix = "wingpanel-indicator-datetime"
+            issues_url = "https://github.com/elementary/wingpanel-indicator-datetime/issues"
         },
         WingpanelEntry () {
             name = "Keyboard",
             gettext_domain = "keyboard-plug",
             icon = "input-keyboard-symbolic",
-            github_suffix = "wingpanel-indicator-keyboard"
+            issues_url = "https://github.com/elementary/wingpanel-indicator-keyboard/issues"
         },
         WingpanelEntry () {
             name = "Network",
             gettext_domain = "pantheon-network-plug",
             icon = "network-wireless-signal-excellent-symbolic",
-            github_suffix = "wingpanel-indicator-network"
+            issues_url = "https://github.com/elementary/wingpanel-indicator-network/issues"
         },
         WingpanelEntry () {
             name = "Night Light",
             gettext_domain = "pantheon-display-plug",
             icon = "night-light-symbolic",
-            github_suffix = "wingpanel-indicator-nightlight"
+            issues_url = "https://github.com/elementary/wingpanel-indicator-nightlight/issues"
         },
         WingpanelEntry () {
             name = "Notifications",
             gettext_domain = "notifications-plug",
             icon = "notification-symbolic",
-            github_suffix = "wingpanel-indicator-notifications"
+            issues_url = "https://github.com/elementary/wingpanel-indicator-notifications/issues"
         },
         WingpanelEntry () {
             name = "Power",
             gettext_domain = "power-plug",
             icon = "battery-full-symbolic",
-            github_suffix = "wingpanel-indicator-power"
+            issues_url = "https://github.com/elementary/wingpanel-indicator-power/issues"
         },
         WingpanelEntry () {
             name = N_("Session"),
             gettext_domain = "about-plug",
             icon = "system-shutdown-symbolic",
-            github_suffix = "wingpanel-indicator-session"
+            issues_url = "https://github.com/elementary/wingpanel-indicator-session/issues"
         },
         WingpanelEntry () {
             name = "Sound",
             gettext_domain = "sound-plug",
             icon = "audio-volume-high-symbolic",
-            github_suffix = "wingpanel-indicator-sound"
+            issues_url = "https://github.com/elementary/wingpanel-indicator-sound/issues"
         }
     };
 
