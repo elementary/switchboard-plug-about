@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2019-01-09 00:06+0000\n"
+"PO-Revision-Date: 2019-01-25 00:01+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-about/pt/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: src/Plug.vala:35
 msgid "About"
-msgstr "Sobre"
+msgstr "Acerca"
 
 #: src/Plug.vala:36
 msgid "View operating system and hardware information"
@@ -35,7 +35,7 @@ msgstr "Informações do Sistema"
 #. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
-msgstr "Restaurar Definições por Defeito"
+msgstr "Restaurar Definições Predefinidas"
 
 #: src/Plug.vala:66
 msgid "Suggest Translation"
@@ -52,7 +52,7 @@ msgstr "Atualizações"
 #: src/Plug.vala:157
 #, c-format
 msgid "Built on %s"
-msgstr "Baseado em %s"
+msgstr "Baseado no %s"
 
 #: src/Plug.vala:164
 #, c-format
@@ -104,7 +104,7 @@ msgstr "Menu de Aplicações"
 
 #: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
-msgstr "Ecrâ de Bloqueio ou de Inicio de Sessão"
+msgstr "Ecrã de Bloqueio ou de Inicio de Sessão"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
@@ -148,8 +148,8 @@ msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
-"Todas as definições e dados do sistema serão substituídos pelos valores por "
-"padrão. Dados pessoais, como músicas e imagens, não são afetadas."
+"Todas as definições e dados do sistema serão substituídos pelos valores "
+"predefinidos. Dados pessoais, como músicas e imagens, não são afetadas."
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
@@ -176,11 +176,11 @@ msgstr "Desconhecido"
 
 #: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
-msgstr "Núcleo Duplo"
+msgstr "Dual-Core"
 
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
-msgstr "Núcleo quádruplo"
+msgstr "Quad-Core"
 
 #~ msgid "Bluetooth"
 #~ msgstr "Bluetooth"
