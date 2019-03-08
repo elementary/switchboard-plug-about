@@ -276,13 +276,21 @@ public class About.Plug : Switchboard.Plug {
      * returns true to continue, false to cancel
      */
     private bool confirm_restore_action () {
-        var dialog = new RestoreDialog ();
-        dialog.show_all ();
+        var dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("System Settings Will Be Restored to The Factory Defaults"),
+            _("All system settings and data will be reset to the default values. Personal data, such as music and pictures, will be unaffected."),
+            "dialog-warning",
+            Gtk.ButtonsType.CANCEL
+        );
+        dialog.transient_for = (Gtk.Window) main_grid.get_toplevel ();
+
+        var continue_button = dialog.add_button (_("Restore Settings"), Gtk.ResponseType.ACCEPT);
+        continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         var result = dialog.run ();
         dialog.destroy ();
 
-        return result == 1;
+        return result == Gtk.ResponseType.ACCEPT;
     }
 
     private void settings_restore_clicked () {
