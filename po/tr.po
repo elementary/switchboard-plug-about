@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2019-03-30 22:52+0000\n"
+"PO-Revision-Date: 2019-04-08 00:53+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/tr/>\n"
@@ -35,7 +35,7 @@ msgstr "Sistem Bilgisi"
 #. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
-msgstr "Varsayılan ayarlara sıfırla"
+msgstr "Varsayılan Ayarları Geri Yükle"
 
 #: src/Plug.vala:66
 msgid "Suggest Translation"
@@ -52,7 +52,7 @@ msgstr "Güncellemeler"
 #: src/Plug.vala:157
 #, c-format
 msgid "Built on %s"
-msgstr "%s üzerine kuruldu"
+msgstr "%s üzerine kurulu"
 
 #: src/Plug.vala:164
 #, c-format
@@ -80,7 +80,7 @@ msgstr "Güncellemeleri Denetle"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr "Aşağıdakilerden hangisi ile ilgili sorun yaşıyorsunuz ?"
+msgstr "Aşağıdakilerden hangisi ile ilgili bir sorun yaşıyorsunuz?"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
@@ -108,7 +108,7 @@ msgstr "Kilit veya Giriş Ekranı"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
-msgstr "Bak & Hisset"
+msgstr "Görünüm ve Kullanım"
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
@@ -152,7 +152,7 @@ msgstr ""
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
-msgstr "Ayarları Geri al"
+msgstr "Ayarları Geri Yükle"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
@@ -175,11 +175,11 @@ msgstr "Bilinmiyor"
 
 #: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
-msgstr "Çift Çekirdek"
+msgstr "Çift Çekirdekli"
 
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
-msgstr "Dört-Çekirdek"
+msgstr "Dört Çekirdekli"
 
 #~ msgid "Hardware"
 #~ msgstr "Donanım"
