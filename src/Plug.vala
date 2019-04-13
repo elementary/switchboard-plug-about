@@ -160,11 +160,11 @@ public class About.Plug : Switchboard.Plug {
             based_off = new Gtk.Label (_("Built on %s").printf (upstream_release));
             based_off.set_selectable (true);
         }
-        
+
         var kernel_version_label = new Gtk.Label (kernel_version);
         kernel_version_label.set_selectable (true);
 
-        var gtk_version_label = new Gtk.Label (_("GTK+ %s").printf (gtk_version));        
+        var gtk_version_label = new Gtk.Label (_("GTK+ %s").printf (gtk_version));
         gtk_version_label.set_selectable (true);
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
@@ -241,7 +241,7 @@ public class About.Plug : Switchboard.Plug {
             software_grid.attach (based_off, 0, 2, 2, 1);
         }
 
-        software_grid.attach (kernel_version_label, 0, 3, 2, 1);        
+        software_grid.attach (kernel_version_label, 0, 3, 2, 1);
         software_grid.attach (gtk_version_label, 0, 4, 2, 1);
         software_grid.attach (website_label, 0, 5, 2, 1);
 
@@ -308,16 +308,22 @@ public class About.Plug : Switchboard.Plug {
             settings.reset (key);
         }
     }
-    
+
     private static string[] get_pantheon_schemas () {
         string[] schemas = {};
         string[] pantheon_schemas = {};
-        string[] prefixes = { "org.pantheon.desktop", "io.elementary.desktop", "org.gnome.desktop", "org.gnome.settings-daemon" };
-    
+        string[] prefixes = {
+            "org.pantheon.desktop",
+            "io.elementary.desktop",
+            "io.elementary.onboarding",
+            "org.gnome.desktop",
+            "org.gnome.settings-daemon"
+        };
+
         var sss = SettingsSchemaSource.get_default ();
-    
+
         sss.list_schemas (true, out schemas, null);
-    
+
         foreach (var schema in schemas) {
             foreach (var prefix in prefixes) {
                 if (schema.has_prefix (prefix)) {
@@ -327,18 +333,18 @@ public class About.Plug : Switchboard.Plug {
         }
         return pantheon_schemas;
     }
-    
+
     private static void reset_recursively (string schema) {
         var settings = new GLib.Settings (schema);
         // change into delay mode
         // so changes take place when apply () is called
         settings.delay ();
-    
+
         reset_all_keys (settings);
-    
+
         foreach (var child in settings.list_children ()) {
             var child_settings = settings.get_child (child);
-    
+
             reset_all_keys (child_settings);
         }
         settings.apply ();
