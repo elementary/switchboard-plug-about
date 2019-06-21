@@ -1,3 +1,2 @@
 src/Plug.vala
-src/Dialogs/IssueDialog.vala
 src/Views/HardwareView.vala
