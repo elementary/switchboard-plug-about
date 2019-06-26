@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-10 10:15-0800\n"
+"POT-Creation-Date: 2019-06-26 22:44+0200\n"
 "PO-Revision-Date: 2019-05-13 23:02+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Armenian <https://l10n.elementary.io/projects/switchboard/"
@@ -19,10 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.6.1\n"
 
-#: data/io.elementary.switchboard-plug-about.appdata.xml.in:5
+#: data/io.elementary.switchboard.about.appdata.xml.in:5
 msgid "About"
 msgstr "Մասին"
 
-#: data/io.elementary.switchboard-plug-about.appdata.xml.in:6
+#: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
 msgstr ""

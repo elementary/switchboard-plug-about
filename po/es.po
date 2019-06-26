@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 08:40-0700\n"
+"POT-Creation-Date: 2019-06-26 22:44+0200\n"
 "PO-Revision-Date: 2019-01-19 00:09+0000\n"
 "Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard/"
@@ -20,63 +20,82 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:36
 msgid "About"
 msgstr "Acerca de"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:37
 msgid "View operating system and hardware information"
 msgstr "Ver información del sistema operativo y hardware"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:65
 msgid "System Information"
 msgstr "Información del sistema"
 
 #. Restore settings button
-#: src/Plug.vala:65 src/Plug.vala:216
+#: src/Plug.vala:66 src/Plug.vala:219
 msgid "Restore Default Settings"
 msgstr "Restaurar configuraciones predeterminadas"
 
-#: src/Plug.vala:66
+#: src/Plug.vala:67
 msgid "Suggest Translation"
 msgstr "Sugerir traducción"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:68
 msgid "Report Problems"
 msgstr "Reportar problemas"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:69
 msgid "Updates"
 msgstr "Actualizaciones"
 
-#: src/Plug.vala:157
+#: src/Plug.vala:160
 #, c-format
 msgid "Built on %s"
 msgstr "Basado en %s"
 
-#: src/Plug.vala:164
+#: src/Plug.vala:167
 #, c-format
 msgid "GTK+ %s"
 msgstr "GTK+ %s"
 
-#: src/Plug.vala:167
+#: src/Plug.vala:170
 msgid "Website"
 msgstr "Página web"
 
 #. Translate button
-#: src/Plug.vala:188
+#: src/Plug.vala:191
 msgid "Suggest Translations"
 msgstr "Sugerir traducciones"
 
 #. Bug button
-#: src/Plug.vala:198
+#: src/Plug.vala:201
 msgid "Report a Problem"
 msgstr "Reportar un problema"
 
 #. Update button
-#: src/Plug.vala:206
+#: src/Plug.vala:209
 msgid "Check for Updates"
 msgstr "Buscar actualizaciones"
+
+#: src/Plug.vala:280
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr ""
+"Las configuraciones del sistema serán restauradas a los valores "
+"predeterminados"
+
+#: src/Plug.vala:281
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"Todos los ajustes y datos del sistema se restablecerán a los valores "
+"predeterminados. Los datos personales, como música e imágenes, no se verán "
+"afectados."
+
+#: src/Plug.vala:287
+msgid "Restore Settings"
+msgstr "Restaurar configuración"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
@@ -90,7 +109,7 @@ msgstr "Por favor seleccione un componente de la lista."
 msgid "Categories"
 msgstr "Categorías"
 
-#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+#: src/Dialogs/IssueDialog.vala:108
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -98,64 +117,45 @@ msgstr "Cancelar"
 msgid "Report Problem"
 msgstr "Reportar problemas"
 
-#: src/Dialogs/IssueDialog.vala:228
+#: src/Dialogs/IssueDialog.vala:232
 msgid "Applications Menu"
 msgstr "Menú de aplicaciones"
 
-#: src/Dialogs/IssueDialog.vala:232
+#: src/Dialogs/IssueDialog.vala:236
 msgid "Lock or Login Screen"
 msgstr "Bloqueo o pantalla de inicio de sesión"
 
-#: src/Dialogs/IssueDialog.vala:236
+#: src/Dialogs/IssueDialog.vala:240
 msgid "Look & Feel"
 msgstr "Personalización"
 
-#: src/Dialogs/IssueDialog.vala:240
+#: src/Dialogs/IssueDialog.vala:244
 msgid "Multitasking or Window Management"
 msgstr "Multitarea o Gestor de ventanas"
 
-#: src/Dialogs/IssueDialog.vala:244
+#: src/Dialogs/IssueDialog.vala:248
 msgid "Notifications"
 msgstr "Notificaciones"
 
-#: src/Dialogs/IssueDialog.vala:430
+#: src/Dialogs/IssueDialog.vala:434
 msgid "Session"
 msgstr "Sesión"
 
-#: src/Dialogs/IssueDialog.vala:452
+#: src/Dialogs/IssueDialog.vala:456
 msgid "Panel Indicators"
 msgstr "Panel de Indicadores"
 
-#: src/Dialogs/IssueDialog.vala:454
+#: src/Dialogs/IssueDialog.vala:458
 msgid "System Settings"
 msgstr "Ajustes del sistema"
 
-#: src/Dialogs/IssueDialog.vala:456
+#: src/Dialogs/IssueDialog.vala:460
 msgid "Desktop Components"
 msgstr "Componentes de escritorio"
 
-#: src/Dialogs/IssueDialog.vala:458
+#: src/Dialogs/IssueDialog.vala:462
 msgid "Default Apps"
 msgstr "Aplicaciones predeterminadas"
-
-#: src/Dialogs/RestoreDialog.vala:29
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr ""
-"Las configuraciones del sistema serán restauradas a los valores "
-"predeterminados"
-
-#: src/Dialogs/RestoreDialog.vala:35
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"Todos los ajustes y datos del sistema se restablecerán a los valores "
-"predeterminados. Los datos personales, como música e imágenes, no se verán "
-"afectados."
-
-#: src/Dialogs/RestoreDialog.vala:50
-msgid "Restore Settings"
-msgstr "Restaurar configuración"
 
 #: src/Views/HardwareView.vala:58
 #, c-format

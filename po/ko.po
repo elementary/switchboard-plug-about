@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 08:40-0700\n"
+"POT-Creation-Date: 2019-06-26 22:44+0200\n"
 "PO-Revision-Date: 2019-05-13 23:03+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -20,63 +20,79 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:36
 msgid "About"
 msgstr "소개"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:37
 msgid "View operating system and hardware information"
 msgstr "운영 체제와 하드웨어 정보 보기"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:65
 msgid "System Information"
 msgstr "시스템 정보"
 
 #. Restore settings button
-#: src/Plug.vala:65 src/Plug.vala:216
+#: src/Plug.vala:66 src/Plug.vala:219
 msgid "Restore Default Settings"
 msgstr "기본 설정으로 복원"
 
-#: src/Plug.vala:66
+#: src/Plug.vala:67
 msgid "Suggest Translation"
 msgstr "번역 제안"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:68
 msgid "Report Problems"
 msgstr "오류 보고"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:69
 msgid "Updates"
 msgstr "업데이트"
 
-#: src/Plug.vala:157
+#: src/Plug.vala:160
 #, c-format
 msgid "Built on %s"
 msgstr "%s 기반"
 
-#: src/Plug.vala:164
+#: src/Plug.vala:167
 #, c-format
 msgid "GTK+ %s"
 msgstr "GTK+ %s"
 
-#: src/Plug.vala:167
+#: src/Plug.vala:170
 msgid "Website"
 msgstr "웹 사이트"
 
 #. Translate button
-#: src/Plug.vala:188
+#: src/Plug.vala:191
 msgid "Suggest Translations"
 msgstr "번역 제안하기"
 
 #. Bug button
-#: src/Plug.vala:198
+#: src/Plug.vala:201
 msgid "Report a Problem"
 msgstr "버그 리포트 작성"
 
 #. Update button
-#: src/Plug.vala:206
+#: src/Plug.vala:209
 msgid "Check for Updates"
 msgstr "업데이트 확인"
+
+#: src/Plug.vala:280
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "시스템 설정이 공장 초기화 됩니다"
+
+#: src/Plug.vala:281
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"모든 시스템 설정과 데이터가 기본 값으로 초기화됩니다. 음악이나 사진 등의, 개"
+"인 데이터는, 영향받지 않습니다."
+
+#: src/Plug.vala:287
+msgid "Restore Settings"
+msgstr "설정 복원"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
@@ -90,7 +106,7 @@ msgstr "목록에서 항목을 선택해 주세요."
 msgid "Categories"
 msgstr "카테고리"
 
-#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+#: src/Dialogs/IssueDialog.vala:108
 msgid "Cancel"
 msgstr "취소"
 
@@ -98,61 +114,45 @@ msgstr "취소"
 msgid "Report Problem"
 msgstr "문제 알림"
 
-#: src/Dialogs/IssueDialog.vala:228
+#: src/Dialogs/IssueDialog.vala:232
 msgid "Applications Menu"
 msgstr "애플리케이션 메뉴"
 
-#: src/Dialogs/IssueDialog.vala:232
+#: src/Dialogs/IssueDialog.vala:236
 msgid "Lock or Login Screen"
 msgstr "잠금 또는 로그인 화면"
 
-#: src/Dialogs/IssueDialog.vala:236
+#: src/Dialogs/IssueDialog.vala:240
 msgid "Look & Feel"
 msgstr "모양새"
 
-#: src/Dialogs/IssueDialog.vala:240
+#: src/Dialogs/IssueDialog.vala:244
 msgid "Multitasking or Window Management"
 msgstr "멀티태스킹 또는 창 관리"
 
-#: src/Dialogs/IssueDialog.vala:244
+#: src/Dialogs/IssueDialog.vala:248
 msgid "Notifications"
 msgstr "알림"
 
-#: src/Dialogs/IssueDialog.vala:430
+#: src/Dialogs/IssueDialog.vala:434
 msgid "Session"
 msgstr "세션"
 
-#: src/Dialogs/IssueDialog.vala:452
+#: src/Dialogs/IssueDialog.vala:456
 msgid "Panel Indicators"
 msgstr "패널 인디케이터"
 
-#: src/Dialogs/IssueDialog.vala:454
+#: src/Dialogs/IssueDialog.vala:458
 msgid "System Settings"
 msgstr "시스템 설정"
 
-#: src/Dialogs/IssueDialog.vala:456
+#: src/Dialogs/IssueDialog.vala:460
 msgid "Desktop Components"
 msgstr "데스크톱 항목"
 
-#: src/Dialogs/IssueDialog.vala:458
+#: src/Dialogs/IssueDialog.vala:462
 msgid "Default Apps"
 msgstr "기본 앱"
-
-#: src/Dialogs/RestoreDialog.vala:29
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "시스템 설정이 공장 초기화 됩니다"
-
-#: src/Dialogs/RestoreDialog.vala:35
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"모든 시스템 설정과 데이터가 기본 값으로 초기화됩니다. 음악이나 사진 등의, 개"
-"인 데이터는, 영향받지 않습니다."
-
-#: src/Dialogs/RestoreDialog.vala:50
-msgid "Restore Settings"
-msgstr "설정 복원"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
