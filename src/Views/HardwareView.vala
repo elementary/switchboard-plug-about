@@ -21,6 +21,7 @@ public class About.HardwareView : Gtk.Grid {
     private bool oem_enabled;
     private string graphics;
     private string hdd;
+    private string storage_type;
     private string manufacturer_icon_path;
     private string manufacturer_name;
     private string manufacturer_support_url;
@@ -64,7 +65,7 @@ public class About.HardwareView : Gtk.Grid {
         graphics_info.justify = Gtk.Justification.CENTER;
         graphics_info.set_selectable (true);
 
-        var hdd_info = new Gtk.Label (_("%s storage").printf (hdd));
+        var hdd_info = new Gtk.Label (_("%s storage %s").printf (hdd, storage_type));
         hdd_info.ellipsize = Pango.EllipsizeMode.END;
         hdd_info.set_selectable (true);
 
@@ -207,6 +208,7 @@ public class About.HardwareView : Gtk.Grid {
         try {
             var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
             hdd = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
+            storage_type = get_storage_type ();
         } catch (Error e) {
             critical (e.message);
             hdd = _("Unknown");
@@ -279,6 +281,61 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         return 0;
+    }
+
+    private string get_storage_type () {
+        string partition_name = get_partition_name ();
+        string disk_name = get_disk_name (partition_name);
+        string path = "/sys/block/%s/queue/rotational".printf (disk_name);
+        string storage = "";
+        try {
+            string contents;
+            FileUtils.get_contents (path, out contents);
+            if (int.parse (contents) == 0) {
+                storage = _("(SSD)");
+            } else {
+                storage = _("(HDD)");
+            }
+        } catch (FileError e) {
+            warning (e.message);
+        }
+        return storage;
+    }
+
+    private string get_partition_name () {
+        string df_stdout;
+        string partition = "";
+        try {
+            Process.spawn_command_line_sync ("df /",
+                out df_stdout);
+            string[] output = df_stdout.split ("\n");
+            foreach (string line in output) {
+                if (line.has_prefix ("/dev/")) {
+                    int idx = line.index_of (" ");
+                    if (idx != -1) {
+                        partition = line.substring (0, idx);
+                        return partition;
+                    }
+                }
+            }
+        } catch (Error e) {
+            warning (e.message);
+        }
+        return partition;
+    }
+
+    private string get_disk_name (string partition) {
+        string lsblk_stout;
+        string disk_name = "";
+        string command = "lsblk -no pkname " + partition;
+        try {
+            Process.spawn_command_line_sync (command,
+                out lsblk_stout);
+            disk_name = lsblk_stout.strip ();
+        } catch (Error e) {
+            warning (e.message);
+        }
+        return disk_name;
     }
 }
 
