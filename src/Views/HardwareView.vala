@@ -64,9 +64,9 @@ public class About.HardwareView : Gtk.Grid {
         graphics_info.justify = Gtk.Justification.CENTER;
         graphics_info.set_selectable (true);
 
-        ///TRANSLATORS: The first %s represents capacity of system storage.
-        ///The second one is its type: NVMe SSD / eMMC / SATA SSD / HDD.
-        var hdd_info = new Gtk.Label (_("%s %s").printf (hdd, get_storage_type ()));
+        ///TRANSLATORS: "%1$s" represents capacity of system storage.
+        ///"%2$s" represents its type: NVMe SSD / eMMC / SATA SSD / HDD.
+        var hdd_info = new Gtk.Label (_("%1$s %2$s").printf (hdd, get_storage_type ()));
         hdd_info.ellipsize = Pango.EllipsizeMode.END;
         hdd_info.set_selectable (true);
 
