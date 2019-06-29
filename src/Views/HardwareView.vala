@@ -21,7 +21,6 @@ public class About.HardwareView : Gtk.Grid {
     private bool oem_enabled;
     private string graphics;
     private string hdd;
-    private string storage_type;
     private string manufacturer_icon_path;
     private string manufacturer_name;
     private string manufacturer_support_url;
@@ -67,7 +66,7 @@ public class About.HardwareView : Gtk.Grid {
 
         ///TRANSLATORS: The first %s represents capacity of system strage.
         ///The second one is its type: whether HDD or SSD.
-        var hdd_info = new Gtk.Label (_("%s %s").printf (hdd, storage_type));
+        var hdd_info = new Gtk.Label (_("%s %s").printf (hdd, get_storage_type ()));
         hdd_info.ellipsize = Pango.EllipsizeMode.END;
         hdd_info.set_selectable (true);
 
@@ -210,7 +209,6 @@ public class About.HardwareView : Gtk.Grid {
         try {
             var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
             hdd = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
-            storage_type = get_storage_type ();
         } catch (Error e) {
             critical (e.message);
             hdd = _("Unknown");
