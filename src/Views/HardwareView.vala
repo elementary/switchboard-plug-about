@@ -304,7 +304,8 @@ public class About.HardwareView : Gtk.Grid {
             }
         } catch (FileError e) {
             warning (e.message);
-            storage = _("Storage");
+            // Set fallback string for the device type
+            storage = _("storage");
         }
         return storage;
     }
