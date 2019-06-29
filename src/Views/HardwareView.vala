@@ -304,6 +304,7 @@ public class About.HardwareView : Gtk.Grid {
             }
         } catch (FileError e) {
             warning (e.message);
+            storage = _("Unknown");
         }
         return storage;
     }
