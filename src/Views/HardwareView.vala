@@ -64,11 +64,7 @@ public class About.HardwareView : Gtk.Grid {
         graphics_info.justify = Gtk.Justification.CENTER;
         graphics_info.set_selectable (true);
 
-        ///TRANSLATORS: "%1$s" represents capacity of system storage.
-        ///"%2$s" contains the string "storage" and storage type (NVMe SSD/eMMC/SATA SSD/HDD).
-        ///e.g. if a system strage has 240 GB capacity and its type is SATA SSD,
-        ///this label looks like: "240 GB storage (SATA SSD)"
-        var hdd_info = new Gtk.Label (_("%1$s %2$s").printf (hdd, get_storage_type ()));
+        var hdd_info = new Gtk.Label (hdd);
         hdd_info.ellipsize = Pango.EllipsizeMode.END;
         hdd_info.set_selectable (true);
 
@@ -208,13 +204,16 @@ public class About.HardwareView : Gtk.Grid {
 
         // Hard Drive
         var file_root = GLib.File.new_for_path ("/");
+        string storage_capacity = "";
         try {
             var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
-            hdd = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
+            storage_capacity = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
         } catch (Error e) {
             critical (e.message);
-            hdd = _("Unknown");
+            storage_capacity = _("Unknown");
         }
+
+        hdd = get_storage_type (storage_capacity);
 
         try {
             var oem_file = new KeyFile ();
@@ -285,7 +284,7 @@ public class About.HardwareView : Gtk.Grid {
         return 0;
     }
 
-    private string get_storage_type () {
+    private string get_storage_type (string storage_capacity) {
         string partition_name = get_partition_name ();
         string disk_name = get_disk_name (partition_name);
         string path = "/sys/block/%s/queue/rotational".printf (disk_name);
@@ -295,19 +294,19 @@ public class About.HardwareView : Gtk.Grid {
             FileUtils.get_contents (path, out contents);
             if (int.parse (contents) == 0) {
                 if (disk_name.has_prefix ("nvme")) {
-                    storage = _("storage (NVMe SSD)");
+                    storage = _("%s storage (NVMe SSD)").printf (storage_capacity);
                 } else if (disk_name.has_prefix ("mmc")) {
-                    storage = _("storage (eMMC)");
+                    storage = _("%s storage (eMMC)").printf (storage_capacity);
                 } else {
-                    storage = _("storage (SATA SSD)");
+                    storage = _("%s storage (SATA SSD)").printf (storage_capacity);
                 }
             } else {
-                storage = _("storage (HDD)");
+                storage = _("%s storage (HDD)").printf (storage_capacity);
             }
         } catch (FileError e) {
             warning (e.message);
             // Set fallback string for the device type
-            storage = _("storage");
+            storage = _("%s storage").printf (storage_capacity);
         }
         return storage;
     }
