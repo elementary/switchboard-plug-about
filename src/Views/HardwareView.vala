@@ -293,14 +293,14 @@ public class About.HardwareView : Gtk.Grid {
             FileUtils.get_contents (path, out contents);
             if (int.parse (contents) == 0) {
                 if (disk_name.has_prefix ("nvme")) {
-                    storage = _("NVMe SSD");
+                    storage = _("storage (NVMe SSD)");
                 } else if (disk_name.has_prefix ("mmc")) {
-                    storage = _("eMMC");
+                    storage = _("storage (eMMC)");
                 } else {
-                    storage = _("SATA SSD");
+                    storage = _("storage (SATA SSD)");
                 }
             } else {
-                storage = _("HDD");
+                storage = _("storage (HDD)");
             }
         } catch (FileError e) {
             warning (e.message);
