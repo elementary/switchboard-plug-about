@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2018-11-01 20:01+0000\n"
-"Last-Translator: Jesse ALTER <jesse@jessealter.com>\n"
-"Language-Team: Esperanto <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2019-07-02 10:27+0000\n"
+"Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
+"Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:35
@@ -92,7 +92,7 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
-msgstr ""
+msgstr "Rezigni"
 
 #: src/Dialogs/IssueDialog.vala:110
 msgid "Report Problem"
