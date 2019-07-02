@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2019-07-02 10:27+0000\n"
+"PO-Revision-Date: 2019-07-04 23:28+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/eo/>\n"
@@ -26,7 +26,7 @@ msgstr "Pri"
 
 #: src/Plug.vala:36
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "Vidi operaciuman kaj aparataran informojn"
 
 #: src/Plug.vala:64
 msgid "System Information"
@@ -112,7 +112,7 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
-msgstr ""
+msgstr "Taskbaskulo aŭ Fenestra Mastrumado"
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
-msgstr ""
+msgstr "Aprioraj Aplikaĵoj"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -153,9 +153,9 @@ msgid "Restore Settings"
 msgstr ""
 
 #: src/Views/HardwareView.vala:58
-#, fuzzy, c-format
+#, c-format
 msgid "%s memory"
-msgstr "Memoro:"
+msgstr "%s da memoro"
 
 #: src/Views/HardwareView.vala:67
 #, c-format
