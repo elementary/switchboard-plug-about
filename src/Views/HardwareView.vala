@@ -64,7 +64,7 @@ public class About.HardwareView : Gtk.Grid {
         graphics_info.justify = Gtk.Justification.CENTER;
         graphics_info.set_selectable (true);
 
-        var hdd_info = new Gtk.Label (_("%s storage").printf (hdd));
+        var hdd_info = new Gtk.Label (hdd);
         hdd_info.ellipsize = Pango.EllipsizeMode.END;
         hdd_info.set_selectable (true);
 
@@ -204,13 +204,16 @@ public class About.HardwareView : Gtk.Grid {
 
         // Hard Drive
         var file_root = GLib.File.new_for_path ("/");
+        string storage_capacity = "";
         try {
             var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
-            hdd = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
+            storage_capacity = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
         } catch (Error e) {
             critical (e.message);
-            hdd = _("Unknown");
+            storage_capacity = _("Unknown");
         }
+
+        hdd = get_storage_type (storage_capacity);
 
         try {
             var oem_file = new KeyFile ();
@@ -279,6 +282,69 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         return 0;
+    }
+
+    private string get_storage_type (string storage_capacity) {
+        string partition_name = get_partition_name ();
+        string disk_name = get_disk_name (partition_name);
+        string path = "/sys/block/%s/queue/rotational".printf (disk_name);
+        string storage = "";
+        try {
+            string contents;
+            FileUtils.get_contents (path, out contents);
+            if (int.parse (contents) == 0) {
+                if (disk_name.has_prefix ("nvme")) {
+                    storage = _("%s storage (NVMe SSD)").printf (storage_capacity);
+                } else if (disk_name.has_prefix ("mmc")) {
+                    storage = _("%s storage (eMMC)").printf (storage_capacity);
+                } else {
+                    storage = _("%s storage (SATA SSD)").printf (storage_capacity);
+                }
+            } else {
+                storage = _("%s storage (HDD)").printf (storage_capacity);
+            }
+        } catch (FileError e) {
+            warning (e.message);
+            // Set fallback string for the device type
+            storage = _("%s storage").printf (storage_capacity);
+        }
+        return storage;
+    }
+
+    private string get_partition_name () {
+        string df_stdout;
+        string partition = "";
+        try {
+            Process.spawn_command_line_sync ("df /",
+                out df_stdout);
+            string[] output = df_stdout.split ("\n");
+            foreach (string line in output) {
+                if (line.has_prefix ("/dev/")) {
+                    int idx = line.index_of (" ");
+                    if (idx != -1) {
+                        partition = line.substring (0, idx);
+                        return partition;
+                    }
+                }
+            }
+        } catch (Error e) {
+            warning (e.message);
+        }
+        return partition;
+    }
+
+    private string get_disk_name (string partition) {
+        string lsblk_stout;
+        string disk_name = "";
+        string command = "lsblk -no pkname " + partition;
+        try {
+            Process.spawn_command_line_sync (command,
+                out lsblk_stout);
+            disk_name = lsblk_stout.strip ();
+        } catch (Error e) {
+            warning (e.message);
+        }
+        return disk_name;
     }
 }
 
