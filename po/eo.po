@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-16 08:40-0700\n"
-"PO-Revision-Date: 2019-07-04 23:28+0000\n"
+"PO-Revision-Date: 2019-07-10 04:46+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/eo/>\n"
@@ -30,34 +30,34 @@ msgstr "Vidi operaciuman kaj aparataran informojn"
 
 #: src/Plug.vala:64
 msgid "System Information"
-msgstr ""
+msgstr "Sistemaj informoj"
 
 #. Restore settings button
 #: src/Plug.vala:65 src/Plug.vala:216
 msgid "Restore Default Settings"
-msgstr ""
+msgstr "Restaŭri apriorajn agordojn"
 
 #: src/Plug.vala:66
 msgid "Suggest Translation"
-msgstr ""
+msgstr "Sugesti tradukojn"
 
 #: src/Plug.vala:67
 msgid "Report Problems"
-msgstr ""
+msgstr "Raporti problemojn"
 
 #: src/Plug.vala:68
 msgid "Updates"
-msgstr ""
+msgstr "Ĝisdatigoj"
 
 #: src/Plug.vala:157
 #, c-format
 msgid "Built on %s"
-msgstr ""
+msgstr "Bazita sur %s"
 
 #: src/Plug.vala:164
 #, c-format
 msgid "GTK+ %s"
-msgstr ""
+msgstr "GTK+ %s"
 
 #: src/Plug.vala:167
 msgid "Website"
@@ -66,29 +66,29 @@ msgstr "Retejo"
 #. Translate button
 #: src/Plug.vala:188
 msgid "Suggest Translations"
-msgstr ""
+msgstr "Sugesti tradukojn"
 
 #. Bug button
 #: src/Plug.vala:198
 msgid "Report a Problem"
-msgstr ""
+msgstr "Raporti problemon"
 
 #. Update button
 #: src/Plug.vala:206
 msgid "Check for Updates"
-msgstr ""
+msgstr "Kontroli ĝisdatigojn"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr ""
+msgstr "Ĉe kio vi trovis problemon, el la sekvaj aĵoj?"
 
 #: src/Dialogs/IssueDialog.vala:28
 msgid "Please select a component from the list."
-msgstr ""
+msgstr "Bonvolu elekti aĵon en la listo."
 
 #: src/Dialogs/IssueDialog.vala:48
 msgid "Categories"
-msgstr ""
+msgstr "Kategorioj"
 
 #: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
 msgid "Cancel"
@@ -96,19 +96,19 @@ msgstr "Rezigni"
 
 #: src/Dialogs/IssueDialog.vala:110
 msgid "Report Problem"
-msgstr ""
+msgstr "Raporti problemon"
 
 #: src/Dialogs/IssueDialog.vala:228
 msgid "Applications Menu"
-msgstr ""
+msgstr "Aplikaĵa menuo"
 
 #: src/Dialogs/IssueDialog.vala:232
 msgid "Lock or Login Screen"
-msgstr ""
+msgstr "Ŝlosa aŭ ensaluta ekrano"
 
 #: src/Dialogs/IssueDialog.vala:236
 msgid "Look & Feel"
-msgstr ""
+msgstr "Fasado"
 
 #: src/Dialogs/IssueDialog.vala:240
 msgid "Multitasking or Window Management"
@@ -116,15 +116,15 @@ msgstr "Taskbaskulo aŭ Fenestra Mastrumado"
 
 #: src/Dialogs/IssueDialog.vala:244
 msgid "Notifications"
-msgstr ""
+msgstr "Avertoj"
 
 #: src/Dialogs/IssueDialog.vala:430
 msgid "Session"
-msgstr ""
+msgstr "Seanco"
 
 #: src/Dialogs/IssueDialog.vala:452
 msgid "Panel Indicators"
-msgstr ""
+msgstr "Panela indikiloj"
 
 #: src/Dialogs/IssueDialog.vala:454
 msgid "System Settings"
@@ -132,7 +132,7 @@ msgstr "Sistemaj agordoj"
 
 #: src/Dialogs/IssueDialog.vala:456
 msgid "Desktop Components"
-msgstr ""
+msgstr "Labortablaj elementoj"
 
 #: src/Dialogs/IssueDialog.vala:458
 msgid "Default Apps"
@@ -140,17 +140,19 @@ msgstr "Aprioraj Aplikaĵoj"
 
 #: src/Dialogs/RestoreDialog.vala:29
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr ""
+msgstr "Sistemaj agordoj restaŭriĝos al aprioraj valoroj"
 
 #: src/Dialogs/RestoreDialog.vala:35
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
+"Ĉiuj sistemaj agordoj kaj datumoj restaŭriĝos al aprioraj valoroj. Personaj "
+"datumoj, kiel muziko kaj bildoj, restos senŝanĝaj."
 
 #: src/Dialogs/RestoreDialog.vala:50
 msgid "Restore Settings"
-msgstr ""
+msgstr "Restaŭri agordojn"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
@@ -160,11 +162,11 @@ msgstr "%s da memoro"
 #: src/Views/HardwareView.vala:67
 #, c-format
 msgid "%s storage"
-msgstr ""
+msgstr "%s da memoro"
 
 #: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
-msgstr ""
+msgstr "Retejo de la fabriko"
 
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
 #: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
@@ -173,11 +175,11 @@ msgstr "Nekonata"
 
 #: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
-msgstr ""
+msgstr "Duopa kerno"
 
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
-msgstr ""
+msgstr "Kvaropa kerno"
 
 #~ msgid "Processor:"
 #~ msgstr "Procesoro:"
