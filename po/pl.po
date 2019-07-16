@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 08:40-0700\n"
+"POT-Creation-Date: 2019-06-26 22:44+0200\n"
 "PO-Revision-Date: 2018-05-07 20:28+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
@@ -21,63 +21,80 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:36
 msgid "About"
 msgstr "Informacje"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:37
 msgid "View operating system and hardware information"
 msgstr "Wyświetl informacje o systemie oraz sprzęcie"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:65
 msgid "System Information"
 msgstr "Informacje o systemie"
 
 #. Restore settings button
-#: src/Plug.vala:65 src/Plug.vala:216
+#: src/Plug.vala:66 src/Plug.vala:219
 msgid "Restore Default Settings"
 msgstr "Przywróć ustawienia domyślne"
 
-#: src/Plug.vala:66
+#: src/Plug.vala:67
 msgid "Suggest Translation"
 msgstr "Zaproponuj tłumaczenie"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:68
 msgid "Report Problems"
 msgstr "Zgłoś problemy"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:69
 msgid "Updates"
 msgstr "Aktualizacje"
 
-#: src/Plug.vala:157
+#: src/Plug.vala:160
 #, c-format
 msgid "Built on %s"
 msgstr "Zbudowano na %s"
 
-#: src/Plug.vala:164
+#: src/Plug.vala:167
 #, c-format
 msgid "GTK+ %s"
 msgstr "GTK+ %s"
 
-#: src/Plug.vala:167
+#: src/Plug.vala:170
 msgid "Website"
 msgstr "Strona internetowa"
 
 #. Translate button
-#: src/Plug.vala:188
+#: src/Plug.vala:191
 msgid "Suggest Translations"
 msgstr "Zaproponuj tłumaczenie"
 
 #. Bug button
-#: src/Plug.vala:198
+#: src/Plug.vala:201
 msgid "Report a Problem"
 msgstr "Zgłoś błąd"
 
 #. Update button
-#: src/Plug.vala:206
+#: src/Plug.vala:209
 msgid "Check for Updates"
 msgstr "Sprawdź aktualizacje"
+
+#: src/Plug.vala:280
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr ""
+"Ustawienia systemowe zostaną przywrócone do domyślnych wartości fabrycznych"
+
+#: src/Plug.vala:281
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"Wszystkie ustawienia systemu i dane zostaną przywrócone do wartości "
+"domyślnych. Dane osobiste, takie jak muzyka i zdjęcia, nie będą naruszone."
+
+#: src/Plug.vala:287
+msgid "Restore Settings"
+msgstr "Przywróć ustawienia"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
@@ -91,7 +108,7 @@ msgstr "Prosimy wybrać z listy dany składnik."
 msgid "Categories"
 msgstr "Kategorie"
 
-#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+#: src/Dialogs/IssueDialog.vala:108
 msgid "Cancel"
 msgstr "Anuluj"
 
@@ -99,62 +116,45 @@ msgstr "Anuluj"
 msgid "Report Problem"
 msgstr "Zgłoś problem"
 
-#: src/Dialogs/IssueDialog.vala:228
+#: src/Dialogs/IssueDialog.vala:232
 msgid "Applications Menu"
 msgstr "Menu programów"
 
-#: src/Dialogs/IssueDialog.vala:232
+#: src/Dialogs/IssueDialog.vala:236
 msgid "Lock or Login Screen"
 msgstr "Blokada lub ekran logowania"
 
-#: src/Dialogs/IssueDialog.vala:236
+#: src/Dialogs/IssueDialog.vala:240
 msgid "Look & Feel"
 msgstr "Wygląd i zachowanie"
 
-#: src/Dialogs/IssueDialog.vala:240
+#: src/Dialogs/IssueDialog.vala:244
 msgid "Multitasking or Window Management"
 msgstr "Wielozadaniowość lub zarządzanie oknami"
 
-#: src/Dialogs/IssueDialog.vala:244
+#: src/Dialogs/IssueDialog.vala:248
 msgid "Notifications"
 msgstr "Powiadomienia"
 
-#: src/Dialogs/IssueDialog.vala:430
+#: src/Dialogs/IssueDialog.vala:434
 msgid "Session"
 msgstr "Sesja"
 
-#: src/Dialogs/IssueDialog.vala:452
+#: src/Dialogs/IssueDialog.vala:456
 msgid "Panel Indicators"
 msgstr "Wskaźniki panelu"
 
-#: src/Dialogs/IssueDialog.vala:454
+#: src/Dialogs/IssueDialog.vala:458
 msgid "System Settings"
 msgstr "Ustawienia systemowe"
 
-#: src/Dialogs/IssueDialog.vala:456
+#: src/Dialogs/IssueDialog.vala:460
 msgid "Desktop Components"
 msgstr "Komponenty pulpitu"
 
-#: src/Dialogs/IssueDialog.vala:458
+#: src/Dialogs/IssueDialog.vala:462
 msgid "Default Apps"
 msgstr "Domyślne programy"
-
-#: src/Dialogs/RestoreDialog.vala:29
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr ""
-"Ustawienia systemowe zostaną przywrócone do domyślnych wartości fabrycznych"
-
-#: src/Dialogs/RestoreDialog.vala:35
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"Wszystkie ustawienia systemu i dane zostaną przywrócone do wartości "
-"domyślnych. Dane osobiste, takie jak muzyka i zdjęcia, nie będą naruszone."
-
-#: src/Dialogs/RestoreDialog.vala:50
-msgid "Restore Settings"
-msgstr "Przywróć ustawienia"
 
 #: src/Views/HardwareView.vala:58
 #, c-format

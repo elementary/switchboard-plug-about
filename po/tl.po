@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-16 08:40-0700\n"
+"POT-Creation-Date: 2019-06-26 22:44+0200\n"
 "PO-Revision-Date: 2018-09-25 00:02+0000\n"
 "Last-Translator: Axel Philip Advento <badwolf.bloodseeker.rev@gmail.com>\n"
 "Language-Team: Tagalog <https://weblate.elementary.io/projects/switchboard/"
@@ -21,63 +21,79 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:36
 msgid "About"
 msgstr "Tungkol dito"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:37
 msgid "View operating system and hardware information"
 msgstr "Ipakita ang impormasyon ng operating system at hardware"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:65
 msgid "System Information"
 msgstr "Impormasyon ng System"
 
 #. Restore settings button
-#: src/Plug.vala:65 src/Plug.vala:216
+#: src/Plug.vala:66 src/Plug.vala:219
 msgid "Restore Default Settings"
 msgstr "Ibalik ang Default na Settings"
 
-#: src/Plug.vala:66
+#: src/Plug.vala:67
 msgid "Suggest Translation"
 msgstr "Magmungkahi ng Pagsasalin"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:68
 msgid "Report Problems"
 msgstr "I-report ang mga Problema"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:69
 msgid "Updates"
 msgstr "Mga Update"
 
-#: src/Plug.vala:157
+#: src/Plug.vala:160
 #, c-format
 msgid "Built on %s"
 msgstr "Ginawa sa %s"
 
-#: src/Plug.vala:164
+#: src/Plug.vala:167
 #, c-format
 msgid "GTK+ %s"
 msgstr "GTK+ %s"
 
-#: src/Plug.vala:167
+#: src/Plug.vala:170
 msgid "Website"
 msgstr "Website"
 
 #. Translate button
-#: src/Plug.vala:188
+#: src/Plug.vala:191
 msgid "Suggest Translations"
 msgstr "Magmungkahi ng mga Pagsasalin"
 
 #. Bug button
-#: src/Plug.vala:198
+#: src/Plug.vala:201
 msgid "Report a Problem"
 msgstr "Mag-report ng Problema"
 
 #. Update button
-#: src/Plug.vala:206
+#: src/Plug.vala:209
 msgid "Check for Updates"
 msgstr "Tumingin ng mga Update"
+
+#: src/Plug.vala:280
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "Ibabalik ang mga Setting ng System sa mga Factory Default"
+
+#: src/Plug.vala:281
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"Lahat ng mga setting at data ay ibabalik sa mga default na value. Ang mga "
+"personal na data, tulad ng musika at mga litrato, ay hindi maapektuhan."
+
+#: src/Plug.vala:287
+msgid "Restore Settings"
+msgstr "Ibalik ang mga Setting"
 
 #: src/Dialogs/IssueDialog.vala:27
 msgid "Which of the Following Are You Seeing an Issue With?"
@@ -91,7 +107,7 @@ msgstr "Pumili ng component mula sa listahan."
 msgid "Categories"
 msgstr "Mga Kategorya"
 
-#: src/Dialogs/IssueDialog.vala:108 src/Dialogs/RestoreDialog.vala:53
+#: src/Dialogs/IssueDialog.vala:108
 msgid "Cancel"
 msgstr "Ikansela"
 
@@ -100,61 +116,45 @@ msgstr "Ikansela"
 msgid "Report Problem"
 msgstr "I-report ang mga Problema"
 
-#: src/Dialogs/IssueDialog.vala:228
+#: src/Dialogs/IssueDialog.vala:232
 msgid "Applications Menu"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:232
+#: src/Dialogs/IssueDialog.vala:236
 msgid "Lock or Login Screen"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:236
+#: src/Dialogs/IssueDialog.vala:240
 msgid "Look & Feel"
 msgstr "Itsura"
 
-#: src/Dialogs/IssueDialog.vala:240
+#: src/Dialogs/IssueDialog.vala:244
 msgid "Multitasking or Window Management"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:244
+#: src/Dialogs/IssueDialog.vala:248
 msgid "Notifications"
 msgstr "Mga Abiso"
 
-#: src/Dialogs/IssueDialog.vala:430
+#: src/Dialogs/IssueDialog.vala:434
 msgid "Session"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:452
+#: src/Dialogs/IssueDialog.vala:456
 msgid "Panel Indicators"
 msgstr ""
 
-#: src/Dialogs/IssueDialog.vala:454
+#: src/Dialogs/IssueDialog.vala:458
 msgid "System Settings"
 msgstr "Mga Settings ng System"
 
-#: src/Dialogs/IssueDialog.vala:456
+#: src/Dialogs/IssueDialog.vala:460
 msgid "Desktop Components"
 msgstr "Mga Bahagi ng Desktop"
 
-#: src/Dialogs/IssueDialog.vala:458
+#: src/Dialogs/IssueDialog.vala:462
 msgid "Default Apps"
 msgstr "Default na Apps"
-
-#: src/Dialogs/RestoreDialog.vala:29
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Ibabalik ang mga Setting ng System sa mga Factory Default"
-
-#: src/Dialogs/RestoreDialog.vala:35
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"Lahat ng mga setting at data ay ibabalik sa mga default na value. Ang mga "
-"personal na data, tulad ng musika at mga litrato, ay hindi maapektuhan."
-
-#: src/Dialogs/RestoreDialog.vala:50
-msgid "Restore Settings"
-msgstr "Ibalik ang mga Setting"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
