@@ -197,12 +197,19 @@ public class About.Plug : Switchboard.Plug {
             }
         });
 
-        // Bug button
         var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
         bug_button.clicked.connect (() => {
-            var issue_dialog = new IssueDialog ();
-            issue_dialog.transient_for = (Gtk.Window) main_grid.get_toplevel ();
-            issue_dialog.run ();
+            var appinfo = new GLib.DesktopAppInfo ("io.elementary.feedback.desktop");
+            if (appinfo != null) {
+                try {
+                    appinfo.launch (null, null);
+                } catch (Error e) {
+                    critical (e.message);
+                    launch_support_url ();
+                }
+            } else {
+                launch_support_url ();
+            }
         });
 
         // Update button
@@ -270,6 +277,14 @@ public class About.Plug : Switchboard.Plug {
         main_grid.add (description_grid);
         main_grid.add (button_grid);
         main_grid.show_all ();
+    }
+
+    private void launch_support_url () {
+        try {
+            AppInfo.launch_default_for_uri (support_url, null);
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
 
      /**
