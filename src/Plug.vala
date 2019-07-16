@@ -205,13 +205,10 @@ public class About.Plug : Switchboard.Plug {
                     appinfo.launch (null, null);
                 } catch (Error e) {
                     critical (e.message);
+                    launch_support_url ();
                 }
             } else {
-                try {
-                    AppInfo.launch_default_for_uri (support_url, null);
-                } catch (Error e) {
-                    critical (e.message);
-                }
+                launch_support_url ();
             }
         });
 
@@ -280,6 +277,14 @@ public class About.Plug : Switchboard.Plug {
         main_grid.add (description_grid);
         main_grid.add (button_grid);
         main_grid.show_all ();
+    }
+
+    private void launch_support_url () {
+        try {
+            AppInfo.launch_default_for_uri (support_url, null);
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
 
      /**
