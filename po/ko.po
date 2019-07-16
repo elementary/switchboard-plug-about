@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:44+0200\n"
+"POT-Creation-Date: 2019-07-16 08:28-0700\n"
 "PO-Revision-Date: 2019-05-13 23:03+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -33,7 +33,7 @@ msgid "System Information"
 msgstr "시스템 정보"
 
 #. Restore settings button
-#: src/Plug.vala:66 src/Plug.vala:219
+#: src/Plug.vala:66 src/Plug.vala:226
 msgid "Restore Default Settings"
 msgstr "기본 설정으로 복원"
 
@@ -68,21 +68,20 @@ msgstr "웹 사이트"
 msgid "Suggest Translations"
 msgstr "번역 제안하기"
 
-#. Bug button
-#: src/Plug.vala:201
+#: src/Plug.vala:200
 msgid "Report a Problem"
 msgstr "버그 리포트 작성"
 
 #. Update button
-#: src/Plug.vala:209
+#: src/Plug.vala:216
 msgid "Check for Updates"
 msgstr "업데이트 확인"
 
-#: src/Plug.vala:280
+#: src/Plug.vala:295
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "시스템 설정이 공장 초기화 됩니다"
 
-#: src/Plug.vala:281
+#: src/Plug.vala:296
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -90,86 +89,21 @@ msgstr ""
 "모든 시스템 설정과 데이터가 기본 값으로 초기화됩니다. 음악이나 사진 등의, 개"
 "인 데이터는, 영향받지 않습니다."
 
-#: src/Plug.vala:287
+#: src/Plug.vala:302
 msgid "Restore Settings"
 msgstr "설정 복원"
-
-#: src/Dialogs/IssueDialog.vala:27
-msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr "다음 중 어떤 문제와 마주하고 계신가요?"
-
-#: src/Dialogs/IssueDialog.vala:28
-msgid "Please select a component from the list."
-msgstr "목록에서 항목을 선택해 주세요."
-
-#: src/Dialogs/IssueDialog.vala:48
-msgid "Categories"
-msgstr "카테고리"
-
-#: src/Dialogs/IssueDialog.vala:108
-msgid "Cancel"
-msgstr "취소"
-
-#: src/Dialogs/IssueDialog.vala:110
-msgid "Report Problem"
-msgstr "문제 알림"
-
-#: src/Dialogs/IssueDialog.vala:232
-msgid "Applications Menu"
-msgstr "애플리케이션 메뉴"
-
-#: src/Dialogs/IssueDialog.vala:236
-msgid "Lock or Login Screen"
-msgstr "잠금 또는 로그인 화면"
-
-#: src/Dialogs/IssueDialog.vala:240
-msgid "Look & Feel"
-msgstr "모양새"
-
-#: src/Dialogs/IssueDialog.vala:244
-msgid "Multitasking or Window Management"
-msgstr "멀티태스킹 또는 창 관리"
-
-#: src/Dialogs/IssueDialog.vala:248
-msgid "Notifications"
-msgstr "알림"
-
-#: src/Dialogs/IssueDialog.vala:434
-msgid "Session"
-msgstr "세션"
-
-#: src/Dialogs/IssueDialog.vala:456
-msgid "Panel Indicators"
-msgstr "패널 인디케이터"
-
-#: src/Dialogs/IssueDialog.vala:458
-msgid "System Settings"
-msgstr "시스템 설정"
-
-#: src/Dialogs/IssueDialog.vala:460
-msgid "Desktop Components"
-msgstr "데스크톱 항목"
-
-#: src/Dialogs/IssueDialog.vala:462
-msgid "Default Apps"
-msgstr "기본 앱"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "%s 메모리"
 
-#: src/Views/HardwareView.vala:67
-#, c-format
-msgid "%s storage"
-msgstr "%s 저장장치"
-
 #: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr "제조 업체 웹사이트"
 
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
-#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
+#: src/Views/HardwareView.vala:213 src/Views/HardwareView.vala:263
 msgid "Unknown"
 msgstr "알 수 없음"
 
@@ -180,6 +114,77 @@ msgstr "듀얼 코어"
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "쿼드 코어"
+
+#: src/Views/HardwareView.vala:297
+#, fuzzy, c-format
+msgid "%s storage (NVMe SSD)"
+msgstr "%s 저장장치"
+
+#: src/Views/HardwareView.vala:299
+#, fuzzy, c-format
+msgid "%s storage (eMMC)"
+msgstr "%s 저장장치"
+
+#: src/Views/HardwareView.vala:301
+#, fuzzy, c-format
+msgid "%s storage (SATA SSD)"
+msgstr "%s 저장장치"
+
+#: src/Views/HardwareView.vala:304
+#, fuzzy, c-format
+msgid "%s storage (HDD)"
+msgstr "%s 저장장치"
+
+#. Set fallback string for the device type
+#: src/Views/HardwareView.vala:309
+#, c-format
+msgid "%s storage"
+msgstr "%s 저장장치"
+
+#~ msgid "Which of the Following Are You Seeing an Issue With?"
+#~ msgstr "다음 중 어떤 문제와 마주하고 계신가요?"
+
+#~ msgid "Please select a component from the list."
+#~ msgstr "목록에서 항목을 선택해 주세요."
+
+#~ msgid "Categories"
+#~ msgstr "카테고리"
+
+#~ msgid "Cancel"
+#~ msgstr "취소"
+
+#~ msgid "Report Problem"
+#~ msgstr "문제 알림"
+
+#~ msgid "Applications Menu"
+#~ msgstr "애플리케이션 메뉴"
+
+#~ msgid "Lock or Login Screen"
+#~ msgstr "잠금 또는 로그인 화면"
+
+#~ msgid "Look & Feel"
+#~ msgstr "모양새"
+
+#~ msgid "Multitasking or Window Management"
+#~ msgstr "멀티태스킹 또는 창 관리"
+
+#~ msgid "Notifications"
+#~ msgstr "알림"
+
+#~ msgid "Session"
+#~ msgstr "세션"
+
+#~ msgid "Panel Indicators"
+#~ msgstr "패널 인디케이터"
+
+#~ msgid "System Settings"
+#~ msgstr "시스템 설정"
+
+#~ msgid "Desktop Components"
+#~ msgstr "데스크톱 항목"
+
+#~ msgid "Default Apps"
+#~ msgstr "기본 앱"
 
 #~ msgid "Hardware"
 #~ msgstr "하드웨어"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:44+0200\n"
+"POT-Creation-Date: 2019-07-16 08:28-0700\n"
 "PO-Revision-Date: 2018-05-20 00:04+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
@@ -33,7 +33,7 @@ msgid "System Information"
 msgstr "Informace o systému"
 
 #. Restore settings button
-#: src/Plug.vala:66 src/Plug.vala:219
+#: src/Plug.vala:66 src/Plug.vala:226
 msgid "Restore Default Settings"
 msgstr "Obnovit výchozí nastavení"
 
@@ -68,21 +68,20 @@ msgstr "Webová stránka"
 msgid "Suggest Translations"
 msgstr "Pomoc s překladem"
 
-#. Bug button
-#: src/Plug.vala:201
+#: src/Plug.vala:200
 msgid "Report a Problem"
 msgstr "Nahlásit problém"
 
 #. Update button
-#: src/Plug.vala:209
+#: src/Plug.vala:216
 msgid "Check for Updates"
 msgstr "Zkontrolovat aktualizace"
 
-#: src/Plug.vala:280
+#: src/Plug.vala:295
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systémová nastavení budou obnovena do výchozího stavu"
 
-#: src/Plug.vala:281
+#: src/Plug.vala:296
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -90,86 +89,21 @@ msgstr ""
 "Veškerá systémová nastavení a data budou obnovena do výchozího stavu. Osobní "
 "data, jako hudba či obrázky, tím nebudou ovlivněna."
 
-#: src/Plug.vala:287
+#: src/Plug.vala:302
 msgid "Restore Settings"
 msgstr "Obnovit nastavení"
-
-#: src/Dialogs/IssueDialog.vala:27
-msgid "Which of the Following Are You Seeing an Issue With?"
-msgstr "S čím máte problém?"
-
-#: src/Dialogs/IssueDialog.vala:28
-msgid "Please select a component from the list."
-msgstr "Prosím, vyberte komponentu ze seznamu."
-
-#: src/Dialogs/IssueDialog.vala:48
-msgid "Categories"
-msgstr "Kategorie"
-
-#: src/Dialogs/IssueDialog.vala:108
-msgid "Cancel"
-msgstr "Zrušit"
-
-#: src/Dialogs/IssueDialog.vala:110
-msgid "Report Problem"
-msgstr "Nahlásit problém"
-
-#: src/Dialogs/IssueDialog.vala:232
-msgid "Applications Menu"
-msgstr "Nabídka aplikací"
-
-#: src/Dialogs/IssueDialog.vala:236
-msgid "Lock or Login Screen"
-msgstr "Zamykací nebo přihlašovací obrazovka"
-
-#: src/Dialogs/IssueDialog.vala:240
-msgid "Look & Feel"
-msgstr "Vzhled a dojem"
-
-#: src/Dialogs/IssueDialog.vala:244
-msgid "Multitasking or Window Management"
-msgstr "Multitasking nebo správa oken"
-
-#: src/Dialogs/IssueDialog.vala:248
-msgid "Notifications"
-msgstr "Notifikace"
-
-#: src/Dialogs/IssueDialog.vala:434
-msgid "Session"
-msgstr "Sezení"
-
-#: src/Dialogs/IssueDialog.vala:456
-msgid "Panel Indicators"
-msgstr "Indikátory na panelu"
-
-#: src/Dialogs/IssueDialog.vala:458
-msgid "System Settings"
-msgstr "Nastavení systému"
-
-#: src/Dialogs/IssueDialog.vala:460
-msgid "Desktop Components"
-msgstr "Komponenty plochy"
-
-#: src/Dialogs/IssueDialog.vala:462
-msgid "Default Apps"
-msgstr "Výchozí aplikace"
 
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
 msgstr "%s paměti"
 
-#: src/Views/HardwareView.vala:67
-#, c-format
-msgid "%s storage"
-msgstr "%s úložiště"
-
 #: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
 msgstr "Webová stránka výrobce"
 
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
-#: src/Views/HardwareView.vala:212 src/Views/HardwareView.vala:260
+#: src/Views/HardwareView.vala:213 src/Views/HardwareView.vala:263
 msgid "Unknown"
 msgstr "Neznámé"
 
@@ -180,6 +114,77 @@ msgstr "Dvoujádrový"
 #: src/Views/HardwareView.vala:170
 msgid "Quad-Core"
 msgstr "Čtyřjádrový"
+
+#: src/Views/HardwareView.vala:297
+#, fuzzy, c-format
+msgid "%s storage (NVMe SSD)"
+msgstr "%s úložiště"
+
+#: src/Views/HardwareView.vala:299
+#, fuzzy, c-format
+msgid "%s storage (eMMC)"
+msgstr "%s úložiště"
+
+#: src/Views/HardwareView.vala:301
+#, fuzzy, c-format
+msgid "%s storage (SATA SSD)"
+msgstr "%s úložiště"
+
+#: src/Views/HardwareView.vala:304
+#, fuzzy, c-format
+msgid "%s storage (HDD)"
+msgstr "%s úložiště"
+
+#. Set fallback string for the device type
+#: src/Views/HardwareView.vala:309
+#, c-format
+msgid "%s storage"
+msgstr "%s úložiště"
+
+#~ msgid "Which of the Following Are You Seeing an Issue With?"
+#~ msgstr "S čím máte problém?"
+
+#~ msgid "Please select a component from the list."
+#~ msgstr "Prosím, vyberte komponentu ze seznamu."
+
+#~ msgid "Categories"
+#~ msgstr "Kategorie"
+
+#~ msgid "Cancel"
+#~ msgstr "Zrušit"
+
+#~ msgid "Report Problem"
+#~ msgstr "Nahlásit problém"
+
+#~ msgid "Applications Menu"
+#~ msgstr "Nabídka aplikací"
+
+#~ msgid "Lock or Login Screen"
+#~ msgstr "Zamykací nebo přihlašovací obrazovka"
+
+#~ msgid "Look & Feel"
+#~ msgstr "Vzhled a dojem"
+
+#~ msgid "Multitasking or Window Management"
+#~ msgstr "Multitasking nebo správa oken"
+
+#~ msgid "Notifications"
+#~ msgstr "Notifikace"
+
+#~ msgid "Session"
+#~ msgstr "Sezení"
+
+#~ msgid "Panel Indicators"
+#~ msgstr "Indikátory na panelu"
+
+#~ msgid "System Settings"
+#~ msgstr "Nastavení systému"
+
+#~ msgid "Desktop Components"
+#~ msgstr "Komponenty plochy"
+
+#~ msgid "Default Apps"
+#~ msgstr "Výchozí aplikace"
 
 #~ msgid "Hardware"
 #~ msgstr "Hardware"
