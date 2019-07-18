@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-16 08:28-0700\n"
-"PO-Revision-Date: 2018-11-07 01:48+0000\n"
+"PO-Revision-Date: 2019-07-20 16:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:36
@@ -116,24 +116,24 @@ msgid "Quad-Core"
 msgstr "クアッドコア"
 
 #: src/Views/HardwareView.vala:297
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "%s ストレージ"
+msgstr "%s ストレージ (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:299
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "%s ストレージ"
+msgstr "%s ストレージ (eMMC)"
 
 #: src/Views/HardwareView.vala:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "%s ストレージ"
+msgstr "%s ストレージ (SATA SSD)"
 
 #: src/Views/HardwareView.vala:304
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "%s ストレージ"
+msgstr "%s ストレージ (HDD)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:309
