@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-16 08:28-0700\n"
-"PO-Revision-Date: 2018-05-08 15:20+0000\n"
+"PO-Revision-Date: 2019-07-20 16:24+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:36
@@ -117,24 +117,24 @@ msgid "Quad-Core"
 msgstr "Nucli quàdruple"
 
 #: src/Views/HardwareView.vala:297
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "Emmagatzematge: %s"
+msgstr "Emmagatzematge (SSD NVMe): %s"
 
 #: src/Views/HardwareView.vala:299
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "Emmagatzematge: %s"
+msgstr "Emmagatzematge (eMMC): %s"
 
 #: src/Views/HardwareView.vala:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "Emmagatzematge: %s"
+msgstr "Emmagatzematge (SSD SATA): %s"
 
 #: src/Views/HardwareView.vala:304
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "Emmagatzematge: %s"
+msgstr "Emmagatzematge (HDD): %s"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:309
