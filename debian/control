@@ -14,6 +14,7 @@ Homepage: https://github.com/elementary/switchboard-plug-about
 Package: switchboard-plug-about
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: elementary-default-settings (>= 5.2)
 Enhances: switchboard
 Description: About plug for Switchboard
  This plug displays information about the system.
