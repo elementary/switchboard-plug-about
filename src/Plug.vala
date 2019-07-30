@@ -135,7 +135,6 @@ public class About.Plug : Switchboard.Plug {
         title.set_selectable (true);
         title.margin_bottom = 12;
         title.ellipsize = Pango.EllipsizeMode.END;
-        title.xalign = 1;
 
         if (upstream_release != null) {
             based_off = new Gtk.Label (_("Built on %s").printf (upstream_release));
