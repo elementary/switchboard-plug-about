@@ -144,7 +144,7 @@ public class About.Plug : Switchboard.Plug {
         var kernel_version_label = new Gtk.Label (kernel_version);
         kernel_version_label.set_selectable (true);
 
-        var gtk_version_label = new Gtk.Label (_("GTK+ %s").printf (gtk_version));
+        var gtk_version_label = new Gtk.Label (_("GTK %s").printf (gtk_version));
         gtk_version_label.set_selectable (true);
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
