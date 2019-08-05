@@ -31,7 +31,7 @@ public class About.Plug : Switchboard.Plug {
         var settings = new Gee.TreeMap<string, string?> (null, null);
         settings.set ("about", null);
         Object (category: Category.SYSTEM,
-                code_name: "system-pantheon-about",
+                code_name: "io.elementary.switchboard.about",
                 display_name: _("About"),
                 description: _("View operating system and hardware information"),
                 icon: "dialog-information",
