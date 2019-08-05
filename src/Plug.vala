@@ -212,15 +212,19 @@ public class About.Plug : Switchboard.Plug {
             }
         });
 
-        // Update button
-        var update_button = new Gtk.Button.with_label (_("Check for Updates"));
-        update_button.clicked.connect (() => {
-            try {
-                Process.spawn_command_line_async ("io.elementary.appcenter --show-updates");
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
+        Gtk.Button? update_button = null;
+        var appcenter_info = new GLib.DesktopAppInfo ("io.elementary.appcenter");
+        if (appcenter_info != null) {
+            update_button = new Gtk.Button.with_label (_("Check for Updates"));
+            update_button.clicked.connect (() => {
+                try {
+                    Process.spawn_command_line_async ("io.elementary.appcenter --show-updates");
+                } catch (Error e) {
+                    warning (e.message);
+                }
+            });
+        }
+
 
         // Restore settings button
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
@@ -234,7 +238,11 @@ public class About.Plug : Switchboard.Plug {
         button_grid.add (settings_restore_button);
         button_grid.add (translate_button);
         button_grid.add (bug_button);
-        button_grid.add (update_button);
+
+        if (update_button != null) {
+            button_grid.add (update_button);
+        }
+
         button_grid.set_child_non_homogeneous (help_button, true);
 
         var software_grid = new Gtk.Grid ();
