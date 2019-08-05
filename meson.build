@@ -13,6 +13,10 @@ add_project_arguments(
     language:'c'
 )
 
+if get_option('with-update-button')
+    add_project_arguments('--define=HAS_UPDATE_BUTTON', language: 'vala')
+endif
+
 subdir('data')
 subdir('src')
 subdir('po')

@@ -66,7 +66,9 @@ public class About.Plug : Switchboard.Plug {
         search_results.set ("%s → %s".printf (display_name, _("Restore Default Settings")), "");
         search_results.set ("%s → %s".printf (display_name, _("Suggest Translation")), "");
         search_results.set ("%s → %s".printf (display_name, _("Report Problems")), "");
+#if HAS_UPDATE_BUTTON
         search_results.set ("%s → %s".printf (display_name, _("Updates")), "");
+#endif
         return search_results;
     }
 
@@ -213,6 +215,7 @@ public class About.Plug : Switchboard.Plug {
         });
 
         // Update button
+#if HAS_UPDATE_BUTTON
         var update_button = new Gtk.Button.with_label (_("Check for Updates"));
         update_button.clicked.connect (() => {
             try {
@@ -221,6 +224,7 @@ public class About.Plug : Switchboard.Plug {
                 warning (e.message);
             }
         });
+#endif
 
         // Restore settings button
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
@@ -234,7 +238,9 @@ public class About.Plug : Switchboard.Plug {
         button_grid.add (settings_restore_button);
         button_grid.add (translate_button);
         button_grid.add (bug_button);
+#if HAS_UPDATE_BUTTON
         button_grid.add (update_button);
+#endif
         button_grid.set_child_non_homogeneous (help_button, true);
 
         var software_grid = new Gtk.Grid ();

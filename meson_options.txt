@@ -1,0 +1,1 @@
+option('with-update-button', type: 'boolean', value: 'true', description: 'Add update button to call into Appcenter')
