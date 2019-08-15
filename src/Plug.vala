@@ -213,15 +213,11 @@ public class About.Plug : Switchboard.Plug {
         });
 
         Gtk.Button? update_button = null;
-        var appcenter_info = new GLib.DesktopAppInfo ("io.elementary.appcenter");
+        var appcenter_info = new GLib.DesktopAppInfo ("io.elementary.appcenter.desktop");
         if (appcenter_info != null) {
             update_button = new Gtk.Button.with_label (_("Check for Updates"));
             update_button.clicked.connect (() => {
-                try {
-                    Process.spawn_command_line_async ("io.elementary.appcenter --show-updates");
-                } catch (Error e) {
-                    warning (e.message);
-                }
+                appcenter_info.launch_action ("ShowUpdates", new GLib.AppLaunchContext ());
             });
         }
 
