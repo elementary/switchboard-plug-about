@@ -17,7 +17,6 @@
 
 public class About.Plug : Switchboard.Plug {
     private string os;
-    private string gtk_version;
     private string kernel_version;
     private string website_url;
     private string support_url;
@@ -98,8 +97,6 @@ public class About.Plug : Switchboard.Plug {
             logo_icon_name = "distributor-logo";
         }
 
-        gtk_version = "%u.%u.%u".printf (Gtk.get_major_version (), Gtk.get_minor_version (), Gtk.get_micro_version ());
-
         // Upstream distro version (for "Built on" text)
         // FIXME: Add distro specific field to /etc/os-release and use that instead
         // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
@@ -164,8 +161,10 @@ public class About.Plug : Switchboard.Plug {
         var kernel_version_label = new Gtk.Label (kernel_version);
         kernel_version_label.set_selectable (true);
 
-        var gtk_version_label = new Gtk.Label (_("GTK %s").printf (gtk_version));
-        gtk_version_label.set_selectable (true);
+        var gtk_version_label = new Gtk.Label (_("GTK %u.%u.%u").printf (
+            Gtk.get_major_version (), Gtk.get_minor_version (), Gtk.get_micro_version ()
+        ));
+        gtk_version_label.selectable = true;
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
         website_label.halign = Gtk.Align.CENTER;
