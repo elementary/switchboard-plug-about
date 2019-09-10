@@ -17,7 +17,6 @@
 
 public class About.Plug : Switchboard.Plug {
     private string os;
-    private string gtk_version;
     private string kernel_version;
     private string website_url;
     private string support_url;
@@ -97,8 +96,6 @@ public class About.Plug : Switchboard.Plug {
             logo_icon_name = "distributor-logo";
         }
 
-        gtk_version = "%u.%u.%u".printf (Gtk.get_major_version (), Gtk.get_minor_version (), Gtk.get_micro_version ());
-
         // Upstream distro version (for "Built on" text)
         // FIXME: Add distro specific field to /etc/os-release and use that instead
         // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
@@ -144,8 +141,10 @@ public class About.Plug : Switchboard.Plug {
         var kernel_version_label = new Gtk.Label (kernel_version);
         kernel_version_label.set_selectable (true);
 
-        var gtk_version_label = new Gtk.Label (_("GTK %s").printf (gtk_version));
-        gtk_version_label.set_selectable (true);
+        var gtk_version_label = new Gtk.Label (_("GTK %u.%u.%u").printf (
+            Gtk.get_major_version (), Gtk.get_minor_version (), Gtk.get_micro_version ()
+        ));
+        gtk_version_label.selectable = true;
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
         website_label.halign = Gtk.Align.CENTER;
@@ -192,15 +191,15 @@ public class About.Plug : Switchboard.Plug {
             }
         });
 
-        // Update button
-        var update_button = new Gtk.Button.with_label (_("Check for Updates"));
-        update_button.clicked.connect (() => {
-            try {
-                Process.spawn_command_line_async ("io.elementary.appcenter --show-updates");
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
+        Gtk.Button? update_button = null;
+        var appcenter_info = new GLib.DesktopAppInfo ("io.elementary.appcenter.desktop");
+        if (appcenter_info != null) {
+            update_button = new Gtk.Button.with_label (_("Check for Updates"));
+            update_button.clicked.connect (() => {
+                appcenter_info.launch_action ("ShowUpdates", new GLib.AppLaunchContext ());
+            });
+        }
+
 
         // Restore settings button
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
@@ -214,7 +213,11 @@ public class About.Plug : Switchboard.Plug {
         button_grid.add (settings_restore_button);
         button_grid.add (translate_button);
         button_grid.add (bug_button);
-        button_grid.add (update_button);
+
+        if (update_button != null) {
+            button_grid.add (update_button);
+        }
+
         button_grid.set_child_non_homogeneous (help_button, true);
 
         var software_grid = new Gtk.Grid ();

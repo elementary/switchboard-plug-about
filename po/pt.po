@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-16 08:28-0700\n"
-"PO-Revision-Date: 2019-05-13 23:03+0000\n"
+"PO-Revision-Date: 2019-09-01 16:22+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:36
@@ -61,7 +61,7 @@ msgstr "GTK+ %s"
 
 #: src/Plug.vala:170
 msgid "Website"
-msgstr "Página Web"
+msgstr "Website"
 
 #. Translate button
 #: src/Plug.vala:191
@@ -97,7 +97,7 @@ msgstr "Restaurar Definições"
 #: src/Views/HardwareView.vala:58
 #, c-format
 msgid "%s memory"
-msgstr "%s memória"
+msgstr "%s de memória"
 
 #: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
@@ -117,30 +117,30 @@ msgid "Quad-Core"
 msgstr "Quad-Core"
 
 #: src/Views/HardwareView.vala:297
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "%s armazenamento"
+msgstr "%s de armazenamento (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:299
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "%s armazenamento"
+msgstr "%s de armazenamento (eMMC)"
 
 #: src/Views/HardwareView.vala:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "%s armazenamento"
+msgstr "%s de armazenamento (SATA SSD)"
 
 #: src/Views/HardwareView.vala:304
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "%s armazenamento"
+msgstr "%s de armazenamento (HDD)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:309
 #, c-format
 msgid "%s storage"
-msgstr "%s armazenamento"
+msgstr "%s de armazenamento"
 
 #~ msgid "Which of the Following Are You Seeing an Issue With?"
 #~ msgstr "Com qual dos seguintes estás a ter um problema?"

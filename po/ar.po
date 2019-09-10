@@ -8,23 +8,26 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-16 08:28-0700\n"
-"PO-Revision-Date: 2014-07-08 06:14+0000\n"
-"Last-Translator: Fathallah Wael <fathallahwael80@gmail.com>\n"
-"Language-Team: Arabic <ar@li.org>\n"
+"PO-Revision-Date: 2019-08-26 05:22+0000\n"
+"Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
+"Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-about/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: src/Plug.vala:36
 msgid "About"
-msgstr "عن البرنامج"
+msgstr "حول"
 
 #: src/Plug.vala:37
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "عرض معلومات نظام التشغيل و العتاد"
 
 #: src/Plug.vala:65
 msgid "System Information"
@@ -101,7 +104,7 @@ msgstr ""
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
 #: src/Views/HardwareView.vala:213 src/Views/HardwareView.vala:263
 msgid "Unknown"
-msgstr "غير معروفة"
+msgstr "غير معروف"
 
 #: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
