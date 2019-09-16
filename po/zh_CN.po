@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-16 08:28-0700\n"
-"PO-Revision-Date: 2019-04-06 17:03+0000\n"
+"PO-Revision-Date: 2019-09-17 09:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.5.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:36
@@ -115,24 +115,24 @@ msgid "Quad-Core"
 msgstr "四核"
 
 #: src/Views/HardwareView.vala:297
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "%s 硬盘"
+msgstr "%s NVMe 固态硬盘"
 
 #: src/Views/HardwareView.vala:299
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "%s 硬盘"
+msgstr "%s eMMC 介质"
 
 #: src/Views/HardwareView.vala:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "%s 硬盘"
+msgstr "%s SATA 固态硬盘"
 
 #: src/Views/HardwareView.vala:304
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "%s 硬盘"
+msgstr "%s 机械硬盘"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:309
