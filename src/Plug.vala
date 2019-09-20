@@ -88,6 +88,10 @@ public class About.Plug : Switchboard.Plug {
             website_url = osrel["HOME_URL"];
             support_url = osrel["SUPPORT_URL"];
             logo_icon_name = osrel["LOGO"];
+
+            if (logo_icon_name == null) {
+                logo_icon_name = "distributor-logo";
+            }
         } catch (Error e) {
             warning ("Couldn't read os-release file, assuming elementary OS");
             os = "elementary OS";
