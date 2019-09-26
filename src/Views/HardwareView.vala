@@ -182,14 +182,14 @@ public class About.HardwareView : Gtk.Grid {
             Process.spawn_command_line_sync ("lspci", out graphics);
 
             if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
-                string[] lines = graphics.split("\n");
+                string[] lines = graphics.split ("\n");
                 graphics="";
 
                 foreach (var s in lines) {
                     if ("VGA" in s || "3D" in s) {
-                        string model = get_graphics_from_string(s);
+                        string model = get_graphics_from_string (s);
 
-                        if (graphics=="") {
+                        if (graphics == "") {
                             graphics = model;
                         } else {
                             graphics += "\n" + model;
@@ -245,11 +245,11 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
-    private string get_graphics_from_string(string graphics) {
+    private string get_graphics_from_string (string graphics) {
         //at this line we have the correct line of lspci
         //as the line has now the form of "00:01.0 VGA compatible controller:Info"
         //and we want the <Info> part, we split with ":" and get the 3rd part
-        string[] parts = graphics.split(":");
+        string[] parts = graphics.split (":");
         string result = graphics;
         if (parts.length == 3) {
             result = parts[2];
@@ -259,7 +259,7 @@ public class About.HardwareView : Gtk.Grid {
                 result+=parts[i];
             }
         } else {
-            warning("Unknown lspci format: "+parts[0]+parts[1]);
+            warning ("Unknown lspci format: " + parts[0] + parts[1]);
             result = _("Unknown"); //set back to unkown
         }
         return result.strip ();
@@ -271,7 +271,7 @@ public class About.HardwareView : Gtk.Grid {
             DataInputStream dis = new DataInputStream (file.read ());
             string? line;
             string name = "MemTotal:";
-            while ((line = dis.read_line (null,null)) != null) {
+            while ((line = dis.read_line (null, null)) != null) {
                 if (line.has_prefix (name)) {
                     var number = line.replace ("kB", "").replace (name, "").strip ();
                     return uint64.parse (number) * 1000;
