@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-16 08:28-0700\n"
+"POT-Creation-Date: 2019-11-06 22:49+0000\n"
 "PO-Revision-Date: 2018-11-05 21:43+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -21,68 +21,67 @@ msgstr ""
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:34
 msgid "About"
 msgstr "Informacije"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:35
 msgid "View operating system and hardware information"
 msgstr "Pogledaj informacije o operativnom sistemu i hardveru"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:63
 msgid "System Information"
 msgstr "Sistemske informacije"
 
 #. Restore settings button
-#: src/Plug.vala:66 src/Plug.vala:226
+#: src/Plug.vala:64 src/Plug.vala:209
 msgid "Restore Default Settings"
 msgstr "Vrati zadana podešavanja"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:65
 msgid "Suggest Translation"
 msgstr "Predloži prijevod"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:66
 msgid "Report Problems"
 msgstr "Prijavi probleme"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:67
 msgid "Updates"
 msgstr "Ažuriranja"
 
-#: src/Plug.vala:160
+#: src/Plug.vala:141
 #, c-format
 msgid "Built on %s"
 msgstr "Izgrađeno na %s"
 
-#: src/Plug.vala:167
+#: src/Plug.vala:148
 #, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
+msgid "GTK %u.%u.%u"
+msgstr ""
 
-#: src/Plug.vala:170
+#: src/Plug.vala:153
 msgid "Website"
 msgstr "Web stranica"
 
 #. Translate button
-#: src/Plug.vala:191
+#: src/Plug.vala:174
 msgid "Suggest Translations"
 msgstr "Predloži prijevode"
 
-#: src/Plug.vala:200
+#: src/Plug.vala:183
 msgid "Report a Problem"
 msgstr "Prijavi problem"
 
-#. Update button
-#: src/Plug.vala:216
+#: src/Plug.vala:201
 msgid "Check for Updates"
 msgstr "Provjeri ima li ažuriranja"
 
-#: src/Plug.vala:295
+#: src/Plug.vala:281
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Podešavanja sistema će biti vraćena na tvorničke postavke"
 
-#: src/Plug.vala:296
+#: src/Plug.vala:282
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -90,7 +89,7 @@ msgstr ""
 "Sva sistemska podešavanja će biti vraćena na zadane vrijednosti. Lični "
 "podaci, poput muzike i slike, ostat će netaknuti."
 
-#: src/Plug.vala:302
+#: src/Plug.vala:288
 msgid "Restore Settings"
 msgstr "Obnovi podešavanja"
 
@@ -141,6 +140,9 @@ msgstr "%s spremište"
 #, c-format
 msgid "%s storage"
 msgstr "%s spremište"
+
+#~ msgid "GTK+ %s"
+#~ msgstr "GTK+ %s"
 
 #~ msgid "Which of the Following Are You Seeing an Issue With?"
 #~ msgstr "S čim od sljedećeg imate poteškoća?"

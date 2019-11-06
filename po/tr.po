@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-16 08:28-0700\n"
+"POT-Creation-Date: 2019-11-06 22:49+0000\n"
 "PO-Revision-Date: 2019-08-21 23:22+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -20,68 +20,67 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:34
 msgid "About"
 msgstr "Hakkında"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:35
 msgid "View operating system and hardware information"
 msgstr "İşletim sistemini ve donanım bilgilerini görüntüle"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:63
 msgid "System Information"
 msgstr "Sistem Bilgisi"
 
 #. Restore settings button
-#: src/Plug.vala:66 src/Plug.vala:226
+#: src/Plug.vala:64 src/Plug.vala:209
 msgid "Restore Default Settings"
 msgstr "Varsayılan Ayarları Geri Yükle"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:65
 msgid "Suggest Translation"
 msgstr "Çeviri Öner"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:66
 msgid "Report Problems"
 msgstr "Sorun Bildir"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:67
 msgid "Updates"
 msgstr "Güncellemeler"
 
-#: src/Plug.vala:160
+#: src/Plug.vala:141
 #, c-format
 msgid "Built on %s"
 msgstr "%s üzerine kurulu"
 
-#: src/Plug.vala:167
+#: src/Plug.vala:148
 #, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
+msgid "GTK %u.%u.%u"
+msgstr ""
 
-#: src/Plug.vala:170
+#: src/Plug.vala:153
 msgid "Website"
 msgstr "Web Sitesi"
 
 #. Translate button
-#: src/Plug.vala:191
+#: src/Plug.vala:174
 msgid "Suggest Translations"
 msgstr "Çeviri Öner"
 
-#: src/Plug.vala:200
+#: src/Plug.vala:183
 msgid "Report a Problem"
 msgstr "Sorun Bildir"
 
-#. Update button
-#: src/Plug.vala:216
+#: src/Plug.vala:201
 msgid "Check for Updates"
 msgstr "Güncellemeleri Denetle"
 
-#: src/Plug.vala:295
+#: src/Plug.vala:281
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Sistem Ayarları Fabrika Varsayılanlarına Geri Yüklenecek"
 
-#: src/Plug.vala:296
+#: src/Plug.vala:282
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -89,7 +88,7 @@ msgstr ""
 "Tüm sistem ayarları ve veriler varsayılan değerlere sıfırlanacaktır. Müzik "
 "ve resim gibi kişisel veriler etkilenmez."
 
-#: src/Plug.vala:302
+#: src/Plug.vala:288
 msgid "Restore Settings"
 msgstr "Ayarları Geri Yükle"
 
@@ -140,6 +139,9 @@ msgstr "%s depolama alanı (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s depolama alanı"
+
+#~ msgid "GTK+ %s"
+#~ msgstr "GTK+ %s"
 
 #~ msgid "Which of the Following Are You Seeing an Issue With?"
 #~ msgstr "Aşağıdakilerden hangisi ile ilgili bir sorun yaşıyorsunuz?"

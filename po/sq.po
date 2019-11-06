@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-16 08:28-0700\n"
+"POT-Creation-Date: 2019-11-06 22:49+0000\n"
 "PO-Revision-Date: 2016-05-01 13:45+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -18,70 +18,69 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:34
 msgid "About"
 msgstr "Rreth"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:35
 msgid "View operating system and hardware information"
 msgstr "Shiko informacione të sistemit operativ e të hardware-it"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:63
 msgid "System Information"
 msgstr "Informacione të sistemit"
 
 #. Restore settings button
-#: src/Plug.vala:66 src/Plug.vala:226
+#: src/Plug.vala:64 src/Plug.vala:209
 msgid "Restore Default Settings"
 msgstr "Rikthe parametrat e parazgjedhur"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:65
 msgid "Suggest Translation"
 msgstr "Sugjero përkthim"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:66
 msgid "Report Problems"
 msgstr "Raporto probleme"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:67
 msgid "Updates"
 msgstr "Përditësime"
 
-#: src/Plug.vala:160
+#: src/Plug.vala:141
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Plug.vala:167
+#: src/Plug.vala:148
 #, c-format
-msgid "GTK+ %s"
+msgid "GTK %u.%u.%u"
 msgstr ""
 
-#: src/Plug.vala:170
+#: src/Plug.vala:153
 msgid "Website"
 msgstr "Faqja web"
 
 #. Translate button
-#: src/Plug.vala:191
+#: src/Plug.vala:174
 msgid "Suggest Translations"
 msgstr "Sugjero përkthime"
 
-#: src/Plug.vala:200
+#: src/Plug.vala:183
 msgid "Report a Problem"
 msgstr "Raporto një problem"
 
-#. Update button
-#: src/Plug.vala:216
+#: src/Plug.vala:201
 msgid "Check for Updates"
 msgstr "Kontrollo përditësimet"
 
-#: src/Plug.vala:295
+#: src/Plug.vala:281
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 "Parametrat e sistemit do të rikthehen në vlerat e parazgjedhura fillestare"
 
-#: src/Plug.vala:296
+#: src/Plug.vala:282
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -90,7 +89,7 @@ msgstr ""
 "Të gjitha të dhënat dhe parametrat e sistemit do të rivendosen në vlerat e "
 "parazgjedhura."
 
-#: src/Plug.vala:302
+#: src/Plug.vala:288
 msgid "Restore Settings"
 msgstr "Rikthe parametrat"
 

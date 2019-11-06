@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-16 08:28-0700\n"
+"POT-Creation-Date: 2019-11-06 22:49+0000\n"
 "PO-Revision-Date: 2019-07-20 16:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -20,68 +20,67 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:34
 msgid "About"
 msgstr "情報"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:35
 msgid "View operating system and hardware information"
 msgstr "オペレーティングシステムとハードウェアの情報を参照します"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:63
 msgid "System Information"
 msgstr "システム情報"
 
 #. Restore settings button
-#: src/Plug.vala:66 src/Plug.vala:226
+#: src/Plug.vala:64 src/Plug.vala:209
 msgid "Restore Default Settings"
 msgstr "デフォルト設定を復元"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:65
 msgid "Suggest Translation"
 msgstr "翻訳を提案"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:66
 msgid "Report Problems"
 msgstr "問題を報告"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:67
 msgid "Updates"
 msgstr "アップデート"
 
-#: src/Plug.vala:160
+#: src/Plug.vala:141
 #, c-format
 msgid "Built on %s"
 msgstr "%s ベース"
 
-#: src/Plug.vala:167
+#: src/Plug.vala:148
 #, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
+msgid "GTK %u.%u.%u"
+msgstr ""
 
-#: src/Plug.vala:170
+#: src/Plug.vala:153
 msgid "Website"
 msgstr "Web サイト"
 
 #. Translate button
-#: src/Plug.vala:191
+#: src/Plug.vala:174
 msgid "Suggest Translations"
 msgstr "翻訳を提案"
 
-#: src/Plug.vala:200
+#: src/Plug.vala:183
 msgid "Report a Problem"
 msgstr "問題を報告"
 
-#. Update button
-#: src/Plug.vala:216
+#: src/Plug.vala:201
 msgid "Check for Updates"
 msgstr "アップデートを確認"
 
-#: src/Plug.vala:295
+#: src/Plug.vala:281
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "システム設定が出荷時のデフォルトに復元されます"
 
-#: src/Plug.vala:296
+#: src/Plug.vala:282
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -89,7 +88,7 @@ msgstr ""
 "すべてのシステム設定とデータがデフォルト値にリセットされます。音楽や写真など"
 "の個人データは影響を受けません。"
 
-#: src/Plug.vala:302
+#: src/Plug.vala:288
 msgid "Restore Settings"
 msgstr "設定を復元"
 
@@ -140,6 +139,9 @@ msgstr "%s ストレージ (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s ストレージ"
+
+#~ msgid "GTK+ %s"
+#~ msgstr "GTK+ %s"
 
 #~ msgid "Which of the Following Are You Seeing an Issue With?"
 #~ msgstr "以下のどのアプリにおいて問題が発生していますか？"

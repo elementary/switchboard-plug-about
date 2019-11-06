@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-16 08:28-0700\n"
+"POT-Creation-Date: 2019-11-06 22:49+0000\n"
 "PO-Revision-Date: 2019-07-20 16:24+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -20,68 +20,67 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:36
+#: src/Plug.vala:34
 msgid "About"
 msgstr "소개"
 
-#: src/Plug.vala:37
+#: src/Plug.vala:35
 msgid "View operating system and hardware information"
 msgstr "운영 체제와 하드웨어 정보 보기"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:63
 msgid "System Information"
 msgstr "시스템 정보"
 
 #. Restore settings button
-#: src/Plug.vala:66 src/Plug.vala:226
+#: src/Plug.vala:64 src/Plug.vala:209
 msgid "Restore Default Settings"
 msgstr "기본 설정으로 복원"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:65
 msgid "Suggest Translation"
 msgstr "번역 제안"
 
-#: src/Plug.vala:68
+#: src/Plug.vala:66
 msgid "Report Problems"
 msgstr "오류 보고"
 
-#: src/Plug.vala:69
+#: src/Plug.vala:67
 msgid "Updates"
 msgstr "업데이트"
 
-#: src/Plug.vala:160
+#: src/Plug.vala:141
 #, c-format
 msgid "Built on %s"
 msgstr "%s 기반"
 
-#: src/Plug.vala:167
+#: src/Plug.vala:148
 #, c-format
-msgid "GTK+ %s"
-msgstr "GTK+ %s"
+msgid "GTK %u.%u.%u"
+msgstr ""
 
-#: src/Plug.vala:170
+#: src/Plug.vala:153
 msgid "Website"
 msgstr "웹 사이트"
 
 #. Translate button
-#: src/Plug.vala:191
+#: src/Plug.vala:174
 msgid "Suggest Translations"
 msgstr "번역 제안하기"
 
-#: src/Plug.vala:200
+#: src/Plug.vala:183
 msgid "Report a Problem"
 msgstr "버그 리포트 작성"
 
-#. Update button
-#: src/Plug.vala:216
+#: src/Plug.vala:201
 msgid "Check for Updates"
 msgstr "업데이트 확인"
 
-#: src/Plug.vala:295
+#: src/Plug.vala:281
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "시스템 설정이 공장 초기화 됩니다"
 
-#: src/Plug.vala:296
+#: src/Plug.vala:282
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -89,7 +88,7 @@ msgstr ""
 "모든 시스템 설정과 데이터가 기본 값으로 초기화됩니다. 음악이나 사진 등의, 개"
 "인 데이터는, 영향받지 않습니다."
 
-#: src/Plug.vala:302
+#: src/Plug.vala:288
 msgid "Restore Settings"
 msgstr "설정 복원"
 
@@ -140,6 +139,9 @@ msgstr "%s 저장장치 (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s 저장장치"
+
+#~ msgid "GTK+ %s"
+#~ msgstr "GTK+ %s"
 
 #~ msgid "Which of the Following Are You Seeing an Issue With?"
 #~ msgstr "다음 중 어떤 문제와 마주하고 계신가요?"
