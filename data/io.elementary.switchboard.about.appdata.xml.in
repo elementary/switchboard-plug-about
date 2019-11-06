@@ -4,6 +4,13 @@
   <extends>io.elementary.switchboard</extends>
   <name>About</name>
   <summary>View operating system and hardware information</summary>
+  <releases>
+    <release version="2.6.1" date="2019-11-05" urgency="medium">
+      <description>
+        <p>Updated translations</p>
+      </description>
+    </release>
+  </releases>
   <screenshots>
       <screenshot type="default">
           <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/master/data/screenshot.png</image>
