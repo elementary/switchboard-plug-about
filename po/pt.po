@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 00:01+0000\n"
-"PO-Revision-Date: 2019-09-01 16:22+0000\n"
+"PO-Revision-Date: 2019-11-09 12:24+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pt/>\n"
@@ -26,7 +26,7 @@ msgstr "Acerca"
 
 #: src/Plug.vala:35
 msgid "View operating system and hardware information"
-msgstr "Visualizar informações sobre o sistema operativo e o hardware"
+msgstr "Ver informações sobre o sistema operativo e o hardware"
 
 #: src/Plug.vala:63
 msgid "System Information"
@@ -57,7 +57,7 @@ msgstr "Baseado no %s"
 #: src/Plug.vala:148
 #, c-format
 msgid "GTK %u.%u.%u"
-msgstr ""
+msgstr "GTK %u.%u.%u"
 
 #: src/Plug.vala:153
 msgid "Website"
