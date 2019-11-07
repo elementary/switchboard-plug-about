@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 22:49+0000\n"
+"POT-Creation-Date: 2019-11-07 00:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,4 +23,8 @@ msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
+msgstr ""
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:10
+msgid "Updated translations"
 msgstr ""
