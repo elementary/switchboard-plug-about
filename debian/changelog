@@ -1,3 +1,21 @@
+switchboard-plug-about (2.6.1) bionic; urgency=medium
+
+  * Release 2.6.1 (#111)
+  * Update translation template
+  * AppData: Add 2.6.1 release info
+  * Add Release to Actions
+  * Update translation template
+  * Add Gettext Updates to Actions
+  * Split deb packaging into its own branch
+  * Delete CODE_OF_CONDUCT.md
+  * run installation in CI (#107)
+  * Add Lint to CI (#105)
+  * Fix linting errors
+  * Use GitHub CI (#104)
+  * Check if os-release icon is null (#103)
+
+ -- elementary OS Team <builds@elementary.io>  Fri, 15 Nov 2019 22:28:17 +0000
+
 switchboard-plug-about (2.6.0) bionic; urgency=medium
 
   * New upstream release.
