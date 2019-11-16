@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 00:01+0000\n"
-"PO-Revision-Date: 2018-05-07 20:28+0000\n"
+"PO-Revision-Date: 2019-11-17 20:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
-"Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:34
@@ -58,7 +58,7 @@ msgstr "Zbudowano na %s"
 #: src/Plug.vala:148
 #, c-format
 msgid "GTK %u.%u.%u"
-msgstr ""
+msgstr "GTK %u.%u.%u"
 
 #: src/Plug.vala:153
 msgid "Website"
@@ -117,24 +117,24 @@ msgid "Quad-Core"
 msgstr "Cztery rdzenie"
 
 #: src/Views/HardwareView.vala:297
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "%s pojemności dysku"
+msgstr "%s pojemności dysku (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:299
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "%s pojemności dysku"
+msgstr "%s pojemności dysku (eMMC)"
 
 #: src/Views/HardwareView.vala:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "%s pojemności dysku"
+msgstr "%s pojemności dysku (SATA SSD)"
 
 #: src/Views/HardwareView.vala:304
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "%s pojemności dysku"
+msgstr "%s pojemności dysku (HDD)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:309
