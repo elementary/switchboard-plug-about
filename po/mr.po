@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 00:01+0000\n"
-"PO-Revision-Date: 2019-09-07 21:22+0000\n"
+"PO-Revision-Date: 2019-11-25 09:24+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/mr/>\n"
@@ -57,7 +57,7 @@ msgstr "%s वर बनविले"
 #: src/Plug.vala:148
 #, c-format
 msgid "GTK %u.%u.%u"
-msgstr ""
+msgstr "जीटीके %u.%u.%u"
 
 #: src/Plug.vala:153
 msgid "Website"
