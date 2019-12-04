@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 00:01+0000\n"
-"PO-Revision-Date: 2019-09-17 09:22+0000\n"
+"PO-Revision-Date: 2019-12-05 05:25+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
@@ -103,7 +103,7 @@ msgstr "项目网站"
 #: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
 #: src/Views/HardwareView.vala:213 src/Views/HardwareView.vala:263
 msgid "Unknown"
-msgstr "未知"
+msgstr "未知设备"
 
 #: src/Views/HardwareView.vala:168
 msgid "Dual-Core"
