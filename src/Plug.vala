@@ -20,7 +20,6 @@ public class About.Plug : Switchboard.Plug {
     private string kernel_version;
     private string website_url;
     private string support_url;
-    private string arch;
     private string logo_icon_name;
     private Gtk.Label based_off;
 
@@ -88,6 +87,10 @@ public class About.Plug : Switchboard.Plug {
             website_url = osrel["HOME_URL"];
             support_url = osrel["SUPPORT_URL"];
             logo_icon_name = osrel["LOGO"];
+
+            if (logo_icon_name == null) {
+                logo_icon_name = "distributor-logo";
+            }
         } catch (Error e) {
             warning ("Couldn't read os-release file, assuming elementary OS");
             os = "elementary OS";
@@ -115,20 +118,7 @@ public class About.Plug : Switchboard.Plug {
             upstream_release = null;
         }
 
-        // Architecture
         var uts_name = Posix.utsname ();
-        switch (uts_name.machine) {
-            case "x86_64":
-                arch = "64-bit";
-                break;
-            case "arm":
-                arch = "ARM";
-                break;
-            default:
-                arch = "32-bit";
-                break;
-        }
-
         kernel_version = "%s %s".printf (uts_name.sysname, uts_name.release);
     }
 
@@ -145,12 +135,6 @@ public class About.Plug : Switchboard.Plug {
         title.set_selectable (true);
         title.margin_bottom = 12;
         title.ellipsize = Pango.EllipsizeMode.END;
-        title.xalign = 1;
-
-        var arch_name = new Gtk.Label ("(%s)".printf (arch));
-        arch_name.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-        arch_name.margin_bottom = 12;
-        arch_name.xalign = 0;
 
         if (upstream_release != null) {
             based_off = new Gtk.Label (_("Built on %s").printf (upstream_release));
@@ -210,15 +194,15 @@ public class About.Plug : Switchboard.Plug {
             }
         });
 
-        // Update button
-        var update_button = new Gtk.Button.with_label (_("Check for Updates"));
-        update_button.clicked.connect (() => {
-            try {
-                Process.spawn_command_line_async ("io.elementary.appcenter --show-updates");
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
+        Gtk.Button? update_button = null;
+        var appcenter_info = new GLib.DesktopAppInfo ("io.elementary.appcenter.desktop");
+        if (appcenter_info != null) {
+            update_button = new Gtk.Button.with_label (_("Check for Updates"));
+            update_button.clicked.connect (() => {
+                appcenter_info.launch_action ("ShowUpdates", new GLib.AppLaunchContext ());
+            });
+        }
+
 
         // Restore settings button
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
@@ -232,23 +216,26 @@ public class About.Plug : Switchboard.Plug {
         button_grid.add (settings_restore_button);
         button_grid.add (translate_button);
         button_grid.add (bug_button);
-        button_grid.add (update_button);
+
+        if (update_button != null) {
+            button_grid.add (update_button);
+        }
+
         button_grid.set_child_non_homogeneous (help_button, true);
 
         var software_grid = new Gtk.Grid ();
-        software_grid.column_spacing = 6;
-        software_grid.row_spacing = 6;
-        software_grid.attach (logo, 0, 0, 2, 1);
-        software_grid.attach (title, 0, 1, 1, 1);
-        software_grid.attach (arch_name, 1, 1, 1, 1);
+        software_grid.orientation = Gtk.Orientation.VERTICAL;
+        software_grid.column_spacing = software_grid.row_spacing = 6;
+        software_grid.add (logo);
+        software_grid.add (title);
 
         if (upstream_release != null) {
-            software_grid.attach (based_off, 0, 2, 2, 1);
+            software_grid.add (based_off);
         }
 
-        software_grid.attach (kernel_version_label, 0, 3, 2, 1);
-        software_grid.attach (gtk_version_label, 0, 4, 2, 1);
-        software_grid.attach (website_label, 0, 5, 2, 1);
+        software_grid.add (kernel_version_label);
+        software_grid.add (gtk_version_label);
+        software_grid.add (website_label);
 
         var hardware_view = new HardwareView ();
 
