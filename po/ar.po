@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 00:01+0000\n"
-"PO-Revision-Date: 2019-08-26 05:22+0000\n"
+"PO-Revision-Date: 2019-12-15 02:07+0000\n"
 "Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
 "Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ar/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:34
@@ -92,9 +92,9 @@ msgid "Restore Settings"
 msgstr ""
 
 #: src/Views/HardwareView.vala:58
-#, fuzzy, c-format
+#, c-format
 msgid "%s memory"
-msgstr "الذاكرة:"
+msgstr "الذاكرة: %s"
 
 #: src/Views/HardwareView.vala:112
 msgid "Manufacturer Website"
@@ -114,30 +114,30 @@ msgid "Quad-Core"
 msgstr ""
 
 #: src/Views/HardwareView.vala:297
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "التخزين:"
+msgstr "التخزين (NVMe SSD): %s"
 
 #: src/Views/HardwareView.vala:299
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "التخزين:"
+msgstr "التخزين (eMMC): %s"
 
 #: src/Views/HardwareView.vala:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "التخزين:"
+msgstr "التخزين (SATA SSD): %s"
 
 #: src/Views/HardwareView.vala:304
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "التخزين:"
+msgstr "التخزين (HDD): %s"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:309
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage"
-msgstr "التخزين:"
+msgstr "التخزين: %s"
 
 #, fuzzy
 #~ msgid "Report Problem"
