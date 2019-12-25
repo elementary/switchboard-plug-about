@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 00:01+0000\n"
-"PO-Revision-Date: 2018-09-29 00:09+0000\n"
+"PO-Revision-Date: 2019-12-25 19:48+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
-"Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:34
@@ -57,7 +57,7 @@ msgstr "Auf Basis von %s"
 #: src/Plug.vala:148
 #, c-format
 msgid "GTK %u.%u.%u"
-msgstr ""
+msgstr "GTK %u.%u.%u"
 
 #: src/Plug.vala:153
 msgid "Website"
@@ -116,24 +116,24 @@ msgid "Quad-Core"
 msgstr "Vierkern"
 
 #: src/Views/HardwareView.vala:297
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "%s Massenspeicherplatz"
+msgstr "%s Systemspeicher (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:299
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "%s Massenspeicherplatz"
+msgstr "%s Systemspeicher"
 
 #: src/Views/HardwareView.vala:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "%s Massenspeicherplatz"
+msgstr "%s Systemspeicher"
 
 #: src/Views/HardwareView.vala:304
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "%s Massenspeicherplatz"
+msgstr "%s Systemspeicher"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:309
