@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 00:01+0000\n"
-"PO-Revision-Date: 2018-03-13 02:58+0000\n"
+"PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-about/zh_TW/>\n"
+"Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
+"switchboard/switchboard-plug-about/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:34
@@ -57,7 +57,7 @@ msgstr "建基於 %s"
 #: src/Plug.vala:148
 #, c-format
 msgid "GTK %u.%u.%u"
-msgstr ""
+msgstr "GTK %u.%u.%u"
 
 #: src/Plug.vala:153
 msgid "Website"
@@ -115,30 +115,30 @@ msgid "Quad-Core"
 msgstr "四核心"
 
 #: src/Views/HardwareView.vala:297
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "%s 儲存空間"
+msgstr "%s 儲存裝置 (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:299
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "%s 儲存空間"
+msgstr "%s 儲存裝置 (eMMC)"
 
 #: src/Views/HardwareView.vala:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "%s 儲存空間"
+msgstr "%s 儲存裝置 (SATA SSD)"
 
 #: src/Views/HardwareView.vala:304
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "%s 儲存空間"
+msgstr "%s 儲存裝置 (HDD)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:309
 #, c-format
 msgid "%s storage"
-msgstr "%s 儲存空間"
+msgstr "%s 儲存裝置"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"
