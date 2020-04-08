@@ -1,3 +1,10 @@
+switchboard-plug-about (2.6.2) bionic; urgency=medium
+
+  * Release 2.6.2 (#117)
+  * Update translation files
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 08 Apr 2020 20:32:42 +0000
+
 switchboard-plug-about (2.6.1) bionic; urgency=medium
 
   * Release 2.6.1 (#111)
