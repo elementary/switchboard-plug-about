@@ -4,6 +4,8 @@
   <extends>io.elementary.switchboard</extends>
   <name>About</name>
   <summary>View operating system and hardware information</summary>
+  <icon type="stock">dialog-information</icon>
+  <translation type="gettext">about-plug</translation>
   <releases>
     <release version="2.6.2" date="2020-04-08" urgency="medium">
       <description>
