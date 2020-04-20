@@ -65,6 +65,7 @@ public class About.Plug : Switchboard.Plug {
         search_results.set ("%s → %s".printf (display_name, _("Suggest Translation")), "");
         search_results.set ("%s → %s".printf (display_name, _("Report Problems")), "");
         search_results.set ("%s → %s".printf (display_name, _("Updates")), "");
+        search_results.set ("%s → Demonstrate an obnoxiously-long search string to find problems in search user interfaces like in the Applications Menu and Switchboard → Oops, I broke it!".printf (display_name), "");
         return search_results;
     }
 
