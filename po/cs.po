@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 00:01+0000\n"
-"PO-Revision-Date: 2018-05-20 00:04+0000\n"
-"Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
-"Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2020-05-11 11:10+0000\n"
+"Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
+"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:34
@@ -39,7 +39,7 @@ msgstr "Obnovit výchozí nastavení"
 
 #: src/Plug.vala:65
 msgid "Suggest Translation"
-msgstr "Navrhněte překlad"
+msgstr "Navrhnout překlad textu v rozhraní"
 
 #: src/Plug.vala:66
 msgid "Report Problems"
@@ -57,7 +57,7 @@ msgstr "Postaveno na %s"
 #: src/Plug.vala:148
 #, c-format
 msgid "GTK %u.%u.%u"
-msgstr ""
+msgstr "GTK %u.%u.%u"
 
 #: src/Plug.vala:153
 msgid "Website"
@@ -66,7 +66,7 @@ msgstr "Webová stránka"
 #. Translate button
 #: src/Plug.vala:174
 msgid "Suggest Translations"
-msgstr "Pomoc s překladem"
+msgstr "Pomoci s překlady"
 
 #: src/Plug.vala:183
 msgid "Report a Problem"
@@ -78,14 +78,14 @@ msgstr "Zkontrolovat aktualizace"
 
 #: src/Plug.vala:281
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Systémová nastavení budou obnovena do výchozího stavu"
+msgstr "Systémová nastavení budou vrácena do výchozího stavu"
 
 #: src/Plug.vala:282
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
-"Veškerá systémová nastavení a data budou obnovena do výchozího stavu. Osobní "
+"Veškerá systémová nastavení a data budou vrácena do výchozího stavu. Osobní "
 "data, jako hudba či obrázky, tím nebudou ovlivněna."
 
 #: src/Plug.vala:288
@@ -115,24 +115,24 @@ msgid "Quad-Core"
 msgstr "Čtyřjádrový"
 
 #: src/Views/HardwareView.vala:297
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "%s úložiště"
+msgstr "%s úložiště (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:299
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "%s úložiště"
+msgstr "%s úložiště (eMMC)"
 
 #: src/Views/HardwareView.vala:301
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "%s úložiště"
+msgstr "%s úložiště (SATA SSD)"
 
 #: src/Views/HardwareView.vala:304
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "%s úložiště"
+msgstr "%s úložiště (pevný disk)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:309
