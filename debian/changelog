@@ -1,3 +1,10 @@
+switchboard-plug-about (2.6.3) bionic; urgency=medium
+
+  * Release 2.6.3 (#122)
+  * AppData: Add Icon & Gettext domain (#118)
+
+ -- elementary OS Team <builds@elementary.io>  Thu, 28 May 2020 18:42:17 +0000
+
 switchboard-plug-about (2.6.2) bionic; urgency=medium
 
   * Release 2.6.2 (#117)
