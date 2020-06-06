@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 00:01+0000\n"
-"PO-Revision-Date: 2020-04-30 01:10+0000\n"
+"PO-Revision-Date: 2020-06-08 10:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -43,7 +43,7 @@ msgstr "翻訳を提案"
 
 #: src/Plug.vala:66
 msgid "Report Problems"
-msgstr "問題を報告"
+msgstr "不具合を報告"
 
 #: src/Plug.vala:67
 msgid "Updates"
@@ -70,7 +70,7 @@ msgstr "翻訳を提案"
 
 #: src/Plug.vala:183
 msgid "Report a Problem"
-msgstr "問題を報告"
+msgstr "不具合を報告"
 
 #: src/Plug.vala:201
 msgid "Check for Updates"
