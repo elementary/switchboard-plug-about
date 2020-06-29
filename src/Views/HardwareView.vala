@@ -1,5 +1,8 @@
 /*
+* Copyright (C) 2010 Red Hat, Inc
+* Copyright (C) 2008 William Jon McCann <jmccann@redhat.com>
 * Copyright (c) 2017 elementary LLC. (https://elementary.io)
+* Copyright (C) 2020 Justin Haygood <jhaygood86@gmail.com>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -241,25 +244,25 @@ public class About.HardwareView : Gtk.Grid {
 
     private string clean_graphics_name (string info) {
 
-        string escaped = GLib.Markup.escape_text (info);
-        string pretty = escaped.strip ();
+        string pretty = GLib.Markup.escape_text (info).strip();
 
         const GraphicsReplaceStrings REPLACE_STRINGS[] = {
             { "Mesa DRI ", ""},
-            { "Intel[(]R[)]", "Intel\u00ae"},
-            { "Core[(]TM[)]", "Core\u209c\u2098"},
-            { "Atom[(]TM[)]", "Atom\u2098"},
+            { "[(]R[)]", "®"},
+            { "[(]TM[)]", "™"},
             { "Gallium .* on (AMD .*)", "\\1"},
             { "(AMD .*) [(].*", "\\1"},
             { "(AMD [A-Z])(.*)", "\\1\\L\\2\\E"},
-            { "AMD", "AMD"},
             { "Graphics Controller", "Graphics"},
         };
 
-
-        foreach (GraphicsReplaceStrings replace_string in REPLACE_STRINGS) {
-            GLib.Regex re = new GLib.Regex (replace_string.regex, 0, 0);
-            pretty = re.replace (pretty, -1, 0, replace_string.replacement, 0);
+        try {
+            foreach (GraphicsReplaceStrings replace_string in REPLACE_STRINGS) {
+                GLib.Regex re = new GLib.Regex (replace_string.regex, 0, 0);
+                pretty = re.replace (pretty, -1, 0, replace_string.replacement, 0);
+            }
+        } catch (Error e) {
+            critical ("Couldn't pretty graphics string: %s", e.message);
         }
 
         return pretty;
