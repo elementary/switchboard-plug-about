@@ -257,7 +257,7 @@ public class About.HardwareView : Gtk.Grid {
         };
 
 
-        foreach(GraphicsReplaceStrings replace_string in REPLACE_STRINGS) {
+        foreach (GraphicsReplaceStrings replace_string in REPLACE_STRINGS) {
             GLib.Regex re = new GLib.Regex (replace_string.regex, 0, 0);
             pretty = re.replace (pretty, -1, 0, replace_string.replacement, 0);
         }
@@ -347,8 +347,7 @@ public class About.HardwareView : Gtk.Grid {
         return disk_name;
     }
 
-    struct GraphicsReplaceStrings
-    {
+    struct GraphicsReplaceStrings {
       string regex;
       string replacement;
     }
@@ -362,6 +361,6 @@ public interface SystemInterface : Object {
 
 [DBus (name = "org.gnome.SessionManager")]
 public interface SessionManager : Object {
-    [DBus(name = "Renderer")]
+    [DBus (name = "Renderer")]
     public abstract string renderer { owned get;}
 }
