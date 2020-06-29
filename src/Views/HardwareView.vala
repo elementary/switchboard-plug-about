@@ -29,8 +29,17 @@ public class About.HardwareView : Gtk.Grid {
     private string product_name;
     private string product_version;
     private SystemInterface system_interface;
+    private SessionManager session_manager;
 
     construct {
+
+        try {
+            session_manager = Bus.get_proxy_sync (BusType.SESSION, "org.gnome.SessionManager", "/org/gnome/SessionManager");
+        } catch (IOError e) {
+            critical (e.message);
+        }
+
+
         fetch_hardware_info ();
 
         try {
@@ -179,24 +188,7 @@ public class About.HardwareView : Gtk.Grid {
 
         // Graphics
         try {
-            Process.spawn_command_line_sync ("lspci", out graphics);
-
-            if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
-                string[] lines = graphics.split ("\n");
-                graphics="";
-
-                foreach (var s in lines) {
-                    if ("VGA" in s || "3D" in s) {
-                        string model = get_graphics_from_string (s);
-
-                        if (graphics == "") {
-                            graphics = model;
-                        } else {
-                            graphics += "\n" + model;
-                        }
-                    }
-                }
-            }
+            graphics = clean_graphics_name(session_manager.renderer);
         } catch (Error e) {
             warning (e.message);
             graphics = _("Unknown");
@@ -245,24 +237,30 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
-    private string get_graphics_from_string (string graphics) {
-        //at this line we have the correct line of lspci
-        //as the line has now the form of "00:01.0 VGA compatible controller:Info"
-        //and we want the <Info> part, we split with ":" and get the 3rd part
-        string[] parts = graphics.split (":");
-        string result = graphics;
-        if (parts.length == 3) {
-            result = parts[2];
-        } else if (parts.length > 3) {
-            result = parts[2];
-            for (int i = 2; i < parts.length; i++) {
-                result+=parts[i];
-            }
-        } else {
-            warning ("Unknown lspci format: " + parts[0] + parts[1]);
-            result = _("Unknown"); //set back to unkown
+    private string clean_graphics_name(string info){
+
+        string escaped = GLib.Markup.escape_text(info);
+        string pretty = escaped.strip();
+
+        const GraphicsReplaceStrings replace_strings[] = {
+            { "Mesa DRI ", ""},
+            { "Intel[(]R[)]", "Intel\u00ae"},
+            { "Core[(]TM[)]", "Core\u209c\u2098"},
+            { "Atom[(]TM[)]", "Atom\u2098"},
+            { "Gallium .* on (AMD .*)", "\\1"},
+            { "(AMD .*) [(].*", "\\1"},
+            { "(AMD [A-Z])(.*)", "\\1\\L\\2\\E"},
+            { "AMD", "AMD"},
+            { "Graphics Controller", "Graphics"},
+        };
+
+
+        foreach(GraphicsReplaceStrings replace_string in replace_strings){
+            GLib.Regex re = new GLib.Regex(replace_string.regex,0,0);
+            pretty = re.replace(pretty,-1,0,replace_string.replacement,0);
         }
-        return result.strip ();
+
+        return pretty;
     }
 
     private uint64 get_mem_info () {
@@ -346,10 +344,22 @@ public class About.HardwareView : Gtk.Grid {
         }
         return disk_name;
     }
+
+    struct GraphicsReplaceStrings
+    {
+      string regex;
+      string replacement;
+    }
 }
 
 [DBus (name = "org.freedesktop.hostname1")]
 public interface SystemInterface : Object {
     [DBus (name = "IconName")]
     public abstract string icon_name { owned get; }
+}
+
+[DBus (name = "org.gnome.SessionManager")]
+public interface SessionManager : Object {
+    [DBus(name = "Renderer")]
+    public abstract string renderer { owned get;}
 }
