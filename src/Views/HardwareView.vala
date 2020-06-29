@@ -239,7 +239,7 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
-    private string clean_graphics_name (string info){
+    private string clean_graphics_name (string info) {
 
         string escaped = GLib.Markup.escape_text (info);
         string pretty = escaped.strip ();
@@ -257,9 +257,9 @@ public class About.HardwareView : Gtk.Grid {
         };
 
 
-        foreach(GraphicsReplaceStrings replace_string in REPLACE_STRINGS){
-            GLib.Regex re = new GLib.Regex (replace_string.regex,0,0);
-            pretty = re.replace (pretty,-1,0,replace_string.replacement,0);
+        foreach(GraphicsReplaceStrings replace_string in REPLACE_STRINGS) {
+            GLib.Regex re = new GLib.Regex (replace_string.regex, 0, 0);
+            pretty = re.replace (pretty, -1, 0, replace_string.replacement, 0);
         }
 
         return pretty;
