@@ -34,7 +34,8 @@ public class About.HardwareView : Gtk.Grid {
     construct {
 
         try {
-            session_manager = Bus.get_proxy_sync (BusType.SESSION, "org.gnome.SessionManager", "/org/gnome/SessionManager");
+            session_manager = Bus.get_proxy_sync (BusType.SESSION,
+                "org.gnome.SessionManager", "/org/gnome/SessionManager");
         } catch (IOError e) {
             critical (e.message);
         }
@@ -43,7 +44,8 @@ public class About.HardwareView : Gtk.Grid {
         fetch_hardware_info ();
 
         try {
-            system_interface = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.hostname1", "/org/freedesktop/hostname1");
+            system_interface = Bus.get_proxy_sync (BusType.SYSTEM,
+                "org.freedesktop.hostname1", "/org/freedesktop/hostname1");
         } catch (IOError e) {
             critical (e.message);
         }
@@ -188,7 +190,7 @@ public class About.HardwareView : Gtk.Grid {
 
         // Graphics
         try {
-            graphics = clean_graphics_name(session_manager.renderer);
+            graphics = clean_graphics_name (session_manager.renderer);
         } catch (Error e) {
             warning (e.message);
             graphics = _("Unknown");
@@ -237,12 +239,12 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
-    private string clean_graphics_name(string info){
+    private string clean_graphics_name (string info){
 
-        string escaped = GLib.Markup.escape_text(info);
-        string pretty = escaped.strip();
+        string escaped = GLib.Markup.escape_text (info);
+        string pretty = escaped.strip ();
 
-        const GraphicsReplaceStrings replace_strings[] = {
+        const GraphicsReplaceStrings REPLACE_STRINGS[] = {
             { "Mesa DRI ", ""},
             { "Intel[(]R[)]", "Intel\u00ae"},
             { "Core[(]TM[)]", "Core\u209c\u2098"},
@@ -255,9 +257,9 @@ public class About.HardwareView : Gtk.Grid {
         };
 
 
-        foreach(GraphicsReplaceStrings replace_string in replace_strings){
-            GLib.Regex re = new GLib.Regex(replace_string.regex,0,0);
-            pretty = re.replace(pretty,-1,0,replace_string.replacement,0);
+        foreach(GraphicsReplaceStrings replace_string in REPLACE_STRINGS){
+            GLib.Regex re = new GLib.Regex (replace_string.regex,0,0);
+            pretty = re.replace (pretty,-1,0,replace_string.replacement,0);
         }
 
         return pretty;
