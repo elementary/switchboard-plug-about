@@ -244,7 +244,7 @@ public class About.HardwareView : Gtk.Grid {
 
     private string clean_graphics_name (string info) {
 
-        string pretty = GLib.Markup.escape_text (info).strip();
+        string pretty = GLib.Markup.escape_text (info).strip ();
 
         const GraphicsReplaceStrings REPLACE_STRINGS[] = {
             { "Mesa DRI ", ""},
