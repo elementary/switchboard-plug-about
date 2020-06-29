@@ -305,7 +305,12 @@ public class About.Plug : Switchboard.Plug {
     }
 
     private static void reset_all_keys (GLib.Settings settings) {
-        foreach (var key in settings.list_keys ()) {
+        var schema = SettingsSchemaSource.get_default ().lookup (
+            settings.schema_id,
+            true
+        );
+
+        foreach (var key in schema.list_keys ()) {
             settings.reset (key);
         }
     }
