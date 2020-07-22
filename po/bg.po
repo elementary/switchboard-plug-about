@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2016-08-06 17:24+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -92,10 +92,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Възстановяване на настройките"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Неизвестен"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Видеокарта"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -106,6 +107,12 @@ msgstr "Памет:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Процесор:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Двуядрен"
@@ -113,6 +120,10 @@ msgstr "Двуядрен"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Четириядрен"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Неизвестен"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -153,12 +164,6 @@ msgstr "Постоянна памет"
 
 #~ msgid "Hardware"
 #~ msgstr "Апаратура"
-
-#~ msgid "Processor:"
-#~ msgstr "Процесор:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Видеокарта"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Лични данни, например музика и снимки, няма да бъдат повлияни."

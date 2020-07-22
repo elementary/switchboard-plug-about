@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2018-06-20 00:06+0000\n"
 "Last-Translator: janus tolkien <janustolkien@gmail.com>\n"
 "Language-Team: Kurdish <https://weblate.elementary.io/projects/switchboard/"
@@ -85,10 +85,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Mîhengan Şûnde Bîne"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Nenas"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Wêne:"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -99,6 +100,12 @@ msgstr "%s Bîr"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Prosesor:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Dualî-Core"
@@ -106,6 +113,10 @@ msgstr "Dualî-Core"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Çarik-Core"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Nenas"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -149,9 +160,3 @@ msgstr "%s Axtin"
 
 #~ msgid "Hardware"
 #~ msgstr "Hişkalav"
-
-#~ msgid "Processor:"
-#~ msgstr "Prosesor:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Wêne:"

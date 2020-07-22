@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -76,9 +76,8 @@ msgstr ""
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
+#: src/Views/HardwareView.vala:43
+msgid "Unknown Graphics"
 msgstr ""
 
 #: src/Views/HardwareView.vala:71
@@ -90,12 +89,20 @@ msgstr ""
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+msgid "Unknown Processor"
+msgstr ""
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr ""
 
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
+msgstr ""
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
 msgstr ""
 
 #: src/Views/HardwareView.vala:294

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2020-06-08 10:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -92,10 +92,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "設定を復元"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "不明"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "グラフィック:"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -106,6 +107,12 @@ msgstr "%s メモリー"
 msgid "Manufacturer Website"
 msgstr "製造元の Web サイト"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "プロセッサー:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "デュアルコア"
@@ -113,6 +120,10 @@ msgstr "デュアルコア"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "クアッドコア"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "不明"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -283,12 +294,6 @@ msgstr "%s ストレージ"
 
 #~ msgid "Hardware"
 #~ msgstr "ハードウェア"
-
-#~ msgid "Processor:"
-#~ msgstr "プロセッサー:"
-
-#~ msgid "Graphics:"
-#~ msgstr "グラフィック:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "音楽や写真などの個人用ファイルは影響を受けません。"

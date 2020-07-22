@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2019-11-10 19:24+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -92,10 +92,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Ayarları Geri Yükle"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Bilinmiyor"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Grafik:"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -106,6 +107,12 @@ msgstr "%s bellek"
 msgid "Manufacturer Website"
 msgstr "Üretici Web Sitesi"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "İşlemci:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Çift Çekirdekli"
@@ -113,6 +120,10 @@ msgstr "Çift Çekirdekli"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Dört Çekirdekli"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Bilinmiyor"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -190,12 +201,6 @@ msgstr "%s depolama alanı"
 
 #~ msgid "Hardware"
 #~ msgstr "Donanım"
-
-#~ msgid "Processor:"
-#~ msgstr "İşlemci:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafik:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Kişisel veriler, müzik ve fotoğraflar etkilenmeyecek."

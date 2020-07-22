@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2018-10-30 08:08+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Hindi <https://weblate.elementary.io/projects/switchboard/"
@@ -92,10 +92,11 @@ msgstr "सभी सिस्टम सेटिंग और डेटा म�
 msgid "Restore Settings"
 msgstr "सेटिंग्स को पुनर्स्थापित करे"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "अज्ञात"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "चित्रादि"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -106,6 +107,12 @@ msgstr "स्मृतिः"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "प्रोसेसर:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "दोहरे कोर"
@@ -113,6 +120,10 @@ msgstr "दोहरे कोर"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "चार कोर"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "अज्ञात"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -149,12 +160,6 @@ msgstr "संचयन"
 
 #~ msgid "System Settings"
 #~ msgstr "तंत्र विन्यास"
-
-#~ msgid "Processor:"
-#~ msgstr "प्रोसेसर:"
-
-#~ msgid "Graphics:"
-#~ msgstr "चित्रादि"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "संगीत और चित्रों की तरह व्यक्तिगत डेटा अप्रभावित रहेंगे।"

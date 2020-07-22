@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2014-07-08 06:13+0000\n"
 "Last-Translator: Mohammad Zali <mohamadzali@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
@@ -88,10 +88,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr ""
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "گرافیک:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -102,12 +103,22 @@ msgstr "حافظه:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "پردازنده:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr ""
 
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
+msgstr ""
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
 msgstr ""
 
 #: src/Views/HardwareView.vala:294
@@ -139,9 +150,3 @@ msgstr ""
 #, fuzzy
 #~ msgid "Report Problem"
 #~ msgstr "گزارش ایراد"
-
-#~ msgid "Processor:"
-#~ msgstr "پردازنده:"
-
-#~ msgid "Graphics:"
-#~ msgstr "گرافیک:"

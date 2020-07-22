@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2014-08-15 09:09+0000\n"
 "Last-Translator: Jaycee Lock <jaycee.lock@gmail.com>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
@@ -88,10 +88,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Onbekend"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Grafika:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -102,6 +103,12 @@ msgstr "Geheue:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Verwerker:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Dubbele-kern"
@@ -109,6 +116,10 @@ msgstr "Dubbele-kern"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Quad-kern"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Onbekend"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -139,9 +150,3 @@ msgstr "Bergplek"
 #, fuzzy
 #~ msgid "Report Problem"
 #~ msgstr "Rapporteer 'n Probleem"
-
-#~ msgid "Processor:"
-#~ msgstr "Verwerker:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafika:"

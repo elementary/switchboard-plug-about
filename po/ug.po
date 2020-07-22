@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2017-01-02 03:38+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -91,10 +91,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "نامەلۇم"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "گرافىك:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -105,6 +106,12 @@ msgstr "ئەسلەك:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "بىر تەرەپ قىلغۇچ:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "قوش يادرو"
@@ -112,6 +119,10 @@ msgstr "قوش يادرو"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "تۆت يادرو"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "نامەلۇم"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -152,12 +163,6 @@ msgstr "ساقلىغۇچ"
 
 #~ msgid "Hardware"
 #~ msgstr "قاتتىق دېتال"
-
-#~ msgid "Processor:"
-#~ msgstr "بىر تەرەپ قىلغۇچ:"
-
-#~ msgid "Graphics:"
-#~ msgstr "گرافىك:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "مۇزىكا، رەسىم دىگەندەك شەخسىي ئۇچۇرلار دەخلىگە ئۇچرىمايدۇ."

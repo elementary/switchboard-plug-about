@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2014-07-08 06:17+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian Latin <sr@latin@li.org>\n"
@@ -88,10 +88,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Nepoznato"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Grafika:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -102,6 +103,12 @@ msgstr "Memorija:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Procesor:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr ""
@@ -109,6 +116,10 @@ msgstr ""
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr ""
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Nepoznato"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -135,9 +146,3 @@ msgstr "Skladište"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Skladište"
-
-#~ msgid "Processor:"
-#~ msgstr "Procesor:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafika:"

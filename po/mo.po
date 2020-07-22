@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2018-05-28 00:02+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -86,9 +86,10 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Restaurați setările"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Unknown"
+msgid "Unknown Graphics"
 msgstr "Necunoscut"
 
 #: src/Views/HardwareView.vala:71
@@ -100,6 +101,10 @@ msgstr "%s 1 memorie"
 msgid "Manufacturer Website"
 msgstr "Site-ul producătorului"
 
+#: src/Views/HardwareView.vala:169
+msgid "Unknown Processor"
+msgstr ""
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Cu două nuclee"
@@ -107,6 +112,10 @@ msgstr "Cu două nuclee"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Cu patru nuclee"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Necunoscut"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format

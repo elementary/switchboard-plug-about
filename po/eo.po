@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2019-11-09 12:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -92,9 +92,10 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Restaŭri agordojn"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Unknown"
+msgid "Unknown Graphics"
 msgstr "Nekonata"
 
 #: src/Views/HardwareView.vala:71
@@ -106,6 +107,12 @@ msgstr "%s da memoro"
 msgid "Manufacturer Website"
 msgstr "Retejo de la fabriko"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Procesoro:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Duopa kerno"
@@ -113,6 +120,10 @@ msgstr "Duopa kerno"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Kvaropa kerno"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Nekonata"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -187,6 +198,3 @@ msgstr "%s da memoro"
 
 #~ msgid "Default Apps"
 #~ msgstr "Aprioraj Aplikaĵoj"
-
-#~ msgid "Processor:"
-#~ msgstr "Procesoro:"

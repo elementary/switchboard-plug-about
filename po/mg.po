@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2015-05-17 01:05+0000\n"
 "Last-Translator: akoho <Unknown>\n"
 "Language-Team: Malagasy <mg@li.org>\n"
@@ -90,10 +90,11 @@ msgstr "Hiverina amin'ny voalohany daholo ny firafitra sy ny tahiry rehetra"
 msgid "Restore Settings"
 msgstr "Avereno ny firafitra"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Tsy fahita"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Loko"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -104,6 +105,12 @@ msgstr "Tadidy"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Atidoha"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Roy-loha"
@@ -111,6 +118,10 @@ msgstr "Roy-loha"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Efa-doha"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Tsy fahita"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -148,12 +159,6 @@ msgstr "Fitahirizana"
 #, fuzzy
 #~ msgid "System Settings"
 #~ msgstr "Avereno ny firafitra"
-
-#~ msgid "Processor:"
-#~ msgstr "Atidoha"
-
-#~ msgid "Graphics:"
-#~ msgstr "Loko"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Ny firafitra sy tahiry manokana dia tsy ho voakasika"

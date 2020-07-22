@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2019-11-17 20:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -94,10 +94,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Przywróć ustawienia"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Nieznane"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Grafika:"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -108,6 +109,12 @@ msgstr "%s pamięci"
 msgid "Manufacturer Website"
 msgstr "Strona internetowa producenta"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Procesor:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Dwa rdzenie"
@@ -115,6 +122,10 @@ msgstr "Dwa rdzenie"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Cztery rdzenie"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Nieznane"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -285,12 +296,6 @@ msgstr "%s pojemności dysku"
 
 #~ msgid "Hardware"
 #~ msgstr "Sprzęt"
-
-#~ msgid "Processor:"
-#~ msgstr "Procesor:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafika:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Dane osobiste, takie jak muzyka czy zdjęcia, zostaną nienaruszone."

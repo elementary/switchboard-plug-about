@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2018-09-25 00:02+0000\n"
 "Last-Translator: Axel Philip Advento <badwolf.bloodseeker.rev@gmail.com>\n"
 "Language-Team: Tagalog <https://weblate.elementary.io/projects/switchboard/"
@@ -93,9 +93,10 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Ibalik ang mga Setting"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Unknown"
+msgid "Unknown Graphics"
 msgstr "Hindi Kilala"
 
 #: src/Views/HardwareView.vala:71
@@ -107,6 +108,10 @@ msgstr "%s memory"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+msgid "Unknown Processor"
+msgstr ""
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Dual-Core"
@@ -114,6 +119,10 @@ msgstr "Dual-Core"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Quad-Core"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Hindi Kilala"
 
 #: src/Views/HardwareView.vala:294
 #, c-format

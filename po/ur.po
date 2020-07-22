@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2016-12-08 17:26+0000\n"
 "Last-Translator: Waqar Ahmed <waqar.17a@gmail.com>\n"
 "Language-Team: Urdu <ur@li.org>\n"
@@ -88,10 +88,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "نا معلوم"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "گرافکس:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -102,6 +103,12 @@ msgstr "میموری:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "پراسیسر:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "ڈوئل-کور"
@@ -109,6 +116,10 @@ msgstr "ڈوئل-کور"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "کواڈ-کور"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "نا معلوم"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -149,9 +160,3 @@ msgstr "سٹوریج:"
 
 #~ msgid "Hardware"
 #~ msgstr "ہارڈ ویئر"
-
-#~ msgid "Processor:"
-#~ msgstr "پراسیسر:"
-
-#~ msgid "Graphics:"
-#~ msgstr "گرافکس:"

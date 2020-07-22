@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2016-08-04 00:09+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -90,10 +90,11 @@ msgstr "Kõik süsteemi seadistused ning andmed asendatakse algväärtustega."
 msgid "Restore Settings"
 msgstr "Taasta seadistused"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Tundmatu"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Graafika:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -104,6 +105,12 @@ msgstr "Mälu:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Protsessor:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Kahetuumaline"
@@ -111,6 +118,10 @@ msgstr "Kahetuumaline"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Neljatuumaline"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Tundmatu"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -151,12 +162,6 @@ msgstr "Ketta maht:"
 
 #~ msgid "Hardware"
 #~ msgstr "Riistvara"
-
-#~ msgid "Processor:"
-#~ msgstr "Protsessor:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Graafika:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Isiklikud andmed, nagu muusika ja pildid, jäävad puutumata."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -92,10 +92,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "還原設定值"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "未知"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "顯示卡："
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -106,6 +107,12 @@ msgstr "%s 記憶體"
 msgid "Manufacturer Website"
 msgstr "製造商網站"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "處理器："
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "雙核心"
@@ -113,6 +120,10 @@ msgstr "雙核心"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "四核心"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "未知"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -156,12 +167,6 @@ msgstr "%s 儲存裝置"
 
 #~ msgid "Hardware"
 #~ msgstr "硬體"
-
-#~ msgid "Processor:"
-#~ msgstr "處理器："
-
-#~ msgid "Graphics:"
-#~ msgstr "顯示卡："
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "個人資料，例如音樂、圖片等，則不受影響。"

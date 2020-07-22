@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2020-03-19 19:09+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@posteo.net>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -92,10 +92,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Restore Settings"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Unknown"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Graphics:"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -106,6 +107,12 @@ msgstr "%s memory"
 msgid "Manufacturer Website"
 msgstr "Manufacturer Website"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Processor:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Dual-Core"
@@ -113,6 +120,10 @@ msgstr "Dual-Core"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Quad-Core"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Unknown"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -283,12 +294,6 @@ msgstr "%s storage"
 
 #~ msgid "Hardware"
 #~ msgstr "Hardware"
-
-#~ msgid "Processor:"
-#~ msgstr "Processor:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Graphics:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Personal data, such as music and pictures, will be uneffected."

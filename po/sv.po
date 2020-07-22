@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2018-10-21 15:45+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -92,10 +92,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Återställ inställningar"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Okänd"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Grafik:"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -106,6 +107,12 @@ msgstr "%s minne"
 msgid "Manufacturer Website"
 msgstr "Tillverkarens webbplats"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Processor:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Tvåkärnig"
@@ -113,6 +120,10 @@ msgstr "Tvåkärnig"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Fyrkärnig"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Okänd"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -190,12 +201,6 @@ msgstr "%s lagring"
 
 #~ msgid "Hardware"
 #~ msgstr "Hårdvara"
-
-#~ msgid "Processor:"
-#~ msgstr "Processor:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafik:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Personlig data, såsom musik och bilder, kommer inte att påverkas."

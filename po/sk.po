@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2016-01-10 09:22+0000\n"
 "Last-Translator: Lukáš Papík <stereo839@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -90,10 +90,11 @@ msgstr "Všetky nastavenia a dáta systému sa obnovia na predvolené hodnoty."
 msgid "Restore Settings"
 msgstr "Obnoviť nastavenia"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Neznáme"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Grafika:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -104,6 +105,12 @@ msgstr "Pamäť:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Procesor:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "dvojjadrový"
@@ -111,6 +118,10 @@ msgstr "dvojjadrový"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "štvojjadrový"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Neznáme"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -148,12 +159,6 @@ msgstr "Úložisko:"
 #, fuzzy
 #~ msgid "System Settings"
 #~ msgstr "Obnoviť nastavenia"
-
-#~ msgid "Processor:"
-#~ msgstr "Procesor:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafika:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Osobné údaje, ako napríklad hudba a obrázky, nebudú ovplyvnené."

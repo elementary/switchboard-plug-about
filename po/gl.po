@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2019-09-30 14:23+0000\n"
 "Last-Translator: Daniel R. <riesp@pm.me>\n"
 "Language-Team: Galician <https://l10n.elementary.io/projects/switchboard/"
@@ -94,10 +94,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Restaurar configuración"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Descoñecido"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Gráficos:"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -108,6 +109,12 @@ msgstr "%s de memoria"
 msgid "Manufacturer Website"
 msgstr "Sitio web do fabricante"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Procesador:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Dobre núcleo"
@@ -115,6 +122,10 @@ msgstr "Dobre núcleo"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Cuádruplo núcleo"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Descoñecido"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -148,9 +159,3 @@ msgstr "%s de almacenamento"
 #, fuzzy
 #~ msgid "Report Problem"
 #~ msgstr "Informar dun problema"
-
-#~ msgid "Processor:"
-#~ msgstr "Procesador:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Gráficos:"

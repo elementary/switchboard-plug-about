@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2015-03-06 10:25+0000\n"
 "Last-Translator: Skandee <Unknown>\n"
 "Language-Team: Southern Sami <sma@li.org>\n"
@@ -88,10 +88,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "﻿Ovnohkens"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Grafihke:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -102,6 +103,12 @@ msgstr "Mojhtese:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Faamoe:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Dual-Core"
@@ -109,6 +116,10 @@ msgstr "Dual-Core"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Quad-Core"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "﻿Ovnohkens"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -139,9 +150,3 @@ msgstr "Sijjie:"
 #, fuzzy
 #~ msgid "Report Problem"
 #~ msgstr "Dåeriesmoere reektehtem"
-
-#~ msgid "Processor:"
-#~ msgstr "Faamoe:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafihke:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2018-06-13 00:07+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -91,10 +91,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Kembalikan Pengaturan"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Tidak diketahui"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Kartu Grafis:"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -105,6 +106,12 @@ msgstr "Memori %s"
 msgid "Manufacturer Website"
 msgstr "Situs Web Produsen"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Prosesor:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Dua Inti (Dual-Core)"
@@ -112,6 +119,10 @@ msgstr "Dua Inti (Dual-Core)"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Empat Inti (Quad-Core)"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Tidak diketahui"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -186,9 +197,3 @@ msgstr "Penyimpanan %s"
 
 #~ msgid "Default Apps"
 #~ msgstr "Aplikasi Bawaan"
-
-#~ msgid "Processor:"
-#~ msgstr "Prosesor:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Kartu Grafis:"

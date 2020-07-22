@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2015-11-14 15:06+0000\n"
 "Last-Translator: Beqa Arabuli <arabulibeqa@yahoo.com>\n"
 "Language-Team: Georgian <ka@li.org>\n"
@@ -91,10 +91,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "პარამეტრების აღდგენა"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "უცნობი"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "გრაფიკა:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -105,6 +106,12 @@ msgstr "მეხსიერება:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "პროცესორი:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "ორბირთვიანი"
@@ -112,6 +119,10 @@ msgstr "ორბირთვიანი"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "ოთხბირთვიანი"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "უცნობი"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -149,12 +160,6 @@ msgstr "საწყობი:"
 #, fuzzy
 #~ msgid "System Settings"
 #~ msgstr "პარამეტრების აღდგენა"
-
-#~ msgid "Processor:"
-#~ msgstr "პროცესორი:"
-
-#~ msgid "Graphics:"
-#~ msgstr "გრაფიკა:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2020-04-08 20:31+0000\n"
 "Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
 "Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
@@ -93,10 +93,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "استعادة الإعدادات"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "غير معروف"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "جرافيكس:"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -107,6 +108,12 @@ msgstr "الذاكرة: %s"
 msgid "Manufacturer Website"
 msgstr "موقع الشركة المصنعة"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "المعالج:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr ""
@@ -114,6 +121,10 @@ msgstr ""
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr ""
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "غير معروف"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -144,9 +155,3 @@ msgstr "التخزين: %s"
 #, fuzzy
 #~ msgid "Report Problem"
 #~ msgstr "الإبلاغ عن مشكلة"
-
-#~ msgid "Processor:"
-#~ msgstr "المعالج:"
-
-#~ msgid "Graphics:"
-#~ msgstr "جرافيكس:"

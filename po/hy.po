@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2014-11-06 08:10+0000\n"
 "Last-Translator: Vahan Harutyunyan <Unknown>\n"
 "Language-Team: Armenian <hy@li.org>\n"
@@ -88,10 +88,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Անհայտ"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Գրաֆիկա՝"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -102,6 +103,12 @@ msgstr "Հիշողություն ՝"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Պրոցեսոր՝"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Երկ-միջուկ"
@@ -109,6 +116,10 @@ msgstr "Երկ-միջուկ"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Չորս-միջուկ"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Անհայտ"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -139,9 +150,3 @@ msgstr "Պահուստ"
 #, fuzzy
 #~ msgid "Report Problem"
 #~ msgstr "Հայտնել խնդրի մասին"
-
-#~ msgid "Processor:"
-#~ msgstr "Պրոցեսոր՝"
-
-#~ msgid "Graphics:"
-#~ msgstr "Գրաֆիկա՝"

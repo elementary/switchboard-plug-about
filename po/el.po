@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2017-02-07 12:15+0000\n"
 "Last-Translator: iakovos athanasiadhs <liam21iakovos@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -93,10 +93,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Επαναφορά ρυθμίσεων"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Άγνωστο"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Γραφικά:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -107,6 +108,12 @@ msgstr "Μνήμη:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Επεξεργαστής:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Διπύρηνος"
@@ -114,6 +121,10 @@ msgstr "Διπύρηνος"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Τετραπύρηνος"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Άγνωστο"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -154,12 +165,6 @@ msgstr "Αποθηκευτικός χώρος:"
 
 #~ msgid "Hardware"
 #~ msgstr "Υλικό"
-
-#~ msgid "Processor:"
-#~ msgstr "Επεξεργαστής:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Γραφικά:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr ""

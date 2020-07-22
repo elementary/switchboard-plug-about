@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2014-07-08 05:58+0000\n"
 "Last-Translator: elementary Apps team <Unknown>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -88,10 +88,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Ezezaguna"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Grafikoak:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -102,6 +103,12 @@ msgstr "Memoria:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Prozesagailua:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr ""
@@ -109,6 +116,10 @@ msgstr ""
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr ""
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Ezezaguna"
 
 #: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
@@ -139,9 +150,3 @@ msgstr "Biltegiratzea:"
 #, fuzzy
 #~ msgid "Report Problem"
 #~ msgstr "Arazo baten berri eman"
-
-#~ msgid "Processor:"
-#~ msgstr "Prozesagailua:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafikoak:"

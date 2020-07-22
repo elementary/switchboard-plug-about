@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2017-05-23 12:12+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -91,10 +91,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "Nescunoscut"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Grafică:"
 
 #: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
@@ -105,6 +106,12 @@ msgstr "Memorie:"
 msgid "Manufacturer Website"
 msgstr ""
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Procesor:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr ""
@@ -112,6 +119,10 @@ msgstr ""
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr ""
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Nescunoscut"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -145,9 +156,3 @@ msgstr ""
 #, fuzzy
 #~ msgid "Report Problem"
 #~ msgstr "Raportați o problemă"
-
-#~ msgid "Processor:"
-#~ msgstr "Procesor:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafică:"

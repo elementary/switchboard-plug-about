@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2019-11-25 09:24+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -92,10 +92,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "सेटिंग्ज पुनर्संचयित करा"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "अज्ञात"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "ग्राफिक्स :"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -106,6 +107,12 @@ msgstr "%s मेमरी"
 msgid "Manufacturer Website"
 msgstr "निर्माता वेबसाइट"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "प्रोसेसर :"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "ड्युअल-कोअर"
@@ -113,6 +120,10 @@ msgstr "ड्युअल-कोअर"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "क्वॉड-कोर"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "अज्ञात"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -187,9 +198,3 @@ msgstr "%s स्टोरेज"
 
 #~ msgid "Default Apps"
 #~ msgstr "डीफॉल्ट अॅप्स"
-
-#~ msgid "Processor:"
-#~ msgstr "प्रोसेसर :"
-
-#~ msgid "Graphics:"
-#~ msgstr "ग्राफिक्स :"

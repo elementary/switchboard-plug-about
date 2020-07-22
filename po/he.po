@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 16:34+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2019-11-09 12:24+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -92,10 +92,11 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "שחזור הגדרות"
 
-#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
-#: src/Views/HardwareView.vala:204
-msgid "Unknown"
-msgstr "לא ידוע"
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "גרפיקה:"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -106,6 +107,12 @@ msgstr "%s זיכרון"
 msgid "Manufacturer Website"
 msgstr "אתר היצרן"
 
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "מעבד:"
+
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "ליבה כפולה"
@@ -113,6 +120,10 @@ msgstr "ליבה כפולה"
 #: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "ליבה מרובעת"
+
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "לא ידוע"
 
 #: src/Views/HardwareView.vala:294
 #, c-format
@@ -283,12 +294,6 @@ msgstr "%s אחסון"
 
 #~ msgid "Hardware"
 #~ msgstr "חומרה"
-
-#~ msgid "Processor:"
-#~ msgstr "מעבד:"
-
-#~ msgid "Graphics:"
-#~ msgstr "גרפיקה:"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "מידע אישי, כגון מוזיקה ותמונות יישאר ללא שינוי."
