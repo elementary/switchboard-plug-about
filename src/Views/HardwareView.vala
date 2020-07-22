@@ -35,14 +35,13 @@ public class About.HardwareView : Gtk.Grid {
     private SessionManager session_manager;
 
     construct {
-
         try {
             session_manager = Bus.get_proxy_sync (BusType.SESSION,
                 "org.gnome.SessionManager", "/org/gnome/SessionManager");
         } catch (IOError e) {
             critical (e.message);
+            graphics = _("Unknown");
         }
-
 
         fetch_hardware_info ();
 
@@ -192,12 +191,7 @@ public class About.HardwareView : Gtk.Grid {
         memory = GLib.format_size (get_mem_info ());
 
         // Graphics
-        try {
-            graphics = clean_graphics_name (session_manager.renderer);
-        } catch (Error e) {
-            warning (e.message);
-            graphics = _("Unknown");
-        }
+        graphics = clean_graphics_name (session_manager.renderer);
 
         // Hard Drive
         var file_root = GLib.File.new_for_path ("/");
@@ -351,8 +345,8 @@ public class About.HardwareView : Gtk.Grid {
     }
 
     struct GraphicsReplaceStrings {
-      string regex;
-      string replacement;
+        string regex;
+        string replacement;
     }
 }
 
