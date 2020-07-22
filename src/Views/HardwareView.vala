@@ -166,7 +166,7 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         string result = "";
-        foreach (var cpu in counts) {
+        foreach (var cpu in counts.entries) {
             result += "%s \u00D7 %u ".printf (clean_name (cpu.key), cpu.@value);
         }
 
