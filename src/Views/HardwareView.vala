@@ -138,9 +138,6 @@ public class About.HardwareView : Gtk.Grid {
 
         for (int i = 0; i < info.ncpu; i++) {
             unowned GLib.HashTable<string, string> values = info.cpuinfo[i].values;
-            foreach (var key in values.get_keys_as_array ()) {
-                warning (key);
-            }
             string? model = null;
             foreach (var key in keys) {
                 model = values.lookup (key);
@@ -151,6 +148,12 @@ public class About.HardwareView : Gtk.Grid {
             }
 
             if (model == null) {
+                continue;
+            }
+
+            string? core_count = values.lookup ("cpu cores");
+            if (core_count != null) {
+                counts.@set (model, uint.parse (core_count));
                 continue;
             }
 
@@ -167,7 +170,13 @@ public class About.HardwareView : Gtk.Grid {
 
         string result = "";
         foreach (var cpu in counts.entries) {
-            result += "%s \u00D7 %u ".printf (clean_name (cpu.key), cpu.@value);
+            if (cpu.@value == 2) {
+                result += _("Dual-core %s").printf (clean_name (cpu.key));
+            } else if (cpu.@value == 4) {
+                result += _("Quad-core %s").printf (clean_name (cpu.key));
+            } else {
+                result += "%u\u00D7 %s ".printf (cpu.@value, clean_name (cpu.key));
+            }
         }
 
         return result;
