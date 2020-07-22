@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 00:01+0000\n"
+"POT-Creation-Date: 2020-07-22 16:34+0000\n"
 "PO-Revision-Date: 2019-11-17 20:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -94,50 +94,50 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Przywróć ustawienia"
 
-#: src/Views/HardwareView.vala:58
+#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Nieznane"
+
+#: src/Views/HardwareView.vala:71
 #, c-format
 msgid "%s memory"
 msgstr "%s pamięci"
 
-#: src/Views/HardwareView.vala:112
+#: src/Views/HardwareView.vala:125
 msgid "Manufacturer Website"
 msgstr "Strona internetowa producenta"
 
-#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
-#: src/Views/HardwareView.vala:213 src/Views/HardwareView.vala:263
-msgid "Unknown"
-msgstr "Nieznane"
-
-#: src/Views/HardwareView.vala:168
+#: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Dwa rdzenie"
 
-#: src/Views/HardwareView.vala:170
+#: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Cztery rdzenie"
 
-#: src/Views/HardwareView.vala:297
+#: src/Views/HardwareView.vala:294
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s pojemności dysku (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:299
+#: src/Views/HardwareView.vala:296
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s pojemności dysku (eMMC)"
 
-#: src/Views/HardwareView.vala:301
+#: src/Views/HardwareView.vala:298
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s pojemności dysku (SATA SSD)"
 
-#: src/Views/HardwareView.vala:304
+#: src/Views/HardwareView.vala:301
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s pojemności dysku (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:309
+#: src/Views/HardwareView.vala:306
 #, c-format
 msgid "%s storage"
 msgstr "%s pojemności dysku"

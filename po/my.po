@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 00:01+0000\n"
+"POT-Creation-Date: 2020-07-22 16:34+0000\n"
 "PO-Revision-Date: 2014-10-18 14:56+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Burmese <my@li.org>\n"
@@ -88,50 +88,50 @@ msgstr ""
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/HardwareView.vala:58
+#: src/Views/HardwareView.vala:43 src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr ""
+
+#: src/Views/HardwareView.vala:71
 #, c-format
 msgid "%s memory"
 msgstr ""
 
-#: src/Views/HardwareView.vala:112
+#: src/Views/HardwareView.vala:125
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
-#: src/Views/HardwareView.vala:213 src/Views/HardwareView.vala:263
-msgid "Unknown"
-msgstr ""
-
-#: src/Views/HardwareView.vala:168
+#: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr ""
 
-#: src/Views/HardwareView.vala:170
+#: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr ""
 
-#: src/Views/HardwareView.vala:297
+#: src/Views/HardwareView.vala:294
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr ""
 
-#: src/Views/HardwareView.vala:299
+#: src/Views/HardwareView.vala:296
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr ""
 
-#: src/Views/HardwareView.vala:301
+#: src/Views/HardwareView.vala:298
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr ""
 
-#: src/Views/HardwareView.vala:304
+#: src/Views/HardwareView.vala:301
 #, c-format
 msgid "%s storage (HDD)"
 msgstr ""
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:309
+#: src/Views/HardwareView.vala:306
 #, c-format
 msgid "%s storage"
 msgstr ""
