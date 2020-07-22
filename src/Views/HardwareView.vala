@@ -167,7 +167,7 @@ public class About.HardwareView : Gtk.Grid {
 
         string result = "";
         foreach (var cpu in counts) {
-            result += "%s \u00D7 %u ".printf (cpu.key, cpu.@value);
+            result += "%s \u00D7 %u ".printf (clean_name (cpu.key), cpu.@value);
         }
 
         return result;
@@ -186,7 +186,7 @@ public class About.HardwareView : Gtk.Grid {
         memory = GLib.format_size (get_mem_info ());
 
         // Graphics
-        graphics = clean_graphics_name (session_manager.renderer);
+        graphics = clean_name (session_manager.renderer);
 
         // Hard Drive
         var file_root = GLib.File.new_for_path ("/");
@@ -231,7 +231,7 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
-    private string clean_graphics_name (string info) {
+    private string clean_name (string info) {
 
         string pretty = GLib.Markup.escape_text (info).strip ();
 
@@ -251,7 +251,7 @@ public class About.HardwareView : Gtk.Grid {
                 pretty = re.replace (pretty, -1, 0, replace_string.replacement, 0);
             }
         } catch (Error e) {
-            critical ("Couldn't pretty graphics string: %s", e.message);
+            critical ("Couldn't cleanup vendor string: %s", e.message);
         }
 
         return pretty;
