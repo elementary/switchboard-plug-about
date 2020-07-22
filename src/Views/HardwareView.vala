@@ -1,5 +1,8 @@
 /*
+* Copyright (C) 2010 Red Hat, Inc
+* Copyright (C) 2008 William Jon McCann <jmccann@redhat.com>
 * Copyright (c) 2017 elementary LLC. (https://elementary.io)
+* Copyright (C) 2020 Justin Haygood <jhaygood86@gmail.com>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -29,12 +32,22 @@ public class About.HardwareView : Gtk.Grid {
     private string product_name;
     private string product_version;
     private SystemInterface system_interface;
+    private SessionManager session_manager;
 
     construct {
+        try {
+            session_manager = Bus.get_proxy_sync (BusType.SESSION,
+                "org.gnome.SessionManager", "/org/gnome/SessionManager");
+        } catch (IOError e) {
+            critical (e.message);
+            graphics = _("Unknown Graphics");
+        }
+
         fetch_hardware_info ();
 
         try {
-            system_interface = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.hostname1", "/org/freedesktop/hostname1");
+            system_interface = Bus.get_proxy_sync (BusType.SYSTEM,
+                "org.freedesktop.hostname1", "/org/freedesktop/hostname1");
         } catch (IOError e) {
             critical (e.message);
         }
@@ -153,7 +166,7 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         if (processor == null) {
-            processor = _("Unknown");
+            processor = _("Unknown Processor");
         } else {
             if ("(R)" in processor) {
                 processor = processor.replace ("(R)", "®");
@@ -178,29 +191,7 @@ public class About.HardwareView : Gtk.Grid {
         memory = GLib.format_size (get_mem_info ());
 
         // Graphics
-        try {
-            Process.spawn_command_line_sync ("lspci", out graphics);
-
-            if ("VGA" in graphics) { //VGA-keyword indicates graphics-line
-                string[] lines = graphics.split ("\n");
-                graphics="";
-
-                foreach (var s in lines) {
-                    if ("VGA" in s || "3D" in s) {
-                        string model = get_graphics_from_string (s);
-
-                        if (graphics == "") {
-                            graphics = model;
-                        } else {
-                            graphics += "\n" + model;
-                        }
-                    }
-                }
-            }
-        } catch (Error e) {
-            warning (e.message);
-            graphics = _("Unknown");
-        }
+        graphics = clean_graphics_name (session_manager.renderer);
 
         // Hard Drive
         var file_root = GLib.File.new_for_path ("/");
@@ -245,24 +236,30 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
-    private string get_graphics_from_string (string graphics) {
-        //at this line we have the correct line of lspci
-        //as the line has now the form of "00:01.0 VGA compatible controller:Info"
-        //and we want the <Info> part, we split with ":" and get the 3rd part
-        string[] parts = graphics.split (":");
-        string result = graphics;
-        if (parts.length == 3) {
-            result = parts[2];
-        } else if (parts.length > 3) {
-            result = parts[2];
-            for (int i = 2; i < parts.length; i++) {
-                result+=parts[i];
+    private string clean_graphics_name (string info) {
+
+        string pretty = GLib.Markup.escape_text (info).strip ();
+
+        const GraphicsReplaceStrings REPLACE_STRINGS[] = {
+            { "Mesa DRI ", ""},
+            { "[(]R[)]", "®"},
+            { "[(]TM[)]", "™"},
+            { "Gallium .* on (AMD .*)", "\\1"},
+            { "(AMD .*) [(].*", "\\1"},
+            { "(AMD [A-Z])(.*)", "\\1\\L\\2\\E"},
+            { "Graphics Controller", "Graphics"},
+        };
+
+        try {
+            foreach (GraphicsReplaceStrings replace_string in REPLACE_STRINGS) {
+                GLib.Regex re = new GLib.Regex (replace_string.regex, 0, 0);
+                pretty = re.replace (pretty, -1, 0, replace_string.replacement, 0);
             }
-        } else {
-            warning ("Unknown lspci format: " + parts[0] + parts[1]);
-            result = _("Unknown"); //set back to unkown
+        } catch (Error e) {
+            critical ("Couldn't pretty graphics string: %s", e.message);
         }
-        return result.strip ();
+
+        return pretty;
     }
 
     private uint64 get_mem_info () {
@@ -346,10 +343,21 @@ public class About.HardwareView : Gtk.Grid {
         }
         return disk_name;
     }
+
+    struct GraphicsReplaceStrings {
+        string regex;
+        string replacement;
+    }
 }
 
 [DBus (name = "org.freedesktop.hostname1")]
 public interface SystemInterface : Object {
     [DBus (name = "IconName")]
     public abstract string icon_name { owned get; }
+}
+
+[DBus (name = "org.gnome.SessionManager")]
+public interface SessionManager : Object {
+    [DBus (name = "Renderer")]
+    public abstract string renderer { owned get;}
 }

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 00:01+0000\n"
+"POT-Creation-Date: 2020-07-22 17:38+0000\n"
 "PO-Revision-Date: 2019-05-13 23:03+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/about-"
@@ -27,6 +27,13 @@ msgstr "Info"
 msgid "View operating system and hardware information"
 msgstr "Betriebssystem- und Hardware-Informationen anzeigen"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:10
+#: data/io.elementary.switchboard.about.appdata.xml.in:12
+msgid "Provide information for more types of Graphics"
+msgstr ""
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:13
+#: data/io.elementary.switchboard.about.appdata.xml.in:18
+#: data/io.elementary.switchboard.about.appdata.xml.in:23
+#: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Updated translations"
 msgstr ""

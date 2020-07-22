@@ -7,6 +7,12 @@
   <icon type="stock">dialog-information</icon>
   <translation type="gettext">about-plug</translation>
   <releases>
+    <release version="2.6.4" date="2020-07-22" urgency="medium">
+      <description>
+        <p>Provide information for more types of Graphics</p>
+        <p>Updated translations</p>
+      </description>
+    </release>
     <release version="2.6.3" date="2020-05-28" urgency="medium">
       <description>
         <p>Updated translations</p>
