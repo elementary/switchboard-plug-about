@@ -10,7 +10,7 @@ shared_module(
     meson.project_name(),
     plug_files,
     dependencies: [
-        dependency('glib-2.0'),
+        dependency('glib-2.0', version: '>=2.64.0'),
         dependency('gio-2.0'),
         dependency('gobject-2.0'),
         dependency('granite'),
