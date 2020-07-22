@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 00:01+0000\n"
+"POT-Creation-Date: 2020-07-22 17:38+0000\n"
 "PO-Revision-Date: 2020-05-28 22:11+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
-"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
-"about-plug-extra/cs/>\n"
+"Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/about-"
+"plug-extra/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,6 +27,13 @@ msgstr "O systému"
 msgid "View operating system and hardware information"
 msgstr "Zobrazit informace o  operačním systému a hardwaru"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:10
+#: data/io.elementary.switchboard.about.appdata.xml.in:12
+msgid "Provide information for more types of Graphics"
+msgstr ""
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:13
+#: data/io.elementary.switchboard.about.appdata.xml.in:18
+#: data/io.elementary.switchboard.about.appdata.xml.in:23
+#: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Updated translations"
 msgstr "Aktualizovány překlady"

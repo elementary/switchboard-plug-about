@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 00:01+0000\n"
+"POT-Creation-Date: 2020-07-22 17:37+0000\n"
 "PO-Revision-Date: 2016-06-07 04:47+0000\n"
 "Last-Translator: Timothy <timothy.wong@rocketmail.com>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -88,50 +88,61 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Kembalikan Tetapan"
 
-#: src/Views/HardwareView.vala:58
+#: src/Views/HardwareView.vala:43
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "Grafik"
+
+#: src/Views/HardwareView.vala:71
 #, fuzzy, c-format
 msgid "%s memory"
 msgstr "Ingatan:"
 
-#: src/Views/HardwareView.vala:112
+#: src/Views/HardwareView.vala:125
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:156 src/Views/HardwareView.vala:202
-#: src/Views/HardwareView.vala:213 src/Views/HardwareView.vala:263
-msgid "Unknown"
-msgstr "Tidak diketahui"
+#: src/Views/HardwareView.vala:169
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown Processor"
+msgstr "Pemproses"
 
-#: src/Views/HardwareView.vala:168
+#: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
 msgstr "Dwi-Teras"
 
-#: src/Views/HardwareView.vala:170
+#: src/Views/HardwareView.vala:183
 msgid "Quad-Core"
 msgstr "Empat-Teras"
 
-#: src/Views/HardwareView.vala:297
+#: src/Views/HardwareView.vala:204
+msgid "Unknown"
+msgstr "Tidak diketahui"
+
+#: src/Views/HardwareView.vala:294
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Storan:"
 
-#: src/Views/HardwareView.vala:299
+#: src/Views/HardwareView.vala:296
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "Storan:"
 
-#: src/Views/HardwareView.vala:301
+#: src/Views/HardwareView.vala:298
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Storan:"
 
-#: src/Views/HardwareView.vala:304
+#: src/Views/HardwareView.vala:301
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "Storan:"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:309
+#: src/Views/HardwareView.vala:306
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Storan:"
@@ -149,9 +160,3 @@ msgstr "Storan:"
 
 #~ msgid "Hardware"
 #~ msgstr "Perkakasan"
-
-#~ msgid "Processor:"
-#~ msgstr "Pemproses"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafik"

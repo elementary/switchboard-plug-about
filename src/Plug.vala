@@ -16,11 +16,8 @@
 //
 
 public class About.Plug : Switchboard.Plug {
-    private string os;
     private string kernel_version;
-    private string website_url;
     private string support_url;
-    private string logo_icon_name;
     private Gtk.Label based_off;
 
     private string upstream_release;
@@ -69,41 +66,10 @@ public class About.Plug : Switchboard.Plug {
     }
 
     private void setup_info () {
-
-        // Operating System
-        var file = File.new_for_path ("/etc/os-release");
-        try {
-            var osrel = new Gee.HashMap<string, string> ();
-            var dis = new DataInputStream (file.read ());
-            string line;
-            // Read lines until end of file (null) is reached
-            while ((line = dis.read_line (null)) != null) {
-                var osrel_component = line.split ("=", 2);
-                if (osrel_component.length == 2) {
-                    osrel[osrel_component[0]] = osrel_component[1].replace ("\"", "");
-                }
-            }
-
-            os = osrel["PRETTY_NAME"];
-            website_url = osrel["HOME_URL"];
-            support_url = osrel["SUPPORT_URL"];
-            logo_icon_name = osrel["LOGO"];
-
-            if (logo_icon_name == null) {
-                logo_icon_name = "distributor-logo";
-            }
-        } catch (Error e) {
-            warning ("Couldn't read os-release file, assuming elementary OS");
-            os = "elementary OS";
-            website_url = "https://elementary.io";
-            support_url = "https://elementary.io/support";
-            logo_icon_name = "distributor-logo";
-        }
-
         // Upstream distro version (for "Built on" text)
         // FIXME: Add distro specific field to /etc/os-release and use that instead
         // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
-        file = File.new_for_path ("/etc/upstream-release/lsb-release");
+        var file = File.new_for_path ("/etc/upstream-release/lsb-release");
         try {
             var dis = new DataInputStream (file.read ());
             string line;
@@ -125,14 +91,19 @@ public class About.Plug : Switchboard.Plug {
 
     // Wires up and configures initial UI
     private void setup_ui () {
+        var logo_icon_name = Environment.get_os_info ("LOGO");
+        if (logo_icon_name == "" || logo_icon_name == null) {
+            logo_icon_name = "distributor-logo";
+        }
+
         // Create the section about elementary OS
         var logo = new Gtk.Image ();
         logo.icon_name = logo_icon_name;
         logo.pixel_size = 128;
         logo.hexpand = true;
 
-        var title = new Gtk.Label (os);
-        title.get_style_context ().add_class ("h2");
+        var title = new Gtk.Label (Environment.get_os_info (GLib.OsInfoKey.NAME));
+        title.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
         title.set_selectable (true);
         title.margin_bottom = 12;
         title.ellipsize = Pango.EllipsizeMode.END;
@@ -150,6 +121,11 @@ public class About.Plug : Switchboard.Plug {
         ));
         gtk_version_label.selectable = true;
 
+        var website_url = Environment.get_os_info (GLib.OsInfoKey.HOME_URL);
+        if (website_url == "" || website_url == null) {
+            website_url = "https://elementary.io";
+        }
+
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
         website_label.halign = Gtk.Align.CENTER;
         website_label.margin_top = 12;
@@ -157,6 +133,11 @@ public class About.Plug : Switchboard.Plug {
         var help_button = new Gtk.Button.with_label ("?");
         help_button.get_style_context ().add_class ("circular");
         help_button.halign = Gtk.Align.END;
+
+        support_url = Environment.get_os_info (GLib.OsInfoKey.SUPPORT_URL);
+        if (support_url == "" || support_url == null) {
+            support_url = "https://elementary.io/support";
+        }
 
         help_button.clicked.connect (() => {
             try {
