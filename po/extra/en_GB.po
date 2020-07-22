@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 00:01+0000\n"
+"POT-Creation-Date: 2020-07-22 16:34+0000\n"
 "PO-Revision-Date: 2020-03-19 19:09+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@posteo.net>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -27,6 +27,8 @@ msgstr "About"
 msgid "View operating system and hardware information"
 msgstr "View operating system and hardware information"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:10
+#: data/io.elementary.switchboard.about.appdata.xml.in:12
+#: data/io.elementary.switchboard.about.appdata.xml.in:17
+#: data/io.elementary.switchboard.about.appdata.xml.in:22
 msgid "Updated translations"
 msgstr "Updated translations"
