@@ -40,7 +40,7 @@ public class About.HardwareView : Gtk.Grid {
                 "org.gnome.SessionManager", "/org/gnome/SessionManager");
         } catch (IOError e) {
             critical (e.message);
-            graphics = _("Unknown");
+            graphics = _("Unknown Graphics");
         }
 
         fetch_hardware_info ();
@@ -166,7 +166,7 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         if (processor == null) {
-            processor = _("Unknown");
+            processor = _("Unknown Processor");
         } else {
             if ("(R)" in processor) {
                 processor = processor.replace ("(R)", "®");
