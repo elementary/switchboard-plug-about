@@ -130,61 +130,56 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
-    private void fetch_hardware_info () {
-        // Processor
-        var cpu_file = File.new_for_path ("/proc/cpuinfo");
-        uint cores = 0U;
-        bool cores_found = false;
-        try {
-            var dis = new DataInputStream (cpu_file.read ());
-            string line;
-            while ((line = dis.read_line ()) != null) {
-                if (line.has_prefix ("cpu cores")) {
-                    var core_count = line.split (":", 2);
-                    if (core_count.length > 1) {
-                        cores = int.parse (core_count[1]);
-                        if (cores != 0) {
-                            cores_found = true;
-                        }
-                    }
-                }
+    private string? get_cpu_info () {
+        var counts = new Gee.HashMap<string, uint> ();
+        unowned GLibTop.sysinfo? info = GLibTop.get_sysinfo ();
 
-                if (line.has_prefix ("model name")) {
-                    if (!cores_found) {
-                        cores++;
-                    }
-                    if (processor == null) {
-                        var parts = line.split (":", 2);
-                        if (parts.length > 1) {
-                            processor = parts[1].strip ();
-                        }
-                    }
+        const string[] keys = { "model name", "cpu", "Processor" };
+
+        for (int i = 0; i < info.ncpu; i++) {
+            unowned GLib.HashTable<string, string> values = info.cpuinfo[i].values;
+            foreach (var key in values.get_keys_as_array ()) {
+                warning (key);
+            }
+            string? model = null;
+            foreach (var key in keys) {
+                model = values.lookup (key);
+
+                if (model != null) {
+                    break;
                 }
             }
-        } catch (Error e) {
-            warning (e.message);
+
+            if (model == null) {
+                continue;
+            }
+
+            if (!counts.has_key (model)) {
+                counts.@set (model, 1);
+            } else {
+                counts.@set (model, counts.@get (model) + 1);
+            }
         }
 
-        if (processor == null) {
+        if (counts.size == 0) {
+            return null;
+        }
+
+        string result = "";
+        foreach (var cpu in counts) {
+            result += "%s \u00D7 %u ".printf (cpu.key, cpu.@value);
+        }
+
+        return result;
+    }
+
+    private void fetch_hardware_info () {
+        string? cpu = get_cpu_info ();
+
+        if (cpu == null) {
             processor = _("Unknown Processor");
         } else {
-            if ("(R)" in processor) {
-                processor = processor.replace ("(R)", "®");
-            }
-
-            if ("(TM)" in processor) {
-                processor = processor.replace ("(TM)", "™");
-            }
-
-            if (cores > 1) {
-                if (cores == 2) {
-                    processor = _("Dual-Core") + " " + processor;
-                } else if (cores == 4) {
-                    processor = _("Quad-Core") + " " + processor;
-                } else {
-                    processor = processor + " × " + cores.to_string ();
-                }
-            }
+            processor = cpu;
         }
 
         // Memory
