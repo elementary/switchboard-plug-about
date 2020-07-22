@@ -195,6 +195,7 @@ public class About.Plug : Switchboard.Plug {
             }
         });
 
+
         Gtk.Button? update_button = null;
         var appcenter_info = new GLib.DesktopAppInfo ("io.elementary.appcenter.desktop");
         if (appcenter_info != null) {
