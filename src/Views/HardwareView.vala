@@ -34,6 +34,66 @@ public class About.HardwareView : Gtk.Grid {
     private SystemInterface system_interface;
     private SessionManager session_manager;
 
+    struct ARMPart {
+        int id;
+        string name;
+    }
+
+    struct ARMImplementer {
+        int id;
+        ARMPart[] parts;
+        string name;
+    }
+
+    const ARMPart arm_parts[] = {
+        { 0x810, "ARM810" },
+        { 0x920, "ARM920" },
+        { 0x922, "ARM922" },
+        { 0x926, "ARM926" },
+        { 0x940, "ARM940" },
+        { 0x946, "ARM946" },
+        { 0x966, "ARM966" },
+        { 0xa20, "ARM1020" },
+        { 0xa22, "ARM1022" },
+        { 0xa26, "ARM1026" },
+        { 0xb02, "ARM11 MPCore" },
+        { 0xb36, "ARM1136" },
+        { 0xb56, "ARM1156" },
+        { 0xb76, "ARM1176" },
+        { 0xc05, "Cortex-A5" },
+        { 0xc07, "Cortex-A7" },
+        { 0xc08, "Cortex-A8" },
+        { 0xc09, "Cortex-A9" },
+        { 0xc0d, "Cortex-A12" },
+        { 0xc0f, "Cortex-A15" },
+        { 0xc0e, "Cortex-A17" },
+        { 0xc14, "Cortex-R4" },
+        { 0xc15, "Cortex-R5" },
+        { 0xc17, "Cortex-R7" },
+        { 0xc18, "Cortex-R8" },
+        { 0xc20, "Cortex-M0" },
+        { 0xc21, "Cortex-M1" },
+        { 0xc23, "Cortex-M3" },
+        { 0xc24, "Cortex-M4" },
+        { 0xc20, "Cortex-M7" },
+        { 0xc60, "Cortex-M0+" },
+        { 0xd01, "Cortex-A32" },
+        { 0xd03, "Cortex-A53" },
+        { 0xd04, "Cortex-A35" },
+        { 0xd05, "Cortex-A55" },
+        { 0xd07, "Cortex-A57" },
+        { 0xd08, "Cortex-A72" },
+        { 0xd09, "Cortex-A73" },
+        { 0xd0a, "Cortex-A75" },
+        { 0xd13, "Cortex-R52" },
+        { 0xd20, "Cortex-M23" },
+        { 0xd21, "Cortex-M33" }
+    };
+
+    const ARMImplementer arm_implementers[] = {
+        { 0x41, arm_parts, "ARM" }
+    };
+
     construct {
         try {
             session_manager = Bus.get_proxy_sync (BusType.SESSION,
@@ -64,6 +124,7 @@ public class About.HardwareView : Gtk.Grid {
         product_name_info.set_selectable (true);
 
         var processor_info = new Gtk.Label (processor);
+        processor_info.justify = Gtk.Justification.CENTER;
         processor_info.ellipsize = Pango.EllipsizeMode.END;
         processor_info.margin_top = 12;
         processor_info.set_selectable (true);
@@ -130,6 +191,38 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
+    private string? try_get_arm_model (GLib.HashTable<string, string> values) {
+        string? result = null;
+
+        string? cpu_implementer = values.lookup ("CPU implementer");
+        string? cpu_part = values.lookup ("CPU part");
+
+        if (cpu_implementer == null || cpu_part == null) {
+            return result;
+        }
+
+        // long.parse supports 0x format hex strings
+        int cpu_implementer_int = (int)long.parse (cpu_implementer);
+        int cpu_part_int = (int)long.parse (cpu_part);
+
+        if (cpu_implementer_int == 0 || cpu_part_int == 0) {
+            return result;
+        }
+
+        foreach (var implementer in arm_implementers) {
+            if (cpu_implementer_int == implementer.id) {
+                result = implementer.name + " ";
+                foreach (var part in implementer.parts) {
+                    if (cpu_part_int == part.id) {
+                        result += part.name;
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
     private string? get_cpu_info () {
         var counts = new Gee.HashMap<string, uint> ();
         unowned GLibTop.sysinfo? info = GLibTop.get_sysinfo ();
@@ -148,7 +241,10 @@ public class About.HardwareView : Gtk.Grid {
             }
 
             if (model == null) {
-                continue;
+                model = try_get_arm_model (values);
+                if (model == null) {
+                    continue;
+                }
             }
 
             string? core_count = values.lookup ("cpu cores");
@@ -170,6 +266,10 @@ public class About.HardwareView : Gtk.Grid {
 
         string result = "";
         foreach (var cpu in counts.entries) {
+            if (result.length > 0) {
+                result += "\n";
+            }
+
             if (cpu.@value == 2) {
                 result += _("Dual-core %s").printf (clean_name (cpu.key));
             } else if (cpu.@value == 4) {
