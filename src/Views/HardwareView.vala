@@ -230,7 +230,7 @@ public class About.HardwareView: Gtk.Grid {
                 string[] lines = graphics.split ("\n");
                 graphics = "";
 
-                foreach(var s in lines) {
+                foreach (var s in lines) {
                     if ("VGA" in s || "3D" in s) {
                         string model = get_graphics_from_string (s);
 
