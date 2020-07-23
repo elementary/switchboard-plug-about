@@ -168,7 +168,7 @@ public class About.HardwareView: Gtk.Grid {
         uint cores = 0;
         bool cores_found = false;
         try {
-            var dis = new DataInputStream (cpu_file.read());
+            var dis = new DataInputStream (cpu_file.read ());
             string line;
             while ((line = dis.read_line ()) != null) {
                 if (line.has_prefix ("cpu cores")) {
