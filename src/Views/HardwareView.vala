@@ -219,7 +219,7 @@ public class About.HardwareView: Gtk.Grid {
         }
 
         // Memory
-        memory = GLib.format_size ( get_mem_info ());
+        memory = GLib.format_size (get_mem_info ());
 
         // Graphics
         try {
