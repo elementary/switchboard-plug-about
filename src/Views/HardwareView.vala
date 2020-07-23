@@ -149,7 +149,7 @@ public class About.HardwareView: Gtk.Grid {
         return cleaned_hostname;
     }
 
-    private void change_hostname(string hostname) {
+    private void change_hostname (string hostname) {
         if (hostname.length == 0) {
             hostname = "localhost";
         }
