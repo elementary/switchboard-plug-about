@@ -161,7 +161,7 @@ public class About.HardwareView: Gtk.Grid {
         }
     }
 
-    private void fetch_hardware_info() {
+    private void fetch_hardware_info () {
         // Processor
         var cpu_file = File.new_for_path ("/proc/cpuinfo");
         uint cores = 0;
