@@ -159,7 +159,6 @@ public class About.HardwareView: Gtk.Grid {
         } catch (SpawnError e) {
             warning (e.message);
         }
-
     }
 
     private void fetch_hardware_info() {
