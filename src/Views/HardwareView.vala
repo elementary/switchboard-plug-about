@@ -34,66 +34,6 @@ public class About.HardwareView : Gtk.Grid {
     private SystemInterface system_interface;
     private SessionManager session_manager;
 
-    struct ARMPart {
-        int id;
-        string name;
-    }
-
-    struct ARMImplementer {
-        int id;
-        ARMPart[] parts;
-        string name;
-    }
-
-    const ARMPart arm_parts[] = {
-        { 0x810, "ARM810" },
-        { 0x920, "ARM920" },
-        { 0x922, "ARM922" },
-        { 0x926, "ARM926" },
-        { 0x940, "ARM940" },
-        { 0x946, "ARM946" },
-        { 0x966, "ARM966" },
-        { 0xa20, "ARM1020" },
-        { 0xa22, "ARM1022" },
-        { 0xa26, "ARM1026" },
-        { 0xb02, "ARM11 MPCore" },
-        { 0xb36, "ARM1136" },
-        { 0xb56, "ARM1156" },
-        { 0xb76, "ARM1176" },
-        { 0xc05, "Cortex-A5" },
-        { 0xc07, "Cortex-A7" },
-        { 0xc08, "Cortex-A8" },
-        { 0xc09, "Cortex-A9" },
-        { 0xc0d, "Cortex-A12" },
-        { 0xc0f, "Cortex-A15" },
-        { 0xc0e, "Cortex-A17" },
-        { 0xc14, "Cortex-R4" },
-        { 0xc15, "Cortex-R5" },
-        { 0xc17, "Cortex-R7" },
-        { 0xc18, "Cortex-R8" },
-        { 0xc20, "Cortex-M0" },
-        { 0xc21, "Cortex-M1" },
-        { 0xc23, "Cortex-M3" },
-        { 0xc24, "Cortex-M4" },
-        { 0xc20, "Cortex-M7" },
-        { 0xc60, "Cortex-M0+" },
-        { 0xd01, "Cortex-A32" },
-        { 0xd03, "Cortex-A53" },
-        { 0xd04, "Cortex-A35" },
-        { 0xd05, "Cortex-A55" },
-        { 0xd07, "Cortex-A57" },
-        { 0xd08, "Cortex-A72" },
-        { 0xd09, "Cortex-A73" },
-        { 0xd0a, "Cortex-A75" },
-        { 0xd13, "Cortex-R52" },
-        { 0xd20, "Cortex-M23" },
-        { 0xd21, "Cortex-M33" }
-    };
-
-    const ARMImplementer arm_implementers[] = {
-        { 0x41, arm_parts, "ARM" }
-    };
-
     construct {
         try {
             session_manager = Bus.get_proxy_sync (BusType.SESSION,
@@ -192,41 +132,24 @@ public class About.HardwareView : Gtk.Grid {
     }
 
     private string? try_get_arm_model (GLib.HashTable<string, string> values) {
-        string? result = null;
-
         string? cpu_implementer = values.lookup ("CPU implementer");
         string? cpu_part = values.lookup ("CPU part");
 
         if (cpu_implementer == null || cpu_part == null) {
-            return result;
+            return null;
         }
 
-        // long.parse supports 0x format hex strings
-        int cpu_implementer_int = (int)long.parse (cpu_implementer);
-        int cpu_part_int = (int)long.parse (cpu_part);
-
-        if (cpu_implementer_int == 0 || cpu_part_int == 0) {
-            return result;
-        }
-
-        foreach (var implementer in arm_implementers) {
-            if (cpu_implementer_int == implementer.id) {
-                result = implementer.name + " ";
-                foreach (var part in implementer.parts) {
-                    if (cpu_part_int == part.id) {
-                        result += part.name;
-                    }
-                }
-            }
-        }
-
-        return result;
+        return ARMPartDecoder.decode_arm_model (cpu_implementer, cpu_part);
     }
 
     private string? get_cpu_info () {
-        var counts = new Gee.HashMap<string, uint> ();
         unowned GLibTop.sysinfo? info = GLibTop.get_sysinfo ();
 
+        if (info == null) {
+            return null;
+        }
+
+        var counts = new Gee.HashMap<string, uint> ();
         const string[] keys = { "model name", "cpu", "Processor" };
 
         for (int i = 0; i < info.ncpu; i++) {
@@ -271,9 +194,11 @@ public class About.HardwareView : Gtk.Grid {
             }
 
             if (cpu.@value == 2) {
-                result += _("Dual-core %s").printf (clean_name (cpu.key));
+                result += _("Dual-Core %s").printf (clean_name (cpu.key));
             } else if (cpu.@value == 4) {
-                result += _("Quad-core %s").printf (clean_name (cpu.key));
+                result += _("Quad-Core %s").printf (clean_name (cpu.key));
+            } else if (cpu.@value == 6) {
+                result += _("Hexa-Core %s").printf (clean_name (cpu.key));
             } else {
                 result += "%u\u00D7 %s ".printf (cpu.@value, clean_name (cpu.key));
             }
@@ -292,7 +217,9 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         // Memory
-        memory = GLib.format_size (get_mem_info ());
+        GLibTop.mem mem;
+        GLibTop.get_mem (out mem);
+        memory = GLib.format_size (mem.total);
 
         // Graphics
         graphics = clean_name (session_manager.renderer);
@@ -364,25 +291,6 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         return pretty;
-    }
-
-    private uint64 get_mem_info () {
-        File file = File.new_for_path ("/proc/meminfo");
-        try {
-            DataInputStream dis = new DataInputStream (file.read ());
-            string? line;
-            string name = "MemTotal:";
-            while ((line = dis.read_line (null, null)) != null) {
-                if (line.has_prefix (name)) {
-                    var number = line.replace ("kB", "").replace (name, "").strip ();
-                    return uint64.parse (number) * 1000;
-                }
-            }
-        } catch (Error e) {
-            warning (e.message);
-        }
-
-        return 0;
     }
 
     private string get_storage_type (string storage_capacity) {

@@ -1,5 +1,6 @@
 plug_files = files(
     'Plug.vala',
+    'Utils/ARMPartDecoder.vala',
     'Views/HardwareView.vala'
 )
 
