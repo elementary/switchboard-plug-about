@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-22 17:37+0000\n"
-"PO-Revision-Date: 2020-06-08 10:11+0000\n"
+"PO-Revision-Date: 2020-07-23 18:45+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -93,10 +93,8 @@ msgid "Restore Settings"
 msgstr "設定を復元"
 
 #: src/Views/HardwareView.vala:43
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "グラフィック:"
+msgstr "不明なグラフィックス"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -108,10 +106,8 @@ msgid "Manufacturer Website"
 msgstr "製造元の Web サイト"
 
 #: src/Views/HardwareView.vala:169
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "プロセッサー:"
+msgstr "不明なプロセッサー"
 
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"

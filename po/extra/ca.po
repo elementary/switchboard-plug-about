@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-22 17:38+0000\n"
-"PO-Revision-Date: 2019-11-09 12:24+0000\n"
+"PO-Revision-Date: 2020-07-23 18:45+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
 msgid "About"
@@ -29,7 +29,7 @@ msgstr "Mostra la informació del sistema operatiu i del maquinari"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
 msgid "Provide information for more types of Graphics"
-msgstr ""
+msgstr "Proporciona informació per a més tipus de gràfics."
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:13
 #: data/io.elementary.switchboard.about.appdata.xml.in:18
