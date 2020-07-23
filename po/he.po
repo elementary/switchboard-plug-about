@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-22 17:37+0000\n"
-"PO-Revision-Date: 2019-11-09 12:24+0000\n"
+"PO-Revision-Date: 2020-07-23 18:45+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:34
@@ -93,10 +93,8 @@ msgid "Restore Settings"
 msgstr "שחזור הגדרות"
 
 #: src/Views/HardwareView.vala:43
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "גרפיקה:"
+msgstr "גרפיקה לא ידועה"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -108,10 +106,8 @@ msgid "Manufacturer Website"
 msgstr "אתר היצרן"
 
 #: src/Views/HardwareView.vala:169
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "מעבד:"
+msgstr "מעבד לא ידוע"
 
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
