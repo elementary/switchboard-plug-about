@@ -64,6 +64,7 @@ public class About.HardwareView : Gtk.Grid {
         product_name_info.set_selectable (true);
 
         var processor_info = new Gtk.Label (processor);
+        processor_info.justify = Gtk.Justification.CENTER;
         processor_info.ellipsize = Pango.EllipsizeMode.END;
         processor_info.margin_top = 12;
         processor_info.set_selectable (true);
@@ -130,68 +131,98 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
-    private void fetch_hardware_info () {
-        // Processor
-        var cpu_file = File.new_for_path ("/proc/cpuinfo");
-        uint cores = 0U;
-        bool cores_found = false;
-        try {
-            var dis = new DataInputStream (cpu_file.read ());
-            string line;
-            while ((line = dis.read_line ()) != null) {
-                if (line.has_prefix ("cpu cores")) {
-                    var core_count = line.split (":", 2);
-                    if (core_count.length > 1) {
-                        cores = int.parse (core_count[1]);
-                        if (cores != 0) {
-                            cores_found = true;
-                        }
-                    }
-                }
+    private string? try_get_arm_model (GLib.HashTable<string, string> values) {
+        string? cpu_implementer = values.lookup ("CPU implementer");
+        string? cpu_part = values.lookup ("CPU part");
 
-                if (line.has_prefix ("model name")) {
-                    if (!cores_found) {
-                        cores++;
-                    }
-                    if (processor == null) {
-                        var parts = line.split (":", 2);
-                        if (parts.length > 1) {
-                            processor = parts[1].strip ();
-                        }
-                    }
-                }
-            }
-        } catch (Error e) {
-            warning (e.message);
+        if (cpu_implementer == null || cpu_part == null) {
+            return null;
         }
 
-        if (processor == null) {
-            processor = _("Unknown Processor");
-        } else {
-            if ("(R)" in processor) {
-                processor = processor.replace ("(R)", "®");
-            }
+        return ARMPartDecoder.decode_arm_model (cpu_implementer, cpu_part);
+    }
 
-            if ("(TM)" in processor) {
-                processor = processor.replace ("(TM)", "™");
-            }
+    private string? get_cpu_info () {
+        unowned GLibTop.sysinfo? info = GLibTop.get_sysinfo ();
 
-            if (cores > 1) {
-                if (cores == 2) {
-                    processor = _("Dual-Core") + " " + processor;
-                } else if (cores == 4) {
-                    processor = _("Quad-Core") + " " + processor;
-                } else {
-                    processor = processor + " × " + cores.to_string ();
+        if (info == null) {
+            return null;
+        }
+
+        var counts = new Gee.HashMap<string, uint> ();
+        const string[] KEYS = { "model name", "cpu", "Processor" };
+
+        for (int i = 0; i < info.ncpu; i++) {
+            unowned GLib.HashTable<string, string> values = info.cpuinfo[i].values;
+            string? model = null;
+            foreach (var key in KEYS) {
+                model = values.lookup (key);
+
+                if (model != null) {
+                    break;
                 }
             }
+
+            if (model == null) {
+                model = try_get_arm_model (values);
+                if (model == null) {
+                    continue;
+                }
+            }
+
+            string? core_count = values.lookup ("cpu cores");
+            if (core_count != null) {
+                counts.@set (model, uint.parse (core_count));
+                continue;
+            }
+
+            if (!counts.has_key (model)) {
+                counts.@set (model, 1);
+            } else {
+                counts.@set (model, counts.@get (model) + 1);
+            }
+        }
+
+        if (counts.size == 0) {
+            return null;
+        }
+
+        string result = "";
+        foreach (var cpu in counts.entries) {
+            if (result.length > 0) {
+                result += "\n";
+            }
+
+            if (cpu.@value == 2) {
+                result += _("Dual-Core %s").printf (clean_name (cpu.key));
+            } else if (cpu.@value == 4) {
+                result += _("Quad-Core %s").printf (clean_name (cpu.key));
+            } else if (cpu.@value == 6) {
+                result += _("Hexa-Core %s").printf (clean_name (cpu.key));
+            } else {
+                result += "%u\u00D7 %s ".printf (cpu.@value, clean_name (cpu.key));
+            }
+        }
+
+        return result;
+    }
+
+    private void fetch_hardware_info () {
+        string? cpu = get_cpu_info ();
+
+        if (cpu == null) {
+            processor = _("Unknown Processor");
+        } else {
+            processor = cpu;
         }
 
         // Memory
-        memory = GLib.format_size (get_mem_info ());
+        GLibTop.mem mem;
+        GLibTop.get_mem (out mem);
+        memory = GLib.format_size (mem.total);
 
         // Graphics
-        graphics = clean_graphics_name (session_manager.renderer);
+        graphics = clean_name (session_manager.renderer);
 
         // Hard Drive
         var file_root = GLib.File.new_for_path ("/");
@@ -236,7 +267,7 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
-    private string clean_graphics_name (string info) {
+    private string clean_name (string info) {
 
         string pretty = GLib.Markup.escape_text (info).strip ();
 
@@ -256,29 +287,10 @@ public class About.HardwareView : Gtk.Grid {
                 pretty = re.replace (pretty, -1, 0, replace_string.replacement, 0);
             }
         } catch (Error e) {
-            critical ("Couldn't pretty graphics string: %s", e.message);
+            critical ("Couldn't cleanup vendor string: %s", e.message);
         }
 
         return pretty;
-    }
-
-    private uint64 get_mem_info () {
-        File file = File.new_for_path ("/proc/meminfo");
-        try {
-            DataInputStream dis = new DataInputStream (file.read ());
-            string? line;
-            string name = "MemTotal:";
-            while ((line = dis.read_line (null, null)) != null) {
-                if (line.has_prefix (name)) {
-                    var number = line.replace ("kB", "").replace (name, "").strip ();
-                    return uint64.parse (number) * 1000;
-                }
-            }
-        } catch (Error e) {
-            warning (e.message);
-        }
-
-        return 0;
     }
 
     private string get_storage_type (string storage_capacity) {

@@ -1,5 +1,6 @@
 plug_files = files(
     'Plug.vala',
+    'Utils/ARMPartDecoder.vala',
     'Views/HardwareView.vala'
 )
 
@@ -15,6 +16,7 @@ shared_module(
         dependency('gobject-2.0'),
         dependency('granite'),
         dependency('gtk+-3.0'),
+        dependency('libgtop-2.0'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep
     ],
