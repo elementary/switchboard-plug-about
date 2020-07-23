@@ -29,7 +29,7 @@ public class About.ARMPartDecoder {
         string name;
     }
 
-    const ARMPart arm_parts[] = {
+    const ARMPart ARM_PARTS[] = {
         { 0x810, "ARM810" },
         { 0x920, "ARM920" },
         { 0x922, "ARM922" },
@@ -48,7 +48,7 @@ public class About.ARMPartDecoder {
         { 0xc07, "Cortex-A7" },
         { 0xc08, "Cortex-A8" },
         { 0xc09, "Cortex-A9" },
-        { 0xc0d, "Cortex-A17" },	/* Originally A12 */
+        { 0xc0d, "Cortex-A17" }, /* Originally A12 */
         { 0xc0f, "Cortex-A15" },
         { 0xc0e, "Cortex-A17" },
         { 0xc14, "Cortex-R4" },
@@ -77,17 +77,17 @@ public class About.ARMPartDecoder {
         { 0xd4a, "Neoverse-E1" }
     };
 
-    const ARMPart brcm_parts[] = {
-        { 0x0f,  "Brahma B15" },
+    const ARMPart BROADCOM_PARTS[] = {
+        { 0x0f, "Brahma B15" },
         { 0x100, "Brahma B53" }
     };
 
-    const ARMPart dec_parts[] = {
+    const ARMPart DEC_PARTS[] = {
         { 0xa10, "SA110" },
         { 0xa11, "SA1100" }
     };
 
-    const ARMPart cavium_parts[] = {
+    const ARMPart CAVIUM_PARTS[] = {
         { 0x0a0, "ThunderX" },
         { 0x0a1, "ThunderX 88XX" },
         { 0x0a2, "ThunderX 81XX" },
@@ -95,11 +95,11 @@ public class About.ARMPartDecoder {
         { 0x0af, "ThunderX2 99xx" }
     };
 
-    const ARMPart apm_parts[] = {
+    const ARMPart APM_PARTS[] = {
         { 0x000, "X-Gene" }
     };
 
-    const ARMPart qcom_parts[] = {
+    const ARMPart QUALCOMM_PARTS[] = {
         { 0x00f, "Scorpion" },
         { 0x02d, "Scorpion" },
         { 0x04d, "Krait" },
@@ -113,27 +113,27 @@ public class About.ARMPartDecoder {
         { 0xc01, "Saphira" }
     };
 
-    const ARMPart samsung_parts[] = {
+    const ARMPart SAMSUNG_PARTS[] = {
         { 0x001, "exynos-m1" }
     };
 
-    const ARMPart nvidia_parts[] = {
+    const ARMPart NVIDIA_PARTS[] = {
         { 0x000, "Denver" },
         { 0x003, "Denver 2" }
     };
 
-    const ARMPart marvell_parts[] = {
+    const ARMPart MARVELL_PARTS[] = {
         { 0x131, "Feroceon 88FR131" },
         { 0x581, "PJ4/PJ4b" },
         { 0x584, "PJ4B-MP" }
     };
 
-    const ARMPart faraday_parts[] = {
+    const ARMPart FARADAY_PARTS[] = {
         { 0x526, "FA526" },
         { 0x626, "FA626" }
     };
 
-    const ARMPart intel_parts[] = {
+    const ARMPart INTEL_PARTS[] = {
         { 0x200, "i80200" },
         { 0x210, "PXA250A" },
         { 0x212, "PXA210A" },
@@ -157,23 +157,23 @@ public class About.ARMPartDecoder {
         { 0xc12, "IPX1200" }
     };
 
-    const ARMPart hisi_parts[] = {
-        { 0xd01, "Kunpeng-920" }	/* aka tsv110 */
+    const ARMPart HISILICON_PARTS[] = {
+        { 0xd01, "Kunpeng-920" } /* aka tsv110 */
     };
 
-    const ARMImplementer arm_implementers[] = {
-        { 0x41, arm_parts,     "ARM" },
-        { 0x42, brcm_parts,    "Broadcom" },
-        { 0x43, cavium_parts,  "Cavium" },
-        { 0x44, dec_parts,     "DEC" },
-        { 0x48, hisi_parts,    "HiSilicon" },
-        { 0x4e, nvidia_parts,  "Nvidia" },
-        { 0x50, apm_parts,     "APM" },
-        { 0x51, qcom_parts,    "Qualcomm" },
-        { 0x53, samsung_parts, "Samsung" },
-        { 0x56, marvell_parts, "Marvell" },
-        { 0x66, faraday_parts, "Faraday" },
-        { 0x69, intel_parts,   "Intel" },
+    const ARMImplementer ARM_IMPLEMENTERS[] = {
+        { 0x41, ARM_PARTS, "ARM" },
+        { 0x42, BROADCOM_PARTS, "Broadcom" },
+        { 0x43, CAVIUM_PARTS, "Cavium" },
+        { 0x44, DEC_PARTS, "DEC" },
+        { 0x48, HISILICON_PARTS, "HiSilicon" },
+        { 0x4e, NVIDIA_PARTS, "Nvidia" },
+        { 0x50, APM_PARTS, "APM" },
+        { 0x51, QUALCOMM_PARTS, "Qualcomm" },
+        { 0x53, SAMSUNG_PARTS, "Samsung" },
+        { 0x56, MARVELL_PARTS, "Marvell" },
+        { 0x66, FARADAY_PARTS, "Faraday" },
+        { 0x69, INTEL_PARTS, "Intel" },
     };
 
     public static string? decode_arm_model (string cpu_implementer, string cpu_part) {
@@ -191,7 +191,7 @@ public class About.ARMPartDecoder {
             return result;
         }
 
-        foreach (var implementer in arm_implementers) {
+        foreach (var implementer in ARM_IMPLEMENTERS) {
             if (cpu_implementer_int == implementer.id) {
                 result = implementer.name + " ";
                 foreach (var part in implementer.parts) {

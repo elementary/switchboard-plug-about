@@ -150,12 +150,12 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         var counts = new Gee.HashMap<string, uint> ();
-        const string[] keys = { "model name", "cpu", "Processor" };
+        const string[] KEYS = { "model name", "cpu", "Processor" };
 
         for (int i = 0; i < info.ncpu; i++) {
             unowned GLib.HashTable<string, string> values = info.cpuinfo[i].values;
             string? model = null;
-            foreach (var key in keys) {
+            foreach (var key in KEYS) {
                 model = values.lookup (key);
 
                 if (model != null) {
