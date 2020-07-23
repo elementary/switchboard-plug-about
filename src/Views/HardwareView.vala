@@ -144,7 +144,7 @@ public class About.HardwareView: Gtk.Grid {
         }
     }
 
-    private string clean_hostname(string hostname) {
+    private string clean_hostname (string hostname) {
         string cleaned_hostname = hostname.replace (" ", "-");
         return cleaned_hostname;
     }
