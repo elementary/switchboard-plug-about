@@ -252,8 +252,8 @@ public class About.HardwareView: Gtk.Grid {
         var file_root = GLib.File.new_for_path ("/");
         string storage_capacity = "";
         try {
-            var info = file_root.query_filesystem_info(GLib.FileAttribute.FILESYSTEM_SIZE, null);
-            storage_capacity = GLib.format_size(info.get_attribute_uint64(GLib.FileAttribute.FILESYSTEM_SIZE));
+            var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
+            storage_capacity = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
         } catch (Error e) {
             critical (e.message);
             storage_capacity = _("Unknown");
