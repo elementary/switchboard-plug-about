@@ -105,7 +105,7 @@ public class About.HardwareView: Gtk.Grid {
         attach (hdd_info, 0, 8, 2, 1);
 
         if (oem_enabled) {
-            var fileicon = new FileIcon(File.new_for_path (manufacturer_icon_path));
+            var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
 
             if (manufacturer_icon_path != null) {
                 manufacturer_logo.icon_name = null;
