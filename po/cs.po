@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-22 17:37+0000\n"
-"PO-Revision-Date: 2020-06-08 10:11+0000\n"
+"PO-Revision-Date: 2020-07-25 16:12+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/cs/>\n"
@@ -93,10 +93,8 @@ msgid "Restore Settings"
 msgstr "Obnovit nastavení"
 
 #: src/Views/HardwareView.vala:43
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "Grafika:"
+msgstr "Neznámá grafika"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -108,10 +106,8 @@ msgid "Manufacturer Website"
 msgstr "Webové stránky výrobce"
 
 #: src/Views/HardwareView.vala:169
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "Procesor:"
+msgstr "Neznámý procesor"
 
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
