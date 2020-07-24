@@ -13,7 +13,7 @@ Homepage: https://github.com/elementary/switchboard-plug-about
 
 Package: switchboard-plug-about
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: libgtop-2.0, ${misc:Depends}, ${shlibs:Depends}
 Recommends: io.elementary.feedback
 Enhances: switchboard
 Description: About plug for Switchboard
