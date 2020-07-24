@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-22 17:37+0000\n"
-"PO-Revision-Date: 2020-05-01 09:52+0000\n"
+"PO-Revision-Date: 2020-07-25 16:12+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/es/>\n"
@@ -43,7 +43,7 @@ msgstr "Sugerir traducción"
 
 #: src/Plug.vala:66
 msgid "Report Problems"
-msgstr "Reportar problemas"
+msgstr "Informar de problemas"
 
 #: src/Plug.vala:67
 msgid "Updates"
@@ -61,7 +61,7 @@ msgstr "GTK %u.%u.%u"
 
 #: src/Plug.vala:153
 msgid "Website"
-msgstr "Página web"
+msgstr "Sitio web"
 
 #. Translate button
 #: src/Plug.vala:174
@@ -95,10 +95,8 @@ msgid "Restore Settings"
 msgstr "Restaurar configuración"
 
 #: src/Views/HardwareView.vala:43
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "Gráficos:"
+msgstr "Tarjeta gráfica desconocida"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -110,10 +108,8 @@ msgid "Manufacturer Website"
 msgstr "Sitio web del fabricante"
 
 #: src/Views/HardwareView.vala:169
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "Procesador:"
+msgstr "Procesador desconocido"
 
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
