@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-22 17:37+0000\n"
-"PO-Revision-Date: 2020-03-19 19:09+0000\n"
+"PO-Revision-Date: 2020-07-28 14:12+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@posteo.net>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/en_GB/>\n"
@@ -93,10 +93,8 @@ msgid "Restore Settings"
 msgstr "Restore Settings"
 
 #: src/Views/HardwareView.vala:43
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "Graphics:"
+msgstr "Unknown Graphics"
 
 #: src/Views/HardwareView.vala:71
 #, c-format
@@ -108,10 +106,8 @@ msgid "Manufacturer Website"
 msgstr "Manufacturer Website"
 
 #: src/Views/HardwareView.vala:169
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "Processor:"
+msgstr "Unknown Processor"
 
 #: src/Views/HardwareView.vala:181
 msgid "Dual-Core"
