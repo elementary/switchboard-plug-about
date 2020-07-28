@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-22 17:38+0000\n"
-"PO-Revision-Date: 2019-12-19 13:07+0000\n"
-"Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
+"PO-Revision-Date: 2020-07-28 14:12+0000\n"
+"Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/tr/>\n"
 "Language: tr\n"
@@ -29,7 +29,7 @@ msgstr "İşletim sistemini ve donanım bilgilerini görüntüle"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
 msgid "Provide information for more types of Graphics"
-msgstr ""
+msgstr "Daha çok ekran kartı türü için bilgi sağlar"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:13
 #: data/io.elementary.switchboard.about.appdata.xml.in:18
