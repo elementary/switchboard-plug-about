@@ -102,7 +102,12 @@ public class About.Plug : Switchboard.Plug {
         logo.pixel_size = 128;
         logo.hexpand = true;
 
-        var title = new Gtk.Label (Environment.get_os_info (GLib.OsInfoKey.NAME));
+        var pretty_name = Environment.get_os_info (GLib.OsInfoKey.PRETTY_NAME);
+        if (pretty_name == "" || pretty_name == null) {
+            pretty_name = Environment.get_os_info (GLib.OsInfoKey.NAME);
+        }
+
+        var title = new Gtk.Label (pretty_name);
         title.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
         title.set_selectable (true);
         title.margin_bottom = 12;
