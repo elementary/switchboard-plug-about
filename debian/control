@@ -6,6 +6,7 @@ Build-Depends: debhelper (>= 10.5.1),
                gettext,
                libgranite-dev,
                libswitchboard-2.0-dev,
+               libgtop2-dev,
                meson,
                valac (>= 0.22)
 Standards-Version: 4.1.1
