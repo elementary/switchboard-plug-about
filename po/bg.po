@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:37+0000\n"
+"POT-Creation-Date: 2020-08-05 11:45+0000\n"
 "PO-Revision-Date: 2016-08-06 17:24+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -18,68 +18,68 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: src/Plug.vala:34
+#: src/Plug.vala:31
 msgid "About"
 msgstr "Относно"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:32
 msgid "View operating system and hardware information"
 msgstr "Преглед на сведения за операционната системата и апаратурата"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:60
 msgid "System Information"
 msgstr "Сведения за системата"
 
 #. Restore settings button
-#: src/Plug.vala:64 src/Plug.vala:209
+#: src/Plug.vala:61 src/Plug.vala:195
 msgid "Restore Default Settings"
 msgstr "Възстановяване на първоначалните настройки"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Suggest Translation"
 msgstr "Предлагане на превод"
 
-#: src/Plug.vala:66
+#: src/Plug.vala:63
 msgid "Report Problems"
 msgstr "Докладване на проблеми"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:64
 msgid "Updates"
 msgstr "Обновления"
 
-#: src/Plug.vala:141
+#: src/Plug.vala:117
 #, c-format
 msgid "Built on %s"
 msgstr "Базирана на %s"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:124
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr ""
 
-#: src/Plug.vala:153
+#: src/Plug.vala:134
 msgid "Website"
 msgstr "Мрежова страница"
 
 #. Translate button
-#: src/Plug.vala:174
+#: src/Plug.vala:160
 msgid "Suggest Translations"
 msgstr "Предлагане на превод"
 
-#: src/Plug.vala:183
+#: src/Plug.vala:169
 msgid "Report a Problem"
 msgstr "Докладване на проблем"
 
-#: src/Plug.vala:201
+#: src/Plug.vala:187
 msgid "Check for Updates"
 msgstr "Проверка за обновления"
 
-#: src/Plug.vala:281
+#: src/Plug.vala:267
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Настройките на системата ще бъдат върнати към първоначалните стойности"
 
-#: src/Plug.vala:282
+#: src/Plug.vala:268
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -88,7 +88,7 @@ msgstr ""
 "Всички данни и настройки на системата ще бъдат върнати към първоначалните "
 "стойности."
 
-#: src/Plug.vala:288
+#: src/Plug.vala:274
 msgid "Restore Settings"
 msgstr "Възстановяване на настройките"
 
@@ -98,55 +98,64 @@ msgstr "Възстановяване на настройките"
 msgid "Unknown Graphics"
 msgstr "Видеокарта"
 
-#: src/Views/HardwareView.vala:71
+#: src/Views/HardwareView.vala:72
 #, fuzzy, c-format
 msgid "%s memory"
 msgstr "Памет:"
 
-#: src/Views/HardwareView.vala:125
+#: src/Views/HardwareView.vala:126
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:197
+#, fuzzy, c-format
+#| msgid "Dual-Core"
+msgid "Dual-Core %s"
+msgstr "Двуядрен"
+
+#: src/Views/HardwareView.vala:199
+#, fuzzy, c-format
+#| msgid "Quad-Core"
+msgid "Quad-Core %s"
+msgstr "Четириядрен"
+
+#: src/Views/HardwareView.vala:201
+#, c-format
+msgid "Hexa-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:214
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Процесор:"
 
-#: src/Views/HardwareView.vala:181
-msgid "Dual-Core"
-msgstr "Двуядрен"
-
-#: src/Views/HardwareView.vala:183
-msgid "Quad-Core"
-msgstr "Четириядрен"
-
-#: src/Views/HardwareView.vala:204
+#: src/Views/HardwareView.vala:235
 msgid "Unknown"
 msgstr "Неизвестен"
 
-#: src/Views/HardwareView.vala:294
+#: src/Views/HardwareView.vala:306
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Постоянна памет"
 
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:308
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "Постоянна памет"
 
-#: src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:310
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Постоянна памет"
 
-#: src/Views/HardwareView.vala:301
+#: src/Views/HardwareView.vala:313
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "Постоянна памет"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:318
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Постоянна памет"

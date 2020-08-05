@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:37+0000\n"
+"POT-Creation-Date: 2020-08-05 11:45+0000\n"
 "PO-Revision-Date: 2020-01-01 15:07+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -20,67 +20,67 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:34
+#: src/Plug.vala:31
 msgid "About"
 msgstr "Over"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:32
 msgid "View operating system and hardware information"
 msgstr "Bekijk informatie over het besturingssysteem en hardware"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:60
 msgid "System Information"
 msgstr "Systeeminformatie"
 
 #. Restore settings button
-#: src/Plug.vala:64 src/Plug.vala:209
+#: src/Plug.vala:61 src/Plug.vala:195
 msgid "Restore Default Settings"
 msgstr "Herstel standaardinstellingen"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Suggest Translation"
 msgstr "Vertaling voorstellen"
 
-#: src/Plug.vala:66
+#: src/Plug.vala:63
 msgid "Report Problems"
 msgstr "Meld problemen"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:64
 msgid "Updates"
 msgstr "Updates"
 
-#: src/Plug.vala:141
+#: src/Plug.vala:117
 #, c-format
 msgid "Built on %s"
 msgstr "Gebouwd op %s"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:124
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr "GTK %u.%u.%u"
 
-#: src/Plug.vala:153
+#: src/Plug.vala:134
 msgid "Website"
 msgstr "Website"
 
 #. Translate button
-#: src/Plug.vala:174
+#: src/Plug.vala:160
 msgid "Suggest Translations"
 msgstr "Suggereer vertaling"
 
-#: src/Plug.vala:183
+#: src/Plug.vala:169
 msgid "Report a Problem"
 msgstr "Meld een probleem"
 
-#: src/Plug.vala:201
+#: src/Plug.vala:187
 msgid "Check for Updates"
 msgstr "Controleer op updates"
 
-#: src/Plug.vala:281
+#: src/Plug.vala:267
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systeeminstellingen zullen hersteld worden naar fabrieksinstellingen"
 
-#: src/Plug.vala:282
+#: src/Plug.vala:268
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -89,7 +89,7 @@ msgstr ""
 "standaardwaarden. Persoonlijke data, zoals muziek en afbeeldingen, zullen "
 "onaangetast blijven."
 
-#: src/Plug.vala:288
+#: src/Plug.vala:274
 msgid "Restore Settings"
 msgstr "Instellingen herstellen"
 
@@ -99,55 +99,64 @@ msgstr "Instellingen herstellen"
 msgid "Unknown Graphics"
 msgstr "Videokaart:"
 
-#: src/Views/HardwareView.vala:71
+#: src/Views/HardwareView.vala:72
 #, c-format
 msgid "%s memory"
 msgstr "%s geheugen"
 
-#: src/Views/HardwareView.vala:125
+#: src/Views/HardwareView.vala:126
 msgid "Manufacturer Website"
 msgstr "Website fabrikant"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:197
+#, fuzzy, c-format
+#| msgid "Dual-Core"
+msgid "Dual-Core %s"
+msgstr "Dual-Core"
+
+#: src/Views/HardwareView.vala:199
+#, fuzzy, c-format
+#| msgid "Quad-Core"
+msgid "Quad-Core %s"
+msgstr "Quad-Core"
+
+#: src/Views/HardwareView.vala:201
+#, c-format
+msgid "Hexa-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:214
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Processor:"
 
-#: src/Views/HardwareView.vala:181
-msgid "Dual-Core"
-msgstr "Dual-Core"
-
-#: src/Views/HardwareView.vala:183
-msgid "Quad-Core"
-msgstr "Quad-Core"
-
-#: src/Views/HardwareView.vala:204
+#: src/Views/HardwareView.vala:235
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: src/Views/HardwareView.vala:294
+#: src/Views/HardwareView.vala:306
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s opslagruimte (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:308
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s opslagruimte (eMMC)"
 
-#: src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:310
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s opslagruimte (SATA SSD)"
 
-#: src/Views/HardwareView.vala:301
+#: src/Views/HardwareView.vala:313
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s opslagruimte (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:318
 #, c-format
 msgid "%s storage"
 msgstr "%s opslagruimte"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:37+0000\n"
+"POT-Creation-Date: 2020-08-05 11:45+0000\n"
 "PO-Revision-Date: 2019-05-13 23:02+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Chinese <https://l10n.elementary.io/projects/switchboard/"
@@ -13,73 +13,73 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.6.1\n"
 
-#: src/Plug.vala:34
+#: src/Plug.vala:31
 msgid "About"
 msgstr "关于"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:32
 msgid "View operating system and hardware information"
 msgstr "查看操作系统和硬件信息"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:60
 msgid "System Information"
 msgstr ""
 
 #. Restore settings button
-#: src/Plug.vala:64 src/Plug.vala:209
+#: src/Plug.vala:61 src/Plug.vala:195
 msgid "Restore Default Settings"
 msgstr ""
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Suggest Translation"
 msgstr ""
 
-#: src/Plug.vala:66
+#: src/Plug.vala:63
 msgid "Report Problems"
 msgstr ""
 
-#: src/Plug.vala:67
+#: src/Plug.vala:64
 msgid "Updates"
 msgstr ""
 
-#: src/Plug.vala:141
+#: src/Plug.vala:117
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Plug.vala:148
+#: src/Plug.vala:124
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr ""
 
-#: src/Plug.vala:153
+#: src/Plug.vala:134
 msgid "Website"
 msgstr ""
 
 #. Translate button
-#: src/Plug.vala:174
+#: src/Plug.vala:160
 msgid "Suggest Translations"
 msgstr ""
 
-#: src/Plug.vala:183
+#: src/Plug.vala:169
 msgid "Report a Problem"
 msgstr ""
 
-#: src/Plug.vala:201
+#: src/Plug.vala:187
 msgid "Check for Updates"
 msgstr ""
 
-#: src/Plug.vala:281
+#: src/Plug.vala:267
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 
-#: src/Plug.vala:282
+#: src/Plug.vala:268
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 
-#: src/Plug.vala:288
+#: src/Plug.vala:274
 msgid "Restore Settings"
 msgstr ""
 
@@ -87,53 +87,60 @@ msgstr ""
 msgid "Unknown Graphics"
 msgstr ""
 
-#: src/Views/HardwareView.vala:71
+#: src/Views/HardwareView.vala:72
 #, c-format
 msgid "%s memory"
 msgstr ""
 
-#: src/Views/HardwareView.vala:125
+#: src/Views/HardwareView.vala:126
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:197
+#, c-format
+msgid "Dual-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:199
+#, c-format
+msgid "Quad-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:201
+#, c-format
+msgid "Hexa-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:214
 msgid "Unknown Processor"
 msgstr ""
 
-#: src/Views/HardwareView.vala:181
-msgid "Dual-Core"
-msgstr ""
-
-#: src/Views/HardwareView.vala:183
-msgid "Quad-Core"
-msgstr ""
-
-#: src/Views/HardwareView.vala:204
+#: src/Views/HardwareView.vala:235
 msgid "Unknown"
 msgstr ""
 
-#: src/Views/HardwareView.vala:294
+#: src/Views/HardwareView.vala:306
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr ""
 
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:308
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr ""
 
-#: src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:310
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr ""
 
-#: src/Views/HardwareView.vala:301
+#: src/Views/HardwareView.vala:313
 #, c-format
 msgid "%s storage (HDD)"
 msgstr ""
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:318
 #, c-format
 msgid "%s storage"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:37+0000\n"
+"POT-Creation-Date: 2020-08-05 11:45+0000\n"
 "PO-Revision-Date: 2020-04-12 11:10+0000\n"
 "Last-Translator: Stas <SedovSG@yandex.ru>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -21,67 +21,67 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:34
+#: src/Plug.vala:31
 msgid "About"
 msgstr "О системе"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:32
 msgid "View operating system and hardware information"
 msgstr "Просмотр информации об операционной системе и комплектующих"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:60
 msgid "System Information"
 msgstr "Сведения о системе"
 
 #. Restore settings button
-#: src/Plug.vala:64 src/Plug.vala:209
+#: src/Plug.vala:61 src/Plug.vala:195
 msgid "Restore Default Settings"
 msgstr "Восстановить настройки"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Suggest Translation"
 msgstr "Предложить перевод"
 
-#: src/Plug.vala:66
+#: src/Plug.vala:63
 msgid "Report Problems"
 msgstr "Сообщить о проблеме"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:64
 msgid "Updates"
 msgstr "Обновления"
 
-#: src/Plug.vala:141
+#: src/Plug.vala:117
 #, c-format
 msgid "Built on %s"
 msgstr "Построена на базе %s"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:124
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr "GTK %u.%u.%u"
 
-#: src/Plug.vala:153
+#: src/Plug.vala:134
 msgid "Website"
 msgstr "Веб-сайт"
 
 #. Translate button
-#: src/Plug.vala:174
+#: src/Plug.vala:160
 msgid "Suggest Translations"
 msgstr "Предложить перевод"
 
-#: src/Plug.vala:183
+#: src/Plug.vala:169
 msgid "Report a Problem"
 msgstr "Сообщить об ошибке"
 
-#: src/Plug.vala:201
+#: src/Plug.vala:187
 msgid "Check for Updates"
 msgstr "Проверить обновления"
 
-#: src/Plug.vala:281
+#: src/Plug.vala:267
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Системные настройки будут восстановлены до настроек по умолчанию"
 
-#: src/Plug.vala:282
+#: src/Plug.vala:268
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -89,7 +89,7 @@ msgstr ""
 "Все системные настройки и данные будут сброшены до значений по умолчанию. "
 "Личные данные, такие как музыка и изображения, не будут затронуты."
 
-#: src/Plug.vala:288
+#: src/Plug.vala:274
 msgid "Restore Settings"
 msgstr "Восстановить настройки"
 
@@ -99,55 +99,64 @@ msgstr "Восстановить настройки"
 msgid "Unknown Graphics"
 msgstr "Графика:"
 
-#: src/Views/HardwareView.vala:71
+#: src/Views/HardwareView.vala:72
 #, c-format
 msgid "%s memory"
 msgstr "Память: %s"
 
-#: src/Views/HardwareView.vala:125
+#: src/Views/HardwareView.vala:126
 msgid "Manufacturer Website"
 msgstr "Сайт производителя"
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:197
+#, fuzzy, c-format
+#| msgid "Dual-Core"
+msgid "Dual-Core %s"
+msgstr "2-х ядерный"
+
+#: src/Views/HardwareView.vala:199
+#, fuzzy, c-format
+#| msgid "Quad-Core"
+msgid "Quad-Core %s"
+msgstr "4-х ядерный"
+
+#: src/Views/HardwareView.vala:201
+#, c-format
+msgid "Hexa-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:214
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Процессор:"
 
-#: src/Views/HardwareView.vala:181
-msgid "Dual-Core"
-msgstr "2-х ядерный"
-
-#: src/Views/HardwareView.vala:183
-msgid "Quad-Core"
-msgstr "4-х ядерный"
-
-#: src/Views/HardwareView.vala:204
+#: src/Views/HardwareView.vala:235
 msgid "Unknown"
 msgstr "Неизвестно"
 
-#: src/Views/HardwareView.vala:294
+#: src/Views/HardwareView.vala:306
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s хранилище (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:308
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s хранилище (eMMC)"
 
-#: src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:310
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s хранилище (SATA SSD)"
 
-#: src/Views/HardwareView.vala:301
+#: src/Views/HardwareView.vala:313
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s хранилище (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:318
 #, c-format
 msgid "%s storage"
 msgstr "Системный раздел: %s"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:37+0000\n"
+"POT-Creation-Date: 2020-08-05 11:45+0000\n"
 "PO-Revision-Date: 2017-06-16 17:24+0000\n"
 "Last-Translator: Rajeev Kumar <irajeevankumar@gmail.com>\n"
 "Language-Team: Tamil <https://l10n.elementary.io/projects/switchboard/"
@@ -20,67 +20,67 @@ msgstr ""
 "X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:34
+#: src/Plug.vala:31
 msgid "About"
 msgstr "பற்றி"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:32
 msgid "View operating system and hardware information"
 msgstr "இயக்க முறைமை மற்றும் வன்பொருள் தகவலைக் காண்க"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:60
 msgid "System Information"
 msgstr "கணினி தகவல்"
 
 #. Restore settings button
-#: src/Plug.vala:64 src/Plug.vala:209
+#: src/Plug.vala:61 src/Plug.vala:195
 msgid "Restore Default Settings"
 msgstr "இயல்புநிலை அமைப்புகளை மீட்டமை"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Suggest Translation"
 msgstr "மொழிபெயர்ப்பு பரிந்துரைக்க"
 
-#: src/Plug.vala:66
+#: src/Plug.vala:63
 msgid "Report Problems"
 msgstr "சிக்கல்களைப் புகாரளி"
 
-#: src/Plug.vala:67
+#: src/Plug.vala:64
 msgid "Updates"
 msgstr "மேம்படுத்தல்கள்"
 
-#: src/Plug.vala:141
+#: src/Plug.vala:117
 #, c-format
 msgid "Built on %s"
 msgstr "%s இல் கட்டப்பட்டது"
 
-#: src/Plug.vala:148
+#: src/Plug.vala:124
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr ""
 
-#: src/Plug.vala:153
+#: src/Plug.vala:134
 msgid "Website"
 msgstr "வலைத்தளம்"
 
 #. Translate button
-#: src/Plug.vala:174
+#: src/Plug.vala:160
 msgid "Suggest Translations"
 msgstr "மொழிபெயர்ப்பு பரிந்துரைக்க"
 
-#: src/Plug.vala:183
+#: src/Plug.vala:169
 msgid "Report a Problem"
 msgstr "பிரச்சனையை புகார் செய்"
 
-#: src/Plug.vala:201
+#: src/Plug.vala:187
 msgid "Check for Updates"
 msgstr "புதுப்பிப்புகளுக்குச் சரிபார்க்கவும்"
 
-#: src/Plug.vala:281
+#: src/Plug.vala:267
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "கணினி அமைப்புகள் இயல்புநிலைக்கு மீட்டமைக்கப்படும்"
 
-#: src/Plug.vala:282
+#: src/Plug.vala:268
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -89,7 +89,7 @@ msgstr ""
 "அனைத்து கணினி அமைப்புகள் மற்றும் தரவு இயல்புநிலை மதிப்புகள் மீட்டமைக்கப்படும். இசை மற்றும் "
 "படங்கள் போன்ற தனிப்பட்ட தரவு பாதிக்கப்படாது."
 
-#: src/Plug.vala:288
+#: src/Plug.vala:274
 msgid "Restore Settings"
 msgstr "அமைப்புகளை மீட்டெடுக்கவும்"
 
@@ -99,55 +99,64 @@ msgstr "அமைப்புகளை மீட்டெடுக்கவு�
 msgid "Unknown Graphics"
 msgstr "வரைகலைகள்:"
 
-#: src/Views/HardwareView.vala:71
+#: src/Views/HardwareView.vala:72
 #, c-format
 msgid "%s memory"
 msgstr "%s நினைவகம்"
 
-#: src/Views/HardwareView.vala:125
+#: src/Views/HardwareView.vala:126
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:197
+#, fuzzy, c-format
+#| msgid "Dual-Core"
+msgid "Dual-Core %s"
+msgstr "இரட்டை- கோர்"
+
+#: src/Views/HardwareView.vala:199
+#, fuzzy, c-format
+#| msgid "Quad-Core"
+msgid "Quad-Core %s"
+msgstr "குவாட்-கோர்"
+
+#: src/Views/HardwareView.vala:201
+#, c-format
+msgid "Hexa-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:214
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "நுண்செயலி:"
 
-#: src/Views/HardwareView.vala:181
-msgid "Dual-Core"
-msgstr "இரட்டை- கோர்"
-
-#: src/Views/HardwareView.vala:183
-msgid "Quad-Core"
-msgstr "குவாட்-கோர்"
-
-#: src/Views/HardwareView.vala:204
+#: src/Views/HardwareView.vala:235
 msgid "Unknown"
 msgstr "அறியப்படாத"
 
-#: src/Views/HardwareView.vala:294
+#: src/Views/HardwareView.vala:306
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "நினைவகம்:"
 
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:308
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "நினைவகம்:"
 
-#: src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:310
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "நினைவகம்:"
 
-#: src/Views/HardwareView.vala:301
+#: src/Views/HardwareView.vala:313
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "நினைவகம்:"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:318
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "நினைவகம்:"

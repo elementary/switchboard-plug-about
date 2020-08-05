@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:37+0000\n"
+"POT-Creation-Date: 2020-08-05 11:45+0000\n"
 "PO-Revision-Date: 2015-05-17 01:05+0000\n"
 "Last-Translator: akoho <Unknown>\n"
 "Language-Team: Malagasy <mg@li.org>\n"
@@ -18,75 +18,75 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: src/Plug.vala:34
+#: src/Plug.vala:31
 msgid "About"
 msgstr "Mombamomba"
 
-#: src/Plug.vala:35
+#: src/Plug.vala:32
 msgid "View operating system and hardware information"
 msgstr ""
 
-#: src/Plug.vala:63
+#: src/Plug.vala:60
 msgid "System Information"
 msgstr ""
 
 #. Restore settings button
-#: src/Plug.vala:64 src/Plug.vala:209
+#: src/Plug.vala:61 src/Plug.vala:195
 msgid "Restore Default Settings"
 msgstr "Avereno tamin'ny voalohany"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:62
 msgid "Suggest Translation"
 msgstr ""
 
-#: src/Plug.vala:66
+#: src/Plug.vala:63
 msgid "Report Problems"
 msgstr ""
 
-#: src/Plug.vala:67
+#: src/Plug.vala:64
 msgid "Updates"
 msgstr ""
 
-#: src/Plug.vala:141
+#: src/Plug.vala:117
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Plug.vala:148
+#: src/Plug.vala:124
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr ""
 
-#: src/Plug.vala:153
+#: src/Plug.vala:134
 msgid "Website"
 msgstr "Tranonkala"
 
 #. Translate button
-#: src/Plug.vala:174
+#: src/Plug.vala:160
 msgid "Suggest Translations"
 msgstr "Tondrozotram-pandikana"
 
-#: src/Plug.vala:183
+#: src/Plug.vala:169
 msgid "Report a Problem"
 msgstr "Hampita olana"
 
-#: src/Plug.vala:201
+#: src/Plug.vala:187
 msgid "Check for Updates"
 msgstr "Hijery vaovao"
 
-#: src/Plug.vala:281
+#: src/Plug.vala:267
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Ho averina tamin'ny volohany ny firafitry ny system"
 
-#: src/Plug.vala:282
+#: src/Plug.vala:268
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr "Hiverina amin'ny voalohany daholo ny firafitra sy ny tahiry rehetra"
 
-#: src/Plug.vala:288
+#: src/Plug.vala:274
 msgid "Restore Settings"
 msgstr "Avereno ny firafitra"
 
@@ -96,55 +96,64 @@ msgstr "Avereno ny firafitra"
 msgid "Unknown Graphics"
 msgstr "Loko"
 
-#: src/Views/HardwareView.vala:71
+#: src/Views/HardwareView.vala:72
 #, fuzzy, c-format
 msgid "%s memory"
 msgstr "Tadidy"
 
-#: src/Views/HardwareView.vala:125
+#: src/Views/HardwareView.vala:126
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:169
+#: src/Views/HardwareView.vala:197
+#, fuzzy, c-format
+#| msgid "Dual-Core"
+msgid "Dual-Core %s"
+msgstr "Roy-loha"
+
+#: src/Views/HardwareView.vala:199
+#, fuzzy, c-format
+#| msgid "Quad-Core"
+msgid "Quad-Core %s"
+msgstr "Efa-doha"
+
+#: src/Views/HardwareView.vala:201
+#, c-format
+msgid "Hexa-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:214
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Atidoha"
 
-#: src/Views/HardwareView.vala:181
-msgid "Dual-Core"
-msgstr "Roy-loha"
-
-#: src/Views/HardwareView.vala:183
-msgid "Quad-Core"
-msgstr "Efa-doha"
-
-#: src/Views/HardwareView.vala:204
+#: src/Views/HardwareView.vala:235
 msgid "Unknown"
 msgstr "Tsy fahita"
 
-#: src/Views/HardwareView.vala:294
+#: src/Views/HardwareView.vala:306
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Fitahirizana"
 
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:308
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "Fitahirizana"
 
-#: src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:310
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Fitahirizana"
 
-#: src/Views/HardwareView.vala:301
+#: src/Views/HardwareView.vala:313
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "Fitahirizana"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:318
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Fitahirizana"
