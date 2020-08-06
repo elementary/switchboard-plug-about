@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-05 11:45+0000\n"
-"PO-Revision-Date: 2020-07-23 18:45+0000\n"
+"PO-Revision-Date: 2020-08-08 14:13+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
@@ -107,21 +107,19 @@ msgid "Manufacturer Website"
 msgstr "Site web du fabricant"
 
 #: src/Views/HardwareView.vala:197
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "Double cœur"
+msgstr "Double cœur %s"
 
 #: src/Views/HardwareView.vala:199
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "Quadruple cœur"
+msgstr "Quadruple cœur %s"
 
 #: src/Views/HardwareView.vala:201
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "Six cœurs %s"
 
 #: src/Views/HardwareView.vala:214
 msgid "Unknown Processor"
