@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-05 11:45+0000\n"
-"PO-Revision-Date: 2020-07-25 16:12+0000\n"
+"PO-Revision-Date: 2020-08-14 07:13+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/es/>\n"
@@ -26,7 +26,7 @@ msgstr "Acerca de"
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
-msgstr "Ver información del sistema operativo y hardware"
+msgstr "Vea información del sistema operativo y el equipo"
 
 #: src/Plug.vala:60
 msgid "System Information"
@@ -35,7 +35,7 @@ msgstr "Información del sistema"
 #. Restore settings button
 #: src/Plug.vala:61 src/Plug.vala:195
 msgid "Restore Default Settings"
-msgstr "Restaurar configuraciones predeterminadas"
+msgstr "Restaurar configuración predeterminada"
 
 #: src/Plug.vala:62
 msgid "Suggest Translation"
@@ -70,7 +70,7 @@ msgstr "Sugerir traducciones"
 
 #: src/Plug.vala:169
 msgid "Report a Problem"
-msgstr "Reportar un problema"
+msgstr "Informar de un problema"
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -108,21 +108,19 @@ msgid "Manufacturer Website"
 msgstr "Sitio web del fabricante"
 
 #: src/Views/HardwareView.vala:197
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "Doble núcleo"
+msgstr "%s de doble núcleo"
 
 #: src/Views/HardwareView.vala:199
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "Cuádruple núcleo"
+msgstr "%s de cuádruple núcleo"
 
 #: src/Views/HardwareView.vala:201
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "%s de séxtuple núcleo"
 
 #: src/Views/HardwareView.vala:214
 msgid "Unknown Processor"
