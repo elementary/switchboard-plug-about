@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-05 11:45+0000\n"
-"PO-Revision-Date: 2019-12-05 05:25+0000\n"
+"PO-Revision-Date: 2020-08-16 11:22+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:31
@@ -93,10 +93,8 @@ msgid "Restore Settings"
 msgstr "Palauta oletusasetukset"
 
 #: src/Views/HardwareView.vala:43
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "Grafiikka:"
+msgstr "Tuntematon grafiikka"
 
 #: src/Views/HardwareView.vala:72
 #, c-format
@@ -108,27 +106,23 @@ msgid "Manufacturer Website"
 msgstr "Valmistajan verkkosivusto"
 
 #: src/Views/HardwareView.vala:197
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "Tuplaydin"
+msgstr "Tuplaydin %s"
 
 #: src/Views/HardwareView.vala:199
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "Neliydin"
+msgstr "Neliydin %s"
 
 #: src/Views/HardwareView.vala:201
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "Heksaydin %s"
 
 #: src/Views/HardwareView.vala:214
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "Suoritin:"
+msgstr "Tuntematon suoritin"
 
 #: src/Views/HardwareView.vala:235
 msgid "Unknown"
