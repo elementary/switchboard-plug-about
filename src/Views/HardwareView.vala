@@ -33,6 +33,8 @@ public class About.HardwareView : Gtk.Grid {
     private string product_version;
     private SystemInterface system_interface;
     private SessionManager session_manager;
+    private Gtk.Label product_name_info;
+    private Gtk.Entry hostname_entry;
 
     construct {
         try {
@@ -52,16 +54,37 @@ public class About.HardwareView : Gtk.Grid {
             critical (e.message);
         }
 
+        (system_interface as DBusProxy).g_properties_changed.connect ((changed, invalid) => {
+            var host_name = changed.lookup_value ("Hostname", new VariantType ("s"));
+            if (host_name != null) {
+                product_name_info.label = system_interface.hostname;
+            }
+        });
+
         var manufacturer_logo = new Gtk.Image ();
         manufacturer_logo.icon_name = system_interface.icon_name;
         manufacturer_logo.hexpand = true;
         manufacturer_logo.pixel_size = 128;
         manufacturer_logo.use_fallback = true;
 
-        var product_name_info = new Gtk.Label (Environment.get_host_name ());
+        product_name_info = new Gtk.Label (Environment.get_host_name ());
         product_name_info.ellipsize = Pango.EllipsizeMode.END;
         product_name_info.get_style_context ().add_class ("h2");
         product_name_info.set_selectable (true);
+        product_name_info.button_press_event.connect (change_hostname);
+
+        hostname_entry = new Gtk.Entry ();
+        hostname_entry.get_style_context ().add_class ("h2");
+        hostname_entry.activates_default = true;
+        hostname_entry.xalign = (float) 0.5;
+        hostname_entry.hexpand = true;
+        hostname_entry.secondary_icon_name = "emblem-default-symbolic";
+        hostname_entry.secondary_icon_tooltip_text = _("Save Hostname");
+        hostname_entry.icon_press.connect (save_change);
+
+        var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
+        size_group.add_widget (product_name_info);
+        size_group.add_widget (hostname_entry);
 
         var processor_info = new Gtk.Label (processor);
         processor_info.justify = Gtk.Justification.CENTER;
@@ -128,6 +151,46 @@ public class About.HardwareView : Gtk.Grid {
             }
         } else {
             attach (product_name_info, 0, 1, 2, 1);
+        }
+    }
+
+    private bool change_hostname (Gdk.EventButton event) {
+        if (event.button == Gdk.BUTTON_PRIMARY && event.type == Gdk.EventType.2BUTTON_PRESS) {
+            remove (product_name_info);
+            hostname_entry.text = system_interface.hostname;
+            if (oem_enabled) {
+                if (product_version != null) {
+                    attach (hostname_entry, 0, 1, 1, 1);
+                } else {
+                    attach (hostname_entry, 0, 1, 2, 1);
+                }
+            } else {
+                attach (hostname_entry, 0, 1, 2, 1);
+            }
+            hostname_entry.grab_focus ();
+            show_all ();
+        }
+        return Gdk.EVENT_PROPAGATE;
+    }
+
+    private void save_change (Gtk.EntryIconPosition pos, Gdk.Event event) {
+        if (pos == Gtk.EntryIconPosition.SECONDARY) {
+            try {
+                system_interface.set_static_hostname (hostname_entry.text, true);
+            } catch (Error e) {
+                warning (e.message);
+            }
+            remove (hostname_entry);
+            if (oem_enabled) {
+                if (product_version != null) {
+                    attach (product_name_info, 0, 1, 1, 1);
+                } else {
+                    attach (product_name_info, 0, 1, 2, 1);
+                }
+            } else {
+                attach (product_name_info, 0, 1, 2, 1);
+            }
+            show_all ();
         }
     }
 
@@ -366,6 +429,8 @@ public class About.HardwareView : Gtk.Grid {
 public interface SystemInterface : Object {
     [DBus (name = "IconName")]
     public abstract string icon_name { owned get; }
+    public abstract string hostname { owned get; }
+    public abstract void set_static_hostname (string arg0, bool arg1) throws Error;
 }
 
 [DBus (name = "org.gnome.SessionManager")]
