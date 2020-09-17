@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-05 11:45+0000\n"
-"PO-Revision-Date: 2020-09-17 00:14+0000\n"
+"PO-Revision-Date: 2020-09-18 05:24+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
@@ -27,16 +27,16 @@ msgstr "Про elementary"
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
-msgstr "Перегляд операційної системи та інформації про апаратні засоби"
+msgstr "Огляд операційної системи та відомостей про апаратні засоби"
 
 #: src/Plug.vala:60
 msgid "System Information"
-msgstr "Системна інформація"
+msgstr "Відомості про систему"
 
 #. Restore settings button
 #: src/Plug.vala:61 src/Plug.vala:195
 msgid "Restore Default Settings"
-msgstr "ВІдновити типові налаштування"
+msgstr "Відновити типові налаштування"
 
 #: src/Plug.vala:62
 msgid "Suggest Translation"
@@ -44,7 +44,7 @@ msgstr "Запропонувати переклад"
 
 #: src/Plug.vala:63
 msgid "Report Problems"
-msgstr "Повідомити про проблему"
+msgstr "Повідомити про проблеми"
 
 #: src/Plug.vala:64
 msgid "Updates"
@@ -67,7 +67,7 @@ msgstr "Вебсайт"
 #. Translate button
 #: src/Plug.vala:160
 msgid "Suggest Translations"
-msgstr "Допомогти з перекладом"
+msgstr "Запропонувати переклад"
 
 #: src/Plug.vala:169
 msgid "Report a Problem"
@@ -130,30 +130,30 @@ msgid "Unknown"
 msgstr "Невідомо"
 
 #: src/Views/HardwareView.vala:306
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "Основна пам’ять:"
+msgstr "%s сховища (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:308
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "Основна пам’ять:"
+msgstr "%s сховища (eMMC)"
 
 #: src/Views/HardwareView.vala:310
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "Основна пам’ять:"
+msgstr "%s сховища (SATA SSD)"
 
 #: src/Views/HardwareView.vala:313
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "Основна пам’ять:"
+msgstr "%s сховища (HDD)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:318
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage"
-msgstr "Основна пам’ять:"
+msgstr "%s сховища"
 
 #~ msgid "Cancel"
 #~ msgstr "Скасувати"
