@@ -74,12 +74,14 @@ public class About.HardwareView : Gtk.Grid {
         product_name_info.button_press_event.connect (change_hostname);
 
         hostname_entry = new Gtk.Entry ();
-        hostname_entry.get_style_context ().add_class ("h2");
+        hostname_entry.get_style_context ().add_class ("h3");
         hostname_entry.activates_default = true;
         hostname_entry.xalign = (float) 0.5;
         hostname_entry.hexpand = true;
+        hostname_entry.primary_icon_name = "user-home-symbolic";
+        hostname_entry.primary_icon_tooltip_text = _("Hostname");
         hostname_entry.secondary_icon_name = "emblem-default-symbolic";
-        hostname_entry.secondary_icon_tooltip_text = _("Save Hostname");
+        hostname_entry.secondary_icon_tooltip_text = _("Save");
         hostname_entry.icon_press.connect (save_change);
 
         var size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
