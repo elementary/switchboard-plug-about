@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-05 11:45+0000\n"
-"PO-Revision-Date: 2020-09-18 05:24+0000\n"
+"PO-Revision-Date: 2020-09-24 16:44+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
@@ -27,7 +27,7 @@ msgstr "Про elementary"
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
-msgstr "Огляд операційної системи та відомостей про апаратні засоби"
+msgstr "Огляд операційної системи та подробиць про апаратні засоби"
 
 #: src/Plug.vala:60
 msgid "System Information"
