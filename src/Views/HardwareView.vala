@@ -309,7 +309,7 @@ public class About.HardwareView : Gtk.Grid {
             { "(AMD [A-Z])(.*)", "\\1\\L\\2\\E"},
             { "Graphics Controller", "Graphics"},
             { "Intel Corporation UHD", "Intel® UHD"},
-            { "NVIDIA Corporation (.*) \\[(\\S*) (\\S*) (.*)\\]","NVIDIA® \\2® \\3® \\4"}
+            { "NVIDIA Corporation (.*) \\[(\\S*) (\\S*) (.*)\\]", "NVIDIA® \\2® \\3® \\4"}
         };
 
         try {
