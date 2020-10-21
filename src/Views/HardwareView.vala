@@ -22,7 +22,8 @@
 
 public class About.HardwareView : Gtk.Grid {
     private bool oem_enabled;
-    private string graphics;
+    private string primary_gpu;
+    private string secondary_gpu;
     private string hdd;
     private string manufacturer_icon_path;
     private string manufacturer_name;
@@ -32,15 +33,15 @@ public class About.HardwareView : Gtk.Grid {
     private string product_name;
     private string product_version;
     private SystemInterface system_interface;
-    private SessionManager session_manager;
+    private SwitcherooControl switcheroo_control;
 
     construct {
         try {
-            session_manager = Bus.get_proxy_sync (BusType.SESSION,
-                "org.gnome.SessionManager", "/org/gnome/SessionManager");
+            switcheroo_control = Bus.get_proxy_sync (BusType.SYSTEM,
+                "net.hadess.SwitcherooControl", "/net/hadess/SwitcherooControl");
         } catch (IOError e) {
             critical (e.message);
-            graphics = _("Unknown Graphics");
+            primary_gpu = _("Unknown Graphics");
         }
 
         fetch_hardware_info ();
@@ -73,10 +74,15 @@ public class About.HardwareView : Gtk.Grid {
         memory_info.ellipsize = Pango.EllipsizeMode.END;
         memory_info.set_selectable (true);
 
-        var graphics_info = new Gtk.Label (graphics);
+        var graphics_info = new Gtk.Label (primary_gpu);
         graphics_info.ellipsize = Pango.EllipsizeMode.END;
         graphics_info.justify = Gtk.Justification.CENTER;
         graphics_info.set_selectable (true);
+        
+        var graphics_secondary_info = new Gtk.Label (secondary_gpu);
+        graphics_secondary_info.ellipsize = Pango.EllipsizeMode.END;
+        graphics_secondary_info.justify = Gtk.Justification.CENTER;
+        graphics_secondary_info.set_selectable (true);
 
         var hdd_info = new Gtk.Label (hdd);
         hdd_info.ellipsize = Pango.EllipsizeMode.END;
@@ -84,11 +90,16 @@ public class About.HardwareView : Gtk.Grid {
 
         column_spacing = 6;
         row_spacing = 6;
+        
+        if (secondary_gpu != null){
+            attach (graphics_secondary_info, 0, 5, 2, 1);
+        }
+        
         attach (manufacturer_logo, 0, 0, 2, 1);
         attach (processor_info, 0, 3, 2, 1);
         attach (graphics_info, 0, 4, 2, 1);
-        attach (memory_info, 0, 5, 2, 1);
-        attach (hdd_info, 0, 6, 2, 1);
+        attach (memory_info, 0, 6, 2, 1);
+        attach (hdd_info, 0, 7, 2, 1);
 
         if (oem_enabled) {
             var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
@@ -222,7 +233,8 @@ public class About.HardwareView : Gtk.Grid {
         memory = GLib.format_size (mem.total);
 
         // Graphics
-        graphics = clean_name (session_manager.renderer);
+        primary_gpu = get_gpu_name (true);
+        secondary_gpu = get_gpu_name (false);
 
         // Hard Drive
         var file_root = GLib.File.new_for_path ("/");
@@ -266,6 +278,23 @@ public class About.HardwareView : Gtk.Grid {
             oem_enabled = false;
         }
     }
+    
+    private string get_gpu_name (bool is_primary) {
+        foreach (HashTable<string,Variant> gpu in switcheroo_control.gpus) {
+            bool is_default = gpu.get ("Default").get_boolean ();
+            
+            if (is_default == is_primary) {
+                return clean_name (gpu.get ("Name").get_string());
+            }
+        }
+    
+        if (is_primary) {
+            return _("Unknown Graphics");
+        } else {
+            return null;
+        }
+        
+    }
 
     private string clean_name (string info) {
 
@@ -279,6 +308,8 @@ public class About.HardwareView : Gtk.Grid {
             { "(AMD .*) [(].*", "\\1"},
             { "(AMD [A-Z])(.*)", "\\1\\L\\2\\E"},
             { "Graphics Controller", "Graphics"},
+            { "Intel Corporation UHD", "Intel® UHD"},
+            { "NVIDIA Corporation (.*) \\[(\\S*) (\\S*) (.*)\\]","NVIDIA® \\2® \\3® \\4"}
         };
 
         try {
@@ -368,8 +399,11 @@ public interface SystemInterface : Object {
     public abstract string icon_name { owned get; }
 }
 
-[DBus (name = "org.gnome.SessionManager")]
-public interface SessionManager : Object {
-    [DBus (name = "Renderer")]
-    public abstract string renderer { owned get;}
+[DBus (name = "net.hadess.SwitcherooControl")]
+public interface SwitcherooControl : Object {
+    [DBus (name = "HasDualGpu")]
+    public abstract bool has_dual_gpu { owned get;}
+    
+    [DBus (name = "GPUs")]
+    public abstract HashTable<string,Variant>[] gpus { owned get;}
 }

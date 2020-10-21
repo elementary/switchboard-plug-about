@@ -13,6 +13,7 @@ You'll need the following dependencies:
 * libgtop2-dev
 * meson
 * valac
+* switchboard-control (at runtime)
 
 Run `meson` to configure the build environment and then `ninja` to build
 
