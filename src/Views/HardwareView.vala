@@ -78,7 +78,7 @@ public class About.HardwareView : Gtk.Grid {
         graphics_info.ellipsize = Pango.EllipsizeMode.END;
         graphics_info.justify = Gtk.Justification.CENTER;
         graphics_info.set_selectable (true);
-        
+
         var graphics_secondary_info = new Gtk.Label (secondary_gpu);
         graphics_secondary_info.ellipsize = Pango.EllipsizeMode.END;
         graphics_secondary_info.justify = Gtk.Justification.CENTER;
@@ -90,11 +90,11 @@ public class About.HardwareView : Gtk.Grid {
 
         column_spacing = 6;
         row_spacing = 6;
-        
+
         if (secondary_gpu != null){
             attach (graphics_secondary_info, 0, 5, 2, 1);
         }
-        
+
         attach (manufacturer_logo, 0, 0, 2, 1);
         attach (processor_info, 0, 3, 2, 1);
         attach (graphics_info, 0, 4, 2, 1);
@@ -278,22 +278,22 @@ public class About.HardwareView : Gtk.Grid {
             oem_enabled = false;
         }
     }
-    
+
     private string get_gpu_name (bool is_primary) {
         foreach (HashTable<string,Variant> gpu in switcheroo_control.gpus) {
             bool is_default = gpu.get ("Default").get_boolean ();
-            
+
             if (is_default == is_primary) {
                 return clean_name (gpu.get ("Name").get_string());
             }
         }
-    
+
         if (is_primary) {
             return _("Unknown Graphics");
         } else {
             return null;
         }
-        
+
     }
 
     private string clean_name (string info) {
@@ -402,8 +402,8 @@ public interface SystemInterface : Object {
 [DBus (name = "net.hadess.SwitcherooControl")]
 public interface SwitcherooControl : Object {
     [DBus (name = "HasDualGpu")]
-    public abstract bool has_dual_gpu { owned get;}
-    
+    public abstract bool has_dual_gpu { owned get; }
+
     [DBus (name = "GPUs")]
-    public abstract HashTable<string,Variant>[] gpus { owned get;}
+    public abstract HashTable<string,Variant>[] gpus { owned get; }
 }
