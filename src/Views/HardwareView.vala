@@ -91,7 +91,7 @@ public class About.HardwareView : Gtk.Grid {
         column_spacing = 6;
         row_spacing = 6;
 
-        if (secondary_gpu != null){
+        if (secondary_gpu != null) {
             attach (graphics_secondary_info, 0, 5, 2, 1);
         }
 
@@ -284,7 +284,7 @@ public class About.HardwareView : Gtk.Grid {
             bool is_default = gpu.get ("Default").get_boolean ();
 
             if (is_default == is_primary) {
-                return clean_name (gpu.get ("Name").get_string());
+                return clean_name (gpu.get ("Name").get_string ());
             }
         }
 
