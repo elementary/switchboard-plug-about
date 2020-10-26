@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-05 11:45+0000\n"
-"PO-Revision-Date: 2020-01-01 15:07+0000\n"
+"PO-Revision-Date: 2020-10-27 06:15+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/nl/>\n"
@@ -94,10 +94,8 @@ msgid "Restore Settings"
 msgstr "Instellingen herstellen"
 
 #: src/Views/HardwareView.vala:43
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "Videokaart:"
+msgstr "Onbekende Videokaart"
 
 #: src/Views/HardwareView.vala:72
 #, c-format
@@ -109,27 +107,23 @@ msgid "Manufacturer Website"
 msgstr "Website fabrikant"
 
 #: src/Views/HardwareView.vala:197
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "Dual-Core"
+msgstr "Dual-Core %s"
 
 #: src/Views/HardwareView.vala:199
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "Quad-Core"
+msgstr "Quad-Core %s"
 
 #: src/Views/HardwareView.vala:201
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "Hexa-Core %s"
 
 #: src/Views/HardwareView.vala:214
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "Processor:"
+msgstr "Onbekende Processor"
 
 #: src/Views/HardwareView.vala:235
 msgid "Unknown"
