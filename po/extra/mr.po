@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-22 17:38+0000\n"
-"PO-Revision-Date: 2019-11-25 09:24+0000\n"
+"PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/mr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
 msgid "About"
@@ -29,7 +29,7 @@ msgstr "ऑपरेटिंग सिस्टम आणि हार्डव
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
 msgid "Provide information for more types of Graphics"
-msgstr ""
+msgstr "ग्राफिक्सच्या अधिक प्रकारांसाठी माहिती प्रदान करा"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:13
 #: data/io.elementary.switchboard.about.appdata.xml.in:18
