@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:43+0000\n"
 "PO-Revision-Date: 2020-08-16 11:22+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -33,7 +33,7 @@ msgid "System Information"
 msgstr "Järjestelmän tiedot"
 
 #. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:195
+#: src/Plug.vala:61 src/Plug.vala:196
 msgid "Restore Default Settings"
 msgstr "Palauta oletusasetukset"
 
@@ -41,46 +41,46 @@ msgstr "Palauta oletusasetukset"
 msgid "Suggest Translation"
 msgstr "Ehdota käännöstä"
 
-#: src/Plug.vala:63
-msgid "Report Problems"
-msgstr "Ilmoita ongelmasta"
+#: src/Plug.vala:63 src/Plug.vala:170
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:64
+msgid "Report a Problem"
+msgstr "Ilmoita ongelmasta"
+
+#: src/Plug.vala:65
 msgid "Updates"
 msgstr "Päivitykset"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:118
 #, c-format
 msgid "Built on %s"
 msgstr "Pohjana %s"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:125
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr "GTK %u.%u.%u"
 
-#: src/Plug.vala:134
+#: src/Plug.vala:135
 msgid "Website"
 msgstr "Verkkosivusto"
 
 #. Translate button
-#: src/Plug.vala:160
+#: src/Plug.vala:161
 msgid "Suggest Translations"
 msgstr "Ehdota käännöksiä"
 
-#: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Ilmoita ongelmasta"
-
-#: src/Plug.vala:187
+#: src/Plug.vala:188
 msgid "Check for Updates"
 msgstr "Tarkista päivitykset"
 
-#: src/Plug.vala:267
+#: src/Plug.vala:268
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Järjestelmän asetukset palautetaan oletusasetuksiin"
 
-#: src/Plug.vala:268
+#: src/Plug.vala:269
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -88,7 +88,7 @@ msgstr ""
 "Kaikki järjestelmän asetukset ja tiedot palautetaan oletusarvoihin. Tämä ei "
 "vaikuta henkilökohtaisiin tietoihisi, kuten musiikkiin ja kuviin."
 
-#: src/Plug.vala:274
+#: src/Plug.vala:275
 msgid "Restore Settings"
 msgstr "Palauta oletusasetukset"
 
@@ -153,6 +153,9 @@ msgstr "%s tallennustilaa (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s tallennustilaa"
+
+#~ msgid "Report Problems"
+#~ msgstr "Ilmoita ongelmasta"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"

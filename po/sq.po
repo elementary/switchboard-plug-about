@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:43+0000\n"
 "PO-Revision-Date: 2016-05-01 13:45+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -31,7 +31,7 @@ msgid "System Information"
 msgstr "Informacione të sistemit"
 
 #. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:195
+#: src/Plug.vala:61 src/Plug.vala:196
 msgid "Restore Default Settings"
 msgstr "Rikthe parametrat e parazgjedhur"
 
@@ -39,48 +39,48 @@ msgstr "Rikthe parametrat e parazgjedhur"
 msgid "Suggest Translation"
 msgstr "Sugjero përkthim"
 
-#: src/Plug.vala:63
-msgid "Report Problems"
-msgstr "Raporto probleme"
+#: src/Plug.vala:63 src/Plug.vala:170
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:64
+msgid "Report a Problem"
+msgstr "Raporto një problem"
+
+#: src/Plug.vala:65
 msgid "Updates"
 msgstr "Përditësime"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:118
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Plug.vala:124
+#: src/Plug.vala:125
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr ""
 
-#: src/Plug.vala:134
+#: src/Plug.vala:135
 msgid "Website"
 msgstr "Faqja web"
 
 #. Translate button
-#: src/Plug.vala:160
+#: src/Plug.vala:161
 msgid "Suggest Translations"
 msgstr "Sugjero përkthime"
 
-#: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Raporto një problem"
-
-#: src/Plug.vala:187
+#: src/Plug.vala:188
 msgid "Check for Updates"
 msgstr "Kontrollo përditësimet"
 
-#: src/Plug.vala:267
+#: src/Plug.vala:268
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 "Parametrat e sistemit do të rikthehen në vlerat e parazgjedhura fillestare"
 
-#: src/Plug.vala:268
+#: src/Plug.vala:269
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -89,7 +89,7 @@ msgstr ""
 "Të gjitha të dhënat dhe parametrat e sistemit do të rivendosen në vlerat e "
 "parazgjedhura."
 
-#: src/Plug.vala:274
+#: src/Plug.vala:275
 msgid "Restore Settings"
 msgstr "Rikthe parametrat"
 
@@ -160,6 +160,9 @@ msgstr "Magazinimi:"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Magazinimi:"
+
+#~ msgid "Report Problems"
+#~ msgstr "Raporto probleme"
 
 #~ msgid "Cancel"
 #~ msgstr "Anulo"

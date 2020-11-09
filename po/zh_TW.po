@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:43+0000\n"
 "PO-Revision-Date: 2020-03-01 14:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -33,7 +33,7 @@ msgid "System Information"
 msgstr "系統資訊"
 
 #. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:195
+#: src/Plug.vala:61 src/Plug.vala:196
 msgid "Restore Default Settings"
 msgstr "還原預設設定"
 
@@ -41,46 +41,46 @@ msgstr "還原預設設定"
 msgid "Suggest Translation"
 msgstr "建議翻譯"
 
-#: src/Plug.vala:63
-msgid "Report Problems"
-msgstr "回報問題"
+#: src/Plug.vala:63 src/Plug.vala:170
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:64
+msgid "Report a Problem"
+msgstr "回報問題"
+
+#: src/Plug.vala:65
 msgid "Updates"
 msgstr "更新"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:118
 #, c-format
 msgid "Built on %s"
 msgstr "建基於 %s"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:125
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr "GTK %u.%u.%u"
 
-#: src/Plug.vala:134
+#: src/Plug.vala:135
 msgid "Website"
 msgstr "網站"
 
 #. Translate button
-#: src/Plug.vala:160
+#: src/Plug.vala:161
 msgid "Suggest Translations"
 msgstr "建議翻譯"
 
-#: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "回報問題"
-
-#: src/Plug.vala:187
+#: src/Plug.vala:188
 msgid "Check for Updates"
 msgstr "檢查更新"
 
-#: src/Plug.vala:267
+#: src/Plug.vala:268
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "系統設定值將還原成出廠預設值"
 
-#: src/Plug.vala:268
+#: src/Plug.vala:269
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -88,7 +88,7 @@ msgstr ""
 "所有系統設定值和資料都會重設回預設值。個人資料，例如音樂或圖片等，都不會受到"
 "影響。"
 
-#: src/Plug.vala:274
+#: src/Plug.vala:275
 msgid "Restore Settings"
 msgstr "還原設定值"
 
@@ -159,6 +159,9 @@ msgstr "%s 儲存裝置 (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s 儲存裝置"
+
+#~ msgid "Report Problems"
+#~ msgstr "回報問題"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"

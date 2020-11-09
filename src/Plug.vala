@@ -60,7 +60,8 @@ public class About.Plug : Switchboard.Plug {
         search_results.set ("%s → %s".printf (display_name, _("System Information")), "");
         search_results.set ("%s → %s".printf (display_name, _("Restore Default Settings")), "");
         search_results.set ("%s → %s".printf (display_name, _("Suggest Translation")), "");
-        search_results.set ("%s → %s".printf (display_name, _("Report Problems")), "");
+        search_results.set ("%s → %s".printf (display_name, _("Send Feedback")), "");
+        search_results.set ("%s → %s".printf (display_name, _("Report a Problem")), "");
         search_results.set ("%s → %s".printf (display_name, _("Updates")), "");
         return search_results;
     }
@@ -166,7 +167,7 @@ public class About.Plug : Switchboard.Plug {
             }
         });
 
-        var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
+        var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
         bug_button.clicked.connect (() => {
             var appinfo = new GLib.DesktopAppInfo ("io.elementary.feedback.desktop");
             if (appinfo != null) {

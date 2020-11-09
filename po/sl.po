@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:43+0000\n"
 "PO-Revision-Date: 2019-12-24 22:07+0000\n"
 "Last-Translator: Marko <marko.dolar@gmail.com>\n"
 "Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard/"
@@ -34,7 +34,7 @@ msgid "System Information"
 msgstr "Sistemske informacije"
 
 #. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:195
+#: src/Plug.vala:61 src/Plug.vala:196
 msgid "Restore Default Settings"
 msgstr "Povrni tovarniške nastavitve"
 
@@ -42,46 +42,46 @@ msgstr "Povrni tovarniške nastavitve"
 msgid "Suggest Translation"
 msgstr "Predlagaj prevod"
 
-#: src/Plug.vala:63
-msgid "Report Problems"
-msgstr "Prijavi napake"
+#: src/Plug.vala:63 src/Plug.vala:170
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:64
+msgid "Report a Problem"
+msgstr "Opozorite na težavo"
+
+#: src/Plug.vala:65
 msgid "Updates"
 msgstr "Posodobitve"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:118
 #, c-format
 msgid "Built on %s"
 msgstr "Zgrajen na osnovi %s"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:125
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr "GTK %u.%u.%u"
 
-#: src/Plug.vala:134
+#: src/Plug.vala:135
 msgid "Website"
 msgstr "Spletna stran"
 
 #. Translate button
-#: src/Plug.vala:160
+#: src/Plug.vala:161
 msgid "Suggest Translations"
 msgstr "Predlagaj prevode"
 
-#: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Opozorite na težavo"
-
-#: src/Plug.vala:187
+#: src/Plug.vala:188
 msgid "Check for Updates"
 msgstr "Preveri za posodobitve"
 
-#: src/Plug.vala:267
+#: src/Plug.vala:268
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Sistemske nastavitve bodo povrnjene na tovarniško stanje"
 
-#: src/Plug.vala:268
+#: src/Plug.vala:269
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -89,7 +89,7 @@ msgstr ""
 "Vsi podatki in sistemske nastavitve bodo povrnjene na privzete vrednosti. "
 "Osebni podatki, kot so npr. slike in glasba, bodo ostali nespremenjeni."
 
-#: src/Plug.vala:274
+#: src/Plug.vala:275
 msgid "Restore Settings"
 msgstr "Povrni nastavitve"
 
@@ -160,6 +160,9 @@ msgstr "%s shrambe (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s shrambe"
+
+#~ msgid "Report Problems"
+#~ msgstr "Prijavi napake"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"

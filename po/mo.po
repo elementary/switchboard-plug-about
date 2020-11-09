@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:43+0000\n"
 "PO-Revision-Date: 2018-05-28 00:02+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -26,7 +26,7 @@ msgid "System Information"
 msgstr "Informatii despre sistem"
 
 #. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:195
+#: src/Plug.vala:61 src/Plug.vala:196
 msgid "Restore Default Settings"
 msgstr "Restabilește setările implicite"
 
@@ -34,47 +34,47 @@ msgstr "Restabilește setările implicite"
 msgid "Suggest Translation"
 msgstr "Sugerați traduceri"
 
-#: src/Plug.vala:63
-msgid "Report Problems"
-msgstr "Raportați probleme"
+#: src/Plug.vala:63 src/Plug.vala:170
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:64
+msgid "Report a Problem"
+msgstr "Raportează o problemă"
+
+#: src/Plug.vala:65
 msgid "Updates"
 msgstr "Actualizări"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:118
 #, c-format
 msgid "Built on %s"
 msgstr "Realizat de %s 1"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:125
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr ""
 
-#: src/Plug.vala:134
+#: src/Plug.vala:135
 msgid "Website"
 msgstr "Pagweb"
 
 #. Translate button
-#: src/Plug.vala:160
+#: src/Plug.vala:161
 msgid "Suggest Translations"
 msgstr "Sugestii de traduceri"
 
-#: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Raportează o problemă"
-
-#: src/Plug.vala:187
+#: src/Plug.vala:188
 msgid "Check for Updates"
 msgstr "Verifică actualizări"
 
-#: src/Plug.vala:267
+#: src/Plug.vala:268
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 "Setările sistemului vor fi restaurate la valorile implicite din fabrică"
 
-#: src/Plug.vala:268
+#: src/Plug.vala:269
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -82,7 +82,7 @@ msgstr ""
 "Toate setările sistemului și datele vor fi resetate la valorile implicite. "
 "Datele personale, precum muzica și imaginile, nu vor fi afectate."
 
-#: src/Plug.vala:274
+#: src/Plug.vala:275
 msgid "Restore Settings"
 msgstr "Restaurați setările"
 
@@ -151,6 +151,9 @@ msgstr "%s 1 depozitare"
 #, c-format
 msgid "%s storage"
 msgstr "%s 1 depozitare"
+
+#~ msgid "Report Problems"
+#~ msgstr "Raportați probleme"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s 1"

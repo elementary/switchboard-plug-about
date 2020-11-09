@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:43+0000\n"
 "PO-Revision-Date: 2020-08-08 14:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -33,7 +33,7 @@ msgid "System Information"
 msgstr "システム情報"
 
 #. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:195
+#: src/Plug.vala:61 src/Plug.vala:196
 msgid "Restore Default Settings"
 msgstr "デフォルト設定を復元"
 
@@ -41,46 +41,46 @@ msgstr "デフォルト設定を復元"
 msgid "Suggest Translation"
 msgstr "翻訳を提案"
 
-#: src/Plug.vala:63
-msgid "Report Problems"
-msgstr "不具合を報告"
+#: src/Plug.vala:63 src/Plug.vala:170
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:64
+msgid "Report a Problem"
+msgstr "不具合を報告"
+
+#: src/Plug.vala:65
 msgid "Updates"
 msgstr "アップデート"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:118
 #, c-format
 msgid "Built on %s"
 msgstr "%s ベース"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:125
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr "GTK %u.%u.%u"
 
-#: src/Plug.vala:134
+#: src/Plug.vala:135
 msgid "Website"
 msgstr "Web サイト"
 
 #. Translate button
-#: src/Plug.vala:160
+#: src/Plug.vala:161
 msgid "Suggest Translations"
 msgstr "翻訳を提案"
 
-#: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "不具合を報告"
-
-#: src/Plug.vala:187
+#: src/Plug.vala:188
 msgid "Check for Updates"
 msgstr "アップデートを確認"
 
-#: src/Plug.vala:267
+#: src/Plug.vala:268
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "システム設定が出荷時のデフォルトに復元されます"
 
-#: src/Plug.vala:268
+#: src/Plug.vala:269
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -88,7 +88,7 @@ msgstr ""
 "すべてのシステム設定とデータがデフォルト値にリセットされます。音楽や写真など"
 "の個人データは影響を受けません。"
 
-#: src/Plug.vala:274
+#: src/Plug.vala:275
 msgid "Restore Settings"
 msgstr "設定を復元"
 
@@ -153,6 +153,9 @@ msgstr "%s ストレージ (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s ストレージ"
+
+#~ msgid "Report Problems"
+#~ msgstr "不具合を報告"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"

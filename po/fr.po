@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:43+0000\n"
 "PO-Revision-Date: 2020-08-08 14:13+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -33,7 +33,7 @@ msgid "System Information"
 msgstr "Informations système"
 
 #. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:195
+#: src/Plug.vala:61 src/Plug.vala:196
 msgid "Restore Default Settings"
 msgstr "Restaurer les paramètres par défaut"
 
@@ -41,46 +41,46 @@ msgstr "Restaurer les paramètres par défaut"
 msgid "Suggest Translation"
 msgstr "Suggérer une traduction"
 
-#: src/Plug.vala:63
-msgid "Report Problems"
-msgstr "Rapporter un problème"
+#: src/Plug.vala:63 src/Plug.vala:170
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:64
+msgid "Report a Problem"
+msgstr "Signaler un problème"
+
+#: src/Plug.vala:65
 msgid "Updates"
 msgstr "Mises à jour"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:118
 #, c-format
 msgid "Built on %s"
 msgstr "Basé sur %s"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:125
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr "GTK %u.%u.%u"
 
-#: src/Plug.vala:134
+#: src/Plug.vala:135
 msgid "Website"
 msgstr "Site web"
 
 #. Translate button
-#: src/Plug.vala:160
+#: src/Plug.vala:161
 msgid "Suggest Translations"
 msgstr "Proposer des traductions"
 
-#: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Signaler un problème"
-
-#: src/Plug.vala:187
+#: src/Plug.vala:188
 msgid "Check for Updates"
 msgstr "Vérifier les mises à jour"
 
-#: src/Plug.vala:267
+#: src/Plug.vala:268
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Les paramètres du système seront restaurés aux valeurs par défaut"
 
-#: src/Plug.vala:268
+#: src/Plug.vala:269
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -89,7 +89,7 @@ msgstr ""
 "valeurs par défaut. Les données personnelles comme la musique et les images "
 "ne seront pas affectés."
 
-#: src/Plug.vala:274
+#: src/Plug.vala:275
 msgid "Restore Settings"
 msgstr "Restaurer les paramètres"
 
@@ -154,6 +154,9 @@ msgstr "%s de stockage (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s de stockage"
+
+#~ msgid "Report Problems"
+#~ msgstr "Rapporter un problème"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"

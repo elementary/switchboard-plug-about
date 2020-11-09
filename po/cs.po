@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:43+0000\n"
 "PO-Revision-Date: 2020-08-09 22:13+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -33,7 +33,7 @@ msgid "System Information"
 msgstr "Informace o systému"
 
 #. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:195
+#: src/Plug.vala:61 src/Plug.vala:196
 msgid "Restore Default Settings"
 msgstr "Obnovit výchozí nastavení"
 
@@ -41,46 +41,46 @@ msgstr "Obnovit výchozí nastavení"
 msgid "Suggest Translation"
 msgstr "Navrhnout překlad textu v rozhraní"
 
-#: src/Plug.vala:63
-msgid "Report Problems"
-msgstr "Nahlásit problémy"
+#: src/Plug.vala:63 src/Plug.vala:170
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:64
+msgid "Report a Problem"
+msgstr "Nahlásit problém"
+
+#: src/Plug.vala:65
 msgid "Updates"
 msgstr "Aktualizace"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:118
 #, c-format
 msgid "Built on %s"
 msgstr "Postaveno na %s"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:125
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr "GTK %u.%u.%u"
 
-#: src/Plug.vala:134
+#: src/Plug.vala:135
 msgid "Website"
 msgstr "Webové stránky"
 
 #. Translate button
-#: src/Plug.vala:160
+#: src/Plug.vala:161
 msgid "Suggest Translations"
 msgstr "Pomoci s překlady"
 
-#: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Nahlásit problém"
-
-#: src/Plug.vala:187
+#: src/Plug.vala:188
 msgid "Check for Updates"
 msgstr "Zkontrolovat aktualizace"
 
-#: src/Plug.vala:267
+#: src/Plug.vala:268
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systémová nastavení budou vrácena do výchozího stavu"
 
-#: src/Plug.vala:268
+#: src/Plug.vala:269
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -88,7 +88,7 @@ msgstr ""
 "Veškerá systémová nastavení a data budou vrácena do výchozího stavu. Osobní "
 "data, jako hudba či obrázky, tím nebudou ovlivněna."
 
-#: src/Plug.vala:274
+#: src/Plug.vala:275
 msgid "Restore Settings"
 msgstr "Obnovit nastavení"
 
@@ -153,6 +153,9 @@ msgstr "%s úložiště (pevný disk)"
 #, c-format
 msgid "%s storage"
 msgstr "%s úložiště"
+
+#~ msgid "Report Problems"
+#~ msgstr "Nahlásit problémy"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"
