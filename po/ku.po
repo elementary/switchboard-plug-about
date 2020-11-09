@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2018-06-20 00:06+0000\n"
 "Last-Translator: janus tolkien <janustolkien@gmail.com>\n"
 "Language-Team: Kurdish <https://weblate.elementary.io/projects/switchboard/"
@@ -64,8 +64,8 @@ msgid "Suggest Translations"
 msgstr "pêşniyar kirina wergerrandine"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Pirsgirêkekê rapor bike"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -152,6 +152,9 @@ msgstr "%s Axtin"
 #, c-format
 msgid "%s storage"
 msgstr "%s Axtin"
+
+#~ msgid "Report a Problem"
+#~ msgstr "Pirsgirêkekê rapor bike"
 
 #~ msgid "Cancel"
 #~ msgstr "Betal bike"

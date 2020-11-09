@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2015-05-26 12:27+0000\n"
 "Last-Translator: Viktuk <register885@gmail.com>\n"
 "Language-Team: Belarusian <be@li.org>\n"
@@ -67,8 +67,8 @@ msgid "Suggest Translations"
 msgstr "Прапануеце пераклады"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Паведаміць аб праблеме"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -158,6 +158,9 @@ msgstr "Памяць:"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Памяць:"
+
+#~ msgid "Report a Problem"
+#~ msgstr "Паведаміць аб праблеме"
 
 #~ msgid "Cancel"
 #~ msgstr "Скасаваць"

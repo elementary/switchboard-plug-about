@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2017-06-16 17:24+0000\n"
 "Last-Translator: Rajeev Kumar <irajeevankumar@gmail.com>\n"
 "Language-Team: Tamil <https://l10n.elementary.io/projects/switchboard/"
@@ -69,8 +69,8 @@ msgid "Suggest Translations"
 msgstr "மொழிபெயர்ப்பு பரிந்துரைக்க"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "பிரச்சனையை புகார் செய்"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -160,6 +160,9 @@ msgstr "நினைவகம்:"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "நினைவகம்:"
+
+#~ msgid "Report a Problem"
+#~ msgstr "பிரச்சனையை புகார் செய்"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "ஜிடிகே+ %s"

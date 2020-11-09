@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2018-11-05 21:43+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -70,8 +70,8 @@ msgid "Suggest Translations"
 msgstr "Predloži prijevode"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Prijavi problem"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -160,6 +160,9 @@ msgstr "%s spremište"
 #, c-format
 msgid "%s storage"
 msgstr "%s spremište"
+
+#~ msgid "Report a Problem"
+#~ msgstr "Prijavi problem"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"

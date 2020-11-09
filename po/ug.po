@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2017-01-02 03:38+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -67,8 +67,8 @@ msgid "Suggest Translations"
 msgstr "تەۋسىيە قىلىنغان تەرجىمىلەر"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "مەسىلە مەلۇم قىلىش"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -158,6 +158,9 @@ msgstr "ساقلىغۇچ"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "ساقلىغۇچ"
+
+#~ msgid "Report a Problem"
+#~ msgstr "مەسىلە مەلۇم قىلىش"
 
 #~ msgid "Cancel"
 #~ msgstr "ئەمەلدىن قالدۇرۇش"

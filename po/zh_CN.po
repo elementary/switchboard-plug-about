@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2020-10-03 10:14+0000\n"
 "Last-Translator: imgradeone Yan <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -69,8 +69,8 @@ msgid "Suggest Translations"
 msgstr "助力翻译"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "报告问题"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -152,6 +152,9 @@ msgstr "%s 机械硬盘"
 #, c-format
 msgid "%s storage"
 msgstr "%s 硬盘"
+
+#~ msgid "Report a Problem"
+#~ msgstr "报告问题"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ 版本：%s"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2014-12-22 14:03+0000\n"
 "Last-Translator: ERX <eriksh@inbox.lv>\n"
 "Language-Team: Latvian <lv@li.org>\n"
@@ -67,8 +67,8 @@ msgid "Suggest Translations"
 msgstr "Piedāvāt tulkojumu"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Ziņot par problēmu"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -155,6 +155,9 @@ msgstr "Glabātuve:"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Glabātuve:"
+
+#~ msgid "Report a Problem"
+#~ msgstr "Ziņot par problēmu"
 
 #, fuzzy
 #~ msgid "Report Problem"

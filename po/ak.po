@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2017-06-19 14:33+0000\n"
 "Last-Translator: Lawrence Aberba <karabutaworld@gmail.com>\n"
 "Language-Team: Akan <https://l10n.elementary.io/projects/switchboard/"
@@ -69,8 +69,8 @@ msgid "Suggest Translations"
 msgstr "Fa Wo Nkyerease To Dwa"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Fa nsɛnenen bi a woahyia to dwa"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -160,6 +160,9 @@ msgstr "Akoraeɛ %s"
 #, c-format
 msgid "%s storage"
 msgstr "Akoraeɛ %s"
+
+#~ msgid "Report a Problem"
+#~ msgstr "Fa nsɛnenen bi a woahyia to dwa"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"

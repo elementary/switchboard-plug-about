@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2020-08-16 11:22+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -69,8 +69,8 @@ msgid "Suggest Translations"
 msgstr "Ehdota käännöksiä"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Ilmoita ongelmasta"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -153,6 +153,9 @@ msgstr "%s tallennustilaa (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s tallennustilaa"
+
+#~ msgid "Report a Problem"
+#~ msgstr "Ilmoita ongelmasta"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"

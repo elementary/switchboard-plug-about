@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2018-05-29 13:14+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
@@ -69,8 +69,8 @@ msgid "Suggest Translations"
 msgstr "Segítségnyújtás a fordításban"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Hiba bejelentése"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -159,6 +159,9 @@ msgstr "%s tárhely"
 #, c-format
 msgid "%s storage"
 msgstr "%s tárhely"
+
+#~ msgid "Report a Problem"
+#~ msgstr "Hiba bejelentése"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"

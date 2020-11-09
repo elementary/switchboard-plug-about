@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2017-02-07 12:15+0000\n"
 "Last-Translator: iakovos athanasiadhs <liam21iakovos@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -67,8 +67,8 @@ msgid "Suggest Translations"
 msgstr "Πρόταση μεταφράσεων"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Αναφορά προβλήματος"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -160,6 +160,9 @@ msgstr "Αποθηκευτικός χώρος:"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Αποθηκευτικός χώρος:"
+
+#~ msgid "Report a Problem"
+#~ msgstr "Αναφορά προβλήματος"
 
 #~ msgid "Cancel"
 #~ msgstr "Ακύρωση"

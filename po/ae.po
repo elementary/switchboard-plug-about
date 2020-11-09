@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -54,7 +54,7 @@ msgid "Suggest Translations"
 msgstr ""
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
+msgid "Send Feedback"
 msgstr ""
 
 #: src/Plug.vala:187

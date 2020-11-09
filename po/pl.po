@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2019-11-17 20:24+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -70,8 +70,8 @@ msgid "Suggest Translations"
 msgstr "Zaproponuj tłumaczenie"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Zgłoś błąd"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -161,6 +161,9 @@ msgstr "%s pojemności dysku (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s pojemności dysku"
+
+#~ msgid "Report a Problem"
+#~ msgstr "Zgłoś błąd"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"

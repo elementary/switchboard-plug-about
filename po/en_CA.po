@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 11:45+0000\n"
+"POT-Creation-Date: 2020-11-09 22:23+0000\n"
 "PO-Revision-Date: 2018-05-10 17:18+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
 "Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
@@ -69,8 +69,8 @@ msgid "Suggest Translations"
 msgstr "Suggest Translations"
 
 #: src/Plug.vala:169
-msgid "Report a Problem"
-msgstr "Report a Problem"
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
@@ -159,6 +159,9 @@ msgstr "%s storage"
 #, c-format
 msgid "%s storage"
 msgstr "%s storage"
+
+#~ msgid "Report a Problem"
+#~ msgstr "Report a Problem"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"
