@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-05 11:45+0000\n"
-"PO-Revision-Date: 2020-08-08 14:13+0000\n"
+"PO-Revision-Date: 2020-10-10 15:14+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pt/>\n"
@@ -30,20 +30,20 @@ msgstr "Ver informações sobre o sistema operativo e o hardware"
 
 #: src/Plug.vala:60
 msgid "System Information"
-msgstr "Informações do Sistema"
+msgstr "Informações do sistema"
 
 #. Restore settings button
 #: src/Plug.vala:61 src/Plug.vala:195
 msgid "Restore Default Settings"
-msgstr "Restaurar Definições Predefinidas"
+msgstr "Restaurar definições predefinidas"
 
 #: src/Plug.vala:62
 msgid "Suggest Translation"
-msgstr "Sugerir Tradução"
+msgstr "Sugerir tradução"
 
 #: src/Plug.vala:63
 msgid "Report Problems"
-msgstr "Reportar Problemas"
+msgstr "Reportar problemas"
 
 #: src/Plug.vala:64
 msgid "Updates"
@@ -66,7 +66,7 @@ msgstr "Website"
 #. Translate button
 #: src/Plug.vala:160
 msgid "Suggest Translations"
-msgstr "Sugerir Traduções"
+msgstr "Sugerir traduções"
 
 #: src/Plug.vala:169
 msgid "Report a Problem"
@@ -74,7 +74,7 @@ msgstr "Reportar um problema"
 
 #: src/Plug.vala:187
 msgid "Check for Updates"
-msgstr "Procurar Atualizações"
+msgstr "Procurar atualizações"
 
 #: src/Plug.vala:267
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -91,7 +91,7 @@ msgstr ""
 
 #: src/Plug.vala:274
 msgid "Restore Settings"
-msgstr "Restaurar Definições"
+msgstr "Restaurar definições"
 
 #: src/Views/HardwareView.vala:43
 msgid "Unknown Graphics"
@@ -104,7 +104,7 @@ msgstr "%s de memória"
 
 #: src/Views/HardwareView.vala:126
 msgid "Manufacturer Website"
-msgstr "Website do Fabricante"
+msgstr "Website do fabricante"
 
 #: src/Views/HardwareView.vala:197
 #, c-format

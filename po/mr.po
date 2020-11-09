@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-05 11:45+0000\n"
-"PO-Revision-Date: 2019-11-25 09:24+0000\n"
+"PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/mr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:31
@@ -93,10 +93,8 @@ msgid "Restore Settings"
 msgstr "सेटिंग्ज पुनर्संचयित करा"
 
 #: src/Views/HardwareView.vala:43
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "ग्राफिक्स :"
+msgstr "अज्ञात ग्राफिक्स"
 
 #: src/Views/HardwareView.vala:72
 #, c-format
@@ -108,27 +106,23 @@ msgid "Manufacturer Website"
 msgstr "निर्माता वेबसाइट"
 
 #: src/Views/HardwareView.vala:197
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "ड्युअल-कोअर"
+msgstr "ड्युअल-कोअर %s"
 
 #: src/Views/HardwareView.vala:199
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "क्वॉड-कोर"
+msgstr "क्वॉड-कोर %s"
 
 #: src/Views/HardwareView.vala:201
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "हेक्सा-कोअर %s"
 
 #: src/Views/HardwareView.vala:214
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "प्रोसेसर :"
+msgstr "अज्ञात प्रोसेसर"
 
 #: src/Views/HardwareView.vala:235
 msgid "Unknown"

@@ -21,7 +21,7 @@ namespace GLibTop {
 
     [CCode (cheader_filename = "glibtop/sysinfo.h", destroy_function = "")]
     public struct entry {
-        public GLib.PtrArray labels;
+        public GLib.GenericArray labels;
         public GLib.HashTable values;
         public GLib.HashTable descriptions;
     }
