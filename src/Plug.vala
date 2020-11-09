@@ -61,6 +61,7 @@ public class About.Plug : Switchboard.Plug {
         search_results.set ("%s → %s".printf (display_name, _("Restore Default Settings")), "");
         search_results.set ("%s → %s".printf (display_name, _("Suggest Translation")), "");
         search_results.set ("%s → %s".printf (display_name, _("Send Feedback")), "");
+        search_results.set ("%s → %s".printf (display_name, _("Report a Problem")), "");
         search_results.set ("%s → %s".printf (display_name, _("Updates")), "");
         return search_results;
     }
