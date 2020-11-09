@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:23+0000\n"
+"POT-Creation-Date: 2020-11-09 22:43+0000\n"
 "PO-Revision-Date: 2017-02-07 12:15+0000\n"
 "Last-Translator: iakovos athanasiadhs <liam21iakovos@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -31,7 +31,7 @@ msgid "System Information"
 msgstr "Πληροφορίες συστήματος"
 
 #. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:195
+#: src/Plug.vala:61 src/Plug.vala:196
 msgid "Restore Default Settings"
 msgstr "Επαναφορά προεπιλεγμένων ρυθμίσεων"
 
@@ -39,48 +39,48 @@ msgstr "Επαναφορά προεπιλεγμένων ρυθμίσεων"
 msgid "Suggest Translation"
 msgstr "Πρόταση μεταφράσεων"
 
-#: src/Plug.vala:63
-msgid "Report Problems"
-msgstr "Αναφορά προβλημάτων"
+#: src/Plug.vala:63 src/Plug.vala:170
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:64
+msgid "Report a Problem"
+msgstr "Αναφορά προβλήματος"
+
+#: src/Plug.vala:65
 msgid "Updates"
 msgstr "Ενημερώσεις"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:118
 #, c-format
 msgid "Built on %s"
 msgstr "Χτισμένο πάνω στο %s"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:125
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr ""
 
-#: src/Plug.vala:134
+#: src/Plug.vala:135
 msgid "Website"
 msgstr "Ιστοσελίδα"
 
 #. Translate button
-#: src/Plug.vala:160
+#: src/Plug.vala:161
 msgid "Suggest Translations"
 msgstr "Πρόταση μεταφράσεων"
 
-#: src/Plug.vala:169
-msgid "Send Feedback"
-msgstr ""
-
-#: src/Plug.vala:187
+#: src/Plug.vala:188
 msgid "Check for Updates"
 msgstr "Έλεγχος για ενημερώσεις"
 
-#: src/Plug.vala:267
+#: src/Plug.vala:268
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 "Οι ρυθμίσεις του συστήματος θα επαναφερθούν στις εργοστασιακές προεπιλογές"
 
-#: src/Plug.vala:268
+#: src/Plug.vala:269
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -89,7 +89,7 @@ msgstr ""
 "Όλες οι ρυθμίσεις και τα δεδομένα του συστήματος θα επαναφερθούν στις "
 "προεπιλεγμένες τιμές."
 
-#: src/Plug.vala:274
+#: src/Plug.vala:275
 msgid "Restore Settings"
 msgstr "Επαναφορά ρυθμίσεων"
 
@@ -161,8 +161,8 @@ msgstr "Αποθηκευτικός χώρος:"
 msgid "%s storage"
 msgstr "Αποθηκευτικός χώρος:"
 
-#~ msgid "Report a Problem"
-#~ msgstr "Αναφορά προβλήματος"
+#~ msgid "Report Problems"
+#~ msgstr "Αναφορά προβλημάτων"
 
 #~ msgid "Cancel"
 #~ msgstr "Ακύρωση"

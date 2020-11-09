@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:23+0000\n"
+"POT-Creation-Date: 2020-11-09 22:43+0000\n"
 "PO-Revision-Date: 2016-08-06 17:24+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -31,7 +31,7 @@ msgid "System Information"
 msgstr "Сведения за системата"
 
 #. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:195
+#: src/Plug.vala:61 src/Plug.vala:196
 msgid "Restore Default Settings"
 msgstr "Възстановяване на първоначалните настройки"
 
@@ -39,47 +39,47 @@ msgstr "Възстановяване на първоначалните наст�
 msgid "Suggest Translation"
 msgstr "Предлагане на превод"
 
-#: src/Plug.vala:63
-msgid "Report Problems"
-msgstr "Докладване на проблеми"
+#: src/Plug.vala:63 src/Plug.vala:170
+msgid "Send Feedback"
+msgstr ""
 
 #: src/Plug.vala:64
+msgid "Report a Problem"
+msgstr "Докладване на проблем"
+
+#: src/Plug.vala:65
 msgid "Updates"
 msgstr "Обновления"
 
-#: src/Plug.vala:117
+#: src/Plug.vala:118
 #, c-format
 msgid "Built on %s"
 msgstr "Базирана на %s"
 
-#: src/Plug.vala:124
+#: src/Plug.vala:125
 #, c-format
 msgid "GTK %u.%u.%u"
 msgstr ""
 
-#: src/Plug.vala:134
+#: src/Plug.vala:135
 msgid "Website"
 msgstr "Мрежова страница"
 
 #. Translate button
-#: src/Plug.vala:160
+#: src/Plug.vala:161
 msgid "Suggest Translations"
 msgstr "Предлагане на превод"
 
-#: src/Plug.vala:169
-msgid "Send Feedback"
-msgstr ""
-
-#: src/Plug.vala:187
+#: src/Plug.vala:188
 msgid "Check for Updates"
 msgstr "Проверка за обновления"
 
-#: src/Plug.vala:267
+#: src/Plug.vala:268
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Настройките на системата ще бъдат върнати към първоначалните стойности"
 
-#: src/Plug.vala:268
+#: src/Plug.vala:269
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -88,7 +88,7 @@ msgstr ""
 "Всички данни и настройки на системата ще бъдат върнати към първоначалните "
 "стойности."
 
-#: src/Plug.vala:274
+#: src/Plug.vala:275
 msgid "Restore Settings"
 msgstr "Възстановяване на настройките"
 
@@ -160,8 +160,8 @@ msgstr "Постоянна памет"
 msgid "%s storage"
 msgstr "Постоянна памет"
 
-#~ msgid "Report a Problem"
-#~ msgstr "Докладване на проблем"
+#~ msgid "Report Problems"
+#~ msgstr "Докладване на проблеми"
 
 #~ msgid "Cancel"
 #~ msgstr "Отказ"
