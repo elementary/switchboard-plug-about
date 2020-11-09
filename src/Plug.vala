@@ -166,7 +166,7 @@ public class About.Plug : Switchboard.Plug {
             }
         });
 
-        var bug_button = new Gtk.Button.with_label (_("Report a Problem"));
+        var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
         bug_button.clicked.connect (() => {
             var appinfo = new GLib.DesktopAppInfo ("io.elementary.feedback.desktop");
             if (appinfo != null) {
