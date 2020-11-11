@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-09 22:43+0000\n"
-"PO-Revision-Date: 2020-08-08 14:13+0000\n"
+"PO-Revision-Date: 2020-11-11 10:15+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
@@ -43,7 +43,7 @@ msgstr "Suggérer une traduction"
 
 #: src/Plug.vala:63 src/Plug.vala:170
 msgid "Send Feedback"
-msgstr ""
+msgstr "Envoyer des commentaires"
 
 #: src/Plug.vala:64
 msgid "Report a Problem"
