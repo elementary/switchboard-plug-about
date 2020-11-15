@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:38+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2018-12-10 10:15-0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
-msgid "About"
+msgid "System"
 msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6

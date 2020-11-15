@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:38+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2020-10-01 17:14+0000\n"
 "Last-Translator: imgradeone Yan <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
-msgid "About"
-msgstr "关于"
+msgid "System"
+msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
@@ -38,3 +38,6 @@ msgstr "提供更多类型的显示信息"
 #: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Updated translations"
 msgstr "翻译更新"
+
+#~ msgid "About"
+#~ msgstr "关于"

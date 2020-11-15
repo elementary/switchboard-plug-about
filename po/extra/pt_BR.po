@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:38+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2019-11-22 03:24+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 3.7.1\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
-msgid "About"
-msgstr "Sobre"
+msgid "System"
+msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
@@ -37,3 +37,6 @@ msgstr ""
 #: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Updated translations"
 msgstr "Traduções atualizadas"
+
+#~ msgid "About"
+#~ msgstr "Sobre"

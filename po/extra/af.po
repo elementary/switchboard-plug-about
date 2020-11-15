@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:38+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2019-05-12 19:52+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Afrikaans <https://l10n.elementary.io/projects/switchboard/"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
-msgid "About"
-msgstr "Aangaande"
+msgid "System"
+msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
@@ -37,3 +37,6 @@ msgstr ""
 #: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Updated translations"
 msgstr ""
+
+#~ msgid "About"
+#~ msgstr "Aangaande"

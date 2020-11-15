@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:38+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
-msgid "About"
-msgstr "माहिती"
+msgid "System"
+msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
@@ -37,3 +37,6 @@ msgstr "ग्राफिक्सच्या अधिक प्रकार�
 #: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Updated translations"
 msgstr "अद्ययावत भाषांतर"
+
+#~ msgid "About"
+#~ msgstr "माहिती"
