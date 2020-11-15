@@ -2,7 +2,7 @@
 <component type="addon">
   <id>io.elementary.switchboard.about</id>
   <extends>io.elementary.switchboard</extends>
-  <name>About</name>
+  <name>System</name>
   <summary>View operating system and hardware information</summary>
   <icon type="stock">dialog-information</icon>
   <translation type="gettext">about-plug</translation>

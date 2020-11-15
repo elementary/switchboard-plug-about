@@ -28,7 +28,7 @@ public class About.Plug : Switchboard.Plug {
         settings.set ("about", null);
         Object (category: Category.SYSTEM,
                 code_name: "io.elementary.switchboard.about",
-                display_name: _("About"),
+                display_name: _("System"),
                 description: _("View operating system and hardware information"),
                 icon: "dialog-information",
                 supported_settings: settings);
@@ -346,7 +346,7 @@ public class About.Plug : Switchboard.Plug {
 }
 
 public Switchboard.Plug get_plug (Module module) {
-    debug ("Activating About plug");
+    debug ("Activating System plug");
     var plug = new About.Plug ();
     return plug;
 }
