@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -21,8 +21,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "माहिती"
+msgid "System"
+msgstr ""
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -153,6 +153,9 @@ msgstr "%s स्टोरेज (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s स्टोरेज"
+
+#~ msgid "About"
+#~ msgstr "माहिती"
 
 #~ msgid "Report Problems"
 #~ msgstr "समस्या नोंदवा"

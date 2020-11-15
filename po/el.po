@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2017-02-07 12:15+0000\n"
 "Last-Translator: iakovos athanasiadhs <liam21iakovos@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "X-Generator: Launchpad (build 18335)\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "Σχετικά"
+msgid "System"
+msgstr ""
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -160,6 +160,9 @@ msgstr "Αποθηκευτικός χώρος:"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Αποθηκευτικός χώρος:"
+
+#~ msgid "About"
+#~ msgstr "Σχετικά"
 
 #~ msgid "Report Problems"
 #~ msgstr "Αναφορά προβλημάτων"

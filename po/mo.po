@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2018-05-28 00:02+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "Despre"
+msgid "System"
+msgstr ""
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -151,6 +151,9 @@ msgstr "%s 1 depozitare"
 #, c-format
 msgid "%s storage"
 msgstr "%s 1 depozitare"
+
+#~ msgid "About"
+#~ msgstr "Despre"
 
 #~ msgid "Report Problems"
 #~ msgstr "Raportați probleme"

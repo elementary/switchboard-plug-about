@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2016-08-04 00:09+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "X-Generator: Launchpad (build 18335)\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "Süsteemi teave"
+msgid "System"
+msgstr ""
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -157,6 +157,9 @@ msgstr "Ketta maht:"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Ketta maht:"
+
+#~ msgid "About"
+#~ msgstr "Süsteemi teave"
 
 #~ msgid "Report Problems"
 #~ msgstr "Teate probleemist"

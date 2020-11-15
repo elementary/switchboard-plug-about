@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2014-07-08 05:58+0000\n"
 "Last-Translator: elementary Apps team <Unknown>\n"
 "Language-Team: Basque <eu@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "X-Generator: Launchpad (build 18335)\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "Honi buruz"
+msgid "System"
+msgstr ""
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -153,6 +153,9 @@ msgstr "Biltegiratzea:"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Biltegiratzea:"
+
+#~ msgid "About"
+#~ msgstr "Honi buruz"
 
 #, fuzzy
 #~ msgid "Report Problem"
