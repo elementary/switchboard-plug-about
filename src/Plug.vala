@@ -48,7 +48,6 @@ public class About.Plug : Switchboard.Plug {
     }
 
     public override void hidden () {
-        main_grid.hide ();
     }
 
     public override void search_callback (string location) {
