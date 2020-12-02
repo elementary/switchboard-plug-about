@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:38+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2020-10-27 06:15+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
-"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
-"about-plug-extra/nl/>\n"
+"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/about-"
+"plug-extra/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
-msgid "About"
-msgstr "Over"
+msgid "System"
+msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
@@ -37,3 +37,6 @@ msgstr "Geef informatie over meer types videokaarten"
 #: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Updated translations"
 msgstr "Bijgewerkte vertalingen"
+
+#~ msgid "About"
+#~ msgstr "Over"

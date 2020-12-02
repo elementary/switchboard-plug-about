@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-22 17:38+0000\n"
-"PO-Revision-Date: 2020-07-23 18:45+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"PO-Revision-Date: 2020-11-16 17:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/fr/>\n"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
-msgid "About"
-msgstr "À propos"
+msgid "System"
+msgstr "Système"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
@@ -37,3 +37,6 @@ msgstr "Informations supplémentaires pour plus de cartes graphiques"
 #: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Updated translations"
 msgstr "Mise à jour des traductions"
+
+#~ msgid "About"
+#~ msgstr "À propos"

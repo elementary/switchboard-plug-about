@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
-"PO-Revision-Date: 2019-11-17 20:24+0000\n"
-"Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"PO-Revision-Date: 2020-11-16 17:15+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pl/>\n"
 "Language: pl\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "Informacje"
+msgid "System"
+msgstr "System"
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -161,6 +161,9 @@ msgstr "%s pojemności dysku (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s pojemności dysku"
+
+#~ msgid "About"
+#~ msgstr "Informacje"
 
 #~ msgid "Report Problems"
 #~ msgstr "Zgłoś problemy"

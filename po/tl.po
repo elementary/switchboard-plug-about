@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2018-09-25 00:02+0000\n"
 "Last-Translator: Axel Philip Advento <badwolf.bloodseeker.rev@gmail.com>\n"
 "Language-Team: Tagalog <https://weblate.elementary.io/projects/switchboard/"
@@ -22,8 +22,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "Tungkol dito"
+msgid "System"
+msgstr ""
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -158,6 +158,9 @@ msgstr ""
 #, c-format
 msgid "%s storage"
 msgstr ""
+
+#~ msgid "About"
+#~ msgstr "Tungkol dito"
 
 #~ msgid "Report Problems"
 #~ msgstr "I-report ang mga Problema"

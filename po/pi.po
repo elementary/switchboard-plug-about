@@ -1,12 +1,12 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
 #: src/Plug.vala:31
-msgid "About"
+msgid "System"
 msgstr ""
 
 #: src/Plug.vala:32

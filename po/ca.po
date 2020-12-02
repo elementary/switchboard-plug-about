@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
-"PO-Revision-Date: 2020-11-11 10:15+0000\n"
-"Last-Translator: David M <rbndavid@gmail.com>\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"PO-Revision-Date: 2020-11-16 17:15+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ca/>\n"
 "Language: ca\n"
@@ -21,8 +21,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "Quant a"
+msgid "System"
+msgstr "Sistema"
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -154,6 +154,9 @@ msgstr "Emmagatzematge (HDD): %s"
 #, c-format
 msgid "%s storage"
 msgstr "Emmagatzematge: %s"
+
+#~ msgid "About"
+#~ msgstr "Quant a"
 
 #~ msgid "Report Problems"
 #~ msgstr "Informeu de problemes"

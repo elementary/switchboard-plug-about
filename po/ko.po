@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
-"PO-Revision-Date: 2019-07-20 16:24+0000\n"
-"Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"PO-Revision-Date: 2020-11-16 17:15+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ko/>\n"
 "Language: ko\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "소개"
+msgid "System"
+msgstr "시스템"
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -159,6 +159,9 @@ msgstr "%s 저장장치 (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s 저장장치"
+
+#~ msgid "About"
+#~ msgstr "소개"
 
 #~ msgid "Report Problems"
 #~ msgstr "오류 보고"

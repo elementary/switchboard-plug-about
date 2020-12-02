@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2018-06-13 00:07+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "Keterangan"
+msgid "System"
+msgstr ""
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -158,6 +158,9 @@ msgstr "Penyimpanan %s"
 #, c-format
 msgid "%s storage"
 msgstr "Penyimpanan %s"
+
+#~ msgid "About"
+#~ msgstr "Keterangan"
 
 #~ msgid "Report Problems"
 #~ msgstr "Laporkan Masalah"

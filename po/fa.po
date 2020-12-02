@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
 "PO-Revision-Date: 2014-07-08 06:13+0000\n"
 "Last-Translator: Mohammad Zali <mohamadzali@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
@@ -19,8 +19,8 @@ msgstr ""
 "X-Generator: Launchpad (build 18335)\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "درباره"
+msgid "System"
+msgstr ""
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -153,6 +153,9 @@ msgstr ""
 #, c-format
 msgid "%s storage"
 msgstr ""
+
+#~ msgid "About"
+#~ msgstr "درباره"
 
 #, fuzzy
 #~ msgid "Report Problem"

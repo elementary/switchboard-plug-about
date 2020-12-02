@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
-"PO-Revision-Date: 2020-10-03 10:14+0000\n"
-"Last-Translator: imgradeone Yan <imgradeone@outlook.com>\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"PO-Revision-Date: 2020-11-16 17:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -21,8 +21,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "关于"
+msgid "System"
+msgstr "系统"
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -152,6 +152,9 @@ msgstr "%s 机械硬盘"
 #, c-format
 msgid "%s storage"
 msgstr "%s 硬盘"
+
+#~ msgid "About"
+#~ msgstr "关于"
 
 #~ msgid "Report Problems"
 #~ msgstr "反馈问题"

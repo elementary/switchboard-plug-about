@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-09 22:43+0000\n"
-"PO-Revision-Date: 2019-11-09 12:24+0000\n"
-"Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
+"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"PO-Revision-Date: 2020-11-16 17:15+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/eo/>\n"
 "Language: eo\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:31
-msgid "About"
-msgstr "Pri"
+msgid "System"
+msgstr "Sistemo"
 
 #: src/Plug.vala:32
 msgid "View operating system and hardware information"
@@ -159,6 +159,9 @@ msgstr "%s memoro (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s da memoro"
+
+#~ msgid "About"
+#~ msgstr "Pri"
 
 #~ msgid "Report Problems"
 #~ msgstr "Raporti problemojn"
