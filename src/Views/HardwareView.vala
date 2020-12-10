@@ -52,6 +52,8 @@ public class About.HardwareView : Gtk.Grid {
             critical (e.message);
         }
 
+        var fwupd_manager = FwupdManager.get_instance ();
+
         var manufacturer_logo = new Gtk.Image ();
         manufacturer_logo.icon_name = system_interface.icon_name;
         manufacturer_logo.hexpand = true;
