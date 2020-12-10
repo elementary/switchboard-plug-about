@@ -23,6 +23,9 @@
 public interface About.FwupdInterface : Object {
     [DBus (name = "HostProduct")]
     public abstract string host_product { owned get; }
+
+    [DBus (name = "GetDevices")]
+    public abstract GLib.HashTable<string, Variant>[] get_devices () throws GLib.Error;
 }
 
 public class About.FwupdManager : Object {
@@ -42,7 +45,15 @@ public class About.FwupdManager : Object {
     construct {
         try {
             interface = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
-            print ("HostProduct: %s\n", interface.host_product);
+
+            var devices = interface.get_devices ();
+            foreach (var device in devices) {
+                foreach (var key in device.get_keys ()) {
+                    if (key == "Name") {
+                        print ("%s: %s\n", key, device.lookup (key).get_string ());
+                    }
+                }
+            }
         } catch (Error e) {
             warning ("Could not connect to color interface: %s", e.message);
         }
