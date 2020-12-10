@@ -53,6 +53,9 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         var fwupd_manager = FwupdManager.get_instance ();
+        foreach (var device in fwupd_manager.get_devices ()) {
+            print ("%s\n", device.to_string ());
+        }
 
         var manufacturer_logo = new Gtk.Image ();
         manufacturer_logo.icon_name = system_interface.icon_name;

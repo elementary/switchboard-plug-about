@@ -42,18 +42,43 @@ public class About.FwupdManager : Object {
 
     private FwupdManager () {}
 
+    public List<Device> get_devices () {
+        var devices_list = new List<Device> ();
+
+        try {
+            foreach (var _device in interface.get_devices ()) {
+                var device = new Device ();
+                foreach (var key in _device.get_keys ()) {
+                    switch (key) {
+                        case "DeviceId":
+                            device.id = _device.lookup (key).get_string ();
+                            break;
+                        case "Name":
+                            device.name = _device.lookup (key).get_string ();
+                            break;
+                        case "Summary":
+                            device.summary = _device.lookup (key).get_string ();
+                            break;
+                        case "Icon":
+                            var icons = _device.lookup (key).get_strv ();
+                            device.icon = icons.length > 0 ? icons[0] : "unknown";
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                devices_list.append (device);
+            }
+        } catch (Error e) {
+            warning ("Could not connect to color interface: %s", e.message);
+        }
+
+        return devices_list;
+    }
+
     construct {
         try {
             interface = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
-
-            var devices = interface.get_devices ();
-            foreach (var device in devices) {
-                foreach (var key in device.get_keys ()) {
-                    if (key == "Name") {
-                        print ("%s: %s\n", key, device.lookup (key).get_string ());
-                    }
-                }
-            }
         } catch (Error e) {
             warning ("Could not connect to color interface: %s", e.message);
         }
