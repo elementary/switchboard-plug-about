@@ -24,9 +24,10 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
     private Gtk.Label vendor_value_label;
     private Gtk.Grid guids_grid;
     private Gtk.Label flags_value_label;
+    private Gtk.Button verify_button;
+    private Gtk.Button show_releases_button;
 
     public FirmwareDevicePage (Device device) {
-
         Object (
             icon_name: device.icon,
             status: device.summary,
@@ -43,6 +44,10 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
             guids_grid.add (label);
         }
         flags_value_label.label = "%llu".printf (device.flags);
+
+        verify_button.clicked.connect (() => {
+            FwupdManager.get_instance ().verify (device.id);
+        });
     }
 
     construct {
@@ -91,8 +96,8 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
         content_area.attach (flags_label, 0, 4, 1, 1);
         content_area.attach (flags_value_label, 1, 4, 1, 1);
 
-        var verify_button = new Gtk.Button.with_label (_("Verify"));
-        var show_releases_button = new Gtk.Button.with_label (_("Show Releases"));
+        verify_button = new Gtk.Button.with_label (_("Verify"));
+        show_releases_button = new Gtk.Button.with_label (_("Show Releases"));
 
         action_area.add (verify_button);
         action_area.add (show_releases_button);

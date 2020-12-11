@@ -26,6 +26,9 @@ public interface About.FwupdInterface : Object {
 
     [DBus (name = "GetDevices")]
     public abstract GLib.HashTable<string, Variant>[] get_devices () throws GLib.Error;
+
+    [DBus (name = "Verify")]
+    public abstract void verify (string id) throws GLib.Error;
 }
 
 public class About.FwupdManager : Object {
@@ -82,17 +85,25 @@ public class About.FwupdManager : Object {
                 devices_list.append (device);
             }
         } catch (Error e) {
-            warning ("Could not connect to color interface: %s", e.message);
+            warning ("Could not connect to fwupd interface: %s", e.message);
         }
 
         return devices_list;
+    }
+
+    public void verify (string id) {
+        try {
+            interface.verify (id);
+        } catch (Error e) {
+            warning ("Could not connect to fwupd interface: %s", e.message);
+        }
     }
 
     construct {
         try {
             interface = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
         } catch (Error e) {
-            warning ("Could not connect to color interface: %s", e.message);
+            warning ("Could not connect to fwupd interface: %s", e.message);
         }
     }
 }
