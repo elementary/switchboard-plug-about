@@ -59,9 +59,21 @@ public class About.FwupdManager : Object {
                         case "Summary":
                             device.summary = _device.lookup (key).get_string ();
                             break;
+                        case "Vendor":
+                            device.vendor = _device.lookup (key).get_string ();
+                            break;
+                        case "Version":
+                            device.version = _device.lookup (key).get_string ();
+                            break;
                         case "Icon":
                             var icons = _device.lookup (key).get_strv ();
                             device.icon = icons.length > 0 ? icons[0] : "unknown";
+                            break;
+                        case "Guid":
+                            device.guids = _device.lookup (key).get_strv ();
+                            break;
+                        case "Flags":
+                            device.flags = _device.lookup (key).get_uint64 ();
                             break;
                         default:
                             break;

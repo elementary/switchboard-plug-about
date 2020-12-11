@@ -19,37 +19,82 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.FirmwareDevicePage : Granite.SettingsPage {
+public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
+    private Gtk.Label version_value_label;
+    private Gtk.Label vendor_value_label;
+    private Gtk.Grid guids_grid;
+    private Gtk.Label flags_value_label;
+
     public FirmwareDevicePage (Device device) {
+
         Object (
-            display_widget: new Gtk.Image () {
-                gicon = new ThemedIcon (device.icon),
-                pixel_size = 32
-            },
+            icon_name: device.icon,
             status: device.summary,
             title: device.name
         );
+
+        version_value_label.label = device.version;
+        vendor_value_label.label = device.vendor;
+        foreach (var guid in device.guids) {
+            var label = new Gtk.Label (guid) {
+                xalign = 0,
+                hexpand = true
+            };
+            guids_grid.add (label);
+        }
+        flags_value_label.label = "%llu".printf (device.flags);
     }
 
     construct {
-        var title_label = new Gtk.Label ("Title:");
-        title_label.xalign = 1;
+        var version_label = new Gtk.Label (_("Current Version:")) {
+            xalign = 1
+        };
 
-        var title_entry = new Gtk.Entry ();
-        title_entry.hexpand = true;
-        title_entry.placeholder_text = "This page's title";
+        version_value_label = new Gtk.Label ("") {
+            xalign = 0,
+            hexpand = true
+        };
 
-        var content_area = new Gtk.Grid ();
-        content_area.column_spacing = 12;
-        content_area.row_spacing = 12;
-        content_area.margin = 12;
-        content_area.attach (title_label, 0, 1, 1, 1);
-        content_area.attach (title_entry, 1, 1, 1, 1);
+        var vendor_label = new Gtk.Label (_("Vendor:")) {
+            xalign = 1
+        };
 
-        add (content_area);
+        vendor_value_label = new Gtk.Label ("") {
+            xalign = 0,
+            hexpand = true
+        };
 
-        title_entry.changed.connect (() => {
-            title = title_entry.text;
-        });
+        var guids_label = new Gtk.Label (_("GUIDs:")) {
+            xalign = 1,
+            yalign = 0
+        };
+
+        guids_grid = new Gtk.Grid () {
+            orientation = Gtk.Orientation.VERTICAL
+        };
+
+        var flags_label = new Gtk.Label (_("Flags:")) {
+            xalign = 1
+        };
+
+        flags_value_label = new Gtk.Label ("") {
+            xalign = 0,
+            hexpand = true
+        };
+
+        content_area.attach (version_label, 0, 1, 1, 1);
+        content_area.attach (version_value_label, 1, 1, 1, 1);
+        content_area.attach (vendor_label, 0, 2, 1, 1);
+        content_area.attach (vendor_value_label, 1, 2, 1, 1);
+        content_area.attach (guids_label, 0, 3, 1, 1);
+        content_area.attach (guids_grid, 1, 3, 1, 1);
+        content_area.attach (flags_label, 0, 4, 1, 1);
+        content_area.attach (flags_value_label, 1, 4, 1, 1);
+
+        var verify_button = new Gtk.Button.with_label (_("Verify"));
+        var show_releases_button = new Gtk.Button.with_label (_("Show Releases"));
+
+        action_area.add (verify_button);
+        action_area.add (show_releases_button);
     }
 }
