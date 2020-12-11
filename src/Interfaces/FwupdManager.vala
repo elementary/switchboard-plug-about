@@ -25,10 +25,13 @@ public interface About.FwupdInterface : Object {
     public abstract string host_product { owned get; }
 
     [DBus (name = "GetDevices")]
-    public abstract GLib.HashTable<string, Variant>[] get_devices () throws GLib.Error;
+    public abstract HashTable<string, Variant>[] get_devices () throws Error;
+
+    [DBus (name = "GetReleases")]
+    public abstract HashTable<string, Variant>[] get_releases (string id) throws Error;
 
     [DBus (name = "Verify")]
-    public abstract void verify (string id) throws GLib.Error;
+    public abstract void verify (string id) throws Error;
 }
 
 public class About.FwupdManager : Object {
@@ -91,12 +94,21 @@ public class About.FwupdManager : Object {
         return devices_list;
     }
 
-    public void verify (string id) {
-        try {
-            interface.verify (id);
-        } catch (Error e) {
-            warning ("Could not connect to fwupd interface: %s", e.message);
+    public List<Release> get_releases (string id) throws Error {
+        var releases_list = new List<Release> ();
+
+        foreach (var _release in interface.get_releases (id)) {
+            var release = new Release ();
+            foreach (var key in _release.get_keys ()) {
+            }
+            releases_list.append (release);
         }
+
+        return releases_list;
+    }
+
+    public void verify (string id) throws Error {
+        interface.verify (id);
     }
 
     construct {

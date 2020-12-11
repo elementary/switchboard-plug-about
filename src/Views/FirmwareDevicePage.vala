@@ -46,7 +46,21 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
         flags_value_label.label = "%llu".printf (device.flags);
 
         verify_button.clicked.connect (() => {
-            FwupdManager.get_instance ().verify (device.id);
+            try {
+                FwupdManager.get_instance ().verify (device.id);
+            } catch (Error e) {
+                // TODO show Granite.MessageDialog
+                warning ("Could not verify '%s': %s", device.id, e.message);
+            }
+        });
+
+        show_releases_button.clicked.connect (() => {
+            try {
+                FwupdManager.get_instance ().get_releases (device.id);
+            } catch (Error e) {
+                // TODO show Granite.MessageDialog
+                warning ("Could not get releases of '%s': %s", device.id, e.message);
+            }
         });
     }
 
