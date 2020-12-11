@@ -27,5 +27,5 @@ public class About.Device : Object {
     public string vendor { get; set; }
     public string version { get; set; }
     public string[] guids { get; set; }
-    public uint64 flags { get; set; }
+    public uint64 flags { get; set; } // https://github.com/fwupd/fwupd/blob/72df1147933de747312aa7c9892f07e7916b8a39/libfwupd/fwupd-enums.h#L133
 }
