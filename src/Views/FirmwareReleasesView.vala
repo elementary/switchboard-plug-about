@@ -19,9 +19,23 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.Release : Object {
-    public string id { get; set; }
-    public string name { get; set; }
-    public string summary { get; set; }
-    public string icon { get; set; }
+public class About.FirmwareReleasesView : Gtk.Paned {
+    private Gtk.Stack stack;
+
+    public FirmwareReleasesView (Release[] releases) {
+        foreach (var release in releases) {
+            var page = new FirmwareReleasePage (release);
+
+            stack.add_named (page, release.id);
+        }
+    }
+
+    construct {
+        stack = new Gtk.Stack ();
+
+        var settings_sidebar = new Granite.SettingsSidebar (stack);
+
+        add (settings_sidebar);
+        add (stack);
+    }
 }

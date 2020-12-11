@@ -28,13 +28,4 @@ public class About.Device : Object {
     public string version { get; set; }
     public string[] guids { get; set; }
     public uint64 flags { get; set; }
-
-    public string to_string () {
-        return "{id: %s, name: %s, icon: %s, summary: %s}".printf (
-            id,
-            name,
-            icon,
-            summary
-        );
-    }
 }

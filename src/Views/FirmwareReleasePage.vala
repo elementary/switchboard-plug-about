@@ -19,9 +19,14 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.Release : Object {
-    public string id { get; set; }
-    public string name { get; set; }
-    public string summary { get; set; }
-    public string icon { get; set; }
+public class About.FirmwareReleasePage : Granite.SimpleSettingsPage {
+    public FirmwareReleasePage (Release release) {
+        Object (
+            icon_name: release.icon,
+            status: release.summary,
+            title: release.name
+        );
+    }
+
+    construct {}
 }
