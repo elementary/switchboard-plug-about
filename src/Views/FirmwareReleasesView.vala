@@ -22,14 +22,6 @@
 public class About.FirmwareReleasesView : Gtk.Paned {
     private Gtk.Stack stack;
 
-    public FirmwareReleasesView (Release[] releases) {
-        foreach (var release in releases) {
-            var page = new FirmwareReleasePage (release);
-
-            stack.add_named (page, release.id);
-        }
-    }
-
     construct {
         stack = new Gtk.Stack ();
 
@@ -37,5 +29,18 @@ public class About.FirmwareReleasesView : Gtk.Paned {
 
         add (settings_sidebar);
         add (stack);
+    }
+
+    public void get_releases (string device_id) {
+        foreach (Gtk.Widget element in stack.get_children ()) {
+            stack.remove (element);
+        }
+
+        var fwupd_manager = FwupdManager.get_instance ();
+        foreach (var release in fwupd_manager.get_releases (device_id)) {
+            var page = new FirmwareReleasePage (release);
+
+            stack.add_named (page, release.id);
+        }
     }
 }

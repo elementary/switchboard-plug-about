@@ -19,17 +19,29 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.FirmwareView : Gtk.Stack {
+public class About.FirmwareDevicesView : Gtk.Paned {
+    public signal void verify (string device_id);
+    public signal void show_releases (string device_id);
+
     construct {
-        var firmware_devices_view = new FirmwareDevicesView ();
-        var firmware_releases_view = new FirmwareReleasesView ();
+        var stack = new Gtk.Stack ();
 
-        firmware_devices_view.show_releases.connect ((device_id) => {
-            firmware_releases_view.get_releases (device_id);
-            set_visible_child_name ("releases");
-        });
+        var fwupd_manager = FwupdManager.get_instance ();
+        foreach (var device in fwupd_manager.get_devices ()) {
+            var page = new FirmwareDevicePage (device);
+            page.verify.connect ((device_id) => {
+                verify (device_id);
+            });
+            page.show_releases.connect ((device_id) => {
+                show_releases (device_id);
+            });
 
-        add_named (firmware_devices_view, "devices");
-        add_named (firmware_releases_view, "releases");
+            stack.add_named (page, device.id);
+        }
+
+        var settings_sidebar = new Granite.SettingsSidebar (stack);
+
+        add (settings_sidebar);
+        add (stack);
     }
 }

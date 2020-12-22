@@ -27,6 +27,9 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
     private Gtk.Button verify_button;
     private Gtk.Button show_releases_button;
 
+    public signal void verify (string device_id);
+    public signal void show_releases (string device_id);
+
     public FirmwareDevicePage (Device device) {
         Object (
             icon_name: device.icon,
@@ -51,21 +54,11 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
         }
 
         verify_button.clicked.connect (() => {
-            try {
-                FwupdManager.get_instance ().verify (device.id);
-            } catch (Error e) {
-                // TODO show Granite.MessageDialog
-                warning ("Could not verify '%s': %s", device.id, e.message);
-            }
+            verify (device.id);
         });
 
         show_releases_button.clicked.connect (() => {
-            try {
-                FwupdManager.get_instance ().get_releases (device.id);
-            } catch (Error e) {
-                // TODO show Granite.MessageDialog
-                warning ("Could not get releases of '%s': %s", device.id, e.message);
-            }
+            show_releases (device.id);
         });
     }
 

@@ -68,6 +68,11 @@ public class About.FwupdManager : Object {
                         case "Vendor":
                             device.vendor = _device.lookup (key).get_string ();
                             break;
+                        case "VendorId":
+                            if (device.vendor == null) {
+                                device.vendor = _device.lookup (key).get_string ();
+                            }
+                            break;
                         case "Version":
                             device.version = _device.lookup (key).get_string ();
                             break;
