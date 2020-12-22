@@ -81,6 +81,9 @@ public class About.FwupdManager : Object {
                         case "Flags":
                             device.flags = _device.lookup (key).get_uint64 ();
                             break;
+                        case "InstallDuration":
+                            device.install_duration = _device.lookup (key).get_uint64 ();
+                            break;
                         default:
                             break;
                     }

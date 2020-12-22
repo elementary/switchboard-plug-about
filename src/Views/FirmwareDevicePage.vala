@@ -45,6 +45,11 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
         }
         flags_value_label.label = "%llu".printf (device.flags);
 
+        if (device.install_duration == null) {
+            verify_button.sensitive = false;
+            show_releases_button.sensitive = false;
+        }
+
         verify_button.clicked.connect (() => {
             try {
                 FwupdManager.get_instance ().verify (device.id);
