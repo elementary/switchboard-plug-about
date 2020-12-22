@@ -99,14 +99,28 @@ public class About.FwupdManager : Object {
 
     public List<Release> get_releases (string id) throws Error {
         var releases_list = new List<Release> ();
-
+    
         foreach (var _release in interface.get_releases (id)) {
             var release = new Release ();
+            release.icon = "security-high";
             foreach (var key in _release.get_keys ()) {
+                switch (key) {
+                    case "Filename":
+                        release.id = _release.lookup (key).get_string ();
+                        break;
+                    case "Name":
+                        release.name = _release.lookup (key).get_string ();
+                        break;
+                    case "Summary":
+                        release.summary = _release.lookup (key).get_string ();
+                        break;
+                    default:
+                        break;
+                }
             }
             releases_list.append (release);
         }
-
+    
         return releases_list;
     }
 
