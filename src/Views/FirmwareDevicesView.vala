@@ -21,7 +21,7 @@
 
 public class About.FirmwareDevicesView : Gtk.Paned {
     public signal void verify (string device_id);
-    public signal void show_releases (string device_id);
+    public signal void show_releases (Device device);
 
     construct {
         var stack = new Gtk.Stack ();
@@ -32,8 +32,8 @@ public class About.FirmwareDevicesView : Gtk.Paned {
             page.verify.connect ((device_id) => {
                 verify (device_id);
             });
-            page.show_releases.connect ((device_id) => {
-                show_releases (device_id);
+            page.show_releases.connect ((device) => {
+                show_releases (device);
             });
 
             stack.add_named (page, device.id);

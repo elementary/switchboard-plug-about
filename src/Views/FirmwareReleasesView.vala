@@ -31,13 +31,12 @@ public class About.FirmwareReleasesView : Gtk.Paned {
         add (stack);
     }
 
-    public void get_releases (string device_id) {
+    public void get_releases (Device device) {
         foreach (Gtk.Widget element in stack.get_children ()) {
             stack.remove (element);
         }
 
-        var fwupd_manager = FwupdManager.get_instance ();
-        foreach (var release in fwupd_manager.get_releases (device_id)) {
+        foreach (var release in device.releases) {
             var page = new FirmwareReleasePage (release);
 
             stack.add_named (page, release.id);

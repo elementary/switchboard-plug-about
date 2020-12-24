@@ -26,11 +26,10 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
     private Gtk.Grid flags_grid;
     private Gtk.Button verify_button;
     private Gtk.Button show_releases_button;
-    private Gtk.Label install_duration_label;
     private Gtk.Label install_duration_value_label;
 
     public signal void verify (string device_id);
-    public signal void show_releases (string device_id);
+    public signal void show_releases (Device device);
 
     public FirmwareDevicePage (Device device) {
         Object (
@@ -73,23 +72,18 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
             }
         }
 
-        verify_button.sensitive = device.install_duration > 0;
-        show_releases_button.sensitive = device.install_duration > 0;
-        install_duration_label.visible = device.install_duration > 0;
-        install_duration_value_label.visible = device.install_duration > 0;
-
         if (device.install_duration > 0) {
             install_duration_value_label.label = "%lu s".printf (device.install_duration);
-        } else {
-            install_duration_value_label.label = "";
         }
 
+        verify_button.sensitive = device.releases.length() > 0;
         verify_button.clicked.connect (() => {
             verify (device.id);
         });
 
+        show_releases_button.sensitive = device.releases.length() > 0;
         show_releases_button.clicked.connect (() => {
-            show_releases (device.id);
+            show_releases (device);
         });
     }
 
@@ -131,7 +125,7 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
             row_spacing = 4
         };
 
-        install_duration_label = new Gtk.Label (_("Install Duration:")) {
+        var install_duration_label = new Gtk.Label (_("Install Duration:")) {
             xalign = 1
         };
 

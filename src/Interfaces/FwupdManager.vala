@@ -58,6 +58,7 @@ public class About.FwupdManager : Object {
                     switch (key) {
                         case "DeviceId":
                             device.id = _device.lookup (key).get_string ();
+                            device.releases = get_releases (device.id);
                             break;
                         case "Name":
                             device.name = _device.lookup (key).get_string ();
@@ -78,7 +79,7 @@ public class About.FwupdManager : Object {
                             break;
                         case "Icon":
                             var icons = _device.lookup (key).get_strv ();
-                            device.icon = icons.length > 0 ? icons[0] : "unknown";
+                            device.icon = icons.length > 0 ? icons[0] : "application-x-firmware";
                             break;
                         case "Guid":
                             device.guids = _device.lookup (key).get_strv ();
@@ -102,7 +103,7 @@ public class About.FwupdManager : Object {
         return devices_list;
     }
 
-    public List<Release> get_releases (string id) {
+    private List<Release> get_releases (string id) {
         var releases_list = new List<Release> ();
     
         try {

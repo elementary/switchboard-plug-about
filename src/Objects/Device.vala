@@ -29,4 +29,6 @@ public class About.Device : Object {
     public string[] guids { get; set; }
     public uint64 flags { get; set; }
     public uint32 install_duration { get; set; }
+
+    public List<Release> releases { get; owned set; }
 }
