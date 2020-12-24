@@ -24,8 +24,8 @@ public class About.FirmwareView : Gtk.Stack {
         var firmware_devices_view = new FirmwareDevicesView ();
         var firmware_releases_view = new FirmwareReleasesView ();
 
-        firmware_devices_view.show_releases.connect ((device_id) => {
-            firmware_releases_view.get_releases (device_id);
+        firmware_devices_view.show_releases.connect ((device) => {
+            firmware_releases_view.get_releases (device);
             set_visible_child_name ("releases");
         });
 

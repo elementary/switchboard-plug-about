@@ -20,26 +20,23 @@
 */
 
 public class About.FirmwareReleasesView : Gtk.Paned {
-    private Gtk.Stack stack;
+    public void get_releases (Device device) {
+        foreach (Gtk.Widget element in get_children ()) {
+            remove (element);
+        }
 
-    construct {
-        stack = new Gtk.Stack ();
+        var stack = new Gtk.Stack ();
+
+        foreach (var release in device.releases) {
+            var page = new FirmwareReleasePage (release);
+
+            stack.add_named (page, release.filename);
+        }
 
         var settings_sidebar = new Granite.SettingsSidebar (stack);
 
         add (settings_sidebar);
         add (stack);
-    }
-
-    public void get_releases (Device device) {
-        foreach (Gtk.Widget element in stack.get_children ()) {
-            stack.remove (element);
-        }
-
-        foreach (var release in device.releases) {
-            var page = new FirmwareReleasePage (release);
-
-            stack.add_named (page, release.id);
-        }
+        show_all ();
     }
 }

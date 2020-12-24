@@ -20,8 +20,19 @@
 */
 
 public class About.Release : Object {
-    public string id { get; set; }
+    public string filename { get; set; }
     public string name { get; set; }
     public string summary { get; set; }
     public string icon { get; set; }
+    public string version { get; set; }
+    public string description { get; set; }
+    public string protocol { get; set; }
+    public string remote_id { get; set; }
+    public string appstream_id { get; set; }
+    public string checksum { get; set; }
+    public string vendor { get; set; }
+    public uint64 size { get; set; }
+    public string license { get; set; }
+    public uint64 flags { get; set; }
+    public uint32 install_duration { get; set; }
 }

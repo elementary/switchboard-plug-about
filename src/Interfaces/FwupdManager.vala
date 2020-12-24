@@ -52,46 +52,46 @@ public class About.FwupdManager : Object {
         var devices_list = new List<Device> ();
 
         try {
-            foreach (var _device in interface.get_devices ()) {
+            foreach (var v in interface.get_devices ()) {
                 var device = new Device ();
-                foreach (var key in _device.get_keys ()) {
+                foreach (var key in v.get_keys ()) {
                     switch (key) {
                         case "DeviceId":
-                            device.id = _device.lookup (key).get_string ();
+                            device.id = v.lookup (key).get_string ();
                             device.releases = get_releases (device.id);
                             break;
                         case "Name":
-                            device.name = _device.lookup (key).get_string ();
+                            device.name = v.lookup (key).get_string ();
                             break;
                         case "Summary":
-                            device.summary = _device.lookup (key).get_string ();
+                            device.summary = v.lookup (key).get_string ();
                             break;
                         case "Vendor":
-                            device.vendor = _device.lookup (key).get_string ();
+                            device.vendor = v.lookup (key).get_string ();
                             break;
                         case "VendorId":
                             if (device.vendor == null) {
-                                device.vendor = _device.lookup (key).get_string ();
+                                device.vendor = v.lookup (key).get_string ();
                             }
                             break;
                         case "Version":
-                            device.version = _device.lookup (key).get_string ();
+                            device.version = v.lookup (key).get_string ();
                             break;
                         case "Icon":
-                            var icons = _device.lookup (key).get_strv ();
+                            var icons = v.lookup (key).get_strv ();
                             device.icon = icons.length > 0 ? icons[0] : "application-x-firmware";
                             break;
                         case "Guid":
-                            device.guids = _device.lookup (key).get_strv ();
+                            device.guids = v.lookup (key).get_strv ();
                             break;
                         case "Flags":
-                            device.flags = _device.lookup (key).get_uint64 ();
+                            device.flags = v.lookup (key).get_uint64 ();
                             break;
                         case "InstallDuration":
-                            device.install_duration = _device.lookup (key).get_uint32 ();
+                            device.install_duration = v.lookup (key).get_uint32 ();
                             break;
                         case "UpdateError":
-                            device.update_error = _device.lookup (key).get_string ();
+                            device.update_error = v.lookup (key).get_string ();
                             break;
                         default:
                             break;
@@ -110,19 +110,52 @@ public class About.FwupdManager : Object {
         var releases_list = new List<Release> ();
 
         try {
-            foreach (var _release in interface.get_releases (id)) {
+            foreach (var v in interface.get_releases (id)) {
                 var release = new Release ();
                 release.icon = "security-high";
-                foreach (var key in _release.get_keys ()) {
+                foreach (var key in v.get_keys ()) {
                     switch (key) {
                         case "Filename":
-                            release.id = _release.lookup (key).get_string ();
+                            release.filename = v.lookup (key).get_string ();
                             break;
                         case "Name":
-                            release.name = _release.lookup (key).get_string ();
+                            release.name = v.lookup (key).get_string ();
                             break;
                         case "Summary":
-                            release.summary = _release.lookup (key).get_string ();
+                            release.summary = v.lookup (key).get_string ();
+                            break;
+                        case "Version":
+                            release.version = v.lookup (key).get_string ();
+                            break;
+                        case "Description":
+                            release.description = v.lookup (key).get_string ();
+                            break;
+                        case "Protocol":
+                            release.protocol = v.lookup (key).get_string ();
+                            break;
+                        case "RemoteId":
+                            release.remote_id = v.lookup (key).get_string ();
+                            break;
+                        case "AppstreamId":
+                            release.appstream_id = v.lookup (key).get_string ();
+                            break;
+                        case "Checksum":
+                            release.checksum = v.lookup (key).get_string ();
+                            break;
+                        case "Vendor":
+                            release.vendor = v.lookup (key).get_string ();
+                            break;
+                        case "Size":
+                            release.size = v.lookup (key).get_uint64 ();
+                            break;
+                        case "License":
+                            release.license = v.lookup (key).get_string ();
+                            break;
+                        case "TrustFlags":
+                            release.flags = v.lookup (key).get_uint64 ();
+                            break;
+                        case "InstallDuration":
+                            release.install_duration = v.lookup (key).get_uint32 ();
                             break;
                         default:
                             break;

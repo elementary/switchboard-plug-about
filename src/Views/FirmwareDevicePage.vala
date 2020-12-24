@@ -41,7 +41,9 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
         );
 
         version_value_label.label = device.version;
+
         vendor_value_label.label = device.vendor;
+
         foreach (var guid in device.guids) {
             var label = new Gtk.Label (guid) {
                 xalign = 0,
