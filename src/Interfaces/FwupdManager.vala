@@ -90,6 +90,9 @@ public class About.FwupdManager : Object {
                         case "InstallDuration":
                             device.install_duration = _device.lookup (key).get_uint32 ();
                             break;
+                        case "UpdateError":
+                            device.update_error = _device.lookup (key).get_string ();
+                            break;
                         default:
                             break;
                     }
