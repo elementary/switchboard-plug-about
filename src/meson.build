@@ -1,6 +1,7 @@
 plug_files = files(
     'Plug.vala',
     'Objects/Device.vala',
+    'Objects/DeviceFlag.vala',
     'Objects/Release.vala',
     'Interfaces/FwupdManager.vala',
     'Utils/ARMPartDecoder.vala',

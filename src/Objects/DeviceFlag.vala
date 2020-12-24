@@ -20,7 +20,7 @@
 */
 
 // https://github.com/fwupd/fwupd/blob/72df1147933de747312aa7c9892f07e7916b8a39/libfwupd/fwupd-enums.h#L133
-enum About.DeviceFlag {
+public enum About.DeviceFlag {
     NONE                   = (0u),          /* Since: 0.1.3 */
     INTERNAL               = (1u << 0),     /* Since: 0.1.3 */
     UPDATABLE              = (1u << 1),     /* Since: 0.9.7 */
@@ -65,6 +65,145 @@ enum About.DeviceFlag {
     BACKUP_BEFORE_INSTALL  = (1u << 40),    /* Since: 1.5.0 */
     MD_SET_ICON            = (1u << 41),    /* Since: 1.5.2 */
     UNKNOWN                = 18446744073709551615;    /* Since: 0.7.3 */ // using uint64.max --> ‘MAX’ undeclared here (not in a function)
+
+    public static List<DeviceFlag> get_list (uint64 flags) {
+        var list = new List<DeviceFlag> ();
+
+        if ((flags & (0u)) > 0) {
+            list.append (DeviceFlag.NONE);
+        }
+        if ((flags & (1u << 0)) > 0) {
+            list.append (DeviceFlag.INTERNAL);
+        }
+        if ((flags & (1u << 1)) > 0) {
+            list.append (DeviceFlag.UPDATABLE);
+        }
+        if ((flags & (1u << 2)) > 0) {
+            list.append (DeviceFlag.ONLY_OFFLINE);
+        }
+        if ((flags & (1u << 3)) > 0) {
+            list.append (DeviceFlag.REQUIRE_AC);
+        }
+        if ((flags & (1u << 4)) > 0) {
+            list.append (DeviceFlag.LOCKED);
+        }
+        if ((flags & (1u << 5)) > 0) {
+            list.append (DeviceFlag.SUPPORTED);
+        }
+        if ((flags & (1u << 6)) > 0) {
+            list.append (DeviceFlag.NEEDS_BOOTLOADER);
+        }
+        if ((flags & (1u << 7)) > 0) {
+            list.append (DeviceFlag.REGISTERED);
+        }
+        if ((flags & (1u << 8)) > 0) {
+            list.append (DeviceFlag.NEEDS_REBOOT);
+        }
+        if ((flags & (1u << 9)) > 0) {
+            list.append (DeviceFlag.REPORTED);
+        }
+        if ((flags & (1u << 10)) > 0) {
+            list.append (DeviceFlag.NOTIFIED);
+        }
+        if ((flags & (1u << 11)) > 0) {
+            list.append (DeviceFlag.USE_RUNTIME_VERSION);
+        }
+        if ((flags & (1u << 12)) > 0) {
+            list.append (DeviceFlag.INSTALL_PARENT_FIRST);
+        }
+        if ((flags & (1u << 13)) > 0) {
+            list.append (DeviceFlag.IS_BOOTLOADER);
+        }
+        if ((flags & (1u << 14)) > 0) {
+            list.append (DeviceFlag.WAIT_FOR_REPLUG);
+        }
+        if ((flags & (1u << 15)) > 0) {
+            list.append (DeviceFlag.IGNORE_VALIDATION);
+        }
+        if ((flags & (1u << 16)) > 0) {
+            list.append (DeviceFlag.TRUSTED);
+        }
+        if ((flags & (1u << 17)) > 0) {
+            list.append (DeviceFlag.NEEDS_SHUTDOWN);
+        }
+        if ((flags & (1u << 18)) > 0) {
+            list.append (DeviceFlag.ANOTHER_WRITE_REQUIRED);
+        }
+        if ((flags & (1u << 19)) > 0) {
+            list.append (DeviceFlag.NO_AUTO_INSTANCE_IDS);
+        }
+        if ((flags & (1u << 20)) > 0) {
+            list.append (DeviceFlag.NEEDS_ACTIVATION);
+        }
+        if ((flags & (1u << 21)) > 0) {
+            list.append (DeviceFlag.ENSURE_SEMVER);
+        }
+        if ((flags & (1u << 22)) > 0) {
+            list.append (DeviceFlag.HISTORICAL);
+        }
+        if ((flags & (1u << 23)) > 0) {
+            list.append (DeviceFlag.ONLY_SUPPORTED);
+        }
+        if ((flags & (1u << 24)) > 0) {
+            list.append (DeviceFlag.WILL_DISAPPEAR);
+        }
+        if ((flags & (1u << 25)) > 0) {
+            list.append (DeviceFlag.CAN_VERIFY);
+        }
+        if ((flags & (1u << 26)) > 0) {
+            list.append (DeviceFlag.CAN_VERIFY_IMAGE);
+        }
+        if ((flags & (1u << 27)) > 0) {
+            list.append (DeviceFlag.DUAL_IMAGE);
+        }
+        if ((flags & (1u << 28)) > 0) {
+            list.append (DeviceFlag.SELF_RECOVERY);
+        }
+        if ((flags & (1u << 29)) > 0) {
+            list.append (DeviceFlag.USABLE_DURING_UPDATE);
+        }
+        if ((flags & (1u << 30)) > 0) {
+            list.append (DeviceFlag.VERSION_CHECK_REQUIRED);
+        }
+        if ((flags & (1u << 31)) > 0) {
+            list.append (DeviceFlag.INSTALL_ALL_RELEASES);
+        }
+        if ((flags & (1u << 32)) > 0) {
+            list.append (DeviceFlag.MD_SET_NAME);
+        }
+        if ((flags & (1u << 33)) > 0) {
+            list.append (DeviceFlag.MD_SET_NAME_CATEGORY);
+        }
+        if ((flags & (1u << 34)) > 0) {
+            list.append (DeviceFlag.MD_SET_VERFMT);
+        }
+        if ((flags & (1u << 35)) > 0) {
+            list.append (DeviceFlag.ADD_COUNTERPART_GUIDS);
+        }
+        if ((flags & (1u << 36)) > 0) {
+            list.append (DeviceFlag.NO_GUID_MATCHING);
+        }
+        if ((flags & (1u << 37)) > 0) {
+            list.append (DeviceFlag.UPDATABLE_HIDDEN);
+        }
+        if ((flags & (1u << 38)) > 0) {
+            list.append (DeviceFlag.SKIPS_RESTART);
+        }
+        if ((flags & (1u << 39)) > 0) {
+            list.append (DeviceFlag.HAS_MULTIPLE_BRANCHES);
+        }
+        if ((flags & (1u << 40)) > 0) {
+            list.append (DeviceFlag.BACKUP_BEFORE_INSTALL);
+        }
+        if ((flags & (1u << 41)) > 0) {
+            list.append (DeviceFlag.MD_SET_ICON);
+        }
+        if ((flags & (18446744073709551615)) > 0) {
+            list.append (DeviceFlag.UNKNOWN);
+        }
+
+        return list;
+    }
 
     // https://gitlab.gnome.org/hughsie/gnome-firmware-updater/-/blob/f5281078e3cfade7ff919c812ba63de22431aaf2/src/gfu-common.c#L249
     public string? to_string() {
@@ -159,6 +298,66 @@ enum About.DeviceFlag {
                 return null;
             default:
                 return null;        
+        }
+    }
+
+    // https://gitlab.gnome.org/hughsie/gnome-firmware-updater/-/blob/f5281078e3cfade7ff919c812ba63de22431aaf2/src/gfu-common.c#L377
+    public string to_icon () {
+        switch (this) {
+            case INTERNAL:
+                return "drive-harddisk-symbolic";
+            case UPDATABLE:
+                return "software-update-available-symbolic";
+            case ONLY_OFFLINE:
+                return "network-offline-symbolic";
+            case REQUIRE_AC:
+                return "battery-symbolic";
+            case LOCKED:
+                return "locked-symbolic";
+            case SUPPORTED:
+                return "security-high-symbolic";
+            case NEEDS_BOOTLOADER:
+                return "computer-symbolic";
+            case NEEDS_REBOOT:
+                return "system-reboot-symbolic";
+            case NEEDS_SHUTDOWN:
+                return "system-shutdown-symbolic";
+            case REPORTED:
+                return "task-due-symbolic";
+            case NOTIFIED:
+                return "task-due-symbolic";
+            case USE_RUNTIME_VERSION:
+                return "system-run-symbolic";
+            case INSTALL_PARENT_FIRST:
+                return "system-software-install-symbolic";
+            case IS_BOOTLOADER:
+                return "computer-symbolic";
+            case WAIT_FOR_REPLUG:
+                return "battery-low-symbolic";
+            case IGNORE_VALIDATION:
+                return "dialog-error-symbolic";
+            case ANOTHER_WRITE_REQUIRED:
+                return "media-floppy-symbolic";
+            case NO_AUTO_INSTANCE_IDS:
+                return "dialog-error-symbolic";
+            case NEEDS_ACTIVATION:
+                return "emblem-important-symbolic";
+            case ENSURE_SEMVER:
+                return "emblem-important-symbolic";
+            case WILL_DISAPPEAR:
+                return "emblem-important-symbolic";
+            case CAN_VERIFY:
+                return "emblem-important-symbolic";
+            case DUAL_IMAGE:
+                return "emblem-important-symbolic";
+            case SELF_RECOVERY:
+                return "emblem-important-symbolic";
+            case USABLE_DURING_UPDATE:
+                return "emblem-important-symbolic";
+            case UNKNOWN:
+                return "unknown-symbolic";
+            default:
+                return "unknown-symbolic";
         }
     }
 }

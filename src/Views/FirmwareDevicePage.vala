@@ -23,7 +23,7 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
     private Gtk.Label version_value_label;
     private Gtk.Label vendor_value_label;
     private Gtk.Grid guids_grid;
-    private Gtk.Label flags_value_label;
+    private Gtk.Grid flags_grid;
     private Gtk.Button verify_button;
     private Gtk.Button show_releases_button;
     private Gtk.Label install_duration_label;
@@ -48,7 +48,30 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
             };
             guids_grid.add (label);
         }
-        flags_value_label.label = "%llu".printf (device.flags);
+
+        foreach (var device_flag in DeviceFlag.get_list (device.flags)) {
+            var name = device_flag.to_string ();
+
+            if (name != null) {
+                var icon = new Gtk.Image () {
+                    gicon = new ThemedIcon (device_flag.to_icon ()),
+                    pixel_size = 16
+                };
+                var label = new Gtk.Label (name) {
+                    xalign = 0,
+                    hexpand = true
+                };
+                var grid = new Gtk.Grid () {
+                    orientation = Gtk.Orientation.HORIZONTAL,
+                    column_spacing = 8
+                };
+
+                grid.add (icon);
+                grid.add (label);
+
+                flags_grid.add (grid);
+            }
+        }
 
         verify_button.sensitive = device.install_duration > 0;
         show_releases_button.sensitive = device.install_duration > 0;
@@ -99,12 +122,13 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
         };
 
         var flags_label = new Gtk.Label (_("Flags:")) {
-            xalign = 1
+            xalign = 1,
+            yalign = 0
         };
 
-        flags_value_label = new Gtk.Label ("") {
-            xalign = 0,
-            hexpand = true
+        flags_grid = new Gtk.Grid () {
+            orientation = Gtk.Orientation.VERTICAL,
+            row_spacing = 4
         };
 
         install_duration_label = new Gtk.Label (_("Install Duration:")) {
@@ -123,7 +147,7 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
         content_area.attach (guids_label, 0, 3, 1, 1);
         content_area.attach (guids_grid, 1, 3, 1, 1);
         content_area.attach (flags_label, 0, 4, 1, 1);
-        content_area.attach (flags_value_label, 1, 4, 1, 1);
+        content_area.attach (flags_grid, 1, 4, 1, 1);
         content_area.attach (install_duration_label, 0, 5, 1, 1);
         content_area.attach (install_duration_value_label, 1, 5, 1, 1);
 
