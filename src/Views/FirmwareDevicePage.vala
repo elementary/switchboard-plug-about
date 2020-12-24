@@ -78,9 +78,7 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
 
         update_error_value_label.label = device.update_error;
 
-        if (device.install_duration > 0) {
-            install_duration_value_label.label = "%lu s".printf (device.install_duration);
-        }
+        install_duration_value_label.label = Formatter.seconds_to_string (device.install_duration);
 
         verify_button.sensitive = device.releases.length () > 0;
         verify_button.clicked.connect (() => {

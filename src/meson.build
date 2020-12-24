@@ -5,6 +5,7 @@ plug_files = files(
     'Objects/Release.vala',
     'Interfaces/FwupdManager.vala',
     'Utils/ARMPartDecoder.vala',
+    'Utils/Formatter.vala',
     'Views/FirmwareDevicePage.vala',
     'Views/FirmwareDevicesView.vala',
     'Views/FirmwareReleasePage.vala',

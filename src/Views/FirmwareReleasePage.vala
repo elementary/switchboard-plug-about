@@ -59,15 +59,13 @@ public class About.FirmwareReleasePage : Granite.SimpleSettingsPage {
 
         vendor_value_label.label = release.vendor;
 
-        size_value_label.label = "%.1f kB".printf ((release.size / 1000.0));
+        size_value_label.label = Formatter.bytes_to_string (release.size);
 
         license_value_label.label = release.license;
 
         flags_value_label.label = "%llu".printf (release.flags);
 
-        if (release.install_duration > 0) {
-            install_duration_value_label.label = "%lu s".printf (release.install_duration);
-        }
+        install_duration_value_label.label = Formatter.seconds_to_string (release.install_duration);
     }
 
     construct {
