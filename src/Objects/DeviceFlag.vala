@@ -21,50 +21,50 @@
 
 // https://github.com/fwupd/fwupd/blob/72df1147933de747312aa7c9892f07e7916b8a39/libfwupd/fwupd-enums.h#L133
 public enum About.DeviceFlag {
-    NONE                   = (0u),          /* Since: 0.1.3 */
-    INTERNAL               = (1u << 0),     /* Since: 0.1.3 */
-    UPDATABLE              = (1u << 1),     /* Since: 0.9.7 */
-    ONLY_OFFLINE           = (1u << 2),     /* Since: 0.9.7 */
-    REQUIRE_AC             = (1u << 3),     /* Since: 0.6.3 */
-    LOCKED                 = (1u << 4),     /* Since: 0.6.3 */
-    SUPPORTED              = (1u << 5),     /* Since: 0.7.1 */
-    NEEDS_BOOTLOADER       = (1u << 6),     /* Since: 0.7.3 */
-    REGISTERED             = (1u << 7),     /* Since: 0.9.7 */
-    NEEDS_REBOOT           = (1u << 8),     /* Since: 0.9.7 */
-    REPORTED               = (1u << 9),     /* Since: 1.0.4 */
-    NOTIFIED               = (1u << 10),    /* Since: 1.0.5 */
-    USE_RUNTIME_VERSION    = (1u << 11),    /* Since: 1.0.6 */
-    INSTALL_PARENT_FIRST   = (1u << 12),    /* Since: 1.0.8 */
-    IS_BOOTLOADER          = (1u << 13),    /* Since: 1.0.8 */
-    WAIT_FOR_REPLUG        = (1u << 14),    /* Since: 1.1.2 */
-    IGNORE_VALIDATION      = (1u << 15),    /* Since: 1.1.2 */
-    TRUSTED                = (1u << 16),    /* Since: 1.1.2 */
-    NEEDS_SHUTDOWN         = (1u << 17),    /* Since: 1.2.4 */
-    ANOTHER_WRITE_REQUIRED = (1u << 18),    /* Since: 1.2.5 */
-    NO_AUTO_INSTANCE_IDS   = (1u << 19),    /* Since: 1.2.5 */
-    NEEDS_ACTIVATION       = (1u << 20),    /* Since: 1.2.6 */
-    ENSURE_SEMVER          = (1u << 21),    /* Since: 1.2.9 */
-    HISTORICAL             = (1u << 22),    /* Since: 1.3.2 */
-    ONLY_SUPPORTED         = (1u << 23),    /* Since: 1.3.3 */
-    WILL_DISAPPEAR         = (1u << 24),    /* Since: 1.3.3 */
-    CAN_VERIFY             = (1u << 25),    /* Since: 1.3.3 */
-    CAN_VERIFY_IMAGE       = (1u << 26),    /* Since: 1.3.3 */
-    DUAL_IMAGE             = (1u << 27),    /* Since: 1.3.3 */
-    SELF_RECOVERY          = (1u << 28),    /* Since: 1.3.3 */
-    USABLE_DURING_UPDATE   = (1u << 29),    /* Since: 1.3.3 */
-    VERSION_CHECK_REQUIRED = (1u << 30),    /* Since: 1.3.7 */
-    INSTALL_ALL_RELEASES   = (1u << 31),    /* Since: 1.3.7 */
-    MD_SET_NAME            = (1u << 32),    /* Since: 1.4.0 */
-    MD_SET_NAME_CATEGORY   = (1u << 33),    /* Since: 1.4.0 */
-    MD_SET_VERFMT          = (1u << 34),    /* Since: 1.4.0 */
-    ADD_COUNTERPART_GUIDS  = (1u << 35),    /* Since: 1.4.0 */
-    NO_GUID_MATCHING       = (1u << 36),    /* Since: 1.4.1 */
-    UPDATABLE_HIDDEN       = (1u << 37),    /* Since: 1.4.1 */
-    SKIPS_RESTART          = (1u << 38),    /* Since: 1.5.0 */
-    HAS_MULTIPLE_BRANCHES  = (1u << 39),    /* Since: 1.5.0 */
-    BACKUP_BEFORE_INSTALL  = (1u << 40),    /* Since: 1.5.0 */
-    MD_SET_ICON            = (1u << 41),    /* Since: 1.5.2 */
-    UNKNOWN                = 18446744073709551615;    /* Since: 0.7.3 */ // using uint64.max --> ‘MAX’ undeclared here (not in a function)
+    NONE = (0u),                         /* Since: 0.1.3 */
+    INTERNAL = (1u << 0),                /* Since: 0.1.3 */
+    UPDATABLE = (1u << 1),               /* Since: 0.9.7 */
+    ONLY_OFFLINE = (1u << 2),            /* Since: 0.9.7 */
+    REQUIRE_AC = (1u << 3),              /* Since: 0.6.3 */
+    LOCKED = (1u << 4),                  /* Since: 0.6.3 */
+    SUPPORTED = (1u << 5),               /* Since: 0.7.1 */
+    NEEDS_BOOTLOADER = (1u << 6),        /* Since: 0.7.3 */
+    REGISTERED = (1u << 7),              /* Since: 0.9.7 */
+    NEEDS_REBOOT = (1u << 8),            /* Since: 0.9.7 */
+    REPORTED = (1u << 9),                /* Since: 1.0.4 */
+    NOTIFIED = (1u << 10),               /* Since: 1.0.5 */
+    USE_RUNTIME_VERSION = (1u << 11),    /* Since: 1.0.6 */
+    INSTALL_PARENT_FIRST = (1u << 12),   /* Since: 1.0.8 */
+    IS_BOOTLOADER= (1u << 13),           /* Since: 1.0.8 */
+    WAIT_FOR_REPLUG = (1u << 14),        /* Since: 1.1.2 */
+    IGNORE_VALIDATION = (1u << 15),      /* Since: 1.1.2 */
+    TRUSTED = (1u << 16),                /* Since: 1.1.2 */
+    NEEDS_SHUTDOWN = (1u << 17),         /* Since: 1.2.4 */
+    ANOTHER_WRITE_REQUIRED = (1u << 18), /* Since: 1.2.5 */
+    NO_AUTO_INSTANCE_IDS = (1u << 19),   /* Since: 1.2.5 */
+    NEEDS_ACTIVATION = (1u << 20),       /* Since: 1.2.6 */
+    ENSURE_SEMVER= (1u << 21),           /* Since: 1.2.9 */
+    HISTORICAL = (1u << 22),             /* Since: 1.3.2 */
+    ONLY_SUPPORTED = (1u << 23),         /* Since: 1.3.3 */
+    WILL_DISAPPEAR = (1u << 24),         /* Since: 1.3.3 */
+    CAN_VERIFY = (1u << 25),             /* Since: 1.3.3 */
+    CAN_VERIFY_IMAGE = (1u << 26),       /* Since: 1.3.3 */
+    DUAL_IMAGE = (1u << 27),             /* Since: 1.3.3 */
+    SELF_RECOVERY= (1u << 28),           /* Since: 1.3.3 */
+    USABLE_DURING_UPDATE = (1u << 29),   /* Since: 1.3.3 */
+    VERSION_CHECK_REQUIRED = (1u << 30), /* Since: 1.3.7 */
+    INSTALL_ALL_RELEASES = (1u << 31),   /* Since: 1.3.7 */
+    MD_SET_NAME= (1u << 32),             /* Since: 1.4.0 */
+    MD_SET_NAME_CATEGORY = (1u << 33),   /* Since: 1.4.0 */
+    MD_SET_VERFMT= (1u << 34),           /* Since: 1.4.0 */
+    ADD_COUNTERPART_GUIDS= (1u << 35),   /* Since: 1.4.0 */
+    NO_GUID_MATCHING = (1u << 36),       /* Since: 1.4.1 */
+    UPDATABLE_HIDDEN = (1u << 37),       /* Since: 1.4.1 */
+    SKIPS_RESTART= (1u << 38),           /* Since: 1.5.0 */
+    HAS_MULTIPLE_BRANCHES = (1u << 39),  /* Since: 1.5.0 */
+    BACKUP_BEFORE_INSTALL = (1u << 40),  /* Since: 1.5.0 */
+    MD_SET_ICON = (1u << 41),            /* Since: 1.5.2 */
+    UNKNOWN = 18446744073709551615;      /* Since: 0.7.3 */ // using uint64.max --> ‘MAX’ undeclared here (not in a function)
 
     public static List<DeviceFlag> get_list (uint64 flags) {
         var list = new List<DeviceFlag> ();
@@ -206,7 +206,7 @@ public enum About.DeviceFlag {
     }
 
     // https://gitlab.gnome.org/hughsie/gnome-firmware-updater/-/blob/f5281078e3cfade7ff919c812ba63de22431aaf2/src/gfu-common.c#L249
-    public string? to_string() {
+    public string? to_string () {
         switch (this) {
             case NONE:
                 return null;
@@ -297,7 +297,7 @@ public enum About.DeviceFlag {
             case UNKNOWN:
                 return null;
             default:
-                return null;        
+                return null;
         }
     }
 

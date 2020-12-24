@@ -80,12 +80,12 @@ public class About.FirmwareDevicePage : Granite.SimpleSettingsPage {
             install_duration_value_label.label = "%lu s".printf (device.install_duration);
         }
 
-        verify_button.sensitive = device.releases.length() > 0;
+        verify_button.sensitive = device.releases.length () > 0;
         verify_button.clicked.connect (() => {
             verify (device.id);
         });
 
-        show_releases_button.sensitive = device.releases.length() > 0;
+        show_releases_button.sensitive = device.releases.length () > 0;
         show_releases_button.clicked.connect (() => {
             show_releases (device);
         });

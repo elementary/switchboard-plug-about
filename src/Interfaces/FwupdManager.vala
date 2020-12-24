@@ -108,7 +108,7 @@ public class About.FwupdManager : Object {
 
     private List<Release> get_releases (string id) {
         var releases_list = new List<Release> ();
-    
+
         try {
             foreach (var _release in interface.get_releases (id)) {
                 var release = new Release ();
@@ -133,7 +133,7 @@ public class About.FwupdManager : Object {
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
         }
-    
+
         return releases_list;
     }
 
