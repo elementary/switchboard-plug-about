@@ -102,28 +102,32 @@ public class About.FwupdManager : Object {
         return devices_list;
     }
 
-    public List<Release> get_releases (string id) throws Error {
+    public List<Release> get_releases (string id) {
         var releases_list = new List<Release> ();
     
-        foreach (var _release in interface.get_releases (id)) {
-            var release = new Release ();
-            release.icon = "security-high";
-            foreach (var key in _release.get_keys ()) {
-                switch (key) {
-                    case "Filename":
-                        release.id = _release.lookup (key).get_string ();
-                        break;
-                    case "Name":
-                        release.name = _release.lookup (key).get_string ();
-                        break;
-                    case "Summary":
-                        release.summary = _release.lookup (key).get_string ();
-                        break;
-                    default:
-                        break;
+        try {
+            foreach (var _release in interface.get_releases (id)) {
+                var release = new Release ();
+                release.icon = "security-high";
+                foreach (var key in _release.get_keys ()) {
+                    switch (key) {
+                        case "Filename":
+                            release.id = _release.lookup (key).get_string ();
+                            break;
+                        case "Name":
+                            release.name = _release.lookup (key).get_string ();
+                            break;
+                        case "Summary":
+                            release.summary = _release.lookup (key).get_string ();
+                            break;
+                        default:
+                            break;
+                    }
                 }
+                releases_list.append (release);
             }
-            releases_list.append (release);
+        } catch (Error e) {
+            warning ("Could not connect to fwupd interface: %s", e.message);
         }
     
         return releases_list;
