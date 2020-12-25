@@ -152,7 +152,7 @@ public class About.FwupdManager : Object {
                             release.license = v.lookup (key).get_string ();
                             break;
                         case "TrustFlags":
-                            release.flags = v.lookup (key).get_uint64 ();
+                            release.flag = ReleaseFlag.from_uint64 (v.lookup (key).get_uint64 ());
                             break;
                         case "InstallDuration":
                             release.install_duration = v.lookup (key).get_uint32 ();

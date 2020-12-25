@@ -33,6 +33,6 @@ public class About.Release : Object {
     public string vendor { get; set; }
     public uint64 size { get; set; }
     public string license { get; set; }
-    public uint64 flags { get; set; }
+    public ReleaseFlag flag { get; set; }
     public uint32 install_duration { get; set; }
 }

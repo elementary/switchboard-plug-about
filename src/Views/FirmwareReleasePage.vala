@@ -31,7 +31,6 @@ public class About.FirmwareReleasePage : Granite.SimpleSettingsPage {
     private Gtk.Label vendor_value_label;
     private Gtk.Label size_value_label;
     private Gtk.Label license_value_label;
-    private Gtk.Label flags_value_label;
     private Gtk.Label install_duration_value_label;
 
     public FirmwareReleasePage (Release release) {
@@ -63,9 +62,43 @@ public class About.FirmwareReleasePage : Granite.SimpleSettingsPage {
 
         license_value_label.label = release.license;
 
-        flags_value_label.label = "%llu".printf (release.flags);
-
         install_duration_value_label.label = Formatter.seconds_to_string (release.install_duration);
+
+        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("%s firmware version %s").printf (release.name, release.version),
+            _("Install this firmware file?"),
+            "security-high",
+            Gtk.ButtonsType.CANCEL
+        );
+
+        var suggested_button = new Gtk.Button.with_label (_("Install"));
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
+
+        var button = new Gtk.Button ();
+
+        switch (release.flag) {
+            case ReleaseFlag.IS_UPGRADE:
+                button.label = _("Install Upgrade");
+                break;
+            case ReleaseFlag.IS_DOWNGRADE:
+                button.label = _("Install Downgrade");
+                break;
+            default:
+                button.label = _("Reinstall");
+                suggested_button.label = _("Reinstall");
+                message_dialog.secondary_text = _("This firmware version is already installed on the device. Reinstall this firmware file?");
+                break;
+        }
+
+        button.clicked.connect (() => {
+            message_dialog.show_all ();
+            if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {}
+
+            message_dialog.destroy ();
+        });
+
+        action_area.add (button);
     }
 
     construct {
@@ -170,15 +203,6 @@ public class About.FirmwareReleasePage : Granite.SimpleSettingsPage {
             hexpand = true
         };
 
-        var flags_label = new Gtk.Label (_("Flags:")) {
-            xalign = 1
-        };
-
-        flags_value_label = new Gtk.Label ("") {
-            xalign = 0,
-            hexpand = true
-        };
-
         var install_duration_label = new Gtk.Label (_("Install Duration:")) {
             xalign = 1
         };
@@ -210,9 +234,7 @@ public class About.FirmwareReleasePage : Granite.SimpleSettingsPage {
         content_area.attach (size_value_label, 1, 10, 1, 1);
         content_area.attach (license_label, 0, 11, 1, 1);
         content_area.attach (license_value_label, 1, 11, 1, 1);
-        content_area.attach (flags_label, 0, 12, 1, 1);
-        content_area.attach (flags_value_label, 1, 12, 1, 1);
-        content_area.attach (install_duration_label, 0, 13, 1, 1);
-        content_area.attach (install_duration_value_label, 1, 13, 1, 1);
+        content_area.attach (install_duration_label, 0, 12, 1, 1);
+        content_area.attach (install_duration_value_label, 1, 12, 1, 1);
     }
 }
