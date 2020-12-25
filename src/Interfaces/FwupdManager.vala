@@ -135,7 +135,7 @@ public class About.FwupdManager : Object {
                             .replace ("</li>", "\n")
                             .replace ("<ul>", "")
                             .replace ("</ul>", "\n")
-                            .replace ("<ol>", "")
+                            .replace ("<ol>", "") // TODO: add support for ordered lists
                             .replace ("</ol>", "\n")
                             .strip ();
                             break;
