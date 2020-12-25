@@ -128,7 +128,16 @@ public class About.FwupdManager : Object {
                             release.version = v.lookup (key).get_string ();
                             break;
                         case "Description":
-                            release.description = v.lookup (key).get_string ();
+                            release.description = v.lookup (key).get_string ()
+                            .replace ("<p>", "")
+                            .replace ("</p>", "\n\n")
+                            .replace ("<li>", " • ")
+                            .replace ("</li>", "\n")
+                            .replace ("<ul>", "")
+                            .replace ("</ul>", "\n")
+                            .replace ("<ol>", "")
+                            .replace ("</ol>", "\n")
+                            .strip ();
                             break;
                         case "Protocol":
                             release.protocol = v.lookup (key).get_string ();
