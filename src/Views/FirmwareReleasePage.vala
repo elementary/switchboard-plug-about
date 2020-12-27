@@ -82,9 +82,7 @@ public class About.FirmwareReleasePage : Granite.SimpleSettingsPage {
                 button.label = _("Install Upgrade");
                 break;
             case ReleaseFlag.IS_DOWNGRADE:
-                // TODO: support downgrades (authentication is required)
                 button.label = _("Install Downgrade");
-                button.sensitive = false;
                 break;
             default:
                 button.label = _("Reinstall");
