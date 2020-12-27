@@ -28,7 +28,7 @@ public class About.FirmwareReleasesView : Gtk.Paned {
         var stack = new Gtk.Stack ();
 
         foreach (var release in device.releases) {
-            var page = new FirmwareReleasePage (release);
+            var page = new FirmwareReleasePage (device, release);
 
             stack.add_named (page, release.filename);
         }

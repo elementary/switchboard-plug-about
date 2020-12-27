@@ -19,6 +19,8 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
+extern int ro_fd (string path);
+
 [DBus (name="org.freedesktop.fwupd")]
 public interface About.FwupdInterface : Object {
     [DBus (name = "HostProduct")]
@@ -32,6 +34,12 @@ public interface About.FwupdInterface : Object {
 
     [DBus (name = "Verify")]
     public abstract void verify (string id) throws Error;
+
+    [DBus (name = "Install")]
+    public abstract void install (string id, UnixInputStream handle, HashTable<string, Variant> options) throws Error;
+
+    [DBus (name = "GetDetails")]
+    public abstract HashTable<string, Variant>[] get_details (UnixInputStream handle) throws Error;
 }
 
 public class About.FwupdManager : Object {
@@ -166,6 +174,9 @@ public class About.FwupdManager : Object {
                         case "InstallDuration":
                             release.install_duration = v.lookup (key).get_uint32 ();
                             break;
+                        case "Uri":
+                            release.uri = v.lookup (key).get_string ();
+                            break;
                         default:
                             break;
                     }
@@ -181,6 +192,35 @@ public class About.FwupdManager : Object {
 
     public void verify (string id) throws Error {
         interface.verify (id);
+    }
+
+    private string get_path (Release release) {
+        var parts = release.uri.split ("/");
+        string file_path = parts[parts.length - 1];
+        return Path.build_path (Path.DIR_SEPARATOR_S, Path.DIR_SEPARATOR_S, "tmp", file_path);
+    }
+
+    private UnixInputStream get_handle (Release release) {
+        var fd = ro_fd (get_path (release));
+        return new UnixInputStream (fd, true);
+    }
+
+    public void install (string id, Release release) throws Error {
+        var handle = get_handle (release);
+
+        // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
+        HashTable<string, Variant> options = new HashTable<string, Variant> (str_hash, str_equal);
+        options.insert ("reason", new Variant.string ("user-action"));
+        options.insert ("filename", new Variant.string (get_path (release)));
+        //  options.insert ("offline", new Variant.boolean (true));
+        options.insert ("allow-older", new Variant.boolean (true));
+        options.insert ("allow-reinstall", new Variant.boolean (true));
+        //  options.insert ("allow-branch-switch", new Variant.boolean (true));
+        //  options.insert ("force", new Variant.boolean (true));
+        //  options.insert ("ignore-power", new Variant.boolean (true));
+        options.insert ("no-history", new Variant.boolean (true));
+
+        interface.install (id, handle, options);
     }
 
     construct {

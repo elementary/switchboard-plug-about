@@ -35,4 +35,5 @@ public class About.Release : Object {
     public string license { get; set; }
     public ReleaseFlag flag { get; set; }
     public uint32 install_duration { get; set; }
+    public string uri { get; set; }
 }

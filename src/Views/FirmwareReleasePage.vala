@@ -33,7 +33,7 @@ public class About.FirmwareReleasePage : Granite.SimpleSettingsPage {
     private Gtk.Label license_value_label;
     private Gtk.Label install_duration_value_label;
 
-    public FirmwareReleasePage (Release release) {
+    public FirmwareReleasePage (Device device, Release release) {
         Object (
             icon_name: release.icon,
             status: release.summary,
@@ -82,7 +82,9 @@ public class About.FirmwareReleasePage : Granite.SimpleSettingsPage {
                 button.label = _("Install Upgrade");
                 break;
             case ReleaseFlag.IS_DOWNGRADE:
+                // TODO: support downgrades (authentication is required)
                 button.label = _("Install Downgrade");
+                button.sensitive = false;
                 break;
             default:
                 button.label = _("Reinstall");
@@ -93,7 +95,9 @@ public class About.FirmwareReleasePage : Granite.SimpleSettingsPage {
 
         button.clicked.connect (() => {
             message_dialog.show_all ();
-            if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {}
+            if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
+                FwupdManager.get_instance ().install (device.id, release);
+            }
 
             message_dialog.destroy ();
         });
