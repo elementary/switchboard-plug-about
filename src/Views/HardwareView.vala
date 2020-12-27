@@ -82,6 +82,8 @@ public class About.HardwareView : Gtk.Grid {
         hdd_info.ellipsize = Pango.EllipsizeMode.END;
         hdd_info.set_selectable (true);
 
+        halign = Gtk.Align.CENTER;
+        valign = Gtk.Align.CENTER;
         column_spacing = 6;
         row_spacing = 6;
         attach (manufacturer_logo, 0, 0, 2, 1);

@@ -17,7 +17,7 @@
 
 public class About.Plug : Switchboard.Plug {
     private Gtk.Stack stack;
-    private SystemView system_view;
+    private OperatingSystemView operating_system_view;
     private Gtk.Grid main_grid;
 
     public Plug () {
@@ -37,8 +37,11 @@ public class About.Plug : Switchboard.Plug {
 
             stack = new Gtk.Stack ();
 
-            system_view = new SystemView ();
-            stack.add_titled (system_view, "system", _("System"));
+            operating_system_view = new OperatingSystemView ();
+            stack.add_titled (operating_system_view, "os", _("Operating System"));
+
+            var hardware_view = new HardwareView ();
+            stack.add_titled (hardware_view, "hardware", _("Hardware"));
 
             var firmware_view = new FirmwareView ();
             stack.add_titled (firmware_view, "firmware", _("Firmware"));

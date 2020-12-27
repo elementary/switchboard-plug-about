@@ -19,7 +19,7 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.SystemView : Gtk.Grid {
+public class About.OperatingSystemView : Gtk.Grid {
     private string kernel_version;
     private string support_url;
     private Gtk.Label based_off;
@@ -195,12 +195,6 @@ public class About.SystemView : Gtk.Grid {
         software_grid.add (gtk_version_label);
         software_grid.add (website_label);
 
-        var hardware_view = new HardwareView ();
-
-        var description_size_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
-        description_size_group.add_widget (hardware_view);
-        description_size_group.add_widget (software_grid);
-
         var description_grid = new Gtk.Grid ();
         description_grid.halign = Gtk.Align.CENTER;
         description_grid.valign = Gtk.Align.CENTER;
@@ -209,8 +203,6 @@ public class About.SystemView : Gtk.Grid {
         description_grid.margin_start = 12;
         description_grid.margin_end = 12;
         description_grid.add (software_grid);
-        description_grid.add (new Gtk.Separator (Gtk.Orientation.VERTICAL));
-        description_grid.add (hardware_view);
 
         add (description_grid);
         add (button_grid);
