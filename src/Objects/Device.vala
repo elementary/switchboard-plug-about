@@ -32,4 +32,14 @@ public class About.Device : Object {
     public string update_error { get; set; }
 
     public List<Release> releases { get; owned set; }
+
+    public bool is (DeviceFlag flag) {
+        foreach (var f in DeviceFlag.get_list (flags)) {
+            if (f == flag) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

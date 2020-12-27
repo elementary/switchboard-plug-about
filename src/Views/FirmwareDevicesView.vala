@@ -28,15 +28,17 @@ public class About.FirmwareDevicesView : Gtk.Paned {
 
         var fwupd_manager = FwupdManager.get_instance ();
         foreach (var device in fwupd_manager.get_devices ()) {
-            var page = new FirmwareDevicePage (device);
-            page.verify.connect ((device_id) => {
-                verify (device_id);
-            });
-            page.show_releases.connect ((device) => {
-                show_releases (device);
-            });
+            if (device.is (DeviceFlag.UPDATABLE)) {
+                var page = new FirmwareDevicePage (device);
+                page.verify.connect ((device_id) => {
+                    verify (device_id);
+                });
+                page.show_releases.connect ((device) => {
+                    show_releases (device);
+                });
 
-            stack.add_named (page, device.id);
+                stack.add_named (page, device.id);
+            }
         }
 
         var settings_sidebar = new Granite.SettingsSidebar (stack);
