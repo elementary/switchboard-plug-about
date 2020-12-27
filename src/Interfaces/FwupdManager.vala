@@ -23,8 +23,8 @@ extern int ro_fd (string path);
 
 [DBus (name="org.freedesktop.fwupd")]
 public interface About.FwupdInterface : Object {
-    [DBus (name = "HostProduct")]
-    public abstract string host_product { owned get; }
+    [DBus (name = "Changed")]
+    public signal void changed ();
 
     [DBus (name = "GetDevices")]
     public abstract HashTable<string, Variant>[] get_devices () throws Error;
@@ -32,18 +32,14 @@ public interface About.FwupdInterface : Object {
     [DBus (name = "GetReleases")]
     public abstract HashTable<string, Variant>[] get_releases (string id) throws Error;
 
-    [DBus (name = "Verify")]
-    public abstract void verify (string id) throws Error;
-
     [DBus (name = "Install")]
     public abstract void install (string id, UnixInputStream handle, HashTable<string, Variant> options) throws Error;
-
-    [DBus (name = "GetDetails")]
-    public abstract HashTable<string, Variant>[] get_details (UnixInputStream handle) throws Error;
 }
 
 public class About.FwupdManager : Object {
     private FwupdInterface interface;
+
+    public signal void changed ();
 
     static FwupdManager? instance = null;
     public static FwupdManager get_instance () {
@@ -66,7 +62,12 @@ public class About.FwupdManager : Object {
                     switch (key) {
                         case "DeviceId":
                             device.id = v.lookup (key).get_string ();
-                            device.releases = get_releases (device.id);
+                            device.flags = v.lookup ("Flags").get_uint64 ();
+                            if (device.is (DeviceFlag.UPDATABLE)) {
+                                device.releases = get_releases (device.id);
+                            } else {
+                                device.releases = new List<Release> ();
+                            }
                             break;
                         case "Name":
                             device.name = v.lookup (key).get_string ();
@@ -91,9 +92,6 @@ public class About.FwupdManager : Object {
                             break;
                         case "Guid":
                             device.guids = v.lookup (key).get_strv ();
-                            break;
-                        case "Flags":
-                            device.flags = v.lookup (key).get_uint64 ();
                             break;
                         case "InstallDuration":
                             device.install_duration = v.lookup (key).get_uint32 ();
@@ -190,10 +188,6 @@ public class About.FwupdManager : Object {
         return releases_list;
     }
 
-    public void verify (string id) throws Error {
-        interface.verify (id);
-    }
-
     private string get_path (Release release) {
         var parts = release.uri.split ("/");
         string file_path = parts[parts.length - 1];
@@ -205,7 +199,7 @@ public class About.FwupdManager : Object {
         return new UnixInputStream (fd, true);
     }
 
-    public void install (string id, Release release) throws Error {
+    public void install (string id, Release release) {
         var handle = get_handle (release);
 
         // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
@@ -220,12 +214,18 @@ public class About.FwupdManager : Object {
         //  options.insert ("ignore-power", new Variant.boolean (true));
         options.insert ("no-history", new Variant.boolean (true));
 
-        interface.install (id, handle, options);
+        try {
+            interface.install (id, handle, options);
+        } catch (Error e) {
+            warning ("Could not connect to fwupd interface: %s", e.message);
+        }
     }
 
     construct {
         try {
             interface = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
+
+            interface.changed.connect (() => { changed (); });
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
         }

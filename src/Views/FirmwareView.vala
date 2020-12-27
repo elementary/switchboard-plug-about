@@ -19,17 +19,80 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.FirmwareView : Gtk.Stack {
+public class About.FirmwareView : Granite.SettingsPage {
+    private Gtk.Button update_all_button;
+    private Gtk.ListBox update_list;
+
+    public FirmwareView () {
+        Object (
+            icon_name: "application-x-firmware",
+            title: _("Firmware")
+        );
+    }
+
     construct {
-        var firmware_devices_view = new FirmwareDevicesView ();
-        var firmware_releases_view = new FirmwareReleasesView ();
+        var header_icon = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DIALOG) {
+            pixel_size = 48,
+            valign = Gtk.Align.START
+        };
 
-        firmware_devices_view.show_releases.connect ((device) => {
-            firmware_releases_view.get_releases (device);
-            set_visible_child_name ("releases");
-        });
+        var title_label = new Gtk.Label (_("Firmware")) {
+            ellipsize = Pango.EllipsizeMode.END,
+            selectable = true,
+            xalign = 0
+        };
+        title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
-        add_named (firmware_devices_view, "devices");
-        add_named (firmware_releases_view, "releases");
+        update_all_button = new Gtk.Button.with_label (_("Update All")) {
+            hexpand = true,
+            halign = Gtk.Align.END,
+            valign = Gtk.Align.CENTER,
+            sensitive = false
+        };
+
+        var grid = new Gtk.Grid () {
+            column_spacing = 12,
+            row_spacing = 12,
+            margin = 12
+        };
+
+        update_list = new Gtk.ListBox () {
+            vexpand = true,
+            selection_mode = Gtk.SelectionMode.SINGLE
+        };
+
+        var scrolled_window = new Gtk.ScrolledWindow (null, null);
+        scrolled_window.add (update_list);
+
+        var frame = new Gtk.Frame (null);
+        frame.add (scrolled_window);
+
+        grid.attach (header_icon, 0, 0);
+        grid.attach (title_label, 1, 0);
+        grid.attach (update_all_button, 2, 0);
+        grid.attach (frame, 0, 1, 3, 1);
+
+        add (grid);
+
+        FwupdManager.get_instance ().changed.connect (update_list_view);
+
+        update_list_view ();
+    }
+
+    private void update_list_view () {
+        foreach (Gtk.Widget element in update_list.get_children ()) {
+            if (element is Gtk.ListBoxRow) {
+                update_list.remove (element);
+            }
+        }
+
+        foreach (var device in FwupdManager.get_instance ().get_devices ()) {
+            if (device.is (DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
+                var widget = new Widgets.FirmwareUpdateWidget (device);
+                update_list.add (widget);
+            }
+        }
+
+        update_list.show_all ();
     }
 }
