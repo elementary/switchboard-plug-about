@@ -74,8 +74,6 @@ public class About.FirmwareView : Granite.SettingsPage {
 
         add (grid);
 
-        FwupdManager.get_instance ().changed.connect (update_list_view);
-
         update_list_view ();
     }
 
@@ -90,6 +88,8 @@ public class About.FirmwareView : Granite.SettingsPage {
             if (device.is (DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
                 var widget = new Widgets.FirmwareUpdateWidget (device);
                 update_list.add (widget);
+
+                widget.on_updated.connect (update_list_view);
             }
         }
 

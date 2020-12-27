@@ -22,6 +22,8 @@
 public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
     public Device device { get; construct set; }
 
+    public signal void on_updated ();
+
     public FirmwareUpdateWidget (Device device) {
         GLib.Object (
             device: device
@@ -63,6 +65,7 @@ public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
                 };
                 update_button.clicked.connect (() => {
                     FwupdManager.get_instance ().install (device.id, device.latest_release);
+                    on_updated ();
                 });
                 grid.attach (update_button, 2, 0, 1, 2);
                 break;

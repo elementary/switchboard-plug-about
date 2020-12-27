@@ -191,16 +191,34 @@ public class About.FwupdManager : Object {
     private string get_path (Release release) {
         var parts = release.uri.split ("/");
         string file_path = parts[parts.length - 1];
-        return Path.build_path (Path.DIR_SEPARATOR_S, Path.DIR_SEPARATOR_S, "tmp", file_path);
+        return Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_tmp_dir (), file_path);
     }
 
-    private UnixInputStream get_handle (Release release) {
-        var fd = ro_fd (get_path (release));
+    private UnixInputStream get_handle (string path) {
+        var fd = ro_fd (path);
         return new UnixInputStream (fd, true);
     }
 
     public void install (string id, Release release) {
-        var handle = get_handle (release);
+        var path = get_path (release);
+
+        File server_file = File.new_for_uri (release.uri);
+        File local_file = File.new_for_path (path);
+
+        bool result;
+        try {
+            result = server_file.copy (local_file, FileCopyFlags.OVERWRITE);
+        } catch (Error e) {
+            warning ("Could not download file: %s", e.message);
+            return;
+        }
+
+        if (!result) {
+            warning ("Download of %s was not succesfull", release.uri);
+            return;
+        }
+
+        var handle = get_handle (path);
 
         // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
         HashTable<string, Variant> options = new HashTable<string, Variant> (str_hash, str_equal);
