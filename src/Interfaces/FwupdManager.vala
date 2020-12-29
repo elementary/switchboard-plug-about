@@ -222,13 +222,6 @@ public class About.FwupdManager : Object {
         return Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_tmp_dir (), file_path);
     }
 
-    private int get_handle (string path) throws Error {
-        var fd = ro_fd (path);
-        var fd_list = new UnixFDList ();
-        var stream = new UnixInputStream (fd, true);
-        return fd_list.append (stream.fd);
-    }
-
     public async void install (string id, Release release) {
         var path = get_path (release);
 
@@ -251,32 +244,30 @@ public class About.FwupdManager : Object {
             return;
         }
 
-        int handle;
         try {
-            handle = get_handle (path);
-        } catch (Error e) {
-            warning ("Could not get handle: %s", e.message);
-            return;
-        }
+            // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
+            var options = new VariantBuilder (new VariantType ("a{sv}"));
+            options.add ("{sv}", "reason", new Variant.string ("user-action"));
+            options.add ("{sv}", "filename", new Variant.string (path));
+            //  options.add ("{sv}", "offline", new Variant.boolean (true));
+            options.add ("{sv}", "allow-older", new Variant.boolean (true));
+            options.add ("{sv}", "allow-reinstall", new Variant.boolean (true));
+            //  options.add ("{sv}", "allow-branch-switch", new Variant.boolean (true));
+            //  options.add ("{sv}", "force", new Variant.boolean (true));
+            //  options.add ("{sv}", "ignore-power", new Variant.boolean (true));
+            options.add ("{sv}", "no-history", new Variant.boolean (true));
 
-        // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
-        var options = new VariantBuilder (new VariantType ("a{sv}"));
-        options.add ("{sv}", "reason", new Variant.string ("user-action"));
-        options.add ("{sv}", "filename", new Variant.string (path));
-        //  options.add ("{sv}", "offline", new Variant.boolean (true));
-        options.add ("{sv}", "allow-older", new Variant.boolean (true));
-        options.add ("{sv}", "allow-reinstall", new Variant.boolean (true));
-        //  options.add ("{sv}", "allow-branch-switch", new Variant.boolean (true));
-        //  options.add ("{sv}", "force", new Variant.boolean (true));
-        //  options.add ("{sv}", "ignore-power", new Variant.boolean (true));
-        options.add ("{sv}", "no-history", new Variant.boolean (true));
+            var parameters = new VariantBuilder (new VariantType ("(sha{sv})"));
+            parameters.add_value (new Variant.string (id));
 
-        var parameters = new VariantBuilder (new VariantType ("(sha{sv})"));
-        parameters.add_value (new Variant.string (id));
-        parameters.add_value (new Variant.handle (handle));
-        parameters.add_value (options.end ());
+            var fd = ro_fd (path);
+            var fd_list = new UnixFDList ();
+            var stream = new UnixInputStream (fd, true);
+            var handle = fd_list.append (stream.fd);
+            parameters.add_value (new Variant.handle (handle));
 
-        try {
+            parameters.add_value (options.end ());
+
             yield connection.call (
                 "org.freedesktop.fwupd",
                 "/",
