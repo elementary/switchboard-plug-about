@@ -222,9 +222,11 @@ public class About.FwupdManager : Object {
         return Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_tmp_dir (), file_path);
     }
 
-    private UnixInputStream get_handle (string path) {
+    private int get_handle (string path) throws Error {
         var fd = ro_fd (path);
-        return new UnixInputStream (fd, true);
+        var fd_list = new UnixFDList ();
+        var stream = new UnixInputStream (fd, true);
+        return fd_list.append (stream.fd);
     }
 
     public async void install (string id, Release release) {
@@ -249,7 +251,13 @@ public class About.FwupdManager : Object {
             return;
         }
 
-        var handle = get_handle (path);
+        int handle;
+        try {
+            handle = get_handle (path);
+        } catch (Error e) {
+            warning ("Could not get handle: %s", e.message);
+            return;
+        }
 
         // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
         var options = new VariantBuilder (new VariantType ("a{sv}"));
@@ -265,7 +273,7 @@ public class About.FwupdManager : Object {
 
         var parameters = new VariantBuilder (new VariantType ("(sha{sv})"));
         parameters.add_value (new Variant.string (id));
-        parameters.add_value (new Variant.handle (handle.fd));
+        parameters.add_value (new Variant.handle (handle));
         parameters.add_value (options.end ());
 
         try {
