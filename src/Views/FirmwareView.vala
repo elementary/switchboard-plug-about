@@ -74,17 +74,17 @@ public class About.FirmwareView : Granite.SettingsPage {
 
         add (grid);
 
-        update_list_view ();
+        update_list_view.begin ();
     }
 
-    private void update_list_view () {
+    private async void update_list_view () {
         foreach (Gtk.Widget element in update_list.get_children ()) {
             if (element is Gtk.ListBoxRow) {
                 update_list.remove (element);
             }
         }
 
-        foreach (var device in FwupdManager.get_instance ().get_devices ()) {
+        foreach (var device in yield FwupdManager.get_instance ().get_devices ()) {
             if (device.is (DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
                 var widget = new Widgets.FirmwareUpdateWidget (device);
                 update_list.add (widget);

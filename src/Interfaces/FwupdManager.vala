@@ -21,23 +21,8 @@
 
 extern int ro_fd (string path);
 
-[DBus (name="org.freedesktop.fwupd")]
-public interface About.FwupdInterface : Object {
-    [DBus (name = "Changed")]
-    public signal void changed ();
-
-    [DBus (name = "GetDevices")]
-    public abstract HashTable<string, Variant>[] get_devices () throws Error;
-
-    [DBus (name = "GetReleases")]
-    public abstract HashTable<string, Variant>[] get_releases (string id) throws Error;
-
-    [DBus (name = "Install")]
-    public abstract void install (string id, UnixInputStream handle, HashTable<string, Variant> options) throws Error;
-}
-
 public class About.FwupdManager : Object {
-    private FwupdInterface interface;
+    private DBusConnection connection;
 
     public signal void changed ();
 
@@ -52,52 +37,73 @@ public class About.FwupdManager : Object {
 
     private FwupdManager () {}
 
-    public List<Device> get_devices () {
+    public async List<Device> get_devices () {
         var devices_list = new List<Device> ();
 
         try {
-            foreach (var v in interface.get_devices ()) {
+            var result = yield connection.call (
+                "org.freedesktop.fwupd",
+                "/",
+                "org.freedesktop.fwupd",
+                "GetDevices",
+                null,
+                new VariantType ("(aa{sv})"),
+                DBusCallFlags.NONE,
+                -1
+            );
+
+            var array_iter = result.iterator ();
+            GLib.Variant? element = array_iter.next_value ();
+            array_iter = element.iterator ();
+
+            while ((element = array_iter.next_value ()) != null) {
+                GLib.Variant? val = null;
+                string? key = null;
+
+                var device_iter = element.iterator ();
                 var device = new Device ();
-                foreach (var key in v.get_keys ()) {
+                while (device_iter.next ("{sv}", out key, out val)) {
                     switch (key) {
                         case "DeviceId":
-                            device.id = v.lookup (key).get_string ();
-                            device.flags = v.lookup ("Flags").get_uint64 ();
-                            if (device.is (DeviceFlag.UPDATABLE)) {
-                                device.releases = get_releases (device.id);
+                            device.id = val.get_string ();
+                            break;
+                        case "Flags":
+                            device.flags = val.get_uint64 ();
+                            if (device.id.length > 0 && device.is (DeviceFlag.UPDATABLE)) {
+                                device.releases = yield get_releases (device.id);
                             } else {
                                 device.releases = new List<Release> ();
                             }
                             break;
                         case "Name":
-                            device.name = v.lookup (key).get_string ();
+                            device.name = val.get_string ();
                             break;
                         case "Summary":
-                            device.summary = v.lookup (key).get_string ();
+                            device.summary = val.get_string ();
                             break;
                         case "Vendor":
-                            device.vendor = v.lookup (key).get_string ();
+                            device.vendor = val.get_string ();
                             break;
                         case "VendorId":
                             if (device.vendor == null) {
-                                device.vendor = v.lookup (key).get_string ();
+                                device.vendor = val.get_string ();
                             }
                             break;
                         case "Version":
-                            device.version = v.lookup (key).get_string ();
+                            device.version = val.get_string ();
                             break;
                         case "Icon":
-                            var icons = v.lookup (key).get_strv ();
+                            var icons = val.get_strv ();
                             device.icon = icons.length > 0 ? icons[0] : "application-x-firmware";
                             break;
                         case "Guid":
-                            device.guids = v.lookup (key).get_strv ();
+                            device.guids = val.get_strv ();
                             break;
                         case "InstallDuration":
-                            device.install_duration = v.lookup (key).get_uint32 ();
+                            device.install_duration = val.get_uint32 ();
                             break;
                         case "UpdateError":
-                            device.update_error = v.lookup (key).get_string ();
+                            device.update_error = val.get_string ();
                             break;
                         default:
                             break;
@@ -112,29 +118,51 @@ public class About.FwupdManager : Object {
         return devices_list;
     }
 
-    private List<Release> get_releases (string id) {
+    private async List<Release> get_releases (string id) {
         var releases_list = new List<Release> ();
 
         try {
-            foreach (var v in interface.get_releases (id)) {
+            var result = yield connection.call (
+                "org.freedesktop.fwupd",
+                "/",
+                "org.freedesktop.fwupd",
+                "GetReleases",
+                new Variant (
+                    "(s)",
+                    id
+                ),
+                new VariantType ("(aa{sv})"),
+                DBusCallFlags.NONE,
+                -1
+            );
+
+            var array_iter = result.iterator ();
+            GLib.Variant? element = array_iter.next_value ();
+            array_iter = element.iterator ();
+
+            while ((element = array_iter.next_value ()) != null) {
+                GLib.Variant? val = null;
+                string? key = null;
+
+                var release_iter = element.iterator ();
                 var release = new Release ();
                 release.icon = "security-high";
-                foreach (var key in v.get_keys ()) {
+                while (release_iter.next ("{sv}", out key, out val)) {
                     switch (key) {
                         case "Filename":
-                            release.filename = v.lookup (key).get_string ();
+                            release.filename = val.get_string ();
                             break;
                         case "Name":
-                            release.name = v.lookup (key).get_string ();
+                            release.name = val.get_string ();
                             break;
                         case "Summary":
-                            release.summary = v.lookup (key).get_string ();
+                            release.summary = val.get_string ();
                             break;
                         case "Version":
-                            release.version = v.lookup (key).get_string ();
+                            release.version = val.get_string ();
                             break;
                         case "Description":
-                            release.description = v.lookup (key).get_string ()
+                            release.description = val.get_string ()
                             .replace ("<p>", "")
                             .replace ("</p>", "\n\n")
                             .replace ("<li>", " • ")
@@ -146,34 +174,34 @@ public class About.FwupdManager : Object {
                             .strip ();
                             break;
                         case "Protocol":
-                            release.protocol = v.lookup (key).get_string ();
+                            release.protocol = val.get_string ();
                             break;
                         case "RemoteId":
-                            release.remote_id = v.lookup (key).get_string ();
+                            release.remote_id = val.get_string ();
                             break;
                         case "AppstreamId":
-                            release.appstream_id = v.lookup (key).get_string ();
+                            release.appstream_id = val.get_string ();
                             break;
                         case "Checksum":
-                            release.checksum = v.lookup (key).get_string ();
+                            release.checksum = val.get_string ();
                             break;
                         case "Vendor":
-                            release.vendor = v.lookup (key).get_string ();
+                            release.vendor = val.get_string ();
                             break;
                         case "Size":
-                            release.size = v.lookup (key).get_uint64 ();
+                            release.size = val.get_uint64 ();
                             break;
                         case "License":
-                            release.license = v.lookup (key).get_string ();
+                            release.license = val.get_string ();
                             break;
                         case "TrustFlags":
-                            release.flag = ReleaseFlag.from_uint64 (v.lookup (key).get_uint64 ());
+                            release.flag = ReleaseFlag.from_uint64 (val.get_uint64 ());
                             break;
                         case "InstallDuration":
-                            release.install_duration = v.lookup (key).get_uint32 ();
+                            release.install_duration = val.get_uint32 ();
                             break;
                         case "Uri":
-                            release.uri = v.lookup (key).get_string ();
+                            release.uri = val.get_string ();
                             break;
                         default:
                             break;
@@ -199,7 +227,7 @@ public class About.FwupdManager : Object {
         return new UnixInputStream (fd, true);
     }
 
-    public void install (string id, Release release) {
+    public async void install (string id, Release release) {
         var path = get_path (release);
 
         File server_file = File.new_for_uri (release.uri);
@@ -207,7 +235,10 @@ public class About.FwupdManager : Object {
 
         bool result;
         try {
-            result = server_file.copy (local_file, FileCopyFlags.OVERWRITE);
+            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {
+                debug ("%" + int64.FORMAT + " bytes of %" + int64.FORMAT + " bytes copied.",
+                    current_num_bytes, release.size);
+            });
         } catch (Error e) {
             warning ("Could not download file: %s", e.message);
             return;
@@ -221,19 +252,33 @@ public class About.FwupdManager : Object {
         var handle = get_handle (path);
 
         // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
-        HashTable<string, Variant> options = new HashTable<string, Variant> (str_hash, str_equal);
-        options.insert ("reason", new Variant.string ("user-action"));
-        options.insert ("filename", new Variant.string (get_path (release)));
-        //  options.insert ("offline", new Variant.boolean (true));
-        options.insert ("allow-older", new Variant.boolean (true));
-        options.insert ("allow-reinstall", new Variant.boolean (true));
-        //  options.insert ("allow-branch-switch", new Variant.boolean (true));
-        //  options.insert ("force", new Variant.boolean (true));
-        //  options.insert ("ignore-power", new Variant.boolean (true));
-        options.insert ("no-history", new Variant.boolean (true));
+        var options = new VariantBuilder (new VariantType ("a{sv}"));
+        options.add ("{sv}", "reason", new Variant.string ("user-action"));
+        options.add ("{sv}", "filename", new Variant.string (path));
+        //  options.add ("{sv}", "offline", new Variant.boolean (true));
+        options.add ("{sv}", "allow-older", new Variant.boolean (true));
+        options.add ("{sv}", "allow-reinstall", new Variant.boolean (true));
+        //  options.add ("{sv}", "allow-branch-switch", new Variant.boolean (true));
+        //  options.add ("{sv}", "force", new Variant.boolean (true));
+        //  options.add ("{sv}", "ignore-power", new Variant.boolean (true));
+        options.add ("{sv}", "no-history", new Variant.boolean (true));
+
+        var parameters = new VariantBuilder (new VariantType ("(sha{sv})"));
+        parameters.add_value (new Variant.string (id));
+        parameters.add_value (new Variant.handle (handle.fd));
+        parameters.add_value (options.end ());
 
         try {
-            interface.install (id, handle, options);
+            yield connection.call (
+                "org.freedesktop.fwupd",
+                "/",
+                "org.freedesktop.fwupd",
+                "Install",
+                parameters.end (),
+                null,
+                DBusCallFlags.NONE,
+                -1
+            );
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
         }
@@ -241,11 +286,9 @@ public class About.FwupdManager : Object {
 
     construct {
         try {
-            interface = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
-
-            interface.changed.connect (() => { changed (); });
+            connection = Bus.get_sync (BusType.SYSTEM);
         } catch (Error e) {
-            warning ("Could not connect to fwupd interface: %s", e.message);
+            warning ("Could not connect to system bus: %s", e.message);
         }
     }
 }

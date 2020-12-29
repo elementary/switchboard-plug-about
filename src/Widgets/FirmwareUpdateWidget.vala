@@ -64,8 +64,12 @@ public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
                     valign = Gtk.Align.CENTER
                 };
                 update_button.clicked.connect (() => {
-                    FwupdManager.get_instance ().install (device.id, device.latest_release);
-                    on_updated ();
+                    update_button.sensitive = false;
+
+                    FwupdManager.get_instance ().install.begin (device.id, device.latest_release, (obj, res) => {
+                        FwupdManager.get_instance ().install.end (res);
+                        on_updated ();
+                    });
                 });
                 grid.attach (update_button, 2, 0, 1, 2);
                 break;
