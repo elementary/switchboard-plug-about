@@ -29,7 +29,7 @@ public enum About.ReleaseFlag {
     BLOCKED_VERSION = (1u << 4),     /* Since: 1.2.6 */
     BLOCKED_APPROVAL = (1u << 5),    /* Since: 1.2.6 */
     IS_ALTERNATE_BRANCH = (1u << 6), /* Since: 1.5.0 */
-    UNKNOWN = 18446744073709551615;  /* Since: 1.2.6 */ // using uint64.max --> ‘MAX’ undeclared here (not in a function)
+    UNKNOWN = uint64.MAX;            /* Since: 1.2.6 */
 
     public static ReleaseFlag from_uint64 (uint64 flag) {
         if ((flag & (0u)) > 0) {

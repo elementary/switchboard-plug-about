@@ -64,7 +64,7 @@ public enum About.DeviceFlag {
     HAS_MULTIPLE_BRANCHES = (1u << 39),  /* Since: 1.5.0 */
     BACKUP_BEFORE_INSTALL = (1u << 40),  /* Since: 1.5.0 */
     MD_SET_ICON = (1u << 41),            /* Since: 1.5.2 */
-    UNKNOWN = 18446744073709551615;      /* Since: 0.7.3 */ // using uint64.max --> ‘MAX’ undeclared here (not in a function)
+    UNKNOWN = uint64.MAX;                /* Since: 0.7.3 */
 
     public static List<DeviceFlag> get_list (uint64 flags) {
         var list = new List<DeviceFlag> ();
@@ -198,7 +198,7 @@ public enum About.DeviceFlag {
         if ((flags & (1u << 41)) > 0) {
             list.append (DeviceFlag.MD_SET_ICON);
         }
-        if ((flags & (18446744073709551615)) > 0) {
+        if ((flags & (uint64.MAX)) > 0) {
             list.append (DeviceFlag.UNKNOWN);
         }
 
