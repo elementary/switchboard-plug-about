@@ -263,12 +263,12 @@ public class About.FwupdManager : Object {
             var fd = ro_fd (path);
             var fd_list = new UnixFDList ();
             var stream = new UnixInputStream (fd, true);
-            var handle = fd_list.append (stream.fd);
-            parameters.add_value (new Variant.handle (handle));
+            fd_list.append (stream.fd);
+            parameters.add_value (new Variant.handle (0));
 
             parameters.add_value (options.end ());
 
-            yield connection.call (
+            yield connection.call_with_unix_fd_list (
                 "org.freedesktop.fwupd",
                 "/",
                 "org.freedesktop.fwupd",
@@ -276,7 +276,8 @@ public class About.FwupdManager : Object {
                 parameters.end (),
                 null,
                 DBusCallFlags.NONE,
-                -1
+                -1,
+                fd_list
             );
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
