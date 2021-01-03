@@ -40,8 +40,9 @@ public class About.FirmwareView : Granite.SettingsPage {
         );
         progress_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
-        progress_view = new Gtk.Grid ();
-        progress_view.margin = 24;
+        progress_view = new Gtk.Grid () {
+            margin = 24
+        };
         progress_view.attach (progress_alert_view, 0, 0, 1, 1);
 
         var header_icon = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DIALOG) {
