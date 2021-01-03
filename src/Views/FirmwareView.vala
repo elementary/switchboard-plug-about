@@ -21,6 +21,9 @@
 
 public class About.FirmwareView : Granite.SettingsPage {
     private Gtk.Button update_all_button;
+    private Gtk.Stack stack;
+    private Gtk.Frame frame;
+    private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
 
     public FirmwareView () {
@@ -31,6 +34,17 @@ public class About.FirmwareView : Granite.SettingsPage {
     }
 
     construct {
+        var progress_alert_view = new Granite.Widgets.AlertView (
+            _("Device is being updated"),
+            _("Do not unplug the device during the update."),
+            "emblem-synchronized"
+        );
+        progress_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+
+        progress_view = new Gtk.Grid ();
+        progress_view.margin = 24;
+        progress_view.attach (progress_alert_view, 0, 0, 1, 1);
+
         var header_icon = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DIALOG) {
             pixel_size = 48,
             valign = Gtk.Align.START
@@ -64,13 +78,19 @@ public class About.FirmwareView : Granite.SettingsPage {
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
         scrolled_window.add (update_list);
 
-        var frame = new Gtk.Frame (null);
+        frame = new Gtk.Frame (null);
         frame.add (scrolled_window);
+
+        stack = new Gtk.Stack ();
+        stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
+
+        stack.add (frame);
+        stack.add (progress_view);
 
         grid.attach (header_icon, 0, 0);
         grid.attach (title_label, 1, 0);
         grid.attach (update_all_button, 2, 0);
-        grid.attach (frame, 0, 1, 3, 1);
+        grid.attach (stack, 0, 1, 3, 1);
 
         add (grid);
 
@@ -89,7 +109,13 @@ public class About.FirmwareView : Granite.SettingsPage {
                 var widget = new Widgets.FirmwareUpdateWidget (device);
                 update_list.add (widget);
 
-                widget.on_updated.connect (update_list_view);
+                widget.on_update_start.connect (() => {
+                    stack.visible_child = progress_view;
+                });
+                widget.on_update_end.connect (() => {
+                    stack.visible_child = frame;
+                    update_list_view.begin ();
+                });
             }
         }
 

@@ -22,7 +22,8 @@
 public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
     public Device device { get; construct set; }
 
-    public signal void on_updated ();
+    public signal void on_update_start ();
+    public signal void on_update_end ();
 
     public FirmwareUpdateWidget (Device device) {
         GLib.Object (
@@ -64,11 +65,11 @@ public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
                     valign = Gtk.Align.CENTER
                 };
                 update_button.clicked.connect (() => {
-                    update_button.sensitive = false;
+                    on_update_start ();
 
                     FwupdManager.get_instance ().install.begin (device.id, device.latest_release, (obj, res) => {
                         FwupdManager.get_instance ().install.end (res);
-                        on_updated ();
+                        on_update_end ();
                     });
                 });
                 grid.attach (update_button, 2, 0, 1, 2);
