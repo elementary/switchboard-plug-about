@@ -20,7 +20,6 @@
 */
 
 public class About.FirmwareView : Granite.SettingsPage {
-    private Gtk.Button update_all_button;
     private Gtk.Stack stack;
     private Gtk.Frame frame;
     private Gtk.Grid progress_view;
@@ -52,17 +51,11 @@ public class About.FirmwareView : Granite.SettingsPage {
 
         var title_label = new Gtk.Label (_("Firmware")) {
             ellipsize = Pango.EllipsizeMode.END,
+            hexpand = true,
             selectable = true,
             xalign = 0
         };
         title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
-
-        update_all_button = new Gtk.Button.with_label (_("Update All")) {
-            hexpand = true,
-            halign = Gtk.Align.END,
-            valign = Gtk.Align.CENTER,
-            sensitive = false
-        };
 
         var grid = new Gtk.Grid () {
             column_spacing = 12,
@@ -89,7 +82,6 @@ public class About.FirmwareView : Granite.SettingsPage {
 
         grid.attach (header_icon, 0, 0);
         grid.attach (title_label, 1, 0);
-        grid.attach (update_all_button, 2, 0);
         grid.attach (stack, 0, 1, 3, 1);
 
         add (grid);
