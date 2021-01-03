@@ -21,7 +21,7 @@
 
 public class About.FirmwareView : Granite.SettingsPage {
     private Gtk.Stack stack;
-    private Gtk.Frame frame;
+    private Gtk.Grid grid;
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
 
@@ -57,7 +57,7 @@ public class About.FirmwareView : Granite.SettingsPage {
         };
         title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
-        var grid = new Gtk.Grid () {
+        grid = new Gtk.Grid () {
             column_spacing = 12,
             row_spacing = 12,
             margin = 12
@@ -71,20 +71,20 @@ public class About.FirmwareView : Granite.SettingsPage {
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
         scrolled_window.add (update_list);
 
-        frame = new Gtk.Frame (null);
+        var frame = new Gtk.Frame (null);
         frame.add (scrolled_window);
+
+        grid.attach (header_icon, 0, 0);
+        grid.attach (title_label, 1, 0);
+        grid.attach (frame, 0, 1, 3, 1);
 
         stack = new Gtk.Stack ();
         stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
 
-        stack.add (frame);
+        stack.add (grid);
         stack.add (progress_view);
 
-        grid.attach (header_icon, 0, 0);
-        grid.attach (title_label, 1, 0);
-        grid.attach (stack, 0, 1, 3, 1);
-
-        add (grid);
+        add (stack);
 
         update_list_view.begin ();
     }
@@ -105,7 +105,7 @@ public class About.FirmwareView : Granite.SettingsPage {
                     stack.visible_child = progress_view;
                 });
                 widget.on_update_end.connect (() => {
-                    stack.visible_child = frame;
+                    stack.visible_child = grid;
                     update_list_view.begin ();
                 });
             }
