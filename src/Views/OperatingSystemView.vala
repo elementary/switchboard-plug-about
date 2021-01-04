@@ -102,8 +102,6 @@ public class About.OperatingSystemView : Gtk.Grid {
             });
         }
 
-
-        // Restore settings button
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
         var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
