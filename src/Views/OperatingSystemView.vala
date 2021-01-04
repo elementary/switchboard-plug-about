@@ -1,5 +1,5 @@
 /*
-* Copyright 2020 elementary, Inc. (https://elementary.io)
+* Copyright 2020–2021 elementary, Inc. (https://elementary.io)
 *           2015 Ivo Nunes, Akshay Shekher
 *
 * This program is free software; you can redistribute it and/or
@@ -59,6 +59,8 @@ public class About.OperatingSystemView : Gtk.Grid {
             pixel_size = 128
         };
 
+        // Intentionally not using GLib.OsInfoKey.PRETTY_NAME here because we
+        // want more granular control over text formatting
         var pretty_name = "<b>%s</b> %s".printf (
             Environment.get_os_info (GLib.OsInfoKey.NAME),
             Environment.get_os_info (GLib.OsInfoKey.VERSION)
