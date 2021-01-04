@@ -19,6 +19,8 @@
 */
 
 public class About.OperatingSystemView : Gtk.Grid {
+    private string support_url;
+
     construct {
         // Upstream distro version (for "Built on" text)
         // FIXME: Add distro specific field to /etc/os-release and use that instead
@@ -40,6 +42,11 @@ public class About.OperatingSystemView : Gtk.Grid {
         }
 
         var uts_name = Posix.utsname ();
+
+        support_url = Environment.get_os_info (GLib.OsInfoKey.SUPPORT_URL);
+        if (support_url == "" || support_url == null) {
+            support_url = "https://elementary.io/support";
+        }
 
         var logo_icon_name = Environment.get_os_info ("LOGO");
         if (logo_icon_name == "" || logo_icon_name == null) {
@@ -77,18 +84,20 @@ public class About.OperatingSystemView : Gtk.Grid {
         }
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website")) {
-            halign = Gtk.Align.START,
-            margin_top = 12,
-            xalign = 0
+            margin_top = 12
         };
 
-        var help_button = new Gtk.Button.with_label ("?") {
-            halign = Gtk.Align.END
-        };
-        help_button.get_style_context ().add_class ("circular");
 
-        // Translate button
-        var translate_button = new Gtk.Button.with_label (_("Suggest Translations"));
+        var help_button = new Gtk.LinkButton.with_label (support_url, _("Get Support")) {
+            margin_top = 12
+        };
+
+        var translate_button = new Gtk.LinkButton.with_label (
+            "https://l10n.elementary.io/projects/",
+            _("Suggest Translations")
+        ) {
+            margin_top = 12
+        };
 
         var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
 
@@ -104,19 +113,16 @@ public class About.OperatingSystemView : Gtk.Grid {
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
         var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
-            halign = Gtk.Align.CENTER,
+            hexpand = true,
+            layout_style = Gtk.ButtonBoxStyle.END,
             spacing = 6
         };
-        button_grid.add (help_button);
         button_grid.add (settings_restore_button);
-        button_grid.add (translate_button);
         button_grid.add (bug_button);
-
         if (update_button != null) {
             button_grid.add (update_button);
         }
-
-        button_grid.set_child_non_homogeneous (help_button, true);
+        button_grid.set_child_secondary (settings_restore_button, true);
 
         var software_grid = new Gtk.Grid () {
             column_spacing = 12,
@@ -125,44 +131,29 @@ public class About.OperatingSystemView : Gtk.Grid {
             valign = Gtk.Align.CENTER,
             vexpand = true
         };
-        software_grid.attach (logo, 0, 0, 1, 5);
-        software_grid.attach (title, 1, 0);
+        software_grid.attach (logo, 0, 0, 1, 4);
+        software_grid.attach (title, 1, 0, 3);
 
         if (upstream_release != null) {
             var based_off = new Gtk.Label (_("Built on %s").printf (upstream_release)) {
                 selectable = true,
                 xalign = 0
             };
-            software_grid.attach (based_off, 1, 1);
+            software_grid.attach (based_off, 1, 1, 3);
         }
 
-        software_grid.attach (kernel_version_label, 1, 2);
+        software_grid.attach (kernel_version_label, 1, 2, 3);
         software_grid.attach (website_label, 1, 3);
+        software_grid.attach (help_button, 2, 3);
+        software_grid.attach (translate_button, 3, 3);
 
         orientation = Gtk.Orientation.VERTICAL;
-        halign = Gtk.Align.CENTER;
         row_spacing = 12;
         add (software_grid);
         add (button_grid);
         show_all ();
 
-        help_button.clicked.connect (() => {
-            launch_support_url ();
-        });
-
-        help_button.size_allocate.connect ( (alloc) => {
-            help_button.set_size_request (alloc.height, -1);
-        });
-
         settings_restore_button.clicked.connect (settings_restore_clicked);
-
-        translate_button.clicked.connect (() => {
-            try {
-                AppInfo.launch_default_for_uri ("https://l10n.elementary.io/projects/", null);
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
 
         bug_button.clicked.connect (() => {
             var appinfo = new GLib.DesktopAppInfo ("io.elementary.feedback.desktop");
@@ -180,11 +171,6 @@ public class About.OperatingSystemView : Gtk.Grid {
     }
 
     private void launch_support_url () {
-        var support_url = Environment.get_os_info (GLib.OsInfoKey.SUPPORT_URL);
-        if (support_url == "" || support_url == null) {
-            support_url = "https://elementary.io/support";
-        }
-
         try {
             AppInfo.launch_default_for_uri (support_url, null);
         } catch (Error e) {
