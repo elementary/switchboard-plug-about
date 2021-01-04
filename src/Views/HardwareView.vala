@@ -59,7 +59,7 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         var manufacturer_logo = new Gtk.Image () {
-            hexpand = true,
+            halign = Gtk.Align.END,
             icon_name = system_interface.icon_name,
             pixel_size = 128,
             use_fallback = true
@@ -67,41 +67,40 @@ public class About.HardwareView : Gtk.Grid {
 
         var product_name_info = new Gtk.Label (Environment.get_host_name ()) {
             ellipsize = Pango.EllipsizeMode.END,
-            selectable = true
+            selectable = true,
+            xalign = 0
         };
         product_name_info.get_style_context ().add_class ("h2");
 
         var processor_info = new Gtk.Label (processor) {
             ellipsize = Pango.EllipsizeMode.END,
-            justify = Gtk.Justification.CENTER,
             margin_top = 12,
-            selectable = true
+            selectable = true,
+            xalign = 0
         };
 
         var memory_info = new Gtk.Label (_("%s memory").printf (memory)) {
             ellipsize = Pango.EllipsizeMode.END,
-            selectable = true
+            selectable = true,
+            xalign = 0
         };
 
         var graphics_info = new Gtk.Label (graphics) {
             ellipsize = Pango.EllipsizeMode.END,
-            justify = Gtk.Justification.CENTER,
-            selectable = true
+            selectable = true,
+            xalign = 0
         };
 
         var hdd_info = new Gtk.Label (hdd) {
             ellipsize = Pango.EllipsizeMode.END,
-            selectable = true
+            selectable = true,
+            xalign = 0
         };
 
-        column_spacing = 6;
-        row_spacing = 6;
-
-        attach (manufacturer_logo, 0, 0, 2);
-        attach (processor_info, 0, 3, 2);
-        attach (graphics_info, 0, 4, 2);
-        attach (memory_info, 0, 5, 2);
-        attach (hdd_info, 0, 6, 2);
+        var details_grid = new Gtk.Grid () {
+            orientation = Gtk.Orientation.VERTICAL,
+            row_spacing = 6
+        };
 
         if (oem_enabled) {
             var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
@@ -111,45 +110,51 @@ public class About.HardwareView : Gtk.Grid {
                 manufacturer_logo.gicon = fileicon;
             }
 
-            var manufacturer_info = new Gtk.Label (manufacturer_name) {
-                ellipsize = Pango.EllipsizeMode.END,
-                selectable = true
-            };
-            manufacturer_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-
-            attach (manufacturer_info, 0, 2, 2);
-
             if (product_name != null) {
-                product_name_info.label = product_name;
+                product_name_info.label = "<b>%s</b>".printf (product_name);
+                product_name_info.use_markup = true;
             }
 
             if (product_version != null) {
-                var product_version_info = new Gtk.Label ("(" + product_version + ")") {
-                    ellipsize = Pango.EllipsizeMode.END,
-                    selectable = true,
-                    xalign = 0
-                };
-                product_version_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-
-                product_name_info.xalign = 1;
-
-                attach (product_name_info, 0, 1);
-                attach (product_version_info, 1, 1);
-            } else {
-                attach (product_name_info, 0, 1, 2);
+                 product_name_info.label += " %s".printf (product_version);
             }
 
-            if (manufacturer_support_url != null) {
-                var manufacturer_website_info = new Gtk.LinkButton.with_label (
-                    manufacturer_support_url,
-                    _("Manufacturer Website")
-                );
+            var manufacturer_info = new Gtk.Label (manufacturer_name) {
+                ellipsize = Pango.EllipsizeMode.END,
+                selectable = true,
+                xalign = 0
+            };
+            manufacturer_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-                attach (manufacturer_website_info, 0, 7, 2);
-            }
+            details_grid.add (product_name_info);
+            details_grid.add (manufacturer_info);
         } else {
-            attach (product_name_info, 0, 1, 2);
+            details_grid.add (product_name_info);
         }
+
+        details_grid.add (processor_info);
+        details_grid.add (graphics_info);
+        details_grid.add (memory_info);
+        details_grid.add (hdd_info);
+
+        if (oem_enabled && manufacturer_support_url != null) {
+            var manufacturer_website_info = new Gtk.LinkButton.with_label (
+                manufacturer_support_url,
+                _("Manufacturer Website")
+            ) {
+                halign = Gtk.Align.START,
+                margin_top = 12,
+                xalign = 0
+            };
+
+            details_grid.add (manufacturer_website_info);
+        }
+
+        column_spacing = 12;
+        halign = Gtk.Align.CENTER;
+
+        add (manufacturer_logo);
+        add (details_grid);
     }
 
     private string? try_get_arm_model (GLib.HashTable<string, string> values) {
