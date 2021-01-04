@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"POT-Creation-Date: 2021-01-04 21:42+0000\n"
 "PO-Revision-Date: 2020-11-16 17:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -20,77 +20,45 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr "System"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "Vis information om styresystem og hardware"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr "Hardware"
+
+#: src/Plug.vala:81
 msgid "System Information"
 msgstr "Systemoplysninger"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
 msgid "Restore Default Settings"
 msgstr "Gendan standardindstillingerne"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:83
 msgid "Suggest Translation"
 msgstr "Foreslå oversættelse"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:64
+#: src/Plug.vala:85
 msgid "Report a Problem"
 msgstr "Rapportér et problem"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:86
 msgid "Updates"
 msgstr "Opdateringer"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "Bygget på %s"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr "GTK %u.%u.%u"
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "Website"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "Foreslå oversættelser"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "Søg efter Opdateringer"
-
-#: src/Plug.vala:268
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Systemindstillinger Vil Blive Gendannet til Fabriksindstillingerne"
-
-#: src/Plug.vala:269
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"Alle systemindstillinger og data vil blive nulstillet til standardværdierne. "
-"Personlige data, som f.eks. musik og billeder, vil ikke blive påvirket."
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "Gendan indstillinger"
 
 #: src/Views/HardwareView.vala:43
 msgid "Unknown Graphics"
@@ -153,6 +121,45 @@ msgstr "%s plads (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s plads"
+
+#: src/Views/OperatingSystemView.vala:71
+#, c-format
+msgid "GTK %u.%u.%u"
+msgstr "GTK %u.%u.%u"
+
+#: src/Views/OperatingSystemView.vala:81
+msgid "Website"
+msgstr "Website"
+
+#. Translate button
+#: src/Views/OperatingSystemView.vala:92
+msgid "Suggest Translations"
+msgstr "Foreslå oversættelser"
+
+#: src/Views/OperatingSystemView.vala:99
+msgid "Check for Updates"
+msgstr "Søg efter Opdateringer"
+
+#: src/Views/OperatingSystemView.vala:133
+#, c-format
+msgid "Built on %s"
+msgstr "Bygget på %s"
+
+#: src/Views/OperatingSystemView.vala:201
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "Systemindstillinger Vil Blive Gendannet til Fabriksindstillingerne"
+
+#: src/Views/OperatingSystemView.vala:202
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"Alle systemindstillinger og data vil blive nulstillet til standardværdierne. "
+"Personlige data, som f.eks. musik og billeder, vil ikke blive påvirket."
+
+#: src/Views/OperatingSystemView.vala:208
+msgid "Restore Settings"
+msgstr "Gendan indstillinger"
 
 #~ msgid "About"
 #~ msgstr "Om"
@@ -297,9 +304,6 @@ msgstr "%s plads"
 
 #~ msgid "User Accounts"
 #~ msgstr "Bruger Konti"
-
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr ""

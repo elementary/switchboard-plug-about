@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"POT-Creation-Date: 2021-01-04 21:42+0000\n"
 "PO-Revision-Date: 2020-11-16 17:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -20,78 +20,45 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr "Sistema"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "Mostra la informació del sistema operatiu i del maquinari"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr "Maquinari"
+
+#: src/Plug.vala:81
 msgid "System Information"
 msgstr "Informació del sistema"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
 msgid "Restore Default Settings"
 msgstr "Restaura els paràmetres per defecte"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:83
 msgid "Suggest Translation"
 msgstr "Suggeriu una traducció"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
 msgid "Send Feedback"
 msgstr "Envia el suggeriment"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:85
 msgid "Report a Problem"
 msgstr "Informeu d'un problema"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:86
 msgid "Updates"
 msgstr "Actualitzacions"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "Construït sobre %s"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr "GTK %u.%u.%u"
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "Lloc web"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "Suggeriu traduccions"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "Comprova si hi ha actualitzacions"
-
-#: src/Plug.vala:268
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Els paràmetres del sistema es restauraran als valors de fàbrica"
-
-#: src/Plug.vala:269
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"Tots els paràmetres i les dades del sistema s'establiran als valors per "
-"defecte. Això no afectarà les dades personals, com ara la música i les "
-"imatges."
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "Restaura els paràmetres"
 
 #: src/Views/HardwareView.vala:43
 msgid "Unknown Graphics"
@@ -154,6 +121,46 @@ msgstr "Emmagatzematge (HDD): %s"
 #, c-format
 msgid "%s storage"
 msgstr "Emmagatzematge: %s"
+
+#: src/Views/OperatingSystemView.vala:71
+#, c-format
+msgid "GTK %u.%u.%u"
+msgstr "GTK %u.%u.%u"
+
+#: src/Views/OperatingSystemView.vala:81
+msgid "Website"
+msgstr "Lloc web"
+
+#. Translate button
+#: src/Views/OperatingSystemView.vala:92
+msgid "Suggest Translations"
+msgstr "Suggeriu traduccions"
+
+#: src/Views/OperatingSystemView.vala:99
+msgid "Check for Updates"
+msgstr "Comprova si hi ha actualitzacions"
+
+#: src/Views/OperatingSystemView.vala:133
+#, c-format
+msgid "Built on %s"
+msgstr "Construït sobre %s"
+
+#: src/Views/OperatingSystemView.vala:201
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "Els paràmetres del sistema es restauraran als valors de fàbrica"
+
+#: src/Views/OperatingSystemView.vala:202
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"Tots els paràmetres i les dades del sistema s'establiran als valors per "
+"defecte. Això no afectarà les dades personals, com ara la música i les "
+"imatges."
+
+#: src/Views/OperatingSystemView.vala:208
+msgid "Restore Settings"
+msgstr "Restaura els paràmetres"
 
 #~ msgid "About"
 #~ msgstr "Quant a"
@@ -301,9 +308,6 @@ msgstr "Emmagatzematge: %s"
 
 #~ msgid "User Accounts"
 #~ msgstr "Comptes d'usuari"
-
-#~ msgid "Hardware"
-#~ msgstr "Maquinari"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "No afectarà les dades personals, com ara la música i les imatges."

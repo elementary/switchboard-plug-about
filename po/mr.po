@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"POT-Creation-Date: 2021-01-04 21:42+0000\n"
 "PO-Revision-Date: 2020-11-22 21:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -20,77 +20,45 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr "सिस्टिम"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "ऑपरेटिंग सिस्टम आणि हार्डवेअर माहिती पहा"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr ""
+
+#: src/Plug.vala:81
 msgid "System Information"
 msgstr "सिस्टम माहिती"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
 msgid "Restore Default Settings"
 msgstr "डीफॉल्ट सेटिंग्ज पुनर्संचयित करा"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:83
 msgid "Suggest Translation"
 msgstr "अनुवाद सुचवा"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
 msgid "Send Feedback"
 msgstr "अभिप्राय पाठवा"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:85
 msgid "Report a Problem"
 msgstr "तक्रार नोंदवा"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:86
 msgid "Updates"
 msgstr "अपडेट्स"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "%s वर बनविले"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr "जीटीके %u.%u.%u"
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "संकेतस्थळ"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "भाषांतर सुचवा"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "सुधारणीसाठी तपासा"
-
-#: src/Plug.vala:268
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "सिस्टम सेटिंग्ज फॅक्टरी डीफॉल्टवर पुनर्संचयित केल्या जातील"
-
-#: src/Plug.vala:269
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"सर्व सिस्टिम सेटिंग्ज आणि डेटा डीफॉल्ट मूल्यांवर रीसेट केले जातील. वैयक्तिक डेटा, जसे की संगीत "
-"आणि चित्र, अप्रभावित असतील."
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "सेटिंग्ज पुनर्संचयित करा"
 
 #: src/Views/HardwareView.vala:43
 msgid "Unknown Graphics"
@@ -153,6 +121,45 @@ msgstr "%s स्टोरेज (HDD)"
 #, c-format
 msgid "%s storage"
 msgstr "%s स्टोरेज"
+
+#: src/Views/OperatingSystemView.vala:71
+#, c-format
+msgid "GTK %u.%u.%u"
+msgstr "जीटीके %u.%u.%u"
+
+#: src/Views/OperatingSystemView.vala:81
+msgid "Website"
+msgstr "संकेतस्थळ"
+
+#. Translate button
+#: src/Views/OperatingSystemView.vala:92
+msgid "Suggest Translations"
+msgstr "भाषांतर सुचवा"
+
+#: src/Views/OperatingSystemView.vala:99
+msgid "Check for Updates"
+msgstr "सुधारणीसाठी तपासा"
+
+#: src/Views/OperatingSystemView.vala:133
+#, c-format
+msgid "Built on %s"
+msgstr "%s वर बनविले"
+
+#: src/Views/OperatingSystemView.vala:201
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "सिस्टम सेटिंग्ज फॅक्टरी डीफॉल्टवर पुनर्संचयित केल्या जातील"
+
+#: src/Views/OperatingSystemView.vala:202
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"सर्व सिस्टिम सेटिंग्ज आणि डेटा डीफॉल्ट मूल्यांवर रीसेट केले जातील. वैयक्तिक डेटा, जसे की संगीत "
+"आणि चित्र, अप्रभावित असतील."
+
+#: src/Views/OperatingSystemView.vala:208
+msgid "Restore Settings"
+msgstr "सेटिंग्ज पुनर्संचयित करा"
 
 #~ msgid "About"
 #~ msgstr "माहिती"

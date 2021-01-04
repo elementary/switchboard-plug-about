@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"POT-Creation-Date: 2021-01-04 21:42+0000\n"
 "PO-Revision-Date: 2017-01-02 03:38+0000\n"
 "Last-Translator: ablimet <Unknown>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -18,78 +18,45 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "مەشغۇلات سىستېمىسى ۋە قاتتىق دىتال ئۇچۇرلىرىنى كۆرۈش"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr "قاتتىق دېتال"
+
+#: src/Plug.vala:81
 msgid "System Information"
 msgstr "سىستېما ئۇچۇرى"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
 msgid "Restore Default Settings"
 msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:83
 msgid "Suggest Translation"
 msgstr "تەۋسىيە قىلىنغان تەرجىمىلەر"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:64
+#: src/Plug.vala:85
 msgid "Report a Problem"
 msgstr "مەسىلە مەلۇم قىلىش"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:86
 msgid "Updates"
 msgstr "يېڭىلانمىلار"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "%s نىڭ ئاساسىدا قۇرۇلغان"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "توربىكەت"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "تەۋسىيە قىلىنغان تەرجىمىلەر"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "يېڭىلانمىنى تەكشۈرۈش"
-
-#: src/Plug.vala:268
-#, fuzzy
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "سىستېما تەڭشەكلىرى زاۋۇتتىن چىققاندىكى ھالىتىگە قايتىدۇ"
-
-#: src/Plug.vala:269
-#, fuzzy
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"بارلىق سىستېما تەڭشەكلىرى ۋە سانلىق مەلۇماتلار سۈكۈتتىكى ھالىتىگە قايتىدۇ"
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
 
 #: src/Views/HardwareView.vala:43
 #, fuzzy
@@ -159,6 +126,46 @@ msgstr "ساقلىغۇچ"
 msgid "%s storage"
 msgstr "ساقلىغۇچ"
 
+#: src/Views/OperatingSystemView.vala:71
+#, c-format
+msgid "GTK %u.%u.%u"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:81
+msgid "Website"
+msgstr "توربىكەت"
+
+#. Translate button
+#: src/Views/OperatingSystemView.vala:92
+msgid "Suggest Translations"
+msgstr "تەۋسىيە قىلىنغان تەرجىمىلەر"
+
+#: src/Views/OperatingSystemView.vala:99
+msgid "Check for Updates"
+msgstr "يېڭىلانمىنى تەكشۈرۈش"
+
+#: src/Views/OperatingSystemView.vala:133
+#, c-format
+msgid "Built on %s"
+msgstr "%s نىڭ ئاساسىدا قۇرۇلغان"
+
+#: src/Views/OperatingSystemView.vala:201
+#, fuzzy
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "سىستېما تەڭشەكلىرى زاۋۇتتىن چىققاندىكى ھالىتىگە قايتىدۇ"
+
+#: src/Views/OperatingSystemView.vala:202
+#, fuzzy
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"بارلىق سىستېما تەڭشەكلىرى ۋە سانلىق مەلۇماتلار سۈكۈتتىكى ھالىتىگە قايتىدۇ"
+
+#: src/Views/OperatingSystemView.vala:208
+msgid "Restore Settings"
+msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
+
 #~ msgid "About"
 #~ msgstr "ھەققىدە"
 
@@ -175,9 +182,6 @@ msgstr "ساقلىغۇچ"
 #, fuzzy
 #~ msgid "System Settings"
 #~ msgstr "تەڭشەكلەرنى ئەسلىگە قايتۇرۇش"
-
-#~ msgid "Hardware"
-#~ msgstr "قاتتىق دېتال"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "مۇزىكا، رەسىم دىگەندەك شەخسىي ئۇچۇرلار دەخلىگە ئۇچرىمايدۇ."

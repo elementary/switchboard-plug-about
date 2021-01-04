@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"POT-Creation-Date: 2021-01-04 21:42+0000\n"
 "PO-Revision-Date: 2016-01-10 09:22+0000\n"
 "Last-Translator: Lukáš Papík <stereo839@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -18,77 +18,45 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "Zobraziť informácie o operačnom systéme a hardware"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr ""
+
+#: src/Plug.vala:81
 msgid "System Information"
 msgstr ""
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
 msgid "Restore Default Settings"
 msgstr "Obnoviť predvolené nastavenia"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:83
 msgid "Suggest Translation"
 msgstr ""
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:64
+#: src/Plug.vala:85
 msgid "Report a Problem"
 msgstr "Nahlásiť problém"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:86
 msgid "Updates"
 msgstr ""
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr ""
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "Webstránka"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "Navrhnúť preklady"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "Skontrolovať aktualizácie"
-
-#: src/Plug.vala:268
-#, fuzzy
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Nastavenia systému sa obnovia na predvolené továrenské nastavenia"
-
-#: src/Plug.vala:269
-#, fuzzy
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr "Všetky nastavenia a dáta systému sa obnovia na predvolené hodnoty."
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "Obnoviť nastavenia"
 
 #: src/Views/HardwareView.vala:43
 #, fuzzy
@@ -157,6 +125,45 @@ msgstr "Úložisko:"
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Úložisko:"
+
+#: src/Views/OperatingSystemView.vala:71
+#, c-format
+msgid "GTK %u.%u.%u"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:81
+msgid "Website"
+msgstr "Webstránka"
+
+#. Translate button
+#: src/Views/OperatingSystemView.vala:92
+msgid "Suggest Translations"
+msgstr "Navrhnúť preklady"
+
+#: src/Views/OperatingSystemView.vala:99
+msgid "Check for Updates"
+msgstr "Skontrolovať aktualizácie"
+
+#: src/Views/OperatingSystemView.vala:133
+#, c-format
+msgid "Built on %s"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:201
+#, fuzzy
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "Nastavenia systému sa obnovia na predvolené továrenské nastavenia"
+
+#: src/Views/OperatingSystemView.vala:202
+#, fuzzy
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr "Všetky nastavenia a dáta systému sa obnovia na predvolené hodnoty."
+
+#: src/Views/OperatingSystemView.vala:208
+msgid "Restore Settings"
+msgstr "Obnoviť nastavenia"
 
 #~ msgid "About"
 #~ msgstr "O programe"
