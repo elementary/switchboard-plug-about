@@ -8,15 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-04 21:42+0000\n"
-"PO-Revision-Date: 2014-12-22 14:03+0000\n"
-"Last-Translator: ERX <eriksh@inbox.lv>\n"
-"Language-Team: Latvian <lv@li.org>\n"
+"PO-Revision-Date: 2021-01-04 22:57+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Latvian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-about/lv/>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: src/Plug.vala:29
 msgid "System"
@@ -32,7 +35,7 @@ msgstr ""
 
 #: src/Plug.vala:47
 msgid "Hardware"
-msgstr ""
+msgstr "Aparatūra"
 
 #: src/Plug.vala:81
 msgid "System Information"
