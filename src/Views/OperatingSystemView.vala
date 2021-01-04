@@ -73,13 +73,6 @@ public class About.OperatingSystemView : Gtk.Grid {
             xalign = 0
         };
 
-        var gtk_version_label = new Gtk.Label (_("GTK %u.%u.%u").printf (
-            Gtk.get_major_version (), Gtk.get_minor_version (), Gtk.get_micro_version ()
-        )) {
-            selectable = true,
-            xalign = 0
-        };
-
         var website_url = Environment.get_os_info (GLib.OsInfoKey.HOME_URL);
         if (website_url == "" || website_url == null) {
             website_url = "https://elementary.io";
@@ -146,8 +139,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         }
 
         software_grid.attach (kernel_version_label, 1, 2);
-        software_grid.attach (gtk_version_label, 1, 3);
-        software_grid.attach (website_label, 1, 4);
+        software_grid.attach (website_label, 1, 3);
 
         orientation = Gtk.Orientation.VERTICAL;
         halign = Gtk.Align.CENTER;
