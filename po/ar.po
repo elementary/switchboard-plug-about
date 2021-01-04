@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 21:42+0000\n"
+"POT-Creation-Date: 2021-01-04 22:58+0000\n"
 "PO-Revision-Date: 2021-01-04 22:57+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
@@ -41,7 +41,7 @@ msgstr "العتاد الصُلب"
 msgid "System Information"
 msgstr "معلومات عن النظام"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:104
 msgid "Restore Default Settings"
 msgstr "استعادة الإعدادات الإفتراضية"
 
@@ -49,7 +49,7 @@ msgstr "استعادة الإعدادات الإفتراضية"
 msgid "Suggest Translation"
 msgstr "اقتراح الترجمة"
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:93
 msgid "Send Feedback"
 msgstr ""
 
@@ -127,34 +127,29 @@ msgstr "التخزين (HDD): %s"
 msgid "%s storage"
 msgstr "التخزين: %s"
 
-#: src/Views/OperatingSystemView.vala:71
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr "GTK %u.%u.%u"
-
-#: src/Views/OperatingSystemView.vala:81
+#: src/Views/OperatingSystemView.vala:79
 msgid "Website"
 msgstr "الموقع الإلكتروني"
 
 #. Translate button
-#: src/Views/OperatingSystemView.vala:92
+#: src/Views/OperatingSystemView.vala:91
 msgid "Suggest Translations"
 msgstr "اقتراح الترجمة"
 
-#: src/Views/OperatingSystemView.vala:99
+#: src/Views/OperatingSystemView.vala:98
 msgid "Check for Updates"
 msgstr "تحقق من وجود تحديثات"
 
-#: src/Views/OperatingSystemView.vala:133
+#: src/Views/OperatingSystemView.vala:132
 #, c-format
 msgid "Built on %s"
 msgstr "مبني على %s"
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:200
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "سيتم استعادة إعدادات النظام إلى إعدادات المصنع الافتراضية"
 
-#: src/Views/OperatingSystemView.vala:202
+#: src/Views/OperatingSystemView.vala:201
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -162,9 +157,12 @@ msgstr ""
 "سيتم إعادة تعيين جميع إعدادات النظام وبياناته إلى القيم الافتراضية. لن تتأثر "
 "البيانات الشخصية ، مثل الموسيقى والصور."
 
-#: src/Views/OperatingSystemView.vala:208
+#: src/Views/OperatingSystemView.vala:207
 msgid "Restore Settings"
 msgstr "استعادة الإعدادات"
+
+#~ msgid "GTK %u.%u.%u"
+#~ msgstr "GTK %u.%u.%u"
 
 #~ msgid "About"
 #~ msgstr "حول"

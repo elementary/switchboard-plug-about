@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 21:42+0000\n"
+"POT-Creation-Date: 2021-01-04 22:58+0000\n"
 "PO-Revision-Date: 2021-01-04 22:57+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -40,7 +40,7 @@ msgstr "მოწყობილობები"
 msgid "System Information"
 msgstr ""
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:104
 msgid "Restore Default Settings"
 msgstr "ნაგულისხმევი პარამეტრების დაბრუნება"
 
@@ -48,7 +48,7 @@ msgstr "ნაგულისხმევი პარამეტრები�
 msgid "Suggest Translation"
 msgstr ""
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:93
 msgid "Send Feedback"
 msgstr ""
 
@@ -128,35 +128,30 @@ msgstr "საწყობი:"
 msgid "%s storage"
 msgstr "საწყობი:"
 
-#: src/Views/OperatingSystemView.vala:71
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:81
+#: src/Views/OperatingSystemView.vala:79
 msgid "Website"
 msgstr "ვებ-გვერდი"
 
 #. Translate button
-#: src/Views/OperatingSystemView.vala:92
+#: src/Views/OperatingSystemView.vala:91
 msgid "Suggest Translations"
 msgstr "თარგმნაში დახმარება"
 
-#: src/Views/OperatingSystemView.vala:99
+#: src/Views/OperatingSystemView.vala:98
 msgid "Check for Updates"
 msgstr "განხლებებისშემოწმება"
 
-#: src/Views/OperatingSystemView.vala:133
+#: src/Views/OperatingSystemView.vala:132
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:200
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "სისტემის პარამეტრები დაბრუნდება ქარხნულ ნაგულისხმევებზე"
 
-#: src/Views/OperatingSystemView.vala:202
+#: src/Views/OperatingSystemView.vala:201
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -164,7 +159,7 @@ msgid ""
 msgstr ""
 "სისტემის ყველა პარამეტრი და მონაცემები დაბრუნდება ნაგულისხმევ ღირებულებებზე."
 
-#: src/Views/OperatingSystemView.vala:208
+#: src/Views/OperatingSystemView.vala:207
 msgid "Restore Settings"
 msgstr "პარამეტრების აღდგენა"
 

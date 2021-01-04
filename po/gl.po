@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 21:42+0000\n"
+"POT-Creation-Date: 2021-01-04 22:58+0000\n"
 "PO-Revision-Date: 2021-01-04 22:57+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Galician <https://l10n.elementary.io/projects/switchboard/"
@@ -40,7 +40,7 @@ msgstr "Hardware"
 msgid "System Information"
 msgstr "Información do sistema"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:104
 msgid "Restore Default Settings"
 msgstr "Restaurar configuracións predeterminadas"
 
@@ -48,7 +48,7 @@ msgstr "Restaurar configuracións predeterminadas"
 msgid "Suggest Translation"
 msgstr "Suxerir tradución"
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:93
 msgid "Send Feedback"
 msgstr ""
 
@@ -128,35 +128,30 @@ msgstr "%s de almacenamento (HDD)"
 msgid "%s storage"
 msgstr "%s de almacenamento"
 
-#: src/Views/OperatingSystemView.vala:71
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:81
+#: src/Views/OperatingSystemView.vala:79
 msgid "Website"
 msgstr "Sitio web"
 
 #. Translate button
-#: src/Views/OperatingSystemView.vala:92
+#: src/Views/OperatingSystemView.vala:91
 msgid "Suggest Translations"
 msgstr "Suxerir traducións"
 
-#: src/Views/OperatingSystemView.vala:99
+#: src/Views/OperatingSystemView.vala:98
 msgid "Check for Updates"
 msgstr "Comprobar actualizacións"
 
-#: src/Views/OperatingSystemView.vala:133
+#: src/Views/OperatingSystemView.vala:132
 #, c-format
 msgid "Built on %s"
 msgstr "Baseado en %s"
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:200
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 "As configuracións do sistema serán restauradas aos valores predeterminados"
 
-#: src/Views/OperatingSystemView.vala:202
+#: src/Views/OperatingSystemView.vala:201
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -165,7 +160,7 @@ msgstr ""
 "predeterminados. Os datos persoais, como música e imaxes, non se verán "
 "afectados."
 
-#: src/Views/OperatingSystemView.vala:208
+#: src/Views/OperatingSystemView.vala:207
 msgid "Restore Settings"
 msgstr "Restaurar configuración"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 21:42+0000\n"
+"POT-Creation-Date: 2021-01-04 22:58+0000\n"
 "PO-Revision-Date: 2021-01-04 22:57+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Tagalog <https://l10n.elementary.io/projects/switchboard/"
@@ -41,7 +41,7 @@ msgstr "Gamit panlabas"
 msgid "System Information"
 msgstr "Impormasyon ng System"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:104
 msgid "Restore Default Settings"
 msgstr "Ibalik ang Default na Settings"
 
@@ -49,7 +49,7 @@ msgstr "Ibalik ang Default na Settings"
 msgid "Suggest Translation"
 msgstr "Magmungkahi ng Pagsasalin"
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:93
 msgid "Send Feedback"
 msgstr ""
 
@@ -127,34 +127,29 @@ msgstr ""
 msgid "%s storage"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:71
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:81
+#: src/Views/OperatingSystemView.vala:79
 msgid "Website"
 msgstr "Website"
 
 #. Translate button
-#: src/Views/OperatingSystemView.vala:92
+#: src/Views/OperatingSystemView.vala:91
 msgid "Suggest Translations"
 msgstr "Magmungkahi ng mga Pagsasalin"
 
-#: src/Views/OperatingSystemView.vala:99
+#: src/Views/OperatingSystemView.vala:98
 msgid "Check for Updates"
 msgstr "Tumingin ng mga Update"
 
-#: src/Views/OperatingSystemView.vala:133
+#: src/Views/OperatingSystemView.vala:132
 #, c-format
 msgid "Built on %s"
 msgstr "Ginawa sa %s"
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:200
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Ibabalik ang mga Setting ng System sa mga Factory Default"
 
-#: src/Views/OperatingSystemView.vala:202
+#: src/Views/OperatingSystemView.vala:201
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -162,7 +157,7 @@ msgstr ""
 "Lahat ng mga setting at data ay ibabalik sa mga default na value. Ang mga "
 "personal na data, tulad ng musika at mga litrato, ay hindi maapektuhan."
 
-#: src/Views/OperatingSystemView.vala:208
+#: src/Views/OperatingSystemView.vala:207
 msgid "Restore Settings"
 msgstr "Ibalik ang mga Setting"
 

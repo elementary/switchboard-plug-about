@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 21:42+0000\n"
+"POT-Creation-Date: 2021-01-04 22:58+0000\n"
 "PO-Revision-Date: 2016-08-06 17:24+0000\n"
 "Last-Translator: Stanislav <stunito0o0o0@gmail.com>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -38,7 +38,7 @@ msgstr "Апаратура"
 msgid "System Information"
 msgstr "Сведения за системата"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:104
 msgid "Restore Default Settings"
 msgstr "Възстановяване на първоначалните настройки"
 
@@ -46,7 +46,7 @@ msgstr "Възстановяване на първоначалните наст�
 msgid "Suggest Translation"
 msgstr "Предлагане на превод"
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:93
 msgid "Send Feedback"
 msgstr ""
 
@@ -126,35 +126,30 @@ msgstr "Постоянна памет"
 msgid "%s storage"
 msgstr "Постоянна памет"
 
-#: src/Views/OperatingSystemView.vala:71
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:81
+#: src/Views/OperatingSystemView.vala:79
 msgid "Website"
 msgstr "Мрежова страница"
 
 #. Translate button
-#: src/Views/OperatingSystemView.vala:92
+#: src/Views/OperatingSystemView.vala:91
 msgid "Suggest Translations"
 msgstr "Предлагане на превод"
 
-#: src/Views/OperatingSystemView.vala:99
+#: src/Views/OperatingSystemView.vala:98
 msgid "Check for Updates"
 msgstr "Проверка за обновления"
 
-#: src/Views/OperatingSystemView.vala:133
+#: src/Views/OperatingSystemView.vala:132
 #, c-format
 msgid "Built on %s"
 msgstr "Базирана на %s"
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:200
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Настройките на системата ще бъдат върнати към първоначалните стойности"
 
-#: src/Views/OperatingSystemView.vala:202
+#: src/Views/OperatingSystemView.vala:201
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -163,7 +158,7 @@ msgstr ""
 "Всички данни и настройки на системата ще бъдат върнати към първоначалните "
 "стойности."
 
-#: src/Views/OperatingSystemView.vala:208
+#: src/Views/OperatingSystemView.vala:207
 msgid "Restore Settings"
 msgstr "Възстановяване на настройките"
 
