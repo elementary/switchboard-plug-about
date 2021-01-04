@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"POT-Creation-Date: 2021-01-04 21:42+0000\n"
 "PO-Revision-Date: 2020-11-16 17:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: English (Canada) <https://l10n.elementary.io/projects/"
@@ -20,77 +20,45 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr "System"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "View operating system and hardware information"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr "Hardware"
+
+#: src/Plug.vala:81
 msgid "System Information"
 msgstr "System Information"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
 msgid "Restore Default Settings"
 msgstr "Restore Default Settings"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:83
 msgid "Suggest Translation"
 msgstr "Suggest Translation"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:64
+#: src/Plug.vala:85
 msgid "Report a Problem"
 msgstr "Report a Problem"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:86
 msgid "Updates"
 msgstr "Updates"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "Built on %s"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "Website"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "Suggest Translations"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "Check for Updates"
-
-#: src/Plug.vala:268
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "System Settings Will Be Restored to The Factory Defaults"
-
-#: src/Plug.vala:269
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "Restore Settings"
 
 #: src/Views/HardwareView.vala:43
 #, fuzzy
@@ -159,6 +127,45 @@ msgstr "%s storage"
 #, c-format
 msgid "%s storage"
 msgstr "%s storage"
+
+#: src/Views/OperatingSystemView.vala:71
+#, c-format
+msgid "GTK %u.%u.%u"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:81
+msgid "Website"
+msgstr "Website"
+
+#. Translate button
+#: src/Views/OperatingSystemView.vala:92
+msgid "Suggest Translations"
+msgstr "Suggest Translations"
+
+#: src/Views/OperatingSystemView.vala:99
+msgid "Check for Updates"
+msgstr "Check for Updates"
+
+#: src/Views/OperatingSystemView.vala:133
+#, c-format
+msgid "Built on %s"
+msgstr "Built on %s"
+
+#: src/Views/OperatingSystemView.vala:201
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "System Settings Will Be Restored to The Factory Defaults"
+
+#: src/Views/OperatingSystemView.vala:202
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+
+#: src/Views/OperatingSystemView.vala:208
+msgid "Restore Settings"
+msgstr "Restore Settings"
 
 #~ msgid "About"
 #~ msgstr "About"
@@ -249,9 +256,6 @@ msgstr "%s storage"
 
 #~ msgid "Videos"
 #~ msgstr "Videos"
-
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Personal data, such as music and pictures, will be uneffected."
