@@ -1,7 +1,8 @@
 plug_files = files(
     'Plug.vala',
     'Utils/ARMPartDecoder.vala',
-    'Views/HardwareView.vala'
+    'Views/HardwareView.vala',
+    'Views/OperatingSystemView.vala'
 )
 
 switchboard_dep = dependency('switchboard-2.0')

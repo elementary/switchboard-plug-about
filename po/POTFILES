@@ -1,2 +1,3 @@
 src/Plug.vala
 src/Views/HardwareView.vala
+src/Views/OperatingSystemView.vala
