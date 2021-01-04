@@ -70,7 +70,7 @@ public class About.HardwareView : Gtk.Grid {
             selectable = true,
             xalign = 0
         };
-        product_name_info.get_style_context ().add_class ("h2");
+        product_name_info.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
         var processor_info = new Gtk.Label (processor) {
             ellipsize = Pango.EllipsizeMode.END,
