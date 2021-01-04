@@ -19,15 +19,12 @@
 */
 
 public class About.OperatingSystemView : Gtk.Grid {
-    private Gtk.Label based_off;
-    private string kernel_version;
-    private string upstream_release;
-
     construct {
         // Upstream distro version (for "Built on" text)
         // FIXME: Add distro specific field to /etc/os-release and use that instead
         // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
         var file = File.new_for_path ("/etc/upstream-release/lsb-release");
+        string upstream_release = null;
         try {
             var dis = new DataInputStream (file.read ());
             string line;
@@ -40,11 +37,9 @@ public class About.OperatingSystemView : Gtk.Grid {
             }
         } catch (Error e) {
             warning ("Couldn't read upstream lsb-release file, assuming none");
-            upstream_release = null;
         }
 
         var uts_name = Posix.utsname ();
-        kernel_version = "%s %s".printf (uts_name.sysname, uts_name.release);
 
         var logo_icon_name = Environment.get_os_info ("LOGO");
         if (logo_icon_name == "" || logo_icon_name == null) {
@@ -69,13 +64,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         };
         title.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
-        if (upstream_release != null) {
-            based_off = new Gtk.Label (_("Built on %s").printf (upstream_release)) {
-                selectable = true
-            };
-        }
-
-        var kernel_version_label = new Gtk.Label (kernel_version) {
+        var kernel_version_label = new Gtk.Label ("%s %s".printf (uts_name.sysname, uts_name.release)) {
             selectable = true
         };
 
@@ -143,6 +132,9 @@ public class About.OperatingSystemView : Gtk.Grid {
         software_grid.add (title);
 
         if (upstream_release != null) {
+            var based_off = new Gtk.Label (_("Built on %s").printf (upstream_release)) {
+                selectable = true
+            };
             software_grid.add (based_off);
         }
 
