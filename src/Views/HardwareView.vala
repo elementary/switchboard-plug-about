@@ -1,8 +1,8 @@
 /*
-* Copyright (C) 2010 Red Hat, Inc
-* Copyright (C) 2008 William Jon McCann <jmccann@redhat.com>
-* Copyright (c) 2017 elementary LLC. (https://elementary.io)
-* Copyright (C) 2020 Justin Haygood <jhaygood86@gmail.com>
+* Copyright 2017–2021 elementary, Inc. (https://elementary.io)
+* Copyright 2020 Justin Haygood <jhaygood86@gmail.com>
+* Copyright 2010 Red Hat, Inc
+* Copyright 2008 William Jon McCann <jmccann@redhat.com>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public

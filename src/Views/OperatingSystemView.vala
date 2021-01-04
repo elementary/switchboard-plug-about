@@ -1,5 +1,5 @@
 /*
-* Copyright 2020 elementary, Inc. (https://elementary.io)
+* Copyright 2020–2021 elementary, Inc. (https://elementary.io)
 *           2015 Ivo Nunes, Akshay Shekher
 *
 * This program is free software; you can redistribute it and/or
