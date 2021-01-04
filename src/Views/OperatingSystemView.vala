@@ -83,12 +83,8 @@ public class About.OperatingSystemView : Gtk.Grid {
             margin_top = 12
         };
 
-        var help_button = new Gtk.Button.with_label ("?") {
-            halign = Gtk.Align.END
-        };
-        help_button.get_style_context ().add_class ("circular");
+        var help_button = new Gtk.Button.with_label (_("Get Support"));
 
-        // Translate button
         var translate_button = new Gtk.Button.with_label (_("Suggest Translations"));
 
         var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
@@ -104,27 +100,30 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
-        var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
-            halign = Gtk.Align.CENTER,
-            spacing = 6
+        var button_sep = new Gtk.Separator (Gtk.Orientation.HORIZONTAL) {
+            hexpand = true,
+            margin_top = 6,
+            margin_bottom = 6
+        };
+
+        var button_grid = new Gtk.Grid () {
+            row_spacing = 6,
+            orientation = Gtk.Orientation.VERTICAL,
+            valign = Gtk.Align.CENTER
         };
         button_grid.add (help_button);
-        button_grid.add (settings_restore_button);
         button_grid.add (translate_button);
         button_grid.add (bug_button);
-
+        button_grid.add (button_sep);
+        button_grid.add (settings_restore_button);
         if (update_button != null) {
             button_grid.add (update_button);
         }
 
-        button_grid.set_child_non_homogeneous (help_button, true);
-
         var software_grid = new Gtk.Grid () {
-            column_spacing = 6,
+            column_spacing = 24,
             orientation = Gtk.Orientation.VERTICAL,
-            row_spacing = 6,
-            valign = Gtk.Align.CENTER,
-            vexpand = true
+            row_spacing = 6
         };
         software_grid.add (logo);
         software_grid.add (title);
@@ -140,9 +139,9 @@ public class About.OperatingSystemView : Gtk.Grid {
         software_grid.add (gtk_version_label);
         software_grid.add (website_label);
 
-        orientation = Gtk.Orientation.VERTICAL;
         halign = Gtk.Align.CENTER;
-        row_spacing = 12;
+        column_homogeneous = true;
+        column_spacing = 24;
         add (software_grid);
         add (button_grid);
         show_all ();

@@ -34,7 +34,9 @@ public class About.Plug : Switchboard.Plug {
 
     public override Gtk.Widget get_widget () {
         if (main_grid == null) {
-            var operating_system_view = new OperatingSystemView ();
+            var operating_system_view = new OperatingSystemView () {
+                valign = Gtk.Align.CENTER
+            };
 
             var hardware_view = new HardwareView () {
                 valign = Gtk.Align.CENTER
