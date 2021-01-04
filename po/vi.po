@@ -7,16 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 21:42+0000\n"
-"PO-Revision-Date: 2014-07-08 06:26+0000\n"
-"Last-Translator: Trung Ngô <ndtrung4419@gmail.com>\n"
-"Language-Team: Vietnamese <vi@li.org>\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
+"PO-Revision-Date: 2021-01-04 22:57+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Vietnamese <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-about/vi/>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: src/Plug.vala:29
 msgid "System"
@@ -32,29 +34,29 @@ msgstr ""
 
 #: src/Plug.vala:47
 msgid "Hardware"
-msgstr ""
+msgstr "Phần cứng"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr ""
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr ""
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr ""
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:85
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "Thông báo lỗi"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr ""
 
@@ -124,40 +126,38 @@ msgstr ""
 msgid "%s storage"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:71
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:81
+#: src/Views/OperatingSystemView.vala:86
 msgid "Website"
 msgstr ""
 
-#. Translate button
-#: src/Views/OperatingSystemView.vala:92
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
 msgid "Suggest Translations"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:99
+#: src/Views/OperatingSystemView.vala:107
 msgid "Check for Updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:133
+#: src/Views/OperatingSystemView.vala:138
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:186
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:202
+#: src/Views/OperatingSystemView.vala:187
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:208
+#: src/Views/OperatingSystemView.vala:193
 msgid "Restore Settings"
 msgstr ""
 

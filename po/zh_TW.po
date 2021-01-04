@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 21:42+0000\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
 "PO-Revision-Date: 2020-11-16 17:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -36,27 +36,27 @@ msgstr ""
 msgid "Hardware"
 msgstr "硬體"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "系統資訊"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "還原預設設定"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "建議翻譯"
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:85
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "回報問題"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "更新"
 
@@ -128,34 +128,32 @@ msgstr "%s 儲存裝置 (HDD)"
 msgid "%s storage"
 msgstr "%s 儲存裝置"
 
-#: src/Views/OperatingSystemView.vala:71
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr "GTK %u.%u.%u"
-
-#: src/Views/OperatingSystemView.vala:81
+#: src/Views/OperatingSystemView.vala:86
 msgid "Website"
 msgstr "網站"
 
-#. Translate button
-#: src/Views/OperatingSystemView.vala:92
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
 msgid "Suggest Translations"
 msgstr "建議翻譯"
 
-#: src/Views/OperatingSystemView.vala:99
+#: src/Views/OperatingSystemView.vala:107
 msgid "Check for Updates"
 msgstr "檢查更新"
 
-#: src/Views/OperatingSystemView.vala:133
+#: src/Views/OperatingSystemView.vala:138
 #, c-format
 msgid "Built on %s"
 msgstr "建基於 %s"
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:186
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "系統設定值將還原成出廠預設值"
 
-#: src/Views/OperatingSystemView.vala:202
+#: src/Views/OperatingSystemView.vala:187
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -163,9 +161,12 @@ msgstr ""
 "所有系統設定值和資料都會重設回預設值。個人資料，例如音樂或圖片等，都不會受到"
 "影響。"
 
-#: src/Views/OperatingSystemView.vala:208
+#: src/Views/OperatingSystemView.vala:193
 msgid "Restore Settings"
 msgstr "還原設定值"
+
+#~ msgid "GTK %u.%u.%u"
+#~ msgstr "GTK %u.%u.%u"
 
 #~ msgid "About"
 #~ msgstr "關於"

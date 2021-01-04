@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 21:42+0000\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
 "PO-Revision-Date: 2021-01-04 22:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -36,27 +36,27 @@ msgstr "ऑपरेटिंग सिस्टम"
 msgid "Hardware"
 msgstr "हार्डवेयर"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "सिस्टम माहिती"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "डीफॉल्ट सेटिंग्ज पुनर्संचयित करा"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "अनुवाद सुचवा"
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr "अभिप्राय पाठवा"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "तक्रार नोंदवा"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "अपडेट्स"
 
@@ -122,34 +122,32 @@ msgstr "%s स्टोरेज (HDD)"
 msgid "%s storage"
 msgstr "%s स्टोरेज"
 
-#: src/Views/OperatingSystemView.vala:71
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr "जीटीके %u.%u.%u"
-
-#: src/Views/OperatingSystemView.vala:81
+#: src/Views/OperatingSystemView.vala:86
 msgid "Website"
 msgstr "संकेतस्थळ"
 
-#. Translate button
-#: src/Views/OperatingSystemView.vala:92
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
 msgid "Suggest Translations"
 msgstr "भाषांतर सुचवा"
 
-#: src/Views/OperatingSystemView.vala:99
+#: src/Views/OperatingSystemView.vala:107
 msgid "Check for Updates"
 msgstr "सुधारणीसाठी तपासा"
 
-#: src/Views/OperatingSystemView.vala:133
+#: src/Views/OperatingSystemView.vala:138
 #, c-format
 msgid "Built on %s"
 msgstr "%s वर बनविले"
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:186
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "सिस्टम सेटिंग्ज फॅक्टरी डीफॉल्टवर पुनर्संचयित केल्या जातील"
 
-#: src/Views/OperatingSystemView.vala:202
+#: src/Views/OperatingSystemView.vala:187
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -157,9 +155,12 @@ msgstr ""
 "सर्व सिस्टिम सेटिंग्ज आणि डेटा डीफॉल्ट मूल्यांवर रीसेट केले जातील. वैयक्तिक डेटा, जसे की संगीत "
 "आणि चित्र, अप्रभावित असतील."
 
-#: src/Views/OperatingSystemView.vala:208
+#: src/Views/OperatingSystemView.vala:193
 msgid "Restore Settings"
 msgstr "सेटिंग्ज पुनर्संचयित करा"
+
+#~ msgid "GTK %u.%u.%u"
+#~ msgstr "जीटीके %u.%u.%u"
 
 #~ msgid "About"
 #~ msgstr "माहिती"

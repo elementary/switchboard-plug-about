@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 21:42+0000\n"
-"PO-Revision-Date: 2017-06-16 17:24+0000\n"
-"Last-Translator: Rajeev Kumar <irajeevankumar@gmail.com>\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
+"PO-Revision-Date: 2021-01-04 22:57+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Tamil <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ta/>\n"
 "Language: ta\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.14\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:29
@@ -34,29 +34,29 @@ msgstr ""
 
 #: src/Plug.vala:47
 msgid "Hardware"
-msgstr ""
+msgstr "வன்பொருள்"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "கணினி தகவல்"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "இயல்புநிலை அமைப்புகளை மீட்டமை"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "மொழிபெயர்ப்பு பரிந்துரைக்க"
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:85
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "பிரச்சனையை புகார் செய்"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "மேம்படுத்தல்கள்"
 
@@ -128,34 +128,32 @@ msgstr "நினைவகம்:"
 msgid "%s storage"
 msgstr "நினைவகம்:"
 
-#: src/Views/OperatingSystemView.vala:71
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:81
+#: src/Views/OperatingSystemView.vala:86
 msgid "Website"
 msgstr "வலைத்தளம்"
 
-#. Translate button
-#: src/Views/OperatingSystemView.vala:92
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
 msgid "Suggest Translations"
 msgstr "மொழிபெயர்ப்பு பரிந்துரைக்க"
 
-#: src/Views/OperatingSystemView.vala:99
+#: src/Views/OperatingSystemView.vala:107
 msgid "Check for Updates"
 msgstr "புதுப்பிப்புகளுக்குச் சரிபார்க்கவும்"
 
-#: src/Views/OperatingSystemView.vala:133
+#: src/Views/OperatingSystemView.vala:138
 #, c-format
 msgid "Built on %s"
 msgstr "%s இல் கட்டப்பட்டது"
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:186
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "கணினி அமைப்புகள் இயல்புநிலைக்கு மீட்டமைக்கப்படும்"
 
-#: src/Views/OperatingSystemView.vala:202
+#: src/Views/OperatingSystemView.vala:187
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -164,7 +162,7 @@ msgstr ""
 "அனைத்து கணினி அமைப்புகள் மற்றும் தரவு இயல்புநிலை மதிப்புகள் மீட்டமைக்கப்படும். இசை மற்றும் "
 "படங்கள் போன்ற தனிப்பட்ட தரவு பாதிக்கப்படாது."
 
-#: src/Views/OperatingSystemView.vala:208
+#: src/Views/OperatingSystemView.vala:193
 msgid "Restore Settings"
 msgstr "அமைப்புகளை மீட்டெடுக்கவும்"
 

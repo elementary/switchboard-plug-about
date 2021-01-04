@@ -53,9 +53,7 @@ public class About.Plug : Switchboard.Plug {
             };
 
             main_grid = new Gtk.Grid () {
-                halign = Gtk.Align.CENTER,
                 margin = 24,
-                orientation = Gtk.Orientation.VERTICAL,
                 row_spacing = 12
             };
             main_grid.attach (stack_switcher, 0, 0);

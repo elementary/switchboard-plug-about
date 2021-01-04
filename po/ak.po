@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 21:42+0000\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
 "PO-Revision-Date: 2017-06-19 14:33+0000\n"
 "Last-Translator: Lawrence Aberba <karabutaworld@gmail.com>\n"
 "Language-Team: Akan <https://l10n.elementary.io/projects/switchboard/"
@@ -36,27 +36,27 @@ msgstr ""
 msgid "Hardware"
 msgstr "Hardware"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "Wo Kɔmputa No Ho Nsɛm"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:105
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "Fa Nhyehyɛee a Na Ɛwɔ Hɔ Kan No Di Dwuma"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "Fa Wo NkyerɛaseTo Dwa"
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:94
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:85
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "Fa nsɛnenen bi a woahyia to dwa"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "Nneɛma Foforɔ a Aba"
 
@@ -128,34 +128,32 @@ msgstr "Akoraeɛ %s"
 msgid "%s storage"
 msgstr "Akoraeɛ %s"
 
-#: src/Views/OperatingSystemView.vala:71
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:81
+#: src/Views/OperatingSystemView.vala:86
 msgid "Website"
 msgstr "Wɛbsaet"
 
-#. Translate button
-#: src/Views/OperatingSystemView.vala:92
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
 msgid "Suggest Translations"
 msgstr "Fa Wo Nkyerease To Dwa"
 
-#: src/Views/OperatingSystemView.vala:99
+#: src/Views/OperatingSystemView.vala:107
 msgid "Check for Updates"
 msgstr "Hwɛ Sɛ Nneɛma Foforɔ Aba Anaa"
 
-#: src/Views/OperatingSystemView.vala:133
+#: src/Views/OperatingSystemView.vala:138
 #, c-format
 msgid "Built on %s"
 msgstr "Wɔde %s na ɛyɛe"
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:186
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Wo Kɔmputa No Ho Nhyehyɛe Bɛsan Ayɛ Sɛnea Na Ɛte Ahyɛase No"
 
-#: src/Views/OperatingSystemView.vala:202
+#: src/Views/OperatingSystemView.vala:187
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
@@ -164,7 +162,7 @@ msgstr ""
 "Wo kɔmputa no ho nhyehyɛe nyinaa bɛsan ayɛ sɛnea na ɛte ahyɛase no.  Wo "
 "nnwom, mfonyin ne nea  aka no deɛ, ɛbɛwɔ so saa ara a hwee nnyɛ no."
 
-#: src/Views/OperatingSystemView.vala:208
+#: src/Views/OperatingSystemView.vala:193
 msgid "Restore Settings"
 msgstr "Fa Kan Nhyehyɛe Ahoroɔ No Di Dwuma"
 
