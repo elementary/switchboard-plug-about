@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 22:58+0000\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
 "PO-Revision-Date: 2020-12-06 19:16+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -36,27 +36,27 @@ msgstr ""
 msgid "Hardware"
 msgstr "Donanım"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "Sistem Bilgisi"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:104
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "Varsayılan Ayarları Geri Yükle"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "Çeviri Öner"
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:93
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr "Geri Bildirim Gönder"
 
-#: src/Plug.vala:85
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "Sorun Bildir"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "Güncellemeler"
 
@@ -122,29 +122,32 @@ msgstr "%s depolama alanı (HDD)"
 msgid "%s storage"
 msgstr "%s depolama alanı"
 
-#: src/Views/OperatingSystemView.vala:79
+#: src/Views/OperatingSystemView.vala:86
 msgid "Website"
 msgstr "Web Sitesi"
 
-#. Translate button
 #: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
 msgid "Suggest Translations"
 msgstr "Çeviri Öner"
 
-#: src/Views/OperatingSystemView.vala:98
+#: src/Views/OperatingSystemView.vala:107
 msgid "Check for Updates"
 msgstr "Güncellemeleri Denetle"
 
-#: src/Views/OperatingSystemView.vala:132
+#: src/Views/OperatingSystemView.vala:138
 #, c-format
 msgid "Built on %s"
 msgstr "%s üzerine kurulu"
 
-#: src/Views/OperatingSystemView.vala:200
+#: src/Views/OperatingSystemView.vala:186
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Sistem Ayarları Fabrika Varsayılanlarına Geri Yüklenecek"
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:187
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -152,7 +155,7 @@ msgstr ""
 "Tüm sistem ayarları ve veriler varsayılan değerlere sıfırlanacaktır. Müzik "
 "ve resim gibi kişisel veriler etkilenmez."
 
-#: src/Views/OperatingSystemView.vala:207
+#: src/Views/OperatingSystemView.vala:193
 msgid "Restore Settings"
 msgstr "Ayarları Geri Yükle"
 

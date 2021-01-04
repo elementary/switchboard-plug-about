@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 22:58+0000\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
 "PO-Revision-Date: 2020-11-16 17:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -36,27 +36,27 @@ msgstr ""
 msgid "Hardware"
 msgstr "Hardware"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "System Information"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:104
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "Restore Default Settings"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "Suggest Translation"
 
-#: src/Plug.vala:84 src/Views/OperatingSystemView.vala:93
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:85
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "Report a Problem"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "Updates"
 
@@ -122,29 +122,32 @@ msgstr "%s storage (HDD)"
 msgid "%s storage"
 msgstr "%s storage"
 
-#: src/Views/OperatingSystemView.vala:79
+#: src/Views/OperatingSystemView.vala:86
 msgid "Website"
 msgstr "Website"
 
-#. Translate button
 #: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
 msgid "Suggest Translations"
 msgstr "Suggest Translations"
 
-#: src/Views/OperatingSystemView.vala:98
+#: src/Views/OperatingSystemView.vala:107
 msgid "Check for Updates"
 msgstr "Check for Updates"
 
-#: src/Views/OperatingSystemView.vala:132
+#: src/Views/OperatingSystemView.vala:138
 #, c-format
 msgid "Built on %s"
 msgstr "Built on %s"
 
-#: src/Views/OperatingSystemView.vala:200
+#: src/Views/OperatingSystemView.vala:186
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "System Settings Will Be Restored to The Factory Defaults"
 
-#: src/Views/OperatingSystemView.vala:201
+#: src/Views/OperatingSystemView.vala:187
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -152,7 +155,7 @@ msgstr ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 
-#: src/Views/OperatingSystemView.vala:207
+#: src/Views/OperatingSystemView.vala:193
 msgid "Restore Settings"
 msgstr "Restore Settings"
 
