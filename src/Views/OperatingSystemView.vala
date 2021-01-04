@@ -85,7 +85,12 @@ public class About.OperatingSystemView : Gtk.Grid {
             website_url = "https://elementary.io";
         }
 
-        var website_label = new Gtk.LinkButton.with_label (website_url, _("Website")) {
+        var website_label = new Gtk.LinkButton.with_label (
+            website_url,
+            /// TRANSLATORS: The string placeholder contains the name of the OS,
+            /// so this might be shown as "elementary OS Website"
+            _("%s Website").printf (Environment.get_os_info (GLib.OsInfoKey.NAME))
+        ) {
             halign = Gtk.Align.START,
             margin_top = 12,
             xalign = 0
