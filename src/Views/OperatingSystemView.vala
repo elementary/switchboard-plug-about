@@ -47,31 +47,36 @@ public class About.OperatingSystemView : Gtk.Grid {
         }
 
         var logo = new Gtk.Image () {
-            hexpand = true,
+            halign = Gtk.Align.END,
             icon_name = logo_icon_name,
             pixel_size = 128
         };
 
-        var pretty_name = Environment.get_os_info (GLib.OsInfoKey.PRETTY_NAME);
-        if (pretty_name == "" || pretty_name == null) {
-            pretty_name = Environment.get_os_info (GLib.OsInfoKey.NAME);
-        }
+        var pretty_name = "<b>%s</b> %s".printf (
+            Environment.get_os_info (GLib.OsInfoKey.NAME),
+            Environment.get_os_info (GLib.OsInfoKey.VERSION)
+        );
 
         var title = new Gtk.Label (pretty_name) {
             ellipsize = Pango.EllipsizeMode.END,
             margin_bottom = 12,
-            selectable = true
+            selectable = true,
+            use_markup = true,
+            xalign = 0
         };
         title.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
         var kernel_version_label = new Gtk.Label ("%s %s".printf (uts_name.sysname, uts_name.release)) {
-            selectable = true
+            selectable = true,
+            xalign = 0
         };
 
         var gtk_version_label = new Gtk.Label (_("GTK %u.%u.%u").printf (
             Gtk.get_major_version (), Gtk.get_minor_version (), Gtk.get_micro_version ()
-        ));
-        gtk_version_label.selectable = true;
+        )) {
+            selectable = true,
+            xalign = 0
+        };
 
         var website_url = Environment.get_os_info (GLib.OsInfoKey.HOME_URL);
         if (website_url == "" || website_url == null) {
@@ -79,8 +84,9 @@ public class About.OperatingSystemView : Gtk.Grid {
         }
 
         var website_label = new Gtk.LinkButton.with_label (website_url, _("Website")) {
-            halign = Gtk.Align.CENTER,
-            margin_top = 12
+            halign = Gtk.Align.START,
+            margin_top = 12,
+            xalign = 0
         };
 
         var help_button = new Gtk.Button.with_label (_("Get Support"));
@@ -121,26 +127,26 @@ public class About.OperatingSystemView : Gtk.Grid {
         }
 
         var software_grid = new Gtk.Grid () {
-            column_spacing = 24,
-            orientation = Gtk.Orientation.VERTICAL,
-            row_spacing = 6
+            column_spacing = 12,
+            row_spacing = 6,
+            valign = Gtk.Align.CENTER
         };
-        software_grid.add (logo);
-        software_grid.add (title);
+        software_grid.attach (logo, 0, 0, 1, 5);
+        software_grid.attach (title, 1, 0);
 
         if (upstream_release != null) {
             var based_off = new Gtk.Label (_("Built on %s").printf (upstream_release)) {
-                selectable = true
+                selectable = true,
+                xalign = 0
             };
-            software_grid.add (based_off);
+            software_grid.attach (based_off, 1, 1);
         }
 
-        software_grid.add (kernel_version_label);
-        software_grid.add (gtk_version_label);
-        software_grid.add (website_label);
+        software_grid.attach (kernel_version_label, 1, 2);
+        software_grid.attach (gtk_version_label, 1, 3);
+        software_grid.attach (website_label, 1, 4);
 
         halign = Gtk.Align.CENTER;
-        column_homogeneous = true;
         column_spacing = 24;
         add (software_grid);
         add (button_grid);
