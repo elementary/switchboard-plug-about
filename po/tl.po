@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-04 21:42+0000\n"
-"PO-Revision-Date: 2018-09-25 00:02+0000\n"
-"Last-Translator: Axel Philip Advento <badwolf.bloodseeker.rev@gmail.com>\n"
-"Language-Team: Tagalog <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2021-01-04 22:57+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Tagalog <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/tl/>\n"
 "Language: tl\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1 && n != 2 && n != 3 && (n % 10 == 4 "
 "|| n % 10 == 6 || n % 10 == 9);\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:29
@@ -35,7 +35,7 @@ msgstr ""
 
 #: src/Plug.vala:47
 msgid "Hardware"
-msgstr ""
+msgstr "Gamit panlabas"
 
 #: src/Plug.vala:81
 msgid "System Information"
