@@ -52,6 +52,8 @@ public class About.OperatingSystemView : Gtk.Grid {
             pixel_size = 128
         };
 
+        // Intentionally not using GLib.OsInfoKey.PRETTY_NAME here because we
+        // want more granular control over text formatting
         var pretty_name = "<b>%s</b> %s".printf (
             Environment.get_os_info (GLib.OsInfoKey.NAME),
             Environment.get_os_info (GLib.OsInfoKey.VERSION)
