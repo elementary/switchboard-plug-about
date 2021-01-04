@@ -1,8 +1,8 @@
 /*
 * Copyright 2017–2021 elementary, Inc. (https://elementary.io)
-* Copyright 2020 Justin Haygood <jhaygood86@gmail.com>
-* Copyright 2010 Red Hat, Inc
-* Copyright 2008 William Jon McCann <jmccann@redhat.com>
+*           2020 Justin Haygood <jhaygood86@gmail.com>
+*           2010 Red Hat, Inc
+*           2008 William Jon McCann <jmccann@redhat.com>
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -36,8 +36,11 @@ public class About.HardwareView : Gtk.Grid {
 
     construct {
         try {
-            session_manager = Bus.get_proxy_sync (BusType.SESSION,
-                "org.gnome.SessionManager", "/org/gnome/SessionManager");
+            session_manager = Bus.get_proxy_sync (
+                BusType.SESSION,
+                "org.gnome.SessionManager",
+                "/org/gnome/SessionManager"
+            );
         } catch (IOError e) {
             critical (e.message);
             graphics = _("Unknown Graphics");
@@ -46,49 +49,59 @@ public class About.HardwareView : Gtk.Grid {
         fetch_hardware_info ();
 
         try {
-            system_interface = Bus.get_proxy_sync (BusType.SYSTEM,
-                "org.freedesktop.hostname1", "/org/freedesktop/hostname1");
+            system_interface = Bus.get_proxy_sync (
+                BusType.SYSTEM,
+                "org.freedesktop.hostname1",
+                "/org/freedesktop/hostname1"
+            );
         } catch (IOError e) {
             critical (e.message);
         }
 
-        var manufacturer_logo = new Gtk.Image ();
-        manufacturer_logo.icon_name = system_interface.icon_name;
-        manufacturer_logo.hexpand = true;
-        manufacturer_logo.pixel_size = 128;
-        manufacturer_logo.use_fallback = true;
+        var manufacturer_logo = new Gtk.Image () {
+            hexpand = true,
+            icon_name = system_interface.icon_name,
+            pixel_size = 128,
+            use_fallback = true
+        };
 
-        var product_name_info = new Gtk.Label (Environment.get_host_name ());
-        product_name_info.ellipsize = Pango.EllipsizeMode.END;
+        var product_name_info = new Gtk.Label (Environment.get_host_name ()) {
+            ellipsize = Pango.EllipsizeMode.END,
+            selectable = true
+        };
         product_name_info.get_style_context ().add_class ("h2");
-        product_name_info.set_selectable (true);
 
-        var processor_info = new Gtk.Label (processor);
-        processor_info.justify = Gtk.Justification.CENTER;
-        processor_info.ellipsize = Pango.EllipsizeMode.END;
-        processor_info.margin_top = 12;
-        processor_info.set_selectable (true);
+        var processor_info = new Gtk.Label (processor) {
+            ellipsize = Pango.EllipsizeMode.END,
+            justify = Gtk.Justification.CENTER,
+            margin_top = 12,
+            selectable = true
+        };
 
-        var memory_info = new Gtk.Label (_("%s memory").printf (memory));
-        memory_info.ellipsize = Pango.EllipsizeMode.END;
-        memory_info.set_selectable (true);
+        var memory_info = new Gtk.Label (_("%s memory").printf (memory)) {
+            ellipsize = Pango.EllipsizeMode.END,
+            selectable = true
+        };
 
-        var graphics_info = new Gtk.Label (graphics);
-        graphics_info.ellipsize = Pango.EllipsizeMode.END;
-        graphics_info.justify = Gtk.Justification.CENTER;
-        graphics_info.set_selectable (true);
+        var graphics_info = new Gtk.Label (graphics) {
+            ellipsize = Pango.EllipsizeMode.END,
+            justify = Gtk.Justification.CENTER,
+            selectable = true
+        };
 
-        var hdd_info = new Gtk.Label (hdd);
-        hdd_info.ellipsize = Pango.EllipsizeMode.END;
-        hdd_info.set_selectable (true);
+        var hdd_info = new Gtk.Label (hdd) {
+            ellipsize = Pango.EllipsizeMode.END,
+            selectable = true
+        };
 
         column_spacing = 6;
         row_spacing = 6;
-        attach (manufacturer_logo, 0, 0, 2, 1);
-        attach (processor_info, 0, 3, 2, 1);
-        attach (graphics_info, 0, 4, 2, 1);
-        attach (memory_info, 0, 5, 2, 1);
-        attach (hdd_info, 0, 6, 2, 1);
+
+        attach (manufacturer_logo, 0, 0, 2);
+        attach (processor_info, 0, 3, 2);
+        attach (graphics_info, 0, 4, 2);
+        attach (memory_info, 0, 5, 2);
+        attach (hdd_info, 0, 6, 2);
 
         if (oem_enabled) {
             var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
@@ -98,36 +111,44 @@ public class About.HardwareView : Gtk.Grid {
                 manufacturer_logo.gicon = fileicon;
             }
 
-            var manufacturer_info = new Gtk.Label (manufacturer_name);
-            manufacturer_info.ellipsize = Pango.EllipsizeMode.END;
+            var manufacturer_info = new Gtk.Label (manufacturer_name) {
+                ellipsize = Pango.EllipsizeMode.END,
+                selectable = true
+            };
             manufacturer_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-            manufacturer_info.set_selectable (true);
 
-            attach (manufacturer_info, 0, 2, 2, 1);
+            attach (manufacturer_info, 0, 2, 2);
 
             if (product_name != null) {
                 product_name_info.label = product_name;
             }
 
             if (product_version != null) {
-                var product_version_info = new Gtk.Label ("(" + product_version + ")");
+                var product_version_info = new Gtk.Label ("(" + product_version + ")") {
+                    ellipsize = Pango.EllipsizeMode.END,
+                    selectable = true,
+                    xalign = 0
+                };
                 product_version_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
-                product_version_info.set_selectable (true);
-                product_version_info.ellipsize = Pango.EllipsizeMode.END;
-                product_version_info.xalign = 0;
+
                 product_name_info.xalign = 1;
-                attach (product_name_info, 0, 1, 1, 1);
-                attach (product_version_info, 1, 1, 1, 1);
+
+                attach (product_name_info, 0, 1);
+                attach (product_version_info, 1, 1);
             } else {
-                attach (product_name_info, 0, 1, 2, 1);
+                attach (product_name_info, 0, 1, 2);
             }
 
             if (manufacturer_support_url != null) {
-                var manufacturer_website_info = new Gtk.LinkButton.with_label (manufacturer_support_url, _("Manufacturer Website"));
-                attach (manufacturer_website_info, 0, 7, 2, 1);
+                var manufacturer_website_info = new Gtk.LinkButton.with_label (
+                    manufacturer_support_url,
+                    _("Manufacturer Website")
+                );
+
+                attach (manufacturer_website_info, 0, 7, 2);
             }
         } else {
-            attach (product_name_info, 0, 1, 2, 1);
+            attach (product_name_info, 0, 1, 2);
         }
     }
 
