@@ -23,9 +23,7 @@ public class About.OperatingSystemView : Gtk.Grid {
 
     construct {
         // Upstream distro version (for "Built on" text)
-        // FIXME: Add distro specific field to /etc/os-release and use that instead
-        // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
-        var file = File.new_for_path ("/etc/upstream-release/lsb-release");
+        var file = File.new_for_path ("/etc/os-release");
         string upstream_release = null;
         try {
             var dis = new DataInputStream (file.read ());
@@ -33,9 +31,14 @@ public class About.OperatingSystemView : Gtk.Grid {
             // Read lines until end of file (null) is reached
             while ((line = dis.read_line (null)) != null) {
                 var distrib_component = line.split ("=", 2);
-                if (distrib_component.length == 2) {
-                    upstream_release = distrib_component[1].replace ("\"", "");
+                if (distrib_component.length == 2 && distrib_component[0] == "ELEMENTARY_UPSTREAM_DISTRO_NAME") {
+                    upstream_release = distrib_component[1];
+                    break;
                 }
+            }
+            // Remove quotation marks
+            if (upstream_release.contains ("\"")) {
+                upstream_release = upstream_release.replace ("\"", "");
             }
         } catch (Error e) {
             warning ("Couldn't read upstream lsb-release file, assuming none");
@@ -150,6 +153,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         software_grid.attach (translate_button, 3, 3);
 
         orientation = Gtk.Orientation.VERTICAL;
+        column_spacing = 24;
         row_spacing = 12;
         add (software_grid);
         add (button_grid);
