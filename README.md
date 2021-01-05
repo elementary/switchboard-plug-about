@@ -11,6 +11,7 @@ You'll need the following dependencies:
 * libgranite-dev
 * libgtk-3-dev
 * libgtop2-dev
+* libhandy-1-dev
 * meson
 * valac
 
