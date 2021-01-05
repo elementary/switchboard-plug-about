@@ -1,0 +1,10 @@
+avatar.image {
+    background-color: alpha(black, 0.05);
+}
+
+.logo {
+    color: white;
+    -gtk-icon-shadow:
+        0 1px 1px alpha(black, 0.2),
+        0 2px 3px alpha(black, 0.15);
+}
