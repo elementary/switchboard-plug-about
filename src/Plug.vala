@@ -49,11 +49,11 @@ public class About.Plug : Switchboard.Plug {
             var stack_switcher = new Gtk.StackSwitcher () {
                 halign = Gtk.Align.CENTER,
                 homogeneous = true,
+                margin_top = 24,
                 stack = stack
             };
 
             main_grid = new Gtk.Grid () {
-                margin = 24,
                 row_spacing = 12
             };
             main_grid.attach (stack_switcher, 0, 0);
