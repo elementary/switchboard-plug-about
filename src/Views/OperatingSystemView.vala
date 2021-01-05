@@ -74,7 +74,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         var icon = new Gtk.Image () {
             icon_name = logo_icon_name + "-symbolic",
             // 128 minus 3px padding on each side
-            pixel_size = 122
+            pixel_size = 128 - 6
         };
 
         unowned var icon_style_context = icon.get_style_context ();
@@ -155,7 +155,8 @@ public class About.OperatingSystemView : Gtk.Grid {
         button_grid.set_child_secondary (settings_restore_button, true);
 
         var software_grid = new Gtk.Grid () {
-            column_spacing = 48,
+            // The avatar has some built-in margin for shadows
+            column_spacing = 48 - 6,
             halign = Gtk.Align.CENTER,
             row_spacing = 6,
             valign = Gtk.Align.CENTER,
