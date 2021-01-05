@@ -148,7 +148,6 @@ public class About.OperatingSystemView : Gtk.Grid {
             software_grid.attach (last_update_label, 1, 1, 3);
         }
 
-
         if (upstream_release != null) {
             var based_off = new Gtk.Label (_("Built on %s").printf (upstream_release)) {
                 selectable = true,
