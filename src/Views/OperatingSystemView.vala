@@ -153,7 +153,6 @@ public class About.OperatingSystemView : Gtk.Grid {
         software_grid.attach (translate_button, 3, 3);
 
         orientation = Gtk.Orientation.VERTICAL;
-        column_spacing = 24;
         row_spacing = 12;
         add (software_grid);
         add (button_grid);
