@@ -1,5 +1,9 @@
 avatar.image {
-    background-color: alpha(black, 0.05);
+    background-image: linear-gradient(
+        to bottom,
+        alpha(@accent_color_500, 0.25),
+        alpha(@accent_color_700, 0.75)
+    );
 }
 
 .logo {
