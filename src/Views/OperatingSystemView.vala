@@ -152,7 +152,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         button_grid.set_child_secondary (settings_restore_button, true);
 
         var software_grid = new Gtk.Grid () {
-            column_spacing = 6,
+            column_spacing = 48,
             halign = Gtk.Align.CENTER,
             row_spacing = 6,
             valign = Gtk.Align.CENTER,
