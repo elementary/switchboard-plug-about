@@ -104,12 +104,20 @@ public class About.OperatingSystemView : Gtk.Grid {
         var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
 
         Gtk.Button? update_button = null;
+        Gtk.Label? last_update_label = null;
         var appcenter_info = new GLib.DesktopAppInfo ("io.elementary.appcenter.desktop");
         if (appcenter_info != null) {
             update_button = new Gtk.Button.with_label (_("Check for Updates"));
             update_button.clicked.connect (() => {
                 appcenter_info.launch_action ("ShowUpdates", new GLib.AppLaunchContext ());
             });
+
+            var appcenter_settings = new GLib.Settings ("io.elementary.appcenter.settings");
+            var update_time = new GLib.DateTime.from_unix_utc (appcenter_settings.get_int64 ("last-refresh-time"));
+
+            last_update_label = new Gtk.Label (_("Last Updated %s").printf (Granite.DateTime.get_relative_datetime (update_time))) {
+                xalign = 0
+            };
         }
 
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
@@ -133,21 +141,26 @@ public class About.OperatingSystemView : Gtk.Grid {
             valign = Gtk.Align.CENTER,
             vexpand = true
         };
-        software_grid.attach (logo, 0, 0, 1, 4);
+        software_grid.attach (logo, 0, 0, 1, 5);
         software_grid.attach (title, 1, 0, 3);
+
+        if (last_update_label != null) {
+            software_grid.attach (last_update_label, 1, 1, 3);
+        }
+
 
         if (upstream_release != null) {
             var based_off = new Gtk.Label (_("Built on %s").printf (upstream_release)) {
                 selectable = true,
                 xalign = 0
             };
-            software_grid.attach (based_off, 1, 1, 3);
+            software_grid.attach (based_off, 1, 2, 3);
         }
 
-        software_grid.attach (kernel_version_label, 1, 2, 3);
-        software_grid.attach (website_label, 1, 3);
-        software_grid.attach (help_button, 2, 3);
-        software_grid.attach (translate_button, 3, 3);
+        software_grid.attach (kernel_version_label, 1, 3, 3);
+        software_grid.attach (website_label, 1, 4);
+        software_grid.attach (help_button, 2, 4);
+        software_grid.attach (translate_button, 3, 4);
 
         orientation = Gtk.Orientation.VERTICAL;
         row_spacing = 12;
