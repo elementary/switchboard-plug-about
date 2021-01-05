@@ -91,8 +91,8 @@ public class About.OperatingSystemView : Gtk.Grid {
 
 
         var help_button = new Gtk.LinkButton.with_label (support_url, _("Get Support")) {
-            margin_top = 12,
-            hexpand = true
+            hexpand = true,
+            margin_top = 12
         };
 
         var translate_button = new Gtk.LinkButton.with_label (
