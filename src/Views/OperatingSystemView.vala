@@ -156,7 +156,7 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         var software_grid = new Gtk.Grid () {
             // The avatar has some built-in margin for shadows
-            column_spacing = 48 - 6,
+            column_spacing = 32 - 6,
             halign = Gtk.Align.CENTER,
             row_spacing = 6,
             valign = Gtk.Align.CENTER,
