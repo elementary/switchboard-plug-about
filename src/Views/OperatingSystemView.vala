@@ -22,6 +22,9 @@ public class About.OperatingSystemView : Gtk.Grid {
     private string support_url;
 
     construct {
+        var style_provider = new Gtk.CssProvider ();
+        style_provider.load_from_resource ("io/elementary/switchboard/system/OperatingSystemView.css");
+
         // Upstream distro version (for "Built on" text)
         // FIXME: Add distro specific field to /etc/os-release and use that instead
         // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
@@ -53,11 +56,34 @@ public class About.OperatingSystemView : Gtk.Grid {
             logo_icon_name = "distributor-logo";
         }
 
-        var logo = new Gtk.Image () {
-            halign = Gtk.Align.END,
-            icon_name = logo_icon_name,
-            pixel_size = 128
+        var logo = new Hdy.Avatar (128, "", false) {
+            // In case the wallpaper can't be loaded, we don't want an icon or text
+            icon_name = "invalid-icon-name",
+            // We need this for the shadow to not get clipped by Gtk.Overlay
+            margin = 6
         };
+        logo.set_image_load_func ((size) => {
+            try {
+                return new Gdk.Pixbuf.from_file_at_scale ("/usr/share/backgrounds/elementaryos-default", -1, size, true);
+            } catch (Error e) {
+                critical (e.message);
+            }
+        });
+        logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        var icon = new Gtk.Image () {
+            icon_name = logo_icon_name + "-symbolic",
+            // 128 minus 3px padding on each side
+            pixel_size = 128 - 6
+        };
+
+        unowned var icon_style_context = icon.get_style_context ();
+        icon_style_context.add_class ("logo");
+        icon_style_context.add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        var logo_overlay = new Gtk.Overlay ();
+        logo_overlay.add (logo);
+        logo_overlay.add_overlay (icon);
 
         // Intentionally not using GLib.OsInfoKey.PRETTY_NAME here because we
         // want more granular control over text formatting
@@ -129,13 +155,14 @@ public class About.OperatingSystemView : Gtk.Grid {
         button_grid.set_child_secondary (settings_restore_button, true);
 
         var software_grid = new Gtk.Grid () {
-            column_spacing = 12,
+            // The avatar has some built-in margin for shadows
+            column_spacing = 48 - 6,
             halign = Gtk.Align.CENTER,
             row_spacing = 6,
             valign = Gtk.Align.CENTER,
             vexpand = true
         };
-        software_grid.attach (logo, 0, 0, 1, 4);
+        software_grid.attach (logo_overlay, 0, 0, 1, 4);
         software_grid.attach (title, 1, 0, 3);
 
         if (upstream_release != null) {
@@ -151,6 +178,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         software_grid.attach (help_button, 2, 3);
         software_grid.attach (translate_button, 3, 3);
 
+        margin = 12;
         orientation = Gtk.Orientation.VERTICAL;
         row_spacing = 12;
         add (software_grid);
