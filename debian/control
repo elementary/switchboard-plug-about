@@ -5,6 +5,7 @@ Maintainer: elementary OS Team <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
                gettext,
                libgranite-dev,
+               libhandy-1-dev,
                libswitchboard-2.0-dev,
                libgtop2-dev,
                meson,
