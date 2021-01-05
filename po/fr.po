@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-04 23:20+0000\n"
-"PO-Revision-Date: 2020-11-16 17:15+0000\n"
+"PO-Revision-Date: 2021-01-05 18:27+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
@@ -30,7 +30,7 @@ msgstr "Afficher les informations du système d'exploitation et du matériel"
 
 #: src/Plug.vala:46
 msgid "Operating System"
-msgstr ""
+msgstr "Système d'exploitation"
 
 #: src/Plug.vala:47
 msgid "Hardware"
@@ -128,7 +128,7 @@ msgstr "Site web"
 
 #: src/Views/OperatingSystemView.vala:91
 msgid "Get Support"
-msgstr ""
+msgstr "Obtenir de l'aide"
 
 #: src/Views/OperatingSystemView.vala:97
 msgid "Suggest Translations"

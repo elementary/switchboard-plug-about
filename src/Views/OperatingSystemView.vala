@@ -116,6 +116,8 @@ public class About.OperatingSystemView : Gtk.Grid {
 
 
         var help_button = new Gtk.LinkButton.with_label (support_url, _("Get Support")) {
+            halign = Gtk.Align.CENTER,
+            hexpand = true,
             margin_top = 12
         };
 
