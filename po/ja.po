@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-04 23:20+0000\n"
-"PO-Revision-Date: 2020-11-16 17:15+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-01-05 18:27+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
 "Language: ja\n"
@@ -30,7 +30,7 @@ msgstr "オペレーティングシステムとハードウェアの情報を参
 
 #: src/Plug.vala:46
 msgid "Operating System"
-msgstr ""
+msgstr "オペレーティングシステム"
 
 #: src/Plug.vala:47
 msgid "Hardware"
@@ -128,7 +128,7 @@ msgstr "Web サイト"
 
 #: src/Views/OperatingSystemView.vala:91
 msgid "Get Support"
-msgstr ""
+msgstr "サポートを受ける"
 
 #: src/Views/OperatingSystemView.vala:97
 msgid "Suggest Translations"
