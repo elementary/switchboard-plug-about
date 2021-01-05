@@ -73,6 +73,7 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         var icon = new Gtk.Image () {
             icon_name = logo_icon_name + "-symbolic",
+            // 128 minus 3px padding on each side
             pixel_size = 122
         };
 
