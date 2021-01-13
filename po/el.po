@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
 "PO-Revision-Date: 2017-02-07 12:15+0000\n"
 "Last-Translator: iakovos athanasiadhs <liam21iakovos@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -18,80 +18,45 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "Προβολή πληροφοριών λειτουργικού συστήματος και υλικού"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr "Υλικό"
+
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "Πληροφορίες συστήματος"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "Επαναφορά προεπιλεγμένων ρυθμίσεων"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "Πρόταση μεταφράσεων"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:64
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "Αναφορά προβλήματος"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "Ενημερώσεις"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "Χτισμένο πάνω στο %s"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "Ιστοσελίδα"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "Πρόταση μεταφράσεων"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "Έλεγχος για ενημερώσεις"
-
-#: src/Plug.vala:268
-#, fuzzy
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr ""
-"Οι ρυθμίσεις του συστήματος θα επαναφερθούν στις εργοστασιακές προεπιλογές"
-
-#: src/Plug.vala:269
-#, fuzzy
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"Όλες οι ρυθμίσεις και τα δεδομένα του συστήματος θα επαναφερθούν στις "
-"προεπιλεγμένες τιμές."
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "Επαναφορά ρυθμίσεων"
 
 #: src/Views/HardwareView.vala:43
 #, fuzzy
@@ -161,6 +126,46 @@ msgstr "Αποθηκευτικός χώρος:"
 msgid "%s storage"
 msgstr "Αποθηκευτικός χώρος:"
 
+#: src/Views/OperatingSystemView.vala:86
+msgid "Website"
+msgstr "Ιστοσελίδα"
+
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
+msgid "Suggest Translations"
+msgstr "Πρόταση μεταφράσεων"
+
+#: src/Views/OperatingSystemView.vala:107
+msgid "Check for Updates"
+msgstr "Έλεγχος για ενημερώσεις"
+
+#: src/Views/OperatingSystemView.vala:138
+#, c-format
+msgid "Built on %s"
+msgstr "Χτισμένο πάνω στο %s"
+
+#: src/Views/OperatingSystemView.vala:186
+#, fuzzy
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr ""
+"Οι ρυθμίσεις του συστήματος θα επαναφερθούν στις εργοστασιακές προεπιλογές"
+
+#: src/Views/OperatingSystemView.vala:187
+#, fuzzy
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"Όλες οι ρυθμίσεις και τα δεδομένα του συστήματος θα επαναφερθούν στις "
+"προεπιλεγμένες τιμές."
+
+#: src/Views/OperatingSystemView.vala:193
+msgid "Restore Settings"
+msgstr "Επαναφορά ρυθμίσεων"
+
 #~ msgid "About"
 #~ msgstr "Σχετικά"
 
@@ -177,9 +182,6 @@ msgstr "Αποθηκευτικός χώρος:"
 #, fuzzy
 #~ msgid "System Settings"
 #~ msgstr "Επαναφορά ρυθμίσεων"
-
-#~ msgid "Hardware"
-#~ msgstr "Υλικό"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr ""

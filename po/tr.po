@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
 "PO-Revision-Date: 2020-12-06 19:16+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -20,77 +20,45 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr "Sistem"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "İşletim sistemini ve donanım bilgilerini görüntüle"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr "Donanım"
+
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "Sistem Bilgisi"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "Varsayılan Ayarları Geri Yükle"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "Çeviri Öner"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr "Geri Bildirim Gönder"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "Sorun Bildir"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "Güncellemeler"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "%s üzerine kurulu"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr "GTK %u.%u.%u"
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "Web Sitesi"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "Çeviri Öner"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "Güncellemeleri Denetle"
-
-#: src/Plug.vala:268
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Sistem Ayarları Fabrika Varsayılanlarına Geri Yüklenecek"
-
-#: src/Plug.vala:269
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"Tüm sistem ayarları ve veriler varsayılan değerlere sıfırlanacaktır. Müzik "
-"ve resim gibi kişisel veriler etkilenmez."
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "Ayarları Geri Yükle"
 
 #: src/Views/HardwareView.vala:43
 msgid "Unknown Graphics"
@@ -154,6 +122,46 @@ msgstr "%s depolama alanı (HDD)"
 msgid "%s storage"
 msgstr "%s depolama alanı"
 
+#: src/Views/OperatingSystemView.vala:86
+msgid "Website"
+msgstr "Web Sitesi"
+
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
+msgid "Suggest Translations"
+msgstr "Çeviri Öner"
+
+#: src/Views/OperatingSystemView.vala:107
+msgid "Check for Updates"
+msgstr "Güncellemeleri Denetle"
+
+#: src/Views/OperatingSystemView.vala:138
+#, c-format
+msgid "Built on %s"
+msgstr "%s üzerine kurulu"
+
+#: src/Views/OperatingSystemView.vala:186
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "Sistem Ayarları Fabrika Varsayılanlarına Geri Yüklenecek"
+
+#: src/Views/OperatingSystemView.vala:187
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"Tüm sistem ayarları ve veriler varsayılan değerlere sıfırlanacaktır. Müzik "
+"ve resim gibi kişisel veriler etkilenmez."
+
+#: src/Views/OperatingSystemView.vala:193
+msgid "Restore Settings"
+msgstr "Ayarları Geri Yükle"
+
+#~ msgid "GTK %u.%u.%u"
+#~ msgstr "GTK %u.%u.%u"
+
 #~ msgid "About"
 #~ msgstr "Hakkında"
 
@@ -207,9 +215,6 @@ msgstr "%s depolama alanı"
 
 #~ msgid "Default Apps"
 #~ msgstr "Varsayılan Uygulamalar"
-
-#~ msgid "Hardware"
-#~ msgstr "Donanım"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Kişisel veriler, müzik ve fotoğraflar etkilenmeyecek."

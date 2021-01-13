@@ -258,7 +258,7 @@ public class About.FwupdManager : Object {
 
             var fd_list = new UnixFDList ();
             fd_list.append (stream.fd);
-            
+
             var parameters = new VariantBuilder (new VariantType ("(sha{sv})"));
             parameters.add_value (new Variant.string (id));
             parameters.add_value (new Variant.handle (0));

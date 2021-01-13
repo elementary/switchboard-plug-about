@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
-"PO-Revision-Date: 2020-11-16 17:15+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
+"PO-Revision-Date: 2021-01-05 18:27+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
 "Language: uk\n"
@@ -21,77 +21,45 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr "Система"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "Огляд операційної системи та подробиць про апаратні засоби"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr "Операційна система"
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr "Обладнання"
+
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "Відомості про систему"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "Відновити типові налаштування"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "Запропонувати переклад"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr "Надіслати відгук"
 
-#: src/Plug.vala:64
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "Повідомити про проблему"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "Оновленння"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "Побудовано на %s"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr "GTK %u.%u.%u"
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "Вебсайт"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "Запропонувати переклад"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "Перевірити наявність оновлень"
-
-#: src/Plug.vala:268
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Системні параметри буде відновлено до типових заводських"
-
-#: src/Plug.vala:269
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"Всі системні параметри та дані буде відновлено до типових значень. Це не "
-"вплине на особисті дані, такі як музика та зображення."
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "Відновити параметри"
 
 #: src/Views/HardwareView.vala:43
 msgid "Unknown Graphics"
@@ -155,6 +123,46 @@ msgstr "%s сховища (HDD)"
 msgid "%s storage"
 msgstr "%s сховища"
 
+#: src/Views/OperatingSystemView.vala:86
+msgid "Website"
+msgstr "Вебсайт"
+
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr "Отримати допомогу"
+
+#: src/Views/OperatingSystemView.vala:97
+msgid "Suggest Translations"
+msgstr "Запропонувати переклад"
+
+#: src/Views/OperatingSystemView.vala:107
+msgid "Check for Updates"
+msgstr "Перевірити наявність оновлень"
+
+#: src/Views/OperatingSystemView.vala:138
+#, c-format
+msgid "Built on %s"
+msgstr "Побудовано на %s"
+
+#: src/Views/OperatingSystemView.vala:186
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "Системні параметри буде відновлено до типових заводських"
+
+#: src/Views/OperatingSystemView.vala:187
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"Всі системні параметри та дані буде відновлено до типових значень. Це не "
+"вплине на особисті дані, такі як музика та зображення."
+
+#: src/Views/OperatingSystemView.vala:193
+msgid "Restore Settings"
+msgstr "Відновити параметри"
+
+#~ msgid "GTK %u.%u.%u"
+#~ msgstr "GTK %u.%u.%u"
+
 #~ msgid "About"
 #~ msgstr "Про elementary"
 
@@ -171,9 +179,6 @@ msgstr "%s сховища"
 #, fuzzy
 #~ msgid "System Settings"
 #~ msgstr "Відновити налаштування"
-
-#~ msgid "Hardware"
-#~ msgstr "Апаратне обладнання"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr ""

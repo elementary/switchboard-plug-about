@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
 "PO-Revision-Date: 2020-11-16 17:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -20,77 +20,45 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr "Sistema"
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "Visualizar sistema operacional e informações de hardware"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr "Hardware"
+
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "Informações do sistema"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "Restaurar configurações padrão"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "Sugerir tradução"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:64
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "Relatar um problema"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "Atualizações"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "Construído sobre %s"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr "GTK %u.%u.%u"
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "Website"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "Sugerir traduções"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "Verificar se há atualizações"
-
-#: src/Plug.vala:268
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "As configurações do sistema serão restauradas aos padrões de fábrica"
-
-#: src/Plug.vala:269
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"Todas as configurações e dados do sistema serão redefinidos para os valores "
-"padrão. Dados pessoais, como músicas e imagens, não serão afetados."
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "Restaurar configurações"
 
 #: src/Views/HardwareView.vala:43
 #, fuzzy
@@ -160,6 +128,46 @@ msgstr "%s armazenamento (HDD)"
 msgid "%s storage"
 msgstr "%s armazenamento"
 
+#: src/Views/OperatingSystemView.vala:86
+msgid "Website"
+msgstr "Website"
+
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
+msgid "Suggest Translations"
+msgstr "Sugerir traduções"
+
+#: src/Views/OperatingSystemView.vala:107
+msgid "Check for Updates"
+msgstr "Verificar se há atualizações"
+
+#: src/Views/OperatingSystemView.vala:138
+#, c-format
+msgid "Built on %s"
+msgstr "Construído sobre %s"
+
+#: src/Views/OperatingSystemView.vala:186
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "As configurações do sistema serão restauradas aos padrões de fábrica"
+
+#: src/Views/OperatingSystemView.vala:187
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"Todas as configurações e dados do sistema serão redefinidos para os valores "
+"padrão. Dados pessoais, como músicas e imagens, não serão afetados."
+
+#: src/Views/OperatingSystemView.vala:193
+msgid "Restore Settings"
+msgstr "Restaurar configurações"
+
+#~ msgid "GTK %u.%u.%u"
+#~ msgstr "GTK %u.%u.%u"
+
 #~ msgid "About"
 #~ msgstr "Sobre"
 
@@ -213,9 +221,6 @@ msgstr "%s armazenamento"
 
 #~ msgid "Default Apps"
 #~ msgstr "Aplicativos Padrão"
-
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
 
 #~ msgid "Personal data, such as music and pictures, will be uneffected."
 #~ msgstr "Dados pessoais, como músicas e fotos, não serão afetados"

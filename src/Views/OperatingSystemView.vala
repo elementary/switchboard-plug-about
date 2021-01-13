@@ -1,5 +1,6 @@
 /*
-* Copyright (c) 2020 elementary, Inc. (https://elementary.io)
+* Copyright 2020–2021 elementary, Inc. (https://elementary.io)
+*           2015 Ivo Nunes, Akshay Shekher
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -15,32 +16,20 @@
 * License along with this program; if not, write to the
 * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 * Boston, MA 02110-1301 USA
-*
-* Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
 public class About.OperatingSystemView : Gtk.Grid {
-    private string kernel_version;
     private string support_url;
-    private Gtk.Label based_off;
-
-    private string upstream_release;
 
     construct {
-        orientation = Gtk.Orientation.VERTICAL;
-        halign = Gtk.Align.CENTER;
-        row_spacing = 12;
-        margin = 12;
+        var style_provider = new Gtk.CssProvider ();
+        style_provider.load_from_resource ("io/elementary/switchboard/system/OperatingSystemView.css");
 
-        setup_info ();
-        setup_ui ();
-    }
-
-    private void setup_info () {
         // Upstream distro version (for "Built on" text)
         // FIXME: Add distro specific field to /etc/os-release and use that instead
         // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
         var file = File.new_for_path ("/etc/upstream-release/lsb-release");
+        string upstream_release = null;
         try {
             var dis = new DataInputStream (file.read ());
             string line;
@@ -53,91 +42,151 @@ public class About.OperatingSystemView : Gtk.Grid {
             }
         } catch (Error e) {
             warning ("Couldn't read upstream lsb-release file, assuming none");
-            upstream_release = null;
         }
 
         var uts_name = Posix.utsname ();
-        kernel_version = "%s %s".printf (uts_name.sysname, uts_name.release);
-    }
-
-    // Wires up and configures initial UI
-    private void setup_ui () {
-        var logo_icon_name = Environment.get_os_info ("LOGO");
-        if (logo_icon_name == "" || logo_icon_name == null) {
-            logo_icon_name = "distributor-logo";
-        }
-
-        // Create the section about elementary OS
-        var logo = new Gtk.Image ();
-        logo.icon_name = logo_icon_name;
-        logo.pixel_size = 128;
-        logo.hexpand = true;
-
-        var pretty_name = Environment.get_os_info (GLib.OsInfoKey.PRETTY_NAME);
-        if (pretty_name == "" || pretty_name == null) {
-            pretty_name = Environment.get_os_info (GLib.OsInfoKey.NAME);
-        }
-
-        var title = new Gtk.Label (pretty_name);
-        title.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
-        title.set_selectable (true);
-        title.margin_bottom = 12;
-        title.ellipsize = Pango.EllipsizeMode.END;
-
-        if (upstream_release != null) {
-            based_off = new Gtk.Label (_("Built on %s").printf (upstream_release));
-            based_off.set_selectable (true);
-        }
-
-        var kernel_version_label = new Gtk.Label (kernel_version);
-        kernel_version_label.set_selectable (true);
-
-        var gtk_version_label = new Gtk.Label (_("GTK %u.%u.%u").printf (
-            Gtk.get_major_version (), Gtk.get_minor_version (), Gtk.get_micro_version ()
-        ));
-        gtk_version_label.selectable = true;
-
-        var website_url = Environment.get_os_info (GLib.OsInfoKey.HOME_URL);
-        if (website_url == "" || website_url == null) {
-            website_url = "https://elementary.io";
-        }
-
-        var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
-        website_label.halign = Gtk.Align.CENTER;
-        website_label.margin_top = 12;
-
-        var help_button = new Gtk.Button.with_label ("?");
-        help_button.get_style_context ().add_class ("circular");
-        help_button.halign = Gtk.Align.END;
 
         support_url = Environment.get_os_info (GLib.OsInfoKey.SUPPORT_URL);
         if (support_url == "" || support_url == null) {
             support_url = "https://elementary.io/support";
         }
 
-        help_button.clicked.connect (() => {
+        var logo_icon_name = Environment.get_os_info ("LOGO");
+        if (logo_icon_name == "" || logo_icon_name == null) {
+            logo_icon_name = "distributor-logo";
+        }
+
+        var logo = new Hdy.Avatar (128, "", false) {
+            // In case the wallpaper can't be loaded, we don't want an icon or text
+            icon_name = "invalid-icon-name",
+            // We need this for the shadow to not get clipped by Gtk.Overlay
+            margin = 6
+        };
+        logo.set_image_load_func ((size) => {
             try {
-                AppInfo.launch_default_for_uri (support_url, null);
+                return new Gdk.Pixbuf.from_file_at_scale ("/usr/share/backgrounds/elementaryos-default", -1, size, true);
             } catch (Error e) {
-                warning (e.message);
+                critical (e.message);
             }
         });
+        logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        help_button.size_allocate.connect ( (alloc) => {
-            help_button.set_size_request (alloc.height, -1);
-        });
+        var icon = new Gtk.Image () {
+            icon_name = logo_icon_name + "-symbolic",
+            // 128 minus 3px padding on each side
+            pixel_size = 128 - 6
+        };
 
-        // Translate button
-        var translate_button = new Gtk.Button.with_label (_("Suggest Translations"));
-        translate_button.clicked.connect (() => {
-            try {
-                AppInfo.launch_default_for_uri ("https://l10n.elementary.io/projects/", null);
-            } catch (Error e) {
-                warning (e.message);
-            }
-        });
+        unowned var icon_style_context = icon.get_style_context ();
+        icon_style_context.add_class ("logo");
+        icon_style_context.add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        var logo_overlay = new Gtk.Overlay ();
+        logo_overlay.add (logo);
+        logo_overlay.add_overlay (icon);
+
+        // Intentionally not using GLib.OsInfoKey.PRETTY_NAME here because we
+        // want more granular control over text formatting
+        var pretty_name = "<b>%s</b> %s".printf (
+            Environment.get_os_info (GLib.OsInfoKey.NAME),
+            Environment.get_os_info (GLib.OsInfoKey.VERSION)
+        );
+
+        var title = new Gtk.Label (pretty_name) {
+            ellipsize = Pango.EllipsizeMode.END,
+            margin_bottom = 12,
+            selectable = true,
+            use_markup = true,
+            xalign = 0
+        };
+        title.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
+
+        var kernel_version_label = new Gtk.Label ("%s %s".printf (uts_name.sysname, uts_name.release)) {
+            selectable = true,
+            xalign = 0
+        };
+
+        var website_url = Environment.get_os_info (GLib.OsInfoKey.HOME_URL);
+        if (website_url == "" || website_url == null) {
+            website_url = "https://elementary.io";
+        }
+
+        var website_label = new Gtk.LinkButton.with_label (website_url, _("Website")) {
+            margin_top = 12
+        };
+
+
+        var help_button = new Gtk.LinkButton.with_label (support_url, _("Get Support")) {
+            halign = Gtk.Align.CENTER,
+            hexpand = true,
+            margin_top = 12
+        };
+
+        var translate_button = new Gtk.LinkButton.with_label (
+            "https://l10n.elementary.io/projects/",
+            _("Suggest Translations")
+        ) {
+            margin_top = 12
+        };
 
         var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
+
+        Gtk.Button? update_button = null;
+        var appcenter_info = new GLib.DesktopAppInfo ("io.elementary.appcenter.desktop");
+        if (appcenter_info != null) {
+            update_button = new Gtk.Button.with_label (_("Check for Updates"));
+            update_button.clicked.connect (() => {
+                appcenter_info.launch_action ("ShowUpdates", new GLib.AppLaunchContext ());
+            });
+        }
+
+        var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
+
+        var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
+            hexpand = true,
+            layout_style = Gtk.ButtonBoxStyle.END,
+            spacing = 6
+        };
+        button_grid.add (settings_restore_button);
+        button_grid.add (bug_button);
+        if (update_button != null) {
+            button_grid.add (update_button);
+        }
+        button_grid.set_child_secondary (settings_restore_button, true);
+
+        var software_grid = new Gtk.Grid () {
+            // The avatar has some built-in margin for shadows
+            column_spacing = 32 - 6,
+            halign = Gtk.Align.CENTER,
+            row_spacing = 6,
+            valign = Gtk.Align.CENTER,
+            vexpand = true
+        };
+        software_grid.attach (logo_overlay, 0, 0, 1, 4);
+        software_grid.attach (title, 1, 0, 3);
+
+        if (upstream_release != null) {
+            var based_off = new Gtk.Label (_("Built on %s").printf (upstream_release)) {
+                selectable = true,
+                xalign = 0
+            };
+            software_grid.attach (based_off, 1, 1, 3);
+        }
+
+        software_grid.attach (kernel_version_label, 1, 2, 3);
+        software_grid.attach (website_label, 1, 3);
+        software_grid.attach (help_button, 2, 3);
+        software_grid.attach (translate_button, 3, 3);
+
+        margin = 12;
+        orientation = Gtk.Orientation.VERTICAL;
+        row_spacing = 12;
+        add (software_grid);
+        add (button_grid);
+        show_all ();
+
+        settings_restore_button.clicked.connect (settings_restore_clicked);
+
         bug_button.clicked.connect (() => {
             var appinfo = new GLib.DesktopAppInfo ("io.elementary.feedback.desktop");
             if (appinfo != null) {
@@ -151,62 +200,6 @@ public class About.OperatingSystemView : Gtk.Grid {
                 launch_support_url ();
             }
         });
-
-        Gtk.Button? update_button = null;
-        var appcenter_info = new GLib.DesktopAppInfo ("io.elementary.appcenter.desktop");
-        if (appcenter_info != null) {
-            update_button = new Gtk.Button.with_label (_("Check for Updates"));
-            update_button.clicked.connect (() => {
-                appcenter_info.launch_action ("ShowUpdates", new GLib.AppLaunchContext ());
-            });
-        }
-
-
-        // Restore settings button
-        var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
-        settings_restore_button.clicked.connect (settings_restore_clicked);
-
-        // Create a box for the buttons
-        var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL);
-        button_grid.halign = Gtk.Align.CENTER;
-        button_grid.spacing = 6;
-        button_grid.add (help_button);
-        button_grid.add (settings_restore_button);
-        button_grid.add (translate_button);
-        button_grid.add (bug_button);
-
-        if (update_button != null) {
-            button_grid.add (update_button);
-        }
-
-        button_grid.set_child_non_homogeneous (help_button, true);
-
-        var software_grid = new Gtk.Grid ();
-        software_grid.orientation = Gtk.Orientation.VERTICAL;
-        software_grid.column_spacing = software_grid.row_spacing = 6;
-        software_grid.add (logo);
-        software_grid.add (title);
-
-        if (upstream_release != null) {
-            software_grid.add (based_off);
-        }
-
-        software_grid.add (kernel_version_label);
-        software_grid.add (gtk_version_label);
-        software_grid.add (website_label);
-
-        var description_grid = new Gtk.Grid ();
-        description_grid.halign = Gtk.Align.CENTER;
-        description_grid.valign = Gtk.Align.CENTER;
-        description_grid.vexpand = true;
-        description_grid.column_spacing = 24;
-        description_grid.margin_start = 12;
-        description_grid.margin_end = 12;
-        description_grid.add (software_grid);
-
-        add (description_grid);
-        add (button_grid);
-        show_all ();
     }
 
     private void launch_support_url () {

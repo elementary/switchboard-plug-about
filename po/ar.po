@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
-"PO-Revision-Date: 2020-04-08 20:31+0000\n"
-"Last-Translator: nasserbinlaboun <nasser1990com@gmail.com>\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
+"PO-Revision-Date: 2021-01-04 22:57+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Arabic <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ar/>\n"
 "Language: ar\n"
@@ -21,77 +21,45 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "عرض معلومات نظام التشغيل و العتاد"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr "العتاد الصُلب"
+
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "معلومات عن النظام"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "استعادة الإعدادات الإفتراضية"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "اقتراح الترجمة"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:64
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "الإبلاغ عن مشكلة"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "تحديثات"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "مبني على %s"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr "GTK %u.%u.%u"
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "الموقع الإلكتروني"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "اقتراح الترجمة"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "تحقق من وجود تحديثات"
-
-#: src/Plug.vala:268
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "سيتم استعادة إعدادات النظام إلى إعدادات المصنع الافتراضية"
-
-#: src/Plug.vala:269
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-"سيتم إعادة تعيين جميع إعدادات النظام وبياناته إلى القيم الافتراضية. لن تتأثر "
-"البيانات الشخصية ، مثل الموسيقى والصور."
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "استعادة الإعدادات"
 
 #: src/Views/HardwareView.vala:43
 #, fuzzy
@@ -158,6 +126,46 @@ msgstr "التخزين (HDD): %s"
 #, c-format
 msgid "%s storage"
 msgstr "التخزين: %s"
+
+#: src/Views/OperatingSystemView.vala:86
+msgid "Website"
+msgstr "الموقع الإلكتروني"
+
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
+msgid "Suggest Translations"
+msgstr "اقتراح الترجمة"
+
+#: src/Views/OperatingSystemView.vala:107
+msgid "Check for Updates"
+msgstr "تحقق من وجود تحديثات"
+
+#: src/Views/OperatingSystemView.vala:138
+#, c-format
+msgid "Built on %s"
+msgstr "مبني على %s"
+
+#: src/Views/OperatingSystemView.vala:186
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "سيتم استعادة إعدادات النظام إلى إعدادات المصنع الافتراضية"
+
+#: src/Views/OperatingSystemView.vala:187
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+"سيتم إعادة تعيين جميع إعدادات النظام وبياناته إلى القيم الافتراضية. لن تتأثر "
+"البيانات الشخصية ، مثل الموسيقى والصور."
+
+#: src/Views/OperatingSystemView.vala:193
+msgid "Restore Settings"
+msgstr "استعادة الإعدادات"
+
+#~ msgid "GTK %u.%u.%u"
+#~ msgstr "GTK %u.%u.%u"
 
 #~ msgid "About"
 #~ msgstr "حول"

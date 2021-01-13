@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-15 07:26+0000\n"
+"POT-Creation-Date: 2021-01-04 23:20+0000\n"
 "PO-Revision-Date: 2018-06-20 00:06+0000\n"
 "Last-Translator: janus tolkien <janustolkien@gmail.com>\n"
 "Language-Team: Kurdish <https://weblate.elementary.io/projects/switchboard/"
@@ -15,75 +15,45 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:31
+#: src/Plug.vala:29
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:32
+#: src/Plug.vala:30
 msgid "View operating system and hardware information"
 msgstr "Înformasyona pengale karkirin û amûrên kompûteran binere"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:46
+msgid "Operating System"
+msgstr ""
+
+#: src/Plug.vala:47
+msgid "Hardware"
+msgstr "Hişkalav"
+
+#: src/Plug.vala:79
 msgid "System Information"
 msgstr "Agahiyên pergalî"
 
-#. Restore settings button
-#: src/Plug.vala:61 src/Plug.vala:196
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
 msgid "Restore Default Settings"
 msgstr "Norme Mîhenge  ji nû ve ava bike"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:81
 msgid "Suggest Translation"
 msgstr "pêşniyar kirina wergerrandine"
 
-#: src/Plug.vala:63 src/Plug.vala:170
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:64
+#: src/Plug.vala:83
 msgid "Report a Problem"
 msgstr "Pirsgirêkekê rapor bike"
 
-#: src/Plug.vala:65
+#: src/Plug.vala:84
 msgid "Updates"
 msgstr "rojanekirin"
-
-#: src/Plug.vala:118
-#, c-format
-msgid "Built on %s"
-msgstr "Ava kirin ser %s"
-
-#: src/Plug.vala:125
-#, c-format
-msgid "GTK %u.%u.%u"
-msgstr ""
-
-#: src/Plug.vala:135
-msgid "Website"
-msgstr "Malper"
-
-#. Translate button
-#: src/Plug.vala:161
-msgid "Suggest Translations"
-msgstr "pêşniyar kirina wergerrandine"
-
-#: src/Plug.vala:188
-msgid "Check for Updates"
-msgstr "venêrîn bo rojanekirin"
-
-#: src/Plug.vala:268
-msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Mîhenge pergale de bûe vegerandiye ji kêmasî fabrîqe"
-
-#: src/Plug.vala:269
-msgid ""
-"All system settings and data will be reset to the default values. Personal "
-"data, such as music and pictures, will be unaffected."
-msgstr ""
-
-#: src/Plug.vala:275
-msgid "Restore Settings"
-msgstr "Mîhengan Şûnde Bîne"
 
 #: src/Views/HardwareView.vala:43
 #, fuzzy
@@ -153,6 +123,41 @@ msgstr "%s Axtin"
 msgid "%s storage"
 msgstr "%s Axtin"
 
+#: src/Views/OperatingSystemView.vala:86
+msgid "Website"
+msgstr "Malper"
+
+#: src/Views/OperatingSystemView.vala:91
+msgid "Get Support"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:97
+msgid "Suggest Translations"
+msgstr "pêşniyar kirina wergerrandine"
+
+#: src/Views/OperatingSystemView.vala:107
+msgid "Check for Updates"
+msgstr "venêrîn bo rojanekirin"
+
+#: src/Views/OperatingSystemView.vala:138
+#, c-format
+msgid "Built on %s"
+msgstr "Ava kirin ser %s"
+
+#: src/Views/OperatingSystemView.vala:186
+msgid "System Settings Will Be Restored to The Factory Defaults"
+msgstr "Mîhenge pergale de bûe vegerandiye ji kêmasî fabrîqe"
+
+#: src/Views/OperatingSystemView.vala:187
+msgid ""
+"All system settings and data will be reset to the default values. Personal "
+"data, such as music and pictures, will be unaffected."
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:193
+msgid "Restore Settings"
+msgstr "Mîhengan Şûnde Bîne"
+
 #~ msgid "About"
 #~ msgstr "Derbarê de"
 
@@ -172,6 +177,3 @@ msgstr "%s Axtin"
 
 #~ msgid "Default Apps"
 #~ msgstr "Sepanên Jixweber"
-
-#~ msgid "Hardware"
-#~ msgstr "Hişkalav"
