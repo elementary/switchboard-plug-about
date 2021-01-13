@@ -46,11 +46,12 @@ public class About.Plug : Switchboard.Plug {
             var firmware_view = new FirmwareView ();
             stack.add_titled (firmware_view, "firmware", _("Firmware"));
 
-            var stack_switcher = new Gtk.StackSwitcher ();
-            stack_switcher.stack = stack;
-            stack_switcher.halign = Gtk.Align.CENTER;
-            stack_switcher.homogeneous = true;
-            stack_switcher.margin = 24;
+            var stack_switcher = new Gtk.StackSwitcher () {
+                halign = Gtk.Align.CENTER,
+                homogeneous = true,
+                margin = 24,
+                stack = stack
+            };
 
             main_grid.attach (stack_switcher, 0, 0, 1, 1);
             main_grid.attach (stack, 0, 1, 1, 1);
