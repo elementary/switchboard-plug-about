@@ -53,8 +53,8 @@ public class About.Plug : Switchboard.Plug {
                 stack = stack
             };
 
-            main_grid.attach (stack_switcher, 0, 0, 1, 1);
-            main_grid.attach (stack, 0, 1, 1, 1);
+            main_grid.attach (stack_switcher, 0, 0);
+            main_grid.attach (stack, 0, 1);
             main_grid.show_all ();
         }
 
