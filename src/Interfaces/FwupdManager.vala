@@ -253,15 +253,15 @@ public class About.FwupdManager : Object {
             options.add ("{sv}", "allow-reinstall", new Variant.boolean (true));
             options.add ("{sv}", "no-history", new Variant.boolean (true));
 
+            var fd = ro_fd (path);
+            var stream = new UnixInputStream (fd, true);
+
+            var fd_list = new UnixFDList ();
+            fd_list.append (stream.fd);
+            
             var parameters = new VariantBuilder (new VariantType ("(sha{sv})"));
             parameters.add_value (new Variant.string (id));
-
-            var fd = ro_fd (path);
-            var fd_list = new UnixFDList ();
-            var stream = new UnixInputStream (fd, true);
-            fd_list.append (stream.fd);
             parameters.add_value (new Variant.handle (0));
-
             parameters.add_value (options.end ());
 
             yield connection.call_with_unix_fd_list (
