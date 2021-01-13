@@ -23,6 +23,7 @@ public class About.FirmwareView : Granite.SettingsPage {
     private Gtk.Stack stack;
     private Gtk.Grid grid;
     private Gtk.Grid progress_view;
+    private Gtk.Grid no_devices_view;
     private Gtk.ListBox update_list;
 
     public FirmwareView () {
@@ -43,7 +44,19 @@ public class About.FirmwareView : Granite.SettingsPage {
         progress_view = new Gtk.Grid () {
             margin = 24
         };
-        progress_view.attach (progress_alert_view, 0, 0, 1, 1);
+        progress_view.attach (progress_alert_view, 0, 0);
+
+        var no_devices_alert_view = new Granite.Widgets.AlertView (
+            _("No devices available"),
+            _("We're unable to provide updates for device firmware."),
+            "application-x-firmware"
+        );
+        no_devices_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+
+        no_devices_view = new Gtk.Grid () {
+            margin = 24
+        };
+        no_devices_view.attach (no_devices_alert_view, 0, 0);
 
         var header_icon = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DIALOG) {
             pixel_size = 48,
@@ -83,6 +96,7 @@ public class About.FirmwareView : Granite.SettingsPage {
 
         stack.add (grid);
         stack.add (progress_view);
+        stack.add (no_devices_view);
 
         add (stack);
 
@@ -96,19 +110,31 @@ public class About.FirmwareView : Granite.SettingsPage {
             }
         }
 
+        List<Device> devices = new List<Device> ();
         foreach (var device in yield FwupdManager.get_instance ().get_devices ()) {
             if (device.is (DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
-                var widget = new Widgets.FirmwareUpdateWidget (device);
-                update_list.add (widget);
-
-                widget.on_update_start.connect (() => {
-                    stack.visible_child = progress_view;
-                });
-                widget.on_update_end.connect (() => {
-                    stack.visible_child = grid;
-                    update_list_view.begin ();
-                });
+                devices.append (device);
             }
+        }
+
+        if (devices.length () == 0) {
+            stack.visible_child = no_devices_view;
+            return;
+        } else {
+            stack.visible_child = grid;
+        }
+
+        foreach (var device in devices) {
+            var widget = new Widgets.FirmwareUpdateWidget (device);
+            update_list.add (widget);
+
+            widget.on_update_start.connect (() => {
+                stack.visible_child = progress_view;
+            });
+            widget.on_update_end.connect (() => {
+                stack.visible_child = grid;
+                update_list_view.begin ();
+            });
         }
 
         update_list.show_all ();
