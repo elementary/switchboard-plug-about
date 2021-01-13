@@ -90,9 +90,9 @@ public class About.FirmwareView : Granite.SettingsPage {
     }
 
     private async void update_list_view () {
-        foreach (Gtk.Widget element in update_list.get_children ()) {
-            if (element is Gtk.ListBoxRow) {
-                update_list.remove (element);
+        foreach (unowned Gtk.Widget widget in update_list.get_children ()) {
+            if (widget is Gtk.ListBoxRow) {
+                update_list.remove (widget);
             }
         }
 
