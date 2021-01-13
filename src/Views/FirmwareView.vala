@@ -58,12 +58,6 @@ public class About.FirmwareView : Granite.SettingsPage {
         };
         title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
-        grid = new Gtk.Grid () {
-            column_spacing = 12,
-            row_spacing = 12,
-            margin = 12
-        };
-
         update_list = new Gtk.ListBox () {
             vexpand = true,
             selection_mode = Gtk.SelectionMode.SINGLE
@@ -75,6 +69,11 @@ public class About.FirmwareView : Granite.SettingsPage {
         var frame = new Gtk.Frame (null);
         frame.add (scrolled_window);
 
+        grid = new Gtk.Grid () {
+            column_spacing = 12,
+            row_spacing = 12,
+            margin = 12
+        };
         grid.attach (header_icon, 0, 0);
         grid.attach (title_label, 1, 0);
         grid.attach (frame, 0, 1, 3, 1);
