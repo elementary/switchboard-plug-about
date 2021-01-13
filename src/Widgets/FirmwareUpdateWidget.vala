@@ -26,9 +26,7 @@ public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
     public signal void on_update_end ();
 
     public FirmwareUpdateWidget (Device device) {
-        GLib.Object (
-            device: device
-        );
+        Object (device: device);
     }
 
     construct {
