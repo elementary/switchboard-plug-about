@@ -66,7 +66,7 @@ public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
                 update_button.clicked.connect (() => {
                     on_update_start ();
 
-                    FwupdManager.get_instance ().install.begin (device.id, device.latest_release, (obj, res) => {
+                    FwupdManager.get_instance ().install.begin (device, device.latest_release, (obj, res) => {
                         FwupdManager.get_instance ().install.end (res);
                         on_update_end ();
                     });

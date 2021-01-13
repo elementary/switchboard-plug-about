@@ -26,6 +26,8 @@ public class About.FwupdManager : Object {
 
     public signal void changed ();
 
+    public signal void on_error (string error);
+
     static FwupdManager? instance = null;
     public static FwupdManager get_instance () {
         if (instance == null) {
@@ -222,7 +224,7 @@ public class About.FwupdManager : Object {
         return Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_tmp_dir (), file_path);
     }
 
-    public async void install (string id, Release release) {
+    public async void install (Device device, Release release) {
         var path = get_path (release);
 
         File server_file = File.new_for_uri (release.uri);
@@ -235,12 +237,12 @@ public class About.FwupdManager : Object {
                     current_num_bytes, release.size);
             });
         } catch (Error e) {
-            warning ("Could not download file: %s", e.message);
+            on_error ("Could not download file: %s".printf (e.message));
             return;
         }
 
         if (!result) {
-            warning ("Download of %s was not succesfull", release.uri);
+            on_error ("Download of %s was not succesfull".printf (release.uri));
             return;
         }
 
@@ -260,7 +262,7 @@ public class About.FwupdManager : Object {
             fd_list.append (stream.fd);
 
             var parameters = new VariantBuilder (new VariantType ("(sha{sv})"));
-            parameters.add_value (new Variant.string (id));
+            parameters.add_value (new Variant.string (device.id));
             parameters.add_value (new Variant.handle (0));
             parameters.add_value (options.end ());
 
@@ -277,6 +279,7 @@ public class About.FwupdManager : Object {
             );
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
+            on_error (device.update_error);
         }
     }
 

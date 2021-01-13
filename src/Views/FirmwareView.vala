@@ -100,6 +100,8 @@ public class About.FirmwareView : Granite.SettingsPage {
 
         add (stack);
 
+        FwupdManager.get_instance ().on_error.connect (on_error);
+
         update_list_view.begin ();
     }
 
@@ -138,5 +140,18 @@ public class About.FirmwareView : Granite.SettingsPage {
         }
 
         update_list.show_all ();
+    }
+
+    private void on_error (string error) {
+        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("Failed to install firmware release"),
+            error,
+            "application-x-firmware",
+            Gtk.ButtonsType.CLOSE
+        );
+        message_dialog.badge_icon = new ThemedIcon ("dialog-error");
+        message_dialog.show_all ();
+        message_dialog.run ();
+        message_dialog.destroy ();
     }
 }
