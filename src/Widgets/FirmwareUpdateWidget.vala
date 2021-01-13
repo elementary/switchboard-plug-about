@@ -45,9 +45,10 @@ public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
             xalign = 0
         };
 
-        var grid = new Gtk.Grid ();
-        grid.column_spacing = 12;
-        grid.margin = 6;
+        var grid = new Gtk.Grid () {
+            column_spacing = 12,
+            margin = 6
+        };
         grid.attach (icon, 0, 0, 1, 2);
         grid.attach (device_name_label, 1, 0);
         grid.attach (version_label, 1, 1);
