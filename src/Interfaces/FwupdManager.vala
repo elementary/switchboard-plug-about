@@ -249,12 +249,8 @@ public class About.FwupdManager : Object {
             var options = new VariantBuilder (new VariantType ("a{sv}"));
             options.add ("{sv}", "reason", new Variant.string ("user-action"));
             options.add ("{sv}", "filename", new Variant.string (path));
-            //  options.add ("{sv}", "offline", new Variant.boolean (true));
             options.add ("{sv}", "allow-older", new Variant.boolean (true));
             options.add ("{sv}", "allow-reinstall", new Variant.boolean (true));
-            //  options.add ("{sv}", "allow-branch-switch", new Variant.boolean (true));
-            //  options.add ("{sv}", "force", new Variant.boolean (true));
-            //  options.add ("{sv}", "ignore-power", new Variant.boolean (true));
             options.add ("{sv}", "no-history", new Variant.boolean (true));
 
             var parameters = new VariantBuilder (new VariantType ("(sha{sv})"));
