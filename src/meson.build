@@ -1,6 +1,7 @@
 plug_files = files(
     'fd.c',
     'Plug.vala',
+    'Objects/Details.vala',
     'Objects/Device.vala',
     'Objects/DeviceFlag.vala',
     'Objects/Release.vala',

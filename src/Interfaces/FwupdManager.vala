@@ -283,6 +283,82 @@ public class About.FwupdManager : Object {
         }
     }
 
+    public async Details get_details (Device device, Release release) {
+        var details = new Details ();
+
+        var path = get_path (release);
+
+        File server_file = File.new_for_uri (release.uri);
+        File local_file = File.new_for_path (path);
+
+        bool result;
+        try {
+            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {
+                debug ("%" + int64.FORMAT + " bytes of %" + int64.FORMAT + " bytes copied.",
+                    current_num_bytes, release.size);
+            });
+        } catch (Error e) {
+            on_error ("Could not download file: %s".printf (e.message));
+            return details;
+        }
+
+        if (!result) {
+            on_error ("Download of %s was not succesfull".printf (release.uri));
+            return details;
+        }
+
+        try {
+            var fd = ro_fd (path);
+            var stream = new UnixInputStream (fd, true);
+
+            var fd_list = new UnixFDList ();
+            fd_list.append (stream.fd);
+
+            var parameters = new VariantBuilder (new VariantType ("(h)"));
+            parameters.add_value (new Variant.handle (0));
+
+            var r = yield connection.call_with_unix_fd_list (
+                "org.freedesktop.fwupd",
+                "/",
+                "org.freedesktop.fwupd",
+                "GetDetails",
+                parameters.end (),
+                new VariantType ("(aa{sv})"),
+                DBusCallFlags.NONE,
+                -1,
+                fd_list
+            );
+
+            var array_iter = r.iterator ();
+            GLib.Variant? element = array_iter.next_value ();
+            array_iter = element.iterator ();
+
+            while ((element = array_iter.next_value ()) != null) {
+                GLib.Variant? val = null;
+                string? key = null;
+
+                var details_iter = element.iterator ();
+                while (details_iter.next ("{sv}", out key, out val)) {
+                    if (key == "Release") {
+                        var release_iter = val.iterator ().next_value ().iterator ();
+                        while (release_iter.next ("{sv}", out key, out val)) {
+                            if (key == "DetachCaption") {
+                                details.caption = val.get_string ();
+                            } else if (key == "DetachImage") {
+                                details.image = val.get_string ();
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Error e) {
+            warning ("Could not connect to fwupd interface: %s", e.message);
+            on_error (device.update_error);
+        }
+
+        return details;
+    }
+
     construct {
         try {
             connection = Bus.get_sync (BusType.SYSTEM);
