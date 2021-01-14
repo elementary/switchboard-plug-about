@@ -218,34 +218,39 @@ public class About.FwupdManager : Object {
         return releases_list;
     }
 
-    private string get_path (Release release) {
-        var parts = release.uri.split ("/");
+    private string get_path (string uri) {
+        var parts = uri.split ("/");
         string file_path = parts[parts.length - 1];
         return Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_tmp_dir (), file_path);
     }
 
-    public async void install (Device device, Release release) {
-        var path = get_path (release);
+    public async string? download_file (string uri) {
+        var path = get_path (uri);
 
-        File server_file = File.new_for_uri (release.uri);
+        File server_file = File.new_for_uri (uri);
         File local_file = File.new_for_path (path);
+
+        if (FileUtils.test (path, FileTest.IS_REGULAR)) {
+            return path;
+        }
 
         bool result;
         try {
-            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {
-                debug ("%" + int64.FORMAT + " bytes of %" + int64.FORMAT + " bytes copied.",
-                    current_num_bytes, release.size);
-            });
+            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {});
         } catch (Error e) {
             on_error ("Could not download file: %s".printf (e.message));
-            return;
+            return null;
         }
 
         if (!result) {
-            on_error ("Download of %s was not succesfull".printf (release.uri));
-            return;
+            on_error ("Download of %s was not succesfull".printf (uri));
+            return null;
         }
 
+        return path;
+    }
+
+    public async void install (Device device, string path) {
         try {
             // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
             var options = new VariantBuilder (new VariantType ("a{sv}"));
@@ -283,29 +288,8 @@ public class About.FwupdManager : Object {
         }
     }
 
-    public async Details get_details (Device device, Release release) {
+    public async Details get_details (Device device, string path) {
         var details = new Details ();
-
-        var path = get_path (release);
-
-        File server_file = File.new_for_uri (release.uri);
-        File local_file = File.new_for_path (path);
-
-        bool result;
-        try {
-            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {
-                debug ("%" + int64.FORMAT + " bytes of %" + int64.FORMAT + " bytes copied.",
-                    current_num_bytes, release.size);
-            });
-        } catch (Error e) {
-            on_error ("Could not download file: %s".printf (e.message));
-            return details;
-        }
-
-        if (!result) {
-            on_error ("Download of %s was not succesfull".printf (release.uri));
-            return details;
-        }
 
         try {
             var fd = ro_fd (path);
@@ -354,6 +338,10 @@ public class About.FwupdManager : Object {
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
             on_error (device.update_error);
+        }
+
+        if (details.image != null) {
+            details.image = yield download_file (details.image);
         }
 
         return details;

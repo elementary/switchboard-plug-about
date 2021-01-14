@@ -66,8 +66,8 @@ public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
                 update_button.clicked.connect (() => {
                     on_update_start ();
 
-                    FwupdManager.get_instance ().install.begin (device, device.latest_release, (obj, res) => {
-                        FwupdManager.get_instance ().install.end (res);
+                    update.begin (device, device.latest_release, (obj, res) => {
+                        update.end (res);
                         on_update_end ();
                     });
                 });
@@ -86,5 +86,40 @@ public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
             valign = Gtk.Align.CENTER
         };
         grid.attach (update_to_date_label, 2, 0, 1, 2);
+    }
+
+    private async void update (Device device, Release release) {
+        var path = yield FwupdManager.get_instance ().download_file (release.uri);
+
+        var details = yield FwupdManager.get_instance ().get_details (device, path);
+
+        if (details.caption != null) {
+            on_details (details);
+        }
+
+        yield FwupdManager.get_instance ().install (device, path);
+    }
+
+    private void on_details (Details details) {
+        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("Manual steps required"),
+            details.caption,
+            "application-x-firmware",
+            Gtk.ButtonsType.NONE
+        );
+
+        var suggested_button = new Gtk.Button.with_label (_("OK"));
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
+
+        if (details.image != null) {
+            var custom_widget = new Gtk.Image.from_file (details.image);
+            message_dialog.custom_bin.add (custom_widget);
+        }
+
+        message_dialog.badge_icon = new ThemedIcon ("dialog-information");
+        message_dialog.show_all ();
+        message_dialog.run ();
+        message_dialog.destroy ();
     }
 }
