@@ -149,6 +149,7 @@ public class About.FirmwareView : Granite.SettingsPage {
             "application-x-firmware",
             Gtk.ButtonsType.CLOSE
         );
+        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
         message_dialog.badge_icon = new ThemedIcon ("dialog-error");
         message_dialog.show_all ();
         message_dialog.run ();
