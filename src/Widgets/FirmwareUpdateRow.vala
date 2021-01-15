@@ -143,7 +143,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
         message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
 
-        message_dialog.badge_icon = new ThemedIcon ("dialog-information");
+        message_dialog.badge_icon = new ThemedIcon ("system-reboot");
         message_dialog.show_all ();
         if (message_dialog.run () == Gtk.ResponseType.OK) {
             LoginManager.get_instance ().reboot ();
@@ -165,7 +165,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
         message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
 
-        message_dialog.badge_icon = new ThemedIcon ("dialog-information");
+        message_dialog.badge_icon = new ThemedIcon ("system-shutdown");
         message_dialog.show_all ();
         if (message_dialog.run () == Gtk.ResponseType.OK) {
             LoginManager.get_instance ().shutdown ();
