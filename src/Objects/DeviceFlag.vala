@@ -218,7 +218,7 @@ public enum About.DeviceFlag {
                 return _("Updatable");
             case ONLY_OFFLINE:
                 /* TRANSLATORS: Update can only be done from offline mode */
-                return _("Update requires a reboot");
+                return _("Update requires restarting the system");
             case REQUIRE_AC:
                 /* TRANSLATORS: Must be plugged in to an outlet */
                 return _("System requires external power source");
@@ -233,10 +233,10 @@ public enum About.DeviceFlag {
                 return _("Requires a bootloader");
             case NEEDS_REBOOT:
                 /* TRANSLATORS: Requires a reboot to apply firmware or to reload hardware */
-                return _("Needs a reboot after installation");
+                return _("Update requires restarting the system");
             case NEEDS_SHUTDOWN:
                 /* TRANSLATORS: Requires system shutdown to apply firmware */
-                return _("Needs shutdown after installation");
+                return _("Requires the system to shut down after installation");
             case REPORTED:
                 /* TRANSLATORS: Has been reported to a metadata server */
                 return _("Reported to LVFS");

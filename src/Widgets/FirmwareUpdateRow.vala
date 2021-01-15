@@ -132,7 +132,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
     private void show_reboot_dialog () {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("An update requires a reboot to complete"),
+            _("An update requires the system to restart to complete"),
             _("This will close all open applications and restart this device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
@@ -154,14 +154,14 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
     private void show_shutdown_dialog () {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("An update requires the system to shutdown to complete"),
+            _("An update requires the system to shut down to complete"),
             _("This will close all open applications and turn off this device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();
 
-        var suggested_button = new Gtk.Button.with_label (_("Shutdown"));
+        var suggested_button = new Gtk.Button.with_label (_("Shut Down"));
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
         message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
 
