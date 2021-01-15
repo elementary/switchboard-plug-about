@@ -53,19 +53,6 @@ public class About.FirmwareView : Granite.SettingsPage {
         no_devices_alert_view.show_all ();
         no_devices_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
-        var header_icon = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DIALOG) {
-            pixel_size = 48,
-            valign = Gtk.Align.START
-        };
-
-        var title_label = new Gtk.Label (_("Firmware")) {
-            ellipsize = Pango.EllipsizeMode.END,
-            hexpand = true,
-            selectable = true,
-            xalign = 0
-        };
-        title_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
-
         update_list = new Gtk.ListBox () {
             vexpand = true,
             selection_mode = Gtk.SelectionMode.SINGLE
@@ -83,9 +70,7 @@ public class About.FirmwareView : Granite.SettingsPage {
             row_spacing = 12,
             margin = 12
         };
-        grid.attach (header_icon, 0, 0);
-        grid.attach (title_label, 1, 0);
-        grid.attach (frame, 0, 1, 3, 1);
+        grid.add (frame);
 
         stack = new Gtk.Stack ();
         stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
