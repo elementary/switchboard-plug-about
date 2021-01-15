@@ -91,13 +91,13 @@ public class About.FirmwareView : Gtk.Stack {
         visible_child = grid;
 
         foreach (var device in devices) {
-            var widget = new Widgets.FirmwareUpdateWidget (device);
-            update_list.add (widget);
+            var row = new Widgets.FirmwareUpdateRow (device);
+            update_list.add (row);
 
-            widget.on_update_start.connect (() => {
+            row.on_update_start.connect (() => {
                 visible_child = progress_view;
             });
-            widget.on_update_end.connect (() => {
+            row.on_update_end.connect (() => {
                 visible_child = grid;
                 update_list_view.begin ();
             });

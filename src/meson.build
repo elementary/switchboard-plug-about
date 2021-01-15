@@ -12,7 +12,7 @@ plug_files = files(
     'Views/FirmwareView.vala',
     'Views/HardwareView.vala',
     'Views/OperatingSystemView.vala',
-    'Widgets/FirmwareUpdateWidget.vala'
+    'Widgets/FirmwareUpdateRow.vala'
 )
 
 switchboard_dep = dependency('switchboard-2.0')

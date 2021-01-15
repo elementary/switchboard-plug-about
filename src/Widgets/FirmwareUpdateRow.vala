@@ -19,13 +19,13 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
+public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     public Device device { get; construct set; }
 
     public signal void on_update_start ();
     public signal void on_update_end ();
 
-    public FirmwareUpdateWidget (Device device) {
+    public FirmwareUpdateRow (Device device) {
         Object (device: device);
     }
 
