@@ -81,27 +81,22 @@ public class About.FirmwareView : Gtk.Stack {
             }
         }
 
-        List<Device> devices = new List<Device> ();
         foreach (var device in yield FwupdManager.get_instance ().get_devices ()) {
             if (device.is (DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
-                devices.append (device);
+                var row = new Widgets.FirmwareUpdateRow (device);
+                update_list.add (row);
+
+                row.on_update_start.connect (() => {
+                    visible_child = progress_view;
+                });
+                row.on_update_end.connect (() => {
+                    visible_child = grid;
+                    update_list_view.begin ();
+                });
             }
         }
 
         visible_child = grid;
-
-        foreach (var device in devices) {
-            var row = new Widgets.FirmwareUpdateRow (device);
-            update_list.add (row);
-
-            row.on_update_start.connect (() => {
-                visible_child = progress_view;
-            });
-            row.on_update_end.connect (() => {
-                visible_child = grid;
-                update_list_view.begin ();
-            });
-        }
 
         update_list.show_all ();
     }
