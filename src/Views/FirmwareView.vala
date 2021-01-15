@@ -19,20 +19,14 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.FirmwareView : Granite.SettingsPage {
-    private Gtk.Stack stack;
+public class About.FirmwareView : Gtk.Stack {
     private Gtk.Grid grid;
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
 
-    public FirmwareView () {
-        Object (
-            icon_name: "application-x-firmware",
-            title: _("Firmware")
-        );
-    }
-
     construct {
+        transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
+
         var progress_alert_view = new Granite.Widgets.AlertView (
             _("Device is being updated"),
             _("Do not unplug the device during the update."),
@@ -72,13 +66,8 @@ public class About.FirmwareView : Granite.SettingsPage {
         };
         grid.add (frame);
 
-        stack = new Gtk.Stack ();
-        stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
-
-        stack.add (grid);
-        stack.add (progress_view);
-
-        add (stack);
+        add (grid);
+        add (progress_view);
 
         FwupdManager.get_instance ().on_error.connect (on_error);
 
@@ -99,17 +88,17 @@ public class About.FirmwareView : Granite.SettingsPage {
             }
         }
 
-        stack.visible_child = grid;
+        visible_child = grid;
 
         foreach (var device in devices) {
             var widget = new Widgets.FirmwareUpdateWidget (device);
             update_list.add (widget);
 
             widget.on_update_start.connect (() => {
-                stack.visible_child = progress_view;
+                visible_child = progress_view;
             });
             widget.on_update_end.connect (() => {
-                stack.visible_child = grid;
+                visible_child = grid;
                 update_list_view.begin ();
             });
         }
