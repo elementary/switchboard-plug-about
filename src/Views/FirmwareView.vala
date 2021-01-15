@@ -21,14 +21,15 @@
 
 public class About.FirmwareView : Gtk.Stack {
     private Gtk.Grid grid;
+    private Granite.Widgets.AlertView progress_alert_view;
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
 
     construct {
         transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
 
-        var progress_alert_view = new Granite.Widgets.AlertView (
-            _("Device is being updated"),
+        progress_alert_view = new Granite.Widgets.AlertView (
+            "",
             _("Do not unplug the device during the update."),
             "emblem-synchronized"
         );
@@ -87,6 +88,7 @@ public class About.FirmwareView : Gtk.Stack {
                 update_list.add (row);
 
                 row.on_update_start.connect (() => {
+                    progress_alert_view.title = _("“%s” is being updated".printf (device.name));
                     visible_child = progress_view;
                 });
                 row.on_update_end.connect (() => {
