@@ -48,7 +48,7 @@ public class About.FirmwareView : Granite.SettingsPage {
         var no_devices_alert_view = new Granite.Widgets.AlertView (
             _("No Updatable Devices"),
             _("Firmware updates are not supported on this or any connected devices."),
-            ""
+            "application-x-firmware"
         );
         no_devices_alert_view.show_all ();
         no_devices_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
