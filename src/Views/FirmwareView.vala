@@ -23,7 +23,6 @@ public class About.FirmwareView : Granite.SettingsPage {
     private Gtk.Stack stack;
     private Gtk.Grid grid;
     private Gtk.Grid progress_view;
-    private Gtk.Grid no_devices_view;
     private Gtk.ListBox update_list;
 
     public FirmwareView () {
@@ -47,16 +46,12 @@ public class About.FirmwareView : Granite.SettingsPage {
         progress_view.attach (progress_alert_view, 0, 0);
 
         var no_devices_alert_view = new Granite.Widgets.AlertView (
-            _("No updatable devices"),
+            _("No Updatable Devices"),
             _("Firmware updates are not supported on this or any connected devices."),
-            "application-x-firmware"
+            ""
         );
+        no_devices_alert_view.show_all ();
         no_devices_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
-
-        no_devices_view = new Gtk.Grid () {
-            margin = 24
-        };
-        no_devices_view.attach (no_devices_alert_view, 0, 0);
 
         var header_icon = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DIALOG) {
             pixel_size = 48,
@@ -75,6 +70,7 @@ public class About.FirmwareView : Granite.SettingsPage {
             vexpand = true,
             selection_mode = Gtk.SelectionMode.SINGLE
         };
+        update_list.set_placeholder (no_devices_alert_view);
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
         scrolled_window.add (update_list);
@@ -96,7 +92,6 @@ public class About.FirmwareView : Granite.SettingsPage {
 
         stack.add (grid);
         stack.add (progress_view);
-        stack.add (no_devices_view);
 
         add (stack);
 
@@ -119,12 +114,7 @@ public class About.FirmwareView : Granite.SettingsPage {
             }
         }
 
-        if (devices.length () == 0) {
-            stack.visible_child = no_devices_view;
-            return;
-        } else {
-            stack.visible_child = grid;
-        }
+        stack.visible_child = grid;
 
         foreach (var device in devices) {
             var widget = new Widgets.FirmwareUpdateWidget (device);
