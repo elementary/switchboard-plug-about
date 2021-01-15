@@ -284,7 +284,7 @@ public class About.FwupdManager : Object {
             );
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
-            on_error (device.update_error);
+            on_error (device.update_error != null ? device.update_error : e.message);
             return false;
         }
 
