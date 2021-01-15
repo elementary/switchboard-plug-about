@@ -250,7 +250,7 @@ public class About.FwupdManager : Object {
         return path;
     }
 
-    public async void install (Device device, string path) {
+    public async bool install (Device device, string path) {
         try {
             // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
             var options = new VariantBuilder (new VariantType ("a{sv}"));
@@ -285,7 +285,10 @@ public class About.FwupdManager : Object {
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
             on_error (device.update_error);
+            return false;
         }
+
+        return true;
     }
 
     public async Details get_details (Device device, string path) {

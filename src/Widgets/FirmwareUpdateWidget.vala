@@ -94,13 +94,19 @@ public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
         var details = yield FwupdManager.get_instance ().get_details (device, path);
 
         if (details.caption != null) {
-            on_details (details);
+            show_details_dialog (details);
         }
 
-        yield FwupdManager.get_instance ().install (device, path);
+        if ((yield FwupdManager.get_instance ().install (device, path)) == true) {
+            if (device.is (DeviceFlag.NEEDS_REBOOT)) {
+                show_reboot_dialog ();
+            } else if (device.is (DeviceFlag.NEEDS_SHUTDOWN)) {
+                show_shutdown_dialog ();
+            }
+        }
     }
 
-    private void on_details (Details details) {
+    private void show_details_dialog (Details details) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("Manual steps required"),
             details.caption,
@@ -121,6 +127,50 @@ public class About.Widgets.FirmwareUpdateWidget : Gtk.ListBoxRow {
         message_dialog.badge_icon = new ThemedIcon ("dialog-information");
         message_dialog.show_all ();
         message_dialog.run ();
+        message_dialog.destroy ();
+    }
+
+    private void show_reboot_dialog () {
+        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("An update requires a reboot to complete"),
+            _("Reboot now?"),
+            "application-x-firmware",
+            Gtk.ButtonsType.CANCEL
+        );
+        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+
+        var suggested_button = new Gtk.Button.with_label (_("Reboot"));
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
+
+        message_dialog.badge_icon = new ThemedIcon ("dialog-information");
+        message_dialog.show_all ();
+        if (message_dialog.run () == Gtk.ResponseType.OK) {
+            LoginManager.get_instance ().reboot ();
+        }
+
+        message_dialog.destroy ();
+    }
+
+    private void show_shutdown_dialog () {
+        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("An update requires the system to shutdown to complete"),
+            _("Shutdown now?"),
+            "application-x-firmware",
+            Gtk.ButtonsType.CANCEL
+        );
+        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+
+        var suggested_button = new Gtk.Button.with_label (_("Shutdown"));
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
+
+        message_dialog.badge_icon = new ThemedIcon ("dialog-information");
+        message_dialog.show_all ();
+        if (message_dialog.run () == Gtk.ResponseType.OK) {
+            LoginManager.get_instance ().shutdown ();
+        }
+
         message_dialog.destroy ();
     }
 }
