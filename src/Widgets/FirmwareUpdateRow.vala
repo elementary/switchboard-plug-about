@@ -133,14 +133,14 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     private void show_reboot_dialog () {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("An update requires a reboot to complete"),
-            _("Reboot now?"),
+            _("This will close all open applications and restart this device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();
 
         var suggested_button = new Gtk.Button.with_label (_("Reboot"));
-        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
         message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
 
         message_dialog.badge_icon = new ThemedIcon ("dialog-information");
@@ -155,14 +155,14 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     private void show_shutdown_dialog () {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("An update requires the system to shutdown to complete"),
-            _("Shutdown now?"),
+            _("This will close all open applications and turn off this device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();
 
         var suggested_button = new Gtk.Button.with_label (_("Shutdown"));
-        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
         message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
 
         message_dialog.badge_icon = new ThemedIcon ("dialog-information");
