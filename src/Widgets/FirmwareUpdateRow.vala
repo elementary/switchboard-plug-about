@@ -139,7 +139,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();
 
-        var suggested_button = new Gtk.Button.with_label (_("Reboot"));
+        var suggested_button = new Gtk.Button.with_label (_("Restart"));
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
         message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
 
