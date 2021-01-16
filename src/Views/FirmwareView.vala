@@ -70,7 +70,7 @@ public class About.FirmwareView : Gtk.Stack {
         add (grid);
         add (progress_view);
 
-        FwupdManager.get_instance ().on_error.connect (on_error);
+        FwupdManager.get_instance ().on_device_error.connect (on_device_error);
 
         update_list_view.begin ();
     }
@@ -103,13 +103,11 @@ public class About.FirmwareView : Gtk.Stack {
         update_list.show_all ();
     }
 
-    private void on_error (string error, Device? device) {
-        var icon = device != null ? device.icon : "application-x-firmware";
-
+    private void on_device_error (Device device, string error) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("Failed to install firmware release"),
             error,
-            icon,
+            device.icon,
             Gtk.ButtonsType.CLOSE
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();

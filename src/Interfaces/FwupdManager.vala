@@ -26,7 +26,7 @@ public class About.FwupdManager : Object {
 
     public signal void changed ();
 
-    public signal void on_error (string error, Device? device);
+    public signal void on_device_error (Device device, string error);
 
     static FwupdManager? instance = null;
     public static FwupdManager get_instance () {
@@ -224,7 +224,7 @@ public class About.FwupdManager : Object {
         return Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_tmp_dir (), file_path);
     }
 
-    public async string? download_file (string uri) {
+    public async string? download_file (Device device, string uri) {
         var path = get_path (uri);
 
         File server_file = File.new_for_uri (uri);
@@ -238,12 +238,12 @@ public class About.FwupdManager : Object {
         try {
             result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {});
         } catch (Error e) {
-            on_error ("Could not download file: %s".printf (e.message), null);
+            on_device_error (device, "Could not download file: %s".printf (e.message));
             return null;
         }
 
         if (!result) {
-            on_error ("Download of %s was not succesfull".printf (uri), null);
+            on_device_error (device, "Download of %s was not succesfull".printf (uri));
             return null;
         }
 
@@ -284,7 +284,7 @@ public class About.FwupdManager : Object {
             );
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
-            on_error (device.update_error != null ? device.update_error : e.message, device);
+            on_device_error (device, device.update_error != null ? device.update_error : e.message);
             return false;
         }
 
@@ -340,11 +340,11 @@ public class About.FwupdManager : Object {
             }
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
-            on_error (device.update_error, device);
+            on_device_error (device, device.update_error);
         }
 
         if (details.image != null) {
-            details.image = yield download_file (details.image);
+            details.image = yield download_file (device, details.image);
         }
 
         return details;

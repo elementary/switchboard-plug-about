@@ -89,7 +89,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     }
 
     private async void update (Device device, Release release) {
-        var path = yield FwupdManager.get_instance ().download_file (release.uri);
+        var path = yield FwupdManager.get_instance ().download_file (device, release.uri);
 
         var details = yield FwupdManager.get_instance ().get_details (device, path);
 
