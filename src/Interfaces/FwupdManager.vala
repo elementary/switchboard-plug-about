@@ -26,7 +26,7 @@ public class About.FwupdManager : Object {
 
     public signal void changed ();
 
-    public signal void on_error (string error);
+    public signal void on_error (string error, Device? device);
 
     static FwupdManager? instance = null;
     public static FwupdManager get_instance () {
@@ -238,12 +238,12 @@ public class About.FwupdManager : Object {
         try {
             result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {});
         } catch (Error e) {
-            on_error ("Could not download file: %s".printf (e.message));
+            on_error ("Could not download file: %s".printf (e.message), null);
             return null;
         }
 
         if (!result) {
-            on_error ("Download of %s was not succesfull".printf (uri));
+            on_error ("Download of %s was not succesfull".printf (uri), null);
             return null;
         }
 
@@ -284,7 +284,7 @@ public class About.FwupdManager : Object {
             );
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
-            on_error (device.update_error != null ? device.update_error : e.message);
+            on_error (device.update_error != null ? device.update_error : e.message, device);
             return false;
         }
 
@@ -340,7 +340,7 @@ public class About.FwupdManager : Object {
             }
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
-            on_error (device.update_error);
+            on_error (device.update_error, device);
         }
 
         if (details.image != null) {
