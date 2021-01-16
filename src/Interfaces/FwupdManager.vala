@@ -28,6 +28,7 @@ public class About.FwupdManager : Object {
 
     public signal void on_device_added (Device device);
     public signal void on_device_error (Device device, string error);
+    public signal void on_device_removed (Device device);
 
     static FwupdManager? instance = null;
     public static FwupdManager get_instance () {
@@ -375,6 +376,26 @@ public class About.FwupdManager : Object {
                         parse_device.begin (element, (obj, res) => {
                             var device = parse_device.end (res);
                             on_device_added (device);
+                        });
+                    }
+                })
+            );
+
+            connection.signal_subscribe (
+                "org.freedesktop.fwupd",
+                "org.freedesktop.fwupd",
+                "DeviceRemoved",
+                "/",
+                null,
+                DBusSignalFlags.NONE,
+                ((connection, sender_name, object_path, interface_name, signal_name, parameters) => {
+                    var array_iter = parameters.iterator ();
+                    GLib.Variant? element;
+
+                    while ((element = array_iter.next_value ()) != null) {
+                        parse_device.begin (element, (obj, res) => {
+                            var device = parse_device.end (res);
+                            on_device_removed (device);
                         });
                     }
                 })

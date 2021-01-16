@@ -72,13 +72,14 @@ public class About.FirmwareView : Gtk.Stack {
 
         FwupdManager.get_instance ().on_device_added.connect (on_device_added);
         FwupdManager.get_instance ().on_device_error.connect (on_device_error);
+        FwupdManager.get_instance ().on_device_removed.connect (on_device_removed);
 
         update_list_view.begin ();
     }
 
     private async void update_list_view () {
         foreach (unowned Gtk.Widget widget in update_list.get_children ()) {
-            if (widget is Gtk.ListBoxRow) {
+            if (widget is Widgets.FirmwareUpdateRow) {
                 update_list.remove (widget);
             }
         }
@@ -128,5 +129,20 @@ public class About.FirmwareView : Gtk.Stack {
         message_dialog.show_all ();
         message_dialog.run ();
         message_dialog.destroy ();
+    }
+
+    private void on_device_removed (Device device) {
+        debug ("Removed device: %s", device.name);
+
+        foreach (unowned Gtk.Widget widget in update_list.get_children ()) {
+            if (widget is Widgets.FirmwareUpdateRow) {
+                var row = (Widgets.FirmwareUpdateRow) widget;
+                if (row.device.id == device.id) {
+                    update_list.remove (widget);
+                }
+            }
+        }
+
+        update_list.show_all ();
     }
 }
