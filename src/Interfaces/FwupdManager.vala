@@ -24,8 +24,6 @@ extern int ro_fd (string path);
 public class About.FwupdManager : Object {
     private DBusConnection connection;
 
-    public signal void changed ();
-
     public signal void on_device_added (Device device);
     public signal void on_device_error (Device device, string error);
     public signal void on_device_removed (Device device);
