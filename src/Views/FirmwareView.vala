@@ -70,6 +70,7 @@ public class About.FirmwareView : Gtk.Stack {
         add (grid);
         add (progress_view);
 
+        FwupdManager.get_instance ().on_device_added.connect (on_device_added);
         FwupdManager.get_instance ().on_device_error.connect (on_device_error);
 
         update_list_view.begin ();
@@ -83,23 +84,35 @@ public class About.FirmwareView : Gtk.Stack {
         }
 
         foreach (var device in yield FwupdManager.get_instance ().get_devices ()) {
-            if (device.is (DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
-                var row = new Widgets.FirmwareUpdateRow (device);
-                update_list.add (row);
-
-                row.on_update_start.connect (() => {
-                    progress_alert_view.title = _("“%s” is being updated".printf (device.name));
-                    visible_child = progress_view;
-                });
-                row.on_update_end.connect (() => {
-                    visible_child = grid;
-                    update_list_view.begin ();
-                });
-            }
+            add_device (device);
         }
 
         visible_child = grid;
+        update_list.show_all ();
+    }
 
+    private void add_device (Device device) {
+        if (device.is (DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
+            var row = new Widgets.FirmwareUpdateRow (device);
+            update_list.add (row);
+
+            row.on_update_start.connect (() => {
+                progress_alert_view.title = _("“%s” is being updated".printf (device.name));
+                visible_child = progress_view;
+            });
+            row.on_update_end.connect (() => {
+                visible_child = grid;
+                update_list_view.begin ();
+            });
+        }
+    }
+
+    private void on_device_added (Device device) {
+        debug ("Added device: %s", device.name);
+
+        add_device (device);
+
+        visible_child = grid;
         update_list.show_all ();
     }
 

@@ -26,6 +26,7 @@ public class About.FwupdManager : Object {
 
     public signal void changed ();
 
+    public signal void on_device_added (Device device);
     public signal void on_device_error (Device device, string error);
 
     static FwupdManager? instance = null;
@@ -59,58 +60,7 @@ public class About.FwupdManager : Object {
             array_iter = element.iterator ();
 
             while ((element = array_iter.next_value ()) != null) {
-                GLib.Variant? val = null;
-                string? key = null;
-
-                var device_iter = element.iterator ();
-                var device = new Device ();
-                while (device_iter.next ("{sv}", out key, out val)) {
-                    switch (key) {
-                        case "DeviceId":
-                            device.id = val.get_string ();
-                            break;
-                        case "Flags":
-                            device.flags = val.get_uint64 ();
-                            if (device.id.length > 0 && device.is (DeviceFlag.UPDATABLE)) {
-                                device.releases = yield get_releases (device.id);
-                            } else {
-                                device.releases = new List<Release> ();
-                            }
-                            break;
-                        case "Name":
-                            device.name = val.get_string ();
-                            break;
-                        case "Summary":
-                            device.summary = val.get_string ();
-                            break;
-                        case "Vendor":
-                            device.vendor = val.get_string ();
-                            break;
-                        case "VendorId":
-                            if (device.vendor == null) {
-                                device.vendor = val.get_string ();
-                            }
-                            break;
-                        case "Version":
-                            device.version = val.get_string ();
-                            break;
-                        case "Icon":
-                            var icons = val.get_strv ();
-                            device.icon = icons.length > 0 ? icons[0] : "application-x-firmware";
-                            break;
-                        case "Guid":
-                            device.guids = val.get_strv ();
-                            break;
-                        case "InstallDuration":
-                            device.install_duration = val.get_uint32 ();
-                            break;
-                        case "UpdateError":
-                            device.update_error = val.get_string ();
-                            break;
-                        default:
-                            break;
-                    }
-                }
+                var device = yield parse_device (element);
                 devices_list.append (device);
             }
         } catch (Error e) {
@@ -216,6 +166,62 @@ public class About.FwupdManager : Object {
         }
 
         return releases_list;
+    }
+
+    private async Device parse_device (Variant v) {
+        var device = new Device ();
+        var device_iter = v.iterator ();
+        GLib.Variant? val = null;
+        string? key = null;
+        while (device_iter.next ("{sv}", out key, out val)) {
+            switch (key) {
+                case "DeviceId":
+                    device.id = val.get_string ();
+                    break;
+                case "Flags":
+                    device.flags = val.get_uint64 ();
+                    if (device.id.length > 0 && device.is (DeviceFlag.UPDATABLE)) {
+                        device.releases = yield get_releases (device.id);
+                    } else {
+                        device.releases = new List<Release> ();
+                    }
+                    break;
+                case "Name":
+                    device.name = val.get_string ();
+                    break;
+                case "Summary":
+                    device.summary = val.get_string ();
+                    break;
+                case "Vendor":
+                    device.vendor = val.get_string ();
+                    break;
+                case "VendorId":
+                    if (device.vendor == null) {
+                        device.vendor = val.get_string ();
+                    }
+                    break;
+                case "Version":
+                    device.version = val.get_string ();
+                    break;
+                case "Icon":
+                    var icons = val.get_strv ();
+                    device.icon = icons.length > 0 ? icons[0] : "application-x-firmware";
+                    break;
+                case "Guid":
+                    device.guids = val.get_strv ();
+                    break;
+                case "InstallDuration":
+                    device.install_duration = val.get_uint32 ();
+                    break;
+                case "UpdateError":
+                    device.update_error = val.get_string ();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        return device;
     }
 
     private string get_path (string uri) {
@@ -353,6 +359,26 @@ public class About.FwupdManager : Object {
     construct {
         try {
             connection = Bus.get_sync (BusType.SYSTEM);
+
+            connection.signal_subscribe (
+                "org.freedesktop.fwupd",
+                "org.freedesktop.fwupd",
+                "DeviceAdded",
+                "/",
+                null,
+                DBusSignalFlags.NONE,
+                ((connection, sender_name, object_path, interface_name, signal_name, parameters) => {
+                    var array_iter = parameters.iterator ();
+                    GLib.Variant? element;
+
+                    while ((element = array_iter.next_value ()) != null) {
+                        parse_device.begin (element, (obj, res) => {
+                            var device = parse_device.end (res);
+                            on_device_added (device);
+                        });
+                    }
+                })
+            );
         } catch (Error e) {
             warning ("Could not connect to system bus: %s", e.message);
         }
