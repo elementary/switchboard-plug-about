@@ -107,7 +107,7 @@ public class About.FirmwareView : Gtk.Stack {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("Failed to install firmware release"),
             error,
-            "application-x-firmware",
+            device.icon,
             Gtk.ButtonsType.CLOSE
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();

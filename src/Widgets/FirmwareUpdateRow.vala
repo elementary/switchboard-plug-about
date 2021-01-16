@@ -108,9 +108,9 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
     private void show_details_dialog (Details details) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("Manual steps required"),
+            _("“%s” needs to manually be put in update mode").printf (device.name),
             details.caption,
-            "application-x-firmware",
+            device.icon,
             Gtk.ButtonsType.NONE
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();
