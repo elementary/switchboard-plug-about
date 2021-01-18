@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-04 23:20+0000\n"
-"PO-Revision-Date: 2020-12-14 19:03+0000\n"
+"PO-Revision-Date: 2021-01-18 21:57+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:29
@@ -30,7 +30,7 @@ msgstr "צפייה במידע חומרה ומערכת ההפעלה"
 
 #: src/Plug.vala:46
 msgid "Operating System"
-msgstr ""
+msgstr "מערכת הפעלה"
 
 #: src/Plug.vala:47
 msgid "Hardware"
@@ -128,7 +128,7 @@ msgstr "אתר אינטרנט"
 
 #: src/Views/OperatingSystemView.vala:91
 msgid "Get Support"
-msgstr ""
+msgstr "קבלת תמיכה"
 
 #: src/Views/OperatingSystemView.vala:97
 msgid "Suggest Translations"
