@@ -28,6 +28,7 @@ public class About.FwupdManager : Object {
         public abstract signal void device_removed (GLib.HashTable<string, Variant> device);
 
         public abstract async GLib.HashTable<string, Variant>[] get_devices () throws GLib.Error;
+        public abstract async GLib.HashTable<string, Variant>[] get_releases (string device_id) throws GLib.Error;
     }
 
     private DBusConnection connection;
@@ -67,92 +68,9 @@ public class About.FwupdManager : Object {
         var releases_list = new List<Release> ();
 
         try {
-            var result = yield connection.call (
-                "org.freedesktop.fwupd",
-                "/",
-                "org.freedesktop.fwupd",
-                "GetReleases",
-                new Variant (
-                    "(s)",
-                    id
-                ),
-                new VariantType ("(aa{sv})"),
-                DBusCallFlags.NONE,
-                -1
-            );
-
-            var array_iter = result.iterator ();
-            GLib.Variant? element = array_iter.next_value ();
-            array_iter = element.iterator ();
-
-            while ((element = array_iter.next_value ()) != null) {
-                GLib.Variant? val = null;
-                string? key = null;
-
-                var release_iter = element.iterator ();
-                var release = new Release ();
-                release.icon = "security-high";
-                while (release_iter.next ("{sv}", out key, out val)) {
-                    switch (key) {
-                        case "Filename":
-                            release.filename = val.get_string ();
-                            break;
-                        case "Name":
-                            release.name = val.get_string ();
-                            break;
-                        case "Summary":
-                            release.summary = val.get_string ();
-                            break;
-                        case "Version":
-                            release.version = val.get_string ();
-                            break;
-                        case "Description":
-                            release.description = val.get_string ()
-                            .replace ("<p>", "")
-                            .replace ("</p>", "\n\n")
-                            .replace ("<li>", " • ")
-                            .replace ("</li>", "\n")
-                            .replace ("<ul>", "")
-                            .replace ("</ul>", "\n")
-                            .replace ("<ol>", "") // TODO: add support for ordered lists
-                            .replace ("</ol>", "\n")
-                            .strip ();
-                            break;
-                        case "Protocol":
-                            release.protocol = val.get_string ();
-                            break;
-                        case "RemoteId":
-                            release.remote_id = val.get_string ();
-                            break;
-                        case "AppstreamId":
-                            release.appstream_id = val.get_string ();
-                            break;
-                        case "Checksum":
-                            release.checksum = val.get_string ();
-                            break;
-                        case "Vendor":
-                            release.vendor = val.get_string ();
-                            break;
-                        case "Size":
-                            release.size = val.get_uint64 ();
-                            break;
-                        case "License":
-                            release.license = val.get_string ();
-                            break;
-                        case "TrustFlags":
-                            release.flag = (ReleaseFlag) val.get_uint64 ();
-                            break;
-                        case "InstallDuration":
-                            release.install_duration = val.get_uint32 ();
-                            break;
-                        case "Uri":
-                            release.uri = val.get_string ();
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                releases_list.append (release);
+            var result = yield fwupd.get_releases (id);
+            foreach (unowned GLib.HashTable<string, Variant> release in result) {
+                releases_list.append (yield parse_release (release));
             }
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
@@ -214,6 +132,75 @@ public class About.FwupdManager : Object {
         }
 
         return device;
+    }
+
+    private async Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
+        var release = new Release () {
+            icon = "security-high"
+        };
+
+        serialized_release.@foreach ((key, val) => {
+            switch (key) {
+                case "Filename":
+                    release.filename = val.get_string ();
+                    break;
+                case "Name":
+                    release.name = val.get_string ();
+                    break;
+                case "Summary":
+                    release.summary = val.get_string ();
+                    break;
+                case "Version":
+                    release.version = val.get_string ();
+                    break;
+                case "Description":
+                    release.description = val.get_string ()
+                    .replace ("<p>", "")
+                    .replace ("</p>", "\n\n")
+                    .replace ("<li>", " • ")
+                    .replace ("</li>", "\n")
+                    .replace ("<ul>", "")
+                    .replace ("</ul>", "\n")
+                    .replace ("<ol>", "") // TODO: add support for ordered lists
+                    .replace ("</ol>", "\n")
+                    .strip ();
+                    break;
+                case "Protocol":
+                    release.protocol = val.get_string ();
+                    break;
+                case "RemoteId":
+                    release.remote_id = val.get_string ();
+                    break;
+                case "AppstreamId":
+                    release.appstream_id = val.get_string ();
+                    break;
+                case "Checksum":
+                    release.checksum = val.get_string ();
+                    break;
+                case "Vendor":
+                    release.vendor = val.get_string ();
+                    break;
+                case "Size":
+                    release.size = val.get_uint64 ();
+                    break;
+                case "License":
+                    release.license = val.get_string ();
+                    break;
+                case "TrustFlags":
+                    release.flag = (ReleaseFlag) val.get_uint64 ();
+                    break;
+                case "InstallDuration":
+                    release.install_duration = val.get_uint32 ();
+                    break;
+                case "Uri":
+                    release.uri = val.get_string ();
+                    break;
+                default:
+                    break;
+            }
+        });
+
+        return release;
     }
 
     private string get_path (string uri) {
