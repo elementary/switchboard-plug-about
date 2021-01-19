@@ -29,6 +29,7 @@ public class About.FwupdManager : Object {
 
         public abstract async GLib.HashTable<string, Variant>[] get_devices () throws GLib.Error;
         public abstract async GLib.HashTable<string, Variant>[] get_releases (string device_id) throws GLib.Error;
+        public abstract async void install (string id, UnixInputStream handle, GLib.HashTable<string, Variant> options) throws GLib.Error;
     }
 
     private DBusConnection connection;
@@ -238,35 +239,17 @@ public class About.FwupdManager : Object {
     public async bool install (Device device, string path) {
         try {
             // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
-            var options = new VariantBuilder (new VariantType ("a{sv}"));
-            options.add ("{sv}", "reason", new Variant.string ("user-action"));
-            options.add ("{sv}", "filename", new Variant.string (path));
-            options.add ("{sv}", "allow-older", new Variant.boolean (true));
-            options.add ("{sv}", "allow-reinstall", new Variant.boolean (true));
-            options.add ("{sv}", "no-history", new Variant.boolean (true));
+            var options = new GLib.HashTable<string, Variant> (str_hash, str_equal);
+            options.insert ("reason", new Variant.string ("user-action"));
+            options.insert ("filename", new Variant.string (path));
+            options.insert ("allow-older", new Variant.boolean (true));
+            options.insert ("allow-reinstall", new Variant.boolean (true));
+            options.insert ("no-history", new Variant.boolean (true));
 
             var fd = ro_fd (path);
-            var stream = new UnixInputStream (fd, true);
+            var handle = new UnixInputStream (fd, true);
 
-            var fd_list = new UnixFDList ();
-            fd_list.append (stream.fd);
-
-            var parameters = new VariantBuilder (new VariantType ("(sha{sv})"));
-            parameters.add_value (new Variant.string (device.id));
-            parameters.add_value (new Variant.handle (0));
-            parameters.add_value (options.end ());
-
-            yield connection.call_with_unix_fd_list (
-                "org.freedesktop.fwupd",
-                "/",
-                "org.freedesktop.fwupd",
-                "Install",
-                parameters.end (),
-                null,
-                DBusCallFlags.NONE,
-                -1,
-                fd_list
-            );
+            yield fwupd.install (device.id, handle, options);
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
             on_device_error (device, device.update_error != null ? device.update_error : e.message);
