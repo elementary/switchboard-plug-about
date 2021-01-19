@@ -146,7 +146,7 @@ public class About.FwupdManager : Object {
                             release.license = val.get_string ();
                             break;
                         case "TrustFlags":
-                            release.flag = ReleaseFlag.from_uint64 (val.get_uint64 ());
+                            release.flag = (ReleaseFlag) val.get_uint64 ();
                             break;
                         case "InstallDuration":
                             release.install_duration = val.get_uint32 ();
@@ -178,8 +178,8 @@ public class About.FwupdManager : Object {
                     device.id = val.get_string ();
                     break;
                 case "Flags":
-                    device.flags = val.get_uint64 ();
-                    if (device.id.length > 0 && device.is (DeviceFlag.UPDATABLE)) {
+                    device.flags = (DeviceFlag) val.get_uint64 ();
+                    if (device.id.length > 0 && device.has_flag (DeviceFlag.UPDATABLE)) {
                         device.releases = yield get_releases (device.id);
                     } else {
                         device.releases = new List<Release> ();

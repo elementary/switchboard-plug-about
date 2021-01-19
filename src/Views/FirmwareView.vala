@@ -93,7 +93,7 @@ public class About.FirmwareView : Gtk.Stack {
     }
 
     private void add_device (Device device) {
-        if (device.is (DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
+        if (device.has_flag (DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
             var row = new Widgets.FirmwareUpdateRow (device);
             update_list.add (row);
 

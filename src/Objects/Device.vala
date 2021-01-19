@@ -27,20 +27,14 @@ public class About.Device : Object {
     public string vendor { get; set; }
     public string version { get; set; }
     public string[] guids { get; set; }
-    public uint64 flags { get; set; }
+    public DeviceFlag flags { get; set; }
     public uint32 install_duration { get; set; }
     public string update_error { get; set; }
 
     public List<Release> releases { get; owned set; }
     public Release latest_release { get { return releases.nth_data (0); }}
 
-    public bool is (DeviceFlag flag) {
-        foreach (var f in DeviceFlag.get_list (flags)) {
-            if (f == flag) {
-                return true;
-            }
-        }
-
-        return false;
+    public bool has_flag (DeviceFlag flag) {
+        return flag in flags;
     }
 }

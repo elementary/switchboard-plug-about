@@ -98,9 +98,9 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         }
 
         if ((yield FwupdManager.get_instance ().install (device, path)) == true) {
-            if (device.is (DeviceFlag.NEEDS_REBOOT)) {
+            if (device.has_flag (DeviceFlag.NEEDS_REBOOT)) {
                 show_reboot_dialog ();
-            } else if (device.is (DeviceFlag.NEEDS_SHUTDOWN)) {
+            } else if (device.has_flag (DeviceFlag.NEEDS_SHUTDOWN)) {
                 show_shutdown_dialog ();
             }
         }
