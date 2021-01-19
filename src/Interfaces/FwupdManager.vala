@@ -30,9 +30,9 @@ public class About.FwupdManager : Object {
         public abstract async GLib.HashTable<string, Variant>[] get_devices () throws GLib.Error;
         public abstract async GLib.HashTable<string, Variant>[] get_releases (string device_id) throws GLib.Error;
         public abstract async void install (string id, UnixInputStream handle, GLib.HashTable<string, Variant> options) throws GLib.Error;
+        public abstract async GLib.HashTable<string, Variant>[] get_details (UnixInputStream handle) throws GLib.Error;
     }
 
-    private DBusConnection connection;
     private FwupdInterface fwupd;
 
     public signal void on_device_added (Device device);
@@ -264,39 +264,14 @@ public class About.FwupdManager : Object {
 
         try {
             var fd = ro_fd (path);
-            var stream = new UnixInputStream (fd, true);
+            var handle = new UnixInputStream (fd, true);
 
-            var fd_list = new UnixFDList ();
-            fd_list.append (stream.fd);
-
-            var parameters = new VariantBuilder (new VariantType ("(h)"));
-            parameters.add_value (new Variant.handle (0));
-
-            var r = yield connection.call_with_unix_fd_list (
-                "org.freedesktop.fwupd",
-                "/",
-                "org.freedesktop.fwupd",
-                "GetDetails",
-                parameters.end (),
-                new VariantType ("(aa{sv})"),
-                DBusCallFlags.NONE,
-                -1,
-                fd_list
-            );
-
-            var array_iter = r.iterator ();
-            GLib.Variant? element = array_iter.next_value ();
-            array_iter = element.iterator ();
-
-            while ((element = array_iter.next_value ()) != null) {
-                GLib.Variant? val = null;
-                string? key = null;
-
-                var details_iter = element.iterator ();
-                while (details_iter.next ("{sv}", out key, out val)) {
+            var result = yield fwupd.get_details (handle);
+            foreach (unowned GLib.HashTable<string, Variant> serialized_details in result) {
+                serialized_details.@foreach ((key, val) => {
                     if (key == "Release") {
-                        var release_iter = val.iterator ().next_value ().iterator ();
-                        while (release_iter.next ("{sv}", out key, out val)) {
+                        var iter = val.iterator ().next_value ().iterator ();
+                        while (iter.next ("{sv}", out key, out val)) {
                             if (key == "DetachCaption") {
                                 details.caption = val.get_string ();
                             } else if (key == "DetachImage") {
@@ -304,7 +279,7 @@ public class About.FwupdManager : Object {
                             }
                         }
                     }
-                }
+                });
             }
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
@@ -320,7 +295,6 @@ public class About.FwupdManager : Object {
 
     construct {
         try {
-            connection = Bus.get_sync (BusType.SYSTEM);
             fwupd = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
 
             fwupd.device_added.connect ((serialized_device) => {
