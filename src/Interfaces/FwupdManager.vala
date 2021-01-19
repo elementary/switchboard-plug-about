@@ -22,7 +22,16 @@
 extern int ro_fd (string path);
 
 public class About.FwupdManager : Object {
+    [DBus (name = "org.freedesktop.fwupd")]
+    public interface FwupdInterface : Object {
+        public abstract signal void device_added (GLib.HashTable<string, Variant> device);
+        public abstract signal void device_removed (GLib.HashTable<string, Variant> device);
+
+        public abstract async GLib.HashTable<string, Variant>[] get_devices () throws GLib.Error;
+    }
+
     private DBusConnection connection;
+    private FwupdInterface fwupd;
 
     public signal void on_device_added (Device device);
     public signal void on_device_error (Device device, string error);
@@ -43,24 +52,9 @@ public class About.FwupdManager : Object {
         var devices_list = new List<Device> ();
 
         try {
-            var result = yield connection.call (
-                "org.freedesktop.fwupd",
-                "/",
-                "org.freedesktop.fwupd",
-                "GetDevices",
-                null,
-                new VariantType ("(aa{sv})"),
-                DBusCallFlags.NONE,
-                -1
-            );
-
-            var array_iter = result.iterator ();
-            GLib.Variant? element = array_iter.next_value ();
-            array_iter = element.iterator ();
-
-            while ((element = array_iter.next_value ()) != null) {
-                var device = yield parse_device (element);
-                devices_list.append (device);
+            var result = yield fwupd.get_devices ();
+            foreach (unowned GLib.HashTable<string, Variant> device in result) {
+                devices_list.append (yield parse_device (device));
             }
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
@@ -167,23 +161,16 @@ public class About.FwupdManager : Object {
         return releases_list;
     }
 
-    private async Device parse_device (Variant v) {
+    private async Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
         var device = new Device ();
-        var device_iter = v.iterator ();
-        GLib.Variant? val = null;
-        string? key = null;
-        while (device_iter.next ("{sv}", out key, out val)) {
+
+        serialized_device.@foreach ((key, val) => {
             switch (key) {
                 case "DeviceId":
                     device.id = val.get_string ();
                     break;
                 case "Flags":
                     device.flags = (DeviceFlag) val.get_uint64 ();
-                    if (device.id.length > 0 && device.has_flag (DeviceFlag.UPDATABLE)) {
-                        device.releases = yield get_releases (device.id);
-                    } else {
-                        device.releases = new List<Release> ();
-                    }
                     break;
                 case "Name":
                     device.name = val.get_string ();
@@ -218,6 +205,12 @@ public class About.FwupdManager : Object {
                 default:
                     break;
             }
+        });
+
+        if (device.id.length > 0 && device.has_flag (DeviceFlag.UPDATABLE)) {
+            device.releases = yield get_releases (device.id);
+        } else {
+            device.releases = new List<Release> ();
         }
 
         return device;
@@ -358,46 +351,21 @@ public class About.FwupdManager : Object {
     construct {
         try {
             connection = Bus.get_sync (BusType.SYSTEM);
+            fwupd = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
 
-            connection.signal_subscribe (
-                "org.freedesktop.fwupd",
-                "org.freedesktop.fwupd",
-                "DeviceAdded",
-                "/",
-                null,
-                DBusSignalFlags.NONE,
-                ((connection, sender_name, object_path, interface_name, signal_name, parameters) => {
-                    var array_iter = parameters.iterator ();
-                    GLib.Variant? element;
+            fwupd.device_added.connect ((serialized_device) => {
+                parse_device.begin (serialized_device, (obj, res) => {
+                    var device = parse_device.end (res);
+                    on_device_added (device);
+                });
+            });
 
-                    while ((element = array_iter.next_value ()) != null) {
-                        parse_device.begin (element, (obj, res) => {
-                            var device = parse_device.end (res);
-                            on_device_added (device);
-                        });
-                    }
-                })
-            );
-
-            connection.signal_subscribe (
-                "org.freedesktop.fwupd",
-                "org.freedesktop.fwupd",
-                "DeviceRemoved",
-                "/",
-                null,
-                DBusSignalFlags.NONE,
-                ((connection, sender_name, object_path, interface_name, signal_name, parameters) => {
-                    var array_iter = parameters.iterator ();
-                    GLib.Variant? element;
-
-                    while ((element = array_iter.next_value ()) != null) {
-                        parse_device.begin (element, (obj, res) => {
-                            var device = parse_device.end (res);
-                            on_device_removed (device);
-                        });
-                    }
-                })
-            );
+            fwupd.device_removed.connect ((serialized_device) => {
+                parse_device.begin (serialized_device, (obj, res) => {
+                    var device = parse_device.end (res);
+                    on_device_removed (device);
+                });
+            });
         } catch (Error e) {
             warning ("Could not connect to system bus: %s", e.message);
         }
