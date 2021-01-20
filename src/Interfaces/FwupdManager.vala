@@ -37,17 +37,6 @@ public class About.FwupdManager : Object {
     public signal void on_device_error (Fwupd.Device device, string error);
     public signal void on_device_removed (Fwupd.Device device);
 
-    static FwupdManager? instance = null;
-    public static FwupdManager get_instance () {
-        if (instance == null) {
-            instance = new FwupdManager ();
-        }
-
-        return instance;
-    }
-
-    private FwupdManager () {}
-
     public async List<Fwupd.Device> get_devices () {
         var devices_list = new List<Fwupd.Device> ();
 

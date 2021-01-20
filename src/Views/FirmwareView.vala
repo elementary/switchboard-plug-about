@@ -24,8 +24,11 @@ public class About.FirmwareView : Gtk.Stack {
     private Granite.Widgets.AlertView progress_alert_view;
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
+    private FwupdManager fwupd;
 
     construct {
+        fwupd = new FwupdManager ();
+
         transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
 
         progress_alert_view = new Granite.Widgets.AlertView (
@@ -70,9 +73,9 @@ public class About.FirmwareView : Gtk.Stack {
         add (grid);
         add (progress_view);
 
-        FwupdManager.get_instance ().on_device_added.connect (on_device_added);
-        FwupdManager.get_instance ().on_device_error.connect (on_device_error);
-        FwupdManager.get_instance ().on_device_removed.connect (on_device_removed);
+        fwupd.on_device_added.connect (on_device_added);
+        fwupd.on_device_error.connect (on_device_error);
+        fwupd.on_device_removed.connect (on_device_removed);
 
         update_list_view.begin ();
     }
@@ -84,7 +87,7 @@ public class About.FirmwareView : Gtk.Stack {
             }
         }
 
-        foreach (var device in yield FwupdManager.get_instance ().get_devices ()) {
+        foreach (var device in yield fwupd.get_devices ()) {
             add_device (device);
         }
 
@@ -94,7 +97,7 @@ public class About.FirmwareView : Gtk.Stack {
 
     private void add_device (Fwupd.Device device) {
         if (device.has_flag (Fwupd.DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
-            var row = new Widgets.FirmwareUpdateRow (device);
+            var row = new Widgets.FirmwareUpdateRow (fwupd, device);
             update_list.add (row);
 
             row.on_update_start.connect (() => {

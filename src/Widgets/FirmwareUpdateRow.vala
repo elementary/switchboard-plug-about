@@ -20,13 +20,16 @@
 */
 
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
+    private FwupdManager fwupd;
     public Fwupd.Device device { get; construct set; }
 
     public signal void on_update_start ();
     public signal void on_update_end ();
 
-    public FirmwareUpdateRow (Fwupd.Device device) {
+    public FirmwareUpdateRow (FwupdManager fwupd, Fwupd.Device device) {
         Object (device: device);
+
+        this.fwupd = fwupd;
     }
 
     construct {
@@ -89,9 +92,9 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     }
 
     private async void update (Fwupd.Device device, Fwupd.Release release) {
-        var path = yield FwupdManager.get_instance ().download_file (device, release.uri);
+        var path = yield fwupd.download_file (device, release.uri);
 
-        var details = yield FwupdManager.get_instance ().get_details (device, path);
+        var details = yield fwupd.get_details (device, path);
 
         if (details.caption != null) {
             if (show_details_dialog (details) == false) {
@@ -99,7 +102,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             }
         }
 
-        if ((yield FwupdManager.get_instance ().install (device, path)) == true) {
+        if ((yield fwupd.install (device, path)) == true) {
             if (device.has_flag (Fwupd.DeviceFlag.NEEDS_REBOOT)) {
                 show_reboot_dialog ();
             } else if (device.has_flag (Fwupd.DeviceFlag.NEEDS_SHUTDOWN)) {
