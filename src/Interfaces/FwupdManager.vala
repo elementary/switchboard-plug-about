@@ -269,11 +269,13 @@ public class About.FwupdManager : Object {
                 serialized_details.@foreach ((key, val) => {
                     if (key == "Release") {
                         var iter = val.iterator ().next_value ().iterator ();
-                        while (iter.next ("{sv}", out key, out val)) {
-                            if (key == "DetachCaption") {
-                                details.caption = val.get_string ();
-                            } else if (key == "DetachImage") {
-                                details.image = val.get_string ();
+                        string details_key;
+                        Variant details_val;
+                        while (iter.next ("{sv}", out details_key, out details_val)) {
+                            if (details_key == "DetachCaption") {
+                                details.caption = details_val.get_string ();
+                            } else if (details_key == "DetachImage") {
+                                details.image = details_val.get_string ();
                             }
                         }
                     }
