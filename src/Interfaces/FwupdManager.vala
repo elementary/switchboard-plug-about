@@ -33,9 +33,9 @@ public class About.FwupdManager : Object {
 
     private FwupdInterface fwupd;
 
-    public signal void on_device_added (Device device);
-    public signal void on_device_error (Device device, string error);
-    public signal void on_device_removed (Device device);
+    public signal void on_device_added (Fwupd.Device device);
+    public signal void on_device_error (Fwupd.Device device, string error);
+    public signal void on_device_removed (Fwupd.Device device);
 
     static FwupdManager? instance = null;
     public static FwupdManager get_instance () {
@@ -48,8 +48,8 @@ public class About.FwupdManager : Object {
 
     private FwupdManager () {}
 
-    public async List<Device> get_devices () {
-        var devices_list = new List<Device> ();
+    public async List<Fwupd.Device> get_devices () {
+        var devices_list = new List<Fwupd.Device> ();
 
         try {
             var result = yield fwupd.get_devices ();
@@ -63,8 +63,8 @@ public class About.FwupdManager : Object {
         return devices_list;
     }
 
-    private async List<Release> get_releases (string id) {
-        var releases_list = new List<Release> ();
+    private async List<Fwupd.Release> get_releases (string id) {
+        var releases_list = new List<Fwupd.Release> ();
 
         try {
             var result = yield fwupd.get_releases (id);
@@ -78,8 +78,8 @@ public class About.FwupdManager : Object {
         return releases_list;
     }
 
-    private async Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
-        var device = new Device ();
+    private async Fwupd.Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
+        var device = new Fwupd.Device ();
 
         serialized_device.@foreach ((key, val) => {
             switch (key) {
@@ -87,7 +87,7 @@ public class About.FwupdManager : Object {
                     device.id = val.get_string ();
                     break;
                 case "Flags":
-                    device.flags = (DeviceFlag) val.get_uint64 ();
+                    device.flags = (Fwupd.DeviceFlag) val.get_uint64 ();
                     break;
                 case "Name":
                     device.name = val.get_string ();
@@ -124,17 +124,17 @@ public class About.FwupdManager : Object {
             }
         });
 
-        if (device.id.length > 0 && device.has_flag (DeviceFlag.UPDATABLE)) {
+        if (device.id.length > 0 && device.has_flag (Fwupd.DeviceFlag.UPDATABLE)) {
             device.releases = yield get_releases (device.id);
         } else {
-            device.releases = new List<Release> ();
+            device.releases = new List<Fwupd.Release> ();
         }
 
         return device;
     }
 
-    private Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
-        var release = new Release () {
+    private Fwupd.Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
+        var release = new Fwupd.Release () {
             icon = "security-high"
         };
 
@@ -186,7 +186,7 @@ public class About.FwupdManager : Object {
                     release.license = val.get_string ();
                     break;
                 case "TrustFlags":
-                    release.flag = (ReleaseFlag) val.get_uint64 ();
+                    release.flag = (Fwupd.ReleaseFlag) val.get_uint64 ();
                     break;
                 case "InstallDuration":
                     release.install_duration = val.get_uint32 ();
@@ -208,7 +208,7 @@ public class About.FwupdManager : Object {
         return Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_tmp_dir (), file_path);
     }
 
-    public async string? download_file (Device device, string uri) {
+    public async string? download_file (Fwupd.Device device, string uri) {
         var path = get_path (uri);
 
         File server_file = File.new_for_uri (uri);
@@ -234,7 +234,7 @@ public class About.FwupdManager : Object {
         return path;
     }
 
-    public async bool install (Device device, string path) {
+    public async bool install (Fwupd.Device device, string path) {
         try {
             // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
             var options = new GLib.HashTable<string, Variant> (str_hash, str_equal);
@@ -257,8 +257,8 @@ public class About.FwupdManager : Object {
         return true;
     }
 
-    public async Details get_details (Device device, string path) {
-        var details = new Details ();
+    public async Fwupd.Details get_details (Fwupd.Device device, string path) {
+        var details = new Fwupd.Details ();
 
         try {
             var fd = Posix.open (path, Posix.O_RDONLY);

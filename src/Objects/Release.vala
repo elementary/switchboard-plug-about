@@ -19,7 +19,7 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.Release : Object {
+public class Fwupd.Release : Object {
     public string filename { get; set; }
     public string name { get; set; }
     public string summary { get; set; }

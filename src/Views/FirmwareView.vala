@@ -92,8 +92,8 @@ public class About.FirmwareView : Gtk.Stack {
         update_list.show_all ();
     }
 
-    private void add_device (Device device) {
-        if (device.has_flag (DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
+    private void add_device (Fwupd.Device device) {
+        if (device.has_flag (Fwupd.DeviceFlag.UPDATABLE) && device.releases.length () > 0) {
             var row = new Widgets.FirmwareUpdateRow (device);
             update_list.add (row);
 
@@ -108,7 +108,7 @@ public class About.FirmwareView : Gtk.Stack {
         }
     }
 
-    private void on_device_added (Device device) {
+    private void on_device_added (Fwupd.Device device) {
         debug ("Added device: %s", device.name);
 
         add_device (device);
@@ -117,7 +117,7 @@ public class About.FirmwareView : Gtk.Stack {
         update_list.show_all ();
     }
 
-    private void on_device_error (Device device, string error) {
+    private void on_device_error (Fwupd.Device device, string error) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("Failed to install firmware release"),
             error,
@@ -131,7 +131,7 @@ public class About.FirmwareView : Gtk.Stack {
         message_dialog.destroy ();
     }
 
-    private void on_device_removed (Device device) {
+    private void on_device_removed (Fwupd.Device device) {
         debug ("Removed device: %s", device.name);
 
         foreach (unowned Gtk.Widget widget in update_list.get_children ()) {

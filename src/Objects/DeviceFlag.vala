@@ -21,7 +21,7 @@
 
 // https://github.com/fwupd/fwupd/blob/72df1147933de747312aa7c9892f07e7916b8a39/libfwupd/fwupd-enums.h#L133
 [Flags]
-public enum About.DeviceFlag {
+public enum Fwupd.DeviceFlag {
     NONE = (0u),                         /* Since: 0.1.3 */
     INTERNAL = (1u << 0),                /* Since: 0.1.3 */
     UPDATABLE = (1u << 1),               /* Since: 0.9.7 */

@@ -21,7 +21,7 @@
 
 // https://github.com/fwupd/fwupd/blob/72df1147933de747312aa7c9892f07e7916b8a39/libfwupd/fwupd-enums.h#L192
 [Flags]
-public enum About.ReleaseFlag {
+public enum Fwupd.ReleaseFlag {
     NONE = (0u),                     /* Since: 1.2.6 */
     TRUSTED_PAYLOAD = (1u << 0),     /* Since: 1.2.6 */
     TRUSTED_METADATA = (1u << 1),    /* Since: 1.2.6 */
