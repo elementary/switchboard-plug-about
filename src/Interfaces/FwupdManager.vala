@@ -19,8 +19,6 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-extern int ro_fd (string path);
-
 public class About.FwupdManager : Object {
     [DBus (name = "org.freedesktop.fwupd")]
     public interface FwupdInterface : Object {
@@ -246,7 +244,7 @@ public class About.FwupdManager : Object {
             options.insert ("allow-reinstall", new Variant.boolean (true));
             options.insert ("no-history", new Variant.boolean (true));
 
-            var fd = ro_fd (path);
+            var fd = Posix.open (path, Posix.O_RDONLY);
             var handle = new UnixInputStream (fd, true);
 
             yield fwupd.install (device.id, handle, options);
@@ -263,7 +261,7 @@ public class About.FwupdManager : Object {
         var details = new Details ();
 
         try {
-            var fd = ro_fd (path);
+            var fd = Posix.open (path, Posix.O_RDONLY);
             var handle = new UnixInputStream (fd, true);
 
             var result = yield fwupd.get_details (handle);

@@ -1,5 +1,4 @@
 plug_files = files(
-    'fd.c',
     'Plug.vala',
     'Interfaces/FwupdManager.vala',
     'Interfaces/LoginManager.vala',
