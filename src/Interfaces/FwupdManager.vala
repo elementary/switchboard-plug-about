@@ -57,7 +57,7 @@ public class About.FwupdManager : Object {
                 devices_list.append (yield parse_device (device));
             }
         } catch (Error e) {
-            warning ("Could not connect to fwupd interface: %s", e.message);
+            warning ("Could not get devices: %s", e.message);
         }
 
         return devices_list;
@@ -72,7 +72,7 @@ public class About.FwupdManager : Object {
                 releases_list.append (parse_release (release));
             }
         } catch (Error e) {
-            warning ("Could not connect to fwupd interface: %s", e.message);
+            warning ("Could not get releases for “%s”: %s", id, e.message);
         }
 
         return releases_list;
@@ -249,7 +249,7 @@ public class About.FwupdManager : Object {
 
             yield fwupd.install (device.id, handle, options);
         } catch (Error e) {
-            warning ("Could not connect to fwupd interface: %s", e.message);
+            warning ("Could not install release for “%s”: %s", device.id, e.message);
             on_device_error (device, device.update_error != null ? device.update_error : e.message);
             return false;
         }
@@ -280,7 +280,7 @@ public class About.FwupdManager : Object {
                 });
             }
         } catch (Error e) {
-            warning ("Could not connect to fwupd interface: %s", e.message);
+            warning ("Could not get details for “%s”: %s", device.id, e.message);
             on_device_error (device, device.update_error);
         }
 
