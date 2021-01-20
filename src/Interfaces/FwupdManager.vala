@@ -21,7 +21,7 @@
 
 public class About.FwupdManager : Object {
     [DBus (name = "org.freedesktop.fwupd")]
-    public interface FwupdInterface : Object {
+    private interface FwupdInterface : Object {
         public abstract signal void device_added (GLib.HashTable<string, Variant> device);
         public abstract signal void device_removed (GLib.HashTable<string, Variant> device);
 
