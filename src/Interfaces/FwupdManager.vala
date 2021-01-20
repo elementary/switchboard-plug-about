@@ -71,7 +71,7 @@ public class About.FwupdManager : Object {
         try {
             var result = yield fwupd.get_releases (id);
             foreach (unowned GLib.HashTable<string, Variant> release in result) {
-                releases_list.append (yield parse_release (release));
+                releases_list.append (parse_release (release));
             }
         } catch (Error e) {
             warning ("Could not connect to fwupd interface: %s", e.message);
@@ -135,7 +135,7 @@ public class About.FwupdManager : Object {
         return device;
     }
 
-    private async Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
+    private Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
         var release = new Release () {
             icon = "security-high"
         };
