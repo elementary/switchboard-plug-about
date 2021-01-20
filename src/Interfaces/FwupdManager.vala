@@ -203,10 +203,6 @@ public class About.FwupdManager : Object {
         File server_file = File.new_for_uri (uri);
         File local_file = File.new_for_path (path);
 
-        if (FileUtils.test (path, FileTest.IS_REGULAR)) {
-            return path;
-        }
-
         bool result;
         try {
             result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {});
