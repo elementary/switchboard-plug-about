@@ -73,52 +73,52 @@ public enum Fwupd.DeviceFlag {
             case NONE:
                 return null;
             case INTERNAL:
-                /* TRANSLATORS: Device cannot be removed easily*/
+                /// TRANSLATORS: Device cannot be removed easily
                 return _("Internal device");
             case UPDATABLE:
-                /* TRANSLATORS: Device is updatable in this or any other mode */
+                /// TRANSLATORS: Device is updatable in this or any other mode
                 return _("Updatable");
             case ONLY_OFFLINE:
-                /* TRANSLATORS: Update can only be done from offline mode */
+                /// TRANSLATORS: Update can only be done from offline mode
                 return _("Update requires restarting the system");
             case REQUIRE_AC:
-                /* TRANSLATORS: Must be plugged in to an outlet */
+                /// TRANSLATORS: Must be plugged in to an outlet
                 return _("System requires external power source");
             case LOCKED:
-                /* TRANSLATORS: Is locked and can be unlocked */
+                /// TRANSLATORS: Is locked and can be unlocked
                 return _("Device is locked");
             case SUPPORTED:
-                /* TRANSLATORS: Is found in current metadata */
+                /// TRANSLATORS: Is found in current metadata
                 return _("Supported on LVFS");
             case NEEDS_BOOTLOADER:
-                /* TRANSLATORS: Requires a bootloader mode to be manually enabled by the user */
+                /// TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
                 return _("Requires a bootloader");
             case NEEDS_REBOOT:
-                /* TRANSLATORS: Requires a reboot to apply firmware or to reload hardware */
+                /// TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
                 return _("Update requires restarting the system");
             case NEEDS_SHUTDOWN:
-                /* TRANSLATORS: Requires system shutdown to apply firmware */
+                /// TRANSLATORS: Requires system shutdown to apply firmware
                 return _("Requires the system to shut down after installation");
             case REPORTED:
-                /* TRANSLATORS: Has been reported to a metadata server */
+                /// TRANSLATORS: Has been reported to a metadata server
                 return _("Reported to LVFS");
             case NOTIFIED:
-                /* TRANSLATORS: User has been notified */
+                /// TRANSLATORS: User has been notified
                 return _("User has been notified");
             case USE_RUNTIME_VERSION:
                 /* skip */
                 return null;
             case INSTALL_PARENT_FIRST:
-                /* TRANSLATORS: Install composite firmware on the parent before the child */
+                /// TRANSLATORS: Install composite firmware on the parent before the child
                 return _("Install to parent device first");
             case IS_BOOTLOADER:
-                /* TRANSLATORS: Is currently in bootloader mode */
+                /// TRANSLATORS: Is currently in bootloader mode
                 return _("Is in bootloader mode");
             case WAIT_FOR_REPLUG:
-                /* TRANSLATORS: The hardware is waiting to be replugged */
+                /// TRANSLATORS: The hardware is waiting to be replugged
                 return _("Hardware is waiting to be replugged");
             case IGNORE_VALIDATION:
-                /* TRANSLATORS: Ignore validation safety checks when flashing this device */
+                /// TRANSLATORS: Ignore validation safety checks when flashing this device
                 return _("Ignore validation safety checks");
             case ANOTHER_WRITE_REQUIRED:
                 /* skip */
@@ -127,7 +127,7 @@ public enum Fwupd.DeviceFlag {
                 /* skip */
                 return null;
             case NEEDS_ACTIVATION:
-                /* TRANSLATORS: Device update needs to be separately activated */
+                /// TRANSLATORS: Device update needs to be separately activated
                 return _("Device update needs activation");
             case ENSURE_SEMVER:
                 /* skip */
@@ -139,22 +139,22 @@ public enum Fwupd.DeviceFlag {
                 /* skip */
                 return null;
             case WILL_DISAPPEAR:
-                /* TRANSLATORS: Device will not return after update completes */
+                /// TRANSLATORS: Device will not return after update completes
                 return _("Device will not re-appear after update completes");
             case CAN_VERIFY:
-                /* TRANSLATORS: Device supports some form of checksum verification */
+                /// TRANSLATORS: Device supports some form of checksum verification
                 return _("Cryptographic hash verification is available");
             case CAN_VERIFY_IMAGE:
                 /* skip */
                 return null;
             case DUAL_IMAGE:
-                /* TRANSLATORS: Device supports a safety mechanism for flashing */
+                /// TRANSLATORS: Device supports a safety mechanism for flashing
                 return _("Device stages updates");
             case SELF_RECOVERY:
-                /* TRANSLATORS: Device supports a safety mechanism for flashing */
+                /// TRANSLATORS: Device supports a safety mechanism for flashing
                 return _("Device can recover flash failures");
             case USABLE_DURING_UPDATE:
-                /* TRANSLATORS: Device remains usable during update */
+                /// TRANSLATORS: Device remains usable during update
                 return _("Device is usable for the duration of the update");
             case UNKNOWN:
                 return null;
