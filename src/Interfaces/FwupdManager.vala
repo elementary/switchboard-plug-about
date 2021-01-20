@@ -242,7 +242,7 @@ public class About.FwupdManager : Object {
         return true;
     }
 
-    public async Fwupd.Details get_details (Fwupd.Device device, string path) {
+    public async Fwupd.Details get_release_details (Fwupd.Device device, string path) {
         var details = new Fwupd.Details ();
 
         try {

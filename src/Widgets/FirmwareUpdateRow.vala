@@ -94,7 +94,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     private async void update (Fwupd.Device device, Fwupd.Release release) {
         var path = yield fwupd.download_file (device, release.uri);
 
-        var details = yield fwupd.get_details (device, path);
+        var details = yield fwupd.get_release_details (device, path);
 
         if (details.caption != null) {
             if (show_details_dialog (details) == false) {
