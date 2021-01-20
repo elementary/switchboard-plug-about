@@ -94,7 +94,9 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         var details = yield FwupdManager.get_instance ().get_details (device, path);
 
         if (details.caption != null) {
-            show_details_dialog (details);
+            if (show_details_dialog (details) == false) {
+                return;
+            }
         }
 
         if ((yield FwupdManager.get_instance ().install (device, path)) == true) {
@@ -106,18 +108,18 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         }
     }
 
-    private void show_details_dialog (Fwupd.Details details) {
+    private bool show_details_dialog (Fwupd.Details details) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("“%s” needs to manually be put in update mode").printf (device.name),
             details.caption,
             device.icon,
-            Gtk.ButtonsType.NONE
+            Gtk.ButtonsType.CANCEL
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();
 
         var suggested_button = new Gtk.Button.with_label (_("Continue"));
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
+        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
 
         if (details.image != null) {
             var custom_widget = new Gtk.Image.from_file (details.image);
@@ -126,8 +128,13 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
         message_dialog.badge_icon = new ThemedIcon ("dialog-information");
         message_dialog.show_all ();
-        message_dialog.run ();
+        if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
+            return true;
+        }
+
         message_dialog.destroy ();
+
+        return false;
     }
 
     private void show_reboot_dialog () {
@@ -141,11 +148,11 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
         var suggested_button = new Gtk.Button.with_label (_("Restart"));
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
+        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
 
         message_dialog.badge_icon = new ThemedIcon ("system-reboot");
         message_dialog.show_all ();
-        if (message_dialog.run () == Gtk.ResponseType.OK) {
+        if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
             LoginManager.get_instance ().reboot ();
         }
 
@@ -163,11 +170,11 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
         var suggested_button = new Gtk.Button.with_label (_("Shut Down"));
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.OK);
+        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
 
         message_dialog.badge_icon = new ThemedIcon ("system-shutdown");
         message_dialog.show_all ();
-        if (message_dialog.run () == Gtk.ResponseType.OK) {
+        if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
             LoginManager.get_instance ().shutdown ();
         }
 
