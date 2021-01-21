@@ -282,7 +282,7 @@ public class About.HardwareView : Gtk.Grid {
             return clean_name (session_manager.renderer);
         }
 
-        return _("Unknown GPU");
+        return _("Unknown Graphics");
     }
 
     private void fetch_hardware_info () {
