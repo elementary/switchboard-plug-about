@@ -20,16 +20,17 @@
 */
 
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
-    private FwupdManager fwupd;
+    public FwupdManager fwupd { get; construct set; }
     public Fwupd.Device device { get; construct set; }
 
     public signal void on_update_start ();
     public signal void on_update_end ();
 
     public FirmwareUpdateRow (FwupdManager fwupd, Fwupd.Device device) {
-        Object (device: device);
-
-        this.fwupd = fwupd;
+        Object (
+            fwupd: fwupd,
+            device: device
+        );
     }
 
     construct {
