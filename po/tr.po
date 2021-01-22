@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 23:20+0000\n"
+"POT-Creation-Date: 2021-01-22 09:39+0000\n"
 "PO-Revision-Date: 2020-12-06 19:16+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -40,7 +40,7 @@ msgstr "Donanım"
 msgid "System Information"
 msgstr "Sistem Bilgisi"
 
-#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "Varsayılan Ayarları Geri Yükle"
 
@@ -48,7 +48,7 @@ msgstr "Varsayılan Ayarları Geri Yükle"
 msgid "Suggest Translation"
 msgstr "Çeviri Öner"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "Geri Bildirim Gönder"
 
@@ -60,94 +60,94 @@ msgstr "Sorun Bildir"
 msgid "Updates"
 msgstr "Güncellemeler"
 
-#: src/Views/HardwareView.vala:43
-msgid "Unknown Graphics"
-msgstr "Bilinmeyen Ekran Kartı"
-
-#: src/Views/HardwareView.vala:72
+#: src/Views/HardwareView.vala:93
 #, c-format
 msgid "%s memory"
 msgstr "%s bellek"
 
-#: src/Views/HardwareView.vala:126
+#: src/Views/HardwareView.vala:165
 msgid "Manufacturer Website"
 msgstr "Üretici Web Sitesi"
 
-#: src/Views/HardwareView.vala:197
+#: src/Views/HardwareView.vala:245
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Çift Çekirdekli %s"
 
-#: src/Views/HardwareView.vala:199
+#: src/Views/HardwareView.vala:247
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Dört Çekirdekli %s"
 
-#: src/Views/HardwareView.vala:201
+#: src/Views/HardwareView.vala:249
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Altı Çekirdekli %s"
 
-#: src/Views/HardwareView.vala:214
+#: src/Views/HardwareView.vala:289
+msgid "Unknown Graphics"
+msgstr "Bilinmeyen Ekran Kartı"
+
+#: src/Views/HardwareView.vala:296
 msgid "Unknown Processor"
 msgstr "Bilinmeyen İşlemci"
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:318
 msgid "Unknown"
 msgstr "Bilinmiyor"
 
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:391
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s depolama alanı (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:308
+#: src/Views/HardwareView.vala:393
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s depolama alanı (eMMC)"
 
-#: src/Views/HardwareView.vala:310
+#: src/Views/HardwareView.vala:395
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s depolama alanı (SATA SSD)"
 
-#: src/Views/HardwareView.vala:313
+#: src/Views/HardwareView.vala:398
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s depolama alanı (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:318
+#: src/Views/HardwareView.vala:403
 #, c-format
 msgid "%s storage"
 msgstr "%s depolama alanı"
 
-#: src/Views/OperatingSystemView.vala:86
+#: src/Views/OperatingSystemView.vala:114
 msgid "Website"
 msgstr "Web Sitesi"
 
-#: src/Views/OperatingSystemView.vala:91
+#: src/Views/OperatingSystemView.vala:119
 msgid "Get Support"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:97
+#: src/Views/OperatingSystemView.vala:127
 msgid "Suggest Translations"
 msgstr "Çeviri Öner"
 
-#: src/Views/OperatingSystemView.vala:107
+#: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
 msgstr "Güncellemeleri Denetle"
 
-#: src/Views/OperatingSystemView.vala:138
+#: src/Views/OperatingSystemView.vala:169
 #, c-format
 msgid "Built on %s"
 msgstr "%s üzerine kurulu"
 
-#: src/Views/OperatingSystemView.vala:186
+#: src/Views/OperatingSystemView.vala:218
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Sistem Ayarları Fabrika Varsayılanlarına Geri Yüklenecek"
 
-#: src/Views/OperatingSystemView.vala:187
+#: src/Views/OperatingSystemView.vala:219
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -155,7 +155,7 @@ msgstr ""
 "Tüm sistem ayarları ve veriler varsayılan değerlere sıfırlanacaktır. Müzik "
 "ve resim gibi kişisel veriler etkilenmez."
 
-#: src/Views/OperatingSystemView.vala:193
+#: src/Views/OperatingSystemView.vala:225
 msgid "Restore Settings"
 msgstr "Ayarları Geri Yükle"
 
