@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 23:20+0000\n"
+"POT-Creation-Date: 2021-01-22 09:39+0000\n"
 "PO-Revision-Date: 2021-01-05 18:27+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -40,7 +40,7 @@ msgstr "Matériel"
 msgid "System Information"
 msgstr "Informations système"
 
-#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "Restaurer les paramètres par défaut"
 
@@ -48,7 +48,7 @@ msgstr "Restaurer les paramètres par défaut"
 msgid "Suggest Translation"
 msgstr "Suggérer une traduction"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "Envoyer des commentaires"
 
@@ -60,94 +60,94 @@ msgstr "Signaler un problème"
 msgid "Updates"
 msgstr "Mises à jour"
 
-#: src/Views/HardwareView.vala:43
-msgid "Unknown Graphics"
-msgstr "Carte graphique inconnue"
-
-#: src/Views/HardwareView.vala:72
+#: src/Views/HardwareView.vala:93
 #, c-format
 msgid "%s memory"
 msgstr "%s de mémoire vive"
 
-#: src/Views/HardwareView.vala:126
+#: src/Views/HardwareView.vala:165
 msgid "Manufacturer Website"
 msgstr "Site web du fabricant"
 
-#: src/Views/HardwareView.vala:197
+#: src/Views/HardwareView.vala:245
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Double cœur %s"
 
-#: src/Views/HardwareView.vala:199
+#: src/Views/HardwareView.vala:247
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Quadruple cœur %s"
 
-#: src/Views/HardwareView.vala:201
+#: src/Views/HardwareView.vala:249
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Six cœurs %s"
 
-#: src/Views/HardwareView.vala:214
+#: src/Views/HardwareView.vala:289
+msgid "Unknown Graphics"
+msgstr "Carte graphique inconnue"
+
+#: src/Views/HardwareView.vala:296
 msgid "Unknown Processor"
 msgstr "Processeur inconnu"
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:318
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:391
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s de stockage (SSD NVMe)"
 
-#: src/Views/HardwareView.vala:308
+#: src/Views/HardwareView.vala:393
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s de stockage (eMMC)"
 
-#: src/Views/HardwareView.vala:310
+#: src/Views/HardwareView.vala:395
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s de stockage (SSD SATA)"
 
-#: src/Views/HardwareView.vala:313
+#: src/Views/HardwareView.vala:398
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s de stockage (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:318
+#: src/Views/HardwareView.vala:403
 #, c-format
 msgid "%s storage"
 msgstr "%s de stockage"
 
-#: src/Views/OperatingSystemView.vala:86
+#: src/Views/OperatingSystemView.vala:114
 msgid "Website"
 msgstr "Site web"
 
-#: src/Views/OperatingSystemView.vala:91
+#: src/Views/OperatingSystemView.vala:119
 msgid "Get Support"
 msgstr "Obtenir de l'aide"
 
-#: src/Views/OperatingSystemView.vala:97
+#: src/Views/OperatingSystemView.vala:127
 msgid "Suggest Translations"
 msgstr "Proposer des traductions"
 
-#: src/Views/OperatingSystemView.vala:107
+#: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
 msgstr "Vérifier les mises à jour"
 
-#: src/Views/OperatingSystemView.vala:138
+#: src/Views/OperatingSystemView.vala:169
 #, c-format
 msgid "Built on %s"
 msgstr "Basé sur %s"
 
-#: src/Views/OperatingSystemView.vala:186
+#: src/Views/OperatingSystemView.vala:218
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Les paramètres du système seront restaurés aux valeurs par défaut"
 
-#: src/Views/OperatingSystemView.vala:187
+#: src/Views/OperatingSystemView.vala:219
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -156,7 +156,7 @@ msgstr ""
 "valeurs par défaut. Les données personnelles comme la musique et les images "
 "ne seront pas affectés."
 
-#: src/Views/OperatingSystemView.vala:193
+#: src/Views/OperatingSystemView.vala:225
 msgid "Restore Settings"
 msgstr "Restaurer les paramètres"
 

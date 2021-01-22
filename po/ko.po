@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 23:20+0000\n"
+"POT-Creation-Date: 2021-01-22 09:39+0000\n"
 "PO-Revision-Date: 2020-11-16 17:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -40,7 +40,7 @@ msgstr "하드웨어"
 msgid "System Information"
 msgstr "시스템 정보"
 
-#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "기본 설정으로 복원"
 
@@ -48,7 +48,7 @@ msgstr "기본 설정으로 복원"
 msgid "Suggest Translation"
 msgstr "번역 제안"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr ""
 
@@ -60,100 +60,100 @@ msgstr "버그 리포트 작성"
 msgid "Updates"
 msgstr "업데이트"
 
-#: src/Views/HardwareView.vala:43
-#, fuzzy
-#| msgid "Graphics:"
-msgid "Unknown Graphics"
-msgstr "그래픽:"
-
-#: src/Views/HardwareView.vala:72
+#: src/Views/HardwareView.vala:93
 #, c-format
 msgid "%s memory"
 msgstr "%s 메모리"
 
-#: src/Views/HardwareView.vala:126
+#: src/Views/HardwareView.vala:165
 msgid "Manufacturer Website"
 msgstr "제조 업체 웹사이트"
 
-#: src/Views/HardwareView.vala:197
+#: src/Views/HardwareView.vala:245
 #, fuzzy, c-format
 #| msgid "Dual-Core"
 msgid "Dual-Core %s"
 msgstr "듀얼 코어"
 
-#: src/Views/HardwareView.vala:199
+#: src/Views/HardwareView.vala:247
 #, fuzzy, c-format
 #| msgid "Quad-Core"
 msgid "Quad-Core %s"
 msgstr "쿼드 코어"
 
-#: src/Views/HardwareView.vala:201
+#: src/Views/HardwareView.vala:249
 #, c-format
 msgid "Hexa-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:214
+#: src/Views/HardwareView.vala:289
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "그래픽:"
+
+#: src/Views/HardwareView.vala:296
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "프로세서:"
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:318
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:391
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s 저장장치 (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:308
+#: src/Views/HardwareView.vala:393
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s 저장장치 (eMMC)"
 
-#: src/Views/HardwareView.vala:310
+#: src/Views/HardwareView.vala:395
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s 저장장치 (SATA SSD)"
 
-#: src/Views/HardwareView.vala:313
+#: src/Views/HardwareView.vala:398
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s 저장장치 (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:318
+#: src/Views/HardwareView.vala:403
 #, c-format
 msgid "%s storage"
 msgstr "%s 저장장치"
 
-#: src/Views/OperatingSystemView.vala:86
+#: src/Views/OperatingSystemView.vala:114
 msgid "Website"
 msgstr "웹 사이트"
 
-#: src/Views/OperatingSystemView.vala:91
+#: src/Views/OperatingSystemView.vala:119
 msgid "Get Support"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:97
+#: src/Views/OperatingSystemView.vala:127
 msgid "Suggest Translations"
 msgstr "번역 제안하기"
 
-#: src/Views/OperatingSystemView.vala:107
+#: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
 msgstr "업데이트 확인"
 
-#: src/Views/OperatingSystemView.vala:138
+#: src/Views/OperatingSystemView.vala:169
 #, c-format
 msgid "Built on %s"
 msgstr "%s 기반"
 
-#: src/Views/OperatingSystemView.vala:186
+#: src/Views/OperatingSystemView.vala:218
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "시스템 설정이 공장 초기화 됩니다"
 
-#: src/Views/OperatingSystemView.vala:187
+#: src/Views/OperatingSystemView.vala:219
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -161,7 +161,7 @@ msgstr ""
 "모든 시스템 설정과 데이터가 기본 값으로 초기화됩니다. 음악이나 사진 등의, 개"
 "인 데이터는, 영향받지 않습니다."
 
-#: src/Views/OperatingSystemView.vala:193
+#: src/Views/OperatingSystemView.vala:225
 msgid "Restore Settings"
 msgstr "설정 복원"
 

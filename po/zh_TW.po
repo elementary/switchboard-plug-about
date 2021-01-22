@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 23:20+0000\n"
+"POT-Creation-Date: 2021-01-22 09:39+0000\n"
 "PO-Revision-Date: 2020-11-16 17:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -40,7 +40,7 @@ msgstr "硬體"
 msgid "System Information"
 msgstr "系統資訊"
 
-#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "還原預設設定"
 
@@ -48,7 +48,7 @@ msgstr "還原預設設定"
 msgid "Suggest Translation"
 msgstr "建議翻譯"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr ""
 
@@ -60,100 +60,100 @@ msgstr "回報問題"
 msgid "Updates"
 msgstr "更新"
 
-#: src/Views/HardwareView.vala:43
-#, fuzzy
-#| msgid "Graphics:"
-msgid "Unknown Graphics"
-msgstr "顯示卡："
-
-#: src/Views/HardwareView.vala:72
+#: src/Views/HardwareView.vala:93
 #, c-format
 msgid "%s memory"
 msgstr "%s 記憶體"
 
-#: src/Views/HardwareView.vala:126
+#: src/Views/HardwareView.vala:165
 msgid "Manufacturer Website"
 msgstr "製造商網站"
 
-#: src/Views/HardwareView.vala:197
+#: src/Views/HardwareView.vala:245
 #, fuzzy, c-format
 #| msgid "Dual-Core"
 msgid "Dual-Core %s"
 msgstr "雙核心"
 
-#: src/Views/HardwareView.vala:199
+#: src/Views/HardwareView.vala:247
 #, fuzzy, c-format
 #| msgid "Quad-Core"
 msgid "Quad-Core %s"
 msgstr "四核心"
 
-#: src/Views/HardwareView.vala:201
+#: src/Views/HardwareView.vala:249
 #, c-format
 msgid "Hexa-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:214
+#: src/Views/HardwareView.vala:289
+#, fuzzy
+#| msgid "Graphics:"
+msgid "Unknown Graphics"
+msgstr "顯示卡："
+
+#: src/Views/HardwareView.vala:296
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "處理器："
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:318
 msgid "Unknown"
 msgstr "未知"
 
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:391
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s 儲存裝置 (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:308
+#: src/Views/HardwareView.vala:393
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s 儲存裝置 (eMMC)"
 
-#: src/Views/HardwareView.vala:310
+#: src/Views/HardwareView.vala:395
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s 儲存裝置 (SATA SSD)"
 
-#: src/Views/HardwareView.vala:313
+#: src/Views/HardwareView.vala:398
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s 儲存裝置 (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:318
+#: src/Views/HardwareView.vala:403
 #, c-format
 msgid "%s storage"
 msgstr "%s 儲存裝置"
 
-#: src/Views/OperatingSystemView.vala:86
+#: src/Views/OperatingSystemView.vala:114
 msgid "Website"
 msgstr "網站"
 
-#: src/Views/OperatingSystemView.vala:91
+#: src/Views/OperatingSystemView.vala:119
 msgid "Get Support"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:97
+#: src/Views/OperatingSystemView.vala:127
 msgid "Suggest Translations"
 msgstr "建議翻譯"
 
-#: src/Views/OperatingSystemView.vala:107
+#: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
 msgstr "檢查更新"
 
-#: src/Views/OperatingSystemView.vala:138
+#: src/Views/OperatingSystemView.vala:169
 #, c-format
 msgid "Built on %s"
 msgstr "建基於 %s"
 
-#: src/Views/OperatingSystemView.vala:186
+#: src/Views/OperatingSystemView.vala:218
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "系統設定值將還原成出廠預設值"
 
-#: src/Views/OperatingSystemView.vala:187
+#: src/Views/OperatingSystemView.vala:219
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -161,7 +161,7 @@ msgstr ""
 "所有系統設定值和資料都會重設回預設值。個人資料，例如音樂或圖片等，都不會受到"
 "影響。"
 
-#: src/Views/OperatingSystemView.vala:193
+#: src/Views/OperatingSystemView.vala:225
 msgid "Restore Settings"
 msgstr "還原設定值"
 

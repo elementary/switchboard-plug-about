@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-04 23:20+0000\n"
+"POT-Creation-Date: 2021-01-22 09:39+0000\n"
 "PO-Revision-Date: 2020-11-16 17:15+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -40,7 +40,7 @@ msgstr "Hardware"
 msgid "System Information"
 msgstr "Informace o systému"
 
-#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:113
+#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "Obnovit výchozí nastavení"
 
@@ -48,7 +48,7 @@ msgstr "Obnovit výchozí nastavení"
 msgid "Suggest Translation"
 msgstr "Navrhnout překlad textu v rozhraní"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr ""
 
@@ -60,94 +60,94 @@ msgstr "Nahlásit problém"
 msgid "Updates"
 msgstr "Aktualizace"
 
-#: src/Views/HardwareView.vala:43
-msgid "Unknown Graphics"
-msgstr "Neznámá grafika"
-
-#: src/Views/HardwareView.vala:72
+#: src/Views/HardwareView.vala:93
 #, c-format
 msgid "%s memory"
 msgstr "%s paměti"
 
-#: src/Views/HardwareView.vala:126
+#: src/Views/HardwareView.vala:165
 msgid "Manufacturer Website"
 msgstr "Webové stránky výrobce"
 
-#: src/Views/HardwareView.vala:197
+#: src/Views/HardwareView.vala:245
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Dvoujádrový %s"
 
-#: src/Views/HardwareView.vala:199
+#: src/Views/HardwareView.vala:247
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Čtyřjádrový %s"
 
-#: src/Views/HardwareView.vala:201
+#: src/Views/HardwareView.vala:249
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Osmijádrový %s"
 
-#: src/Views/HardwareView.vala:214
+#: src/Views/HardwareView.vala:289
+msgid "Unknown Graphics"
+msgstr "Neznámá grafika"
+
+#: src/Views/HardwareView.vala:296
 msgid "Unknown Processor"
 msgstr "Neznámý procesor"
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:318
 msgid "Unknown"
 msgstr "Neznámé"
 
-#: src/Views/HardwareView.vala:306
+#: src/Views/HardwareView.vala:391
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s úložiště (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:308
+#: src/Views/HardwareView.vala:393
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s úložiště (eMMC)"
 
-#: src/Views/HardwareView.vala:310
+#: src/Views/HardwareView.vala:395
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s úložiště (SATA SSD)"
 
-#: src/Views/HardwareView.vala:313
+#: src/Views/HardwareView.vala:398
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s úložiště (pevný disk)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:318
+#: src/Views/HardwareView.vala:403
 #, c-format
 msgid "%s storage"
 msgstr "%s úložiště"
 
-#: src/Views/OperatingSystemView.vala:86
+#: src/Views/OperatingSystemView.vala:114
 msgid "Website"
 msgstr "Webové stránky"
 
-#: src/Views/OperatingSystemView.vala:91
+#: src/Views/OperatingSystemView.vala:119
 msgid "Get Support"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:97
+#: src/Views/OperatingSystemView.vala:127
 msgid "Suggest Translations"
 msgstr "Pomoci s překlady"
 
-#: src/Views/OperatingSystemView.vala:107
+#: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
 msgstr "Zkontrolovat aktualizace"
 
-#: src/Views/OperatingSystemView.vala:138
+#: src/Views/OperatingSystemView.vala:169
 #, c-format
 msgid "Built on %s"
 msgstr "Postaveno na %s"
 
-#: src/Views/OperatingSystemView.vala:186
+#: src/Views/OperatingSystemView.vala:218
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systémová nastavení budou vrácena do výchozího stavu"
 
-#: src/Views/OperatingSystemView.vala:187
+#: src/Views/OperatingSystemView.vala:219
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -155,7 +155,7 @@ msgstr ""
 "Veškerá systémová nastavení a data budou vrácena do výchozího stavu. Osobní "
 "data, jako hudba či obrázky, tím nebudou ovlivněna."
 
-#: src/Views/OperatingSystemView.vala:193
+#: src/Views/OperatingSystemView.vala:225
 msgid "Restore Settings"
 msgstr "Obnovit nastavení"
 
