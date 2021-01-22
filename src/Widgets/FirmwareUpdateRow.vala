@@ -132,13 +132,11 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
         message_dialog.badge_icon = new ThemedIcon ("dialog-information");
         message_dialog.show_all ();
-        if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
-            return true;
-        }
+        bool should_continue = message_dialog.run () == Gtk.ResponseType.ACCEPT;
 
         message_dialog.destroy ();
 
-        return false;
+        return should_continue;
     }
 
     private void show_reboot_dialog () {
