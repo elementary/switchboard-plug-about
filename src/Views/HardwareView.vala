@@ -259,6 +259,10 @@ public class About.HardwareView : Gtk.Grid {
         string? gpu_name = null;
 
         if (switcheroo_interface != null) {
+            if (!primary && !switcheroo_interface.has_dual_gpu) {
+                return null;
+            }
+
             foreach (unowned HashTable<string,Variant> gpu in switcheroo_interface.gpus) {
                 bool is_default = gpu.get ("Default").get_boolean ();
 
