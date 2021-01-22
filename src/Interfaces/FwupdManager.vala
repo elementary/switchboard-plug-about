@@ -215,6 +215,8 @@ public class About.FwupdManager : Object {
     }
 
     public async bool install (Fwupd.Device device, string path) {
+        int fd;
+
         try {
             // https://github.com/fwupd/fwupd/blob/c0d4c09a02a40167e9de57f82c0033bb92e24167/libfwupd/fwupd-client.c#L2045
             var options = new GLib.HashTable<string, Variant> (str_hash, str_equal);
@@ -224,7 +226,7 @@ public class About.FwupdManager : Object {
             options.insert ("allow-reinstall", new Variant.boolean (true));
             options.insert ("no-history", new Variant.boolean (true));
 
-            var fd = Posix.open (path, Posix.O_RDONLY);
+            fd = Posix.open (path, Posix.O_RDONLY);
             var handle = new UnixInputStream (fd, true);
 
             yield fwupd.install (device.id, handle, options);
@@ -232,6 +234,8 @@ public class About.FwupdManager : Object {
             warning ("Could not install release for “%s”: %s", device.id, e.message);
             on_device_error (device, device.update_error != null ? device.update_error : e.message);
             return false;
+        } finally {
+            Posix.close (fd);
         }
 
         return true;
@@ -240,8 +244,9 @@ public class About.FwupdManager : Object {
     public async Fwupd.Details get_release_details (Fwupd.Device device, string path) {
         var details = new Fwupd.Details ();
 
+        int fd;
         try {
-            var fd = Posix.open (path, Posix.O_RDONLY);
+            fd = Posix.open (path, Posix.O_RDONLY);
             var handle = new UnixInputStream (fd, true);
 
             var result = yield fwupd.get_details (handle);
@@ -264,6 +269,8 @@ public class About.FwupdManager : Object {
         } catch (Error e) {
             warning ("Could not get details for “%s”: %s", device.id, e.message);
             on_device_error (device, device.update_error);
+        } finally {
+            Posix.close (fd);
         }
 
         if (details.image != null) {
