@@ -14,6 +14,7 @@ You'll need the following dependencies:
 * libhandy-1-dev
 * meson
 * valac
+* switcheroo-control (at runtime)
 
 Run `meson` to configure the build environment and then `ninja` to build
 
