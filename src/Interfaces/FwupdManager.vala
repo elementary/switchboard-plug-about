@@ -191,16 +191,9 @@ public class About.FwupdManager : Object {
         return release;
     }
 
-    private string get_path (string uri) {
-        var parts = uri.split ("/");
-        string file_path = parts[parts.length - 1];
-        return Path.build_path (Path.DIR_SEPARATOR_S, Environment.get_tmp_dir (), file_path);
-    }
-
     public async string? download_file (Fwupd.Device device, string uri) {
-        var path = get_path (uri);
-
         File server_file = File.new_for_uri (uri);
+        var path = Path.build_filename (Environment.get_tmp_dir (), server_file.get_basename ());
         File local_file = File.new_for_path (path);
 
         bool result;
