@@ -198,7 +198,9 @@ public class About.FwupdManager : Object {
 
         bool result;
         try {
-            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {});
+            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {
+                // TODO: provide useful information for user
+            });
         } catch (Error e) {
             on_device_error (device, "Could not download file: %s".printf (e.message));
             return null;
