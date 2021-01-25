@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-22 09:39+0000\n"
-"PO-Revision-Date: 2021-01-22 08:41+0000\n"
+"PO-Revision-Date: 2021-01-25 07:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
@@ -30,11 +30,11 @@ msgstr "查看操作系统和硬件信息"
 
 #: src/Plug.vala:46
 msgid "Operating System"
-msgstr "操作系统"
+msgstr "系统"
 
 #: src/Plug.vala:47
 msgid "Hardware"
-msgstr "硬件信息"
+msgstr "硬件"
 
 #: src/Plug.vala:79
 msgid "System Information"
