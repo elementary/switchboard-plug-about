@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-22 09:39+0000\n"
+"POT-Creation-Date: 2021-01-25 23:10+0000\n"
 "PO-Revision-Date: 2021-01-18 21:57+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -28,35 +28,41 @@ msgstr "מערכת"
 msgid "View operating system and hardware information"
 msgstr "צפייה במידע חומרה ומערכת ההפעלה"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:48
 msgid "Operating System"
 msgstr "מערכת הפעלה"
 
-#: src/Plug.vala:47
+#: src/Plug.vala:49
 msgid "Hardware"
 msgstr "חומרה"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:50
+#, fuzzy
+#| msgid "Hardware"
+msgid "Firmware"
+msgstr "חומרה"
+
+#: src/Plug.vala:82
 msgid "System Information"
 msgstr "מידע מערכת"
 
-#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "שחזור הגדרות בררת המחדל"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:84
 msgid "Suggest Translation"
 msgstr "הצעת תרגום"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "שליחת משוב"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:86
 msgid "Report a Problem"
 msgstr "דיווח על בעיה"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:87
 msgid "Updates"
 msgstr "עדכונים"
 

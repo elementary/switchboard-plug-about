@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-22 09:39+0000\n"
+"POT-Creation-Date: 2021-01-25 23:10+0000\n"
 "PO-Revision-Date: 2021-01-05 18:27+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,35 +29,41 @@ msgstr "Система"
 msgid "View operating system and hardware information"
 msgstr "Огляд операційної системи та подробиць про апаратні засоби"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:48
 msgid "Operating System"
 msgstr "Операційна система"
 
-#: src/Plug.vala:47
+#: src/Plug.vala:49
 msgid "Hardware"
 msgstr "Обладнання"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:50
+#, fuzzy
+#| msgid "Hardware"
+msgid "Firmware"
+msgstr "Обладнання"
+
+#: src/Plug.vala:82
 msgid "System Information"
 msgstr "Відомості про систему"
 
-#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "Відновити типові налаштування"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:84
 msgid "Suggest Translation"
 msgstr "Запропонувати переклад"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "Надіслати відгук"
 
-#: src/Plug.vala:83
+#: src/Plug.vala:86
 msgid "Report a Problem"
 msgstr "Повідомити про проблему"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:87
 msgid "Updates"
 msgstr "Оновленння"
 

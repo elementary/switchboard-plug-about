@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-22 09:39+0000\n"
+"POT-Creation-Date: 2021-01-25 23:10+0000\n"
 "PO-Revision-Date: 2016-12-08 17:26+0000\n"
 "Last-Translator: Waqar Ahmed <waqar.17a@gmail.com>\n"
 "Language-Team: Urdu <ur@li.org>\n"
@@ -26,35 +26,41 @@ msgstr ""
 msgid "View operating system and hardware information"
 msgstr "آپریٹنگ سسٹم اور ہارڈ ویئر کی معلومات دیکھیں"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:48
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:47
+#: src/Plug.vala:49
 msgid "Hardware"
 msgstr "ہارڈ ویئر"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:50
+#, fuzzy
+#| msgid "Hardware"
+msgid "Firmware"
+msgstr "ہارڈ ویئر"
+
+#: src/Plug.vala:82
 msgid "System Information"
 msgstr "سسٹم کی معلومات"
 
-#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "طے شدہ ترتیبات پہ واپس لائیں"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:84
 msgid "Suggest Translation"
 msgstr "ترجمہ کی تجویز کریں"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:83
+#: src/Plug.vala:86
 msgid "Report a Problem"
 msgstr "مسئلہ کی رپورٹ کریں"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:87
 msgid "Updates"
 msgstr "اپ ڈیٹس"
 

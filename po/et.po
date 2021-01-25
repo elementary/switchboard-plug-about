@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-22 09:39+0000\n"
+"POT-Creation-Date: 2021-01-25 23:10+0000\n"
 "PO-Revision-Date: 2016-08-04 00:09+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -26,35 +26,41 @@ msgstr ""
 msgid "View operating system and hardware information"
 msgstr "Operatsioonisüsteemi ja riistvara teave"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:48
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:47
+#: src/Plug.vala:49
 msgid "Hardware"
 msgstr "Riistvara"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:50
+#, fuzzy
+#| msgid "Hardware"
+msgid "Firmware"
+msgstr "Riistvara"
+
+#: src/Plug.vala:82
 msgid "System Information"
 msgstr "Süsteemi informatsioon"
 
-#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "Algseadistuste taastamine"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:84
 msgid "Suggest Translation"
 msgstr "Soovita tõlget"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:83
+#: src/Plug.vala:86
 msgid "Report a Problem"
 msgstr "Teata probleemist"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:87
 msgid "Updates"
 msgstr "Uuendused"
 

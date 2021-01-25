@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-22 09:39+0000\n"
+"POT-Creation-Date: 2021-01-25 23:10+0000\n"
 "PO-Revision-Date: 2020-04-12 11:10+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,35 +29,41 @@ msgstr ""
 msgid "View operating system and hardware information"
 msgstr "Pogledajte informacije operativnog sustava i hardvera"
 
-#: src/Plug.vala:46
+#: src/Plug.vala:48
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:47
+#: src/Plug.vala:49
 msgid "Hardware"
 msgstr "Hardver"
 
-#: src/Plug.vala:79
+#: src/Plug.vala:50
+#, fuzzy
+#| msgid "Hardware"
+msgid "Firmware"
+msgstr "Hardver"
+
+#: src/Plug.vala:82
 msgid "System Information"
 msgstr "Informacije sustava"
 
-#: src/Plug.vala:80 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "Vrati zadane postavke"
 
-#: src/Plug.vala:81
+#: src/Plug.vala:84
 msgid "Suggest Translation"
 msgstr "Predloži prijevod"
 
-#: src/Plug.vala:82 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:83
+#: src/Plug.vala:86
 msgid "Report a Problem"
 msgstr "Prijavi problem"
 
-#: src/Plug.vala:84
+#: src/Plug.vala:87
 msgid "Updates"
 msgstr "Nadopune"
 
