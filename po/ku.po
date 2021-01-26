@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-25 23:10+0000\n"
+"POT-Creation-Date: 2021-01-26 01:06+0000\n"
 "PO-Revision-Date: 2018-06-20 00:06+0000\n"
 "Last-Translator: janus tolkien <janustolkien@gmail.com>\n"
 "Language-Team: Kurdish <https://weblate.elementary.io/projects/switchboard/"
@@ -15,49 +15,61 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:29
+#: src/Plug.vala:39
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:30
+#: src/Plug.vala:40
 msgid "View operating system and hardware information"
 msgstr "Înformasyona pengale karkirin û amûrên kompûteran binere"
 
-#: src/Plug.vala:48
+#: src/Plug.vala:59
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:49
+#: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Hişkalav"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:61 src/Plug.vala:109
 #, fuzzy
 #| msgid "Hardware"
 msgid "Firmware"
 msgstr "Hişkalav"
 
-#: src/Plug.vala:82
-msgid "System Information"
+#: src/Plug.vala:107
+#, fuzzy
+#| msgid "System Information"
+msgid "Operating System Information"
 msgstr "Agahiyên pergalî"
 
-#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:108
+#, fuzzy
+#| msgid "System Information"
+msgid "Hardware Information"
+msgstr "Agahiyên pergalî"
+
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "Norme Mîhenge  ji nû ve ava bike"
 
-#: src/Plug.vala:84
-msgid "Suggest Translation"
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+msgid "Suggest Translations"
 msgstr "pêşniyar kirina wergerrandine"
 
-#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:86
+#: src/Plug.vala:113
 msgid "Report a Problem"
 msgstr "Pirsgirêkekê rapor bike"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+msgid "Get Support"
+msgstr ""
+
+#: src/Plug.vala:115
 msgid "Updates"
 msgstr "rojanekirin"
 
@@ -133,14 +145,6 @@ msgstr "%s Axtin"
 msgid "Website"
 msgstr "Malper"
 
-#: src/Views/OperatingSystemView.vala:119
-msgid "Get Support"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:127
-msgid "Suggest Translations"
-msgstr "pêşniyar kirina wergerrandine"
-
 #: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
 msgstr "venêrîn bo rojanekirin"
@@ -163,6 +167,9 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:225
 msgid "Restore Settings"
 msgstr "Mîhengan Şûnde Bîne"
+
+#~ msgid "Suggest Translation"
+#~ msgstr "pêşniyar kirina wergerrandine"
 
 #~ msgid "About"
 #~ msgstr "Derbarê de"

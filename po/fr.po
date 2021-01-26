@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-25 23:10+0000\n"
+"POT-Creation-Date: 2021-01-26 01:06+0000\n"
 "PO-Revision-Date: 2021-01-05 18:27+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -20,49 +20,61 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:29
+#: src/Plug.vala:39
 msgid "System"
 msgstr "Système"
 
-#: src/Plug.vala:30
+#: src/Plug.vala:40
 msgid "View operating system and hardware information"
 msgstr "Afficher les informations du système d'exploitation et du matériel"
 
-#: src/Plug.vala:48
+#: src/Plug.vala:59
 msgid "Operating System"
 msgstr "Système d'exploitation"
 
-#: src/Plug.vala:49
+#: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Matériel"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:61 src/Plug.vala:109
 #, fuzzy
 #| msgid "Hardware"
 msgid "Firmware"
 msgstr "Matériel"
 
-#: src/Plug.vala:82
-msgid "System Information"
+#: src/Plug.vala:107
+#, fuzzy
+#| msgid "System Information"
+msgid "Operating System Information"
 msgstr "Informations système"
 
-#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:108
+#, fuzzy
+#| msgid "System Information"
+msgid "Hardware Information"
+msgstr "Informations système"
+
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "Restaurer les paramètres par défaut"
 
-#: src/Plug.vala:84
-msgid "Suggest Translation"
-msgstr "Suggérer une traduction"
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+msgid "Suggest Translations"
+msgstr "Proposer des traductions"
 
-#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "Envoyer des commentaires"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:113
 msgid "Report a Problem"
 msgstr "Signaler un problème"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+msgid "Get Support"
+msgstr "Obtenir de l'aide"
+
+#: src/Plug.vala:115
 msgid "Updates"
 msgstr "Mises à jour"
 
@@ -132,14 +144,6 @@ msgstr "%s de stockage"
 msgid "Website"
 msgstr "Site web"
 
-#: src/Views/OperatingSystemView.vala:119
-msgid "Get Support"
-msgstr "Obtenir de l'aide"
-
-#: src/Views/OperatingSystemView.vala:127
-msgid "Suggest Translations"
-msgstr "Proposer des traductions"
-
 #: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
 msgstr "Vérifier les mises à jour"
@@ -165,6 +169,9 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:225
 msgid "Restore Settings"
 msgstr "Restaurer les paramètres"
+
+#~ msgid "Suggest Translation"
+#~ msgstr "Suggérer une traduction"
 
 #~ msgid "GTK %u.%u.%u"
 #~ msgstr "GTK %u.%u.%u"

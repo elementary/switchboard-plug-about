@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-25 23:10+0000\n"
+"POT-Creation-Date: 2021-01-26 01:06+0000\n"
 "PO-Revision-Date: 2021-01-25 07:22+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -20,49 +20,61 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:29
+#: src/Plug.vala:39
 msgid "System"
 msgstr "系统信息"
 
-#: src/Plug.vala:30
+#: src/Plug.vala:40
 msgid "View operating system and hardware information"
 msgstr "查看操作系统和硬件信息"
 
-#: src/Plug.vala:48
+#: src/Plug.vala:59
 msgid "Operating System"
 msgstr "系统"
 
-#: src/Plug.vala:49
+#: src/Plug.vala:60
 msgid "Hardware"
 msgstr "硬件"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:61 src/Plug.vala:109
 #, fuzzy
 #| msgid "Hardware"
 msgid "Firmware"
 msgstr "硬件"
 
-#: src/Plug.vala:82
-msgid "System Information"
+#: src/Plug.vala:107
+#, fuzzy
+#| msgid "System Information"
+msgid "Operating System Information"
 msgstr "系统信息"
 
-#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:108
+#, fuzzy
+#| msgid "System Information"
+msgid "Hardware Information"
+msgstr "系统信息"
+
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "重置设置"
 
-#: src/Plug.vala:84
-msgid "Suggest Translation"
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+msgid "Suggest Translations"
 msgstr "助力翻译"
 
-#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "提交反馈"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:113
 msgid "Report a Problem"
 msgstr "报告问题"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+msgid "Get Support"
+msgstr "获取支持"
+
+#: src/Plug.vala:115
 msgid "Updates"
 msgstr "检查更新"
 
@@ -132,14 +144,6 @@ msgstr "%s 硬盘"
 msgid "Website"
 msgstr "项目主页"
 
-#: src/Views/OperatingSystemView.vala:119
-msgid "Get Support"
-msgstr "获取支持"
-
-#: src/Views/OperatingSystemView.vala:127
-msgid "Suggest Translations"
-msgstr "助力翻译"
-
 #: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
 msgstr "检查更新"
@@ -163,6 +167,9 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:225
 msgid "Restore Settings"
 msgstr "重置设置"
+
+#~ msgid "Suggest Translation"
+#~ msgstr "助力翻译"
 
 #~ msgid "GTK %u.%u.%u"
 #~ msgstr "GTK %u.%u.%u"

@@ -1,51 +1,59 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-25 23:10+0000\n"
+"POT-Creation-Date: 2021-01-26 01:06+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
-#: src/Plug.vala:29
+#: src/Plug.vala:39
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:30
+#: src/Plug.vala:40
 msgid "View operating system and hardware information"
 msgstr ""
 
-#: src/Plug.vala:48
+#: src/Plug.vala:59
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:49
+#: src/Plug.vala:60
 msgid "Hardware"
 msgstr ""
 
-#: src/Plug.vala:50
+#: src/Plug.vala:61 src/Plug.vala:109
 msgid "Firmware"
 msgstr ""
 
-#: src/Plug.vala:82
-msgid "System Information"
+#: src/Plug.vala:107
+msgid "Operating System Information"
 msgstr ""
 
-#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:108
+msgid "Hardware Information"
+msgstr ""
+
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr ""
 
-#: src/Plug.vala:84
-msgid "Suggest Translation"
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+msgid "Suggest Translations"
 msgstr ""
 
-#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:86
+#: src/Plug.vala:113
 msgid "Report a Problem"
 msgstr ""
 
-#: src/Plug.vala:87
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+msgid "Get Support"
+msgstr ""
+
+#: src/Plug.vala:115
 msgid "Updates"
 msgstr ""
 
@@ -113,14 +121,6 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:114
 msgid "Website"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:119
-msgid "Get Support"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:127
-msgid "Suggest Translations"
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:137

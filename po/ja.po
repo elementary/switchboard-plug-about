@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-25 23:10+0000\n"
+"POT-Creation-Date: 2021-01-26 01:06+0000\n"
 "PO-Revision-Date: 2021-01-05 18:27+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -20,49 +20,61 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:29
+#: src/Plug.vala:39
 msgid "System"
 msgstr "システム"
 
-#: src/Plug.vala:30
+#: src/Plug.vala:40
 msgid "View operating system and hardware information"
 msgstr "オペレーティングシステムとハードウェアの情報を参照します"
 
-#: src/Plug.vala:48
+#: src/Plug.vala:59
 msgid "Operating System"
 msgstr "オペレーティングシステム"
 
-#: src/Plug.vala:49
+#: src/Plug.vala:60
 msgid "Hardware"
 msgstr "ハードウェア"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:61 src/Plug.vala:109
 #, fuzzy
 #| msgid "Hardware"
 msgid "Firmware"
 msgstr "ハードウェア"
 
-#: src/Plug.vala:82
-msgid "System Information"
+#: src/Plug.vala:107
+#, fuzzy
+#| msgid "System Information"
+msgid "Operating System Information"
 msgstr "システム情報"
 
-#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:108
+#, fuzzy
+#| msgid "System Information"
+msgid "Hardware Information"
+msgstr "システム情報"
+
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "デフォルト設定を復元"
 
-#: src/Plug.vala:84
-msgid "Suggest Translation"
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+msgid "Suggest Translations"
 msgstr "翻訳を提案"
 
-#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "フィードバックを送信"
 
-#: src/Plug.vala:86
+#: src/Plug.vala:113
 msgid "Report a Problem"
 msgstr "不具合を報告"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+msgid "Get Support"
+msgstr "サポートを受ける"
+
+#: src/Plug.vala:115
 msgid "Updates"
 msgstr "アップデート"
 
@@ -132,14 +144,6 @@ msgstr "%s ストレージ"
 msgid "Website"
 msgstr "Web サイト"
 
-#: src/Views/OperatingSystemView.vala:119
-msgid "Get Support"
-msgstr "サポートを受ける"
-
-#: src/Views/OperatingSystemView.vala:127
-msgid "Suggest Translations"
-msgstr "翻訳を提案"
-
 #: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
 msgstr "アップデートを確認"
@@ -164,6 +168,9 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:225
 msgid "Restore Settings"
 msgstr "設定を復元"
+
+#~ msgid "Suggest Translation"
+#~ msgstr "翻訳を提案"
 
 #~ msgid "GTK %u.%u.%u"
 #~ msgstr "GTK %u.%u.%u"

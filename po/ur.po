@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-25 23:10+0000\n"
+"POT-Creation-Date: 2021-01-26 01:06+0000\n"
 "PO-Revision-Date: 2016-12-08 17:26+0000\n"
 "Last-Translator: Waqar Ahmed <waqar.17a@gmail.com>\n"
 "Language-Team: Urdu <ur@li.org>\n"
@@ -18,49 +18,61 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: src/Plug.vala:29
+#: src/Plug.vala:39
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:30
+#: src/Plug.vala:40
 msgid "View operating system and hardware information"
 msgstr "آپریٹنگ سسٹم اور ہارڈ ویئر کی معلومات دیکھیں"
 
-#: src/Plug.vala:48
+#: src/Plug.vala:59
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:49
+#: src/Plug.vala:60
 msgid "Hardware"
 msgstr "ہارڈ ویئر"
 
-#: src/Plug.vala:50
+#: src/Plug.vala:61 src/Plug.vala:109
 #, fuzzy
 #| msgid "Hardware"
 msgid "Firmware"
 msgstr "ہارڈ ویئر"
 
-#: src/Plug.vala:82
-msgid "System Information"
+#: src/Plug.vala:107
+#, fuzzy
+#| msgid "System Information"
+msgid "Operating System Information"
 msgstr "سسٹم کی معلومات"
 
-#: src/Plug.vala:83 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:108
+#, fuzzy
+#| msgid "System Information"
+msgid "Hardware Information"
+msgstr "سسٹم کی معلومات"
+
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
 msgstr "طے شدہ ترتیبات پہ واپس لائیں"
 
-#: src/Plug.vala:84
-msgid "Suggest Translation"
-msgstr "ترجمہ کی تجویز کریں"
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+msgid "Suggest Translations"
+msgstr "ترجمہ کی تجویز دیں"
 
-#: src/Plug.vala:85 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:86
+#: src/Plug.vala:113
 msgid "Report a Problem"
 msgstr "مسئلہ کی رپورٹ کریں"
 
-#: src/Plug.vala:87
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+msgid "Get Support"
+msgstr ""
+
+#: src/Plug.vala:115
 msgid "Updates"
 msgstr "اپ ڈیٹس"
 
@@ -136,14 +148,6 @@ msgstr "سٹوریج:"
 msgid "Website"
 msgstr "ویب سائٹ"
 
-#: src/Views/OperatingSystemView.vala:119
-msgid "Get Support"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:127
-msgid "Suggest Translations"
-msgstr "ترجمہ کی تجویز دیں"
-
 #: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
 msgstr "اپڈیٹ کے لیے چیک کریں"
@@ -166,6 +170,9 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:225
 msgid "Restore Settings"
 msgstr ""
+
+#~ msgid "Suggest Translation"
+#~ msgstr "ترجمہ کی تجویز کریں"
 
 #~ msgid "About"
 #~ msgstr "متعلق"
