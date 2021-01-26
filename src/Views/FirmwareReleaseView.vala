@@ -77,7 +77,8 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
         title_label = new Gtk.Label ("") {
-            ellipsize = Pango.EllipsizeMode.END
+            ellipsize = Pango.EllipsizeMode.END,
+            use_markup = true
         };
 
         update_button = new Gtk.Button.with_label ("") {
