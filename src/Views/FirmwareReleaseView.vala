@@ -143,7 +143,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         };
 
         var content_area = new Gtk.Grid () {
-            column_spacing = 12,
+            column_spacing = 6,
             halign = Gtk.Align.CENTER,
             margin = 12,
             row_spacing = 12,
