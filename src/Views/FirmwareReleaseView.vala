@@ -23,6 +23,14 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     public Fwupd.Device device { get; construct set; }
     public Fwupd.Release release { get; construct set; }
 
+    private Gtk.Label title_label;
+    private Gtk.Label summary_label;
+    private Gtk.Label description_label;
+    private Gtk.Label version_value_label;
+    private Gtk.Label vendor_value_label;
+    private Gtk.Label size_value_label;
+    private Gtk.Label install_duration_value_label;
+
     public signal void back ();
 
     public FirmwareReleaseView (Fwupd.Device device, Fwupd.Release release) {
@@ -30,16 +38,26 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             device: device,
             release: release
         );
+
+        title_label.label = device.name;
+        summary_label.label = release.summary;
+        description_label.label = release.description;
+        version_value_label.label = release.version;
+        vendor_value_label.label = release.vendor;
+        size_value_label.label = Formatter.bytes_to_string (release.size);
+        install_duration_value_label.label = Formatter.seconds_to_string (release.install_duration);
     }
 
     construct {
+        orientation = Gtk.Orientation.VERTICAL;
+
         var back_button = new Gtk.Button.with_label (_("All Updates")) {
             halign = Gtk.Align.START,
             margin = 6
         };
         back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
-        var title_label = new Gtk.Label (device.name) {
+        title_label = new Gtk.Label ("") {
             ellipsize = Pango.EllipsizeMode.END
         };
 
@@ -56,7 +74,70 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         header_box.set_center_widget (title_label);
         header_box.pack_end (update_button);
 
+        summary_label = new Gtk.Label ("") {
+            wrap = true
+        };
+        summary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+
+        description_label = new Gtk.Label ("") {
+            wrap = true
+        };
+
+        var version_label = new Gtk.Label (_("Version:")) {
+            xalign = 1
+        };
+
+        version_value_label = new Gtk.Label ("") {
+            xalign = 0,
+            hexpand = true
+        };
+
+        var vendor_label = new Gtk.Label (_("Vendor:")) {
+            xalign = 1
+        };
+
+        vendor_value_label = new Gtk.Label ("") {
+            xalign = 0,
+            hexpand = true
+        };
+
+        var size_label = new Gtk.Label (_("Size:")) {
+            xalign = 1
+        };
+
+        size_value_label = new Gtk.Label ("") {
+            xalign = 0,
+            hexpand = true
+        };
+
+        var install_duration_label = new Gtk.Label (_("Estimated time to install:")) {
+            xalign = 1
+        };
+
+        install_duration_value_label = new Gtk.Label ("") {
+            xalign = 0,
+            hexpand = true
+        };
+
+        var content_area = new Gtk.Grid () {
+            column_spacing = 12,
+            row_spacing = 12,
+            vexpand = true
+        };
+
+        content_area.attach (summary_label, 0, 0);
+        content_area.attach (description_label, 0, 1);
+        content_area.attach (version_label, 0, 2);
+        content_area.attach (version_value_label, 1, 2);
+        content_area.attach (vendor_label, 0, 3);
+        content_area.attach (vendor_value_label, 1, 3);
+        content_area.attach (size_label, 0, 4);
+        content_area.attach (size_value_label, 1, 4);
+        content_area.attach (install_duration_label, 0, 5);
+        content_area.attach (install_duration_value_label, 1, 5);
+
         add (header_box);
+        add (content_area);
 
         back_button.clicked.connect (() => {
             back ();
