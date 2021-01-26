@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-26 01:06+0000\n"
-"PO-Revision-Date: 2021-01-18 21:57+0000\n"
+"PO-Revision-Date: 2021-01-26 10:11+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -37,22 +37,16 @@ msgid "Hardware"
 msgstr "חומרה"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "חומרה"
+msgstr "קושחה"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "מידע מערכת"
+msgstr "מידע מערכת הפעלה"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "מידע מערכת"
+msgstr "מידע על חומרה"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
