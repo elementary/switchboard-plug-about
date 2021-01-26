@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-26 12:44+0000\n"
-"PO-Revision-Date: 2021-01-26 10:11+0000\n"
+"PO-Revision-Date: 2021-01-26 22:57+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -75,126 +75,124 @@ msgstr "עדכונים"
 #. / TRANSLATORS: Device cannot be removed easily
 #: src/Objects/DeviceFlag.vala:77
 msgid "Internal device"
-msgstr ""
+msgstr "התקן פנימי"
 
 #. / TRANSLATORS: Device is updatable in this or any other mode
 #: src/Objects/DeviceFlag.vala:80
-#, fuzzy
-#| msgid "Updates"
 msgid "Updatable"
-msgstr "עדכונים"
+msgstr "זמין לעדכון"
 
 #. / TRANSLATORS: Update can only be done from offline mode
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "העדכון דורש הפעלת המערכת מחדש"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
 msgid "System requires external power source"
-msgstr ""
+msgstr "המערכת דורשת אספקת חשמל חיצונית"
 
 #. / TRANSLATORS: Is locked and can be unlocked
 #: src/Objects/DeviceFlag.vala:89
 msgid "Device is locked"
-msgstr ""
+msgstr "ההתקן נעול"
 
 #. / TRANSLATORS: Is found in current metadata
 #: src/Objects/DeviceFlag.vala:92
 msgid "Supported on LVFS"
-msgstr ""
+msgstr "נתמך ב־LVFS"
 
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
 msgid "Requires a bootloader"
-msgstr ""
+msgstr "דורש טוען הפעלה (bootloader)"
 
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
 msgid "Requires the system to shut down after installation"
-msgstr ""
+msgstr "דורש כיבוי המערכת לאחר ההתקנה"
 
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
 msgid "Reported to LVFS"
-msgstr ""
+msgstr "מדווח ל־LVFS"
 
 #. / TRANSLATORS: User has been notified
 #: src/Objects/DeviceFlag.vala:107
 msgid "User has been notified"
-msgstr ""
+msgstr "נשלחה הודעה למשתמש"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
 msgid "Install to parent device first"
-msgstr ""
+msgstr "התקנה להתקן ההורה תחילה"
 
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "הוא במצב טוען הפעלה (bootloader)"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "החומרה ממתינה לחיבור מחדש"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
 msgid "Ignore validation safety checks"
-msgstr ""
+msgstr "התעלמות מבדיקות אבטחת תיקוף"
 
 #. / TRANSLATORS: Device update needs to be separately activated
 #: src/Objects/DeviceFlag.vala:131
 msgid "Device update needs activation"
-msgstr ""
+msgstr "עדכון ההתקן דורש הפעלה"
 
 #. / TRANSLATORS: Device will not return after update completes
 #: src/Objects/DeviceFlag.vala:143
 msgid "Device will not re-appear after update completes"
-msgstr ""
+msgstr "ההתקן לא יופיע מחדש לאחר השלמת העדכון"
 
 #. / TRANSLATORS: Device supports some form of checksum verification
 #: src/Objects/DeviceFlag.vala:146
 msgid "Cryptographic hash verification is available"
-msgstr ""
+msgstr "קיים תיקוף גיבוב קריפטוגרפי"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:152
 msgid "Device stages updates"
-msgstr ""
+msgstr "ההתקן מתעדכן בשלבים"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:155
 msgid "Device can recover flash failures"
-msgstr ""
+msgstr "ההתקן יכול להשתקם מכשלי צריבה"
 
 #. / TRANSLATORS: Device remains usable during update
 #: src/Objects/DeviceFlag.vala:158
 msgid "Device is usable for the duration of the update"
-msgstr ""
+msgstr "ההתקן שמיש במהלך העדכון"
 
 #: src/Views/FirmwareView.vala:36
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "לא לנתק את ההתקן במהלך העדכון."
 
 #: src/Views/FirmwareView.vala:47
 msgid "No Updatable Devices"
-msgstr ""
+msgstr "אין התקנים שניתן לעדכן"
 
 #: src/Views/FirmwareView.vala:48
 msgid "Firmware updates are not supported on this or any connected devices."
-msgstr ""
+msgstr "אין לזה תמיכה בעדכוני קושחה או התקנים מחוברים."
 
 #: src/Views/FirmwareView.vala:104
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "„%s” מתעדכן"
 
 #: src/Views/FirmwareView.vala:125
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "התקנת גרסת הקושחה נכשלה"
 
 #: src/Views/HardwareView.vala:93
 #, c-format
@@ -264,7 +262,7 @@ msgstr "אתר אינטרנט"
 
 #: src/Views/OperatingSystemView.vala:137
 msgid "Check for Updates"
-msgstr "בדיקה עבור עדכונים"
+msgstr "בדיקה לאיתור עדכונים"
 
 #: src/Views/OperatingSystemView.vala:169
 #, c-format
@@ -288,49 +286,45 @@ msgid "Restore Settings"
 msgstr "שחזור הגדרות"
 
 #: src/Widgets/FirmwareUpdateRow.vala:67
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "עדכונים"
+msgstr "עדכון"
 
 #: src/Widgets/FirmwareUpdateRow.vala:89
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "עדכונים"
+msgstr "עדכני"
 
 #: src/Widgets/FirmwareUpdateRow.vala:117
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "יש לשים את „%s” במצב עדכון ידנית"
 
 #: src/Widgets/FirmwareUpdateRow.vala:124
 msgid "Continue"
-msgstr ""
+msgstr "להמשיך"
 
 #: src/Widgets/FirmwareUpdateRow.vala:144
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "עדכון דורש את הפעלת המערכת מחדש כדי שיושלם"
 
 #: src/Widgets/FirmwareUpdateRow.vala:145
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "פעולה זו תסגור את כל היישומים הפתוחים ותפעיל את ההתקן הזה מחדש."
 
 #: src/Widgets/FirmwareUpdateRow.vala:151
 msgid "Restart"
-msgstr ""
+msgstr "הפעלה מחדש"
 
 #: src/Widgets/FirmwareUpdateRow.vala:166
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "עדכון דורש לכבות את המערכת כדי שיושלם"
 
 #: src/Widgets/FirmwareUpdateRow.vala:167
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "פעולה זו תסגור את כל היישומים הפתוחים ותכבה את ההתקן הזה."
 
 #: src/Widgets/FirmwareUpdateRow.vala:173
 msgid "Shut Down"
-msgstr ""
+msgstr "כיבוי"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "הצעת תרגום"
