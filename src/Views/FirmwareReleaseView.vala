@@ -55,7 +55,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
                 break;
         }
 
-        title_label.label = device.name;
+        title_label.label = "<b>%s</b>".printf (device.name);
         summary_label.label = release.summary;
         description_label.label = release.description;
         version_value_label.label = release.version;
