@@ -22,6 +22,9 @@
 public class About.FwupdManager : Object {
     [DBus (name = "org.freedesktop.fwupd")]
     private interface FwupdInterface : Object {
+        [DBus (name = "DaemonVersion")]
+        public abstract string daemon_version { owned get; }
+
         public abstract signal void device_added (GLib.HashTable<string, Variant> device);
         public abstract signal void device_removed (GLib.HashTable<string, Variant> device);
 
@@ -32,6 +35,12 @@ public class About.FwupdManager : Object {
     }
 
     private FwupdInterface fwupd;
+
+    public bool is_available {
+        get {
+            return fwupd.daemon_version != null;
+        }
+    }
 
     public signal void on_device_added (Fwupd.Device device);
     public signal void on_device_error (Fwupd.Device device, string error);

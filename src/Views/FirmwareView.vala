@@ -48,6 +48,12 @@ public class About.FirmwareView : Gtk.Stack {
             _("Firmware updates are not supported on this or any connected devices."),
             "application-x-firmware"
         );
+
+        if (!fwupd.is_available) {
+            no_devices_alert_view.title = _("Firmware updates are not supported");
+            no_devices_alert_view.description = _("Please install “fwupd” to handle firmware updates.");
+        }
+
         no_devices_alert_view.show_all ();
         no_devices_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
