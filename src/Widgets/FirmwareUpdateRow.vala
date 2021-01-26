@@ -48,6 +48,11 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             xalign = 0
         };
 
+        var update_button = new Gtk.Button.with_label ("") {
+            valign = Gtk.Align.CENTER,
+            sensitive = false
+        };
+
         var grid = new Gtk.Grid () {
             column_spacing = 12,
             margin = 6
@@ -55,34 +60,28 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         grid.attach (icon, 0, 0, 1, 2);
         grid.attach (device_name_label, 1, 0);
         grid.attach (version_label, 1, 1);
+        grid.attach (update_button, 2, 0, 1, 2);
 
         switch (device.latest_release.flag) {
             case Fwupd.ReleaseFlag.IS_UPGRADE:
                 if (device.latest_release.version == device.version) {
-                    add_up_to_date_label (grid);
+                    update_button.label = _("Up to date");
+                    update_button.sensitive = false;
                     break;
                 }
 
-                var update_button = new Gtk.Button.with_label (_("Update")) {
-                    valign = Gtk.Align.CENTER
-                };
+                update_button.label = _("Update");
+                update_button.sensitive = true;
                 update_button.clicked.connect (() => {
                     update (device, device.latest_release);
                 });
-                grid.attach (update_button, 2, 0, 1, 2);
                 break;
             default:
-                add_up_to_date_label (grid);
+                update_button.label = _("Up to date");
+                update_button.sensitive = false;
                 break;
         }
 
         add (grid);
-    }
-
-    private void add_up_to_date_label (Gtk.Grid grid) {
-        var update_to_date_label = new Gtk.Label (_("Up to date")) {
-            valign = Gtk.Align.CENTER
-        };
-        grid.attach (update_to_date_label, 2, 0, 1, 2);
     }
 }
