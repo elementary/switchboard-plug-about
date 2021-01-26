@@ -101,7 +101,7 @@ public class About.FirmwareView : Gtk.Stack {
             update_list.add (row);
 
             row.on_update_start.connect (() => {
-                progress_alert_view.title = _("“%s” is being updated".printf (device.name));
+                progress_alert_view.title = _("“%s” is being updated").printf (device.name);
                 visible_child = progress_view;
             });
             row.on_update_end.connect (() => {
