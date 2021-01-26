@@ -103,6 +103,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
         description_label = new Gtk.Label ("") {
             halign = Gtk.Align.START,
+            margin_bottom = 12,
             wrap = true
         };
 
