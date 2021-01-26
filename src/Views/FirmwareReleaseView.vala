@@ -1,4 +1,4 @@
-    /*
+/*
  * Copyright (c) 2021 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
