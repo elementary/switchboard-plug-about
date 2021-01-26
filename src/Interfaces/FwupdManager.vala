@@ -142,16 +142,7 @@ public class About.FwupdManager : Object {
                     release.version = val.get_string ();
                     break;
                 case "Description":
-                    release.description = val.get_string ()
-                    .replace ("<p>", "")
-                    .replace ("</p>", "\n\n")
-                    .replace ("<li>", " • ")
-                    .replace ("</li>", "\n")
-                    .replace ("<ul>", "")
-                    .replace ("</ul>", "\n")
-                    .replace ("<ol>", "") // TODO: add support for ordered lists
-                    .replace ("</ol>", "\n")
-                    .strip ();
+                    release.description = Formatter.xml_to_string (val.get_string ());
                     break;
                 case "Protocol":
                     release.protocol = val.get_string ();
