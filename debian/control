@@ -16,7 +16,7 @@ Homepage: https://github.com/elementary/switchboard-plug-about
 Package: switchboard-plug-about
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Recommends: io.elementary.feedback, switcheroo-control
+Recommends: io.elementary.feedback, fwupd, switcheroo-control
 Enhances: switchboard
 Description: About plug for Switchboard
  This plug displays information about the system.
