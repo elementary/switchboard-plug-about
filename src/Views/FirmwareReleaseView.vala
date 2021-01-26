@@ -1,4 +1,4 @@
-/*
+    /*
  * Copyright (c) 2021 elementary, Inc. (https://elementary.io)
  *
  * This program is free software; you can redistribute it and/or
@@ -99,7 +99,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             halign = Gtk.Align.START,
             wrap = true
         };
-        summary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        summary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
         description_label = new Gtk.Label ("") {
             halign = Gtk.Align.START,
@@ -144,24 +144,32 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
         var content_area = new Gtk.Grid () {
             column_spacing = 12,
+            halign = Gtk.Align.CENTER,
+            margin = 12,
             row_spacing = 12,
             vexpand = true
         };
 
-        content_area.attach (version_label, 0, 0);
-        content_area.attach (version_value_label, 1, 0);
-        content_area.attach (vendor_label, 0, 1);
-        content_area.attach (vendor_value_label, 1, 1);
-        content_area.attach (size_label, 0, 2);
-        content_area.attach (size_value_label, 1, 2);
-        content_area.attach (install_duration_label, 0, 3);
-        content_area.attach (install_duration_value_label, 1, 3);
+        content_area.attach (summary_label, 0, 0, 2);
+        content_area.attach (description_label, 0, 1, 2);
+        content_area.attach (version_label, 0, 2);
+        content_area.attach (version_value_label, 1, 2);
+        content_area.attach (vendor_label, 0, 3);
+        content_area.attach (vendor_value_label, 1, 3);
+        content_area.attach (size_label, 0, 4);
+        content_area.attach (size_value_label, 1, 4);
+        content_area.attach (install_duration_label, 0, 5);
+        content_area.attach (install_duration_value_label, 1, 5);
+
+        var scrolled_window = new Gtk.ScrolledWindow (null, null) {
+            hscrollbar_policy = Gtk.PolicyType.NEVER,
+            vexpand = true
+        };
+        scrolled_window.add (content_area);
 
         add (header_box);
         add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-        add (summary_label);
-        add (description_label);
-        add (content_area);
+        add (scrolled_window);
 
         back_button.clicked.connect (() => {
             back ();
