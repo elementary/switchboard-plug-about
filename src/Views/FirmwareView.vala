@@ -57,6 +57,8 @@ public class About.FirmwareView : Gtk.Stack {
         };
         update_list.set_placeholder (no_devices_alert_view);
 
+        update_list.row_activated.connect (show_release);
+
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
         scrolled_window.add (update_list);
 
@@ -147,5 +149,24 @@ public class About.FirmwareView : Gtk.Stack {
         }
 
         update_list.show_all ();
+    }
+
+    private void show_release (Gtk.ListBoxRow widget) {
+        if (widget is Widgets.FirmwareUpdateRow) {
+            var row = (Widgets.FirmwareUpdateRow) widget;
+            var firmware_release_view = new FirmwareReleaseView (row.device, row.device.latest_release);
+            add (firmware_release_view);
+            visible_child = firmware_release_view;
+
+            firmware_release_view.back.connect (() => {
+                visible_child = grid;
+
+                foreach (unowned Gtk.Widget child in get_children ()) {
+                    if (child is FirmwareReleaseView) {
+                        remove (child);
+                    }
+                }
+            });
+        }
     }
 }
