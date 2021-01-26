@@ -32,6 +32,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     private Gtk.Label install_duration_value_label;
 
     public signal void back ();
+    public signal void update (Fwupd.Device device, Fwupd.Release release);
 
     public FirmwareReleaseView (Fwupd.Device device, Fwupd.Release release) {
         Object (
@@ -141,6 +142,10 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
         back_button.clicked.connect (() => {
             back ();
+        });
+
+        update_button.clicked.connect (() => {
+            update (device, release);
         });
 
         show_all ();
