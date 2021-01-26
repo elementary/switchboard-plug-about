@@ -29,12 +29,18 @@ public class About.Plug : Switchboard.Plug {
     public Plug () {
         var settings = new Gee.TreeMap<string, string?> (null, null);
         settings.set ("about", null);
-        Object (category: Category.SYSTEM,
-                code_name: "io.elementary.switchboard.about",
-                display_name: _("System"),
-                description: _("View operating system and hardware information"),
-                icon: "application-x-firmware",
-                supported_settings: settings);
+        settings.set ("about/os", OPERATING_SYSTEM);
+        settings.set ("about/hardware", HARDWARE);
+        settings.set ("about/firmware", FIRMWARE);
+
+        Object (
+            category: Category.SYSTEM,
+            code_name: "io.elementary.switchboard.about",
+            display_name: _("System"),
+            description: _("View operating system and hardware information"),
+            icon: "application-x-firmware",
+            supported_settings: settings
+        );
     }
 
     public override Gtk.Widget get_widget () {
@@ -79,7 +85,7 @@ public class About.Plug : Switchboard.Plug {
     }
 
     public override void search_callback (string location) {
-        critical (location.to_string ());
+        critical (location);
 
         switch (location) {
             case OPERATING_SYSTEM:
