@@ -85,8 +85,6 @@ public class About.Plug : Switchboard.Plug {
     }
 
     public override void search_callback (string location) {
-        critical (location);
-
         switch (location) {
             case OPERATING_SYSTEM:
             case HARDWARE:
