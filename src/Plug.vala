@@ -19,17 +19,28 @@
 */
 
 public class About.Plug : Switchboard.Plug {
+    private const string OPERATING_SYSTEM = "operating-system";
+    private const string HARDWARE = "hardware";
+    private const string FIRMWARE = "firmware";
+
     private Gtk.Grid main_grid;
+    private Gtk.Stack stack;
 
     public Plug () {
         var settings = new Gee.TreeMap<string, string?> (null, null);
         settings.set ("about", null);
-        Object (category: Category.SYSTEM,
-                code_name: "io.elementary.switchboard.about",
-                display_name: _("System"),
-                description: _("View operating system and hardware information"),
-                icon: "application-x-firmware",
-                supported_settings: settings);
+        settings.set ("about/os", OPERATING_SYSTEM);
+        settings.set ("about/hardware", HARDWARE);
+        settings.set ("about/firmware", FIRMWARE);
+
+        Object (
+            category: Category.SYSTEM,
+            code_name: "io.elementary.switchboard.about",
+            display_name: _("System"),
+            description: _("View operating system and hardware information"),
+            icon: "application-x-firmware",
+            supported_settings: settings
+        );
     }
 
     public override Gtk.Widget get_widget () {
@@ -42,12 +53,12 @@ public class About.Plug : Switchboard.Plug {
 
             var firmware_view = new FirmwareView ();
 
-            var stack = new Gtk.Stack () {
+            stack = new Gtk.Stack () {
                 vexpand = true
             };
-            stack.add_titled (operating_system_view, "operating-system-view", _("Operating System"));
-            stack.add_titled (hardware_view, "hardware-view", _("Hardware"));
-            stack.add_titled (firmware_view, "firmware-view", _("Firmware"));
+            stack.add_titled (operating_system_view, OPERATING_SYSTEM, _("Operating System"));
+            stack.add_titled (hardware_view, HARDWARE, _("Hardware"));
+            stack.add_titled (firmware_view, FIRMWARE, _("Firmware"));
 
             var stack_switcher = new Gtk.StackSwitcher () {
                 halign = Gtk.Align.CENTER,
@@ -74,17 +85,35 @@ public class About.Plug : Switchboard.Plug {
     }
 
     public override void search_callback (string location) {
+        switch (location) {
+            case OPERATING_SYSTEM:
+            case HARDWARE:
+            case FIRMWARE:
+                stack.set_visible_child_name (location);
+                break;
+            default:
+                stack.set_visible_child_name (OPERATING_SYSTEM);
+                break;
+        }
     }
 
     // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
     public override async Gee.TreeMap<string, string> search (string search) {
-        var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
-        search_results.set ("%s → %s".printf (display_name, _("System Information")), "");
-        search_results.set ("%s → %s".printf (display_name, _("Restore Default Settings")), "");
-        search_results.set ("%s → %s".printf (display_name, _("Suggest Translation")), "");
-        search_results.set ("%s → %s".printf (display_name, _("Send Feedback")), "");
-        search_results.set ("%s → %s".printf (display_name, _("Report a Problem")), "");
-        search_results.set ("%s → %s".printf (display_name, _("Updates")), "");
+        var search_results = new Gee.TreeMap<string, string> (
+            (GLib.CompareDataFunc<string>)strcmp,
+            (Gee.EqualDataFunc<string>)str_equal
+        );
+
+        search_results.set ("%s → %s".printf (display_name, _("Operating System Information")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s".printf (display_name, _("Hardware Information")), HARDWARE);
+        search_results.set ("%s → %s".printf (display_name, _("Firmware")), FIRMWARE);
+        search_results.set ("%s → %s".printf (display_name, _("Restore Default Settings")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s".printf (display_name, _("Suggest Translations")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s".printf (display_name, _("Send Feedback")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s".printf (display_name, _("Report a Problem")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s".printf (display_name, _("Get Support")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s".printf (display_name, _("Updates")), OPERATING_SYSTEM);
+
         return search_results;
     }
 }
