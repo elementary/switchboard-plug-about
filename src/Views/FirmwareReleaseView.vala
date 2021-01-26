@@ -51,6 +51,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
     construct {
         orientation = Gtk.Orientation.VERTICAL;
+        row_spacing = 8;
 
         var back_button = new Gtk.Button.with_label (_("All Updates")) {
             halign = Gtk.Align.START,
@@ -76,11 +77,13 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         header_box.pack_end (update_button);
 
         summary_label = new Gtk.Label ("") {
+            halign = Gtk.Align.START,
             wrap = true
         };
         summary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
         description_label = new Gtk.Label ("") {
+            halign = Gtk.Align.START,
             wrap = true
         };
 
@@ -126,18 +129,18 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             vexpand = true
         };
 
-        content_area.attach (summary_label, 0, 0);
-        content_area.attach (description_label, 0, 1);
-        content_area.attach (version_label, 0, 2);
-        content_area.attach (version_value_label, 1, 2);
-        content_area.attach (vendor_label, 0, 3);
-        content_area.attach (vendor_value_label, 1, 3);
-        content_area.attach (size_label, 0, 4);
-        content_area.attach (size_value_label, 1, 4);
-        content_area.attach (install_duration_label, 0, 5);
-        content_area.attach (install_duration_value_label, 1, 5);
+        content_area.attach (version_label, 0, 0);
+        content_area.attach (version_value_label, 1, 0);
+        content_area.attach (vendor_label, 0, 1);
+        content_area.attach (vendor_value_label, 1, 1);
+        content_area.attach (size_label, 0, 2);
+        content_area.attach (size_value_label, 1, 2);
+        content_area.attach (install_duration_label, 0, 3);
+        content_area.attach (install_duration_value_label, 1, 3);
 
         add (header_box);
+        add (summary_label);
+        add (description_label);
         add (content_area);
 
         back_button.clicked.connect (() => {
