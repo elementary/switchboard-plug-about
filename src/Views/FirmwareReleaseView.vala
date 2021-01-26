@@ -79,6 +79,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     construct {
         orientation = Gtk.Orientation.VERTICAL;
         row_spacing = 8;
+        get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
 
         var back_button = new Gtk.Button.with_label (_("All Updates")) {
             halign = Gtk.Align.START,
@@ -159,6 +160,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         content_area.attach (install_duration_value_label, 1, 3);
 
         add (header_box);
+        add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         add (summary_label);
         add (description_label);
         add (content_area);
