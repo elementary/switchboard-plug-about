@@ -146,8 +146,11 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             column_homogeneous = true,
             column_spacing = 6,
             halign = Gtk.Align.CENTER,
-            row_spacing = 6
+            margin_top = 12,
+            row_spacing = 3
         };
+        key_val_grid.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+
         key_val_grid.attach (version_label, 0, 0);
         key_val_grid.attach (version_value_label, 1, 0);
         key_val_grid.attach (vendor_label, 0, 1);
