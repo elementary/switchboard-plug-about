@@ -20,6 +20,7 @@
 */
 
 public class About.FirmwareView : Gtk.Stack {
+    private Hdy.Deck deck;
     private Gtk.Grid grid;
     private Granite.Widgets.AlertView progress_alert_view;
     private Gtk.Grid progress_view;
@@ -59,11 +60,16 @@ public class About.FirmwareView : Gtk.Stack {
 
         update_list.row_activated.connect (show_release);
 
-        var scrolled_window = new Gtk.ScrolledWindow (null, null);
-        scrolled_window.add (update_list);
+        var update_scrolled = new Gtk.ScrolledWindow (null, null);
+        update_scrolled.add (update_list);
+
+        deck = new Hdy.Deck () {
+            can_swipe_back = true
+        };
+        deck.add (update_scrolled);
 
         var frame = new Gtk.Frame (null);
-        frame.add (scrolled_window);
+        frame.add (deck);
 
         grid = new Gtk.Grid () {
             column_spacing = 12,
@@ -165,17 +171,16 @@ public class About.FirmwareView : Gtk.Stack {
         if (widget is Widgets.FirmwareUpdateRow) {
             var row = (Widgets.FirmwareUpdateRow) widget;
             var firmware_release_view = new FirmwareReleaseView (row.device, row.device.latest_release);
-            add (firmware_release_view);
-            visible_child = firmware_release_view;
+            deck.add (firmware_release_view);
+            deck.visible_child = firmware_release_view;
 
             firmware_release_view.back.connect (() => {
-                visible_child = grid;
+                deck.navigate (Hdy.NavigationDirection.BACK);
+                firmware_release_view.destroy ();
+            });
 
-                foreach (unowned Gtk.Widget child in get_children ()) {
-                    if (child is FirmwareReleaseView) {
-                        remove (child);
-                    }
-                }
+            deck.child_switched.connect (() => {
+                firmware_release_view.destroy ();
             });
 
             firmware_release_view.update.connect ((device, release) => {
