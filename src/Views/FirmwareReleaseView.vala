@@ -68,7 +68,6 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
     construct {
         orientation = Gtk.Orientation.VERTICAL;
-        row_spacing = 8;
         get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
 
         var back_button = new Gtk.Button.with_label (_("All Updates")) {
