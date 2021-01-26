@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-26 01:06+0000\n"
-"PO-Revision-Date: 2021-01-05 18:27+0000\n"
+"PO-Revision-Date: 2021-01-26 03:48+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:39
@@ -37,22 +37,16 @@ msgid "Hardware"
 msgstr "ハードウェア"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "ハードウェア"
+msgstr "ファームウェア"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "システム情報"
+msgstr "オペレーティングシステムの情報"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "システム情報"
+msgstr "ハードウェアの情報"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
