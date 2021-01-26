@@ -23,6 +23,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     public Fwupd.Device device { get; construct set; }
     public Fwupd.Release release { get; construct set; }
 
+    private Gtk.Box header_box;
     private Gtk.Label title_label;
     private Gtk.Label summary_label;
     private Gtk.Label description_label;
@@ -40,6 +41,30 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             release: release
         );
 
+        switch (release.flag) {
+            case Fwupd.ReleaseFlag.IS_UPGRADE:
+                if (release.version == device.version) {
+                    add_up_to_date_label ();
+                    break;
+                }
+
+                var update_button = new Gtk.Button.with_label (_("Update")) {
+                    halign = Gtk.Align.END,
+                    margin = 6
+                };
+                update_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+                update_button.clicked.connect (() => {
+                    update (device, release);
+                });
+
+                header_box.pack_end (update_button);
+                break;
+            default:
+                add_up_to_date_label ();
+                break;
+        }
+
         title_label.label = device.name;
         summary_label.label = release.summary;
         description_label.label = release.description;
@@ -47,6 +72,8 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         vendor_value_label.label = release.vendor;
         size_value_label.label = Formatter.bytes_to_string (release.size);
         install_duration_value_label.label = Formatter.seconds_to_string (release.install_duration);
+
+        show_all ();
     }
 
     construct {
@@ -63,18 +90,11 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             ellipsize = Pango.EllipsizeMode.END
         };
 
-        var update_button = new Gtk.Button.with_label (_("Update")) {
-            halign = Gtk.Align.END,
-            margin = 6
-        };
-        update_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-
-        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+        header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             hexpand = true
         };
         header_box.pack_start (back_button);
         header_box.set_center_widget (title_label);
-        header_box.pack_end (update_button);
 
         summary_label = new Gtk.Label ("") {
             halign = Gtk.Align.START,
@@ -147,10 +167,14 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             back ();
         });
 
-        update_button.clicked.connect (() => {
-            update (device, release);
-        });
-
         show_all ();
+    }
+
+    private void add_up_to_date_label () {
+        var update_to_date_label = new Gtk.Label (_("Up to date")) {
+            halign = Gtk.Align.END,
+            margin = 6
+        };
+        header_box.pack_end (update_to_date_label);
     }
 }
