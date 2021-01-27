@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-26 12:44+0000\n"
+"POT-Creation-Date: 2021-01-27 17:32+0000\n"
 "PO-Revision-Date: 2021-01-04 22:57+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Vietnamese <https://l10n.elementary.io/projects/switchboard/"
@@ -196,68 +196,68 @@ msgstr ""
 msgid "Failed to install firmware release"
 msgstr ""
 
-#: src/Views/HardwareView.vala:93
+#: src/Views/HardwareView.vala:75
 #, fuzzy, c-format
 msgid "%s memory"
 msgstr "Bộ nhớ:"
 
-#: src/Views/HardwareView.vala:165
-msgid "Manufacturer Website"
-msgstr ""
-
-#: src/Views/HardwareView.vala:245
-#, c-format
-msgid "Dual-Core %s"
-msgstr ""
-
-#: src/Views/HardwareView.vala:247
-#, c-format
-msgid "Quad-Core %s"
-msgstr ""
-
-#: src/Views/HardwareView.vala:249
-#, c-format
-msgid "Hexa-Core %s"
-msgstr ""
-
-#: src/Views/HardwareView.vala:289
+#: src/Views/HardwareView.vala:81 src/Views/HardwareView.vala:298
 #, fuzzy
 #| msgid "Graphics:"
 msgid "Unknown Graphics"
 msgstr "Đồ họa:"
 
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:150
+msgid "Manufacturer Website"
+msgstr ""
+
+#: src/Views/HardwareView.vala:230
+#, c-format
+msgid "Dual-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:232
+#, c-format
+msgid "Quad-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:234
+#, c-format
+msgid "Hexa-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:317
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Bộ xử lý:"
 
-#: src/Views/HardwareView.vala:318
+#: src/Views/HardwareView.vala:337
 msgid "Unknown"
 msgstr ""
 
-#: src/Views/HardwareView.vala:391
+#: src/Views/HardwareView.vala:410
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr ""
 
-#: src/Views/HardwareView.vala:393
+#: src/Views/HardwareView.vala:412
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr ""
 
-#: src/Views/HardwareView.vala:395
+#: src/Views/HardwareView.vala:414
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr ""
 
-#: src/Views/HardwareView.vala:398
+#: src/Views/HardwareView.vala:417
 #, c-format
 msgid "%s storage (HDD)"
 msgstr ""
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:403
+#: src/Views/HardwareView.vala:422
 #, c-format
 msgid "%s storage"
 msgstr ""

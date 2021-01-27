@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-26 12:44+0000\n"
+"POT-Creation-Date: 2021-01-27 17:32+0000\n"
 "PO-Revision-Date: 2021-01-04 22:57+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Moldovan <https://l10n.elementary.io/projects/switchboard/"
@@ -195,68 +195,68 @@ msgstr ""
 msgid "Failed to install firmware release"
 msgstr ""
 
-#: src/Views/HardwareView.vala:93
+#: src/Views/HardwareView.vala:75
 #, c-format
 msgid "%s memory"
 msgstr "%s 1 memorie"
 
-#: src/Views/HardwareView.vala:165
-msgid "Manufacturer Website"
-msgstr "Site-ul producătorului"
-
-#: src/Views/HardwareView.vala:245
-#, fuzzy, c-format
-#| msgid "Dual-Core"
-msgid "Dual-Core %s"
-msgstr "Cu două nuclee"
-
-#: src/Views/HardwareView.vala:247
-#, fuzzy, c-format
-#| msgid "Quad-Core"
-msgid "Quad-Core %s"
-msgstr "Cu patru nuclee"
-
-#: src/Views/HardwareView.vala:249
-#, c-format
-msgid "Hexa-Core %s"
-msgstr ""
-
-#: src/Views/HardwareView.vala:289
+#: src/Views/HardwareView.vala:81 src/Views/HardwareView.vala:298
 #, fuzzy
 #| msgid "Unknown"
 msgid "Unknown Graphics"
 msgstr "Necunoscut"
 
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:150
+msgid "Manufacturer Website"
+msgstr "Site-ul producătorului"
+
+#: src/Views/HardwareView.vala:230
+#, fuzzy, c-format
+#| msgid "Dual-Core"
+msgid "Dual-Core %s"
+msgstr "Cu două nuclee"
+
+#: src/Views/HardwareView.vala:232
+#, fuzzy, c-format
+#| msgid "Quad-Core"
+msgid "Quad-Core %s"
+msgstr "Cu patru nuclee"
+
+#: src/Views/HardwareView.vala:234
+#, c-format
+msgid "Hexa-Core %s"
+msgstr ""
+
+#: src/Views/HardwareView.vala:317
 msgid "Unknown Processor"
 msgstr ""
 
-#: src/Views/HardwareView.vala:318
+#: src/Views/HardwareView.vala:337
 msgid "Unknown"
 msgstr "Necunoscut"
 
-#: src/Views/HardwareView.vala:391
+#: src/Views/HardwareView.vala:410
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s 1 depozitare"
 
-#: src/Views/HardwareView.vala:393
+#: src/Views/HardwareView.vala:412
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s 1 depozitare"
 
-#: src/Views/HardwareView.vala:395
+#: src/Views/HardwareView.vala:414
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s 1 depozitare"
 
-#: src/Views/HardwareView.vala:398
+#: src/Views/HardwareView.vala:417
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "%s 1 depozitare"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:403
+#: src/Views/HardwareView.vala:422
 #, c-format
 msgid "%s storage"
 msgstr "%s 1 depozitare"

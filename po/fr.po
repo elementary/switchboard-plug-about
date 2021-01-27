@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-26 12:44+0000\n"
-"PO-Revision-Date: 2021-01-05 18:27+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"POT-Creation-Date: 2021-01-27 17:32+0000\n"
+"PO-Revision-Date: 2021-01-27 17:32+0000\n"
+"Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:39
@@ -37,22 +37,16 @@ msgid "Hardware"
 msgstr "Matériel"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Matériel"
+msgstr "Micrologiciel"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "Informations système"
+msgstr "Informations du système d'exploitation"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "Informations système"
+msgstr "Informations sur le matériel"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
@@ -81,35 +75,33 @@ msgstr "Mises à jour"
 #. / TRANSLATORS: Device cannot be removed easily
 #: src/Objects/DeviceFlag.vala:77
 msgid "Internal device"
-msgstr ""
+msgstr "Périphérique interne"
 
 #. / TRANSLATORS: Device is updatable in this or any other mode
 #: src/Objects/DeviceFlag.vala:80
-#, fuzzy
-#| msgid "Updates"
 msgid "Updatable"
-msgstr "Mises à jour"
+msgstr "Mises à jour disponible"
 
 #. / TRANSLATORS: Update can only be done from offline mode
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "La mise à jour requiert un redémarrage du système"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
 msgid "System requires external power source"
-msgstr ""
+msgstr "Le système requiert une source d'énergie externe"
 
 #. / TRANSLATORS: Is locked and can be unlocked
 #: src/Objects/DeviceFlag.vala:89
 msgid "Device is locked"
-msgstr ""
+msgstr "Le périphérique est verrouillé"
 
 #. / TRANSLATORS: Is found in current metadata
 #: src/Objects/DeviceFlag.vala:92
 msgid "Supported on LVFS"
-msgstr ""
+msgstr "Pris en charge par LVFS"
 
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
@@ -119,17 +111,17 @@ msgstr ""
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
 msgid "Requires the system to shut down after installation"
-msgstr ""
+msgstr "Le système doit être éteint après l'installation"
 
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
 msgid "Reported to LVFS"
-msgstr ""
+msgstr "Envoyé à LVFS"
 
 #. / TRANSLATORS: User has been notified
 #: src/Objects/DeviceFlag.vala:107
 msgid "User has been notified"
-msgstr ""
+msgstr "L'utilisateur a été notifié"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
@@ -202,64 +194,64 @@ msgstr ""
 msgid "Failed to install firmware release"
 msgstr ""
 
-#: src/Views/HardwareView.vala:93
+#: src/Views/HardwareView.vala:75
 #, c-format
 msgid "%s memory"
 msgstr "%s de mémoire vive"
 
-#: src/Views/HardwareView.vala:165
+#: src/Views/HardwareView.vala:81 src/Views/HardwareView.vala:298
+msgid "Unknown Graphics"
+msgstr "Carte graphique inconnue"
+
+#: src/Views/HardwareView.vala:150
 msgid "Manufacturer Website"
 msgstr "Site web du fabricant"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:230
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Double cœur %s"
 
-#: src/Views/HardwareView.vala:247
+#: src/Views/HardwareView.vala:232
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Quadruple cœur %s"
 
-#: src/Views/HardwareView.vala:249
+#: src/Views/HardwareView.vala:234
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Six cœurs %s"
 
-#: src/Views/HardwareView.vala:289
-msgid "Unknown Graphics"
-msgstr "Carte graphique inconnue"
-
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:317
 msgid "Unknown Processor"
 msgstr "Processeur inconnu"
 
-#: src/Views/HardwareView.vala:318
+#: src/Views/HardwareView.vala:337
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: src/Views/HardwareView.vala:391
+#: src/Views/HardwareView.vala:410
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s de stockage (SSD NVMe)"
 
-#: src/Views/HardwareView.vala:393
+#: src/Views/HardwareView.vala:412
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s de stockage (eMMC)"
 
-#: src/Views/HardwareView.vala:395
+#: src/Views/HardwareView.vala:414
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s de stockage (SSD SATA)"
 
-#: src/Views/HardwareView.vala:398
+#: src/Views/HardwareView.vala:417
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s de stockage (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:403
+#: src/Views/HardwareView.vala:422
 #, c-format
 msgid "%s storage"
 msgstr "%s de stockage"
