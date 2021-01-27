@@ -409,6 +409,7 @@ public class About.HardwareView : Gtk.Grid {
         try {
             var file = File.new_for_path (path);
             var dis = new DataInputStream (yield file.read_async ());
+            // Only a single line in this "file"
             string contents = yield dis.read_line_async ();
 
             if (int.parse (contents) == 0) {
