@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-26 12:44+0000\n"
-"PO-Revision-Date: 2021-01-26 10:11+0000\n"
+"PO-Revision-Date: 2021-01-26 22:57+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
@@ -71,131 +71,131 @@ msgstr "Отримати допомогу"
 
 #: src/Plug.vala:115
 msgid "Updates"
-msgstr "Оновленння"
+msgstr "Оновлення"
 
 #. / TRANSLATORS: Device cannot be removed easily
 #: src/Objects/DeviceFlag.vala:77
 msgid "Internal device"
-msgstr ""
+msgstr "Внутрішній пристрій"
 
 #. / TRANSLATORS: Device is updatable in this or any other mode
 #: src/Objects/DeviceFlag.vala:80
-#, fuzzy
-#| msgid "Updates"
 msgid "Updatable"
-msgstr "Оновленння"
+msgstr "Можливо оновити"
 
 #. / TRANSLATORS: Update can only be done from offline mode
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "Оновлення вимагає перезапуску системи"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
 msgid "System requires external power source"
-msgstr ""
+msgstr "Система вимагає зовнішнього джерела живлення"
 
 #. / TRANSLATORS: Is locked and can be unlocked
 #: src/Objects/DeviceFlag.vala:89
 msgid "Device is locked"
-msgstr ""
+msgstr "Пристрій заблоковано"
 
 #. / TRANSLATORS: Is found in current metadata
 #: src/Objects/DeviceFlag.vala:92
 msgid "Supported on LVFS"
-msgstr ""
+msgstr "Підтримується на LVFS"
 
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
 msgid "Requires a bootloader"
-msgstr ""
+msgstr "Потрібен завантажувач (bootloader)"
 
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
 msgid "Requires the system to shut down after installation"
-msgstr ""
+msgstr "Необхідно вимкнути систему після встановлення"
 
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
 msgid "Reported to LVFS"
-msgstr ""
+msgstr "Надіслано звіт до LVFS"
 
 #. / TRANSLATORS: User has been notified
 #: src/Objects/DeviceFlag.vala:107
 msgid "User has been notified"
-msgstr ""
+msgstr "Користувача повідомлено"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
 msgid "Install to parent device first"
-msgstr ""
+msgstr "Спочатку встановіть на батьківський пристрій"
 
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "Перебуває в режимі завантажувача (bootloader)"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "Апаратне забезпечення чекає на повторне під'єднання"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
 msgid "Ignore validation safety checks"
-msgstr ""
+msgstr "Нехтувати перевірками безпеки"
 
 #. / TRANSLATORS: Device update needs to be separately activated
 #: src/Objects/DeviceFlag.vala:131
 msgid "Device update needs activation"
-msgstr ""
+msgstr "Оновлення пристрою потребує активації"
 
 #. / TRANSLATORS: Device will not return after update completes
 #: src/Objects/DeviceFlag.vala:143
 msgid "Device will not re-appear after update completes"
-msgstr ""
+msgstr "Пристрій не з’явиться повторно після виконання оновлення"
 
 #. / TRANSLATORS: Device supports some form of checksum verification
 #: src/Objects/DeviceFlag.vala:146
 msgid "Cryptographic hash verification is available"
-msgstr ""
+msgstr "Доступна перевірка криптографічного хешу"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:152
 msgid "Device stages updates"
-msgstr ""
+msgstr "Поетапне оновлення пристрою"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:155
 msgid "Device can recover flash failures"
-msgstr ""
+msgstr "Пристрій може виправити помилки флеш"
 
 #. / TRANSLATORS: Device remains usable during update
 #: src/Objects/DeviceFlag.vala:158
 msgid "Device is usable for the duration of the update"
-msgstr ""
+msgstr "Пристрій можна використовувати на час оновлення"
 
 #: src/Views/FirmwareView.vala:36
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Не від'єднуйте пристрій від мережі під час оновлення."
 
 #: src/Views/FirmwareView.vala:47
 msgid "No Updatable Devices"
-msgstr ""
+msgstr "Немає пристроїв, які можна оновити"
 
 #: src/Views/FirmwareView.vala:48
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"Оновлення мікропрограми не підтримується цим та будь-яким під'єднаним "
+"пристроєм."
 
 #: src/Views/FirmwareView.vala:104
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "«%s» оновлюється"
 
 #: src/Views/FirmwareView.vala:125
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Не вдалося встановити випуск мікропрограми"
 
 #: src/Views/HardwareView.vala:93
 #, c-format
@@ -289,49 +289,45 @@ msgid "Restore Settings"
 msgstr "Відновити параметри"
 
 #: src/Widgets/FirmwareUpdateRow.vala:67
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Оновленння"
+msgstr "Оновлення"
 
 #: src/Widgets/FirmwareUpdateRow.vala:89
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "Оновленння"
+msgstr "В оновленому стані"
 
 #: src/Widgets/FirmwareUpdateRow.vala:117
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "«%s» потрібно власноруч перевести в режим оновлення"
 
 #: src/Widgets/FirmwareUpdateRow.vala:124
 msgid "Continue"
-msgstr ""
+msgstr "Продовжити"
 
 #: src/Widgets/FirmwareUpdateRow.vala:144
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "Оновлення вимагає перезапуску системи для завершення"
 
 #: src/Widgets/FirmwareUpdateRow.vala:145
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "Це закриє всі відкриті застосунки та перезапустить цей пристрій."
 
 #: src/Widgets/FirmwareUpdateRow.vala:151
 msgid "Restart"
-msgstr ""
+msgstr "Перезапуск"
 
 #: src/Widgets/FirmwareUpdateRow.vala:166
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "Оновлення вимагає завершення роботи системи"
 
 #: src/Widgets/FirmwareUpdateRow.vala:167
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "Це закриє всі відкриті застосунки та вимкне цей пристрій."
 
 #: src/Widgets/FirmwareUpdateRow.vala:173
 msgid "Shut Down"
-msgstr ""
+msgstr "Вимкнути"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Запропонувати переклад"
