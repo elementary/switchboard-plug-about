@@ -99,7 +99,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             halign = Gtk.Align.START,
             wrap = true
         };
-        summary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        summary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
         description_label = new Gtk.Label ("") {
             halign = Gtk.Align.START,
@@ -142,26 +142,44 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             hexpand = true
         };
 
-        var content_area = new Gtk.Grid () {
-            column_spacing = 12,
+        var key_val_grid = new Gtk.Grid () {
+            column_homogeneous = true,
+            column_spacing = 6,
+            halign = Gtk.Align.CENTER,
+            margin_top = 12,
+            row_spacing = 3
+        };
+        key_val_grid.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+
+        key_val_grid.attach (version_label, 0, 0);
+        key_val_grid.attach (version_value_label, 1, 0);
+        key_val_grid.attach (vendor_label, 0, 1);
+        key_val_grid.attach (vendor_value_label, 1, 1);
+        key_val_grid.attach (size_label, 0, 2);
+        key_val_grid.attach (size_value_label, 1, 2);
+        key_val_grid.attach (install_duration_label, 0, 3);
+        key_val_grid.attach (install_duration_value_label, 1, 3);
+
+        var grid = new Gtk.Grid () {
+            halign = Gtk.Align.CENTER,
+            margin = 12,
+            orientation = Gtk.Orientation.VERTICAL,
             row_spacing = 12,
             vexpand = true
         };
+        grid.add (summary_label);
+        grid.add (description_label);
+        grid.add (key_val_grid);
 
-        content_area.attach (version_label, 0, 0);
-        content_area.attach (version_value_label, 1, 0);
-        content_area.attach (vendor_label, 0, 1);
-        content_area.attach (vendor_value_label, 1, 1);
-        content_area.attach (size_label, 0, 2);
-        content_area.attach (size_value_label, 1, 2);
-        content_area.attach (install_duration_label, 0, 3);
-        content_area.attach (install_duration_value_label, 1, 3);
+        var scrolled_window = new Gtk.ScrolledWindow (null, null) {
+            hscrollbar_policy = Gtk.PolicyType.NEVER,
+            vexpand = true
+        };
+        scrolled_window.add (grid);
 
         add (header_box);
         add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-        add (summary_label);
-        add (description_label);
-        add (content_area);
+        add (scrolled_window);
 
         back_button.clicked.connect (() => {
             back ();
