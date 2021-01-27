@@ -34,29 +34,14 @@ public class About.HardwareView : Gtk.Grid {
     private SessionManager? session_manager;
     private SwitcherooControl? switcheroo_interface;
 
+    private Gtk.Image manufacturer_logo;
+
     private Gtk.Label primary_graphics_info;
     private Gtk.Label secondary_graphics_info;
     private Gtk.Grid graphics_grid;
 
     construct {
         fetch_hardware_info ();
-
-        try {
-            system_interface = Bus.get_proxy_sync (
-                BusType.SYSTEM,
-                "org.freedesktop.hostname1",
-                "/org/freedesktop/hostname1"
-            );
-        } catch (IOError e) {
-            critical (e.message);
-        }
-
-        var manufacturer_logo = new Gtk.Image () {
-            halign = Gtk.Align.END,
-            icon_name = system_interface.icon_name,
-            pixel_size = 128,
-            use_fallback = true
-        };
 
         var product_name_info = new Gtk.Label (Environment.get_host_name ()) {
             ellipsize = Pango.EllipsizeMode.END,
@@ -108,11 +93,16 @@ public class About.HardwareView : Gtk.Grid {
             row_spacing = 6
         };
 
+        manufacturer_logo = new Gtk.Image () {
+            halign = Gtk.Align.END,
+            pixel_size = 128,
+            use_fallback = true
+        };
+
         if (oem_enabled) {
             var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
 
             if (manufacturer_icon_path != null) {
-                manufacturer_logo.icon_name = null;
                 manufacturer_logo.gicon = fileicon;
             }
 
@@ -136,6 +126,10 @@ public class About.HardwareView : Gtk.Grid {
             details_grid.add (manufacturer_info);
         } else {
             details_grid.add (product_name_info);
+        }
+
+        if (manufacturer_logo.gicon == null) {
+            load_fallback_manufacturer_icon.begin ();
         }
 
         details_grid.add (processor_info);
@@ -162,6 +156,20 @@ public class About.HardwareView : Gtk.Grid {
 
         add (manufacturer_logo);
         add (details_grid);
+    }
+
+    private async void load_fallback_manufacturer_icon () {
+        try {
+            system_interface = yield Bus.get_proxy (
+                BusType.SYSTEM,
+                "org.freedesktop.hostname1",
+                "/org/freedesktop/hostname1"
+            );
+
+            manufacturer_logo.icon_name = system_interface.icon_name;
+        } catch (IOError e) {
+            critical (e.message);
+        }
     }
 
     private string? try_get_arm_model (GLib.HashTable<string, string> values) {
