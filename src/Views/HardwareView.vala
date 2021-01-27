@@ -22,8 +22,6 @@
 
 public class About.HardwareView : Gtk.Grid {
     private bool oem_enabled;
-    private string primary_gpu;
-    private string? secondary_gpu;
     private string hdd;
     private string manufacturer_icon_path;
     private string manufacturer_name;
@@ -33,30 +31,14 @@ public class About.HardwareView : Gtk.Grid {
     private string product_name;
     private string product_version;
     private SystemInterface system_interface;
-    private SessionManager session_manager;
+    private SessionManager? session_manager;
     private SwitcherooControl? switcheroo_interface;
 
+    private Gtk.Label primary_graphics_info;
+    private Gtk.Label secondary_graphics_info;
+    private Gtk.Grid graphics_grid;
+
     construct {
-        try {
-            session_manager = Bus.get_proxy_sync (
-                BusType.SESSION,
-                "org.gnome.SessionManager",
-                "/org/gnome/SessionManager"
-            );
-        } catch (IOError e) {
-            warning ("Unable to connect to GNOME Session Manager for GPU details: %s", e.message);
-        }
-
-        try {
-            switcheroo_interface = Bus.get_proxy_sync (
-                BusType.SYSTEM,
-                "net.hadess.SwitcherooControl",
-                "/net/hadess/SwitcherooControl"
-            );
-        } catch (Error e) {
-            warning ("Unable to connect to switcheroo-control: %s", e.message);
-        }
-
         fetch_hardware_info ();
 
         try {
@@ -96,17 +78,24 @@ public class About.HardwareView : Gtk.Grid {
             xalign = 0
         };
 
-        var graphics_info = new Gtk.Label (primary_gpu) {
+        primary_graphics_info = new Gtk.Label (_("Unknown Graphics")) {
             ellipsize = Pango.EllipsizeMode.END,
             selectable = true,
             xalign = 0
         };
 
-        var graphics_secondary_info = new Gtk.Label (secondary_gpu) {
+        secondary_graphics_info = new Gtk.Label (null) {
             ellipsize = Pango.EllipsizeMode.END,
             selectable = true,
             xalign = 0
         };
+
+        graphics_grid = new Gtk.Grid () {
+            orientation = Gtk.Orientation.VERTICAL,
+            row_spacing = 6
+        };
+
+        graphics_grid.add (primary_graphics_info);
 
         var hdd_info = new Gtk.Label (hdd) {
             ellipsize = Pango.EllipsizeMode.END,
@@ -150,11 +139,7 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         details_grid.add (processor_info);
-        details_grid.add (graphics_info);
-
-        if (secondary_gpu != null) {
-            details_grid.add (graphics_secondary_info);
-        }
+        details_grid.add (graphics_grid);
 
         details_grid.add (memory_info);
         details_grid.add (hdd_info);
@@ -255,7 +240,31 @@ public class About.HardwareView : Gtk.Grid {
         return result;
     }
 
-    private string? get_gpu_info (bool primary) {
+    private async string? get_gpu_info (bool primary) {
+        if (session_manager == null) {
+            try {
+                session_manager = yield Bus.get_proxy (
+                    BusType.SESSION,
+                    "org.gnome.SessionManager",
+                    "/org/gnome/SessionManager"
+                );
+            } catch (IOError e) {
+                warning ("Unable to connect to GNOME Session Manager for GPU details: %s", e.message);
+            }
+        }
+
+        if (switcheroo_interface == null) {
+            try {
+                switcheroo_interface = yield Bus.get_proxy (
+                    BusType.SYSTEM,
+                    "net.hadess.SwitcherooControl",
+                    "/net/hadess/SwitcherooControl"
+                );
+            } catch (Error e) {
+                warning ("Unable to connect to switcheroo-control: %s", e.message);
+            }
+        }
+
         string? gpu_name = null;
 
         if (switcheroo_interface != null) {
@@ -289,6 +298,18 @@ public class About.HardwareView : Gtk.Grid {
         return _("Unknown Graphics");
     }
 
+    private async void get_graphics_info () {
+        var primary_gpu = yield get_gpu_info (true);
+        primary_graphics_info.label = primary_gpu;
+
+        var secondary_gpu = yield get_gpu_info (false);
+        if (secondary_gpu != null) {
+            secondary_graphics_info.label = secondary_gpu;
+            graphics_grid.add (secondary_graphics_info);
+            graphics_grid.show_all ();
+        }
+    }
+
     private void fetch_hardware_info () {
         string? cpu = get_cpu_info ();
 
@@ -303,9 +324,7 @@ public class About.HardwareView : Gtk.Grid {
         GLibTop.get_mem (out mem);
         memory = GLib.format_size (mem.total);
 
-        // Graphics
-        primary_gpu = get_gpu_info (true);
-        secondary_gpu = get_gpu_info (false);
+        get_graphics_info.begin ();
 
         // Hard Drive
         var file_root = GLib.File.new_for_path ("/");

@@ -21,28 +21,11 @@
 public class About.OperatingSystemView : Gtk.Grid {
     private string support_url;
 
+    private Gtk.Grid software_grid;
+
     construct {
         var style_provider = new Gtk.CssProvider ();
         style_provider.load_from_resource ("io/elementary/switchboard/system/OperatingSystemView.css");
-
-        // Upstream distro version (for "Built on" text)
-        // FIXME: Add distro specific field to /etc/os-release and use that instead
-        // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
-        var file = File.new_for_path ("/etc/upstream-release/lsb-release");
-        string upstream_release = null;
-        try {
-            var dis = new DataInputStream (file.read ());
-            string line;
-            // Read lines until end of file (null) is reached
-            while ((line = dis.read_line (null)) != null) {
-                var distrib_component = line.split ("=", 2);
-                if (distrib_component.length == 2) {
-                    upstream_release = distrib_component[1].replace ("\"", "");
-                }
-            }
-        } catch (Error e) {
-            warning ("Couldn't read upstream lsb-release file, assuming none");
-        }
 
         var uts_name = Posix.utsname ();
 
@@ -154,7 +137,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         }
         button_grid.set_child_secondary (settings_restore_button, true);
 
-        var software_grid = new Gtk.Grid () {
+        software_grid = new Gtk.Grid () {
             // The avatar has some built-in margin for shadows
             column_spacing = 32 - 6,
             halign = Gtk.Align.CENTER,
@@ -164,14 +147,6 @@ public class About.OperatingSystemView : Gtk.Grid {
         };
         software_grid.attach (logo_overlay, 0, 0, 1, 4);
         software_grid.attach (title, 1, 0, 3);
-
-        if (upstream_release != null) {
-            var based_off = new Gtk.Label (_("Built on %s").printf (upstream_release)) {
-                selectable = true,
-                xalign = 0
-            };
-            software_grid.attach (based_off, 1, 1, 3);
-        }
 
         software_grid.attach (kernel_version_label, 1, 2, 3);
         software_grid.attach (website_label, 1, 3);
@@ -200,6 +175,38 @@ public class About.OperatingSystemView : Gtk.Grid {
                 launch_support_url ();
             }
         });
+
+        get_upstream_release.begin ();
+    }
+
+    private async void get_upstream_release () {
+        // Upstream distro version (for "Built on" text)
+        // FIXME: Add distro specific field to /etc/os-release and use that instead
+        // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
+        var file = File.new_for_path ("/etc/upstream-release/lsb-release");
+        string? upstream_release = null;
+        try {
+            var dis = new DataInputStream (yield file.read_async ());
+            string line;
+            // Read lines until end of file (null) is reached
+            while ((line = yield dis.read_line_async ()) != null) {
+                var distrib_component = line.split ("=", 2);
+                if (distrib_component.length == 2) {
+                    upstream_release = distrib_component[1].replace ("\"", "");
+                }
+            }
+        } catch (Error e) {
+            warning ("Couldn't read upstream lsb-release file, assuming none");
+        }
+
+        if (upstream_release != null) {
+            var based_off = new Gtk.Label (_("Built on %s").printf (upstream_release)) {
+                selectable = true,
+                xalign = 0
+            };
+            software_grid.attach (based_off, 1, 1, 3);
+            software_grid.show_all ();
+        }
     }
 
     private void launch_support_url () {
