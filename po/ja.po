@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-26 12:44+0000\n"
+"POT-Creation-Date: 2021-01-27 17:32+0000\n"
 "PO-Revision-Date: 2021-01-26 22:57+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -183,7 +183,9 @@ msgstr "アップデート可能なデバイスがありません"
 
 #: src/Views/FirmwareView.vala:48
 msgid "Firmware updates are not supported on this or any connected devices."
-msgstr "このデバイスおよび接続されたデバイスは、ファームウェアのアップデートに対応していません。"
+msgstr ""
+"このデバイスおよび接続されたデバイスは、ファームウェアのアップデートに対応し"
+"ていません。"
 
 #: src/Views/FirmwareView.vala:104
 #, c-format
@@ -194,64 +196,64 @@ msgstr "“%s” をアップデートしています"
 msgid "Failed to install firmware release"
 msgstr "ファームウェアをインストールできませんでした"
 
-#: src/Views/HardwareView.vala:93
+#: src/Views/HardwareView.vala:75
 #, c-format
 msgid "%s memory"
 msgstr "%s メモリー"
 
-#: src/Views/HardwareView.vala:165
+#: src/Views/HardwareView.vala:81 src/Views/HardwareView.vala:298
+msgid "Unknown Graphics"
+msgstr "不明なグラフィックス"
+
+#: src/Views/HardwareView.vala:150
 msgid "Manufacturer Website"
 msgstr "製造元の Web サイト"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:230
 #, c-format
 msgid "Dual-Core %s"
 msgstr "デュアルコア %s"
 
-#: src/Views/HardwareView.vala:247
+#: src/Views/HardwareView.vala:232
 #, c-format
 msgid "Quad-Core %s"
 msgstr "クアッドコア %s"
 
-#: src/Views/HardwareView.vala:249
+#: src/Views/HardwareView.vala:234
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "ヘキサコア %s"
 
-#: src/Views/HardwareView.vala:289
-msgid "Unknown Graphics"
-msgstr "不明なグラフィックス"
-
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:317
 msgid "Unknown Processor"
 msgstr "不明なプロセッサー"
 
-#: src/Views/HardwareView.vala:318
+#: src/Views/HardwareView.vala:337
 msgid "Unknown"
 msgstr "不明"
 
-#: src/Views/HardwareView.vala:391
+#: src/Views/HardwareView.vala:410
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s ストレージ (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:393
+#: src/Views/HardwareView.vala:412
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s ストレージ (eMMC)"
 
-#: src/Views/HardwareView.vala:395
+#: src/Views/HardwareView.vala:414
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s ストレージ (SATA SSD)"
 
-#: src/Views/HardwareView.vala:398
+#: src/Views/HardwareView.vala:417
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s ストレージ (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:403
+#: src/Views/HardwareView.vala:422
 #, c-format
 msgid "%s storage"
 msgstr "%s ストレージ"
@@ -308,7 +310,9 @@ msgstr "アップデートを完了するには、システムの再起動が必
 
 #: src/Widgets/FirmwareUpdateRow.vala:145
 msgid "This will close all open applications and restart this device."
-msgstr "続行すると、開いているすべてのアプリケーションを閉じてこのデバイスを再起動します。"
+msgstr ""
+"続行すると、開いているすべてのアプリケーションを閉じてこのデバイスを再起動し"
+"ます。"
 
 #: src/Widgets/FirmwareUpdateRow.vala:151
 msgid "Restart"
@@ -320,7 +324,9 @@ msgstr "アップデートを完了するには、システムのシャットダ
 
 #: src/Widgets/FirmwareUpdateRow.vala:167
 msgid "This will close all open applications and turn off this device."
-msgstr "続行すると、開いているすべてのアプリケーションを閉じてこのデバイスの電源を切ります。"
+msgstr ""
+"続行すると、開いているすべてのアプリケーションを閉じてこのデバイスの電源を切"
+"ります。"
 
 #: src/Widgets/FirmwareUpdateRow.vala:173
 msgid "Shut Down"
