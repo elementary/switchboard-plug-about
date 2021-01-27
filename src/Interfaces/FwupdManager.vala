@@ -349,5 +349,4 @@ public class About.FwupdManager : Object {
             promise.set_exception (e);
         }
     }
-
 }
