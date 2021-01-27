@@ -20,18 +20,6 @@
  */
 
 public class About.Formatter {
-    public static string bytes_to_string (uint64 bytes) {
-        if (bytes > 1000000000) {
-            return "%.1f GB".printf (bytes / 1000000000.0);
-        } else if (bytes > 1000000) {
-            return "%.1f MB".printf (bytes / 1000000.0);
-        } else if (bytes > 1000) {
-            return "%.1f kB".printf (bytes / 1000.0);
-        }
-
-        return "%llu B".printf (bytes);
-    }
-
     public static string? seconds_to_string (uint64 seconds) {
         uint64 minutes, hours;
 

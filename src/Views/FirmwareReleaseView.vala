@@ -60,7 +60,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         description_label.label = release.description;
         version_value_label.label = release.version;
         vendor_value_label.label = release.vendor;
-        size_value_label.label = Formatter.bytes_to_string (release.size);
+        size_value_label.label = GLib.format_size (release.size);
         install_duration_value_label.label = Formatter.seconds_to_string (release.install_duration);
 
         show_all ();
