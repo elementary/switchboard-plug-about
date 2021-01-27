@@ -320,7 +320,6 @@ public class About.HardwareView : Gtk.Grid {
             processor = cpu;
         }
 
-        // Memory
         GLibTop.mem mem;
         GLibTop.get_mem (out mem);
         memory = GLib.format_size (mem.total);
@@ -359,7 +358,6 @@ public class About.HardwareView : Gtk.Grid {
     }
 
     private async void get_storage_info () {
-        // Hard Drive
         var file_root = GLib.File.new_for_path ("/");
         string storage_capacity = "";
         try {
