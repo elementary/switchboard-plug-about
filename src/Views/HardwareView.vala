@@ -22,7 +22,6 @@
 
 public class About.HardwareView : Gtk.Grid {
     private bool oem_enabled;
-    private string hdd;
     private string manufacturer_icon_path;
     private string manufacturer_name;
     private string manufacturer_support_url;
@@ -37,6 +36,8 @@ public class About.HardwareView : Gtk.Grid {
     private Gtk.Label primary_graphics_info;
     private Gtk.Label secondary_graphics_info;
     private Gtk.Grid graphics_grid;
+
+    private Gtk.Label storage_info;
 
     construct {
         fetch_hardware_info ();
@@ -97,7 +98,7 @@ public class About.HardwareView : Gtk.Grid {
 
         graphics_grid.add (primary_graphics_info);
 
-        var hdd_info = new Gtk.Label (hdd) {
+        storage_info = new Gtk.Label (_("Unknown storage")) {
             ellipsize = Pango.EllipsizeMode.END,
             selectable = true,
             xalign = 0
@@ -142,7 +143,7 @@ public class About.HardwareView : Gtk.Grid {
         details_grid.add (graphics_grid);
 
         details_grid.add (memory_info);
-        details_grid.add (hdd_info);
+        details_grid.add (storage_info);
 
         if (oem_enabled && manufacturer_support_url != null) {
             var manufacturer_website_info = new Gtk.LinkButton.with_label (
@@ -325,19 +326,7 @@ public class About.HardwareView : Gtk.Grid {
         memory = GLib.format_size (mem.total);
 
         get_graphics_info.begin ();
-
-        // Hard Drive
-        var file_root = GLib.File.new_for_path ("/");
-        string storage_capacity = "";
-        try {
-            var info = file_root.query_filesystem_info (GLib.FileAttribute.FILESYSTEM_SIZE, null);
-            storage_capacity = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
-        } catch (Error e) {
-            critical (e.message);
-            storage_capacity = _("Unknown");
-        }
-
-        hdd = get_storage_type (storage_capacity);
+        get_storage_info.begin ();
 
         try {
             var oem_file = new KeyFile ();
@@ -369,6 +358,21 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
+    private async void get_storage_info () {
+        // Hard Drive
+        var file_root = GLib.File.new_for_path ("/");
+        string storage_capacity = "";
+        try {
+            var info = yield file_root.query_filesystem_info_async (GLib.FileAttribute.FILESYSTEM_SIZE);
+            storage_capacity = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
+        } catch (Error e) {
+            critical (e.message);
+            storage_capacity = _("Unknown");
+        }
+
+        storage_info.label = yield get_storage_type (storage_capacity);
+    }
+
     private string clean_name (string info) {
 
         string pretty = GLib.Markup.escape_text (info).strip ();
@@ -397,14 +401,16 @@ public class About.HardwareView : Gtk.Grid {
         return pretty;
     }
 
-    private string get_storage_type (string storage_capacity) {
-        string partition_name = get_partition_name ();
-        string disk_name = get_disk_name (partition_name);
+    private async string get_storage_type (string storage_capacity) {
+        string partition_name = yield get_partition_name ();
+        string disk_name = yield get_disk_name (partition_name);
         string path = "/sys/block/%s/queue/rotational".printf (disk_name);
         string storage = "";
         try {
-            string contents;
-            FileUtils.get_contents (path, out contents);
+            var file = File.new_for_path (path);
+            var dis = new DataInputStream (yield file.read_async ());
+            string contents = yield dis.read_line_async ();
+
             if (int.parse (contents) == 0) {
                 if (disk_name.has_prefix ("nvme")) {
                     storage = _("%s storage (NVMe SSD)").printf (storage_capacity);
@@ -416,7 +422,7 @@ public class About.HardwareView : Gtk.Grid {
             } else {
                 storage = _("%s storage (HDD)").printf (storage_capacity);
             }
-        } catch (FileError e) {
+        } catch (Error e) {
             warning (e.message);
             // Set fallback string for the device type
             storage = _("%s storage").printf (storage_capacity);
@@ -424,12 +430,12 @@ public class About.HardwareView : Gtk.Grid {
         return storage;
     }
 
-    private string get_partition_name () {
+    private async string get_partition_name () {
         string df_stdout;
         string partition = "";
         try {
-            Process.spawn_command_line_sync ("df /",
-                out df_stdout);
+            var subprocess = new GLib.Subprocess (GLib.SubprocessFlags.STDOUT_PIPE, "df", "/");
+            yield subprocess.communicate_utf8_async (null, null, out df_stdout, null);
             string[] output = df_stdout.split ("\n");
             foreach (string line in output) {
                 if (line.has_prefix ("/dev/")) {
@@ -443,16 +449,16 @@ public class About.HardwareView : Gtk.Grid {
         } catch (Error e) {
             warning (e.message);
         }
+
         return partition;
     }
 
-    private string get_disk_name (string partition) {
+    private async string get_disk_name (string partition) {
         string lsblk_stout;
         string disk_name = "";
-        string command = "lsblk -no pkname " + partition;
         try {
-            Process.spawn_command_line_sync (command,
-                out lsblk_stout);
+            var subprocess = new GLib.Subprocess (GLib.SubprocessFlags.STDOUT_PIPE, "lsblk", "-no", "pkname", partition);
+            yield subprocess.communicate_utf8_async (null, null, out lsblk_stout, null);
             disk_name = lsblk_stout.strip ();
         } catch (Error e) {
             warning (e.message);
