@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-27 17:32+0000\n"
-"PO-Revision-Date: 2020-12-06 19:16+0000\n"
+"PO-Revision-Date: 2021-01-28 20:15+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:39
@@ -30,29 +30,23 @@ msgstr "İşletim sistemini ve donanım bilgilerini görüntüle"
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "İşletim Sistemi"
 
 #: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Donanım"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Donanım"
+msgstr "Üretici Yazılımı"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "Sistem Bilgisi"
+msgstr "İşletim Sistemi Bilgisi"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "Sistem Bilgisi"
+msgstr "Donanım Bilgisi"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
 msgid "Restore Default Settings"
@@ -72,7 +66,7 @@ msgstr "Sorun Bildir"
 
 #: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
 msgid "Get Support"
-msgstr ""
+msgstr "Destek Alın"
 
 #: src/Plug.vala:115
 msgid "Updates"
@@ -81,20 +75,18 @@ msgstr "Güncellemeler"
 #. / TRANSLATORS: Device cannot be removed easily
 #: src/Objects/DeviceFlag.vala:77
 msgid "Internal device"
-msgstr ""
+msgstr "İç aygıt"
 
 #. / TRANSLATORS: Device is updatable in this or any other mode
 #: src/Objects/DeviceFlag.vala:80
-#, fuzzy
-#| msgid "Updates"
 msgid "Updatable"
-msgstr "Güncellemeler"
+msgstr "Güncellenebilir"
 
 #. / TRANSLATORS: Update can only be done from offline mode
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "Güncelleme, sistemin yeniden başlatılmasını gerektirir"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
