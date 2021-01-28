@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-28 20:15+0000\n"
-"PO-Revision-Date: 2021-01-26 22:57+0000\n"
+"PO-Revision-Date: 2021-01-29 03:07+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -204,10 +204,8 @@ msgid "Unknown Graphics"
 msgstr "גרפיקה לא ידועה"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Unknown Processor"
 msgid "Unknown storage"
-msgstr "מעבד לא ידוע"
+msgstr "אחסון לא ידוע"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
