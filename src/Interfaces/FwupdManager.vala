@@ -31,14 +31,33 @@ public class About.FwupdManager : Object {
         public abstract async GLib.HashTable<string, Variant>[] get_details (UnixInputStream handle) throws GLib.Error;
     }
 
-    private FwupdInterface fwupd;
+    private Gee.Future<FwupdInterface> fwupd_future;
 
     public signal void on_device_added (Fwupd.Device device);
     public signal void on_device_error (Fwupd.Device device, string error);
     public signal void on_device_removed (Fwupd.Device device);
 
+    private async FwupdInterface? get_interface () {
+        if (fwupd_future.ready) {
+            return fwupd_future.value;
+        }
+
+        try {
+            yield fwupd_future.wait_async ();
+            return fwupd_future.value;
+        } catch (Error e) {
+            warning ("Unable to get fwupd interface: %s", e.message);
+            return null;
+        }
+    }
+
     public async List<Fwupd.Device> get_devices () {
         var devices_list = new List<Fwupd.Device> ();
+
+        var fwupd = yield get_interface ();
+        if (fwupd == null) {
+            return devices_list;
+        }
 
         try {
             var result = yield fwupd.get_devices ();
@@ -54,6 +73,11 @@ public class About.FwupdManager : Object {
 
     private async List<Fwupd.Release> get_releases (string id) {
         var releases_list = new List<Fwupd.Release> ();
+
+        var fwupd = yield get_interface ();
+        if (fwupd == null) {
+            return releases_list;
+        }
 
         try {
             var result = yield fwupd.get_releases (id);
@@ -206,6 +230,13 @@ public class About.FwupdManager : Object {
     }
 
     public async bool install (Fwupd.Device device, string path) {
+        var fwupd = yield get_interface ();
+        if (fwupd == null) {
+            // This should be unreachable since we wouldn't have a device to update
+            // if we weren't able to get the fwupd interface
+            return false;
+        }
+
         int fd;
 
         try {
@@ -234,6 +265,13 @@ public class About.FwupdManager : Object {
 
     public async Fwupd.Details get_release_details (Fwupd.Device device, string path) {
         var details = new Fwupd.Details ();
+
+        var fwupd = yield get_interface ();
+        if (fwupd == null) {
+            // This should be unreachable since we wouldn't have a device to get details for
+            // if we weren't able to get the fwupd interface
+            return details;
+        }
 
         int fd;
         try {
@@ -272,24 +310,34 @@ public class About.FwupdManager : Object {
     }
 
     construct {
-        try {
-            fwupd = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
+        var promise = new Gee.Promise<FwupdInterface> ();
+        fwupd_future = promise.future;
 
-            fwupd.device_added.connect ((serialized_device) => {
+        init_dbus.begin (promise);
+    }
+
+    private async void init_dbus (Gee.Promise<FwupdInterface> promise) {
+        try {
+            FwupdInterface bus_proxy = yield Bus.get_proxy (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
+
+            bus_proxy.device_added.connect ((serialized_device) => {
                 parse_device.begin (serialized_device, (obj, res) => {
                     var device = parse_device.end (res);
                     on_device_added (device);
                 });
             });
 
-            fwupd.device_removed.connect ((serialized_device) => {
+            bus_proxy.device_removed.connect ((serialized_device) => {
                 parse_device.begin (serialized_device, (obj, res) => {
                     var device = parse_device.end (res);
                     on_device_removed (device);
                 });
             });
+
+            promise.set_value (bus_proxy);
         } catch (Error e) {
             warning ("Could not connect to system bus: %s", e.message);
+            promise.set_exception (e);
         }
     }
 }

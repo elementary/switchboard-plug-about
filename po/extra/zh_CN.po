@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-27 17:32+0000\n"
-"PO-Revision-Date: 2021-01-22 08:41+0000\n"
+"PO-Revision-Date: 2021-01-28 03:50+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/about-plug-extra/zh_Hans/>\n"
@@ -28,9 +28,8 @@ msgid "View operating system and hardware information"
 msgstr "查看操作系统和硬件信息"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-#, fuzzy
 msgid "Provide information for more types of Graphics"
-msgstr "提供更多类型的显示信息"
+msgstr "提供更多类型的显卡信息"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:13
 #: data/io.elementary.switchboard.about.appdata.xml.in:18
