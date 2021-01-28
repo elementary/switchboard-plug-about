@@ -118,25 +118,28 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             details.caption,
             device.icon,
             Gtk.ButtonsType.CANCEL
-        );
-        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+        ) {
+            badge_icon = new ThemedIcon ("dialog-information"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
 
-        var suggested_button = new Gtk.Button.with_label (_("Continue"));
+        var suggested_button = (Gtk.Button) message_dialog.add_button (_("Continue"), Gtk.ResponseType.ACCEPT);
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
 
         if (details.image != null) {
             var custom_widget = new Gtk.Image.from_file (details.image);
             message_dialog.custom_bin.add (custom_widget);
         }
 
-        message_dialog.badge_icon = new ThemedIcon ("dialog-information");
         message_dialog.show_all ();
-        bool should_continue = message_dialog.run () == Gtk.ResponseType.ACCEPT;
 
-        message_dialog.destroy ();
+        int result = Gtk.ResponseType.NONE;
+        message_dialog.response.connect ((response_id) => {
+            result = response_id;
+            message_dialog.destroy ();
+        });
 
-        return should_continue;
+        return result == Gtk.ResponseType.ACCEPT;
     }
 
     private void show_reboot_dialog () {
@@ -145,20 +148,23 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             _("This will close all open applications and restart this device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
-        );
-        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+        ) {
+            badge_icon = new ThemedIcon ("system-reboot"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
 
-        var suggested_button = new Gtk.Button.with_label (_("Restart"));
+        var suggested_button = (Gtk.Button) message_dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
 
-        message_dialog.badge_icon = new ThemedIcon ("system-reboot");
         message_dialog.show_all ();
-        if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
-            LoginManager.get_instance ().reboot ();
-        }
 
-        message_dialog.destroy ();
+        message_dialog.response.connect ((response_id) => {
+            if (response_id == Gtk.ResponseType.ACCEPT) {
+                LoginManager.get_instance ().reboot ();
+            }
+
+            message_dialog.destroy ();
+        });
     }
 
     private void show_shutdown_dialog () {
@@ -167,19 +173,22 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             _("This will close all open applications and turn off this device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
-        );
-        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+        ) {
+            badge_icon = new ThemedIcon ("system-shutdown"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
 
-        var suggested_button = new Gtk.Button.with_label (_("Shut Down"));
+        var suggested_button = (Gtk.Button) message_dialog.add_button (_("Shut Down"), Gtk.ResponseType.ACCEPT);
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
 
-        message_dialog.badge_icon = new ThemedIcon ("system-shutdown");
         message_dialog.show_all ();
-        if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
-            LoginManager.get_instance ().shutdown ();
-        }
 
-        message_dialog.destroy ();
+        message_dialog.response.connect ((response_id) => {
+            if (response_id == Gtk.ResponseType.ACCEPT) {
+                LoginManager.get_instance ().shutdown ();
+            }
+
+            message_dialog.destroy ();
+        });
     }
 }
