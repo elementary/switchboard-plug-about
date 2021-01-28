@@ -232,8 +232,13 @@ public class About.OperatingSystemView : Gtk.Grid {
         var continue_button = dialog.add_button (_("Restore Settings"), Gtk.ResponseType.ACCEPT);
         continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-        var result = dialog.run ();
-        dialog.destroy ();
+        dialog.show_all ();
+
+        int result = Gtk.ResponseType.NONE;
+        dialog.response.connect ((response_id) => {
+            result = response_id;
+            dialog.destroy ();
+        });
 
         return result == Gtk.ResponseType.ACCEPT;
     }
