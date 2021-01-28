@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-27 17:32+0000\n"
+"POT-Creation-Date: 2021-01-28 20:15+0000\n"
 "PO-Revision-Date: 2015-05-17 01:05+0000\n"
 "Last-Translator: akoho <Unknown>\n"
 "Language-Team: Malagasy <mg@li.org>\n"
@@ -46,15 +46,15 @@ msgstr ""
 msgid "Hardware Information"
 msgstr ""
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Avereno tamin'ny voalohany"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Tondrozotram-pandikana"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Report a Problem"
 msgstr "Hampita olana"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
 msgstr ""
 
@@ -192,100 +192,106 @@ msgstr ""
 msgid "Failed to install firmware release"
 msgstr ""
 
-#: src/Views/HardwareView.vala:75
+#: src/Views/HardwareView.vala:61
 #, fuzzy, c-format
 msgid "%s memory"
 msgstr "Tadidy"
 
-#: src/Views/HardwareView.vala:81 src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
 #, fuzzy
 #| msgid "Graphics:"
 msgid "Unknown Graphics"
 msgstr "Loko"
 
-#: src/Views/HardwareView.vala:150
+#: src/Views/HardwareView.vala:86
+#, fuzzy
+#| msgid "Processor:"
+msgid "Unknown storage"
+msgstr "Atidoha"
+
+#: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:230
+#: src/Views/HardwareView.vala:239
 #, fuzzy, c-format
 #| msgid "Dual-Core"
 msgid "Dual-Core %s"
 msgstr "Roy-loha"
 
-#: src/Views/HardwareView.vala:232
+#: src/Views/HardwareView.vala:241
 #, fuzzy, c-format
 #| msgid "Quad-Core"
 msgid "Quad-Core %s"
 msgstr "Efa-doha"
 
-#: src/Views/HardwareView.vala:234
+#: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Hexa-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:326
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Atidoha"
 
-#: src/Views/HardwareView.vala:337
+#: src/Views/HardwareView.vala:376
 msgid "Unknown"
 msgstr "Tsy fahita"
 
-#: src/Views/HardwareView.vala:410
+#: src/Views/HardwareView.vala:423
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Fitahirizana"
 
-#: src/Views/HardwareView.vala:412
+#: src/Views/HardwareView.vala:425
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "Fitahirizana"
 
-#: src/Views/HardwareView.vala:414
+#: src/Views/HardwareView.vala:427
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Fitahirizana"
 
-#: src/Views/HardwareView.vala:417
+#: src/Views/HardwareView.vala:430
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "Fitahirizana"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:422
+#: src/Views/HardwareView.vala:435
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Fitahirizana"
 
-#: src/Views/OperatingSystemView.vala:114
+#: src/Views/OperatingSystemView.vala:97
 msgid "Website"
 msgstr "Tranonkala"
 
-#: src/Views/OperatingSystemView.vala:137
+#: src/Views/OperatingSystemView.vala:120
 msgid "Check for Updates"
 msgstr "Hijery vaovao"
 
-#: src/Views/OperatingSystemView.vala:169
+#: src/Views/OperatingSystemView.vala:203
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:218
+#: src/Views/OperatingSystemView.vala:225
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Ho averina tamin'ny volohany ny firafitry ny system"
 
-#: src/Views/OperatingSystemView.vala:219
+#: src/Views/OperatingSystemView.vala:226
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr "Hiverina amin'ny voalohany daholo ny firafitra sy ny tahiry rehetra"
 
-#: src/Views/OperatingSystemView.vala:225
+#: src/Views/OperatingSystemView.vala:232
 msgid "Restore Settings"
 msgstr "Avereno ny firafitra"
 
