@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-27 17:32+0000\n"
-"PO-Revision-Date: 2021-01-27 17:32+0000\n"
+"PO-Revision-Date: 2021-01-28 19:02+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
@@ -106,7 +106,7 @@ msgstr "Pris en charge par LVFS"
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
 msgid "Requires a bootloader"
-msgstr ""
+msgstr "Nécessite un chargeur de démarrage"
 
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
@@ -126,32 +126,32 @@ msgstr "L'utilisateur a été notifié"
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
 msgid "Install to parent device first"
-msgstr ""
+msgstr "Installer sur l'appareil parent en premier"
 
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "Est en mode chargeur de démarrage"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "Le matériel attend d'être rebranché"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
 msgid "Ignore validation safety checks"
-msgstr ""
+msgstr "Ignorer la validation des vérifications de sécurité"
 
 #. / TRANSLATORS: Device update needs to be separately activated
 #: src/Objects/DeviceFlag.vala:131
 msgid "Device update needs activation"
-msgstr ""
+msgstr "La mise à jour requiert une activation"
 
 #. / TRANSLATORS: Device will not return after update completes
 #: src/Objects/DeviceFlag.vala:143
 msgid "Device will not re-appear after update completes"
-msgstr ""
+msgstr "Le périphérique ne réapparaîtra pas après la fin de la mise à jour"
 
 #. / TRANSLATORS: Device supports some form of checksum verification
 #: src/Objects/DeviceFlag.vala:146
@@ -171,28 +171,30 @@ msgstr ""
 #. / TRANSLATORS: Device remains usable during update
 #: src/Objects/DeviceFlag.vala:158
 msgid "Device is usable for the duration of the update"
-msgstr ""
+msgstr "Le périphérique reste utilisable lors de la mise à jour"
 
 #: src/Views/FirmwareView.vala:36
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Ne débranchez pas le périphérique pendant la mise à jour."
 
 #: src/Views/FirmwareView.vala:47
 msgid "No Updatable Devices"
-msgstr ""
+msgstr "Aucune périphérique ne peut être mis à jour"
 
 #: src/Views/FirmwareView.vala:48
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"La mise à jour du micrologiciel n'est pris en charge ni par ce matériel, ni "
+"par les périphériques connectés."
 
 #: src/Views/FirmwareView.vala:104
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "Mise à jour de « %s »"
 
 #: src/Views/FirmwareView.vala:125
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Échec de l'installation du micrologiciel"
 
 #: src/Views/HardwareView.vala:75
 #, c-format
@@ -287,49 +289,46 @@ msgid "Restore Settings"
 msgstr "Restaurer les paramètres"
 
 #: src/Widgets/FirmwareUpdateRow.vala:67
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Mises à jour"
+msgstr "Mettre à jour"
 
 #: src/Widgets/FirmwareUpdateRow.vala:89
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "Mises à jour"
+msgstr "À jour"
 
 #: src/Widgets/FirmwareUpdateRow.vala:117
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "« %s » doit être mis manuellement en mode mise à jour"
 
 #: src/Widgets/FirmwareUpdateRow.vala:124
 msgid "Continue"
-msgstr ""
+msgstr "Continuer"
 
 #: src/Widgets/FirmwareUpdateRow.vala:144
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "Le système doit être redémarré pour terminer une des mises à jour"
 
 #: src/Widgets/FirmwareUpdateRow.vala:145
 msgid "This will close all open applications and restart this device."
 msgstr ""
+"Ceci fermera toutes les applications ouvertes et redémarrera le système."
 
 #: src/Widgets/FirmwareUpdateRow.vala:151
 msgid "Restart"
-msgstr ""
+msgstr "Redémarrer"
 
 #: src/Widgets/FirmwareUpdateRow.vala:166
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "Le système doit être arrêté pour terminer une des mises à jour"
 
 #: src/Widgets/FirmwareUpdateRow.vala:167
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "Ceci fermera toutes les applications ouvertes et arrêtera le système."
 
 #: src/Widgets/FirmwareUpdateRow.vala:173
 msgid "Shut Down"
-msgstr ""
+msgstr "Arrêter"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Suggérer une traduction"
