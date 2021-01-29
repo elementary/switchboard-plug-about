@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-28 20:15+0000\n"
-"PO-Revision-Date: 2021-01-28 00:28+0000\n"
+"PO-Revision-Date: 2021-01-29 19:41+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pt/>\n"
@@ -206,10 +206,8 @@ msgid "Unknown Graphics"
 msgstr "Gráficos desconhecidos"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Unknown Processor"
 msgid "Unknown storage"
-msgstr "Processador desconhecido"
+msgstr "Armazenamento desconhecido"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
