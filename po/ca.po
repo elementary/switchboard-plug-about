@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-26 12:44+0000\n"
+"POT-Creation-Date: 2021-01-27 17:32+0000\n"
 "PO-Revision-Date: 2021-01-26 22:57+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -184,7 +184,8 @@ msgstr "Dispositius no actualitzables"
 
 #: src/Views/FirmwareView.vala:48
 msgid "Firmware updates are not supported on this or any connected devices."
-msgstr "No s'admeten actualitzacions d'aquest o qualsevol dispositiu connectat."
+msgstr ""
+"No s'admeten actualitzacions d'aquest o qualsevol dispositiu connectat."
 
 #: src/Views/FirmwareView.vala:104
 #, c-format
@@ -195,64 +196,64 @@ msgstr "S'actualitza %s."
 msgid "Failed to install firmware release"
 msgstr "Ha fallat instal·lar la versió del microprogramari."
 
-#: src/Views/HardwareView.vala:93
+#: src/Views/HardwareView.vala:75
 #, c-format
 msgid "%s memory"
 msgstr "Memòria: %s"
 
-#: src/Views/HardwareView.vala:165
+#: src/Views/HardwareView.vala:81 src/Views/HardwareView.vala:298
+msgid "Unknown Graphics"
+msgstr "Gràfics desconeguts"
+
+#: src/Views/HardwareView.vala:150
 msgid "Manufacturer Website"
 msgstr "Lloc web del fabricant"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:230
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Nucli doble %s"
 
-#: src/Views/HardwareView.vala:247
+#: src/Views/HardwareView.vala:232
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Nucli quàdruple %s"
 
-#: src/Views/HardwareView.vala:249
+#: src/Views/HardwareView.vala:234
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Nucli sèxtuple %s"
 
-#: src/Views/HardwareView.vala:289
-msgid "Unknown Graphics"
-msgstr "Gràfics desconeguts"
-
-#: src/Views/HardwareView.vala:296
+#: src/Views/HardwareView.vala:317
 msgid "Unknown Processor"
 msgstr "Processador desconegut"
 
-#: src/Views/HardwareView.vala:318
+#: src/Views/HardwareView.vala:337
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: src/Views/HardwareView.vala:391
+#: src/Views/HardwareView.vala:410
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Emmagatzematge (SSD NVMe): %s"
 
-#: src/Views/HardwareView.vala:393
+#: src/Views/HardwareView.vala:412
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "Emmagatzematge (eMMC): %s"
 
-#: src/Views/HardwareView.vala:395
+#: src/Views/HardwareView.vala:414
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Emmagatzematge (SSD SATA): %s"
 
-#: src/Views/HardwareView.vala:398
+#: src/Views/HardwareView.vala:417
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "Emmagatzematge (HDD): %s"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:403
+#: src/Views/HardwareView.vala:422
 #, c-format
 msgid "%s storage"
 msgstr "Emmagatzematge: %s"
@@ -324,7 +325,8 @@ msgstr "Una actualització requereix que els sistema s'aturi per completar-se."
 
 #: src/Widgets/FirmwareUpdateRow.vala:167
 msgid "This will close all open applications and turn off this device."
-msgstr "Això tancarà totes les aplicacions obertes i aturarà aquest dispositiu."
+msgstr ""
+"Això tancarà totes les aplicacions obertes i aturarà aquest dispositiu."
 
 #: src/Widgets/FirmwareUpdateRow.vala:173
 msgid "Shut Down"
