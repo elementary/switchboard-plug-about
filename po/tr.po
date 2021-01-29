@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-28 20:15+0000\n"
-"PO-Revision-Date: 2021-01-29 03:07+0000\n"
+"PO-Revision-Date: 2021-01-29 13:54+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/tr/>\n"
@@ -204,10 +204,8 @@ msgid "Unknown Graphics"
 msgstr "Bilinmeyen Ekran Kartı"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Unknown Processor"
 msgid "Unknown storage"
-msgstr "Bilinmeyen İşlemci"
+msgstr "Bilinmeyen depolama"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
@@ -292,16 +290,12 @@ msgid "Restore Settings"
 msgstr "Ayarları Geri Yükle"
 
 #: src/Widgets/FirmwareUpdateRow.vala:67
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Güncellemeler"
+msgstr "Güncelle"
 
 #: src/Widgets/FirmwareUpdateRow.vala:89
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "Güncellemeler"
+msgstr "Güncel"
 
 #: src/Widgets/FirmwareUpdateRow.vala:117
 #, c-format
