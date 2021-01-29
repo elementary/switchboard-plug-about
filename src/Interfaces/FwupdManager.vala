@@ -142,7 +142,11 @@ public class About.FwupdManager : Object {
                     release.version = val.get_string ();
                     break;
                 case "Description":
-                    release.description = Formatter.xml_to_string (val.get_string ());
+                    try {
+                        release.description = AppStream.markup_convert_simple (val.get_string ());
+                    } catch (Error e) {
+                        warning ("Could not convert markup of release: %s", e.message);
+                    }
                     break;
                 case "Protocol":
                     release.protocol = val.get_string ();

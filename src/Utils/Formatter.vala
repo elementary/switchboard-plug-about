@@ -42,41 +42,4 @@ public class About.Formatter {
 
         return _("%llu sec").printf (seconds);
     }
-
-    public static string xml_to_string (string markup) {
-        string result = markup;
-
-        var open_tag = "<ul>";
-        var close_tag = "</ul>";
-        while (result.contains (open_tag)) {
-            var start = result.index_of (open_tag);
-            var end = result.index_of (close_tag);
-
-            var head = result.substring (0, start);
-            var body = result.substring (start + open_tag.length, end - start - open_tag.length - close_tag.length)
-                .replace ("<li>", " • ").replace ("</li>", "\n") + "\n\n";
-            var tail = result.substring (end + close_tag.length, result.length - end - close_tag.length);
-            result = head + body + tail;
-        }
-
-        open_tag = "<ol>";
-        close_tag = "</ol>";
-        while (result.contains (open_tag)) {
-            int i = 1;
-            var start = result.index_of (open_tag);
-            var end = result.index_of (close_tag);
-
-            var head = result.substring (0, start);
-            var body = result.substring (start + open_tag.length, end - start - open_tag.length - close_tag.length)
-                .replace ("<li>", " %u. ".printf (i++)).replace ("</li>", "\n") + "\n\n";
-            var tail = result.substring (end + close_tag.length, result.length - end - close_tag.length);
-            result = head + body + tail;
-        }
-
-        result = result
-            .replace ("<p>", "")
-            .replace ("</p>", "\n\n");
-
-        return result.strip ();
-    }
 }
