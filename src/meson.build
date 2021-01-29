@@ -8,7 +8,6 @@ plug_files = files(
     'Objects/Release.vala',
     'Objects/ReleaseFlag.vala',
     'Utils/ARMPartDecoder.vala',
-    'Utils/Formatter.vala',
     'Views/FirmwareReleaseView.vala',
     'Views/FirmwareView.vala',
     'Views/HardwareView.vala',
