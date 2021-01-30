@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-27 17:32+0000\n"
+"POT-Creation-Date: 2021-01-28 20:15+0000\n"
 "PO-Revision-Date: 2021-01-04 22:57+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -54,15 +54,15 @@ msgstr "Systeeminformatie"
 msgid "Hardware Information"
 msgstr "Systeeminformatie"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Herstel standaardinstellingen"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Suggereer vertaling"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
 msgstr ""
 
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Report a Problem"
 msgstr "Meld een probleem"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
 msgstr ""
 
@@ -202,86 +202,92 @@ msgstr ""
 msgid "Failed to install firmware release"
 msgstr ""
 
-#: src/Views/HardwareView.vala:75
+#: src/Views/HardwareView.vala:61
 #, c-format
 msgid "%s memory"
 msgstr "%s geheugen"
 
-#: src/Views/HardwareView.vala:81 src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
 msgid "Unknown Graphics"
 msgstr "Onbekende Videokaart"
 
-#: src/Views/HardwareView.vala:150
+#: src/Views/HardwareView.vala:86
+#, fuzzy
+#| msgid "Unknown Processor"
+msgid "Unknown storage"
+msgstr "Onbekende Processor"
+
+#: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
 msgstr "Website fabrikant"
 
-#: src/Views/HardwareView.vala:230
+#: src/Views/HardwareView.vala:239
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Dual-Core %s"
 
-#: src/Views/HardwareView.vala:232
+#: src/Views/HardwareView.vala:241
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Quad-Core %s"
 
-#: src/Views/HardwareView.vala:234
+#: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Hexa-Core %s"
 
-#: src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:326
 msgid "Unknown Processor"
 msgstr "Onbekende Processor"
 
-#: src/Views/HardwareView.vala:337
+#: src/Views/HardwareView.vala:376
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: src/Views/HardwareView.vala:410
+#: src/Views/HardwareView.vala:423
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s opslagruimte (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:412
+#: src/Views/HardwareView.vala:425
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s opslagruimte (eMMC)"
 
-#: src/Views/HardwareView.vala:414
+#: src/Views/HardwareView.vala:427
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s opslagruimte (SATA SSD)"
 
-#: src/Views/HardwareView.vala:417
+#: src/Views/HardwareView.vala:430
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s opslagruimte (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:422
+#: src/Views/HardwareView.vala:435
 #, c-format
 msgid "%s storage"
 msgstr "%s opslagruimte"
 
-#: src/Views/OperatingSystemView.vala:114
+#: src/Views/OperatingSystemView.vala:97
 msgid "Website"
 msgstr "Website"
 
-#: src/Views/OperatingSystemView.vala:137
+#: src/Views/OperatingSystemView.vala:120
 msgid "Check for Updates"
 msgstr "Controleer op updates"
 
-#: src/Views/OperatingSystemView.vala:169
+#: src/Views/OperatingSystemView.vala:203
 #, c-format
 msgid "Built on %s"
 msgstr "Gebouwd op %s"
 
-#: src/Views/OperatingSystemView.vala:218
+#: src/Views/OperatingSystemView.vala:225
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systeeminstellingen zullen hersteld worden naar fabrieksinstellingen"
 
-#: src/Views/OperatingSystemView.vala:219
+#: src/Views/OperatingSystemView.vala:226
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -290,7 +296,7 @@ msgstr ""
 "standaardwaarden. Persoonlijke data, zoals muziek en afbeeldingen, zullen "
 "onaangetast blijven."
 
-#: src/Views/OperatingSystemView.vala:225
+#: src/Views/OperatingSystemView.vala:232
 msgid "Restore Settings"
 msgstr "Instellingen herstellen"
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-27 17:32+0000\n"
-"PO-Revision-Date: 2020-12-06 19:16+0000\n"
+"POT-Creation-Date: 2021-01-28 20:15+0000\n"
+"PO-Revision-Date: 2021-01-29 13:54+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:39
@@ -30,39 +30,33 @@ msgstr "İşletim sistemini ve donanım bilgilerini görüntüle"
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "İşletim Sistemi"
 
 #: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Donanım"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Donanım"
+msgstr "Üretici Yazılımı"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "Sistem Bilgisi"
+msgstr "İşletim Sistemi Bilgisi"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "Sistem Bilgisi"
+msgstr "Donanım Bilgisi"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Varsayılan Ayarları Geri Yükle"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Çeviri Öner"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
 msgstr "Geri Bildirim Gönder"
 
@@ -70,9 +64,9 @@ msgstr "Geri Bildirim Gönder"
 msgid "Report a Problem"
 msgstr "Sorun Bildir"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Destek Alın"
 
 #: src/Plug.vala:115
 msgid "Updates"
@@ -81,45 +75,43 @@ msgstr "Güncellemeler"
 #. / TRANSLATORS: Device cannot be removed easily
 #: src/Objects/DeviceFlag.vala:77
 msgid "Internal device"
-msgstr ""
+msgstr "İç aygıt"
 
 #. / TRANSLATORS: Device is updatable in this or any other mode
 #: src/Objects/DeviceFlag.vala:80
-#, fuzzy
-#| msgid "Updates"
 msgid "Updatable"
-msgstr "Güncellemeler"
+msgstr "Güncellenebilir"
 
 #. / TRANSLATORS: Update can only be done from offline mode
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "Güncellemek için sistemin yeniden başlatılması gerekir"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
 msgid "System requires external power source"
-msgstr ""
+msgstr "Sistem harici güç kaynağına gerek duyuyor"
 
 #. / TRANSLATORS: Is locked and can be unlocked
 #: src/Objects/DeviceFlag.vala:89
 msgid "Device is locked"
-msgstr ""
+msgstr "Aygıt kilitlendi"
 
 #. / TRANSLATORS: Is found in current metadata
 #: src/Objects/DeviceFlag.vala:92
 msgid "Supported on LVFS"
-msgstr ""
+msgstr "LVFS'de Desteklenir"
 
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
 msgid "Requires a bootloader"
-msgstr ""
+msgstr "Bir önyükleyici gerektirir"
 
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
 msgid "Requires the system to shut down after installation"
-msgstr ""
+msgstr "Kurulumdan sonra sistemin kapatılması gerekir"
 
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
@@ -202,86 +194,90 @@ msgstr ""
 msgid "Failed to install firmware release"
 msgstr ""
 
-#: src/Views/HardwareView.vala:75
+#: src/Views/HardwareView.vala:61
 #, c-format
 msgid "%s memory"
 msgstr "%s bellek"
 
-#: src/Views/HardwareView.vala:81 src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
 msgid "Unknown Graphics"
 msgstr "Bilinmeyen Ekran Kartı"
 
-#: src/Views/HardwareView.vala:150
+#: src/Views/HardwareView.vala:86
+msgid "Unknown storage"
+msgstr "Bilinmeyen depolama"
+
+#: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
 msgstr "Üretici Web Sitesi"
 
-#: src/Views/HardwareView.vala:230
+#: src/Views/HardwareView.vala:239
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Çift Çekirdekli %s"
 
-#: src/Views/HardwareView.vala:232
+#: src/Views/HardwareView.vala:241
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Dört Çekirdekli %s"
 
-#: src/Views/HardwareView.vala:234
+#: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Altı Çekirdekli %s"
 
-#: src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:326
 msgid "Unknown Processor"
 msgstr "Bilinmeyen İşlemci"
 
-#: src/Views/HardwareView.vala:337
+#: src/Views/HardwareView.vala:376
 msgid "Unknown"
 msgstr "Bilinmiyor"
 
-#: src/Views/HardwareView.vala:410
+#: src/Views/HardwareView.vala:423
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s depolama alanı (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:412
+#: src/Views/HardwareView.vala:425
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s depolama alanı (eMMC)"
 
-#: src/Views/HardwareView.vala:414
+#: src/Views/HardwareView.vala:427
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s depolama alanı (SATA SSD)"
 
-#: src/Views/HardwareView.vala:417
+#: src/Views/HardwareView.vala:430
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s depolama alanı (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:422
+#: src/Views/HardwareView.vala:435
 #, c-format
 msgid "%s storage"
 msgstr "%s depolama alanı"
 
-#: src/Views/OperatingSystemView.vala:114
+#: src/Views/OperatingSystemView.vala:97
 msgid "Website"
 msgstr "Web Sitesi"
 
-#: src/Views/OperatingSystemView.vala:137
+#: src/Views/OperatingSystemView.vala:120
 msgid "Check for Updates"
 msgstr "Güncellemeleri Denetle"
 
-#: src/Views/OperatingSystemView.vala:169
+#: src/Views/OperatingSystemView.vala:203
 #, c-format
 msgid "Built on %s"
 msgstr "%s üzerine kurulu"
 
-#: src/Views/OperatingSystemView.vala:218
+#: src/Views/OperatingSystemView.vala:225
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Sistem Ayarları Fabrika Varsayılanlarına Geri Yüklenecek"
 
-#: src/Views/OperatingSystemView.vala:219
+#: src/Views/OperatingSystemView.vala:226
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -289,21 +285,17 @@ msgstr ""
 "Tüm sistem ayarları ve veriler varsayılan değerlere sıfırlanacaktır. Müzik "
 "ve resim gibi kişisel veriler etkilenmez."
 
-#: src/Views/OperatingSystemView.vala:225
+#: src/Views/OperatingSystemView.vala:232
 msgid "Restore Settings"
 msgstr "Ayarları Geri Yükle"
 
 #: src/Widgets/FirmwareUpdateRow.vala:67
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Güncellemeler"
+msgstr "Güncelle"
 
 #: src/Widgets/FirmwareUpdateRow.vala:89
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "Güncellemeler"
+msgstr "Güncel"
 
 #: src/Widgets/FirmwareUpdateRow.vala:117
 #, c-format

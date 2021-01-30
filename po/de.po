@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-27 17:32+0000\n"
-"PO-Revision-Date: 2020-11-16 17:15+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2021-01-28 20:15+0000\n"
+"PO-Revision-Date: 2021-01-29 19:41+0000\n"
+"Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:39
@@ -30,49 +30,43 @@ msgstr "Betriebssystem- und Hardware-Informationen anzeigen"
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "Betriebssystem"
 
 #: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Hardware"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Hardware"
+msgstr "Firmware"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "Systeminformationen"
+msgstr "Informationen zum Betriebssystem"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "Systeminformationen"
+msgstr "Informationen zur Hardware"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Standardeinstellungen wiederherstellen"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Übersetzungen vorschlagen"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "Rückmeldung senden"
 
 #: src/Plug.vala:113
 msgid "Report a Problem"
 msgstr "Problem melden"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Unterstützung erhalten"
 
 #: src/Plug.vala:115
 msgid "Updates"
@@ -81,90 +75,91 @@ msgstr "Aktualisierungen"
 #. / TRANSLATORS: Device cannot be removed easily
 #: src/Objects/DeviceFlag.vala:77
 msgid "Internal device"
-msgstr ""
+msgstr "Internes Gerät"
 
 #. / TRANSLATORS: Device is updatable in this or any other mode
 #: src/Objects/DeviceFlag.vala:80
-#, fuzzy
-#| msgid "Updates"
 msgid "Updatable"
-msgstr "Aktualisierungen"
+msgstr "Aktualisierbar"
 
 #. / TRANSLATORS: Update can only be done from offline mode
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "Zur Aktualisierung muss das System neu gestartet werden"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
 msgid "System requires external power source"
-msgstr ""
+msgstr "Das System erfordert eine externe Energiequelle"
 
 #. / TRANSLATORS: Is locked and can be unlocked
 #: src/Objects/DeviceFlag.vala:89
 msgid "Device is locked"
-msgstr ""
+msgstr "Gerät ist gesperrt"
 
 #. / TRANSLATORS: Is found in current metadata
 #: src/Objects/DeviceFlag.vala:92
 msgid "Supported on LVFS"
-msgstr ""
+msgstr "LVFS wird unterstützt"
 
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
 msgid "Requires a bootloader"
-msgstr ""
+msgstr "Bootloader erforderlich"
 
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
 msgid "Requires the system to shut down after installation"
-msgstr ""
+msgstr "Nach der Installation muss das System ausgeschaltet werden"
 
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
+#, fuzzy
 msgid "Reported to LVFS"
-msgstr ""
+msgstr "Bei LVFS gemeldet"
 
 #. / TRANSLATORS: User has been notified
 #: src/Objects/DeviceFlag.vala:107
 msgid "User has been notified"
-msgstr ""
+msgstr "Nutzer wurde informiert"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
+#, fuzzy
 msgid "Install to parent device first"
-msgstr ""
+msgstr "Zunächst auf dem übergeordneten Gerät installieren"
 
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "Im Bootloader- Modus"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
+#, fuzzy
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "Die Hardware muss erneut verbunden werden"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
 msgid "Ignore validation safety checks"
-msgstr ""
+msgstr "Sicherheitsüberprüfung ignorieren"
 
 #. / TRANSLATORS: Device update needs to be separately activated
 #: src/Objects/DeviceFlag.vala:131
 msgid "Device update needs activation"
-msgstr ""
+msgstr "Gerätaktualisierung muss angestoßen werden"
 
 #. / TRANSLATORS: Device will not return after update completes
 #: src/Objects/DeviceFlag.vala:143
 msgid "Device will not re-appear after update completes"
-msgstr ""
+msgstr "Das Gerät erscheint nach Abschluss der Aktualisierung nicht erneut"
 
 #. / TRANSLATORS: Device supports some form of checksum verification
 #: src/Objects/DeviceFlag.vala:146
 msgid "Cryptographic hash verification is available"
-msgstr ""
+msgstr "Kryptografische Hash-Verifizierung verfügbar"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:152
@@ -175,113 +170,122 @@ msgstr ""
 #: src/Objects/DeviceFlag.vala:155
 msgid "Device can recover flash failures"
 msgstr ""
+"Das Gerät kann im Falle eines Fehlschlagen des Flash-Vorgangs "
+"wiederhergestellt werden"
 
 #. / TRANSLATORS: Device remains usable during update
 #: src/Objects/DeviceFlag.vala:158
 msgid "Device is usable for the duration of the update"
-msgstr ""
+msgstr "Gerät kann während der Aktualisierung verwendet werden"
 
 #: src/Views/FirmwareView.vala:36
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Gerät während der Aktualisierung nicht abtrennen."
 
 #: src/Views/FirmwareView.vala:47
 msgid "No Updatable Devices"
-msgstr ""
+msgstr "Keine aktualisierbaren Geräte"
 
 #: src/Views/FirmwareView.vala:48
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"Firmware-Aktualisierungen werden weder bei diesem noch bei angeschlossenen "
+"Geräten unterstützt."
 
 #: src/Views/FirmwareView.vala:104
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "»%s« wird aktualisiert"
 
 #: src/Views/FirmwareView.vala:125
+#, fuzzy
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Installation der Firmware gescheitert"
 
-#: src/Views/HardwareView.vala:75
+#: src/Views/HardwareView.vala:61
 #, c-format
 msgid "%s memory"
 msgstr "%s Arbeitsspeicher"
 
-#: src/Views/HardwareView.vala:81 src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
 msgid "Unknown Graphics"
 msgstr "Unbekannte Grafikkarte"
 
-#: src/Views/HardwareView.vala:150
+#: src/Views/HardwareView.vala:86
+msgid "Unknown storage"
+msgstr "Unbekannter Speicher"
+
+#: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
 msgstr "Hersteller Webseite"
 
-#: src/Views/HardwareView.vala:230
+#: src/Views/HardwareView.vala:239
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Doppelkern %s"
 
-#: src/Views/HardwareView.vala:232
+#: src/Views/HardwareView.vala:241
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Vierkern %s"
 
-#: src/Views/HardwareView.vala:234
+#: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Achtkern %s"
 
-#: src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:326
 msgid "Unknown Processor"
 msgstr "Unbekannter Prozessor"
 
-#: src/Views/HardwareView.vala:337
+#: src/Views/HardwareView.vala:376
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: src/Views/HardwareView.vala:410
+#: src/Views/HardwareView.vala:423
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s Systemspeicher (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:412
+#: src/Views/HardwareView.vala:425
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s Systemspeicher"
 
-#: src/Views/HardwareView.vala:414
+#: src/Views/HardwareView.vala:427
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s Systemspeicher"
 
-#: src/Views/HardwareView.vala:417
+#: src/Views/HardwareView.vala:430
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s Systemspeicher"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:422
+#: src/Views/HardwareView.vala:435
 #, c-format
 msgid "%s storage"
 msgstr "%s Massenspeicherplatz"
 
-#: src/Views/OperatingSystemView.vala:114
+#: src/Views/OperatingSystemView.vala:97
 msgid "Website"
 msgstr "Webseite"
 
-#: src/Views/OperatingSystemView.vala:137
+#: src/Views/OperatingSystemView.vala:120
 msgid "Check for Updates"
 msgstr "Nach Aktualisierungen suchen"
 
-#: src/Views/OperatingSystemView.vala:169
+#: src/Views/OperatingSystemView.vala:203
 #, c-format
 msgid "Built on %s"
 msgstr "Auf Basis von %s"
 
-#: src/Views/OperatingSystemView.vala:218
+#: src/Views/OperatingSystemView.vala:225
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Die Systemeinstellungen werden auf die Werkseinstellung zurückgesetzt"
 
-#: src/Views/OperatingSystemView.vala:219
+#: src/Views/OperatingSystemView.vala:226
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -290,54 +294,58 @@ msgstr ""
 "zurückgesetzt. Persönliche Daten wie Musik oder Bilder bleiben hiervon "
 "unberührt."
 
-#: src/Views/OperatingSystemView.vala:225
+#: src/Views/OperatingSystemView.vala:232
 msgid "Restore Settings"
 msgstr "Einstellungen wiederherstellen"
 
 #: src/Widgets/FirmwareUpdateRow.vala:67
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Aktualisierungen"
+msgstr "Aktualisierung"
 
 #: src/Widgets/FirmwareUpdateRow.vala:89
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "Aktualisierungen"
+msgstr "Aktuell"
 
 #: src/Widgets/FirmwareUpdateRow.vala:117
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "»%s« muss manuell in den Aktualisierungsmodus versetzt werden"
 
 #: src/Widgets/FirmwareUpdateRow.vala:124
 msgid "Continue"
-msgstr ""
+msgstr "Weiter"
 
 #: src/Widgets/FirmwareUpdateRow.vala:144
 msgid "An update requires the system to restart to complete"
 msgstr ""
+"Zum Abschluss einer Aktualisierung ist es erforderlich, das System neu zu "
+"starten"
 
 #: src/Widgets/FirmwareUpdateRow.vala:145
 msgid "This will close all open applications and restart this device."
 msgstr ""
+"Dabei werden alle geöffneten Anwendungen geschlossen und dieses Gerät neu "
+"gestartet."
 
 #: src/Widgets/FirmwareUpdateRow.vala:151
 msgid "Restart"
-msgstr ""
+msgstr "Neu starten"
 
 #: src/Widgets/FirmwareUpdateRow.vala:166
 msgid "An update requires the system to shut down to complete"
 msgstr ""
+"Zum Abschluss einer Aktualisierung ist es erforderlich, das System "
+"auszuschalten"
 
 #: src/Widgets/FirmwareUpdateRow.vala:167
 msgid "This will close all open applications and turn off this device."
 msgstr ""
+"Dabei werden alle geöffneten Anwendungen geschlossen und dieses Gerät "
+"ausgeschaltet."
 
 #: src/Widgets/FirmwareUpdateRow.vala:173
 msgid "Shut Down"
-msgstr ""
+msgstr "Ausschalten"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Übersetzung vorschlagen"

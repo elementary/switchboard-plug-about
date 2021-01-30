@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-27 17:32+0000\n"
-"PO-Revision-Date: 2021-01-27 17:32+0000\n"
+"POT-Creation-Date: 2021-01-28 20:15+0000\n"
+"PO-Revision-Date: 2021-01-28 19:02+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
@@ -48,15 +48,15 @@ msgstr "Informations du système d'exploitation"
 msgid "Hardware Information"
 msgstr "Informations sur le matériel"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:143
+#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Restaurer les paramètres par défaut"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:127
+#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Proposer des traductions"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
 msgstr "Envoyer des commentaires"
 
@@ -64,7 +64,7 @@ msgstr "Envoyer des commentaires"
 msgid "Report a Problem"
 msgstr "Signaler un problème"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
 msgstr "Obtenir de l'aide"
 
@@ -106,7 +106,7 @@ msgstr "Pris en charge par LVFS"
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
 msgid "Requires a bootloader"
-msgstr ""
+msgstr "Nécessite un chargeur de démarrage"
 
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
@@ -126,32 +126,32 @@ msgstr "L'utilisateur a été notifié"
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
 msgid "Install to parent device first"
-msgstr ""
+msgstr "Installer sur l'appareil parent en premier"
 
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "Est en mode chargeur de démarrage"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "Le matériel attend d'être rebranché"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
 msgid "Ignore validation safety checks"
-msgstr ""
+msgstr "Ignorer la validation des vérifications de sécurité"
 
 #. / TRANSLATORS: Device update needs to be separately activated
 #: src/Objects/DeviceFlag.vala:131
 msgid "Device update needs activation"
-msgstr ""
+msgstr "La mise à jour requiert une activation"
 
 #. / TRANSLATORS: Device will not return after update completes
 #: src/Objects/DeviceFlag.vala:143
 msgid "Device will not re-appear after update completes"
-msgstr ""
+msgstr "Le périphérique ne réapparaîtra pas après la fin de la mise à jour"
 
 #. / TRANSLATORS: Device supports some form of checksum verification
 #: src/Objects/DeviceFlag.vala:146
@@ -171,109 +171,117 @@ msgstr ""
 #. / TRANSLATORS: Device remains usable during update
 #: src/Objects/DeviceFlag.vala:158
 msgid "Device is usable for the duration of the update"
-msgstr ""
+msgstr "Le périphérique reste utilisable lors de la mise à jour"
 
 #: src/Views/FirmwareView.vala:36
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Ne débranchez pas le périphérique pendant la mise à jour."
 
 #: src/Views/FirmwareView.vala:47
 msgid "No Updatable Devices"
-msgstr ""
+msgstr "Aucune périphérique ne peut être mis à jour"
 
 #: src/Views/FirmwareView.vala:48
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"La mise à jour du micrologiciel n'est pris en charge ni par ce matériel, ni "
+"par les périphériques connectés."
 
 #: src/Views/FirmwareView.vala:104
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "Mise à jour de « %s »"
 
 #: src/Views/FirmwareView.vala:125
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Échec de l'installation du micrologiciel"
 
-#: src/Views/HardwareView.vala:75
+#: src/Views/HardwareView.vala:61
 #, c-format
 msgid "%s memory"
 msgstr "%s de mémoire vive"
 
-#: src/Views/HardwareView.vala:81 src/Views/HardwareView.vala:298
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
 msgid "Unknown Graphics"
 msgstr "Carte graphique inconnue"
 
-#: src/Views/HardwareView.vala:150
+#: src/Views/HardwareView.vala:86
+#, fuzzy
+#| msgid "Unknown Processor"
+msgid "Unknown storage"
+msgstr "Processeur inconnu"
+
+#: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
 msgstr "Site web du fabricant"
 
-#: src/Views/HardwareView.vala:230
+#: src/Views/HardwareView.vala:239
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Double cœur %s"
 
-#: src/Views/HardwareView.vala:232
+#: src/Views/HardwareView.vala:241
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Quadruple cœur %s"
 
-#: src/Views/HardwareView.vala:234
+#: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Six cœurs %s"
 
-#: src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:326
 msgid "Unknown Processor"
 msgstr "Processeur inconnu"
 
-#: src/Views/HardwareView.vala:337
+#: src/Views/HardwareView.vala:376
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: src/Views/HardwareView.vala:410
+#: src/Views/HardwareView.vala:423
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s de stockage (SSD NVMe)"
 
-#: src/Views/HardwareView.vala:412
+#: src/Views/HardwareView.vala:425
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s de stockage (eMMC)"
 
-#: src/Views/HardwareView.vala:414
+#: src/Views/HardwareView.vala:427
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s de stockage (SSD SATA)"
 
-#: src/Views/HardwareView.vala:417
+#: src/Views/HardwareView.vala:430
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s de stockage (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:422
+#: src/Views/HardwareView.vala:435
 #, c-format
 msgid "%s storage"
 msgstr "%s de stockage"
 
-#: src/Views/OperatingSystemView.vala:114
+#: src/Views/OperatingSystemView.vala:97
 msgid "Website"
 msgstr "Site web"
 
-#: src/Views/OperatingSystemView.vala:137
+#: src/Views/OperatingSystemView.vala:120
 msgid "Check for Updates"
 msgstr "Vérifier les mises à jour"
 
-#: src/Views/OperatingSystemView.vala:169
+#: src/Views/OperatingSystemView.vala:203
 #, c-format
 msgid "Built on %s"
 msgstr "Basé sur %s"
 
-#: src/Views/OperatingSystemView.vala:218
+#: src/Views/OperatingSystemView.vala:225
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Les paramètres du système seront restaurés aux valeurs par défaut"
 
-#: src/Views/OperatingSystemView.vala:219
+#: src/Views/OperatingSystemView.vala:226
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -282,54 +290,51 @@ msgstr ""
 "valeurs par défaut. Les données personnelles comme la musique et les images "
 "ne seront pas affectés."
 
-#: src/Views/OperatingSystemView.vala:225
+#: src/Views/OperatingSystemView.vala:232
 msgid "Restore Settings"
 msgstr "Restaurer les paramètres"
 
 #: src/Widgets/FirmwareUpdateRow.vala:67
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Mises à jour"
+msgstr "Mettre à jour"
 
 #: src/Widgets/FirmwareUpdateRow.vala:89
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "Mises à jour"
+msgstr "À jour"
 
 #: src/Widgets/FirmwareUpdateRow.vala:117
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "« %s » doit être mis manuellement en mode mise à jour"
 
 #: src/Widgets/FirmwareUpdateRow.vala:124
 msgid "Continue"
-msgstr ""
+msgstr "Continuer"
 
 #: src/Widgets/FirmwareUpdateRow.vala:144
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "Le système doit être redémarré pour terminer une des mises à jour"
 
 #: src/Widgets/FirmwareUpdateRow.vala:145
 msgid "This will close all open applications and restart this device."
 msgstr ""
+"Ceci fermera toutes les applications ouvertes et redémarrera le système."
 
 #: src/Widgets/FirmwareUpdateRow.vala:151
 msgid "Restart"
-msgstr ""
+msgstr "Redémarrer"
 
 #: src/Widgets/FirmwareUpdateRow.vala:166
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "Le système doit être arrêté pour terminer une des mises à jour"
 
 #: src/Widgets/FirmwareUpdateRow.vala:167
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "Ceci fermera toutes les applications ouvertes et arrêtera le système."
 
 #: src/Widgets/FirmwareUpdateRow.vala:173
 msgid "Shut Down"
-msgstr ""
+msgstr "Arrêter"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Suggérer une traduction"
