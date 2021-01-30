@@ -36,10 +36,13 @@ public class About.FwupdManager : Object {
 
     private Gee.Future<FwupdInterface> fwupd_future;
 
-    public bool is_available {
-        get {
-            return fwupd.daemon_version != null;
+    public async bool is_available () {
+        var fwupd = yield get_interface ();
+        if (fwupd == null) {
+            return false;
         }
+
+        return fwupd.daemon_version != null;
     }
 
     public signal void on_device_added (Fwupd.Device device);
