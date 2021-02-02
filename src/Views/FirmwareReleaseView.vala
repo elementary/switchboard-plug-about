@@ -62,10 +62,11 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         vendor_value_label.label = release.vendor;
         size_value_label.label = GLib.format_size (release.size);
 
-        if (release.install_duration < 60) {
+        uint32 duration_minutes = release.install_duration / 60;
+        if (duration_minutes < 1) {
             install_duration_value_label.label = _("less than a minute");
         } else {
-            install_duration_value_label.label = _("%llu minutes".printf (release.install_duration));
+            install_duration_value_label.label = GLib.ngettext ("%llu minute", "%llu minutes", duration_minutes).printf (duration_minutes);
         }
 
         show_all ();
