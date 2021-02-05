@@ -24,6 +24,10 @@ public class About.FirmwareView : Gtk.Stack {
     private Granite.Widgets.AlertView progress_alert_view;
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
+    private Widgets.FirmwareHeaderRow updatable_header;
+    private uint num_devices = 0;
+    private uint num_updatable_devices = 0;
+    private Widgets.FirmwareHeaderRow up_to_date_header;
     private FwupdManager fwupd;
 
     construct {
@@ -85,9 +89,14 @@ public class About.FirmwareView : Gtk.Stack {
             if (widget is Widgets.FirmwareUpdateRow) {
                 update_list.remove (widget);
             }
+
+            num_updatable_devices = 0;
         }
 
+        update_row_headers ();
+
         foreach (var device in yield fwupd.get_devices ()) {
+            num_devices++;
             add_device (device);
         }
 
@@ -98,7 +107,15 @@ public class About.FirmwareView : Gtk.Stack {
     private void add_device (Fwupd.Device device) {
         if (device.has_flag (Fwupd.DeviceFlag.UPDATABLE)) {
             var row = new Widgets.FirmwareUpdateRow (fwupd, device);
-            update_list.add (row);
+
+            int position = -1;
+            if (device.releases.length () > 0 && device.latest_release.version != device.version) {
+                num_updatable_devices++;
+                position = 1;
+            }
+            update_row_headers ();
+
+            update_list.insert (row, position);
 
             row.on_update_start.connect (() => {
                 progress_alert_view.title = _("“%s” is being updated").printf (device.name);
@@ -143,9 +160,38 @@ public class About.FirmwareView : Gtk.Stack {
                 if (row.device.id == device.id) {
                     update_list.remove (widget);
                 }
+
+                if (row.device.releases.length () > 0 && row.device.latest_release.version != row.device.version) {
+                    num_updatable_devices--;
+                }
             }
         }
 
+        update_row_headers ();
+
         update_list.show_all ();
+    }
+
+    private void update_row_headers () {
+        if (num_updatable_devices > 0 && updatable_header == null) {
+            updatable_header = new Widgets.FirmwareHeaderRow.updatable (num_updatable_devices);
+            updatable_header.show_all ();
+            update_list.insert (updatable_header, 0);
+        } else if (num_updatable_devices > 0) {
+            updatable_header = new Widgets.FirmwareHeaderRow.updatable (num_updatable_devices);
+            updatable_header.show_all ();
+        } else if (num_updatable_devices == 0 && updatable_header != null) {
+            updatable_header.destroy ();
+            updatable_header = null;
+        }
+
+        if ((num_devices - num_updatable_devices) > 0 && up_to_date_header == null) {
+            up_to_date_header = new Widgets.FirmwareHeaderRow.up_to_date ();
+            up_to_date_header.show_all ();
+            update_list.add (up_to_date_header);
+        } else if (num_devices == 0 && up_to_date_header != null) {
+            up_to_date_header.destroy ();
+            up_to_date_header = null;
+        }
     }
 }
