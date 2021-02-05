@@ -25,7 +25,6 @@ public class About.FirmwareView : Gtk.Stack {
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
     private Widgets.FirmwareHeaderRow updatable_header;
-    private uint num_devices = 0;
     private uint num_updatable_devices = 0;
     private Widgets.FirmwareHeaderRow up_to_date_header;
     private FwupdManager fwupd;
@@ -87,16 +86,15 @@ public class About.FirmwareView : Gtk.Stack {
     }
 
     private async void update_list_view () {
+        num_updatable_devices = 0;
+
         foreach (unowned Gtk.Widget widget in update_list.get_children ()) {
             if (widget is Widgets.FirmwareUpdateRow) {
                 update_list.remove (widget);
             }
-
-            num_updatable_devices = 0;
         }
 
-        foreach (var device in yield fwupd.get_devices ()) {
-            num_devices++;
+        foreach (unowned var device in yield fwupd.get_devices ()) {
             add_device (device);
         }
 
