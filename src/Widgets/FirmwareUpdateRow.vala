@@ -60,7 +60,6 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         switch (device.latest_release.flag) {
             case Fwupd.ReleaseFlag.IS_UPGRADE:
                 if (device.latest_release.version == device.version) {
-                    add_up_to_date_label (grid);
                     break;
                 }
 
@@ -77,19 +76,9 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
                 });
                 grid.attach (update_button, 2, 0, 1, 2);
                 break;
-            default:
-                add_up_to_date_label (grid);
-                break;
         }
 
         add (grid);
-    }
-
-    private void add_up_to_date_label (Gtk.Grid grid) {
-        var update_to_date_label = new Gtk.Label (_("Up to date")) {
-            valign = Gtk.Align.CENTER
-        };
-        grid.attach (update_to_date_label, 2, 0, 1, 2);
     }
 
     private async void update (Fwupd.Device device, Fwupd.Release release) {
