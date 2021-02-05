@@ -266,6 +266,7 @@ public class About.OperatingSystemView : Gtk.Grid {
             "org.pantheon.desktop",
             "io.elementary.desktop",
             "io.elementary.onboarding",
+            "io.elementary.wingpanel.keyboard",
             "org.gnome.desktop",
             "org.gnome.settings-daemon"
         };
