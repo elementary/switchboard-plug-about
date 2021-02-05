@@ -100,7 +100,6 @@ public class About.FirmwareView : Gtk.Stack {
 
         visible_child = grid;
         update_list.show_all ();
-        update_list.invalidate_sort ();
     }
 
     private void add_device (Fwupd.Device device) {
