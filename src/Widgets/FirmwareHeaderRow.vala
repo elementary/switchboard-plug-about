@@ -20,19 +20,13 @@
  */
 
 public class About.Widgets.FirmwareHeaderRow : Gtk.Label {
+    public FirmwareHeaderRow (string label) {
+        Object (label: label);
+    }
+
     construct {
         xalign = 0;
         margin = 3;
         get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
-    }
-
-    public FirmwareHeaderRow.updatable (uint num_updates) {
-        Object (
-            label: ngettext ("%u Update Available", "%u Updates Available", num_updates).printf (num_updates)
-        );
-    }
-
-    public FirmwareHeaderRow.up_to_date () {
-        Object (label: _("Up to Date"));
     }
 }

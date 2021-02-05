@@ -60,6 +60,8 @@ public class About.FirmwareView : Gtk.Stack {
             selection_mode = Gtk.SelectionMode.SINGLE
         };
         update_list.set_placeholder (no_devices_alert_view);
+        update_list.set_sort_func ((Gtk.ListBoxSortFunc) sort_func);
+        update_list.set_header_func ((Gtk.ListBoxUpdateHeaderFunc) header_func);
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
         scrolled_window.add (update_list);
@@ -93,8 +95,6 @@ public class About.FirmwareView : Gtk.Stack {
             num_updatable_devices = 0;
         }
 
-        update_row_headers ();
-
         foreach (var device in yield fwupd.get_devices ()) {
             num_devices++;
             add_device (device);
@@ -102,20 +102,19 @@ public class About.FirmwareView : Gtk.Stack {
 
         visible_child = grid;
         update_list.show_all ();
+        update_list.invalidate_sort ();
     }
 
     private void add_device (Fwupd.Device device) {
         if (device.has_flag (Fwupd.DeviceFlag.UPDATABLE)) {
             var row = new Widgets.FirmwareUpdateRow (fwupd, device);
 
-            int position = -1;
             if (device.releases.length () > 0 && device.latest_release.version != device.version) {
                 num_updatable_devices++;
-                position = 1;
             }
-            update_row_headers ();
 
-            update_list.insert (row, position);
+            update_list.add (row);
+            update_list.invalidate_sort ();
 
             row.on_update_start.connect (() => {
                 progress_alert_view.title = _("“%s” is being updated").printf (device.name);
@@ -167,31 +166,50 @@ public class About.FirmwareView : Gtk.Stack {
             }
         }
 
-        update_row_headers ();
-
         update_list.show_all ();
     }
 
-    private void update_row_headers () {
-        if (num_updatable_devices > 0 && updatable_header == null) {
-            updatable_header = new Widgets.FirmwareHeaderRow.updatable (num_updatable_devices);
-            updatable_header.show_all ();
-            update_list.insert (updatable_header, 0);
-        } else if (num_updatable_devices > 0) {
-            updatable_header = new Widgets.FirmwareHeaderRow.updatable (num_updatable_devices);
-            updatable_header.show_all ();
-        } else if (num_updatable_devices == 0 && updatable_header != null) {
-            updatable_header.destroy ();
-            updatable_header = null;
+    [CCode (instance_pos = -1)]
+    private int sort_func (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow row2) {
+        var row1_updatable = row1.device.releases.length () > 0 && (row1.device.latest_release.version != row1.device.version);
+        var row2_updatable = row2.device.releases.length () > 0 && (row2.device.latest_release.version != row2.device.version);
+
+        if (row1_updatable && !row2_updatable) {
+            return -1;
         }
 
-        if ((num_devices - num_updatable_devices) > 0 && up_to_date_header == null) {
-            up_to_date_header = new Widgets.FirmwareHeaderRow.up_to_date ();
-            up_to_date_header.show_all ();
-            update_list.add (up_to_date_header);
-        } else if (num_devices == 0 && up_to_date_header != null) {
-            up_to_date_header.destroy ();
-            up_to_date_header = null;
+        if (!row1_updatable && row2_updatable) {
+            return 1;
+        }
+
+        return row1.device.name.collate (row2.device.name);
+    }
+
+    [CCode (instance_pos = -1)]
+    private void header_func (Widgets.FirmwareUpdateRow row, Widgets.FirmwareUpdateRow? before) {
+        var row_updatable = row.device.releases.length () > 0 && (row.device.latest_release.version != row.device.version);
+
+        bool? before_updatable = null;
+        if (before != null) {
+            before_updatable = before.device.releases.length () > 0 && (before.device.latest_release.version != before.device.version);
+        }
+
+        if (before == null && row_updatable) {
+            if (updatable_header == null) {
+                updatable_header = new Widgets.FirmwareHeaderRow (
+                    ngettext ("%u Update Available", "%u Updates Available", num_updatable_devices).printf (num_updatable_devices)
+                );
+            }
+
+            row.set_header (updatable_header);
+        } else if (before == null || row_updatable != before_updatable) {
+            if (up_to_date_header == null) {
+                up_to_date_header = new Widgets.FirmwareHeaderRow (_("Up to Date"));
+            }
+
+            row.set_header (up_to_date_header);
+        } else {
+            row.set_header (null);
         }
     }
 }
