@@ -106,7 +106,7 @@ public class About.FirmwareView : Gtk.Stack {
         if (device.has_flag (Fwupd.DeviceFlag.UPDATABLE)) {
             var row = new Widgets.FirmwareUpdateRow (fwupd, device);
 
-            if (device.releases.length () > 0 && device.latest_release.version != device.version) {
+            if (row.updatable) {
                 num_updatable_devices++;
             }
 
@@ -168,14 +168,11 @@ public class About.FirmwareView : Gtk.Stack {
 
     [CCode (instance_pos = -1)]
     private int sort_func (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow row2) {
-        var row1_updatable = row1.device.releases.length () > 0 && (row1.device.latest_release.version != row1.device.version);
-        var row2_updatable = row2.device.releases.length () > 0 && (row2.device.latest_release.version != row2.device.version);
-
-        if (row1_updatable && !row2_updatable) {
+        if (row1.updatable && !row2.updatable) {
             return -1;
         }
 
-        if (!row1_updatable && row2_updatable) {
+        if (!row1.updatable && row2.updatable) {
             return 1;
         }
 
@@ -184,14 +181,7 @@ public class About.FirmwareView : Gtk.Stack {
 
     [CCode (instance_pos = -1)]
     private void header_func (Widgets.FirmwareUpdateRow row, Widgets.FirmwareUpdateRow? before) {
-        var row_updatable = row.device.releases.length () > 0 && (row.device.latest_release.version != row.device.version);
-
-        bool? before_updatable = null;
-        if (before != null) {
-            before_updatable = before.device.releases.length () > 0 && (before.device.latest_release.version != before.device.version);
-        }
-
-        if (before == null && row_updatable) {
+        if (before == null && row.updatable) {
             if (updatable_header == null) {
                 updatable_header = new Widgets.FirmwareHeaderRow (
                     ngettext ("%u Update Available", "%u Updates Available", num_updatable_devices).printf (num_updatable_devices)
@@ -199,7 +189,7 @@ public class About.FirmwareView : Gtk.Stack {
             }
 
             row.set_header (updatable_header);
-        } else if (before == null || row_updatable != before_updatable) {
+        } else if (before == null || row.updatable != before.updatable) {
             if (up_to_date_header == null) {
                 up_to_date_header = new Widgets.FirmwareHeaderRow (_("Up to Date"));
             }
