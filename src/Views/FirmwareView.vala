@@ -24,10 +24,8 @@ public class About.FirmwareView : Gtk.Stack {
     private Granite.Widgets.AlertView progress_alert_view;
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
-    private Widgets.FirmwareHeaderRow updatable_header;
     private uint num_devices = 0;
-    private uint num_updatable_devices = 0;
-    private Widgets.FirmwareHeaderRow up_to_date_header;
+    private uint num_updates = 0;
     private FwupdManager fwupd;
 
     construct {
@@ -59,6 +57,8 @@ public class About.FirmwareView : Gtk.Stack {
             vexpand = true,
             selection_mode = Gtk.SelectionMode.SINGLE
         };
+        update_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
+        update_list.set_header_func ((Gtk.ListBoxUpdateHeaderFunc) header_rows);
         update_list.set_placeholder (no_devices_alert_view);
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
@@ -90,13 +90,12 @@ public class About.FirmwareView : Gtk.Stack {
                 update_list.remove (widget);
             }
 
-            num_updatable_devices = 0;
+            num_updates = 0;
         }
 
-        update_row_headers ();
+        num_devices = 0;
 
         foreach (var device in yield fwupd.get_devices ()) {
-            num_devices++;
             add_device (device);
         }
 
@@ -106,16 +105,15 @@ public class About.FirmwareView : Gtk.Stack {
 
     private void add_device (Fwupd.Device device) {
         if (device.has_flag (Fwupd.DeviceFlag.UPDATABLE)) {
+            num_devices++;
+
             var row = new Widgets.FirmwareUpdateRow (fwupd, device);
 
-            int position = -1;
-            if (device.releases.length () > 0 && device.latest_release.version != device.version) {
-                num_updatable_devices++;
-                position = 1;
+            if (device.is_updatable) {
+                num_updates++;
             }
-            update_row_headers ();
 
-            update_list.insert (row, position);
+            update_list.add (row);
 
             row.on_update_start.connect (() => {
                 progress_alert_view.title = _("“%s” is being updated").printf (device.name);
@@ -126,6 +124,8 @@ public class About.FirmwareView : Gtk.Stack {
                 update_list_view.begin ();
             });
         }
+
+        debug ("total devices: %u, updates: %u", num_devices, num_updates);
     }
 
     private void on_device_added (Fwupd.Device device) {
@@ -154,44 +154,84 @@ public class About.FirmwareView : Gtk.Stack {
     private void on_device_removed (Fwupd.Device device) {
         debug ("Removed device: %s", device.name);
 
+        num_devices--;
+
         foreach (unowned Gtk.Widget widget in update_list.get_children ()) {
             if (widget is Widgets.FirmwareUpdateRow) {
                 var row = (Widgets.FirmwareUpdateRow) widget;
                 if (row.device.id == device.id) {
-                    update_list.remove (widget);
-                }
+                    if (row.device.is_updatable) {
+                        num_updates--;
+                    }
 
-                if (row.device.releases.length () > 0 && row.device.latest_release.version != row.device.version) {
-                    num_updatable_devices--;
+                    update_list.remove (widget);
                 }
             }
         }
 
-        update_row_headers ();
-
         update_list.show_all ();
+
+        debug ("total devices: %u, updates: %u", num_devices, num_updates);
     }
 
-    private void update_row_headers () {
-        if (num_updatable_devices > 0 && updatable_header == null) {
-            updatable_header = new Widgets.FirmwareHeaderRow.updatable (num_updatable_devices);
-            updatable_header.show_all ();
-            update_list.insert (updatable_header, 0);
-        } else if (num_updatable_devices > 0) {
-            updatable_header = new Widgets.FirmwareHeaderRow.updatable (num_updatable_devices);
-            updatable_header.show_all ();
-        } else if (num_updatable_devices == 0 && updatable_header != null) {
-            updatable_header.destroy ();
-            updatable_header = null;
+    [CCode (instance_pos = -1)]
+    private int compare_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
+        unowned Fwupd.Device device1 = row1.device;
+        unowned Fwupd.Device device2 = row2.device;
+        if (device1.is_updatable && !device2.is_updatable) {
+            return -1;
         }
 
-        if ((num_devices - num_updatable_devices) > 0 && up_to_date_header == null) {
-            up_to_date_header = new Widgets.FirmwareHeaderRow.up_to_date ();
-            up_to_date_header.show_all ();
-            update_list.add (up_to_date_header);
-        } else if (num_devices == 0 && up_to_date_header != null) {
-            up_to_date_header.destroy ();
-            up_to_date_header = null;
+        if (!device1.is_updatable && device2.is_updatable) {
+            return 1;
+        }
+
+        if (device1.name != null && device2.name == null) {
+            return -1;
+        }
+
+        if (device1.name == null && device2.name != null) {
+            return 1;
+        }
+
+        return device1.name.collate (device2.name);
+    }
+
+    [CCode (instance_pos = -1)]
+    private void header_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
+        debug ("header_rows");
+        debug ("row1.device.name: %s", row1.device.name);
+        debug ("row1.device.is_updatable: %s", row1.device.is_updatable ? "true" : "false");
+
+        if (row2 != null) {
+            debug ("row2.device.name: %s", row2.device.name);
+            debug ("row2.device.is_updatable: %s", row2.device.is_updatable ? "true" : "false");
+        }
+
+        if (row2 == null && row1.device.is_updatable) {
+            var header = new FirmwareHeaderRow (
+                ngettext ("%u Update Available", "%u Updates Available", num_updates).printf (num_updates)
+            );
+            row1.set_header (header);
+        } else if (row2 == null || row1.device.is_updatable != row2.device.is_updatable) {
+            var header = new FirmwareHeaderRow (_("Up to Date"));
+            row1.set_header (header);
+        } else {
+            row1.set_header (null);
+        }
+    }
+
+    private class FirmwareHeaderRow : Gtk.Label {
+        construct {
+            xalign = 0;
+            margin = 3;
+            get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
+        }
+
+        public FirmwareHeaderRow (string label) {
+            Object (
+                label: label
+            );
         }
     }
 }
