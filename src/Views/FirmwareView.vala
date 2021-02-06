@@ -70,6 +70,9 @@ public class About.FirmwareView : Gtk.Stack {
         deck.add (update_scrolled);
 
         firmware_release_view = new FirmwareReleaseView ();
+        firmware_release_view.back.connect (() => {
+            deck.navigate (Hdy.NavigationDirection.BACK);
+        });
         deck.add (firmware_release_view);
 
         deck.visible_child = update_scrolled;
@@ -178,10 +181,6 @@ public class About.FirmwareView : Gtk.Stack {
             var row = (Widgets.FirmwareUpdateRow) widget;
             firmware_release_view.update_view (row.device, row.device.latest_release);
             deck.visible_child = firmware_release_view;
-
-            firmware_release_view.back.connect (() => {
-                deck.navigate (Hdy.NavigationDirection.BACK);
-            });
 
             firmware_release_view.update.connect ((device, release) => {
                 on_update_start (device);
