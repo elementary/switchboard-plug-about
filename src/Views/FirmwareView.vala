@@ -88,9 +88,9 @@ public class About.FirmwareView : Gtk.Stack {
             if (widget is Widgets.FirmwareUpdateRow) {
                 update_list.remove (widget);
             }
-
-            num_updates = 0;
         }
+
+        num_updates = 0;
 
         foreach (var device in yield fwupd.get_devices ()) {
             add_device (device);
