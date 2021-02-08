@@ -19,7 +19,7 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class Fwupd.Device : Object {
+public class About.Firmware.Device : Object {
     public string id { get; set; }
     public string name { get; set; }
     public string summary { get; set; }
@@ -34,7 +34,7 @@ public class Fwupd.Device : Object {
     public List<Release> releases { get; owned set; }
     public Release latest_release { get { return releases.nth_data (0); }}
 
-    public bool has_flag (Fwupd.DeviceFlag flag) {
+    public bool has_flag (Firmware.DeviceFlag flag) {
         return flag in flags;
     }
 
