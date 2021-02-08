@@ -196,16 +196,14 @@ public class About.FirmwareView : Gtk.Stack {
     }
 
     private class FirmwareHeaderRow : Gtk.Label {
+        public FirmwareHeaderRow (string label) {
+            Object (label: label);
+        }
+
         construct {
             xalign = 0;
             margin = 3;
             get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
-        }
-
-        public FirmwareHeaderRow (string label) {
-            Object (
-                label: label
-            );
         }
     }
 }
