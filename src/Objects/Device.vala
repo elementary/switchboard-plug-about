@@ -37,4 +37,6 @@ public class Fwupd.Device : Object {
     public bool has_flag (Fwupd.DeviceFlag flag) {
         return flag in flags;
     }
+
+    public bool is_updatable { get { return releases.length () > 0 && latest_release.version != version; }}
 }
