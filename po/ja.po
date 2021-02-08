@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-28 20:15+0000\n"
+"POT-Creation-Date: 2021-02-08 22:40+0000\n"
 "PO-Revision-Date: 2021-01-29 13:54+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -173,28 +173,41 @@ msgstr "書き込みに失敗してもデバイスを復元できます"
 msgid "Device is usable for the duration of the update"
 msgstr "アップデート中もデバイスを利用できます"
 
-#: src/Views/FirmwareView.vala:36
+#: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
 msgstr "アップデート中はデバイスを取り外さないでください。"
 
-#: src/Views/FirmwareView.vala:47
+#: src/Views/FirmwareView.vala:48
 msgid "No Updatable Devices"
 msgstr "アップデート可能なデバイスがありません"
 
-#: src/Views/FirmwareView.vala:48
+#: src/Views/FirmwareView.vala:49
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "このデバイスおよび接続されたデバイスは、ファームウェアのアップデートに対応し"
 "ていません。"
 
-#: src/Views/FirmwareView.vala:104
+#: src/Views/FirmwareView.vala:115
 #, c-format
 msgid "“%s” is being updated"
 msgstr "“%s” をアップデートしています"
 
-#: src/Views/FirmwareView.vala:125
+#: src/Views/FirmwareView.vala:136
 msgid "Failed to install firmware release"
 msgstr "ファームウェアをインストールできませんでした"
+
+#: src/Views/FirmwareView.vala:187
+#, fuzzy, c-format
+#| msgid "Updatable"
+msgid "%u Update Available"
+msgid_plural "%u Updates Available"
+msgstr[0] "アップデート可能"
+
+#: src/Views/FirmwareView.vala:191
+#, fuzzy
+#| msgid "Up to date"
+msgid "Up to Date"
+msgstr "最新の状態"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -291,48 +304,44 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "設定を復元"
 
-#: src/Widgets/FirmwareUpdateRow.vala:67
+#: src/Widgets/FirmwareUpdateRow.vala:66
 msgid "Update"
 msgstr "アップデート"
 
-#: src/Widgets/FirmwareUpdateRow.vala:89
-msgid "Up to date"
-msgstr "最新の状態"
-
-#: src/Widgets/FirmwareUpdateRow.vala:117
+#: src/Widgets/FirmwareUpdateRow.vala:106
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "“%s” は手動でアップデートモードに切り替える必要があります"
 
-#: src/Widgets/FirmwareUpdateRow.vala:124
+#: src/Widgets/FirmwareUpdateRow.vala:113
 msgid "Continue"
 msgstr "続行"
 
-#: src/Widgets/FirmwareUpdateRow.vala:144
+#: src/Widgets/FirmwareUpdateRow.vala:133
 msgid "An update requires the system to restart to complete"
 msgstr "アップデートを完了するには、システムの再起動が必要です"
 
-#: src/Widgets/FirmwareUpdateRow.vala:145
+#: src/Widgets/FirmwareUpdateRow.vala:134
 msgid "This will close all open applications and restart this device."
 msgstr ""
 "続行すると、開いているすべてのアプリケーションを閉じてこのデバイスを再起動し"
 "ます。"
 
-#: src/Widgets/FirmwareUpdateRow.vala:151
+#: src/Widgets/FirmwareUpdateRow.vala:140
 msgid "Restart"
 msgstr "再起動"
 
-#: src/Widgets/FirmwareUpdateRow.vala:166
+#: src/Widgets/FirmwareUpdateRow.vala:155
 msgid "An update requires the system to shut down to complete"
 msgstr "アップデートを完了するには、システムのシャットダウンが必要です"
 
-#: src/Widgets/FirmwareUpdateRow.vala:167
+#: src/Widgets/FirmwareUpdateRow.vala:156
 msgid "This will close all open applications and turn off this device."
 msgstr ""
 "続行すると、開いているすべてのアプリケーションを閉じてこのデバイスの電源を切"
 "ります。"
 
-#: src/Widgets/FirmwareUpdateRow.vala:173
+#: src/Widgets/FirmwareUpdateRow.vala:162
 msgid "Shut Down"
 msgstr "シャットダウン"
 
