@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-01-28 20:15+0000\n"
-"PO-Revision-Date: 2021-01-25 07:22+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"PO-Revision-Date: 2021-02-06 12:10+0000\n"
+"Last-Translator: imgradeone Yan <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -37,22 +37,16 @@ msgid "Hardware"
 msgstr "硬件"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
 msgstr "硬件"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "系统信息"
+msgstr "操作系统信息"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "系统信息"
+msgstr "硬件信息"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
@@ -80,56 +74,57 @@ msgstr "检查更新"
 
 #. / TRANSLATORS: Device cannot be removed easily
 #: src/Objects/DeviceFlag.vala:77
+#, fuzzy
 msgid "Internal device"
-msgstr ""
+msgstr "内置硬件"
 
 #. / TRANSLATORS: Device is updatable in this or any other mode
 #: src/Objects/DeviceFlag.vala:80
-#, fuzzy
-#| msgid "Updates"
 msgid "Updatable"
-msgstr "检查更新"
+msgstr "可更新"
 
 #. / TRANSLATORS: Update can only be done from offline mode
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "更新需要重新启动系统"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
 msgid "System requires external power source"
-msgstr ""
+msgstr "系统需要外接电源"
 
 #. / TRANSLATORS: Is locked and can be unlocked
 #: src/Objects/DeviceFlag.vala:89
 msgid "Device is locked"
-msgstr ""
+msgstr "设备已锁定"
 
 #. / TRANSLATORS: Is found in current metadata
 #: src/Objects/DeviceFlag.vala:92
+#, fuzzy
 msgid "Supported on LVFS"
-msgstr ""
+msgstr "支持 LVFS"
 
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
 msgid "Requires a bootloader"
-msgstr ""
+msgstr "需要 bootloader"
 
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
 msgid "Requires the system to shut down after installation"
-msgstr ""
+msgstr "安装完成后需要关机"
 
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
+#, fuzzy
 msgid "Reported to LVFS"
-msgstr ""
+msgstr "已向 LVFS 报告"
 
 #. / TRANSLATORS: User has been notified
 #: src/Objects/DeviceFlag.vala:107
 msgid "User has been notified"
-msgstr ""
+msgstr "已经通知用户"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
@@ -139,22 +134,24 @@ msgstr ""
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "处于 bootloader 模式中"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "正在等待重新插入硬件"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
+#, fuzzy
 msgid "Ignore validation safety checks"
-msgstr ""
+msgstr "忽略安全验证"
 
 #. / TRANSLATORS: Device update needs to be separately activated
 #: src/Objects/DeviceFlag.vala:131
+#, fuzzy
 msgid "Device update needs activation"
-msgstr ""
+msgstr "设备更新需要激活"
 
 #. / TRANSLATORS: Device will not return after update completes
 #: src/Objects/DeviceFlag.vala:143
