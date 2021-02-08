@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-28 20:15+0000\n"
+"POT-Creation-Date: 2021-02-08 22:40+0000\n"
 "PO-Revision-Date: 2021-01-29 03:07+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -174,28 +174,43 @@ msgstr "Пристрій може виправити помилки флеш"
 msgid "Device is usable for the duration of the update"
 msgstr "Пристрій можна використовувати на час оновлення"
 
-#: src/Views/FirmwareView.vala:36
+#: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
 msgstr "Не від'єднуйте пристрій від мережі під час оновлення."
 
-#: src/Views/FirmwareView.vala:47
+#: src/Views/FirmwareView.vala:48
 msgid "No Updatable Devices"
 msgstr "Немає пристроїв, які можна оновити"
 
-#: src/Views/FirmwareView.vala:48
+#: src/Views/FirmwareView.vala:49
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Оновлення мікропрограми не підтримується цим та будь-яким під'єднаним "
 "пристроєм."
 
-#: src/Views/FirmwareView.vala:104
+#: src/Views/FirmwareView.vala:115
 #, c-format
 msgid "“%s” is being updated"
 msgstr "«%s» оновлюється"
 
-#: src/Views/FirmwareView.vala:125
+#: src/Views/FirmwareView.vala:136
 msgid "Failed to install firmware release"
 msgstr "Не вдалося встановити випуск мікропрограми"
+
+#: src/Views/FirmwareView.vala:187
+#, fuzzy, c-format
+#| msgid "Updatable"
+msgid "%u Update Available"
+msgid_plural "%u Updates Available"
+msgstr[0] "Можливо оновити"
+msgstr[1] "Можливо оновити"
+msgstr[2] "Можливо оновити"
+
+#: src/Views/FirmwareView.vala:191
+#, fuzzy
+#| msgid "Up to date"
+msgid "Up to Date"
+msgstr "В оновленому стані"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -292,44 +307,40 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Відновити параметри"
 
-#: src/Widgets/FirmwareUpdateRow.vala:67
+#: src/Widgets/FirmwareUpdateRow.vala:66
 msgid "Update"
 msgstr "Оновлення"
 
-#: src/Widgets/FirmwareUpdateRow.vala:89
-msgid "Up to date"
-msgstr "В оновленому стані"
-
-#: src/Widgets/FirmwareUpdateRow.vala:117
+#: src/Widgets/FirmwareUpdateRow.vala:106
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "«%s» потрібно власноруч перевести в режим оновлення"
 
-#: src/Widgets/FirmwareUpdateRow.vala:124
+#: src/Widgets/FirmwareUpdateRow.vala:113
 msgid "Continue"
 msgstr "Продовжити"
 
-#: src/Widgets/FirmwareUpdateRow.vala:144
+#: src/Widgets/FirmwareUpdateRow.vala:133
 msgid "An update requires the system to restart to complete"
 msgstr "Оновлення вимагає перезапуску системи для завершення"
 
-#: src/Widgets/FirmwareUpdateRow.vala:145
+#: src/Widgets/FirmwareUpdateRow.vala:134
 msgid "This will close all open applications and restart this device."
 msgstr "Це закриє всі відкриті застосунки та перезапустить цей пристрій."
 
-#: src/Widgets/FirmwareUpdateRow.vala:151
+#: src/Widgets/FirmwareUpdateRow.vala:140
 msgid "Restart"
 msgstr "Перезапуск"
 
-#: src/Widgets/FirmwareUpdateRow.vala:166
+#: src/Widgets/FirmwareUpdateRow.vala:155
 msgid "An update requires the system to shut down to complete"
 msgstr "Оновлення вимагає завершення роботи системи"
 
-#: src/Widgets/FirmwareUpdateRow.vala:167
+#: src/Widgets/FirmwareUpdateRow.vala:156
 msgid "This will close all open applications and turn off this device."
 msgstr "Це закриє всі відкриті застосунки та вимкне цей пристрій."
 
-#: src/Widgets/FirmwareUpdateRow.vala:173
+#: src/Widgets/FirmwareUpdateRow.vala:162
 msgid "Shut Down"
 msgstr "Вимкнути"
 
