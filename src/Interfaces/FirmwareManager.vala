@@ -93,7 +93,6 @@ public class About.FirmwareManager : Object {
 
     private async Fwupd.Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
         var device = new Fwupd.Device ();
-        device.add_icon ("application-x-firmware");
 
         serialized_device.@foreach ((key, val) => {
             switch (key) {
@@ -142,6 +141,8 @@ public class About.FirmwareManager : Object {
                     break;
             }
         });
+
+        device.add_icon ("application-x-firmware");
 
         if (device.get_id ().length > 0 && device.has_flag (Fwupd.DEVICE_FLAG_UPDATABLE)) {
             var releases = yield get_releases (device.get_id ());
