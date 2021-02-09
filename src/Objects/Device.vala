@@ -27,14 +27,14 @@ public class About.Firmware.Device : Object {
     public string vendor { get; set; }
     public string version { get; set; }
     public string[] guids { get; set; }
-    public DeviceFlag flags { get; set; }
+    public Fwupd.DeviceFlags flags { get; set; }
     public uint32 install_duration { get; set; }
     public string update_error { get; set; }
 
     public List<Release> releases { get; owned set; }
     public Release latest_release { get { return releases.nth_data (0); }}
 
-    public bool has_flag (Firmware.DeviceFlag flag) {
+    public bool has_flag (Fwupd.DeviceFlag flag) {
         return flag in flags;
     }
 

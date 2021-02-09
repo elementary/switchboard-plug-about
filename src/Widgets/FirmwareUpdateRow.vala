@@ -21,12 +21,12 @@
 
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     public FirmwareManager fwupd { get; construct set; }
-    public Firmware.Device device { get; construct set; }
+    public Fwupd.Device device { get; construct set; }
 
     public signal void on_update_start ();
     public signal void on_update_end ();
 
-    public FirmwareUpdateRow (FirmwareManager fwupd, Firmware.Device device) {
+    public FirmwareUpdateRow (FirmwareManager fwupd, Fwupd.Device device) {
         Object (
             fwupd: fwupd,
             device: device
@@ -34,17 +34,17 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     }
 
     construct {
-        var icon = new Gtk.Image.from_icon_name (device.icon, Gtk.IconSize.DND) {
+        var icon = new Gtk.Image.from_icon_name (device.get_icons ()[0], Gtk.IconSize.DND) {
             pixel_size = 32
         };
 
-        var device_name_label = new Gtk.Label (device.name) {
+        var device_name_label = new Gtk.Label (device.get_name ()) {
             halign = Gtk.Align.START,
             hexpand = true
         };
         device_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
-        var version_label = new Gtk.Label (device.latest_release.version) {
+        var version_label = new Gtk.Label (device.get_version ()) {
             wrap = true,
             xalign = 0
         };
@@ -57,31 +57,31 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         grid.attach (device_name_label, 1, 0);
         grid.attach (version_label, 1, 1);
 
-        switch (device.latest_release.flag) {
-            case Firmware.ReleaseFlag.IS_UPGRADE:
-                if (device.latest_release.version == device.version) {
-                    break;
-                }
+        // switch (device.latest_release.flag) {
+        //     case Firmware.ReleaseFlag.IS_UPGRADE:
+        //         if (device.latest_release.version == device.version) {
+        //             break;
+        //         }
 
-                var update_button = new Gtk.Button.with_label (_("Update")) {
-                    valign = Gtk.Align.CENTER
-                };
-                update_button.clicked.connect (() => {
-                    on_update_start ();
+        //         var update_button = new Gtk.Button.with_label (_("Update")) {
+        //             valign = Gtk.Align.CENTER
+        //         };
+        //         update_button.clicked.connect (() => {
+        //             on_update_start ();
 
-                    update.begin (device, device.latest_release, (obj, res) => {
-                        update.end (res);
-                        on_update_end ();
-                    });
-                });
-                grid.attach (update_button, 2, 0, 1, 2);
-                break;
-        }
+        //             update.begin (device, device.latest_release, (obj, res) => {
+        //                 update.end (res);
+        //                 on_update_end ();
+        //             });
+        //         });
+        //         grid.attach (update_button, 2, 0, 1, 2);
+        //         break;
+        // }
 
         add (grid);
     }
 
-    private async void update (Firmware.Device device, Firmware.Release release) {
+    private async void update (Fwupd.Device device, Firmware.Release release) {
         var path = yield fwupd.download_file (device, release.uri);
 
         var details = yield fwupd.get_release_details (device, path);
@@ -93,9 +93,9 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         }
 
         if ((yield fwupd.install (device, path)) == true) {
-            if (device.has_flag (Firmware.DeviceFlag.NEEDS_REBOOT)) {
+            if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
                 show_reboot_dialog ();
-            } else if (device.has_flag (Firmware.DeviceFlag.NEEDS_SHUTDOWN)) {
+            } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
                 show_shutdown_dialog ();
             }
         }
@@ -103,9 +103,9 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
     private bool show_details_dialog (Firmware.Details details) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("“%s” needs to manually be put in update mode").printf (device.name),
+            _("“%s” needs to manually be put in update mode").printf (device.get_name ()),
             details.caption,
-            device.icon,
+            device.get_icons ()[0],
             Gtk.ButtonsType.CANCEL
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();

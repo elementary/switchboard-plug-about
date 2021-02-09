@@ -33,9 +33,9 @@ public class About.FirmwareManager : Object {
 
     private Gee.Future<FirmwareInterface> fwupd_future;
 
-    public signal void on_device_added (Firmware.Device device);
-    public signal void on_device_error (Firmware.Device device, string error);
-    public signal void on_device_removed (Firmware.Device device);
+    public signal void on_device_added (Fwupd.Device device);
+    public signal void on_device_error (Fwupd.Device device, string error);
+    public signal void on_device_removed (Fwupd.Device device);
 
     private async FirmwareInterface? get_interface () {
         if (fwupd_future.ready) {
@@ -51,8 +51,8 @@ public class About.FirmwareManager : Object {
         }
     }
 
-    public async List<Firmware.Device> get_devices () {
-        var devices_list = new List<Firmware.Device> ();
+    public async List<Fwupd.Device> get_devices () {
+        var devices_list = new List<Fwupd.Device> ();
 
         var fwupd = yield get_interface ();
         if (fwupd == null) {
@@ -91,58 +91,63 @@ public class About.FirmwareManager : Object {
         return releases_list;
     }
 
-    private async Firmware.Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
-        var device = new Firmware.Device () {
-            icon = "application-x-firmware"
-        };
+    private async Fwupd.Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
+        var device = new Fwupd.Device ();
+        device.add_icon ("application-x-firmware");
 
         serialized_device.@foreach ((key, val) => {
             switch (key) {
                 case "DeviceId":
-                    device.id = val.get_string ();
+                    device.set_id (val.get_string ());
                     break;
                 case "Flags":
-                    device.flags = (Firmware.DeviceFlag) val.get_uint64 ();
+                    device.flags = (Fwupd.DeviceFlags) val.get_uint64 ();
                     break;
                 case "Name":
-                    device.name = val.get_string ();
+                    device.set_name (val.get_string ());
                     break;
                 case "Summary":
-                    device.summary = val.get_string ();
+                    device.set_summary (val.get_string ());
                     break;
                 case "Vendor":
-                    device.vendor = val.get_string ();
+                    device.set_vendor (val.get_string ());
                     break;
                 case "VendorId":
-                    if (device.vendor == null) {
-                        device.vendor = val.get_string ();
+                    if (device.get_vendor () != null) {
+                        device.set_vendor_id (val.get_string ());
                     }
                     break;
                 case "Version":
-                    device.version = val.get_string ();
+                    device.set_version (val.get_string ());
                     break;
                 case "Icon":
                     var icons = val.get_strv ();
-                    device.icon = icons.length > 0 ? icons[0] : "application-x-firmware";
+                    foreach (unowned var icon in icons) {
+                        device.add_icon (icon);
+                    }
                     break;
                 case "Guid":
-                    device.guids = val.get_strv ();
+                    var guids = val.get_strv ();
+                    foreach (unowned var guid in guids) {
+                        device.add_guid (guid);
+                    }
                     break;
                 case "InstallDuration":
-                    device.install_duration = val.get_uint32 ();
+                    device.set_install_duration (val.get_uint32 ());
                     break;
                 case "UpdateError":
-                    device.update_error = val.get_string ();
+                    device.set_update_error (val.get_string ());
                     break;
                 default:
                     break;
             }
         });
 
-        if (device.id.length > 0 && device.has_flag (Firmware.DeviceFlag.UPDATABLE)) {
-            device.releases = yield get_releases (device.id);
-        } else {
-            device.releases = new List<Firmware.Release> ();
+        if (device.get_id ().length > 0 && device.has_flag (Fwupd.DEVICE_FLAG_UPDATABLE)) {
+            var releases = yield get_releases (device.get_id ());
+            foreach (unowned var release in releases) {
+                // device.add_release (release);
+            }
         }
 
         return device;
@@ -217,7 +222,7 @@ public class About.FirmwareManager : Object {
         return release;
     }
 
-    public async string? download_file (Firmware.Device device, string uri) {
+    public async string? download_file (Fwupd.Device device, string uri) {
         File server_file = File.new_for_uri (uri);
         var path = Path.build_filename (Environment.get_tmp_dir (), server_file.get_basename ());
         File local_file = File.new_for_path (path);
@@ -240,7 +245,7 @@ public class About.FirmwareManager : Object {
         return path;
     }
 
-    public async bool install (Firmware.Device device, string path) {
+    public async bool install (Fwupd.Device device, string path) {
         var fwupd = yield get_interface ();
         if (fwupd == null) {
             // This should be unreachable since we wouldn't have a device to update
@@ -262,10 +267,10 @@ public class About.FirmwareManager : Object {
             fd = Posix.open (path, Posix.O_RDONLY);
             var handle = new UnixInputStream (fd, true);
 
-            yield fwupd.install (device.id, handle, options);
+            yield fwupd.install (device.get_id (), handle, options);
         } catch (Error e) {
-            warning ("Could not install release for “%s”: %s", device.id, e.message);
-            on_device_error (device, device.update_error != null ? device.update_error : e.message);
+            warning ("Could not install release for “%s”: %s", device.get_id (), e.message);
+            on_device_error (device, device.get_update_error () != null ? device.get_update_error () : e.message);
             return false;
         } finally {
             Posix.close (fd);
@@ -274,7 +279,7 @@ public class About.FirmwareManager : Object {
         return true;
     }
 
-    public async Firmware.Details get_release_details (Firmware.Device device, string path) {
+    public async Firmware.Details get_release_details (Fwupd.Device device, string path) {
         var details = new Firmware.Details ();
 
         var fwupd = yield get_interface ();
@@ -307,8 +312,8 @@ public class About.FirmwareManager : Object {
                 });
             }
         } catch (Error e) {
-            warning ("Could not get details for “%s”: %s", device.id, e.message);
-            on_device_error (device, device.update_error);
+            warning ("Could not get details for “%s”: %s", device.get_id (), e.message);
+            on_device_error (device, device.get_update_error ());
         } finally {
             Posix.close (fd);
         }

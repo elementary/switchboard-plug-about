@@ -3,8 +3,8 @@ plug_files = files(
     'Interfaces/FirmwareManager.vala',
     'Interfaces/LoginManager.vala',
     'Objects/Details.vala',
-    'Objects/Device.vala',
-    'Objects/DeviceFlag.vala',
+    # 'Objects/Device.vala',
+    # 'Objects/DeviceFlag.vala',
     'Objects/Release.vala',
     'Objects/ReleaseFlag.vala',
     'Utils/ARMPartDecoder.vala',
@@ -22,6 +22,7 @@ shared_module(
     plug_files,
     css_gresource,
     dependencies: [
+        dependency('fwupd'),
         dependency('glib-2.0', version: '>=2.64.0'),
         dependency('gio-2.0'),
         dependency('gobject-2.0'),
