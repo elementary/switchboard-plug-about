@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-08 22:40+0000\n"
-"PO-Revision-Date: 2021-01-29 13:54+0000\n"
+"PO-Revision-Date: 2021-02-09 20:16+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ca/>\n"
@@ -197,18 +197,15 @@ msgid "Failed to install firmware release"
 msgstr "Ha fallat instal·lar la versió del microprogramari."
 
 #: src/Views/FirmwareView.vala:187
-#, fuzzy, c-format
-#| msgid "Updatable"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Actualitzable"
-msgstr[1] "Actualitzable"
+msgstr[0] "%u actualització disponible"
+msgstr[1] "%u actualitzacions disponibles"
 
 #: src/Views/FirmwareView.vala:191
-#, fuzzy
-#| msgid "Up to date"
 msgid "Up to Date"
-msgstr "Actualitzat"
+msgstr "Actualitzada"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
