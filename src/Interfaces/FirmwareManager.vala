@@ -92,7 +92,9 @@ public class About.FirmwareManager : Object {
     }
 
     private async Firmware.Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
-        var device = new Firmware.Device ();
+        var device = new Firmware.Device () {
+            icon = "application-x-firmware"
+        };
 
         serialized_device.@foreach ((key, val) => {
             switch (key) {
