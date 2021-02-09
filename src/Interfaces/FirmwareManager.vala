@@ -71,8 +71,8 @@ public class About.FirmwareManager : Object {
         return devices_list;
     }
 
-    private async List<Firmware.Release> get_releases (string id) {
-        var releases_list = new List<Firmware.Release> ();
+    private async List<Fwupd.Release> get_releases (string id) {
+        var releases_list = new List<Fwupd.Release> ();
 
         var fwupd = yield get_interface ();
         if (fwupd == null) {
@@ -146,73 +146,62 @@ public class About.FirmwareManager : Object {
         if (device.get_id ().length > 0 && device.has_flag (Fwupd.DEVICE_FLAG_UPDATABLE)) {
             var releases = yield get_releases (device.get_id ());
             foreach (unowned var release in releases) {
-                // device.add_release (release);
+                device.add_release (release);
             }
         }
 
         return device;
     }
 
-    private Firmware.Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
-        var release = new Firmware.Release () {
-            icon = "security-high"
-        };
+    private Fwupd.Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
+        var release = new Fwupd.Release ();
 
         serialized_release.@foreach ((key, val) => {
             switch (key) {
                 case "Filename":
-                    release.filename = val.get_string ();
+                    release.set_filename (val.get_string ());
                     break;
                 case "Name":
-                    release.name = val.get_string ();
+                    release.set_name (val.get_string ());
                     break;
                 case "Summary":
-                    release.summary = val.get_string ();
+                    release.set_summary (val.get_string ());
                     break;
                 case "Version":
-                    release.version = val.get_string ();
+                    release.set_version (val.get_string ());
                     break;
                 case "Description":
-                    release.description = val.get_string ()
-                    .replace ("<p>", "")
-                    .replace ("</p>", "\n\n")
-                    .replace ("<li>", " • ")
-                    .replace ("</li>", "\n")
-                    .replace ("<ul>", "")
-                    .replace ("</ul>", "\n")
-                    .replace ("<ol>", "") // TODO: add support for ordered lists
-                    .replace ("</ol>", "\n")
-                    .strip ();
+                    release.set_description (val.get_string ());
                     break;
                 case "Protocol":
-                    release.protocol = val.get_string ();
+                    release.set_protocol (val.get_string ());
                     break;
                 case "RemoteId":
-                    release.remote_id = val.get_string ();
+                    release.set_remote_id (val.get_string ());
                     break;
                 case "AppstreamId":
-                    release.appstream_id = val.get_string ();
+                    release.set_appstream_id (val.get_string ());
                     break;
                 case "Checksum":
-                    release.checksum = val.get_string ();
+                    release.add_checksum (val.get_string ());
                     break;
                 case "Vendor":
-                    release.vendor = val.get_string ();
+                    release.set_vendor (val.get_string ());
                     break;
                 case "Size":
-                    release.size = val.get_uint64 ();
+                    release.set_size (val.get_uint64 ());
                     break;
                 case "License":
-                    release.license = val.get_string ();
+                    release.set_license (val.get_string ());
                     break;
                 case "TrustFlags":
-                    release.flag = (Firmware.ReleaseFlag) val.get_uint64 ();
+                    release.add_flag ((Firmware.ReleaseFlag) val.get_uint64 ());
                     break;
                 case "InstallDuration":
-                    release.install_duration = val.get_uint32 ();
+                    release.set_install_duration (val.get_uint32 ());
                     break;
                 case "Uri":
-                    release.uri = val.get_string ();
+                    release.set_uri (val.get_string ());
                     break;
                 default:
                     break;
