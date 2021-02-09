@@ -19,7 +19,7 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class Fwupd.Release : Object {
+public class About.Firmware.Release : Object {
     public string filename { get; set; }
     public string name { get; set; }
     public string summary { get; set; }
@@ -33,7 +33,7 @@ public class Fwupd.Release : Object {
     public string vendor { get; set; }
     public uint64 size { get; set; }
     public string license { get; set; }
-    public ReleaseFlag flag { get; set; }
+    public Firmware.ReleaseFlag flag { get; set; }
     public uint32 install_duration { get; set; }
     public string uri { get; set; }
 }
