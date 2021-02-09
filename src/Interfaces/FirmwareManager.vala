@@ -196,7 +196,7 @@ public class About.FirmwareManager : Object {
                     release.set_license (val.get_string ());
                     break;
                 case "TrustFlags":
-                    release.add_flag ((Firmware.ReleaseFlag) val.get_uint64 ());
+                    release.add_flag ((Fwupd.ReleaseFlags) val.get_uint64 ());
                     break;
                 case "InstallDuration":
                     release.set_install_duration (val.get_uint32 ());
