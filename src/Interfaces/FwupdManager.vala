@@ -92,7 +92,9 @@ public class About.FwupdManager : Object {
     }
 
     private async Fwupd.Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
-        var device = new Fwupd.Device ();
+        var device = new Fwupd.Device () {
+            icon = "application-x-firmware"
+        };
 
         serialized_device.@foreach ((key, val) => {
             switch (key) {
