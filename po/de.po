@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-28 20:15+0000\n"
+"POT-Creation-Date: 2021-02-08 22:40+0000\n"
 "PO-Revision-Date: 2021-01-29 19:41+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -178,29 +178,43 @@ msgstr ""
 msgid "Device is usable for the duration of the update"
 msgstr "Gerät kann während der Aktualisierung verwendet werden"
 
-#: src/Views/FirmwareView.vala:36
+#: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
 msgstr "Gerät während der Aktualisierung nicht abtrennen."
 
-#: src/Views/FirmwareView.vala:47
+#: src/Views/FirmwareView.vala:48
 msgid "No Updatable Devices"
 msgstr "Keine aktualisierbaren Geräte"
 
-#: src/Views/FirmwareView.vala:48
+#: src/Views/FirmwareView.vala:49
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Firmware-Aktualisierungen werden weder bei diesem noch bei angeschlossenen "
 "Geräten unterstützt."
 
-#: src/Views/FirmwareView.vala:104
+#: src/Views/FirmwareView.vala:115
 #, c-format
 msgid "“%s” is being updated"
 msgstr "»%s« wird aktualisiert"
 
-#: src/Views/FirmwareView.vala:125
+#: src/Views/FirmwareView.vala:136
 #, fuzzy
 msgid "Failed to install firmware release"
 msgstr "Installation der Firmware gescheitert"
+
+#: src/Views/FirmwareView.vala:187
+#, fuzzy, c-format
+#| msgid "Updatable"
+msgid "%u Update Available"
+msgid_plural "%u Updates Available"
+msgstr[0] "Aktualisierbar"
+msgstr[1] "Aktualisierbar"
+
+#: src/Views/FirmwareView.vala:191
+#, fuzzy
+#| msgid "Up to date"
+msgid "Up to Date"
+msgstr "Aktuell"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -298,52 +312,48 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Einstellungen wiederherstellen"
 
-#: src/Widgets/FirmwareUpdateRow.vala:67
+#: src/Widgets/FirmwareUpdateRow.vala:66
 msgid "Update"
 msgstr "Aktualisierung"
 
-#: src/Widgets/FirmwareUpdateRow.vala:89
-msgid "Up to date"
-msgstr "Aktuell"
-
-#: src/Widgets/FirmwareUpdateRow.vala:117
+#: src/Widgets/FirmwareUpdateRow.vala:106
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "»%s« muss manuell in den Aktualisierungsmodus versetzt werden"
 
-#: src/Widgets/FirmwareUpdateRow.vala:124
+#: src/Widgets/FirmwareUpdateRow.vala:113
 msgid "Continue"
 msgstr "Weiter"
 
-#: src/Widgets/FirmwareUpdateRow.vala:144
+#: src/Widgets/FirmwareUpdateRow.vala:133
 msgid "An update requires the system to restart to complete"
 msgstr ""
 "Zum Abschluss einer Aktualisierung ist es erforderlich, das System neu zu "
 "starten"
 
-#: src/Widgets/FirmwareUpdateRow.vala:145
+#: src/Widgets/FirmwareUpdateRow.vala:134
 msgid "This will close all open applications and restart this device."
 msgstr ""
 "Dabei werden alle geöffneten Anwendungen geschlossen und dieses Gerät neu "
 "gestartet."
 
-#: src/Widgets/FirmwareUpdateRow.vala:151
+#: src/Widgets/FirmwareUpdateRow.vala:140
 msgid "Restart"
 msgstr "Neu starten"
 
-#: src/Widgets/FirmwareUpdateRow.vala:166
+#: src/Widgets/FirmwareUpdateRow.vala:155
 msgid "An update requires the system to shut down to complete"
 msgstr ""
 "Zum Abschluss einer Aktualisierung ist es erforderlich, das System "
 "auszuschalten"
 
-#: src/Widgets/FirmwareUpdateRow.vala:167
+#: src/Widgets/FirmwareUpdateRow.vala:156
 msgid "This will close all open applications and turn off this device."
 msgstr ""
 "Dabei werden alle geöffneten Anwendungen geschlossen und dieses Gerät "
 "ausgeschaltet."
 
-#: src/Widgets/FirmwareUpdateRow.vala:173
+#: src/Widgets/FirmwareUpdateRow.vala:162
 msgid "Shut Down"
 msgstr "Ausschalten"
 
