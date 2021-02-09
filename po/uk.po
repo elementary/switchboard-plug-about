@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-08 22:40+0000\n"
-"PO-Revision-Date: 2021-01-29 03:07+0000\n"
+"PO-Revision-Date: 2021-02-09 08:16+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
@@ -198,17 +198,14 @@ msgid "Failed to install firmware release"
 msgstr "Не вдалося встановити випуск мікропрограми"
 
 #: src/Views/FirmwareView.vala:187
-#, fuzzy, c-format
-#| msgid "Updatable"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Можливо оновити"
-msgstr[1] "Можливо оновити"
-msgstr[2] "Можливо оновити"
+msgstr[0] "%u оновлення доступне"
+msgstr[1] "%u оновлення доступні"
+msgstr[2] "%u оновлень доступні"
 
 #: src/Views/FirmwareView.vala:191
-#, fuzzy
-#| msgid "Up to date"
 msgid "Up to Date"
 msgstr "В оновленому стані"
 
