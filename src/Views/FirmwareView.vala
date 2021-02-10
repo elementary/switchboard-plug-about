@@ -25,10 +25,10 @@ public class About.FirmwareView : Gtk.Stack {
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
     private uint num_updates = 0;
-    private FwupdManager fwupd;
+    private FirmwareManager fwupd;
 
     construct {
-        fwupd = new FwupdManager ();
+        fwupd = new FirmwareManager ();
 
         transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
 
@@ -100,8 +100,8 @@ public class About.FirmwareView : Gtk.Stack {
         update_list.show_all ();
     }
 
-    private void add_device (Fwupd.Device device) {
-        if (device.has_flag (Fwupd.DeviceFlag.UPDATABLE)) {
+    private void add_device (Firmware.Device device) {
+        if (device.has_flag (Firmware.DeviceFlag.UPDATABLE)) {
             var row = new Widgets.FirmwareUpdateRow (fwupd, device);
 
             if (device.is_updatable) {
@@ -122,7 +122,7 @@ public class About.FirmwareView : Gtk.Stack {
         }
     }
 
-    private void on_device_added (Fwupd.Device device) {
+    private void on_device_added (Firmware.Device device) {
         debug ("Added device: %s", device.name);
 
         add_device (device);
@@ -131,7 +131,7 @@ public class About.FirmwareView : Gtk.Stack {
         update_list.show_all ();
     }
 
-    private void on_device_error (Fwupd.Device device, string error) {
+    private void on_device_error (Firmware.Device device, string error) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("Failed to install firmware release"),
             error,
@@ -145,7 +145,7 @@ public class About.FirmwareView : Gtk.Stack {
         message_dialog.destroy ();
     }
 
-    private void on_device_removed (Fwupd.Device device) {
+    private void on_device_removed (Firmware.Device device) {
         debug ("Removed device: %s", device.name);
 
         foreach (unowned Gtk.Widget widget in update_list.get_children ()) {
@@ -167,8 +167,8 @@ public class About.FirmwareView : Gtk.Stack {
 
     [CCode (instance_pos = -1)]
     private int compare_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
-        unowned Fwupd.Device device1 = row1.device;
-        unowned Fwupd.Device device2 = row2.device;
+        unowned Firmware.Device device1 = row1.device;
+        unowned Firmware.Device device2 = row2.device;
         if (device1.is_updatable && !device2.is_updatable) {
             return -1;
         }

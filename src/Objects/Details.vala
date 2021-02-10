@@ -19,7 +19,7 @@
  * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
  */
 
-public class Fwupd.Details : Object {
+public class About.Firmware.Details : Object {
     public string caption { get; set; }
     public string image { get; set; }
 }
