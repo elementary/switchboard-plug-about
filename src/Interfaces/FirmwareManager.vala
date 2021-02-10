@@ -33,9 +33,9 @@ public class About.FirmwareManager : Object {
 
     private Gee.Future<FirmwareInterface> fwupd_future;
 
-    public signal void on_device_added (Fwupd.Device device);
-    public signal void on_device_error (Fwupd.Device device, string error);
-    public signal void on_device_removed (Fwupd.Device device);
+    public signal void on_device_added (Firmware.Device device);
+    public signal void on_device_error (Firmware.Device device, string error);
+    public signal void on_device_removed (Firmware.Device device);
 
     private async FirmwareInterface? get_interface () {
         if (fwupd_future.ready) {
@@ -51,8 +51,8 @@ public class About.FirmwareManager : Object {
         }
     }
 
-    public async List<Fwupd.Device> get_devices () {
-        var devices_list = new List<Fwupd.Device> ();
+    public async List<Firmware.Device> get_devices () {
+        var devices_list = new List<Firmware.Device> ();
 
         var fwupd = yield get_interface ();
         if (fwupd == null) {
@@ -71,8 +71,8 @@ public class About.FirmwareManager : Object {
         return devices_list;
     }
 
-    private async List<Fwupd.Release> get_releases (string id) {
-        var releases_list = new List<Fwupd.Release> ();
+    private async List<Firmware.Release> get_releases (string id) {
+        var releases_list = new List<Firmware.Release> ();
 
         var fwupd = yield get_interface ();
         if (fwupd == null) {
@@ -91,118 +91,123 @@ public class About.FirmwareManager : Object {
         return releases_list;
     }
 
-    private async Fwupd.Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
-        var device = new Fwupd.Device ();
+    private async Firmware.Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
+        var device = new Firmware.Device () {
+            icon = "application-x-firmware"
+        };
 
         serialized_device.@foreach ((key, val) => {
             switch (key) {
                 case "DeviceId":
-                    device.set_id (val.get_string ());
+                    device.id = val.get_string ();
                     break;
                 case "Flags":
-                    device.flags = (Fwupd.DeviceFlags) val.get_uint64 ();
+                    device.flags = (Firmware.DeviceFlag) val.get_uint64 ();
                     break;
                 case "Name":
-                    device.set_name (val.get_string ());
+                    device.name = val.get_string ();
                     break;
                 case "Summary":
-                    device.set_summary (val.get_string ());
+                    device.summary = val.get_string ();
                     break;
                 case "Vendor":
-                    device.set_vendor (val.get_string ());
+                    device.vendor = val.get_string ();
                     break;
                 case "VendorId":
-                    if (device.get_vendor () != null) {
-                        device.set_vendor_id (val.get_string ());
+                    if (device.vendor == null) {
+                        device.vendor = val.get_string ();
                     }
                     break;
                 case "Version":
-                    device.set_version (val.get_string ());
+                    device.version = val.get_string ();
                     break;
                 case "Icon":
                     var icons = val.get_strv ();
-                    foreach (unowned var icon in icons) {
-                        device.add_icon (icon);
-                    }
+                    device.icon = icons.length > 0 ? icons[0] : "application-x-firmware";
                     break;
                 case "Guid":
-                    var guids = val.get_strv ();
-                    foreach (unowned var guid in guids) {
-                        device.add_guid (guid);
-                    }
+                    device.guids = val.get_strv ();
                     break;
                 case "InstallDuration":
-                    device.set_install_duration (val.get_uint32 ());
+                    device.install_duration = val.get_uint32 ();
                     break;
                 case "UpdateError":
-                    device.set_update_error (val.get_string ());
+                    device.update_error = val.get_string ();
                     break;
                 default:
                     break;
             }
         });
 
-        device.add_icon ("application-x-firmware");
-
-        if (device.get_id ().length > 0 && device.has_flag (Fwupd.DEVICE_FLAG_UPDATABLE)) {
-            var releases = yield get_releases (device.get_id ());
-            foreach (unowned var release in releases) {
-                device.add_release (release);
-            }
+        if (device.id.length > 0 && device.has_flag (Firmware.DeviceFlag.UPDATABLE)) {
+            device.releases = yield get_releases (device.id);
+        } else {
+            device.releases = new List<Firmware.Release> ();
         }
 
         return device;
     }
 
-    private Fwupd.Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
-        var release = new Fwupd.Release ();
+    private Firmware.Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
+        var release = new Firmware.Release () {
+            icon = "security-high"
+        };
 
         serialized_release.@foreach ((key, val) => {
             switch (key) {
                 case "Filename":
-                    release.set_filename (val.get_string ());
+                    release.filename = val.get_string ();
                     break;
                 case "Name":
-                    release.set_name (val.get_string ());
+                    release.name = val.get_string ();
                     break;
                 case "Summary":
-                    release.set_summary (val.get_string ());
+                    release.summary = val.get_string ();
                     break;
                 case "Version":
-                    release.set_version (val.get_string ());
+                    release.version = val.get_string ();
                     break;
                 case "Description":
-                    release.set_description (val.get_string ());
+                    release.description = val.get_string ()
+                    .replace ("<p>", "")
+                    .replace ("</p>", "\n\n")
+                    .replace ("<li>", " • ")
+                    .replace ("</li>", "\n")
+                    .replace ("<ul>", "")
+                    .replace ("</ul>", "\n")
+                    .replace ("<ol>", "") // TODO: add support for ordered lists
+                    .replace ("</ol>", "\n")
+                    .strip ();
                     break;
                 case "Protocol":
-                    release.set_protocol (val.get_string ());
+                    release.protocol = val.get_string ();
                     break;
                 case "RemoteId":
-                    release.set_remote_id (val.get_string ());
+                    release.remote_id = val.get_string ();
                     break;
                 case "AppstreamId":
-                    release.set_appstream_id (val.get_string ());
+                    release.appstream_id = val.get_string ();
                     break;
                 case "Checksum":
-                    release.add_checksum (val.get_string ());
+                    release.checksum = val.get_string ();
                     break;
                 case "Vendor":
-                    release.set_vendor (val.get_string ());
+                    release.vendor = val.get_string ();
                     break;
                 case "Size":
-                    release.set_size (val.get_uint64 ());
+                    release.size = val.get_uint64 ();
                     break;
                 case "License":
-                    release.set_license (val.get_string ());
+                    release.license = val.get_string ();
                     break;
                 case "TrustFlags":
-                    release.add_flag ((Fwupd.ReleaseFlags) val.get_uint64 ());
+                    release.flag = (Firmware.ReleaseFlag) val.get_uint64 ();
                     break;
                 case "InstallDuration":
-                    release.set_install_duration (val.get_uint32 ());
+                    release.install_duration = val.get_uint32 ();
                     break;
                 case "Uri":
-                    release.set_uri (val.get_string ());
+                    release.uri = val.get_string ();
                     break;
                 default:
                     break;
@@ -212,7 +217,7 @@ public class About.FirmwareManager : Object {
         return release;
     }
 
-    public async string? download_file (Fwupd.Device device, string uri) {
+    public async string? download_file (Firmware.Device device, string uri) {
         File server_file = File.new_for_uri (uri);
         var path = Path.build_filename (Environment.get_tmp_dir (), server_file.get_basename ());
         File local_file = File.new_for_path (path);
@@ -235,7 +240,7 @@ public class About.FirmwareManager : Object {
         return path;
     }
 
-    public async bool install (Fwupd.Device device, string path) {
+    public async bool install (Firmware.Device device, string path) {
         var fwupd = yield get_interface ();
         if (fwupd == null) {
             // This should be unreachable since we wouldn't have a device to update
@@ -257,10 +262,10 @@ public class About.FirmwareManager : Object {
             fd = Posix.open (path, Posix.O_RDONLY);
             var handle = new UnixInputStream (fd, true);
 
-            yield fwupd.install (device.get_id (), handle, options);
+            yield fwupd.install (device.id, handle, options);
         } catch (Error e) {
-            warning ("Could not install release for “%s”: %s", device.get_id (), e.message);
-            on_device_error (device, device.get_update_error () != null ? device.get_update_error () : e.message);
+            warning ("Could not install release for “%s”: %s", device.id, e.message);
+            on_device_error (device, device.update_error != null ? device.update_error : e.message);
             return false;
         } finally {
             Posix.close (fd);
@@ -269,7 +274,7 @@ public class About.FirmwareManager : Object {
         return true;
     }
 
-    public async Firmware.Details get_release_details (Fwupd.Device device, string path) {
+    public async Firmware.Details get_release_details (Firmware.Device device, string path) {
         var details = new Firmware.Details ();
 
         var fwupd = yield get_interface ();
@@ -302,8 +307,8 @@ public class About.FirmwareManager : Object {
                 });
             }
         } catch (Error e) {
-            warning ("Could not get details for “%s”: %s", device.get_id (), e.message);
-            on_device_error (device, device.get_update_error ());
+            warning ("Could not get details for “%s”: %s", device.id, e.message);
+            on_device_error (device, device.update_error);
         } finally {
             Posix.close (fd);
         }
