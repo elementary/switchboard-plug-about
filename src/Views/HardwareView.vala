@@ -330,7 +330,7 @@ public class About.HardwareView : Gtk.Grid {
 
         GLibTop.mem mem;
         GLibTop.get_mem (out mem);
-        memory = GLib.format_size (mem.total);
+        memory = GLib.format_size (mem.total, GLib.FormatSizeFlags.IEC_UNITS);
 
         get_graphics_info.begin ();
         get_storage_info.begin ();
