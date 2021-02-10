@@ -73,13 +73,14 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             if (upgrades != null) {
                 is_updatable = true;
 
+                var release = upgrades[0];
+                version_label.label = release.get_version ();
+
                 var update_button = new Gtk.Button.with_label (_("Update")) {
                     valign = Gtk.Align.CENTER
                 };
                 update_button.clicked.connect (() => {
                     on_update_start ();
-
-                    var release = upgrades[0];
 
                     update.begin (release, (obj, res) => {
                         update.end (res);
