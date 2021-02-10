@@ -97,7 +97,24 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     }
 
     private async void update (Fwupd.Release release) {
-        // var path = yield fwupd.download_file (device, release.get_uri ());
+        var server_file = File.new_for_uri (release.get_uri ());
+        var path = Path.build_filename (Environment.get_tmp_dir (), server_file.get_basename ());
+        var local_file = File.new_for_path (path);
+
+        bool result;
+        try {
+            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {
+            // TODO: provide useful information for user
+            });
+        } catch (Error e) {
+            show_error_dialog ("Could not download file: %s".printf (e.message));
+            return;
+        }
+
+        if (!result) {
+            show_error_dialog ("Download of %s was not succesfull".printf (release.get_uri ()));
+            return;
+        }
 
         // var details = yield fwupd.get_release_details (device, path);
 
@@ -108,7 +125,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         // }
 
         try {
-            if (client.install (device.get_id (), release.get_filename (), Fwupd.InstallFlags.NONE) == true) {
+            if (client.install (device.get_id (), path, Fwupd.InstallFlags.NONE) == true) {
                 if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
                     show_reboot_dialog ();
                 } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
@@ -116,19 +133,23 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
                 }
             }
         } catch (Error e) {
-            var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-                _("Failed to install firmware release"),
-                e.message,
-                image.icon_name,
-                Gtk.ButtonsType.CLOSE
-            ) {
-                badge_icon = new ThemedIcon ("dialog-error"),
-                transient_for = (Gtk.Window) get_toplevel ()
-            };
-            message_dialog.show_all ();
-            message_dialog.run ();
-            message_dialog.destroy ();
+            show_error_dialog (e.message);
         }
+    }
+
+    private void show_error_dialog (string secondary_text) {
+        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("Failed to install firmware release"),
+            secondary_text,
+            image.icon_name,
+            Gtk.ButtonsType.CLOSE
+        ) {
+            badge_icon = new ThemedIcon ("dialog-error"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
+        message_dialog.show_all ();
+        message_dialog.run ();
+        message_dialog.destroy ();
     }
 
     private bool show_details_dialog (Firmware.Details details) {
