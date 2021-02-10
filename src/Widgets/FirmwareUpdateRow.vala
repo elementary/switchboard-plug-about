@@ -156,7 +156,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("“%s” needs to manually be put in update mode").printf (device.get_name ()),
             details.caption,
-            device.get_icons ()[0],
+            image.icon_name,
             Gtk.ButtonsType.CANCEL
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();
