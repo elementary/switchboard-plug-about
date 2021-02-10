@@ -27,6 +27,8 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     public signal void on_update_start ();
     public signal void on_update_end ();
 
+    private Gtk.Image image;
+
     public FirmwareUpdateRow (Fwupd.Client client, Fwupd.Device device) {
         Object (
             client: client,
@@ -35,7 +37,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     }
 
     construct {
-        var image = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DND) {
+        image = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DND) {
             pixel_size = 32
         };
 
@@ -77,10 +79,12 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
                 update_button.clicked.connect (() => {
                     on_update_start ();
 
-                    // update.begin (device, device.latest_release, (obj, res) => {
-                    //     update.end (res);
-                    //     on_update_end ();
-                    // });
+                    var release = upgrades[0];
+
+                    update.begin (release, (obj, res) => {
+                        update.end (res);
+                        on_update_end ();
+                    });
                 });
                 grid.attach (update_button, 2, 0, 1, 2);
             }
@@ -91,7 +95,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         add (grid);
     }
 
-    private async void update (Fwupd.Device device, Fwupd.Release release) {
+    private async void update (Fwupd.Release release) {
         // var path = yield fwupd.download_file (device, release.get_uri ());
 
         // var details = yield fwupd.get_release_details (device, path);
@@ -102,13 +106,28 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         //     }
         // }
 
-        // if ((yield fwupd.install (device, path)) == true) {
-        //     if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
-        //         show_reboot_dialog ();
-        //     } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
-        //         show_shutdown_dialog ();
-        //     }
-        // }
+        try {
+            if (client.install (device.get_id (), release.get_filename (), Fwupd.InstallFlags.NONE) == true) {
+                if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
+                    show_reboot_dialog ();
+                } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
+                    show_shutdown_dialog ();
+                }
+            }
+        } catch (Error e) {
+            var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                _("Failed to install firmware release"),
+                e.message,
+                image.icon_name,
+                Gtk.ButtonsType.CLOSE
+            ) {
+                badge_icon = new ThemedIcon ("dialog-error"),
+                transient_for = (Gtk.Window) get_toplevel ()
+            };
+            message_dialog.show_all ();
+            message_dialog.run ();
+            message_dialog.destroy ();
+        }
     }
 
     private bool show_details_dialog (Firmware.Details details) {

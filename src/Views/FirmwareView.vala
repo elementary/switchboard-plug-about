@@ -84,8 +84,6 @@ public class About.FirmwareView : Gtk.Stack {
             // TODO: Use placeholder to display this error
             critical (e.message);
         }
-
-        // fwupd.on_device_error.connect (on_device_error);
     }
 
     private async void update_list_view (Fwupd.Client client) {
@@ -140,20 +138,6 @@ public class About.FirmwareView : Gtk.Stack {
 
         visible_child = grid;
         update_list.show_all ();
-    }
-
-    private void on_device_error (Fwupd.Device device, string error) {
-        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("Failed to install firmware release"),
-            error,
-            device.get_icons ()[0],
-            Gtk.ButtonsType.CLOSE
-        );
-        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
-        message_dialog.badge_icon = new ThemedIcon ("dialog-error");
-        message_dialog.show_all ();
-        message_dialog.run ();
-        message_dialog.destroy ();
     }
 
     private void on_device_removed (Fwupd.Client client, Fwupd.Device device) {
