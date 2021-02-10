@@ -20,21 +20,22 @@
 */
 
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
-    public FirmwareManager fwupd { get; construct set; }
+    public Fwupd.Client client { get; construct set; }
     public Fwupd.Device device { get; construct set; }
+    public bool is_updatable { get; private set; default = false; }
 
     public signal void on_update_start ();
     public signal void on_update_end ();
 
-    public FirmwareUpdateRow (FirmwareManager fwupd, Fwupd.Device device) {
+    public FirmwareUpdateRow (Fwupd.Client client, Fwupd.Device device) {
         Object (
-            fwupd: fwupd,
+            client: client,
             device: device
         );
     }
 
     construct {
-        var icon = new Gtk.Image.from_icon_name (device.get_icons ()[0], Gtk.IconSize.DND) {
+        var image = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DND) {
             pixel_size = 32
         };
 
@@ -53,52 +54,61 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             column_spacing = 12,
             margin = 6
         };
-        grid.attach (icon, 0, 0, 1, 2);
+        grid.attach (image, 0, 0, 1, 2);
         grid.attach (device_name_label, 1, 0);
         grid.attach (version_label, 1, 1);
 
-        // switch (device.latest_release.flag) {
-        //     case Firmware.ReleaseFlag.IS_UPGRADE:
-        //         if (device.latest_release.version == device.version) {
-        //             break;
-        //         }
+        // TODO: Be smarter to avoid segfault
+        var icons = device.get_icons ();
+        if (icons != null) {
+            for (int i = 0; i < icons.length; i++) {
+                image.icon_name = icons[i];
+            }
+        }
 
-        //         var update_button = new Gtk.Button.with_label (_("Update")) {
-        //             valign = Gtk.Align.CENTER
-        //         };
-        //         update_button.clicked.connect (() => {
-        //             on_update_start ();
+        try {
+            var upgrades = client.get_upgrades (device.get_id ());
+            if (upgrades != null) {
+                is_updatable = true;
 
-        //             update.begin (device, device.latest_release, (obj, res) => {
-        //                 update.end (res);
-        //                 on_update_end ();
-        //             });
-        //         });
-        //         grid.attach (update_button, 2, 0, 1, 2);
-        //         break;
-        // }
+                var update_button = new Gtk.Button.with_label (_("Update")) {
+                    valign = Gtk.Align.CENTER
+                };
+                update_button.clicked.connect (() => {
+                    on_update_start ();
+
+                    // update.begin (device, device.latest_release, (obj, res) => {
+                    //     update.end (res);
+                    //     on_update_end ();
+                    // });
+                });
+                grid.attach (update_button, 2, 0, 1, 2);
+            }
+        } catch (Error e) {
+            debug (e.message);
+        }
 
         add (grid);
     }
 
     private async void update (Fwupd.Device device, Fwupd.Release release) {
-        var path = yield fwupd.download_file (device, release.get_uri ());
+        // var path = yield fwupd.download_file (device, release.get_uri ());
 
-        var details = yield fwupd.get_release_details (device, path);
+        // var details = yield fwupd.get_release_details (device, path);
 
-        if (details.caption != null) {
-            if (show_details_dialog (details) == false) {
-                return;
-            }
-        }
+        // if (details.caption != null) {
+        //     if (show_details_dialog (details) == false) {
+        //         return;
+        //     }
+        // }
 
-        if ((yield fwupd.install (device, path)) == true) {
-            if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
-                show_reboot_dialog ();
-            } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
-                show_shutdown_dialog ();
-            }
-        }
+        // if ((yield fwupd.install (device, path)) == true) {
+        //     if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
+        //         show_reboot_dialog ();
+        //     } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
+        //         show_shutdown_dialog ();
+        //     }
+        // }
     }
 
     private bool show_details_dialog (Firmware.Details details) {
