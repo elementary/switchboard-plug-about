@@ -73,6 +73,10 @@ public class About.FirmwareView : Gtk.Stack {
         add (grid);
         add (progress_view);
 
+        var fwupd_thread = new Thread<void> ("client", connect_fwupd);
+    }
+
+    private void connect_fwupd () {
         var fwupd_client = new Fwupd.Client ();
         try {
             fwupd_client.connect ();
