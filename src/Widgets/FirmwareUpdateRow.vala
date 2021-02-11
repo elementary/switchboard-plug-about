@@ -97,33 +97,18 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     }
 
     private async void update (Fwupd.Release release) {
-        var server_file = File.new_for_uri (release.get_uri ());
-        var path = Path.build_filename (Environment.get_tmp_dir (), server_file.get_basename ());
-        var local_file = File.new_for_path (path);
+        var detach_caption = release.get_detach_caption ();
+        var detach_image = release.get_detach_image ();
 
-        bool result;
-        try {
-            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {
-            // TODO: provide useful information for user
-            });
-        } catch (Error e) {
-            show_error_dialog ("Could not download file: %s".printf (e.message));
+        if (detach_image != null) {
+            detach_image = yield download_file (detach_image);
+        }
+
+        if (detach_caption == null || show_details_dialog (detach_caption, detach_image) == false) {
             return;
         }
 
-        if (!result) {
-            show_error_dialog ("Download of %s was not succesfull".printf (release.get_uri ()));
-            return;
-        }
-
-        // var details = yield fwupd.get_release_details (device, path);
-
-        // if (details.caption != null) {
-        //     if (show_details_dialog (details) == false) {
-        //         return;
-        //     }
-        // }
-
+        var path = yield download_file (release.get_uri ());
         try {
             if (client.install (device.get_id (), path, Fwupd.InstallFlags.NONE) == true) {
                 if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
@@ -135,6 +120,29 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         } catch (Error e) {
             show_error_dialog (e.message);
         }
+    }
+
+    private async string? download_file (string uri) {
+        var server_file = File.new_for_uri (uri);
+        var path = Path.build_filename (Environment.get_tmp_dir (), server_file.get_basename ());
+        var local_file = File.new_for_path (path);
+
+        bool result;
+        try {
+            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {
+            // TODO: provide useful information for user
+            });
+        } catch (Error e) {
+            show_error_dialog ("Could not download file: %s".printf (e.message));
+            return null;
+        }
+
+        if (!result) {
+            show_error_dialog ("Download of %s was not succesfull".printf (uri));
+            return null;
+        }
+
+        return path;
     }
 
     private void show_error_dialog (string secondary_text) {
@@ -152,10 +160,10 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         message_dialog.destroy ();
     }
 
-    private bool show_details_dialog (Firmware.Details details) {
+    private bool show_details_dialog (string detach_caption, string detach_image) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("“%s” needs to manually be put in update mode").printf (device.get_name ()),
-            details.caption,
+            detach_caption,
             image.icon_name,
             Gtk.ButtonsType.CANCEL
         );
@@ -165,8 +173,8 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
 
-        if (details.image != null) {
-            var custom_widget = new Gtk.Image.from_file (details.image);
+        if (detach_image != null) {
+            var custom_widget = new Gtk.Image.from_file (detach_image);
             message_dialog.custom_bin.add (custom_widget);
         }
 

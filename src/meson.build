@@ -1,7 +1,6 @@
 plug_files = files(
     'Plug.vala',
     'Interfaces/LoginManager.vala',
-    'Objects/Details.vala',
     'Utils/ARMPartDecoder.vala',
     'Views/FirmwareView.vala',
     'Views/HardwareView.vala',
