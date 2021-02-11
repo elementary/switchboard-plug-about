@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-08 22:40+0000\n"
-"PO-Revision-Date: 2021-02-06 10:45+0000\n"
+"PO-Revision-Date: 2021-02-12 01:02+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
@@ -155,7 +155,6 @@ msgstr "Le périphérique ne réapparaîtra pas après la fin de la mise à jour
 
 #. / TRANSLATORS: Device supports some form of checksum verification
 #: src/Objects/DeviceFlag.vala:146
-#, fuzzy
 msgid "Cryptographic hash verification is available"
 msgstr "La vérification du code de hachage cryptographique est disponible"
 
@@ -198,16 +197,13 @@ msgid "Failed to install firmware release"
 msgstr "Échec de l'installation du micrologiciel"
 
 #: src/Views/FirmwareView.vala:187
-#, fuzzy, c-format
-#| msgid "Updatable"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "Mises à jour disponible"
-msgstr[1] "Mises à jour disponible"
+msgstr[1] "Mises à jour disponibles"
 
 #: src/Views/FirmwareView.vala:191
-#, fuzzy
-#| msgid "Up to date"
 msgid "Up to Date"
 msgstr "À jour"
 
