@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-08 22:40+0000\n"
-"PO-Revision-Date: 2021-01-29 19:41+0000\n"
+"PO-Revision-Date: 2021-02-11 05:40+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pt/>\n"
@@ -197,16 +197,13 @@ msgid "Failed to install firmware release"
 msgstr "Falha na instalação da versão do firmware"
 
 #: src/Views/FirmwareView.vala:187
-#, fuzzy, c-format
-#| msgid "Updatable"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Atualizável"
-msgstr[1] "Atualizável"
+msgstr[0] "%u Atualização disponível"
+msgstr[1] "%u Atualizações disponíveis"
 
 #: src/Views/FirmwareView.vala:191
-#, fuzzy
-#| msgid "Up to date"
 msgid "Up to Date"
 msgstr "Atualizado"
 
