@@ -73,17 +73,14 @@ public class About.FirmwareView : Gtk.Stack {
         add (grid);
         add (progress_view);
 
-        var fwupd_thread = new Thread<void> ("client", connect_fwupd);
-    }
-
-    private void connect_fwupd () {
-        var fwupd_client = new Fwupd.Client ();
         try {
-            fwupd_client.connect ();
-            fwupd_client.device_added.connect (on_device_added);
-            fwupd_client.device_removed.connect (on_device_removed);
+            var fwupd_client = new Fwupd.Client ();
+            FirmwareClient.connect.begin (fwupd_client, (obj, res) => {
+                fwupd_client.device_added.connect (on_device_added);
+                fwupd_client.device_removed.connect (on_device_removed);
 
-            update_list_view.begin (fwupd_client);
+                update_list_view.begin (fwupd_client);
+            });
         } catch (Error e) {
             // TODO: Use placeholder to display this error
             critical (e.message);
@@ -98,19 +95,22 @@ public class About.FirmwareView : Gtk.Stack {
         }
 
         num_updates = 0;
-        try {
-            var devices = client.get_devices ();
-            for (int i = 0; i < devices.length; i++) {
-                add_device (client, devices[i]);
-            }
-        } catch (Error e) {
-            // TODO: Use placeholder
-            critical (e.message);
-        }
 
+        FirmwareClient.get_devices.begin (client, (obj, res) => {
+            try {
+                var devices = FirmwareClient.get_devices.end (res);
+                for (int i = 0; i < devices.length; i++) {
+                    add_device (client, devices[i]);
+                }
+
+                update_list.show_all ();
+            } catch (Error e) {
+                // TODO: Use placeholder
+                critical (e.message);
+            }
+        });
 
         visible_child = grid;
-        update_list.show_all ();
     }
 
     private void add_device (Fwupd.Client client, Fwupd.Device device) {
