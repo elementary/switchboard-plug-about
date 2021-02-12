@@ -26,7 +26,7 @@ public class About.FirmwareClient {
         SourceFunc callback = connect.callback;
         GLib.Error error = null;
 
-        new Thread<void> ("fwupd_client_connect", () => {
+        new Thread<void> ("connect", () => {
             try {
                 client.connect ();
             } catch (Error e) {
@@ -47,7 +47,7 @@ public class About.FirmwareClient {
         GLib.Error error = null;
 
         var devices = new GLib.GenericArray<weak Fwupd.Device> ();
-        new Thread<void> ("fwupd_client_get_devices", () => {
+        new Thread<void> ("get_devices", () => {
             try {
                 devices = client.get_devices ();
             } catch (Error e) {
@@ -63,5 +63,51 @@ public class About.FirmwareClient {
         }
 
         return devices;
+    }
+
+    public static async GLib.GenericArray<weak Fwupd.Release> get_upgrades (Fwupd.Client client, string device_id) throws GLib.Error {
+        SourceFunc callback = get_upgrades.callback;
+        GLib.Error error = null;
+
+        var releases = new GLib.GenericArray<weak Fwupd.Release> ();
+        new Thread<void> ("get_upgrades", () => {
+            try {
+                releases = client.get_upgrades (device_id);
+            } catch (Error e) {
+                error = e;
+            }
+            Idle.add ((owned) callback);
+        });
+
+        yield;
+
+        if (error != null) {
+            throw error;
+        }
+
+        return releases;
+    }
+
+    public static async bool install (Fwupd.Client client, string device_id, string path) throws GLib.Error {
+        SourceFunc callback = install.callback;
+        GLib.Error error = null;
+        bool result = false;
+
+        new Thread<void> ("install", () => {
+            try {
+                result = client.install (device_id, path, Fwupd.InstallFlags.NONE);
+            } catch (Error e) {
+                error = e;
+            }
+            Idle.add ((owned) callback);
+        });
+
+        yield;
+
+        if (error != null) {
+            throw error;
+        }
+
+        return result;
     }
 }

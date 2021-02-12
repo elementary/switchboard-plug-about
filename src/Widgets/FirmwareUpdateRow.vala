@@ -68,30 +68,33 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             }
         }
 
-        try {
-            var upgrades = client.get_upgrades (device.get_id ());
-            if (upgrades != null) {
-                is_updatable = true;
+        FirmwareClient.get_upgrades.begin (client, device.get_id (), (obj, res) => {
+            try {
+                var upgrades = FirmwareClient.get_upgrades.end (res);
+                if (upgrades != null) {
+                    is_updatable = true;
 
-                var release = upgrades[0];
-                version_label.label = release.get_version ();
+                    var release = upgrades[0];
+                    version_label.label = release.get_version ();
 
-                var update_button = new Gtk.Button.with_label (_("Update")) {
-                    valign = Gtk.Align.CENTER
-                };
-                update_button.clicked.connect (() => {
-                    on_update_start ();
+                    var update_button = new Gtk.Button.with_label (_("Update")) {
+                        valign = Gtk.Align.CENTER
+                    };
+                    update_button.clicked.connect (() => {
+                        on_update_start ();
 
-                    update.begin (release, (obj, res) => {
-                        update.end (res);
-                        on_update_end ();
+                        update.begin (release, (obj, res) => {
+                            update.end (res);
+                            on_update_end ();
+                        });
                     });
-                });
-                grid.attach (update_button, 2, 0, 1, 2);
+                    grid.attach (update_button, 2, 0, 1, 2);
+                }
+            } catch (Error e) {
+                debug (e.message);
             }
-        } catch (Error e) {
-            debug (e.message);
-        }
+        });
+
 
         add (grid);
     }
@@ -109,17 +112,20 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         }
 
         var path = yield download_file (release.get_uri ());
-        try {
-            if (client.install (device.get_id (), path, Fwupd.InstallFlags.NONE) == true) {
-                if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
-                    show_reboot_dialog ();
-                } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
-                    show_shutdown_dialog ();
+
+        FirmwareClient.install.begin (client, device.get_id (), path, (obj, res) => {
+            try {
+                if (FirmwareClient.install.end (res)) {
+                    if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
+                        show_reboot_dialog ();
+                    } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
+                        show_shutdown_dialog ();
+                    }
                 }
+            } catch (Error e) {
+                show_error_dialog (e.message);
             }
-        } catch (Error e) {
-            show_error_dialog (e.message);
-        }
+        });
     }
 
     private async string? download_file (string uri) {
