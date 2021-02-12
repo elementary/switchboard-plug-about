@@ -113,19 +113,17 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
         var path = yield download_file (release.get_uri ());
 
-        FirmwareClient.install.begin (client, device.get_id (), path, (obj, res) => {
-            try {
-                if (FirmwareClient.install.end (res)) {
-                    if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
-                        show_reboot_dialog ();
-                    } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
-                        show_shutdown_dialog ();
-                    }
+        try {
+            if (yield FirmwareClient.install (client, device.get_id (), path)) {
+                if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
+                    show_reboot_dialog ();
+                } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
+                    show_shutdown_dialog ();
                 }
-            } catch (Error e) {
-                show_error_dialog (e.message);
             }
-        });
+        } catch (Error e) {
+            show_error_dialog (e.message);
+        }
     }
 
     private async string? download_file (string uri) {
