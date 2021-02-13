@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-08 22:40+0000\n"
-"PO-Revision-Date: 2021-02-13 11:36+0000\n"
+"PO-Revision-Date: 2021-02-13 12:20+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/nb/>\n"
@@ -94,7 +94,7 @@ msgstr "Oppdateringer"
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "Oppgradering krever omstart av systemet"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
@@ -119,7 +119,7 @@ msgstr "Krever en oppstartslaster"
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
 msgid "Requires the system to shut down after installation"
-msgstr ""
+msgstr "Krever at systemet slås av etter installasjonen"
 
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
@@ -129,7 +129,7 @@ msgstr "Rapportert til LVFS"
 #. / TRANSLATORS: User has been notified
 #: src/Objects/DeviceFlag.vala:107
 msgid "User has been notified"
-msgstr ""
+msgstr "Bruker har fått merknad"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
@@ -139,12 +139,12 @@ msgstr ""
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "Er i oppstartslastermodus"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "Maskinvaren venter på å bli plugget inn igjen"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
@@ -252,7 +252,7 @@ msgstr "Fire-kjerner"
 #: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "Sekskjerner %s"
 
 #: src/Views/HardwareView.vala:326
 #, fuzzy
@@ -328,7 +328,7 @@ msgstr "Oppdateringer"
 #: src/Widgets/FirmwareUpdateRow.vala:106
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "«%s» må settes i oppgraderingsmodus manuelt"
 
 #: src/Widgets/FirmwareUpdateRow.vala:113
 msgid "Continue"
@@ -336,7 +336,7 @@ msgstr "Fortsett"
 
 #: src/Widgets/FirmwareUpdateRow.vala:133
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "En oppgradering krever omstart av systemet for å fullføres"
 
 #: src/Widgets/FirmwareUpdateRow.vala:134
 msgid "This will close all open applications and restart this device."
@@ -348,7 +348,7 @@ msgstr "Omstart"
 
 #: src/Widgets/FirmwareUpdateRow.vala:155
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "En oppgradering krever at systemet slås av for å fullføres"
 
 #: src/Widgets/FirmwareUpdateRow.vala:156
 msgid "This will close all open applications and turn off this device."
