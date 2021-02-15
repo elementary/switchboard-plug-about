@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-08 22:40+0000\n"
-"PO-Revision-Date: 2021-01-29 13:54+0000\n"
+"PO-Revision-Date: 2021-02-11 05:40+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/tr/>\n"
@@ -116,95 +116,95 @@ msgstr "Kurulumdan sonra sistemin kapatılması gerekir"
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
 msgid "Reported to LVFS"
-msgstr ""
+msgstr "LVFS sunucusuna bildirildi"
 
 #. / TRANSLATORS: User has been notified
 #: src/Objects/DeviceFlag.vala:107
 msgid "User has been notified"
-msgstr ""
+msgstr "Kullanıcı bilgilendirildi"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
 msgid "Install to parent device first"
-msgstr ""
+msgstr "Önce bağlı olduğu cihaza yükleyin"
 
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "Şu anda önyükleyici modunda"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "Donanım yeniden takılmayı bekliyor"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
 msgid "Ignore validation safety checks"
-msgstr ""
+msgstr "Güvenlik denetimi doğrulamayı yoksay"
 
 #. / TRANSLATORS: Device update needs to be separately activated
 #: src/Objects/DeviceFlag.vala:131
 msgid "Device update needs activation"
-msgstr ""
+msgstr "Cihaz güncellemesinin etkinleştirilmesi gerekiyor"
 
 #. / TRANSLATORS: Device will not return after update completes
 #: src/Objects/DeviceFlag.vala:143
 msgid "Device will not re-appear after update completes"
-msgstr ""
+msgstr "Güncelleme tamamlandıktan sonra cihaz yeniden görünmeyecek"
 
 #. / TRANSLATORS: Device supports some form of checksum verification
 #: src/Objects/DeviceFlag.vala:146
+#, fuzzy
 msgid "Cryptographic hash verification is available"
-msgstr ""
+msgstr "Şifreleme karması doğrulaması mevcut"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:152
 msgid "Device stages updates"
-msgstr ""
+msgstr "Cihazın güncelleme aşamaları"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:155
 msgid "Device can recover flash failures"
-msgstr ""
+msgstr "Cihaz flash yazma ile yükleme arızalarını kurtarabilir"
 
 #. / TRANSLATORS: Device remains usable during update
 #: src/Objects/DeviceFlag.vala:158
 msgid "Device is usable for the duration of the update"
-msgstr ""
+msgstr "Cihaz, güncelleme süresince kullanılabilir"
 
 #: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Güncelleme sırasında cihazın fişini çekmeyin."
 
 #: src/Views/FirmwareView.vala:48
 msgid "No Updatable Devices"
-msgstr ""
+msgstr "Güncellenebilir Cihaz Yok"
 
 #: src/Views/FirmwareView.vala:49
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"Üretici yazılımı güncellemeleri, bu veya herhangi bir bağlı cihazda "
+"desteklenmiyor."
 
 #: src/Views/FirmwareView.vala:115
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "“%s” güncelleniyor"
 
 #: src/Views/FirmwareView.vala:136
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Üretici yazılımı sürümü yüklenemedi"
 
 #: src/Views/FirmwareView.vala:187
-#, fuzzy, c-format
-#| msgid "Updatable"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Güncellenebilir"
-msgstr[1] "Güncellenebilir"
+msgstr[0] "%u Güncelleme Var"
+msgstr[1] "%u Güncelleme Var"
 
 #: src/Views/FirmwareView.vala:191
-#, fuzzy
-#| msgid "Up to date"
 msgid "Up to Date"
 msgstr "Güncel"
 
@@ -310,35 +310,36 @@ msgstr "Güncelle"
 #: src/Widgets/FirmwareUpdateRow.vala:106
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "\"%s\" cihazının el ile güncelleme moduna alınması gerekiyor"
 
 #: src/Widgets/FirmwareUpdateRow.vala:113
 msgid "Continue"
-msgstr ""
+msgstr "Devam"
 
 #: src/Widgets/FirmwareUpdateRow.vala:133
 msgid "An update requires the system to restart to complete"
 msgstr ""
+"Bir güncellemenin tamamlanması için sistemin yeniden başlatılması gerekir"
 
 #: src/Widgets/FirmwareUpdateRow.vala:134
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "Bu, tüm açık uygulamaları kapatacak ve bu cihazı yeniden başlatacaktır."
 
 #: src/Widgets/FirmwareUpdateRow.vala:140
 msgid "Restart"
-msgstr ""
+msgstr "Yeniden Başlat"
 
 #: src/Widgets/FirmwareUpdateRow.vala:155
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "Bir güncellemenin tamamlanması için sistemin kapatılması gerekir"
 
 #: src/Widgets/FirmwareUpdateRow.vala:156
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "Bu, tüm açık uygulamaları ve sonra bu cihazı kapatacaktır."
 
 #: src/Widgets/FirmwareUpdateRow.vala:162
 msgid "Shut Down"
-msgstr ""
+msgstr "Bilgisayarı Kapat"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Çeviri Öner"

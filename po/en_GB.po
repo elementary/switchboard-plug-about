@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-08 22:40+0000\n"
-"PO-Revision-Date: 2020-11-16 17:15+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-02-14 15:23+0000\n"
+"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/en_GB/>\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:39
@@ -30,29 +30,23 @@ msgstr "View operating system and hardware information"
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "Operating System"
 
 #: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Hardware"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Hardware"
+msgstr "Firmware"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "System Information"
+msgstr "Operating System Information"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "System Information"
+msgstr "Hardware Information"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
@@ -64,7 +58,7 @@ msgstr "Suggest Translations"
 
 #: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "Send Feedback"
 
 #: src/Plug.vala:113
 msgid "Report a Problem"
@@ -72,7 +66,7 @@ msgstr "Report a Problem"
 
 #: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Get Support"
 
 #: src/Plug.vala:115
 msgid "Updates"
@@ -81,140 +75,135 @@ msgstr "Updates"
 #. / TRANSLATORS: Device cannot be removed easily
 #: src/Objects/DeviceFlag.vala:77
 msgid "Internal device"
-msgstr ""
+msgstr "Internal device"
 
 #. / TRANSLATORS: Device is updatable in this or any other mode
 #: src/Objects/DeviceFlag.vala:80
-#, fuzzy
-#| msgid "Updates"
 msgid "Updatable"
-msgstr "Updates"
+msgstr "Updatable"
 
 #. / TRANSLATORS: Update can only be done from offline mode
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "Update requires restarting the system"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
 msgid "System requires external power source"
-msgstr ""
+msgstr "System requires external power source"
 
 #. / TRANSLATORS: Is locked and can be unlocked
 #: src/Objects/DeviceFlag.vala:89
 msgid "Device is locked"
-msgstr ""
+msgstr "Device is locked"
 
 #. / TRANSLATORS: Is found in current metadata
 #: src/Objects/DeviceFlag.vala:92
 msgid "Supported on LVFS"
-msgstr ""
+msgstr "Supported on LVFS"
 
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
 msgid "Requires a bootloader"
-msgstr ""
+msgstr "Requires a bootloader"
 
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
 msgid "Requires the system to shut down after installation"
-msgstr ""
+msgstr "Requires the system to shut down after installation"
 
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
 msgid "Reported to LVFS"
-msgstr ""
+msgstr "Reported to LVFS"
 
 #. / TRANSLATORS: User has been notified
 #: src/Objects/DeviceFlag.vala:107
 msgid "User has been notified"
-msgstr ""
+msgstr "User has been notified"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
 msgid "Install to parent device first"
-msgstr ""
+msgstr "Install to parent device first"
 
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "Is in bootloader mode"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "Hardware is waiting to be replugged"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
 msgid "Ignore validation safety checks"
-msgstr ""
+msgstr "Ignore validation safety checks"
 
 #. / TRANSLATORS: Device update needs to be separately activated
 #: src/Objects/DeviceFlag.vala:131
 msgid "Device update needs activation"
-msgstr ""
+msgstr "Device update needs activation"
 
 #. / TRANSLATORS: Device will not return after update completes
 #: src/Objects/DeviceFlag.vala:143
 msgid "Device will not re-appear after update completes"
-msgstr ""
+msgstr "Device will not re-appear after update completes"
 
 #. / TRANSLATORS: Device supports some form of checksum verification
 #: src/Objects/DeviceFlag.vala:146
 msgid "Cryptographic hash verification is available"
-msgstr ""
+msgstr "Cryptographic hash verification is available"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:152
 msgid "Device stages updates"
-msgstr ""
+msgstr "Device stages updates"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:155
 msgid "Device can recover flash failures"
-msgstr ""
+msgstr "Device can recover flash failures"
 
 #. / TRANSLATORS: Device remains usable during update
 #: src/Objects/DeviceFlag.vala:158
 msgid "Device is usable for the duration of the update"
-msgstr ""
+msgstr "Device is usable for the duration of the update"
 
 #: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Do not unplug the device during the update."
 
 #: src/Views/FirmwareView.vala:48
 msgid "No Updatable Devices"
-msgstr ""
+msgstr "No Updatable Devices"
 
 #: src/Views/FirmwareView.vala:49
 msgid "Firmware updates are not supported on this or any connected devices."
-msgstr ""
+msgstr "Firmware updates are not supported on this or any connected devices."
 
 #: src/Views/FirmwareView.vala:115
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "“%s” is being updated"
 
 #: src/Views/FirmwareView.vala:136
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Failed to install firmware release"
 
 #: src/Views/FirmwareView.vala:187
-#, fuzzy, c-format
-#| msgid "Updates"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Updates"
-msgstr[1] "Updates"
+msgstr[0] "%u Update Available"
+msgstr[1] "%u Updates Available"
 
 #: src/Views/FirmwareView.vala:191
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to Date"
-msgstr "Updates"
+msgstr "Up to Date"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -226,10 +215,8 @@ msgid "Unknown Graphics"
 msgstr "Unknown Graphics"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Unknown Processor"
 msgid "Unknown storage"
-msgstr "Unknown Processor"
+msgstr "Unknown storage"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
@@ -314,43 +301,41 @@ msgid "Restore Settings"
 msgstr "Restore Settings"
 
 #: src/Widgets/FirmwareUpdateRow.vala:66
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Updates"
+msgstr "Update"
 
 #: src/Widgets/FirmwareUpdateRow.vala:106
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "“%s” needs to manually be put in update mode"
 
 #: src/Widgets/FirmwareUpdateRow.vala:113
 msgid "Continue"
-msgstr ""
+msgstr "Continue"
 
 #: src/Widgets/FirmwareUpdateRow.vala:133
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "An update requires the system to restart to complete"
 
 #: src/Widgets/FirmwareUpdateRow.vala:134
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "This will close all open applications and restart this device."
 
 #: src/Widgets/FirmwareUpdateRow.vala:140
 msgid "Restart"
-msgstr ""
+msgstr "Restart"
 
 #: src/Widgets/FirmwareUpdateRow.vala:155
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "An update requires the system to shut down to complete"
 
 #: src/Widgets/FirmwareUpdateRow.vala:156
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "This will close all open applications and turn off this device."
 
 #: src/Widgets/FirmwareUpdateRow.vala:162
 msgid "Shut Down"
-msgstr ""
+msgstr "Shut Down"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Suggest Translation"

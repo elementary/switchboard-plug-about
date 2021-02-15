@@ -27,10 +27,10 @@ public class About.FirmwareView : Gtk.Stack {
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
     private uint num_updates = 0;
-    private FwupdManager fwupd;
+    private FirmwareManager fwupd;
 
     construct {
-        fwupd = new FwupdManager ();
+        fwupd = new FirmwareManager ();
 
         transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
 
@@ -117,8 +117,8 @@ public class About.FirmwareView : Gtk.Stack {
         update_list.show_all ();
     }
 
-    private void add_device (Fwupd.Device device) {
-        if (device.has_flag (Fwupd.DeviceFlag.UPDATABLE)) {
+    private void add_device (Firmware.Device device) {
+        if (device.has_flag (Firmware.DeviceFlag.UPDATABLE)) {
             var row = new Widgets.FirmwareUpdateRow (fwupd, device);
 
             if (device.is_updatable) {
@@ -139,7 +139,7 @@ public class About.FirmwareView : Gtk.Stack {
         }
     }
 
-    private void on_update_start (Fwupd.Device device) {
+    private void on_update_start (Firmware.Device device) {
         progress_alert_view.title = _("“%s” is being updated").printf (device.name);
         visible_child = progress_view;
     }
@@ -149,7 +149,7 @@ public class About.FirmwareView : Gtk.Stack {
         update_list_view.begin ();
     }
 
-    private void on_device_added (Fwupd.Device device) {
+    private void on_device_added (Firmware.Device device) {
         debug ("Added device: %s", device.name);
 
         add_device (device);
@@ -158,7 +158,7 @@ public class About.FirmwareView : Gtk.Stack {
         update_list.show_all ();
     }
 
-    private void on_device_error (Fwupd.Device device, string error) {
+    private void on_device_error (Firmware.Device device, string error) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("Failed to install firmware release"),
             error,
@@ -172,7 +172,7 @@ public class About.FirmwareView : Gtk.Stack {
         message_dialog.destroy ();
     }
 
-    private void on_device_removed (Fwupd.Device device) {
+    private void on_device_removed (Firmware.Device device) {
         debug ("Removed device: %s", device.name);
 
         foreach (unowned Gtk.Widget widget in update_list.get_children ()) {
@@ -209,7 +209,7 @@ public class About.FirmwareView : Gtk.Stack {
         }
     }
 
-    private async void update (Fwupd.Device device, Fwupd.Release release) {
+    private async void update (Firmware.Device device, Firmware.Release release) {
         var path = yield fwupd.download_file (device, release.uri);
 
         var details = yield fwupd.get_release_details (device, path);
@@ -221,15 +221,15 @@ public class About.FirmwareView : Gtk.Stack {
         }
 
         if ((yield fwupd.install (device, path)) == true) {
-            if (device.has_flag (Fwupd.DeviceFlag.NEEDS_REBOOT)) {
+            if (device.has_flag (Firmware.DeviceFlag.NEEDS_REBOOT)) {
                 show_reboot_dialog ();
-            } else if (device.has_flag (Fwupd.DeviceFlag.NEEDS_SHUTDOWN)) {
+            } else if (device.has_flag (Firmware.DeviceFlag.NEEDS_SHUTDOWN)) {
                 show_shutdown_dialog ();
             }
         }
     }
 
-    private bool show_details_dialog (Fwupd.Device device, Fwupd.Details details) {
+    private bool show_details_dialog (Firmware.Device device, Firmware.Details details) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("“%s” needs to manually be put in update mode").printf (device.name),
             details.caption,
@@ -302,8 +302,8 @@ public class About.FirmwareView : Gtk.Stack {
 
     [CCode (instance_pos = -1)]
     private int compare_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
-        unowned Fwupd.Device device1 = row1.device;
-        unowned Fwupd.Device device2 = row2.device;
+        unowned Firmware.Device device1 = row1.device;
+        unowned Firmware.Device device2 = row2.device;
         if (device1.is_updatable && !device2.is_updatable) {
             return -1;
         }

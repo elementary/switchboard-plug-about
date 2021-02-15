@@ -20,12 +20,12 @@
 */
 
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
-    public FwupdManager fwupd { get; construct set; }
-    public Fwupd.Device device { get; construct set; }
+    public FirmwareManager fwupd { get; construct set; }
+    public Firmware.Device device { get; construct set; }
 
-    public signal void update (Fwupd.Device device, Fwupd.Release release);
+    public signal void update (Firmware.Device device, Firmware.Release release);
 
-    public FirmwareUpdateRow (FwupdManager fwupd, Fwupd.Device device) {
+    public FirmwareUpdateRow (FirmwareManager fwupd, Firmware.Device device) {
         Object (
             fwupd: fwupd,
             device: device
@@ -43,7 +43,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         };
         device_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
 
-        var version_label = new Gtk.Label (device.latest_release.version) {
+        var version_label = new Gtk.Label ("") {
             wrap = true,
             xalign = 0
         };
@@ -56,20 +56,24 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         grid.attach (device_name_label, 1, 0);
         grid.attach (version_label, 1, 1);
 
-        switch (device.latest_release.flag) {
-            case Fwupd.ReleaseFlag.IS_UPGRADE:
-                if (device.latest_release.version == device.version) {
-                    break;
-                }
+        Firmware.Release? latest_release = device.latest_release;
+        if (latest_release != null) {
+            version_label.label = latest_release.version;
+            switch (latest_release.flag) {
+                case Firmware.ReleaseFlag.IS_UPGRADE:
+                    if (device.latest_release.version == device.version) {
+                        break;
+                    }
 
-                var update_button = new Gtk.Button.with_label (_("Update")) {
-                    valign = Gtk.Align.CENTER
-                };
-                update_button.clicked.connect (() => {
-                    update (device, device.latest_release);
-                });
-                grid.attach (update_button, 2, 0, 1, 2);
-                break;
+                    var update_button = new Gtk.Button.with_label (_("Update")) {
+                        valign = Gtk.Align.CENTER
+                    };
+                    update_button.clicked.connect (() => {
+                        update (device, device.latest_release);
+                    });
+                    grid.attach (update_button, 2, 0, 1, 2);
+                    break;
+            }
         }
 
         add (grid);
