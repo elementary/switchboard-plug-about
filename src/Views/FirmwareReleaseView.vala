@@ -20,6 +20,9 @@
  */
 
 public class About.FirmwareReleaseView : Gtk.Grid {
+    private Granite.Widgets.AlertView placeholder;
+    private Gtk.Stack content;
+    private Gtk.Revealer update_button_revealer;
     private Gtk.Button update_button;
     private Gtk.Label title_label;
     private Gtk.Label summary_label;
@@ -32,7 +35,20 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     public signal void back ();
     public signal void update (Fwupd.Device device, Fwupd.Release release);
 
-    public void update_view (Fwupd.Device device, Fwupd.Release release) {
+    public void update_view (Fwupd.Device device, Fwupd.Release? release) {
+        update_button_revealer.reveal_child = release != null;
+
+        if (release == null) {
+            placeholder.title = device.name;
+            placeholder.icon_name = device.icon;
+
+            content.visible_child_name = "placeholder";
+
+            return;
+        }
+
+        content.visible_child_name = "content";
+
         switch (release.flag) {
             case Fwupd.ReleaseFlag.IS_UPGRADE:
                 if (release.version == device.version) {
@@ -87,19 +103,22 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             use_markup = true
         };
 
-        update_button = new Gtk.Button.with_label ("") {
+        update_button = new Gtk.Button.with_label ("Up to date") {
             halign = Gtk.Align.END,
             margin = 6,
             sensitive = false
         };
         update_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
+        update_button_revealer = new Gtk.Revealer ();
+        update_button_revealer.add (update_button);
+
         var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             hexpand = true
         };
         header_box.pack_start (back_button);
         header_box.set_center_widget (title_label);
-        header_box.pack_end (update_button);
+        header_box.pack_end (update_button_revealer);
 
         summary_label = new Gtk.Label ("") {
             halign = Gtk.Align.START,
@@ -166,6 +185,13 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         key_val_grid.attach (install_duration_label, 0, 3);
         key_val_grid.attach (install_duration_value_label, 1, 3);
 
+        placeholder = new Granite.Widgets.AlertView (
+            "",
+            _("There are no releases available for this device."),
+            ""
+        );
+        placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+
         var grid = new Gtk.Grid () {
             halign = Gtk.Align.CENTER,
             margin = 12,
@@ -183,9 +209,13 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         };
         scrolled_window.add (grid);
 
+        content = new Gtk.Stack ();
+        content.add_named (placeholder, "placeholder");
+        content.add_named (scrolled_window, "content");
+
         add (header_box);
         add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-        add (scrolled_window);
+        add (content);
 
         back_button.clicked.connect (() => {
             back ();
