@@ -20,13 +20,13 @@
 */
 
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
-    public FwupdManager fwupd { get; construct set; }
-    public Fwupd.Device device { get; construct set; }
+    public FirmwareManager fwupd { get; construct set; }
+    public Firmware.Device device { get; construct set; }
 
     public signal void on_update_start ();
     public signal void on_update_end ();
 
-    public FirmwareUpdateRow (FwupdManager fwupd, Fwupd.Device device) {
+    public FirmwareUpdateRow (FirmwareManager fwupd, Firmware.Device device) {
         Object (
             fwupd: fwupd,
             device: device
@@ -58,9 +58,8 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         grid.attach (version_label, 1, 1);
 
         switch (device.latest_release.flag) {
-            case Fwupd.ReleaseFlag.IS_UPGRADE:
+            case Firmware.ReleaseFlag.IS_UPGRADE:
                 if (device.latest_release.version == device.version) {
-                    add_up_to_date_label (grid);
                     break;
                 }
 
@@ -77,22 +76,12 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
                 });
                 grid.attach (update_button, 2, 0, 1, 2);
                 break;
-            default:
-                add_up_to_date_label (grid);
-                break;
         }
 
         add (grid);
     }
 
-    private void add_up_to_date_label (Gtk.Grid grid) {
-        var update_to_date_label = new Gtk.Label (_("Up to date")) {
-            valign = Gtk.Align.CENTER
-        };
-        grid.attach (update_to_date_label, 2, 0, 1, 2);
-    }
-
-    private async void update (Fwupd.Device device, Fwupd.Release release) {
+    private async void update (Firmware.Device device, Firmware.Release release) {
         var path = yield fwupd.download_file (device, release.uri);
 
         var details = yield fwupd.get_release_details (device, path);
@@ -104,15 +93,15 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         }
 
         if ((yield fwupd.install (device, path)) == true) {
-            if (device.has_flag (Fwupd.DeviceFlag.NEEDS_REBOOT)) {
+            if (device.has_flag (Firmware.DeviceFlag.NEEDS_REBOOT)) {
                 show_reboot_dialog ();
-            } else if (device.has_flag (Fwupd.DeviceFlag.NEEDS_SHUTDOWN)) {
+            } else if (device.has_flag (Firmware.DeviceFlag.NEEDS_SHUTDOWN)) {
                 show_shutdown_dialog ();
             }
         }
     }
 
-    private bool show_details_dialog (Fwupd.Details details) {
+    private bool show_details_dialog (Firmware.Details details) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("“%s” needs to manually be put in update mode").printf (device.name),
             details.caption,

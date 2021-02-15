@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-28 20:15+0000\n"
-"PO-Revision-Date: 2021-01-29 03:07+0000\n"
+"POT-Creation-Date: 2021-02-08 22:40+0000\n"
+"PO-Revision-Date: 2021-02-09 08:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -173,26 +173,37 @@ msgstr "ההתקן יכול להשתקם מכשלי צריבה"
 msgid "Device is usable for the duration of the update"
 msgstr "ההתקן שמיש במהלך העדכון"
 
-#: src/Views/FirmwareView.vala:36
+#: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
 msgstr "לא לנתק את ההתקן במהלך העדכון."
 
-#: src/Views/FirmwareView.vala:47
+#: src/Views/FirmwareView.vala:48
 msgid "No Updatable Devices"
 msgstr "אין התקנים שניתן לעדכן"
 
-#: src/Views/FirmwareView.vala:48
+#: src/Views/FirmwareView.vala:49
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr "אין לזה תמיכה בעדכוני קושחה או התקנים מחוברים."
 
-#: src/Views/FirmwareView.vala:104
+#: src/Views/FirmwareView.vala:115
 #, c-format
 msgid "“%s” is being updated"
 msgstr "„%s” מתעדכן"
 
-#: src/Views/FirmwareView.vala:125
+#: src/Views/FirmwareView.vala:136
 msgid "Failed to install firmware release"
 msgstr "התקנת גרסת הקושחה נכשלה"
+
+#: src/Views/FirmwareView.vala:187
+#, c-format
+msgid "%u Update Available"
+msgid_plural "%u Updates Available"
+msgstr[0] "עדכון אחד זמין"
+msgstr[1] "%u עדכונים זמינים"
+
+#: src/Views/FirmwareView.vala:191
+msgid "Up to Date"
+msgstr "עדכני"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -289,44 +300,40 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "שחזור הגדרות"
 
-#: src/Widgets/FirmwareUpdateRow.vala:67
+#: src/Widgets/FirmwareUpdateRow.vala:66
 msgid "Update"
 msgstr "עדכון"
 
-#: src/Widgets/FirmwareUpdateRow.vala:89
-msgid "Up to date"
-msgstr "עדכני"
-
-#: src/Widgets/FirmwareUpdateRow.vala:117
+#: src/Widgets/FirmwareUpdateRow.vala:106
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "יש לשים את „%s” במצב עדכון ידנית"
 
-#: src/Widgets/FirmwareUpdateRow.vala:124
+#: src/Widgets/FirmwareUpdateRow.vala:113
 msgid "Continue"
 msgstr "להמשיך"
 
-#: src/Widgets/FirmwareUpdateRow.vala:144
+#: src/Widgets/FirmwareUpdateRow.vala:133
 msgid "An update requires the system to restart to complete"
 msgstr "עדכון דורש את הפעלת המערכת מחדש כדי שיושלם"
 
-#: src/Widgets/FirmwareUpdateRow.vala:145
+#: src/Widgets/FirmwareUpdateRow.vala:134
 msgid "This will close all open applications and restart this device."
 msgstr "פעולה זו תסגור את כל היישומים הפתוחים ותפעיל את ההתקן הזה מחדש."
 
-#: src/Widgets/FirmwareUpdateRow.vala:151
+#: src/Widgets/FirmwareUpdateRow.vala:140
 msgid "Restart"
 msgstr "הפעלה מחדש"
 
-#: src/Widgets/FirmwareUpdateRow.vala:166
+#: src/Widgets/FirmwareUpdateRow.vala:155
 msgid "An update requires the system to shut down to complete"
 msgstr "עדכון דורש לכבות את המערכת כדי שיושלם"
 
-#: src/Widgets/FirmwareUpdateRow.vala:167
+#: src/Widgets/FirmwareUpdateRow.vala:156
 msgid "This will close all open applications and turn off this device."
 msgstr "פעולה זו תסגור את כל היישומים הפתוחים ותכבה את ההתקן הזה."
 
-#: src/Widgets/FirmwareUpdateRow.vala:173
+#: src/Widgets/FirmwareUpdateRow.vala:162
 msgid "Shut Down"
 msgstr "כיבוי"
 

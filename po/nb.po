@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-28 20:15+0000\n"
-"PO-Revision-Date: 2020-11-16 17:15+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2021-02-08 22:40+0000\n"
+"PO-Revision-Date: 2021-02-13 12:20+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/nb/>\n"
 "Language: nb\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:39
@@ -30,7 +30,7 @@ msgstr "Vis informasjon for system og maskinvare"
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "Operativsystem"
 
 #: src/Plug.vala:60
 msgid "Hardware"
@@ -64,7 +64,7 @@ msgstr "Foreslå oversettelser"
 
 #: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "Send tilbakemelding"
 
 #: src/Plug.vala:113
 msgid "Report a Problem"
@@ -72,7 +72,7 @@ msgstr "Rapporter et problem"
 
 #: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Få støtte"
 
 #: src/Plug.vala:115
 msgid "Updates"
@@ -81,7 +81,7 @@ msgstr "Oppdateringer"
 #. / TRANSLATORS: Device cannot be removed easily
 #: src/Objects/DeviceFlag.vala:77
 msgid "Internal device"
-msgstr ""
+msgstr "Intern enhet"
 
 #. / TRANSLATORS: Device is updatable in this or any other mode
 #: src/Objects/DeviceFlag.vala:80
@@ -94,42 +94,42 @@ msgstr "Oppdateringer"
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "Oppgradering krever omstart av systemet"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
 msgid "System requires external power source"
-msgstr ""
+msgstr "Systemet krever ekstern strømkilde"
 
 #. / TRANSLATORS: Is locked and can be unlocked
 #: src/Objects/DeviceFlag.vala:89
 msgid "Device is locked"
-msgstr ""
+msgstr "Enheten er låst"
 
 #. / TRANSLATORS: Is found in current metadata
 #: src/Objects/DeviceFlag.vala:92
 msgid "Supported on LVFS"
-msgstr ""
+msgstr "Støttet på LVFS"
 
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
 msgid "Requires a bootloader"
-msgstr ""
+msgstr "Krever en oppstartslaster"
 
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
 msgid "Requires the system to shut down after installation"
-msgstr ""
+msgstr "Krever at systemet slås av etter installasjonen"
 
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
 msgid "Reported to LVFS"
-msgstr ""
+msgstr "Rapportert til LVFS"
 
 #. / TRANSLATORS: User has been notified
 #: src/Objects/DeviceFlag.vala:107
 msgid "User has been notified"
-msgstr ""
+msgstr "Bruker har fått merknad"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
@@ -139,12 +139,12 @@ msgstr ""
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "Er i oppstartslastermodus"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "Maskinvaren venter på å bli plugget inn igjen"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
@@ -181,26 +181,40 @@ msgstr ""
 msgid "Device is usable for the duration of the update"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:36
+#: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:47
+#: src/Views/FirmwareView.vala:48
 msgid "No Updatable Devices"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:48
+#: src/Views/FirmwareView.vala:49
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:104
-#, c-format
+#: src/Views/FirmwareView.vala:115
+#, c-format, fuzzy
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "«%s» oppdateres …"
 
-#: src/Views/FirmwareView.vala:125
+#: src/Views/FirmwareView.vala:136
 msgid "Failed to install firmware release"
 msgstr ""
+
+#: src/Views/FirmwareView.vala:187
+#, fuzzy, c-format
+#| msgid "Updates"
+msgid "%u Update Available"
+msgid_plural "%u Updates Available"
+msgstr[0] "Oppdateringer"
+msgstr[1] "Oppdateringer"
+
+#: src/Views/FirmwareView.vala:191
+#, fuzzy
+#| msgid "Updates"
+msgid "Up to Date"
+msgstr "Oppdateringer"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -238,7 +252,7 @@ msgstr "Fire-kjerner"
 #: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "Sekskjerner %s"
 
 #: src/Views/HardwareView.vala:326
 #, fuzzy
@@ -305,50 +319,44 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Gjenopprett innstillinger"
 
-#: src/Widgets/FirmwareUpdateRow.vala:67
+#: src/Widgets/FirmwareUpdateRow.vala:66
 #, fuzzy
 #| msgid "Updates"
 msgid "Update"
 msgstr "Oppdateringer"
 
-#: src/Widgets/FirmwareUpdateRow.vala:89
-#, fuzzy
-#| msgid "Updates"
-msgid "Up to date"
-msgstr "Oppdateringer"
-
-#: src/Widgets/FirmwareUpdateRow.vala:117
+#: src/Widgets/FirmwareUpdateRow.vala:106
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "«%s» må settes i oppgraderingsmodus manuelt"
 
-#: src/Widgets/FirmwareUpdateRow.vala:124
+#: src/Widgets/FirmwareUpdateRow.vala:113
 msgid "Continue"
-msgstr ""
+msgstr "Fortsett"
 
-#: src/Widgets/FirmwareUpdateRow.vala:144
+#: src/Widgets/FirmwareUpdateRow.vala:133
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "En oppgradering krever omstart av systemet for å fullføres"
 
-#: src/Widgets/FirmwareUpdateRow.vala:145
+#: src/Widgets/FirmwareUpdateRow.vala:134
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "Dette vil lukke alle åpne programmer og slå av enheten."
 
-#: src/Widgets/FirmwareUpdateRow.vala:151
+#: src/Widgets/FirmwareUpdateRow.vala:140
 msgid "Restart"
-msgstr ""
+msgstr "Omstart"
 
-#: src/Widgets/FirmwareUpdateRow.vala:166
+#: src/Widgets/FirmwareUpdateRow.vala:155
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "En oppgradering krever at systemet slås av for å fullføres"
 
-#: src/Widgets/FirmwareUpdateRow.vala:167
+#: src/Widgets/FirmwareUpdateRow.vala:156
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "Dette vil lukke alle åpne programmer og slå av enheten."
 
-#: src/Widgets/FirmwareUpdateRow.vala:173
+#: src/Widgets/FirmwareUpdateRow.vala:162
 msgid "Shut Down"
-msgstr ""
+msgstr "Slå av"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Foreslå oversettelse"

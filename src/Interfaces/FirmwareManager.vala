@@ -19,10 +19,9 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.FwupdManager : Object {
+public class About.FirmwareManager : Object {
     [DBus (name = "org.freedesktop.fwupd")]
-    private interface FwupdInterface : Object {
-        [DBus (name = "DaemonVersion")]
+    private interface FirmwareInterface : Object {
         public abstract string daemon_version { owned get; }
 
         public abstract signal void device_added (GLib.HashTable<string, Variant> device);
@@ -34,22 +33,13 @@ public class About.FwupdManager : Object {
         public abstract async GLib.HashTable<string, Variant>[] get_details (UnixInputStream handle) throws GLib.Error;
     }
 
-    private Gee.Future<FwupdInterface> fwupd_future;
+    private Gee.Future<FirmwareInterface> fwupd_future;
 
-    public async bool is_available () {
-        var fwupd = yield get_interface ();
-        if (fwupd == null) {
-            return false;
-        }
+    public signal void on_device_added (Firmware.Device device);
+    public signal void on_device_error (Firmware.Device device, string error);
+    public signal void on_device_removed (Firmware.Device device);
 
-        return fwupd.daemon_version != null;
-    }
-
-    public signal void on_device_added (Fwupd.Device device);
-    public signal void on_device_error (Fwupd.Device device, string error);
-    public signal void on_device_removed (Fwupd.Device device);
-
-    private async FwupdInterface? get_interface () {
+    private async FirmwareInterface? get_interface () {
         if (fwupd_future.ready) {
             return fwupd_future.value;
         }
@@ -63,8 +53,17 @@ public class About.FwupdManager : Object {
         }
     }
 
-    public async List<Fwupd.Device> get_devices () {
-        var devices_list = new List<Fwupd.Device> ();
+    public async bool is_available () {
+        var fwupd = yield get_interface ();
+        if (fwupd == null) {
+            return false;
+        }
+
+        return fwupd.daemon_version != null;
+    }
+
+    public async List<Firmware.Device> get_devices () {
+        var devices_list = new List<Firmware.Device> ();
 
         var fwupd = yield get_interface ();
         if (fwupd == null) {
@@ -83,8 +82,8 @@ public class About.FwupdManager : Object {
         return devices_list;
     }
 
-    private async List<Fwupd.Release> get_releases (string id) {
-        var releases_list = new List<Fwupd.Release> ();
+    private async List<Firmware.Release> get_releases (string id) {
+        var releases_list = new List<Firmware.Release> ();
 
         var fwupd = yield get_interface ();
         if (fwupd == null) {
@@ -103,8 +102,10 @@ public class About.FwupdManager : Object {
         return releases_list;
     }
 
-    private async Fwupd.Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
-        var device = new Fwupd.Device ();
+    private async Firmware.Device parse_device (GLib.HashTable<string, Variant> serialized_device) {
+        var device = new Firmware.Device () {
+            icon = "application-x-firmware"
+        };
 
         serialized_device.@foreach ((key, val) => {
             switch (key) {
@@ -112,7 +113,7 @@ public class About.FwupdManager : Object {
                     device.id = val.get_string ();
                     break;
                 case "Flags":
-                    device.flags = (Fwupd.DeviceFlag) val.get_uint64 ();
+                    device.flags = (Firmware.DeviceFlag) val.get_uint64 ();
                     break;
                 case "Name":
                     device.name = val.get_string ();
@@ -149,17 +150,17 @@ public class About.FwupdManager : Object {
             }
         });
 
-        if (device.id.length > 0 && device.has_flag (Fwupd.DeviceFlag.UPDATABLE)) {
+        if (device.id.length > 0 && device.has_flag (Firmware.DeviceFlag.UPDATABLE)) {
             device.releases = yield get_releases (device.id);
         } else {
-            device.releases = new List<Fwupd.Release> ();
+            device.releases = new List<Firmware.Release> ();
         }
 
         return device;
     }
 
-    private Fwupd.Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
-        var release = new Fwupd.Release () {
+    private Firmware.Release parse_release (GLib.HashTable<string, Variant> serialized_release) {
+        var release = new Firmware.Release () {
             icon = "security-high"
         };
 
@@ -211,7 +212,7 @@ public class About.FwupdManager : Object {
                     release.license = val.get_string ();
                     break;
                 case "TrustFlags":
-                    release.flag = (Fwupd.ReleaseFlag) val.get_uint64 ();
+                    release.flag = (Firmware.ReleaseFlag) val.get_uint64 ();
                     break;
                 case "InstallDuration":
                     release.install_duration = val.get_uint32 ();
@@ -227,7 +228,7 @@ public class About.FwupdManager : Object {
         return release;
     }
 
-    public async string? download_file (Fwupd.Device device, string uri) {
+    public async string? download_file (Firmware.Device device, string uri) {
         File server_file = File.new_for_uri (uri);
         var path = Path.build_filename (Environment.get_tmp_dir (), server_file.get_basename ());
         File local_file = File.new_for_path (path);
@@ -250,7 +251,7 @@ public class About.FwupdManager : Object {
         return path;
     }
 
-    public async bool install (Fwupd.Device device, string path) {
+    public async bool install (Firmware.Device device, string path) {
         var fwupd = yield get_interface ();
         if (fwupd == null) {
             // This should be unreachable since we wouldn't have a device to update
@@ -284,8 +285,8 @@ public class About.FwupdManager : Object {
         return true;
     }
 
-    public async Fwupd.Details get_release_details (Fwupd.Device device, string path) {
-        var details = new Fwupd.Details ();
+    public async Firmware.Details get_release_details (Firmware.Device device, string path) {
+        var details = new Firmware.Details ();
 
         var fwupd = yield get_interface ();
         if (fwupd == null) {
@@ -331,15 +332,15 @@ public class About.FwupdManager : Object {
     }
 
     construct {
-        var promise = new Gee.Promise<FwupdInterface> ();
+        var promise = new Gee.Promise<FirmwareInterface> ();
         fwupd_future = promise.future;
 
         init_dbus.begin (promise);
     }
 
-    private async void init_dbus (Gee.Promise<FwupdInterface> promise) {
+    private async void init_dbus (Gee.Promise<FirmwareInterface> promise) {
         try {
-            FwupdInterface bus_proxy = yield Bus.get_proxy (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
+            FirmwareInterface bus_proxy = yield Bus.get_proxy (BusType.SYSTEM, "org.freedesktop.fwupd", "/");
 
             bus_proxy.device_added.connect ((serialized_device) => {
                 parse_device.begin (serialized_device, (obj, res) => {
