@@ -32,7 +32,7 @@ public class About.Firmware.Device : Object {
     public string update_error { get; set; }
 
     public List<Release> releases { get; owned set; }
-    public Release latest_release { get { return releases.nth_data (0); }}
+    public Release? latest_release { get { return releases.nth_data (0); }}
 
     public bool has_flag (Firmware.DeviceFlag flag) {
         return flag in flags;
