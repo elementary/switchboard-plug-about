@@ -33,9 +33,10 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     private Gtk.Label install_duration_value_label;
 
     public signal void back ();
-    public signal void update (Fwupd.Device device, Fwupd.Release release);
+    public signal void update (Firmware.Device device, Firmware.Release release);
 
-    public void update_view (Fwupd.Device device, Fwupd.Release? release) {
+    public void update_view (Firmware.Device device, Firmware.Release? release) {
+        title_label.label = "<b>%s</b>".printf (device.name);
         update_button_revealer.reveal_child = release != null;
 
         if (release == null) {
@@ -50,7 +51,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         content.visible_child_name = "content";
 
         switch (release.flag) {
-            case Fwupd.ReleaseFlag.IS_UPGRADE:
+            case Firmware.ReleaseFlag.IS_UPGRADE:
                 if (release.version == device.version) {
                     update_button.label = _("Up to date");
                     update_button.sensitive = false;
@@ -71,7 +72,6 @@ public class About.FirmwareReleaseView : Gtk.Grid {
                 break;
         }
 
-        title_label.label = "<b>%s</b>".printf (device.name);
         summary_label.label = release.summary;
         description_label.label = release.description;
         version_value_label.label = release.version;
