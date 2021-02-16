@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-08 22:40+0000\n"
-"PO-Revision-Date: 2021-01-29 19:41+0000\n"
+"PO-Revision-Date: 2021-02-15 21:09+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/de/>\n"
@@ -126,7 +126,6 @@ msgstr "Nutzer wurde informiert"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
-#, fuzzy
 msgid "Install to parent device first"
 msgstr "Zunächst auf dem übergeordneten Gerät installieren"
 
@@ -137,7 +136,6 @@ msgstr "Im Bootloader- Modus"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
-#, fuzzy
 msgid "Hardware is waiting to be replugged"
 msgstr "Die Hardware muss erneut verbunden werden"
 
@@ -163,8 +161,9 @@ msgstr "Kryptografische Hash-Verifizierung verfügbar"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:152
+#, fuzzy
 msgid "Device stages updates"
-msgstr ""
+msgstr "Aktualisierungen erfolgen bei diesem Gerät gestaffelt"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:155
@@ -198,21 +197,17 @@ msgid "“%s” is being updated"
 msgstr "»%s« wird aktualisiert"
 
 #: src/Views/FirmwareView.vala:136
-#, fuzzy
 msgid "Failed to install firmware release"
 msgstr "Installation der Firmware gescheitert"
 
 #: src/Views/FirmwareView.vala:187
-#, fuzzy, c-format
-#| msgid "Updatable"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Aktualisierbar"
-msgstr[1] "Aktualisierbar"
+msgstr[0] "%u Aktualisierung verfügbar"
+msgstr[1] "%u Aktualisierungen verfügbar"
 
 #: src/Views/FirmwareView.vala:191
-#, fuzzy
-#| msgid "Up to date"
 msgid "Up to Date"
 msgstr "Aktuell"
 
