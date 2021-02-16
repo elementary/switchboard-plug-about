@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-08 22:40+0000\n"
-"PO-Revision-Date: 2020-12-19 11:16+0000\n"
+"PO-Revision-Date: 2021-02-16 07:38+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/sr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:39
@@ -30,29 +30,23 @@ msgstr "Прегледајте податке о оперативном сист
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "Оперативни систем"
 
 #: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Хардвер"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Хардвер"
+msgstr "Фирмвер"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "Подаци о систему"
+msgstr "Подаци о оперативном систему"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "Подаци о систему"
+msgstr "Подаци о хардверу"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
@@ -72,7 +66,7 @@ msgstr "Известите о проблему"
 
 #: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Набавите подршку"
 
 #: src/Plug.vala:115
 msgid "Updates"
@@ -81,140 +75,136 @@ msgstr "Освежења"
 #. / TRANSLATORS: Device cannot be removed easily
 #: src/Objects/DeviceFlag.vala:77
 msgid "Internal device"
-msgstr ""
+msgstr "Унутрашњи уређај"
 
 #. / TRANSLATORS: Device is updatable in this or any other mode
 #: src/Objects/DeviceFlag.vala:80
-#, fuzzy
-#| msgid "Updates"
 msgid "Updatable"
-msgstr "Освежења"
+msgstr "Освежив"
 
 #. / TRANSLATORS: Update can only be done from offline mode
 #. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
 #: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
 msgid "Update requires restarting the system"
-msgstr ""
+msgstr "Освежавање захтева поновно покретање система"
 
 #. / TRANSLATORS: Must be plugged in to an outlet
 #: src/Objects/DeviceFlag.vala:86
 msgid "System requires external power source"
-msgstr ""
+msgstr "Систем захтева додатно спољно напајање"
 
 #. / TRANSLATORS: Is locked and can be unlocked
 #: src/Objects/DeviceFlag.vala:89
 msgid "Device is locked"
-msgstr ""
+msgstr "Уређај је закључан"
 
 #. / TRANSLATORS: Is found in current metadata
 #: src/Objects/DeviceFlag.vala:92
 msgid "Supported on LVFS"
-msgstr ""
+msgstr "Подржан на ЛВФС"
 
 #. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
 #: src/Objects/DeviceFlag.vala:95
 msgid "Requires a bootloader"
-msgstr ""
+msgstr "Захтева подизника система"
 
 #. / TRANSLATORS: Requires system shutdown to apply firmware
 #: src/Objects/DeviceFlag.vala:101
 msgid "Requires the system to shut down after installation"
-msgstr ""
+msgstr "Захтева гашење система након инсталације"
 
 #. / TRANSLATORS: Has been reported to a metadata server
 #: src/Objects/DeviceFlag.vala:104
 msgid "Reported to LVFS"
-msgstr ""
+msgstr "Пријављен на ЛВФС"
 
 #. / TRANSLATORS: User has been notified
 #: src/Objects/DeviceFlag.vala:107
 msgid "User has been notified"
-msgstr ""
+msgstr "Корисник је обавештен"
 
 #. / TRANSLATORS: Install composite firmware on the parent before the child
 #: src/Objects/DeviceFlag.vala:113
 msgid "Install to parent device first"
-msgstr ""
+msgstr "Прво инсталирај на главни уређај"
 
 #. / TRANSLATORS: Is currently in bootloader mode
 #: src/Objects/DeviceFlag.vala:116
 msgid "Is in bootloader mode"
-msgstr ""
+msgstr "Налази се у режиму подизника система"
 
 #. / TRANSLATORS: The hardware is waiting to be replugged
 #: src/Objects/DeviceFlag.vala:119
 msgid "Hardware is waiting to be replugged"
-msgstr ""
+msgstr "Хардвер чека на поновно прикључивање"
 
 #. / TRANSLATORS: Ignore validation safety checks when flashing this device
 #: src/Objects/DeviceFlag.vala:122
 msgid "Ignore validation safety checks"
-msgstr ""
+msgstr "Занемари провере потврђивања безбедности"
 
 #. / TRANSLATORS: Device update needs to be separately activated
 #: src/Objects/DeviceFlag.vala:131
 msgid "Device update needs activation"
-msgstr ""
+msgstr "Освежење уређаја захтева покретање"
 
 #. / TRANSLATORS: Device will not return after update completes
 #: src/Objects/DeviceFlag.vala:143
 msgid "Device will not re-appear after update completes"
-msgstr ""
+msgstr "Уређај се неће поново појавити након завршетка освежавања"
 
 #. / TRANSLATORS: Device supports some form of checksum verification
 #: src/Objects/DeviceFlag.vala:146
 msgid "Cryptographic hash verification is available"
-msgstr ""
+msgstr "Криптографско потврђивање хеша је доступно"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:152
 msgid "Device stages updates"
-msgstr ""
+msgstr "Уређај стажира освежења"
 
 #. / TRANSLATORS: Device supports a safety mechanism for flashing
 #: src/Objects/DeviceFlag.vala:155
 msgid "Device can recover flash failures"
-msgstr ""
+msgstr "Уређај може да опорави неуспехе набацивања"
 
 #. / TRANSLATORS: Device remains usable during update
 #: src/Objects/DeviceFlag.vala:158
 msgid "Device is usable for the duration of the update"
-msgstr ""
+msgstr "Уређај је употребљив за време трајања освежења"
 
 #: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Немојте откачињати уређај за време освежавања."
 
 #: src/Views/FirmwareView.vala:48
 msgid "No Updatable Devices"
-msgstr ""
+msgstr "Нема освеживих уређаја"
 
 #: src/Views/FirmwareView.vala:49
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"Освежавања фирмвера нису подржана на овом или било ком повезаном уређају."
 
 #: src/Views/FirmwareView.vala:115
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "„%s“ је освежен"
 
 #: src/Views/FirmwareView.vala:136
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Нисам успео да инсталирам издање фирмвера"
 
 #: src/Views/FirmwareView.vala:187
-#, fuzzy, c-format
-#| msgid "Updates"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Освежења"
-msgstr[1] "Освежења"
+msgstr[0] "%u освежење је доступно"
+msgstr[1] "%u освежења су доступна"
 
 #: src/Views/FirmwareView.vala:191
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to Date"
-msgstr "Освежења"
+msgstr "Освежен је"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -226,10 +216,8 @@ msgid "Unknown Graphics"
 msgstr "Непозната графика"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Unknown Processor"
 msgid "Unknown storage"
-msgstr "Непознат процесор"
+msgstr "Непознато складиште"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
@@ -314,43 +302,41 @@ msgid "Restore Settings"
 msgstr "Врати подешавања"
 
 #: src/Widgets/FirmwareUpdateRow.vala:66
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Освежења"
+msgstr "Освежи"
 
 #: src/Widgets/FirmwareUpdateRow.vala:106
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "„%s“ треба ручно да буде постављен у режим освежавања"
 
 #: src/Widgets/FirmwareUpdateRow.vala:113
 msgid "Continue"
-msgstr ""
+msgstr "Настави"
 
 #: src/Widgets/FirmwareUpdateRow.vala:133
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "Једно освежење захтева поновно покретање система да би се обавило"
 
 #: src/Widgets/FirmwareUpdateRow.vala:134
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "То ће затворити све отворене програме и поново покренути овај уређај."
 
 #: src/Widgets/FirmwareUpdateRow.vala:140
 msgid "Restart"
-msgstr ""
+msgstr "Поново покрени"
 
 #: src/Widgets/FirmwareUpdateRow.vala:155
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "Једно освежење захтева гашење система да би се обавило"
 
 #: src/Widgets/FirmwareUpdateRow.vala:156
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "То ће затворити све отворене програме и угасити овај уређај."
 
 #: src/Widgets/FirmwareUpdateRow.vala:162
 msgid "Shut Down"
-msgstr ""
+msgstr "Угаси"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Предложите превод"
