@@ -60,12 +60,9 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         grid.attach (device_name_label, 1, 0);
         grid.attach (version_label, 1, 1);
 
-        // TODO: Be smarter to avoid segfault
         var icons = device.get_icons ();
-        if (icons != null) {
-            for (int i = 0; i < icons.length; i++) {
-                image.icon_name = icons[i];
-            }
+        if (icons.data != null) {
+            image.gicon = new GLib.ThemedIcon.from_names (icons.data);
         }
 
         FirmwareClient.get_upgrades.begin (client, device.get_id (), (obj, res) => {
