@@ -98,14 +98,16 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
     private async void update (Fwupd.Release release) {
         unowned var detach_caption = release.get_detach_caption ();
-        var detach_image = release.get_detach_image ();
+        if (detach_caption != null) {
+            var detach_image = release.get_detach_image ();
 
-        if (detach_image != null) {
-            detach_image = yield download_file (detach_image);
-        }
+            if (detach_image != null) {
+                detach_image = yield download_file (detach_image);
+            }
 
-        if (detach_caption != null && show_details_dialog (detach_caption, detach_image) == false) {
-            return;
+            if (show_details_dialog (detach_caption, detach_image) == false) {
+                return;
+            }
         }
 
         var path = yield download_file (release.get_uri ());
