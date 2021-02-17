@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-17 01:04+0000\n"
-"PO-Revision-Date: 2020-11-16 17:15+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-02-17 13:39+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:39
@@ -30,7 +30,7 @@ msgstr "Vea información del sistema operativo y el equipo"
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "Sistema operativo"
 
 #: src/Plug.vala:60
 msgid "Hardware"
@@ -43,10 +43,8 @@ msgid "Firmware"
 msgstr "Hardware"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "Información del sistema"
+msgstr "Información del sistema operativo"
 
 #: src/Plug.vala:108
 #, fuzzy
@@ -64,7 +62,7 @@ msgstr "Sugerir traducciones"
 
 #: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "Enviar observaciones"
 
 #: src/Plug.vala:113
 msgid "Report a Problem"
@@ -72,7 +70,7 @@ msgstr "Informar de un problema"
 
 #: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Obtener asistencia"
 
 #: src/Plug.vala:115
 msgid "Updates"
@@ -80,11 +78,11 @@ msgstr "Actualizaciones"
 
 #: src/Views/FirmwareView.vala:34
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "No desconecte el dispositivo durante la actualización."
 
 #: src/Views/FirmwareView.vala:45
 msgid "No Updatable Devices"
-msgstr ""
+msgstr "No hay ningún dispositivo actualizable"
 
 #: src/Views/FirmwareView.vala:46
 msgid "Firmware updates are not supported on this or any connected devices."
@@ -93,21 +91,18 @@ msgstr ""
 #: src/Views/FirmwareView.vala:128
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "Se está actualizando «%s»"
 
 #: src/Views/FirmwareView.vala:184
-#, fuzzy, c-format
-#| msgid "Updates"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Actualizaciones"
-msgstr[1] "Actualizaciones"
+msgstr[0] "%u actualización disponible"
+msgstr[1] "%u actualizaciones disponibles"
 
 #: src/Views/FirmwareView.vala:188
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to Date"
-msgstr "Actualizaciones"
+msgstr "Al día"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -119,10 +114,8 @@ msgid "Unknown Graphics"
 msgstr "Tarjeta gráfica desconocida"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Unknown Processor"
 msgid "Unknown storage"
-msgstr "Procesador desconocido"
+msgstr "Almacenamiento desconocido"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
@@ -209,10 +202,8 @@ msgid "Restore Settings"
 msgstr "Restaurar configuración"
 
 #: src/Widgets/FirmwareUpdateRow.vala:77
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Actualizaciones"
+msgstr "Actualizar"
 
 #: src/Widgets/FirmwareUpdateRow.vala:153
 msgid "Failed to install firmware release"
@@ -221,35 +212,37 @@ msgstr ""
 #: src/Widgets/FirmwareUpdateRow.vala:168
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "«%s» debe ponerse en modo de actualización manualmente"
 
 #: src/Widgets/FirmwareUpdateRow.vala:175
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #: src/Widgets/FirmwareUpdateRow.vala:195
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "Una actualización necesita reiniciar el equipo para completarse"
 
 #: src/Widgets/FirmwareUpdateRow.vala:196
 msgid "This will close all open applications and restart this device."
 msgstr ""
+"Se cerrarán todas las aplicaciones abiertas y se reiniciará este dispositivo."
 
 #: src/Widgets/FirmwareUpdateRow.vala:202
 msgid "Restart"
-msgstr ""
+msgstr "Reiniciar"
 
 #: src/Widgets/FirmwareUpdateRow.vala:217
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "Una actualización necesita apagar el equipo para completarse"
 
 #: src/Widgets/FirmwareUpdateRow.vala:218
 msgid "This will close all open applications and turn off this device."
 msgstr ""
+"Se cerrarán todas las aplicaciones abiertas y se apagará este dispositivo."
 
 #: src/Widgets/FirmwareUpdateRow.vala:224
 msgid "Shut Down"
-msgstr ""
+msgstr "Apagar"
 
 #, fuzzy
 #~| msgid "Updates"
