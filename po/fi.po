@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-08 22:40+0000\n"
+"POT-Creation-Date: 2021-02-17 01:04+0000\n"
 "PO-Revision-Date: 2021-02-09 20:16+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -72,138 +72,33 @@ msgstr "Hanki tukea"
 msgid "Updates"
 msgstr "Päivitykset"
 
-#. / TRANSLATORS: Device cannot be removed easily
-#: src/Objects/DeviceFlag.vala:77
-msgid "Internal device"
-msgstr "Sisäinen laite"
-
-#. / TRANSLATORS: Device is updatable in this or any other mode
-#: src/Objects/DeviceFlag.vala:80
-msgid "Updatable"
-msgstr "Päivitettävissä"
-
-#. / TRANSLATORS: Update can only be done from offline mode
-#. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
-#: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
-msgid "Update requires restarting the system"
-msgstr "Päivitys vaatii järjestelmän uudelleenkäynnistyksen"
-
-#. / TRANSLATORS: Must be plugged in to an outlet
-#: src/Objects/DeviceFlag.vala:86
-msgid "System requires external power source"
-msgstr "Järjestelmä vaatii ulkoisen virtalähteen"
-
-#. / TRANSLATORS: Is locked and can be unlocked
-#: src/Objects/DeviceFlag.vala:89
-msgid "Device is locked"
-msgstr "Laite on lukittu"
-
-#. / TRANSLATORS: Is found in current metadata
-#: src/Objects/DeviceFlag.vala:92
-msgid "Supported on LVFS"
-msgstr "Tuettu LVFS:n toimesta"
-
-#. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
-#: src/Objects/DeviceFlag.vala:95
-msgid "Requires a bootloader"
-msgstr "Vaatii käynnistyslataimen"
-
-#. / TRANSLATORS: Requires system shutdown to apply firmware
-#: src/Objects/DeviceFlag.vala:101
-msgid "Requires the system to shut down after installation"
-msgstr "Vaatii järjestelmän sammuttamisen asennuksen jälkeen"
-
-#. / TRANSLATORS: Has been reported to a metadata server
-#: src/Objects/DeviceFlag.vala:104
-msgid "Reported to LVFS"
-msgstr "Raportoitu LVFS:lle"
-
-#. / TRANSLATORS: User has been notified
-#: src/Objects/DeviceFlag.vala:107
-msgid "User has been notified"
-msgstr "Käyttäjälle on ilmoitettu"
-
-#. / TRANSLATORS: Install composite firmware on the parent before the child
-#: src/Objects/DeviceFlag.vala:113
-msgid "Install to parent device first"
-msgstr "Asenna ensin isäntälaitteelle"
-
-#. / TRANSLATORS: Is currently in bootloader mode
-#: src/Objects/DeviceFlag.vala:116
-msgid "Is in bootloader mode"
-msgstr "On käynnistyslataintilassa"
-
-#. / TRANSLATORS: The hardware is waiting to be replugged
-#: src/Objects/DeviceFlag.vala:119
-msgid "Hardware is waiting to be replugged"
-msgstr "Laitteisto odottaa uudelleenkytkemistä"
-
-#. / TRANSLATORS: Ignore validation safety checks when flashing this device
-#: src/Objects/DeviceFlag.vala:122
-msgid "Ignore validation safety checks"
-msgstr "Älä huomioi validoinnin turvatarkastuksia"
-
-#. / TRANSLATORS: Device update needs to be separately activated
-#: src/Objects/DeviceFlag.vala:131
-msgid "Device update needs activation"
-msgstr "Laitepäivitys vaatii aktivointia"
-
-#. / TRANSLATORS: Device will not return after update completes
-#: src/Objects/DeviceFlag.vala:143
-msgid "Device will not re-appear after update completes"
-msgstr "Laite ei ilmesty uudelleen päivityksen valmistuttua"
-
-#. / TRANSLATORS: Device supports some form of checksum verification
-#: src/Objects/DeviceFlag.vala:146
-msgid "Cryptographic hash verification is available"
-msgstr "Salakirjoituksen tiivisteen vahvistus on saatavilla"
-
-#. / TRANSLATORS: Device supports a safety mechanism for flashing
-#: src/Objects/DeviceFlag.vala:152
-msgid "Device stages updates"
-msgstr ""
-
-#. / TRANSLATORS: Device supports a safety mechanism for flashing
-#: src/Objects/DeviceFlag.vala:155
-msgid "Device can recover flash failures"
-msgstr ""
-
-#. / TRANSLATORS: Device remains usable during update
-#: src/Objects/DeviceFlag.vala:158
-msgid "Device is usable for the duration of the update"
-msgstr "Laite on käytettävissä päivityksen aikana"
-
-#: src/Views/FirmwareView.vala:37
+#: src/Views/FirmwareView.vala:34
 msgid "Do not unplug the device during the update."
 msgstr "Älä kytke laitetta irti päivityksen aikana."
 
-#: src/Views/FirmwareView.vala:48
+#: src/Views/FirmwareView.vala:45
 msgid "No Updatable Devices"
 msgstr "Ei päivitettävissä olevia laitteita"
 
-#: src/Views/FirmwareView.vala:49
+#: src/Views/FirmwareView.vala:46
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Laiteohjelmiston päivitykset eivät ole tuettuja tällä tai millään muullakaan "
 "yhdistetyllä laitteella."
 
-#: src/Views/FirmwareView.vala:115
+#: src/Views/FirmwareView.vala:128
 #, c-format
 msgid "“%s” is being updated"
 msgstr "“%s” on päivityksen alaisena"
 
-#: src/Views/FirmwareView.vala:136
-msgid "Failed to install firmware release"
-msgstr "Laiteohjelmiston julkaisun asentaminen epäonnistui"
-
-#: src/Views/FirmwareView.vala:187
+#: src/Views/FirmwareView.vala:184
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u päivitys saatavilla"
 msgstr[1] "%u päivitystä saatavilla"
 
-#: src/Views/FirmwareView.vala:191
+#: src/Views/FirmwareView.vala:188
 msgid "Up to Date"
 msgstr "Ajan tasalla"
 
@@ -302,43 +197,101 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Palauta oletusasetukset"
 
-#: src/Widgets/FirmwareUpdateRow.vala:66
+#: src/Widgets/FirmwareUpdateRow.vala:77
 msgid "Update"
 msgstr "Päivitä"
 
-#: src/Widgets/FirmwareUpdateRow.vala:106
+#: src/Widgets/FirmwareUpdateRow.vala:153
+msgid "Failed to install firmware release"
+msgstr "Laiteohjelmiston julkaisun asentaminen epäonnistui"
+
+#: src/Widgets/FirmwareUpdateRow.vala:168
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "“%s” tulee asettaa manuaalisesti päivitystilaan"
 
-#: src/Widgets/FirmwareUpdateRow.vala:113
+#: src/Widgets/FirmwareUpdateRow.vala:175
 msgid "Continue"
 msgstr "Jatka"
 
-#: src/Widgets/FirmwareUpdateRow.vala:133
+#: src/Widgets/FirmwareUpdateRow.vala:195
 msgid "An update requires the system to restart to complete"
 msgstr "Päivitys vaatii valmistuakseen järjestelmän uudelleenkäynnistyksen"
 
-#: src/Widgets/FirmwareUpdateRow.vala:134
+#: src/Widgets/FirmwareUpdateRow.vala:196
 msgid "This will close all open applications and restart this device."
 msgstr ""
 "Tämä sulkee kaikki avoimet sovellukset ja käynnistää laitteen uudelleen."
 
-#: src/Widgets/FirmwareUpdateRow.vala:140
+#: src/Widgets/FirmwareUpdateRow.vala:202
 msgid "Restart"
 msgstr "Käynnistä uudelleen"
 
-#: src/Widgets/FirmwareUpdateRow.vala:155
+#: src/Widgets/FirmwareUpdateRow.vala:217
 msgid "An update requires the system to shut down to complete"
 msgstr "Päivitys vaatii valmistuakseen järjestelmän sammuttamisen"
 
-#: src/Widgets/FirmwareUpdateRow.vala:156
+#: src/Widgets/FirmwareUpdateRow.vala:218
 msgid "This will close all open applications and turn off this device."
 msgstr "Tämä sulkee kaikki avoimet sovellukset ja sammuttaa laitteen."
 
-#: src/Widgets/FirmwareUpdateRow.vala:162
+#: src/Widgets/FirmwareUpdateRow.vala:224
 msgid "Shut Down"
 msgstr "Sammuta"
+
+#~ msgid "Internal device"
+#~ msgstr "Sisäinen laite"
+
+#~ msgid "Updatable"
+#~ msgstr "Päivitettävissä"
+
+#~ msgid "Update requires restarting the system"
+#~ msgstr "Päivitys vaatii järjestelmän uudelleenkäynnistyksen"
+
+#~ msgid "System requires external power source"
+#~ msgstr "Järjestelmä vaatii ulkoisen virtalähteen"
+
+#~ msgid "Device is locked"
+#~ msgstr "Laite on lukittu"
+
+#~ msgid "Supported on LVFS"
+#~ msgstr "Tuettu LVFS:n toimesta"
+
+#~ msgid "Requires a bootloader"
+#~ msgstr "Vaatii käynnistyslataimen"
+
+#~ msgid "Requires the system to shut down after installation"
+#~ msgstr "Vaatii järjestelmän sammuttamisen asennuksen jälkeen"
+
+#~ msgid "Reported to LVFS"
+#~ msgstr "Raportoitu LVFS:lle"
+
+#~ msgid "User has been notified"
+#~ msgstr "Käyttäjälle on ilmoitettu"
+
+#~ msgid "Install to parent device first"
+#~ msgstr "Asenna ensin isäntälaitteelle"
+
+#~ msgid "Is in bootloader mode"
+#~ msgstr "On käynnistyslataintilassa"
+
+#~ msgid "Hardware is waiting to be replugged"
+#~ msgstr "Laitteisto odottaa uudelleenkytkemistä"
+
+#~ msgid "Ignore validation safety checks"
+#~ msgstr "Älä huomioi validoinnin turvatarkastuksia"
+
+#~ msgid "Device update needs activation"
+#~ msgstr "Laitepäivitys vaatii aktivointia"
+
+#~ msgid "Device will not re-appear after update completes"
+#~ msgstr "Laite ei ilmesty uudelleen päivityksen valmistuttua"
+
+#~ msgid "Cryptographic hash verification is available"
+#~ msgstr "Salakirjoituksen tiivisteen vahvistus on saatavilla"
+
+#~ msgid "Device is usable for the duration of the update"
+#~ msgstr "Laite on käytettävissä päivityksen aikana"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Ehdota käännöstä"
