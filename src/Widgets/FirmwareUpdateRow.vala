@@ -163,7 +163,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         message_dialog.destroy ();
     }
 
-    private bool show_details_dialog (string detach_caption, string detach_image) {
+    private bool show_details_dialog (string detach_caption, string? detach_image) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("“%s” needs to manually be put in update mode").printf (device.get_name ()),
             detach_caption,
