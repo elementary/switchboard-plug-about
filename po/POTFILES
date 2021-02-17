@@ -1,5 +1,4 @@
 src/Plug.vala
-src/Objects/DeviceFlag.vala
 src/Views/FirmwareView.vala
 src/Views/HardwareView.vala
 src/Views/OperatingSystemView.vala
