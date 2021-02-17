@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-08 22:40+0000\n"
+"POT-Creation-Date: 2021-02-17 01:04+0000\n"
 "PO-Revision-Date: 2021-02-14 15:23+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -72,136 +72,31 @@ msgstr "Get Support"
 msgid "Updates"
 msgstr "Updates"
 
-#. / TRANSLATORS: Device cannot be removed easily
-#: src/Objects/DeviceFlag.vala:77
-msgid "Internal device"
-msgstr "Internal device"
-
-#. / TRANSLATORS: Device is updatable in this or any other mode
-#: src/Objects/DeviceFlag.vala:80
-msgid "Updatable"
-msgstr "Updatable"
-
-#. / TRANSLATORS: Update can only be done from offline mode
-#. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
-#: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
-msgid "Update requires restarting the system"
-msgstr "Update requires restarting the system"
-
-#. / TRANSLATORS: Must be plugged in to an outlet
-#: src/Objects/DeviceFlag.vala:86
-msgid "System requires external power source"
-msgstr "System requires external power source"
-
-#. / TRANSLATORS: Is locked and can be unlocked
-#: src/Objects/DeviceFlag.vala:89
-msgid "Device is locked"
-msgstr "Device is locked"
-
-#. / TRANSLATORS: Is found in current metadata
-#: src/Objects/DeviceFlag.vala:92
-msgid "Supported on LVFS"
-msgstr "Supported on LVFS"
-
-#. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
-#: src/Objects/DeviceFlag.vala:95
-msgid "Requires a bootloader"
-msgstr "Requires a bootloader"
-
-#. / TRANSLATORS: Requires system shutdown to apply firmware
-#: src/Objects/DeviceFlag.vala:101
-msgid "Requires the system to shut down after installation"
-msgstr "Requires the system to shut down after installation"
-
-#. / TRANSLATORS: Has been reported to a metadata server
-#: src/Objects/DeviceFlag.vala:104
-msgid "Reported to LVFS"
-msgstr "Reported to LVFS"
-
-#. / TRANSLATORS: User has been notified
-#: src/Objects/DeviceFlag.vala:107
-msgid "User has been notified"
-msgstr "User has been notified"
-
-#. / TRANSLATORS: Install composite firmware on the parent before the child
-#: src/Objects/DeviceFlag.vala:113
-msgid "Install to parent device first"
-msgstr "Install to parent device first"
-
-#. / TRANSLATORS: Is currently in bootloader mode
-#: src/Objects/DeviceFlag.vala:116
-msgid "Is in bootloader mode"
-msgstr "Is in bootloader mode"
-
-#. / TRANSLATORS: The hardware is waiting to be replugged
-#: src/Objects/DeviceFlag.vala:119
-msgid "Hardware is waiting to be replugged"
-msgstr "Hardware is waiting to be replugged"
-
-#. / TRANSLATORS: Ignore validation safety checks when flashing this device
-#: src/Objects/DeviceFlag.vala:122
-msgid "Ignore validation safety checks"
-msgstr "Ignore validation safety checks"
-
-#. / TRANSLATORS: Device update needs to be separately activated
-#: src/Objects/DeviceFlag.vala:131
-msgid "Device update needs activation"
-msgstr "Device update needs activation"
-
-#. / TRANSLATORS: Device will not return after update completes
-#: src/Objects/DeviceFlag.vala:143
-msgid "Device will not re-appear after update completes"
-msgstr "Device will not re-appear after update completes"
-
-#. / TRANSLATORS: Device supports some form of checksum verification
-#: src/Objects/DeviceFlag.vala:146
-msgid "Cryptographic hash verification is available"
-msgstr "Cryptographic hash verification is available"
-
-#. / TRANSLATORS: Device supports a safety mechanism for flashing
-#: src/Objects/DeviceFlag.vala:152
-msgid "Device stages updates"
-msgstr "Device stages updates"
-
-#. / TRANSLATORS: Device supports a safety mechanism for flashing
-#: src/Objects/DeviceFlag.vala:155
-msgid "Device can recover flash failures"
-msgstr "Device can recover flash failures"
-
-#. / TRANSLATORS: Device remains usable during update
-#: src/Objects/DeviceFlag.vala:158
-msgid "Device is usable for the duration of the update"
-msgstr "Device is usable for the duration of the update"
-
-#: src/Views/FirmwareView.vala:37
+#: src/Views/FirmwareView.vala:34
 msgid "Do not unplug the device during the update."
 msgstr "Do not unplug the device during the update."
 
-#: src/Views/FirmwareView.vala:48
+#: src/Views/FirmwareView.vala:45
 msgid "No Updatable Devices"
 msgstr "No Updatable Devices"
 
-#: src/Views/FirmwareView.vala:49
+#: src/Views/FirmwareView.vala:46
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr "Firmware updates are not supported on this or any connected devices."
 
-#: src/Views/FirmwareView.vala:115
+#: src/Views/FirmwareView.vala:128
 #, c-format
 msgid "“%s” is being updated"
 msgstr "“%s” is being updated"
 
-#: src/Views/FirmwareView.vala:136
-msgid "Failed to install firmware release"
-msgstr "Failed to install firmware release"
-
-#: src/Views/FirmwareView.vala:187
+#: src/Views/FirmwareView.vala:184
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u Update Available"
 msgstr[1] "%u Updates Available"
 
-#: src/Views/FirmwareView.vala:191
+#: src/Views/FirmwareView.vala:188
 msgid "Up to Date"
 msgstr "Up to Date"
 
@@ -300,42 +195,106 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Restore Settings"
 
-#: src/Widgets/FirmwareUpdateRow.vala:66
+#: src/Widgets/FirmwareUpdateRow.vala:77
 msgid "Update"
 msgstr "Update"
 
-#: src/Widgets/FirmwareUpdateRow.vala:106
+#: src/Widgets/FirmwareUpdateRow.vala:153
+msgid "Failed to install firmware release"
+msgstr "Failed to install firmware release"
+
+#: src/Widgets/FirmwareUpdateRow.vala:168
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "“%s” needs to manually be put in update mode"
 
-#: src/Widgets/FirmwareUpdateRow.vala:113
+#: src/Widgets/FirmwareUpdateRow.vala:175
 msgid "Continue"
 msgstr "Continue"
 
-#: src/Widgets/FirmwareUpdateRow.vala:133
+#: src/Widgets/FirmwareUpdateRow.vala:195
 msgid "An update requires the system to restart to complete"
 msgstr "An update requires the system to restart to complete"
 
-#: src/Widgets/FirmwareUpdateRow.vala:134
+#: src/Widgets/FirmwareUpdateRow.vala:196
 msgid "This will close all open applications and restart this device."
 msgstr "This will close all open applications and restart this device."
 
-#: src/Widgets/FirmwareUpdateRow.vala:140
+#: src/Widgets/FirmwareUpdateRow.vala:202
 msgid "Restart"
 msgstr "Restart"
 
-#: src/Widgets/FirmwareUpdateRow.vala:155
+#: src/Widgets/FirmwareUpdateRow.vala:217
 msgid "An update requires the system to shut down to complete"
 msgstr "An update requires the system to shut down to complete"
 
-#: src/Widgets/FirmwareUpdateRow.vala:156
+#: src/Widgets/FirmwareUpdateRow.vala:218
 msgid "This will close all open applications and turn off this device."
 msgstr "This will close all open applications and turn off this device."
 
-#: src/Widgets/FirmwareUpdateRow.vala:162
+#: src/Widgets/FirmwareUpdateRow.vala:224
 msgid "Shut Down"
 msgstr "Shut Down"
+
+#~ msgid "Internal device"
+#~ msgstr "Internal device"
+
+#~ msgid "Updatable"
+#~ msgstr "Updatable"
+
+#~ msgid "Update requires restarting the system"
+#~ msgstr "Update requires restarting the system"
+
+#~ msgid "System requires external power source"
+#~ msgstr "System requires external power source"
+
+#~ msgid "Device is locked"
+#~ msgstr "Device is locked"
+
+#~ msgid "Supported on LVFS"
+#~ msgstr "Supported on LVFS"
+
+#~ msgid "Requires a bootloader"
+#~ msgstr "Requires a bootloader"
+
+#~ msgid "Requires the system to shut down after installation"
+#~ msgstr "Requires the system to shut down after installation"
+
+#~ msgid "Reported to LVFS"
+#~ msgstr "Reported to LVFS"
+
+#~ msgid "User has been notified"
+#~ msgstr "User has been notified"
+
+#~ msgid "Install to parent device first"
+#~ msgstr "Install to parent device first"
+
+#~ msgid "Is in bootloader mode"
+#~ msgstr "Is in bootloader mode"
+
+#~ msgid "Hardware is waiting to be replugged"
+#~ msgstr "Hardware is waiting to be replugged"
+
+#~ msgid "Ignore validation safety checks"
+#~ msgstr "Ignore validation safety checks"
+
+#~ msgid "Device update needs activation"
+#~ msgstr "Device update needs activation"
+
+#~ msgid "Device will not re-appear after update completes"
+#~ msgstr "Device will not re-appear after update completes"
+
+#~ msgid "Cryptographic hash verification is available"
+#~ msgstr "Cryptographic hash verification is available"
+
+#~ msgid "Device stages updates"
+#~ msgstr "Device stages updates"
+
+#~ msgid "Device can recover flash failures"
+#~ msgstr "Device can recover flash failures"
+
+#~ msgid "Device is usable for the duration of the update"
+#~ msgstr "Device is usable for the duration of the update"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Suggest Translation"
