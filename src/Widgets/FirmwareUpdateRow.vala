@@ -104,7 +104,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             detach_image = yield download_file (detach_image);
         }
 
-        if (detach_caption == null || show_details_dialog (detach_caption, detach_image) == false) {
+        if (detach_caption != null && show_details_dialog (detach_caption, detach_image) == false) {
             return;
         }
 
