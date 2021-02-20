@@ -22,6 +22,7 @@
 public class About.FirmwareView : Gtk.Stack {
     private Gtk.Grid grid;
     private Granite.Widgets.AlertView progress_alert_view;
+    private Granite.Widgets.AlertView placeholder_alert_view;
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
     private uint num_updates = 0;
@@ -41,13 +42,13 @@ public class About.FirmwareView : Gtk.Stack {
         };
         progress_view.attach (progress_alert_view, 0, 0);
 
-        var no_devices_alert_view = new Granite.Widgets.AlertView (
-            _("No Updatable Devices"),
-            _("Firmware updates are not supported on this or any connected devices."),
+        placeholder_alert_view = new Granite.Widgets.AlertView (
+            _("Checking for Updates"),
+            _("Connecting to the firmware service and searching for updates."),
             "application-x-firmware"
         );
-        no_devices_alert_view.show_all ();
-        no_devices_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+        placeholder_alert_view.show_all ();
+        placeholder_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
         update_list = new Gtk.ListBox () {
             vexpand = true,
@@ -55,7 +56,7 @@ public class About.FirmwareView : Gtk.Stack {
         };
         update_list.set_sort_func ((Gtk.ListBoxSortFunc) compare_rows);
         update_list.set_header_func ((Gtk.ListBoxUpdateHeaderFunc) header_rows);
-        update_list.set_placeholder (no_devices_alert_view);
+        update_list.set_placeholder (placeholder_alert_view);
 
         var scrolled_window = new Gtk.ScrolledWindow (null, null);
         scrolled_window.add (update_list);
@@ -83,7 +84,6 @@ public class About.FirmwareView : Gtk.Stack {
 
                 update_list_view.begin (fwupd_client);
             } catch (Error e) {
-                // TODO: Use placeholder to display this error
                 critical (e.message);
             }
         });
@@ -104,10 +104,12 @@ public class About.FirmwareView : Gtk.Stack {
                 add_device (client, devices[i]);
             }
 
+            placeholder_alert_view.title = _("Firmware Updates Are Not Available");
+            placeholder_alert_view.description = _("Firmware updates are not supported on this or any connected devices.");
             update_list.show_all ();
         } catch (Error e) {
-            // TODO: Use placeholder
-            critical (e.message);
+            placeholder_alert_view.title = _("The Firmware Service Is Not Available");
+            placeholder_alert_view.description = _("Please make sure “fwupd” is installed and enabled.");
         }
 
         visible_child = grid;
