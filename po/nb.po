@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-17 01:04+0000\n"
-"PO-Revision-Date: 2021-02-13 12:20+0000\n"
+"PO-Revision-Date: 2021-02-17 08:00+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/nb/>\n"
@@ -96,12 +96,11 @@ msgid "“%s” is being updated"
 msgstr "«%s» oppdateres …"
 
 #: src/Views/FirmwareView.vala:184
-#, fuzzy, c-format
-#| msgid "Updates"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Oppdateringer"
-msgstr[1] "Oppdateringer"
+msgstr[0] "%u oppgradering tilgjengelig"
+msgstr[1] "%u oppgraderinger tilgjengelig"
 
 #: src/Views/FirmwareView.vala:188
 #, fuzzy
@@ -131,16 +130,14 @@ msgid "Manufacturer Website"
 msgstr "Utviklernettside"
 
 #: src/Views/HardwareView.vala:239
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "To-kjerner"
+msgstr "To-kjerner %s"
 
 #: src/Views/HardwareView.vala:241
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "Fire-kjerner"
+msgstr "Fire-kjerner %s"
 
 #: src/Views/HardwareView.vala:243
 #, c-format
