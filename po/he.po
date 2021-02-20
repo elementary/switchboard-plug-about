@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-02-09 08:16+0000\n"
+"PO-Revision-Date: 2021-02-20 16:44+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -77,21 +77,16 @@ msgid "Do not unplug the device during the update."
 msgstr "לא לנתק את ההתקן במהלך העדכון."
 
 #: src/Views/FirmwareView.vala:46
-#, fuzzy
-#| msgid "Check for Updates"
 msgid "Checking for Updates"
 msgstr "בדיקה לאיתור עדכונים"
 
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "מתבצעת התחברות לשירות הקושחה לטובת איתור עדכונים."
 
 #: src/Views/FirmwareView.vala:107
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Firmware Updates Are Not Available"
-msgstr "עדכון אחד זמין"
+msgstr "אין עדכוני קושחה זמינים"
 
 #: src/Views/FirmwareView.vala:108
 msgid "Firmware updates are not supported on this or any connected devices."
@@ -99,11 +94,11 @@ msgstr "אין לזה תמיכה בעדכוני קושחה או התקנים מ�
 
 #: src/Views/FirmwareView.vala:111
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "שירות הקושחה אינו זמין"
 
 #: src/Views/FirmwareView.vala:112
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "נא לוודא כי „fwupd” מותקן ופעיל."
 
 #: src/Views/FirmwareView.vala:130
 #, c-format
