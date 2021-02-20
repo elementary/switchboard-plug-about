@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-17 01:04+0000\n"
+"POT-Creation-Date: 2021-02-20 14:22+0000\n"
 "PO-Revision-Date: 2021-01-04 22:57+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Hindi <https://l10n.elementary.io/projects/switchboard/"
@@ -78,31 +78,49 @@ msgstr ""
 msgid "Updates"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:34
+#: src/Views/FirmwareView.vala:35
 msgid "Do not unplug the device during the update."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:45
-msgid "No Updatable Devices"
+#: src/Views/FirmwareView.vala:46
+#, fuzzy
+#| msgid "Check for Updates"
+msgid "Checking for Updates"
+msgstr "अद्यतन के लिए जाँचें"
+
+#: src/Views/FirmwareView.vala:47
+msgid "Connecting to the firmware service and searching for updates."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:46
+#: src/Views/FirmwareView.vala:107
+msgid "Firmware Updates Are Not Available"
+msgstr ""
+
+#: src/Views/FirmwareView.vala:108
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:128
+#: src/Views/FirmwareView.vala:111
+msgid "The Firmware Service Is Not Available"
+msgstr ""
+
+#: src/Views/FirmwareView.vala:112
+msgid "Please make sure “fwupd” is installed and enabled."
+msgstr ""
+
+#: src/Views/FirmwareView.vala:130
 #, c-format
 msgid "“%s” is being updated"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:184
+#: src/Views/FirmwareView.vala:186
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/FirmwareView.vala:188
+#: src/Views/FirmwareView.vala:190
 msgid "Up to Date"
 msgstr ""
 

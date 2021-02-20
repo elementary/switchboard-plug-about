@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-17 01:04+0000\n"
+"POT-Creation-Date: 2021-02-20 14:22+0000\n"
 "PO-Revision-Date: 2021-02-09 01:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -72,32 +72,53 @@ msgstr "サポートを受ける"
 msgid "Updates"
 msgstr "アップデート"
 
-#: src/Views/FirmwareView.vala:34
+#: src/Views/FirmwareView.vala:35
 msgid "Do not unplug the device during the update."
 msgstr "アップデート中はデバイスを取り外さないでください。"
 
-#: src/Views/FirmwareView.vala:45
-msgid "No Updatable Devices"
-msgstr "アップデート可能なデバイスがありません"
-
 #: src/Views/FirmwareView.vala:46
+#, fuzzy
+#| msgid "Check for Updates"
+msgid "Checking for Updates"
+msgstr "アップデートを確認"
+
+#: src/Views/FirmwareView.vala:47
+msgid "Connecting to the firmware service and searching for updates."
+msgstr ""
+
+#: src/Views/FirmwareView.vala:107
+#, fuzzy
+#| msgid "%u Update Available"
+#| msgid_plural "%u Updates Available"
+msgid "Firmware Updates Are Not Available"
+msgstr "%u 件のアップデートが利用可能"
+
+#: src/Views/FirmwareView.vala:108
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "このデバイスおよび接続されたデバイスは、ファームウェアのアップデートに対応し"
 "ていません。"
 
-#: src/Views/FirmwareView.vala:128
+#: src/Views/FirmwareView.vala:111
+msgid "The Firmware Service Is Not Available"
+msgstr ""
+
+#: src/Views/FirmwareView.vala:112
+msgid "Please make sure “fwupd” is installed and enabled."
+msgstr ""
+
+#: src/Views/FirmwareView.vala:130
 #, c-format
 msgid "“%s” is being updated"
 msgstr "“%s” をアップデートしています"
 
-#: src/Views/FirmwareView.vala:184
+#: src/Views/FirmwareView.vala:186
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u 件のアップデートが利用可能"
 
-#: src/Views/FirmwareView.vala:188
+#: src/Views/FirmwareView.vala:190
 msgid "Up to Date"
 msgstr "最新の状態"
 
@@ -240,6 +261,9 @@ msgstr ""
 #: src/Widgets/FirmwareUpdateRow.vala:224
 msgid "Shut Down"
 msgstr "シャットダウン"
+
+#~ msgid "No Updatable Devices"
+#~ msgstr "アップデート可能なデバイスがありません"
 
 #~ msgid "Internal device"
 #~ msgstr "内部デバイス"
