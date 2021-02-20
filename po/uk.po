@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-02-09 08:16+0000\n"
+"PO-Revision-Date: 2021-02-21 06:22+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
@@ -78,21 +78,16 @@ msgid "Do not unplug the device during the update."
 msgstr "Не від'єднуйте пристрій від мережі під час оновлення."
 
 #: src/Views/FirmwareView.vala:46
-#, fuzzy
-#| msgid "Check for Updates"
 msgid "Checking for Updates"
-msgstr "Перевірити наявність оновлень"
+msgstr "Перевірка наявності оновлень"
 
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "Під'єднання до служби оновлення мікропрограми та пошук оновлень."
 
 #: src/Views/FirmwareView.vala:107
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Firmware Updates Are Not Available"
-msgstr "%u оновлення доступне"
+msgstr "Оновлення мікропрограми недоступні"
 
 #: src/Views/FirmwareView.vala:108
 msgid "Firmware updates are not supported on this or any connected devices."
@@ -102,11 +97,11 @@ msgstr ""
 
 #: src/Views/FirmwareView.vala:111
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "Служба оновлення мікропрограми недоступна"
 
 #: src/Views/FirmwareView.vala:112
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "Переконайтесь, що встановлено та увімкнено функцію “fwupd”."
 
 #: src/Views/FirmwareView.vala:130
 #, c-format
