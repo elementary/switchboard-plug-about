@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-02-15 21:09+0000\n"
+"PO-Revision-Date: 2021-02-21 14:29+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/de/>\n"
@@ -77,21 +77,16 @@ msgid "Do not unplug the device during the update."
 msgstr "Gerät während der Aktualisierung nicht abtrennen."
 
 #: src/Views/FirmwareView.vala:46
-#, fuzzy
-#| msgid "Check for Updates"
 msgid "Checking for Updates"
 msgstr "Nach Aktualisierungen suchen"
 
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "Mit Firmware-Dienst verbinden und nach Aktualisierungen suchen."
 
 #: src/Views/FirmwareView.vala:107
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Firmware Updates Are Not Available"
-msgstr "%u Aktualisierung verfügbar"
+msgstr "Keine Firmware-Aktualisierungen verfügbar"
 
 #: src/Views/FirmwareView.vala:108
 msgid "Firmware updates are not supported on this or any connected devices."
@@ -101,11 +96,11 @@ msgstr ""
 
 #: src/Views/FirmwareView.vala:111
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "Der Firmware-Dienst ist nicht verfügbar"
 
 #: src/Views/FirmwareView.vala:112
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "Stellen Sie sicher, dass »fwupd« installiert und aktiviert ist."
 
 #: src/Views/FirmwareView.vala:130
 #, c-format
