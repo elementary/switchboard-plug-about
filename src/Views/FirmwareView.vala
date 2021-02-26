@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2020 elementary, Inc. (https://elementary.io)
+* Copyright 2020-2021 elementary, Inc. (https://elementary.io)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -19,17 +19,24 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.FirmwareView : Gtk.Stack {
-    private Gtk.Grid grid;
+public class About.FirmwareView : Granite.SimpleSettingsPage {
+    private Gtk.Stack stack;
+    private Gtk.ScrolledWindow scrolled_window;
     private Granite.Widgets.AlertView progress_alert_view;
     private Granite.Widgets.AlertView placeholder_alert_view;
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
     private uint num_updates = 0;
 
-    construct {
-        transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
+    public FirmwareView () {
+        Object (
+            icon_name: "application-x-firmware",
+            title: _("Firmware"),
+            description: _("Firmware updates provided by device manufacturers can improve performance and fix critical security issues.")
+        );
+    }
 
+    construct {
         progress_alert_view = new Granite.Widgets.AlertView (
             "",
             _("Do not unplug the device during the update."),
@@ -45,7 +52,7 @@ public class About.FirmwareView : Gtk.Stack {
         placeholder_alert_view = new Granite.Widgets.AlertView (
             _("Checking for Updates"),
             _("Connecting to the firmware service and searching for updates."),
-            "application-x-firmware"
+            "sync-synchronizing"
         );
         placeholder_alert_view.show_all ();
         placeholder_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
@@ -58,21 +65,19 @@ public class About.FirmwareView : Gtk.Stack {
         update_list.set_header_func ((Gtk.ListBoxUpdateHeaderFunc) header_rows);
         update_list.set_placeholder (placeholder_alert_view);
 
-        var scrolled_window = new Gtk.ScrolledWindow (null, null);
+        scrolled_window = new Gtk.ScrolledWindow (null, null);
         scrolled_window.add (update_list);
 
-        var frame = new Gtk.Frame (null);
-        frame.add (scrolled_window);
-
-        grid = new Gtk.Grid () {
-            column_spacing = 12,
-            row_spacing = 12,
-            margin = 12
+        stack = new Gtk.Stack () {
+            transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT
         };
-        grid.add (frame);
+        stack.add (scrolled_window);
+        stack.add (progress_view);
 
-        add (grid);
-        add (progress_view);
+        var frame = new Gtk.Frame (null);
+        frame.add (stack);
+
+        content_area.add (frame);
 
         var fwupd_client = new Fwupd.Client ();
         FirmwareClient.connect.begin (fwupd_client, (obj, res) => {
@@ -106,13 +111,15 @@ public class About.FirmwareView : Gtk.Stack {
 
             placeholder_alert_view.title = _("Firmware Updates Are Not Available");
             placeholder_alert_view.description = _("Firmware updates are not supported on this or any connected devices.");
+            placeholder_alert_view.icon_name = "";
             update_list.show_all ();
         } catch (Error e) {
             placeholder_alert_view.title = _("The Firmware Service Is Not Available");
             placeholder_alert_view.description = _("Please make sure “fwupd” is installed and enabled.");
+            placeholder_alert_view.icon_name = "dialog-error";
         }
 
-        visible_child = grid;
+        stack.visible_child = scrolled_window;
     }
 
     private void add_device (Fwupd.Client client, Fwupd.Device device) {
@@ -128,10 +135,10 @@ public class About.FirmwareView : Gtk.Stack {
 
             row.on_update_start.connect (() => {
                 progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
-                visible_child = progress_view;
+                stack.visible_child = progress_view;
             });
             row.on_update_end.connect (() => {
-                visible_child = grid;
+                stack.visible_child = scrolled_window;
                 update_list_view.begin (client);
             });
         }
@@ -142,7 +149,7 @@ public class About.FirmwareView : Gtk.Stack {
 
         add_device (client, device);
 
-        visible_child = grid;
+        stack.visible_child = scrolled_window;
         update_list.show_all ();
     }
 
