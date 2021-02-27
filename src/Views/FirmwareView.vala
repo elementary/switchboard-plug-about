@@ -28,6 +28,7 @@ public class About.FirmwareView : Gtk.Stack {
     private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
     private uint num_updates = 0;
+    private Fwupd.Client fwupd_client;
 
     construct {
         transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
@@ -91,7 +92,7 @@ public class About.FirmwareView : Gtk.Stack {
         add (grid);
         add (progress_view);
 
-        var fwupd_client = new Fwupd.Client ();
+        fwupd_client = new Fwupd.Client ();
         FirmwareClient.connect.begin (fwupd_client, (obj, res) => {
             try {
                 FirmwareClient.connect.end (res);
@@ -134,7 +135,7 @@ public class About.FirmwareView : Gtk.Stack {
 
     private void add_device (Fwupd.Client client, Fwupd.Device device) {
         if (device.has_flag (Fwupd.DEVICE_FLAG_UPDATABLE)) {
-            var row = new Widgets.FirmwareUpdateRow (client, device);
+            var row = new Widgets.FirmwareUpdateRow (fwupd_client, device);
 
             if (row.is_updatable) {
                 num_updates++;
@@ -143,13 +144,9 @@ public class About.FirmwareView : Gtk.Stack {
             update_list.add (row);
             update_list.invalidate_sort ();
 
-            row.on_update_start.connect (() => {
+            row.update.connect ((device, release) => {
                 progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
                 visible_child = progress_view;
-            });
-            row.on_update_end.connect (() => {
-                visible_child = grid;
-                update_list_view.begin (client);
             });
         }
     }
@@ -186,7 +183,7 @@ public class About.FirmwareView : Gtk.Stack {
     private void show_release (Gtk.ListBoxRow widget) {
         if (widget is Widgets.FirmwareUpdateRow) {
             var row = (Widgets.FirmwareUpdateRow) widget;
-            firmware_release_view.update_view (row.device, row.device.latest_release);
+            firmware_release_view.update_view (row.device, row.release, row.is_updatable);
             deck.visible_child = firmware_release_view;
 
             firmware_release_view.update.connect ((device, release) => {
@@ -200,41 +197,150 @@ public class About.FirmwareView : Gtk.Stack {
         }
     }
 
-    private async void update (Firmware.Device device, Firmware.Release release) {
-        var path = yield fwupd.download_file (device, release.uri);
+    private void on_update_start (Fwupd.Device device) {
+        progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
+        visible_child = progress_view;
+    }
 
-        var details = yield fwupd.get_release_details (device, path);
+    private void on_update_end () {
+        visible_child = grid;
+        update_list_view.begin (fwupd_client);
+    }
 
-        if (details.caption != null) {
-            if (show_details_dialog (device, details) == false) {
+    [CCode (instance_pos = -1)]
+    private int compare_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow row2) {
+        if (row1.is_updatable && !row2.is_updatable) {
+            return -1;
+        }
+
+        if (!row1.is_updatable && row2.is_updatable) {
+            return 1;
+        }
+
+        return row1.device.get_name ().collate (row2.device.get_name ());
+    }
+
+    [CCode (instance_pos = -1)]
+    private void header_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
+        if (row2 == null && row1.is_updatable) {
+            var header = new FirmwareHeaderRow (
+                ngettext ("%u Update Available", "%u Updates Available", num_updates).printf (num_updates)
+            );
+            row1.set_header (header);
+        } else if (row2 == null || row1.is_updatable != row2.is_updatable) {
+            var header = new FirmwareHeaderRow (_("Up to Date"));
+            row1.set_header (header);
+        } else {
+            row1.set_header (null);
+        }
+    }
+
+    private class FirmwareHeaderRow : Gtk.Label {
+        public FirmwareHeaderRow (string label) {
+            Object (label: label);
+        }
+
+        construct {
+            xalign = 0;
+            margin = 3;
+            get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
+        }
+    }
+
+    private async void update (Fwupd.Device device, Fwupd.Release release) {
+        unowned var detach_caption = release.get_detach_caption ();
+        if (detach_caption != null) {
+            var detach_image = release.get_detach_image ();
+
+            if (detach_image != null) {
+                detach_image = yield download_file (device, detach_image);
+            }
+
+            if (show_details_dialog (device, detach_caption, detach_image) == false) {
                 return;
             }
         }
 
-        if ((yield fwupd.install (device, path)) == true) {
-            if (device.has_flag (Firmware.DeviceFlag.NEEDS_REBOOT)) {
-                show_reboot_dialog ();
-            } else if (device.has_flag (Firmware.DeviceFlag.NEEDS_SHUTDOWN)) {
-                show_shutdown_dialog ();
+        var path = yield download_file (device, release.get_uri ());
+
+        try {
+            if (yield FirmwareClient.install (fwupd_client, device.get_id (), path)) {
+                if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
+                    show_reboot_dialog ();
+                } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
+                    show_shutdown_dialog ();
+                }
             }
+        } catch (Error e) {
+            show_error_dialog (device, e.message);
         }
     }
 
-    private bool show_details_dialog (Firmware.Device device, Firmware.Details details) {
+    private async string? download_file (Fwupd.Device device, string uri) {
+        var server_file = File.new_for_uri (uri);
+        var path = Path.build_filename (Environment.get_tmp_dir (), server_file.get_basename ());
+        var local_file = File.new_for_path (path);
+
+        bool result;
+        try {
+            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {
+            // TODO: provide useful information for user
+            });
+        } catch (Error e) {
+            show_error_dialog (device, "Could not download file: %s".printf (e.message));
+            return null;
+        }
+
+        if (!result) {
+            show_error_dialog (device, "Download of %s was not succesfull".printf (uri));
+            return null;
+        }
+
+        return path;
+    }
+
+    private void show_error_dialog (Fwupd.Device device, string secondary_text) {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("“%s” needs to manually be put in update mode").printf (device.name),
-            details.caption,
-            device.icon,
+            _("Failed to install firmware release"),
+            secondary_text,
+            "application-x-firmware",
+            Gtk.ButtonsType.CLOSE
+        ) {
+            badge_icon = new ThemedIcon ("dialog-error"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
+
+        var icons = device.get_icons ();
+        if (icons.data != null) {
+            message_dialog.icon_name = icons.data[0];
+        }
+
+        message_dialog.show_all ();
+        message_dialog.run ();
+        message_dialog.destroy ();
+    }
+
+    private bool show_details_dialog (Fwupd.Device device, string detach_caption, string? detach_image) {
+        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("“%s” needs to manually be put in update mode").printf (device.get_name ()),
+            detach_caption,
+            "application-x-firmware",
             Gtk.ButtonsType.CANCEL
-        );
-        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+        ) {
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
+
+        var icons = device.get_icons ();
+        if (icons.data != null) {
+            message_dialog.icon_name = icons.data[0];
+        }
 
         var suggested_button = new Gtk.Button.with_label (_("Continue"));
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
         message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
 
-        if (details.image != null) {
-            var custom_widget = new Gtk.Image.from_file (details.image);
+        if (detach_image != null) {
+            var custom_widget = new Gtk.Image.from_file (detach_image);
             message_dialog.custom_bin.add (custom_widget);
         }
 
@@ -289,45 +395,5 @@ public class About.FirmwareView : Gtk.Stack {
         }
 
         message_dialog.destroy ();
-    }
-
-    [CCode (instance_pos = -1)]
-    private int compare_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow row2) {
-        if (row1.is_updatable && !row2.is_updatable) {
-            return -1;
-        }
-
-        if (!row1.is_updatable && row2.is_updatable) {
-            return 1;
-        }
-
-        return row1.device.get_name ().collate (row2.device.get_name ());
-    }
-
-    [CCode (instance_pos = -1)]
-    private void header_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
-        if (row2 == null && row1.is_updatable) {
-            var header = new FirmwareHeaderRow (
-                ngettext ("%u Update Available", "%u Updates Available", num_updates).printf (num_updates)
-            );
-            row1.set_header (header);
-        } else if (row2 == null || row1.is_updatable != row2.is_updatable) {
-            var header = new FirmwareHeaderRow (_("Up to Date"));
-            row1.set_header (header);
-        } else {
-            row1.set_header (null);
-        }
-    }
-
-    private class FirmwareHeaderRow : Gtk.Label {
-        public FirmwareHeaderRow (string label) {
-            Object (label: label);
-        }
-
-        construct {
-            xalign = 0;
-            margin = 3;
-            get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
-        }
     }
 }
