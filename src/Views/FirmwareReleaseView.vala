@@ -72,7 +72,12 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         }
 
         summary_label.label = release.get_summary ();
-        description_label.label = release.get_description ();
+        try {
+            description_label.label = AppStream.markup_convert_simple (release.get_description ());;
+        } catch (Error e) {
+            description_label.label = "";
+            warning ("Could not convert markup of release: %s", e.message);
+        }
         version_value_label.label = release.get_version ();
         vendor_value_label.label = release.get_vendor ();
         size_value_label.label = GLib.format_size (release.get_size ());
