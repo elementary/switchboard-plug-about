@@ -21,7 +21,7 @@
 
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     public Fwupd.Device device { get; construct set; }
-    public Fwupd.Release ?release { get; construct set; }
+    public Fwupd.Release? release { get; construct set; }
     public bool is_updatable { get; private set; default = false; }
 
     public signal void update (Fwupd.Device device, Fwupd.Release release);
