@@ -22,7 +22,12 @@
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     public Fwupd.Device device { get; construct set; }
     public Fwupd.Release? release { get; construct set; }
-    public bool is_updatable { get; private set; default = false; }
+
+    public bool is_updatable {
+        get {
+            return release != null && device.get_version () != release.get_version ();
+        }
+    }
 
     public signal void update (Fwupd.Device device, Fwupd.Release release);
 
@@ -70,8 +75,6 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
                     if (release.get_version () == device.get_version ()) {
                         break;
                     }
-
-                    is_updatable = true;
 
                     var update_button = new Gtk.Button.with_label (_("Update")) {
                         valign = Gtk.Align.CENTER
