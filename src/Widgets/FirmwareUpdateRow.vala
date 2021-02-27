@@ -20,19 +20,18 @@
 */
 
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
-    public Fwupd.Client client { get; construct set; }
     public Fwupd.Device device { get; construct set; }
-    public Fwupd.Release ?release { get; private set; default = null; }
+    public Fwupd.Release ?release { get; construct set; }
     public bool is_updatable { get; private set; default = false; }
 
     public signal void update (Fwupd.Device device, Fwupd.Release release);
 
     private Gtk.Image image;
 
-    public FirmwareUpdateRow (Fwupd.Client client, Fwupd.Device device) {
+    public FirmwareUpdateRow (Fwupd.Device device, Fwupd.Release? release) {
         Object (
-            client: client,
-            device: device
+            device: device,
+            release: release
         );
     }
 
@@ -65,14 +64,14 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             image.gicon = new GLib.ThemedIcon.from_names (icons.data);
         }
 
-        FirmwareClient.get_upgrades.begin (client, device.get_id (), (obj, res) => {
-            try {
-                var upgrades = FirmwareClient.get_upgrades.end (res);
-                if (upgrades != null) {
-                    is_updatable = true;
+        if (release != null) {
+            switch (release.get_flags ()) {
+                case Fwupd.RELEASE_FLAG_IS_UPGRADE:
+                    if (release.get_version () == device.get_version ()) {
+                        break;
+                    }
 
-                    release = upgrades[0];
-                    version_label.label = release.get_version ();
+                    is_updatable = true;
 
                     var update_button = new Gtk.Button.with_label (_("Update")) {
                         valign = Gtk.Align.CENTER
@@ -81,11 +80,9 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
                         update (device, release);
                     });
                     grid.attach (update_button, 2, 0, 1, 2);
-                }
-            } catch (Error e) {
-                debug (e.message);
+                    break;
             }
-        });
+        }
 
         add (grid);
     }

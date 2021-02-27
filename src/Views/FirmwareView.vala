@@ -135,18 +135,32 @@ public class About.FirmwareView : Gtk.Stack {
 
     private void add_device (Fwupd.Client client, Fwupd.Device device) {
         if (device.has_flag (Fwupd.DEVICE_FLAG_UPDATABLE)) {
-            var row = new Widgets.FirmwareUpdateRow (fwupd_client, device);
+            FirmwareClient.get_upgrades.begin (client, device.get_id (), (obj, res) => {
+                Fwupd.Release? release = null;
 
-            if (row.is_updatable) {
-                num_updates++;
-            }
+                try {
+                    var upgrades = FirmwareClient.get_upgrades.end (res);
+                    if (upgrades != null) {
+                        release = upgrades[0];
+                    }
+                } catch (Error e) {
+                    debug (e.message);
+                }
 
-            update_list.add (row);
-            update_list.invalidate_sort ();
+                var row = new Widgets.FirmwareUpdateRow (device, release);
 
-            row.update.connect ((device, release) => {
-                progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
-                visible_child = progress_view;
+                if (row.is_updatable) {
+                    num_updates++;
+                }
+
+                update_list.add (row);
+                update_list.invalidate_sort ();
+                update_list.show_all ();
+
+                row.update.connect ((device, release) => {
+                    progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
+                    visible_child = progress_view;
+                });
             });
         }
     }
@@ -183,7 +197,7 @@ public class About.FirmwareView : Gtk.Stack {
     private void show_release (Gtk.ListBoxRow widget) {
         if (widget is Widgets.FirmwareUpdateRow) {
             var row = (Widgets.FirmwareUpdateRow) widget;
-            firmware_release_view.update_view (row.device, row.release, row.is_updatable);
+            firmware_release_view.update_view (row.device, row.release);
             deck.visible_child = firmware_release_view;
 
             firmware_release_view.update.connect ((device, release) => {

@@ -35,7 +35,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     public signal void back ();
     public signal void update (Fwupd.Device device, Fwupd.Release release);
 
-    public void update_view (Fwupd.Device device, Fwupd.Release? release, bool is_updatable) {
+    public void update_view (Fwupd.Device device, Fwupd.Release? release) {
         title_label.label = "<b>%s</b>".printf (device.get_name ());
         update_button_revealer.reveal_child = release != null;
 
@@ -54,26 +54,31 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
         content.visible_child_name = "content";
 
-        if (is_updatable) {
-            if (release.get_version () == device.get_version ()) {
+        switch (release.get_flags ()) {
+            case Fwupd.RELEASE_FLAG_IS_UPGRADE:
+                if (release.get_version () == device.get_version ()) {
+                    update_button.label = _("Up to date");
+                    update_button.sensitive = false;
+                    break;
+                }
+
+                update_button.label = _("Update");
+                update_button.sensitive = true;
+
+                update_button.clicked.connect (() => {
+                    update (device, release);
+                });
+
+                break;
+            default:
                 update_button.label = _("Up to date");
                 update_button.sensitive = false;
-            }
-
-            update_button.label = _("Update");
-            update_button.sensitive = true;
-
-            update_button.clicked.connect (() => {
-                update (device, release);
-            });
-        } else {
-            update_button.label = _("Up to date");
-            update_button.sensitive = false;
+                break;
         }
 
         summary_label.label = release.get_summary ();
         try {
-            description_label.label = AppStream.markup_convert_simple (release.get_description ());;
+            description_label.label = AppStream.markup_convert_simple (release.get_description ());
         } catch (Error e) {
             description_label.label = "";
             warning ("Could not convert markup of release: %s", e.message);
