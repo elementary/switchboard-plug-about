@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-08 22:40+0000\n"
-"PO-Revision-Date: 2021-02-12 01:02+0000\n"
+"POT-Creation-Date: 2021-02-20 14:22+0000\n"
+"PO-Revision-Date: 2021-02-20 16:44+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
@@ -72,138 +72,49 @@ msgstr "Obtenir de l'aide"
 msgid "Updates"
 msgstr "Mises à jour"
 
-#. / TRANSLATORS: Device cannot be removed easily
-#: src/Objects/DeviceFlag.vala:77
-msgid "Internal device"
-msgstr "Périphérique interne"
-
-#. / TRANSLATORS: Device is updatable in this or any other mode
-#: src/Objects/DeviceFlag.vala:80
-msgid "Updatable"
-msgstr "Mises à jour disponible"
-
-#. / TRANSLATORS: Update can only be done from offline mode
-#. / TRANSLATORS: Requires a reboot to apply firmware or to reload hardware
-#: src/Objects/DeviceFlag.vala:83 src/Objects/DeviceFlag.vala:98
-msgid "Update requires restarting the system"
-msgstr "La mise à jour requiert un redémarrage du système"
-
-#. / TRANSLATORS: Must be plugged in to an outlet
-#: src/Objects/DeviceFlag.vala:86
-msgid "System requires external power source"
-msgstr "Le système requiert une source d'énergie externe"
-
-#. / TRANSLATORS: Is locked and can be unlocked
-#: src/Objects/DeviceFlag.vala:89
-msgid "Device is locked"
-msgstr "Le périphérique est verrouillé"
-
-#. / TRANSLATORS: Is found in current metadata
-#: src/Objects/DeviceFlag.vala:92
-msgid "Supported on LVFS"
-msgstr "Pris en charge par LVFS"
-
-#. / TRANSLATORS: Requires a bootloader mode to be manually enabled by the user
-#: src/Objects/DeviceFlag.vala:95
-msgid "Requires a bootloader"
-msgstr "Nécessite un chargeur de démarrage"
-
-#. / TRANSLATORS: Requires system shutdown to apply firmware
-#: src/Objects/DeviceFlag.vala:101
-msgid "Requires the system to shut down after installation"
-msgstr "Le système doit être éteint après l'installation"
-
-#. / TRANSLATORS: Has been reported to a metadata server
-#: src/Objects/DeviceFlag.vala:104
-msgid "Reported to LVFS"
-msgstr "Envoyé à LVFS"
-
-#. / TRANSLATORS: User has been notified
-#: src/Objects/DeviceFlag.vala:107
-msgid "User has been notified"
-msgstr "L'utilisateur a été notifié"
-
-#. / TRANSLATORS: Install composite firmware on the parent before the child
-#: src/Objects/DeviceFlag.vala:113
-msgid "Install to parent device first"
-msgstr "Installer sur l'appareil parent en premier"
-
-#. / TRANSLATORS: Is currently in bootloader mode
-#: src/Objects/DeviceFlag.vala:116
-msgid "Is in bootloader mode"
-msgstr "Est en mode chargeur de démarrage"
-
-#. / TRANSLATORS: The hardware is waiting to be replugged
-#: src/Objects/DeviceFlag.vala:119
-msgid "Hardware is waiting to be replugged"
-msgstr "Le matériel attend d'être rebranché"
-
-#. / TRANSLATORS: Ignore validation safety checks when flashing this device
-#: src/Objects/DeviceFlag.vala:122
-msgid "Ignore validation safety checks"
-msgstr "Ignorer la validation des vérifications de sécurité"
-
-#. / TRANSLATORS: Device update needs to be separately activated
-#: src/Objects/DeviceFlag.vala:131
-msgid "Device update needs activation"
-msgstr "La mise à jour requiert une activation"
-
-#. / TRANSLATORS: Device will not return after update completes
-#: src/Objects/DeviceFlag.vala:143
-msgid "Device will not re-appear after update completes"
-msgstr "Le périphérique ne réapparaîtra pas après la fin de la mise à jour"
-
-#. / TRANSLATORS: Device supports some form of checksum verification
-#: src/Objects/DeviceFlag.vala:146
-msgid "Cryptographic hash verification is available"
-msgstr "La vérification du code de hachage cryptographique est disponible"
-
-#. / TRANSLATORS: Device supports a safety mechanism for flashing
-#: src/Objects/DeviceFlag.vala:152
-msgid "Device stages updates"
-msgstr ""
-
-#. / TRANSLATORS: Device supports a safety mechanism for flashing
-#: src/Objects/DeviceFlag.vala:155
-msgid "Device can recover flash failures"
-msgstr ""
-
-#. / TRANSLATORS: Device remains usable during update
-#: src/Objects/DeviceFlag.vala:158
-msgid "Device is usable for the duration of the update"
-msgstr "Le périphérique reste utilisable lors de la mise à jour"
-
-#: src/Views/FirmwareView.vala:37
+#: src/Views/FirmwareView.vala:35
 msgid "Do not unplug the device during the update."
 msgstr "Ne débranchez pas le périphérique pendant la mise à jour."
 
-#: src/Views/FirmwareView.vala:48
-msgid "No Updatable Devices"
-msgstr "Aucune périphérique ne peut être mis à jour"
+#: src/Views/FirmwareView.vala:46
+msgid "Checking for Updates"
+msgstr "Vérification des mises à jour"
 
-#: src/Views/FirmwareView.vala:49
+#: src/Views/FirmwareView.vala:47
+msgid "Connecting to the firmware service and searching for updates."
+msgstr "Connexion au service du micrologiciel et recherche de mises à jour."
+
+#: src/Views/FirmwareView.vala:107
+msgid "Firmware Updates Are Not Available"
+msgstr "Aucune mise à jour du micrologiciel disponible"
+
+#: src/Views/FirmwareView.vala:108
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "La mise à jour du micrologiciel n'est pris en charge ni par ce matériel, ni "
 "par les périphériques connectés."
 
-#: src/Views/FirmwareView.vala:115
+#: src/Views/FirmwareView.vala:111
+msgid "The Firmware Service Is Not Available"
+msgstr "Le service du micrologiciel n'est pas disponible"
+
+#: src/Views/FirmwareView.vala:112
+msgid "Please make sure “fwupd” is installed and enabled."
+msgstr "Assurez-vous que « fwupd » est installé et activé."
+
+#: src/Views/FirmwareView.vala:130
 #, c-format
 msgid "“%s” is being updated"
 msgstr "Mise à jour de « %s »"
 
-#: src/Views/FirmwareView.vala:136
-msgid "Failed to install firmware release"
-msgstr "Échec de l'installation du micrologiciel"
-
-#: src/Views/FirmwareView.vala:187
+#: src/Views/FirmwareView.vala:186
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Mises à jour disponible"
-msgstr[1] "Mises à jour disponibles"
+msgstr[0] "%u mise à jour disponible"
+msgstr[1] "%u mises à jour disponibles"
 
-#: src/Views/FirmwareView.vala:191
+#: src/Views/FirmwareView.vala:190
 msgid "Up to Date"
 msgstr "À jour"
 
@@ -303,43 +214,104 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Restaurer les paramètres"
 
-#: src/Widgets/FirmwareUpdateRow.vala:66
+#: src/Widgets/FirmwareUpdateRow.vala:77
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: src/Widgets/FirmwareUpdateRow.vala:106
+#: src/Widgets/FirmwareUpdateRow.vala:153
+msgid "Failed to install firmware release"
+msgstr "Échec de l'installation du micrologiciel"
+
+#: src/Widgets/FirmwareUpdateRow.vala:168
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "« %s » doit être mis manuellement en mode mise à jour"
 
-#: src/Widgets/FirmwareUpdateRow.vala:113
+#: src/Widgets/FirmwareUpdateRow.vala:175
 msgid "Continue"
 msgstr "Continuer"
 
-#: src/Widgets/FirmwareUpdateRow.vala:133
+#: src/Widgets/FirmwareUpdateRow.vala:195
 msgid "An update requires the system to restart to complete"
 msgstr "Le système doit être redémarré pour terminer une des mises à jour"
 
-#: src/Widgets/FirmwareUpdateRow.vala:134
+#: src/Widgets/FirmwareUpdateRow.vala:196
 msgid "This will close all open applications and restart this device."
 msgstr ""
 "Ceci fermera toutes les applications ouvertes et redémarrera le système."
 
-#: src/Widgets/FirmwareUpdateRow.vala:140
+#: src/Widgets/FirmwareUpdateRow.vala:202
 msgid "Restart"
 msgstr "Redémarrer"
 
-#: src/Widgets/FirmwareUpdateRow.vala:155
+#: src/Widgets/FirmwareUpdateRow.vala:217
 msgid "An update requires the system to shut down to complete"
 msgstr "Le système doit être arrêté pour terminer une des mises à jour"
 
-#: src/Widgets/FirmwareUpdateRow.vala:156
+#: src/Widgets/FirmwareUpdateRow.vala:218
 msgid "This will close all open applications and turn off this device."
 msgstr "Ceci fermera toutes les applications ouvertes et arrêtera le système."
 
-#: src/Widgets/FirmwareUpdateRow.vala:162
+#: src/Widgets/FirmwareUpdateRow.vala:224
 msgid "Shut Down"
 msgstr "Arrêter"
+
+#~ msgid "No Updatable Devices"
+#~ msgstr "Aucune périphérique ne peut être mis à jour"
+
+#~ msgid "Internal device"
+#~ msgstr "Périphérique interne"
+
+#~ msgid "Updatable"
+#~ msgstr "Mises à jour disponible"
+
+#~ msgid "Update requires restarting the system"
+#~ msgstr "La mise à jour requiert un redémarrage du système"
+
+#~ msgid "System requires external power source"
+#~ msgstr "Le système requiert une source d'énergie externe"
+
+#~ msgid "Device is locked"
+#~ msgstr "Le périphérique est verrouillé"
+
+#~ msgid "Supported on LVFS"
+#~ msgstr "Pris en charge par LVFS"
+
+#~ msgid "Requires a bootloader"
+#~ msgstr "Nécessite un chargeur de démarrage"
+
+#~ msgid "Requires the system to shut down after installation"
+#~ msgstr "Le système doit être éteint après l'installation"
+
+#~ msgid "Reported to LVFS"
+#~ msgstr "Envoyé à LVFS"
+
+#~ msgid "User has been notified"
+#~ msgstr "L'utilisateur a été notifié"
+
+#~ msgid "Install to parent device first"
+#~ msgstr "Installer sur l'appareil parent en premier"
+
+#~ msgid "Is in bootloader mode"
+#~ msgstr "Est en mode chargeur de démarrage"
+
+#~ msgid "Hardware is waiting to be replugged"
+#~ msgstr "Le matériel attend d'être rebranché"
+
+#~ msgid "Ignore validation safety checks"
+#~ msgstr "Ignorer la validation des vérifications de sécurité"
+
+#~ msgid "Device update needs activation"
+#~ msgstr "La mise à jour requiert une activation"
+
+#~ msgid "Device will not re-appear after update completes"
+#~ msgstr "Le périphérique ne réapparaîtra pas après la fin de la mise à jour"
+
+#~ msgid "Cryptographic hash verification is available"
+#~ msgstr "La vérification du code de hachage cryptographique est disponible"
+
+#~ msgid "Device is usable for the duration of the update"
+#~ msgstr "Le périphérique reste utilisable lors de la mise à jour"
 
 #~ msgid "Suggest Translation"
 #~ msgstr "Suggérer une traduction"
