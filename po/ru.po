@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2020-11-16 17:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-03-07 13:59+0000\n"
+"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ru/>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:39
@@ -31,29 +31,23 @@ msgstr "Просмотр информации об операционной си
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "Операционная система"
 
 #: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Оборудование"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Оборудование"
+msgstr "Микропрограмма"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "Сведения о системе"
+msgstr "Сведения об операционной системе"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "Сведения о системе"
+msgstr "Сведения об оборудовании"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
@@ -65,7 +59,7 @@ msgstr "Предложить перевод"
 
 #: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "Отправить отзыв"
 
 #: src/Plug.vala:113
 msgid "Report a Problem"
@@ -73,7 +67,7 @@ msgstr "Сообщить об ошибке"
 
 #: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Получить поддержку"
 
 #: src/Plug.vala:115
 msgid "Updates"
@@ -81,55 +75,50 @@ msgstr "Обновления"
 
 #: src/Views/FirmwareView.vala:35
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Не отключайте устройство во время обновления."
 
 #: src/Views/FirmwareView.vala:46
-#, fuzzy
-#| msgid "Check for Updates"
 msgid "Checking for Updates"
-msgstr "Проверить обновления"
+msgstr "Проверка обновлений"
 
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "Подключение к службе обновления микропрограммы и поиск обновлений."
 
 #: src/Views/FirmwareView.vala:107
-#, fuzzy
-#| msgid "Updates"
 msgid "Firmware Updates Are Not Available"
-msgstr "Обновления"
+msgstr "Обновление микропрограммы недоступны"
 
 #: src/Views/FirmwareView.vala:108
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"Обновление микропрограммы не поддерживается этим и любым подключенным "
+"устройством."
 
 #: src/Views/FirmwareView.vala:111
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "Служба обновления микропрограммы недоступна"
 
 #: src/Views/FirmwareView.vala:112
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "Убедитесь, что функция \"fwupd\" установлена и включена."
 
 #: src/Views/FirmwareView.vala:130
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "«%s» обновляется"
 
 #: src/Views/FirmwareView.vala:186
-#, fuzzy, c-format
-#| msgid "Updates"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Обновления"
-msgstr[1] "Обновления"
-msgstr[2] "Обновления"
+msgstr[0] "%u Доступно обновление"
+msgstr[1] "%u Доступно обновлений"
+msgstr[2] "%u Доступных обновлений"
 
 #: src/Views/FirmwareView.vala:190
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to Date"
-msgstr "Обновления"
+msgstr "Обновления не требуются"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -137,43 +126,35 @@ msgid "%s memory"
 msgstr "Память: %s"
 
 #: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "Графика:"
+msgstr "Неизвестная графика"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown storage"
-msgstr "Процессор:"
+msgstr "Неизвестное хранилище"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
 msgstr "Сайт производителя"
 
 #: src/Views/HardwareView.vala:239
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "2-х ядерный"
+msgstr "Двухъядерный %s"
 
 #: src/Views/HardwareView.vala:241
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "4-х ядерный"
+msgstr "Четырехъядерный %s"
 
 #: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "Шестиядерный %s"
 
 #: src/Views/HardwareView.vala:326
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "Процессор:"
+msgstr "Иеизвестный процессор"
 
 #: src/Views/HardwareView.vala:376
 msgid "Unknown"
@@ -235,10 +216,8 @@ msgid "Restore Settings"
 msgstr "Восстановить настройки"
 
 #: src/Widgets/FirmwareUpdateRow.vala:77
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Обновления"
+msgstr "Обновление"
 
 #: src/Widgets/FirmwareUpdateRow.vala:153
 msgid "Failed to install firmware release"
@@ -251,31 +230,31 @@ msgstr ""
 
 #: src/Widgets/FirmwareUpdateRow.vala:175
 msgid "Continue"
-msgstr ""
+msgstr "Продолжить"
 
 #: src/Widgets/FirmwareUpdateRow.vala:195
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "Обновление требует перезагрузки системы для завершения"
 
 #: src/Widgets/FirmwareUpdateRow.vala:196
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "Это закроет все открытые приложения и перезапустит данное устройство."
 
 #: src/Widgets/FirmwareUpdateRow.vala:202
 msgid "Restart"
-msgstr ""
+msgstr "Перезагрузка"
 
 #: src/Widgets/FirmwareUpdateRow.vala:217
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "Обновление требует завершения работы системы"
 
 #: src/Widgets/FirmwareUpdateRow.vala:218
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "Это закроет все открытые приложения и выключит данное устройство."
 
 #: src/Widgets/FirmwareUpdateRow.vala:224
 msgid "Shut Down"
-msgstr ""
+msgstr "Выключить"
 
 #, fuzzy
 #~| msgid "Updates"
