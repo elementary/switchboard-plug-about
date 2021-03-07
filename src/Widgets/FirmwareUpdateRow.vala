@@ -22,17 +22,23 @@
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     public Fwupd.Client client { get; construct set; }
     public Fwupd.Device device { get; construct set; }
-    public bool is_updatable { get; private set; default = false; }
+    public Fwupd.Release? release { get; construct set; }
+    public bool is_updatable {
+        get {
+            return release != null && device.get_version () != release.get_version ();
+        }
+    }
 
     public signal void on_update_start ();
     public signal void on_update_end ();
 
     private Gtk.Image image;
 
-    public FirmwareUpdateRow (Fwupd.Client client, Fwupd.Device device) {
+    public FirmwareUpdateRow (Fwupd.Client client, Fwupd.Device device, Fwupd.Release? release) {
         Object (
             client: client,
-            device: device
+            device: device,
+            release: release
         );
     }
 
@@ -65,33 +71,22 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             image.gicon = new GLib.ThemedIcon.from_names (icons.data);
         }
 
-        FirmwareClient.get_upgrades.begin (client, device.get_id (), (obj, res) => {
-            try {
-                var upgrades = FirmwareClient.get_upgrades.end (res);
-                if (upgrades != null) {
-                    is_updatable = true;
+        if (is_updatable) {
+            version_label.label = release.get_version ();
 
-                    var release = upgrades[0];
-                    version_label.label = release.get_version ();
+            var update_button = new Gtk.Button.with_label (_("Update")) {
+                valign = Gtk.Align.CENTER
+            };
+            update_button.clicked.connect (() => {
+                on_update_start ();
 
-                    var update_button = new Gtk.Button.with_label (_("Update")) {
-                        valign = Gtk.Align.CENTER
-                    };
-                    update_button.clicked.connect (() => {
-                        on_update_start ();
-
-                        update.begin (release, (obj, res) => {
-                            update.end (res);
-                            on_update_end ();
-                        });
-                    });
-                    grid.attach (update_button, 2, 0, 1, 2);
-                }
-            } catch (Error e) {
-                debug (e.message);
-            }
-        });
-
+                update.begin (release, (obj, res) => {
+                    update.end (res);
+                    on_update_end ();
+                });
+            });
+            grid.attach (update_button, 2, 0, 1, 2);
+        }
 
         add (grid);
     }
