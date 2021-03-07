@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-03-05 18:36+0000\n"
+"PO-Revision-Date: 2021-03-07 13:59+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ru/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
 msgid "System"
-msgstr ""
+msgstr "Система"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
