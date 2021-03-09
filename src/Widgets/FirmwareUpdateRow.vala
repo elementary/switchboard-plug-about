@@ -72,7 +72,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
         }
 
         if (is_updatable) {
-            version_label.label = release.get_version ();
+            version_label.label = "%s → %s".printf (device.get_version (), release.get_version ());
 
             var update_button = new Gtk.Button.with_label (_("Update")) {
                 valign = Gtk.Align.CENTER
