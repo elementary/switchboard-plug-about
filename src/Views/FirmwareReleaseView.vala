@@ -23,6 +23,8 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     private Granite.Widgets.AlertView placeholder;
     private Gtk.ScrolledWindow scrolled_window;
     private Gtk.Stack content;
+    private Gtk.Revealer update_button_revealer;
+    private Gtk.Button update_button;
     private Gtk.Label title_label;
     private Gtk.Label summary_label;
     private Gtk.Label description_label;
@@ -31,8 +33,11 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     private Gtk.Label size_value_label;
     private Gtk.Label install_duration_value_label;
 
+    public signal void update (Fwupd.Device device, Fwupd.Release release);
+
     public void update_view (Fwupd.Device device, Fwupd.Release? release) {
         title_label.label = "<b>%s</b>".printf (device.get_name ());
+        update_button_revealer.reveal_child = release != null;
 
         if (release == null) {
             placeholder.title = device.get_name ();
@@ -48,6 +53,28 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         }
 
         content.visible_child = scrolled_window;
+
+        switch (release.get_flags ()) {
+            case Fwupd.RELEASE_FLAG_IS_UPGRADE:
+                if (release.get_version () == device.get_version ()) {
+                    update_button.label = _("Up to date");
+                    update_button.sensitive = false;
+                    break;
+                }
+
+                update_button.label = _("Update");
+                update_button.sensitive = true;
+
+                update_button.clicked.connect (() => {
+                    update (device, release);
+                });
+
+                break;
+            default:
+                update_button.label = _("Up to date");
+                update_button.sensitive = false;
+                break;
+        }
 
         summary_label.label = release.get_summary ();
         try {
@@ -85,11 +112,22 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             use_markup = true
         };
 
+        update_button = new Gtk.Button.with_label ("Up to date") {
+            halign = Gtk.Align.END,
+            margin = 6,
+            sensitive = false
+        };
+        update_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+        update_button_revealer = new Gtk.Revealer ();
+        update_button_revealer.add (update_button);
+
         var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
             hexpand = true
         };
         header_box.pack_start (back_button);
         header_box.set_center_widget (title_label);
+        header_box.pack_end (update_button_revealer);
 
         summary_label = new Gtk.Label ("") {
             halign = Gtk.Align.START,
