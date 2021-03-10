@@ -66,6 +66,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
                 update_button.sensitive = true;
 
                 update_button.clicked.connect (() => {
+                    go_back ();
                     update (device, release);
                 });
 
@@ -227,10 +228,14 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         add (content);
 
         back_button.clicked.connect (() => {
-            var deck = (Hdy.Deck) get_ancestor (typeof (Hdy.Deck));
-            deck.navigate (Hdy.NavigationDirection.BACK);
+            go_back ();
         });
 
         show_all ();
+    }
+
+    private void go_back () {
+        var deck = (Hdy.Deck) get_ancestor (typeof (Hdy.Deck));
+        deck.navigate (Hdy.NavigationDirection.BACK);
     }
 }
