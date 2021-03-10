@@ -117,22 +117,36 @@ public class About.FirmwareView : Gtk.Stack {
 
     private void add_device (Fwupd.Client client, Fwupd.Device device) {
         if (device.has_flag (Fwupd.DEVICE_FLAG_UPDATABLE)) {
-            var row = new Widgets.FirmwareUpdateRow (client, device);
+            FirmwareClient.get_upgrades.begin (client, device.get_id (), (obj, res) => {
+                Fwupd.Release? release = null;
 
-            if (row.is_updatable) {
-                num_updates++;
-            }
+                try {
+                    var upgrades = FirmwareClient.get_upgrades.end (res);
+                    if (upgrades != null) {
+                        release = upgrades[0];
+                    }
+                } catch (Error e) {
+                    debug (e.message);
+                }
 
-            update_list.add (row);
-            update_list.invalidate_sort ();
+                var row = new Widgets.FirmwareUpdateRow (client, device, release);
 
-            row.on_update_start.connect (() => {
-                progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
-                visible_child = progress_view;
-            });
-            row.on_update_end.connect (() => {
-                visible_child = grid;
-                update_list_view.begin (client);
+                if (row.is_updatable) {
+                    num_updates++;
+                }
+
+                update_list.add (row);
+                update_list.invalidate_sort ();
+                update_list.show_all ();
+
+                row.on_update_start.connect (() => {
+                    progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
+                    visible_child = progress_view;
+                });
+                row.on_update_end.connect (() => {
+                    visible_child = grid;
+                    update_list_view.begin (client);
+                });
             });
         }
     }
