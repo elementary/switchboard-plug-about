@@ -72,7 +72,9 @@ public class About.FirmwareView : Gtk.Stack {
         deck.add (update_scrolled);
 
         firmware_release_view = new FirmwareReleaseView ();
-        firmware_release_view.update.connect (on_update);
+        firmware_release_view.update.connect ((device, release) => {
+            update.begin (device, release);
+        });
         deck.add (firmware_release_view);
 
         deck.visible_child = update_scrolled;
@@ -155,7 +157,9 @@ public class About.FirmwareView : Gtk.Stack {
                 update_list.invalidate_sort ();
                 update_list.show_all ();
 
-                row.update.connect (on_update);
+                row.update.connect ((device, release) => {
+                    update.begin (device, release);
+                });
             });
         }
     }
@@ -195,25 +199,6 @@ public class About.FirmwareView : Gtk.Stack {
         }
 
         update_list.show_all ();
-    }
-
-    private void on_update (Fwupd.Device device, Fwupd.Release release) {
-        update_start (device);
-
-        update.begin (device, release, (obj, res) => {
-            update.end (res);
-            update_end ();
-        });
-    }
-
-    private void update_start (Fwupd.Device device) {
-        progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
-        visible_child = progress_view;
-    }
-
-    private void update_end () {
-        visible_child = grid;
-        update_list_view.begin ();
     }
 
     [CCode (instance_pos = -1)]
@@ -257,6 +242,9 @@ public class About.FirmwareView : Gtk.Stack {
     }
 
     private async void update (Fwupd.Device device, Fwupd.Release release) {
+        progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
+        visible_child = progress_view;
+
         unowned var detach_caption = release.get_detach_caption ();
         if (detach_caption != null) {
             var detach_image = release.get_detach_image ();
@@ -283,6 +271,9 @@ public class About.FirmwareView : Gtk.Stack {
         } catch (Error e) {
             show_error_dialog (device, e.message);
         }
+
+        visible_child = grid;
+        update_list_view.begin ();
     }
 
     private async string? download_file (Fwupd.Device device, string uri) {
