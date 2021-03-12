@@ -12,9 +12,18 @@ plug_files = files(
 switchboard_dep = dependency('switchboard-2.0')
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
+config_data = configuration_data()
+config_data.set('GETTEXT_PACKAGE', meson.project_name())
+config_vala = configure_file(
+    input: 'Config.vala.in',
+    output: '@BASENAME@',
+    configuration: config_data
+)
+
 shared_module(
     meson.project_name(),
     plug_files,
+    config_vala,
     css_gresource,
     dependencies: [
         dependency('fwupd'),
