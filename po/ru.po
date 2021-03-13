@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-03-07 13:59+0000\n"
+"PO-Revision-Date: 2021-03-13 21:11+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ru/>\n"
@@ -226,7 +226,7 @@ msgstr ""
 #: src/Widgets/FirmwareUpdateRow.vala:168
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "«%s» нужно вручную перевести в режим обновления"
 
 #: src/Widgets/FirmwareUpdateRow.vala:175
 msgid "Continue"
