@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-02-21 14:29+0000\n"
+"PO-Revision-Date: 2021-03-14 14:49+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/de/>\n"
@@ -36,7 +36,7 @@ msgstr ""
 #: data/io.elementary.switchboard.about.appdata.xml.in:23
 #: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Updated translations"
-msgstr ""
+msgstr "Aktualisierte Übersetzungen"
 
 #~ msgid "About"
 #~ msgstr "Info"
