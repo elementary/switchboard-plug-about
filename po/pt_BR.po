@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-03-14 14:17+0000\n"
-"Last-Translator: Leonardo <leonardo@elementary.io>\n"
+"PO-Revision-Date: 2021-03-14 14:18+0000\n"
+"Last-Translator: Augusto Peres <augusto.peres1@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -215,19 +215,17 @@ msgid "Restore Settings"
 msgstr "Restaurar configurações"
 
 #: src/Widgets/FirmwareUpdateRow.vala:77
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Atualizações"
+msgstr "Atualização"
 
 #: src/Widgets/FirmwareUpdateRow.vala:153
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Falha ao instalar a versão do firmware"
 
 #: src/Widgets/FirmwareUpdateRow.vala:168
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "“%s” precisa ser colocado, manualmente, no modo de atualização"
 
 #: src/Widgets/FirmwareUpdateRow.vala:175
 msgid "Continue"
