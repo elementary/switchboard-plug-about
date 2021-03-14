@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2020-11-16 17:15+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-03-14 14:17+0000\n"
+"Last-Translator: Augusto Peres <augusto.peres1@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:39
@@ -43,16 +43,12 @@ msgid "Firmware"
 msgstr "Hardware"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "Informações do sistema"
+msgstr "Informações do sistema operacional"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "Informações do sistema"
+msgstr "Informações do equipamento"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
@@ -64,7 +60,7 @@ msgstr "Sugerir traduções"
 
 #: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "Enviar feedback"
 
 #: src/Plug.vala:113
 msgid "Report a Problem"
@@ -72,7 +68,7 @@ msgstr "Relatar um problema"
 
 #: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Obter suporte"
 
 #: src/Plug.vala:115
 msgid "Updates"
@@ -113,7 +109,7 @@ msgstr ""
 #: src/Views/FirmwareView.vala:130
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "“%s” está sendo atualizado"
 
 #: src/Views/FirmwareView.vala:186
 #, fuzzy, c-format
@@ -141,37 +137,31 @@ msgid "Unknown Graphics"
 msgstr "Gráficos:"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown storage"
-msgstr "Processador:"
+msgstr "Armazenamento desconhecido"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
 msgstr "Site do Fabricante"
 
 #: src/Views/HardwareView.vala:239
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "Dual Core"
+msgstr "Dual Core %s"
 
 #: src/Views/HardwareView.vala:241
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "Quad Core"
+msgstr "Quad Core %s"
 
 #: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "Hexa Core %s"
 
 #: src/Views/HardwareView.vala:326
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "Processador:"
+msgstr "Processador desconhecido:"
 
 #: src/Views/HardwareView.vala:376
 msgid "Unknown"
