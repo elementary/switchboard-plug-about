@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
 "PO-Revision-Date: 2021-03-14 14:17+0000\n"
-"Last-Translator: Augusto Peres <augusto.peres1@hotmail.com>\n"
+"Last-Translator: Leonardo <leonardo@elementary.io>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -30,17 +30,15 @@ msgstr "Visualizar sistema operacional e informações de hardware"
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "Sistema Operacional"
 
 #: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Hardware"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Hardware"
+msgstr "Firmware"
 
 #: src/Plug.vala:107
 msgid "Operating System Information"
@@ -76,35 +74,34 @@ msgstr "Atualizações"
 
 #: src/Views/FirmwareView.vala:35
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Não desconecte o dispositivo da tomada durante a atualização."
 
 #: src/Views/FirmwareView.vala:46
-#, fuzzy
-#| msgid "Check for Updates"
 msgid "Checking for Updates"
-msgstr "Verificar se há atualizações"
+msgstr "Verificando se há atualizações"
 
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "Conectando ao serviço de firmware e buscando por atualizações."
 
 #: src/Views/FirmwareView.vala:107
-#, fuzzy
-#| msgid "Updates"
 msgid "Firmware Updates Are Not Available"
-msgstr "Atualizações"
+msgstr "Atualizações de firmware não estão disponíveis"
 
 #: src/Views/FirmwareView.vala:108
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"As atualizações de firmware não são suportadas neste ou em qualquer outro "
+"dispositivo conectado."
 
 #: src/Views/FirmwareView.vala:111
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "O serviço de firmware não está disponível"
 
 #: src/Views/FirmwareView.vala:112
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr ""
+"Por favor, tenha certeza de que o \"fwupd\" está instalado e habilitado."
 
 #: src/Views/FirmwareView.vala:130
 #, c-format
@@ -112,18 +109,15 @@ msgid "“%s” is being updated"
 msgstr "“%s” está sendo atualizado"
 
 #: src/Views/FirmwareView.vala:186
-#, fuzzy, c-format
-#| msgid "Updates"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Atualizações"
-msgstr[1] "Atualizações"
+msgstr[0] "%u atualização disponível"
+msgstr[1] "%u atualizações disponíveis"
 
 #: src/Views/FirmwareView.vala:190
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to Date"
-msgstr "Atualizações"
+msgstr "Atualizado"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -131,10 +125,8 @@ msgid "%s memory"
 msgstr "%s memória"
 
 #: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "Gráficos:"
+msgstr "Gráficos desconhecidos"
 
 #: src/Views/HardwareView.vala:86
 msgid "Unknown storage"
