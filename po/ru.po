@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-03-13 21:11+0000\n"
+"PO-Revision-Date: 2021-03-18 02:32+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ru/>\n"
@@ -39,7 +39,7 @@ msgstr "Оборудование"
 
 #: src/Plug.vala:61 src/Plug.vala:109
 msgid "Firmware"
-msgstr "Микропрограмма"
+msgstr "Прошивка"
 
 #: src/Plug.vala:107
 msgid "Operating System Information"
@@ -83,21 +83,21 @@ msgstr "Проверка обновлений"
 
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
-msgstr "Подключение к службе обновления микропрограммы и поиск обновлений."
+msgstr "Подключение к службе прошивки и поиск обновлений."
 
 #: src/Views/FirmwareView.vala:107
 msgid "Firmware Updates Are Not Available"
-msgstr "Обновление микропрограммы недоступны"
+msgstr "Обновления прошивки недоступны"
 
 #: src/Views/FirmwareView.vala:108
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
-"Обновление микропрограммы не поддерживается этим и любым подключенным "
+"Обновления прошивки не поддерживается на этом и любым подключенным "
 "устройством."
 
 #: src/Views/FirmwareView.vala:111
 msgid "The Firmware Service Is Not Available"
-msgstr "Служба обновления микропрограммы недоступна"
+msgstr "Служба прошивки недоступна"
 
 #: src/Views/FirmwareView.vala:112
 msgid "Please make sure “fwupd” is installed and enabled."
@@ -221,7 +221,7 @@ msgstr "Обновление"
 
 #: src/Widgets/FirmwareUpdateRow.vala:153
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Не удалось установить версию прошивки"
 
 #: src/Widgets/FirmwareUpdateRow.vala:168
 #, c-format
