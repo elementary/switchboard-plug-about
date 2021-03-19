@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-02-17 08:00+0000\n"
+"PO-Revision-Date: 2021-03-19 05:27+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/nb/>\n"
@@ -37,22 +37,16 @@ msgid "Hardware"
 msgstr "Maskinvare"
 
 #: src/Plug.vala:61 src/Plug.vala:109
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Maskinvare"
+msgstr "Fastvare"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "Systeminformasjon"
+msgstr "Operativsystemsinfo"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "Systeminformasjon"
+msgstr "Maskinvareinfo"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
@@ -80,36 +74,37 @@ msgstr "Oppdateringer"
 
 #: src/Views/FirmwareView.vala:35
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Ikke plugg ut enheten under oppdateringen."
 
 #: src/Views/FirmwareView.vala:46
 #, fuzzy
 #| msgid "Check for Updates"
 msgid "Checking for Updates"
-msgstr "Se etter oppdateringer"
+msgstr "Ser etter oppdateringer …"
 
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "Kobler til fastvaretjeneste og søker etter oppdateringer der."
 
 #: src/Views/FirmwareView.vala:107
 #, fuzzy
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
 msgid "Firmware Updates Are Not Available"
-msgstr "%u oppgradering tilgjengelig"
+msgstr "Ingen tilgjengelige fastvareoppdateringer"
 
 #: src/Views/FirmwareView.vala:108
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"Fastvareoppdateringer støttes ikke på denne eller andre tilkoblede enheter."
 
 #: src/Views/FirmwareView.vala:111
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "Fastvaretjenesten er ikke tilgjengelig"
 
 #: src/Views/FirmwareView.vala:112
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "Sørg for at «fwupd» er installert og påskrudd."
 
 #: src/Views/FirmwareView.vala:130
 #, fuzzy, c-format
@@ -124,10 +119,8 @@ msgstr[0] "%u oppgradering tilgjengelig"
 msgstr[1] "%u oppgraderinger tilgjengelig"
 
 #: src/Views/FirmwareView.vala:190
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to Date"
-msgstr "Oppdateringer"
+msgstr "Oppdatert"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -135,16 +128,12 @@ msgid "%s memory"
 msgstr "%s minne"
 
 #: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "Grafikk:"
+msgstr "Ukjent grafikk"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown storage"
-msgstr "Prosessor:"
+msgstr "Ukjent lagring"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
@@ -166,10 +155,8 @@ msgid "Hexa-Core %s"
 msgstr "Sekskjerner %s"
 
 #: src/Views/HardwareView.vala:326
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "Prosessor:"
+msgstr "Ukjent prosessor"
 
 #: src/Views/HardwareView.vala:376
 msgid "Unknown"
@@ -178,22 +165,22 @@ msgstr "Ukjent"
 #: src/Views/HardwareView.vala:423
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "%s lagring"
+msgstr "%s lagring (NVMe-SSD)"
 
 #: src/Views/HardwareView.vala:425
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
-msgstr "%s lagring"
+msgstr "%s lagring (eMMC)"
 
 #: src/Views/HardwareView.vala:427
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "%s lagring"
+msgstr "%s lagring (SATA-SSD)"
 
 #: src/Views/HardwareView.vala:430
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
-msgstr "%s lagring"
+msgstr "%s lagring (harddisk)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:435
@@ -234,11 +221,11 @@ msgstr "Gjenopprett innstillinger"
 #, fuzzy
 #| msgid "Updates"
 msgid "Update"
-msgstr "Oppdateringer"
+msgstr "Oppdatering"
 
 #: src/Widgets/FirmwareUpdateRow.vala:153
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Klarte ikke å installere fastvareutgivelse"
 
 #: src/Widgets/FirmwareUpdateRow.vala:168
 #, c-format
