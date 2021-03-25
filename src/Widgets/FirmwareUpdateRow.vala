@@ -72,10 +72,11 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             var update_button = new Gtk.Button.with_label (_("Update")) {
                 valign = Gtk.Align.CENTER
             };
-            update_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
             update_button.clicked.connect (() => {
                 update (device, release);
             });
+
             grid.attach (update_button, 2, 0, 1, 2);
         }
 
