@@ -3,6 +3,7 @@ plug_files = files(
     'Interfaces/FirmwareClient.vala',
     'Interfaces/LoginManager.vala',
     'Utils/ARMPartDecoder.vala',
+    'Views/FirmwareReleaseView.vala',
     'Views/FirmwareView.vala',
     'Views/HardwareView.vala',
     'Views/OperatingSystemView.vala',
@@ -34,6 +35,7 @@ shared_module(
         dependency('gtk+-3.0'),
         dependency('libgtop-2.0'),
         dependency('libhandy-1'),
+        dependency ('appstream', version: '>=0.12.10'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep
     ],
