@@ -24,17 +24,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
     public Fwupd.Device device { get; construct; }
     public Fwupd.Release? release { get; construct; }
-
-    private bool? _is_updatable;
-    public bool is_updatable {
-        get {
-            if (_is_updatable == null) {
-                _is_updatable = release != null && device.get_version () != release.get_version ();
-            }
-
-            return _is_updatable;
-        }
-    }
+    public bool is_updatable { get; private set; }
 
     private Gtk.Image image;
 
@@ -74,7 +64,9 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             image.gicon = new GLib.ThemedIcon.from_names (icons.data);
         }
 
-        if (is_updatable) {
+        if (release != null && device.get_version () != release.get_version ()) {
+            is_updatable = true;
+
             version_label.label = "%s → %s".printf (device.get_version (), release.get_version ());
 
             var update_button = new Gtk.Button.with_label (_("Update")) {
