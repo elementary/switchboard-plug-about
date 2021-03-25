@@ -22,10 +22,9 @@
 public class About.FirmwareView : Gtk.Stack {
     private Hdy.Deck deck;
     private FirmwareReleaseView firmware_release_view;
-    private Gtk.Grid grid;
+    private Gtk.Frame frame;
     private Granite.Widgets.AlertView progress_alert_view;
     private Granite.Widgets.AlertView placeholder_alert_view;
-    private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
     private uint num_updates = 0;
     private Fwupd.Client fwupd_client;
@@ -39,11 +38,6 @@ public class About.FirmwareView : Gtk.Stack {
             "emblem-synchronized"
         );
         progress_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
-
-        progress_view = new Gtk.Grid () {
-            margin = 24
-        };
-        progress_view.attach (progress_alert_view, 0, 0);
 
         placeholder_alert_view = new Granite.Widgets.AlertView (
             _("Checking for Updates"),
@@ -61,36 +55,24 @@ public class About.FirmwareView : Gtk.Stack {
         update_list.set_header_func ((Gtk.ListBoxUpdateHeaderFunc) header_rows);
         update_list.set_placeholder (placeholder_alert_view);
 
-        update_list.row_activated.connect (show_release);
-
         var update_scrolled = new Gtk.ScrolledWindow (null, null);
         update_scrolled.add (update_list);
+
+        firmware_release_view = new FirmwareReleaseView ();
 
         deck = new Hdy.Deck () {
             can_swipe_back = true
         };
         deck.add (update_scrolled);
-
-        firmware_release_view = new FirmwareReleaseView ();
-        firmware_release_view.update.connect ((device, release) => {
-            update.begin (device, release);
-        });
         deck.add (firmware_release_view);
-
         deck.visible_child = update_scrolled;
 
-        var frame = new Gtk.Frame (null);
+        frame = new Gtk.Frame (null);
         frame.add (deck);
 
-        grid = new Gtk.Grid () {
-            column_spacing = 12,
-            row_spacing = 12,
-            margin = 12
-        };
-        grid.add (frame);
-
-        add (grid);
-        add (progress_view);
+        margin = 12;
+        add (frame);
+        add (progress_alert_view);
 
         fwupd_client = new Fwupd.Client ();
         FirmwareClient.connect.begin (fwupd_client, (obj, res) => {
@@ -104,6 +86,12 @@ public class About.FirmwareView : Gtk.Stack {
             } catch (Error e) {
                 critical (e.message);
             }
+        });
+
+        update_list.row_activated.connect (show_release);
+
+        firmware_release_view.update.connect ((device, release) => {
+            update.begin (device, release);
         });
     }
 
@@ -130,7 +118,7 @@ public class About.FirmwareView : Gtk.Stack {
             placeholder_alert_view.description = _("Please make sure “fwupd” is installed and enabled.");
         }
 
-        visible_child = grid;
+        visible_child = frame;
     }
 
     private void add_device (Fwupd.Device device) {
@@ -177,7 +165,7 @@ public class About.FirmwareView : Gtk.Stack {
 
         add_device (device);
 
-        visible_child = grid;
+        visible_child = frame;
         update_list.show_all ();
     }
 
@@ -243,7 +231,7 @@ public class About.FirmwareView : Gtk.Stack {
 
     private async void update (Fwupd.Device device, Fwupd.Release release) {
         progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
-        visible_child = progress_view;
+        visible_child = progress_alert_view;
 
         unowned var detach_caption = release.get_detach_caption ();
         if (detach_caption != null) {
@@ -254,7 +242,7 @@ public class About.FirmwareView : Gtk.Stack {
             }
 
             if (show_details_dialog (device, detach_caption, detach_image) == false) {
-                visible_child = grid;
+                visible_child = frame;
                 return;
             }
         }
@@ -273,7 +261,7 @@ public class About.FirmwareView : Gtk.Stack {
             show_error_dialog (device, e.message);
         }
 
-        visible_child = grid;
+        visible_child = frame;
         update_list_view.begin ();
     }
 
