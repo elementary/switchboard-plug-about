@@ -348,14 +348,14 @@ public class About.FirmwareView : Gtk.Stack {
             _("This will close all open applications and restart this device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
-        );
-        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+        ) {
+            badge_icon = new ThemedIcon ("system-reboot"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
 
-        var suggested_button = new Gtk.Button.with_label (_("Restart"));
-        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
+        var suggested_button = (Gtk.Button) message_dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-        message_dialog.badge_icon = new ThemedIcon ("system-reboot");
         message_dialog.show_all ();
         if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
             LoginManager.get_instance ().reboot ();
@@ -370,14 +370,14 @@ public class About.FirmwareView : Gtk.Stack {
             _("This will close all open applications and turn off this device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
-        );
-        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+        ) {
+            badge_icon = new ThemedIcon ("system-shutdown"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
 
-        var suggested_button = new Gtk.Button.with_label (_("Shut Down"));
+        var suggested_button = (Gtk.Button) message_dialog.add_button (_("Shut Down"), Gtk.ResponseType.ACCEPT);
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
 
-        message_dialog.badge_icon = new ThemedIcon ("system-shutdown");
         message_dialog.show_all ();
         if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
             LoginManager.get_instance ().shutdown ();
