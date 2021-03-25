@@ -36,9 +36,6 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     private Gtk.Label install_duration_value_label;
 
     construct {
-        orientation = Gtk.Orientation.VERTICAL;
-        get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-
         var back_button = new Gtk.Button.with_label (_("All Updates")) {
             halign = Gtk.Align.START,
             margin = 6
@@ -160,15 +157,16 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         content.add (placeholder);
         content.add (scrolled_window);
 
+        orientation = Gtk.Orientation.VERTICAL;
+        get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         add (header_box);
         add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         add (content);
+        show_all ();
 
         back_button.clicked.connect (() => {
             go_back ();
         });
-
-        show_all ();
     }
 
     public void update_view (Fwupd.Device device, Fwupd.Release? release) {
