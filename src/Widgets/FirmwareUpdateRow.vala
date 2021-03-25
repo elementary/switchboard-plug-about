@@ -26,8 +26,6 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     public Fwupd.Release? release { get; construct; }
     public bool is_updatable { get; private set; }
 
-    private Gtk.Image image;
-
     public FirmwareUpdateRow (Fwupd.Device device, Fwupd.Release? release) {
         Object (
             device: device,
@@ -36,7 +34,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     }
 
     construct {
-        image = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DND) {
+        var image = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DND) {
             pixel_size = 32
         };
 
