@@ -300,19 +300,16 @@ public class About.FirmwareView : Gtk.Stack {
     }
 
     private void show_error_dialog (Fwupd.Device device, string secondary_text) {
-        var image = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DND) {
-            pixel_size = 32
-        };
-
+        var gicon = new ThemedIcon ("application-x-firmware");
         var icons = device.get_icons ();
         if (icons.data != null) {
-            image.gicon = new GLib.ThemedIcon.from_names (icons.data);
+            gicon = new GLib.ThemedIcon.from_names (icons.data);
         }
 
-        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+        var message_dialog = new Granite.MessageDialog (
             _("Failed to install firmware release"),
             secondary_text,
-            image.icon_name,
+            gicon,
             Gtk.ButtonsType.CLOSE
         ) {
             badge_icon = new ThemedIcon ("dialog-error"),
@@ -324,19 +321,16 @@ public class About.FirmwareView : Gtk.Stack {
     }
 
     private bool show_details_dialog (Fwupd.Device device, string detach_caption, string? detach_image) {
-        var image = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DND) {
-            pixel_size = 32
-        };
-
+        var gicon = new ThemedIcon ("application-x-firmware");
         var icons = device.get_icons ();
         if (icons.data != null) {
-            image.gicon = new GLib.ThemedIcon.from_names (icons.data);
+            gicon = new GLib.ThemedIcon.from_names (icons.data);
         }
 
-        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+        var message_dialog = new Granite.MessageDialog (
             _("“%s” needs to manually be put in update mode").printf (device.get_name ()),
             detach_caption,
-            image.icon_name,
+            gicon,
             Gtk.ButtonsType.CANCEL
         );
         message_dialog.transient_for = (Gtk.Window) get_toplevel ();
