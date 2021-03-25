@@ -20,6 +20,8 @@
 */
 
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
+    public signal void update (Fwupd.Device device, Fwupd.Release release);
+
     public Fwupd.Device device { get; construct; }
     public Fwupd.Release? release { get; construct; }
 
@@ -33,8 +35,6 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             return _is_updatable;
         }
     }
-
-    public signal void update (Fwupd.Device device, Fwupd.Release release);
 
     private Gtk.Image image;
 
