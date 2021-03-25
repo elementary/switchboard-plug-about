@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-25 22:00+0000\n"
-"PO-Revision-Date: 2021-02-20 16:44+0000\n"
+"PO-Revision-Date: 2021-03-26 00:33+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -73,10 +73,8 @@ msgid "Updates"
 msgstr "עדכונים"
 
 #: src/Views/FirmwareReleaseView.vala:42
-#, fuzzy
-#| msgid "Updates"
 msgid "All Updates"
-msgstr "עדכונים"
+msgstr "כל העדכונים"
 
 #: src/Views/FirmwareReleaseView.vala:81
 #, fuzzy
@@ -86,40 +84,38 @@ msgstr "הפעלה"
 
 #: src/Views/FirmwareReleaseView.vala:90
 msgid "Vendor:"
-msgstr ""
+msgstr "יצרן:"
 
 #: src/Views/FirmwareReleaseView.vala:99
 msgid "Size:"
-msgstr ""
+msgstr "גודל:"
 
 #: src/Views/FirmwareReleaseView.vala:108
 msgid "Estimated time to install:"
-msgstr ""
+msgstr "זמן ההתקנה המשוער:"
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "אין מהדורות זמינות למכשיר הזה."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
 msgid "Update"
 msgstr "עדכון"
 
 #: src/Views/FirmwareReleaseView.vala:211
-#, fuzzy
-#| msgid "Up to Date"
 msgid "Up to date"
 msgstr "עדכני"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr ""
+msgstr "פחות מדקה"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "דקה אחת"
+msgstr[1] "%llu דקות"
 
 #: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
