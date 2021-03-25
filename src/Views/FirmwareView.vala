@@ -254,6 +254,7 @@ public class About.FirmwareView : Gtk.Stack {
             }
 
             if (show_details_dialog (device, detach_caption, detach_image) == false) {
+                visible_child = grid;
                 return;
             }
         }
@@ -332,19 +333,19 @@ public class About.FirmwareView : Gtk.Stack {
             detach_caption,
             gicon,
             Gtk.ButtonsType.CANCEL
-        );
-        message_dialog.transient_for = (Gtk.Window) get_toplevel ();
+        ) {
+            badge_icon = new ThemedIcon ("dialog-information"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
 
-        var suggested_button = new Gtk.Button.with_label (_("Continue"));
+        var suggested_button = (Gtk.Button) message_dialog.add_button (_("Continue"), Gtk.ResponseType.ACCEPT);
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
 
         if (detach_image != null) {
             var custom_widget = new Gtk.Image.from_file (detach_image);
             message_dialog.custom_bin.add (custom_widget);
         }
 
-        message_dialog.badge_icon = new ThemedIcon ("dialog-information");
         message_dialog.show_all ();
         bool should_continue = message_dialog.run () == Gtk.ResponseType.ACCEPT;
 
