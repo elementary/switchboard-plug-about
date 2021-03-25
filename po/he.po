@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-25 22:00+0000\n"
 "PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
 "Language: he\n"
@@ -77,10 +77,8 @@ msgid "All Updates"
 msgstr "כל העדכונים"
 
 #: src/Views/FirmwareReleaseView.vala:81
-#, fuzzy
-#| msgid "Session"
 msgid "Version:"
-msgstr "הפעלה"
+msgstr "גרסה:"
 
 #: src/Views/FirmwareReleaseView.vala:90
 msgid "Vendor:"
