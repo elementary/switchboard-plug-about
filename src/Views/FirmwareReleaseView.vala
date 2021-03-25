@@ -22,6 +22,8 @@
 public class About.FirmwareReleaseView : Gtk.Grid {
     public signal void update (Fwupd.Device device, Fwupd.Release release);
 
+    private Fwupd.Device device;
+    private Fwupd.Release? release;
     private Granite.Widgets.AlertView placeholder;
     private Gtk.ScrolledWindow scrolled_window;
     private Gtk.Stack content;
@@ -168,14 +170,24 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         back_button.clicked.connect (() => {
             go_back ();
         });
+
+        update_button.clicked.connect (() => {
+            go_back ();
+            update (device, release);
+        });
     }
 
     public void update_view (Fwupd.Device device, Fwupd.Release? release) {
-        title_label.label = "<b>%s</b>".printf (device.get_name ());
+        this.device = device;
+        this.release = release;
+
+        var device_name = device.get_name ();
+
+        title_label.label = "<b>%s</b>".printf (device_name);
         update_button_revealer.reveal_child = release != null;
 
         if (release == null) {
-            placeholder.title = device.get_name ();
+            placeholder.title = device_name;
 
             var icons = device.get_icons ();
             if (icons.data != null) {
@@ -191,27 +203,13 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
         content.visible_child = scrolled_window;
 
-        switch (release.get_flags ()) {
-            case Fwupd.RELEASE_FLAG_IS_UPGRADE:
-                if (release.get_version () == device.get_version ()) {
-                    update_button.label = _("Up to date");
-                    update_button.sensitive = false;
-                    break;
-                }
-
-                update_button.label = _("Update");
-                update_button.sensitive = true;
-
-                update_button.clicked.connect (() => {
-                    go_back ();
-                    update (device, release);
-                });
-
-                break;
-            default:
-                update_button.label = _("Up to date");
-                update_button.sensitive = false;
-                break;
+        var release_version = release.get_version ();
+        if (release.get_flags () == Fwupd.RELEASE_FLAG_IS_UPGRADE && release_version != device.get_version ()) {
+            update_button.label = _("Update");
+            update_button.sensitive = true;
+        } else {
+            update_button.label = _("Up to date");
+            update_button.sensitive = false;
         }
 
         summary_label.label = release.get_summary ();
@@ -221,7 +219,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             description_label.label = "";
             warning ("Could not convert markup of release: %s", e.message);
         }
-        version_value_label.label = release.get_version ();
+        version_value_label.label = release_version;
         vendor_value_label.label = release.get_vendor ();
         size_value_label.label = GLib.format_size (release.get_size ());
 
