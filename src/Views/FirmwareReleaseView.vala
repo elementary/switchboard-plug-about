@@ -176,10 +176,12 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
         if (release == null) {
             placeholder.title = device.get_name ();
-            placeholder.icon_name = "application-x-firmware";
+
             var icons = device.get_icons ();
             if (icons.data != null) {
                 placeholder.icon_name = icons.data[0];
+            } else {
+                placeholder.icon_name = "application-x-firmware";
             }
 
             content.visible_child = placeholder;
