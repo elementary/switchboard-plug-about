@@ -218,7 +218,7 @@ public class About.FirmwareView : Gtk.Stack {
     private void header_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
         if (row2 == null && row1.is_updatable) {
             var header = new FirmwareHeaderRow (
-                ngettext ("%u Update Available", "%u Updates Available", num_updates).printf (num_updates)
+                dngettext (GETTEXT_PACKAGE, "%u Update Available", "%u Updates Available", num_updates).printf (num_updates)
             );
             row1.set_header (header);
         } else if (row2 == null || row1.is_updatable != row2.is_updatable) {
