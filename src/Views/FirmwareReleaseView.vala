@@ -34,6 +34,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     private Gtk.Label vendor_value_label;
     private Gtk.Label size_value_label;
     private Gtk.Label install_duration_value_label;
+    private Hdy.Deck? deck;
 
     construct {
         var back_button = new Gtk.Button.with_label (_("All Updates")) {
@@ -233,7 +234,10 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     }
 
     private void go_back () {
-        var deck = (Hdy.Deck) get_ancestor (typeof (Hdy.Deck));
+        if (deck == null) {
+            deck = (Hdy.Deck) get_ancestor (typeof (Hdy.Deck));
+        }
+
         deck.navigate (Hdy.NavigationDirection.BACK);
     }
 }
