@@ -20,6 +20,8 @@
  */
 
 public class About.FirmwareReleaseView : Gtk.Grid {
+    public signal void update (Fwupd.Device device, Fwupd.Release release);
+
     private Granite.Widgets.AlertView placeholder;
     private Gtk.ScrolledWindow scrolled_window;
     private Gtk.Stack content;
@@ -32,71 +34,6 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     private Gtk.Label vendor_value_label;
     private Gtk.Label size_value_label;
     private Gtk.Label install_duration_value_label;
-
-    public signal void update (Fwupd.Device device, Fwupd.Release release);
-
-    public void update_view (Fwupd.Device device, Fwupd.Release? release) {
-        title_label.label = "<b>%s</b>".printf (device.get_name ());
-        update_button_revealer.reveal_child = release != null;
-
-        if (release == null) {
-            placeholder.title = device.get_name ();
-            placeholder.icon_name = "application-x-firmware";
-            var icons = device.get_icons ();
-            if (icons.data != null) {
-                placeholder.icon_name = icons.data[0];
-            }
-
-            content.visible_child = placeholder;
-
-            return;
-        }
-
-        content.visible_child = scrolled_window;
-
-        switch (release.get_flags ()) {
-            case Fwupd.RELEASE_FLAG_IS_UPGRADE:
-                if (release.get_version () == device.get_version ()) {
-                    update_button.label = _("Up to date");
-                    update_button.sensitive = false;
-                    break;
-                }
-
-                update_button.label = _("Update");
-                update_button.sensitive = true;
-
-                update_button.clicked.connect (() => {
-                    go_back ();
-                    update (device, release);
-                });
-
-                break;
-            default:
-                update_button.label = _("Up to date");
-                update_button.sensitive = false;
-                break;
-        }
-
-        summary_label.label = release.get_summary ();
-        try {
-            description_label.label = AppStream.markup_convert_simple (release.get_description ());
-        } catch (Error e) {
-            description_label.label = "";
-            warning ("Could not convert markup of release: %s", e.message);
-        }
-        version_value_label.label = release.get_version ();
-        vendor_value_label.label = release.get_vendor ();
-        size_value_label.label = GLib.format_size (release.get_size ());
-
-        uint32 duration_minutes = release.get_install_duration () / 60;
-        if (duration_minutes < 1) {
-            install_duration_value_label.label = _("less than a minute");
-        } else {
-            install_duration_value_label.label = GLib.ngettext ("%llu minute", "%llu minutes", duration_minutes).printf (duration_minutes);
-        }
-
-        show_all ();
-    }
 
     construct {
         orientation = Gtk.Orientation.VERTICAL;
@@ -230,6 +167,69 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         back_button.clicked.connect (() => {
             go_back ();
         });
+
+        show_all ();
+    }
+
+    public void update_view (Fwupd.Device device, Fwupd.Release? release) {
+        title_label.label = "<b>%s</b>".printf (device.get_name ());
+        update_button_revealer.reveal_child = release != null;
+
+        if (release == null) {
+            placeholder.title = device.get_name ();
+            placeholder.icon_name = "application-x-firmware";
+            var icons = device.get_icons ();
+            if (icons.data != null) {
+                placeholder.icon_name = icons.data[0];
+            }
+
+            content.visible_child = placeholder;
+
+            return;
+        }
+
+        content.visible_child = scrolled_window;
+
+        switch (release.get_flags ()) {
+            case Fwupd.RELEASE_FLAG_IS_UPGRADE:
+                if (release.get_version () == device.get_version ()) {
+                    update_button.label = _("Up to date");
+                    update_button.sensitive = false;
+                    break;
+                }
+
+                update_button.label = _("Update");
+                update_button.sensitive = true;
+
+                update_button.clicked.connect (() => {
+                    go_back ();
+                    update (device, release);
+                });
+
+                break;
+            default:
+                update_button.label = _("Up to date");
+                update_button.sensitive = false;
+                break;
+        }
+
+        summary_label.label = release.get_summary ();
+        try {
+            description_label.label = AppStream.markup_convert_simple (release.get_description ());
+        } catch (Error e) {
+            description_label.label = "";
+            warning ("Could not convert markup of release: %s", e.message);
+        }
+        version_value_label.label = release.get_version ();
+        vendor_value_label.label = release.get_vendor ();
+        size_value_label.label = GLib.format_size (release.get_size ());
+
+        uint32 duration_minutes = release.get_install_duration () / 60;
+        if (duration_minutes < 1) {
+            install_duration_value_label.label = _("less than a minute");
+        } else {
+            install_duration_value_label.label = GLib.ngettext ("%llu minute", "%llu minutes", duration_minutes).printf (duration_minutes);
+        }
 
         show_all ();
     }
