@@ -47,7 +47,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             use_markup = true
         };
 
-        update_button = new Gtk.Button.with_label ("Up to date") {
+        update_button = new Gtk.Button.with_label ("") {
             halign = Gtk.Align.END,
             margin = 6,
             sensitive = false
