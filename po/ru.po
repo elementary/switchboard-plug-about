@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-20 14:22+0000\n"
+"POT-Creation-Date: 2021-03-25 22:00+0000\n"
 "PO-Revision-Date: 2021-03-18 02:32+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -73,42 +73,87 @@ msgstr "Получить поддержку"
 msgid "Updates"
 msgstr "Обновления"
 
-#: src/Views/FirmwareView.vala:35
+#: src/Views/FirmwareReleaseView.vala:42
+#, fuzzy
+#| msgid "Updates"
+msgid "All Updates"
+msgstr "Обновления"
+
+#: src/Views/FirmwareReleaseView.vala:81
+#, fuzzy
+#| msgid "Session"
+msgid "Version:"
+msgstr "Сессия"
+
+#: src/Views/FirmwareReleaseView.vala:90
+msgid "Vendor:"
+msgstr ""
+
+#: src/Views/FirmwareReleaseView.vala:99
+msgid "Size:"
+msgstr ""
+
+#: src/Views/FirmwareReleaseView.vala:108
+msgid "Estimated time to install:"
+msgstr ""
+
+#: src/Views/FirmwareReleaseView.vala:137
+msgid "There are no releases available for this device."
+msgstr ""
+
+#: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
+msgid "Update"
+msgstr "Обновление"
+
+#: src/Views/FirmwareReleaseView.vala:211
+#, fuzzy
+#| msgid "Up to Date"
+msgid "Up to date"
+msgstr "Обновления не требуются"
+
+#: src/Views/FirmwareReleaseView.vala:228
+msgid "less than a minute"
+msgstr ""
+
+#: src/Views/FirmwareReleaseView.vala:230
+#, c-format
+msgid "%llu minute"
+msgid_plural "%llu minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
 msgstr "Не отключайте устройство во время обновления."
 
-#: src/Views/FirmwareView.vala:46
+#: src/Views/FirmwareView.vala:43
 msgid "Checking for Updates"
 msgstr "Проверка обновлений"
 
-#: src/Views/FirmwareView.vala:47
+#: src/Views/FirmwareView.vala:44
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Подключение к службе прошивки и поиск обновлений."
 
-#: src/Views/FirmwareView.vala:107
+#: src/Views/FirmwareView.vala:113
 msgid "Firmware Updates Are Not Available"
 msgstr "Обновления прошивки недоступны"
 
-#: src/Views/FirmwareView.vala:108
+#: src/Views/FirmwareView.vala:114
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Обновления прошивки не поддерживается на этом и любым подключенным "
 "устройством."
 
-#: src/Views/FirmwareView.vala:111
+#: src/Views/FirmwareView.vala:117
 msgid "The Firmware Service Is Not Available"
 msgstr "Служба прошивки недоступна"
 
-#: src/Views/FirmwareView.vala:112
+#: src/Views/FirmwareView.vala:118
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Убедитесь, что функция \"fwupd\" установлена и включена."
 
-#: src/Views/FirmwareView.vala:130
-#, c-format
-msgid "“%s” is being updated"
-msgstr "«%s» обновляется"
-
-#: src/Views/FirmwareView.vala:186
+#: src/Views/FirmwareView.vala:209
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
@@ -116,9 +161,51 @@ msgstr[0] "%u Доступно обновление"
 msgstr[1] "%u Доступно обновлений"
 msgstr[2] "%u Доступных обновлений"
 
-#: src/Views/FirmwareView.vala:190
+#: src/Views/FirmwareView.vala:213
 msgid "Up to Date"
 msgstr "Обновления не требуются"
+
+#: src/Views/FirmwareView.vala:233
+#, c-format
+msgid "“%s” is being updated"
+msgstr "«%s» обновляется"
+
+#: src/Views/FirmwareView.vala:299
+msgid "Failed to install firmware release"
+msgstr "Не удалось установить версию прошивки"
+
+#: src/Views/FirmwareView.vala:320
+#, c-format
+msgid "“%s” needs to manually be put in update mode"
+msgstr "«%s» нужно вручную перевести в режим обновления"
+
+#: src/Views/FirmwareView.vala:329
+msgid "Continue"
+msgstr "Продолжить"
+
+#: src/Views/FirmwareView.vala:347
+msgid "An update requires the system to restart to complete"
+msgstr "Обновление требует перезагрузки системы для завершения"
+
+#: src/Views/FirmwareView.vala:348
+msgid "This will close all open applications and restart this device."
+msgstr "Это закроет все открытые приложения и перезапустит данное устройство."
+
+#: src/Views/FirmwareView.vala:356
+msgid "Restart"
+msgstr "Перезагрузка"
+
+#: src/Views/FirmwareView.vala:369
+msgid "An update requires the system to shut down to complete"
+msgstr "Обновление требует завершения работы системы"
+
+#: src/Views/FirmwareView.vala:370
+msgid "This will close all open applications and turn off this device."
+msgstr "Это закроет все открытые приложения и выключит данное устройство."
+
+#: src/Views/FirmwareView.vala:378
+msgid "Shut Down"
+msgstr "Выключить"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -215,47 +302,6 @@ msgstr ""
 msgid "Restore Settings"
 msgstr "Восстановить настройки"
 
-#: src/Widgets/FirmwareUpdateRow.vala:77
-msgid "Update"
-msgstr "Обновление"
-
-#: src/Widgets/FirmwareUpdateRow.vala:153
-msgid "Failed to install firmware release"
-msgstr "Не удалось установить версию прошивки"
-
-#: src/Widgets/FirmwareUpdateRow.vala:168
-#, c-format
-msgid "“%s” needs to manually be put in update mode"
-msgstr "«%s» нужно вручную перевести в режим обновления"
-
-#: src/Widgets/FirmwareUpdateRow.vala:175
-msgid "Continue"
-msgstr "Продолжить"
-
-#: src/Widgets/FirmwareUpdateRow.vala:195
-msgid "An update requires the system to restart to complete"
-msgstr "Обновление требует перезагрузки системы для завершения"
-
-#: src/Widgets/FirmwareUpdateRow.vala:196
-msgid "This will close all open applications and restart this device."
-msgstr "Это закроет все открытые приложения и перезапустит данное устройство."
-
-#: src/Widgets/FirmwareUpdateRow.vala:202
-msgid "Restart"
-msgstr "Перезагрузка"
-
-#: src/Widgets/FirmwareUpdateRow.vala:217
-msgid "An update requires the system to shut down to complete"
-msgstr "Обновление требует завершения работы системы"
-
-#: src/Widgets/FirmwareUpdateRow.vala:218
-msgid "This will close all open applications and turn off this device."
-msgstr "Это закроет все открытые приложения и выключит данное устройство."
-
-#: src/Widgets/FirmwareUpdateRow.vala:224
-msgid "Shut Down"
-msgstr "Выключить"
-
 #, fuzzy
 #~| msgid "Updates"
 #~ msgid "Updatable"
@@ -305,9 +351,6 @@ msgstr "Выключить"
 
 #~ msgid "Notifications"
 #~ msgstr "Уведомления"
-
-#~ msgid "Session"
-#~ msgstr "Сессия"
 
 #~ msgid "Panel Indicators"
 #~ msgstr "Индикаторы"
