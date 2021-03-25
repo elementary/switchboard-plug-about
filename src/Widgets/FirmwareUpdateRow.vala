@@ -20,11 +20,17 @@
 */
 
 public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
-    public Fwupd.Device device { get; construct set; }
-    public Fwupd.Release? release { get; construct set; }
+    public Fwupd.Device device { get; construct; }
+    public Fwupd.Release? release { get; construct; }
+
+    private bool? _is_updatable;
     public bool is_updatable {
         get {
-            return release != null && device.get_version () != release.get_version ();
+            if (_is_updatable == null) {
+                _is_updatable = release != null && device.get_version () != release.get_version ();
+            }
+
+            return _is_updatable;
         }
     }
 
