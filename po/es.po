@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-25 22:00+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-03-26 10:59+0000\n"
+"Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/es/>\n"
 "Language: es\n"
@@ -88,15 +88,15 @@ msgstr ""
 
 #: src/Views/FirmwareReleaseView.vala:99
 msgid "Size:"
-msgstr ""
+msgstr "Tamaño:"
 
 #: src/Views/FirmwareReleaseView.vala:108
 msgid "Estimated time to install:"
-msgstr ""
+msgstr "Tiempo estimado de instalación:"
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "No hay versiones disponibles para este dispositivo."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
 msgid "Update"
@@ -110,7 +110,7 @@ msgstr "Al día"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr ""
+msgstr "menos de un minuto"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
