@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-25 22:00+0000\n"
-"PO-Revision-Date: 2021-03-26 10:59+0000\n"
+"PO-Revision-Date: 2021-04-01 12:56+0000\n"
 "Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/es/>\n"
@@ -73,10 +73,8 @@ msgid "Updates"
 msgstr "Actualizaciones"
 
 #: src/Views/FirmwareReleaseView.vala:42
-#, fuzzy
-#| msgid "Updates"
 msgid "All Updates"
-msgstr "Actualizaciones"
+msgstr "Todas las actualizaciones"
 
 #: src/Views/FirmwareReleaseView.vala:81
 msgid "Version:"
@@ -103,10 +101,8 @@ msgid "Update"
 msgstr "Actualizar"
 
 #: src/Views/FirmwareReleaseView.vala:211
-#, fuzzy
-#| msgid "Up to Date"
 msgid "Up to date"
-msgstr "Al día"
+msgstr "Actualizado"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
@@ -116,8 +112,8 @@ msgstr "menos de un minuto"
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%llu minuto"
+msgstr[1] "%llu minutos"
 
 #: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
