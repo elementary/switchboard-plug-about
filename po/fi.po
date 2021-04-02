@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-25 22:00+0000\n"
+"POT-Creation-Date: 2021-04-02 20:56+0000\n"
 "PO-Revision-Date: 2021-03-26 00:33+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -36,7 +36,7 @@ msgstr "Käyttöjärjestelmä"
 msgid "Hardware"
 msgstr "Laitteisto"
 
-#: src/Plug.vala:61 src/Plug.vala:109
+#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Laiteohjelmisto"
 
@@ -119,87 +119,93 @@ msgid_plural "%llu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/FirmwareView.vala:37
+#: src/Views/FirmwareView.vala:36
+msgid ""
+"Firmware updates provided by device manufacturers can improve performance "
+"and fix critical security issues."
+msgstr ""
+
+#: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
 msgstr "Älä kytke laitetta irti päivityksen aikana."
 
-#: src/Views/FirmwareView.vala:43
+#: src/Views/FirmwareView.vala:49
 msgid "Checking for Updates"
 msgstr "Tarkistetaan päivityksiä"
 
-#: src/Views/FirmwareView.vala:44
+#: src/Views/FirmwareView.vala:50
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Yhdistetään laiteohjelmistopalveluun ja etsitään päivityksiä."
 
-#: src/Views/FirmwareView.vala:113
+#: src/Views/FirmwareView.vala:123
 msgid "Firmware Updates Are Not Available"
 msgstr "Laiteohjelmistopäivityksiä ei ole saatavilla"
 
-#: src/Views/FirmwareView.vala:114
+#: src/Views/FirmwareView.vala:124
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Laiteohjelmiston päivitykset eivät ole tuettuja tällä tai millään muullakaan "
 "yhdistetyllä laitteella."
 
-#: src/Views/FirmwareView.vala:117
+#: src/Views/FirmwareView.vala:127
 msgid "The Firmware Service Is Not Available"
 msgstr "Laiteohjelmistopalvelu ei ole käytettävissä"
 
-#: src/Views/FirmwareView.vala:118
+#: src/Views/FirmwareView.vala:128
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Varmista että “fwupd” on asennettu ja käytössä."
 
-#: src/Views/FirmwareView.vala:209
+#: src/Views/FirmwareView.vala:219
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u päivitys saatavilla"
 msgstr[1] "%u päivitystä saatavilla"
 
-#: src/Views/FirmwareView.vala:213
+#: src/Views/FirmwareView.vala:223
 msgid "Up to Date"
 msgstr "Ajan tasalla"
 
-#: src/Views/FirmwareView.vala:233
+#: src/Views/FirmwareView.vala:243
 #, c-format
 msgid "“%s” is being updated"
 msgstr "“%s” on päivityksen alaisena"
 
-#: src/Views/FirmwareView.vala:299
+#: src/Views/FirmwareView.vala:309
 msgid "Failed to install firmware release"
 msgstr "Laiteohjelmiston julkaisun asentaminen epäonnistui"
 
-#: src/Views/FirmwareView.vala:320
+#: src/Views/FirmwareView.vala:330
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "“%s” tulee asettaa manuaalisesti päivitystilaan"
 
-#: src/Views/FirmwareView.vala:329
+#: src/Views/FirmwareView.vala:339
 msgid "Continue"
 msgstr "Jatka"
 
-#: src/Views/FirmwareView.vala:347
+#: src/Views/FirmwareView.vala:357
 msgid "An update requires the system to restart to complete"
 msgstr "Päivitys vaatii valmistuakseen järjestelmän uudelleenkäynnistyksen"
 
-#: src/Views/FirmwareView.vala:348
+#: src/Views/FirmwareView.vala:358
 msgid "This will close all open applications and restart this device."
 msgstr ""
 "Tämä sulkee kaikki avoimet sovellukset ja käynnistää laitteen uudelleen."
 
-#: src/Views/FirmwareView.vala:356
+#: src/Views/FirmwareView.vala:366
 msgid "Restart"
 msgstr "Käynnistä uudelleen"
 
-#: src/Views/FirmwareView.vala:369
+#: src/Views/FirmwareView.vala:379
 msgid "An update requires the system to shut down to complete"
 msgstr "Päivitys vaatii valmistuakseen järjestelmän sammuttamisen"
 
-#: src/Views/FirmwareView.vala:370
+#: src/Views/FirmwareView.vala:380
 msgid "This will close all open applications and turn off this device."
 msgstr "Tämä sulkee kaikki avoimet sovellukset ja sammuttaa laitteen."
 
-#: src/Views/FirmwareView.vala:378
+#: src/Views/FirmwareView.vala:388
 msgid "Shut Down"
 msgstr "Sammuta"
 

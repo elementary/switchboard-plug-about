@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-25 22:00+0000\n"
+"POT-Creation-Date: 2021-04-02 20:56+0000\n"
 "PO-Revision-Date: 2021-03-27 13:48+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -37,7 +37,7 @@ msgstr "Операционная система"
 msgid "Hardware"
 msgstr "Оборудование"
 
-#: src/Plug.vala:61 src/Plug.vala:109
+#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Прошивка"
 
@@ -117,37 +117,43 @@ msgstr[0] "%llu минута"
 msgstr[1] "%llu минуты"
 msgstr[2] "%llu минут"
 
-#: src/Views/FirmwareView.vala:37
+#: src/Views/FirmwareView.vala:36
+msgid ""
+"Firmware updates provided by device manufacturers can improve performance "
+"and fix critical security issues."
+msgstr ""
+
+#: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
 msgstr "Не отключайте устройство во время обновления."
 
-#: src/Views/FirmwareView.vala:43
+#: src/Views/FirmwareView.vala:49
 msgid "Checking for Updates"
 msgstr "Проверка обновлений"
 
-#: src/Views/FirmwareView.vala:44
+#: src/Views/FirmwareView.vala:50
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Подключение к службе прошивки и поиск обновлений."
 
-#: src/Views/FirmwareView.vala:113
+#: src/Views/FirmwareView.vala:123
 msgid "Firmware Updates Are Not Available"
 msgstr "Обновления прошивки недоступны"
 
-#: src/Views/FirmwareView.vala:114
+#: src/Views/FirmwareView.vala:124
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Обновления прошивки не поддерживается на этом и любым подключенным "
 "устройством."
 
-#: src/Views/FirmwareView.vala:117
+#: src/Views/FirmwareView.vala:127
 msgid "The Firmware Service Is Not Available"
 msgstr "Служба прошивки недоступна"
 
-#: src/Views/FirmwareView.vala:118
+#: src/Views/FirmwareView.vala:128
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Убедитесь, что функция \"fwupd\" установлена и включена."
 
-#: src/Views/FirmwareView.vala:209
+#: src/Views/FirmwareView.vala:219
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
@@ -155,49 +161,49 @@ msgstr[0] "%u Доступно обновление"
 msgstr[1] "%u Доступно обновлений"
 msgstr[2] "%u Доступных обновлений"
 
-#: src/Views/FirmwareView.vala:213
+#: src/Views/FirmwareView.vala:223
 msgid "Up to Date"
 msgstr "Обновления не требуются"
 
-#: src/Views/FirmwareView.vala:233
+#: src/Views/FirmwareView.vala:243
 #, c-format
 msgid "“%s” is being updated"
 msgstr "«%s» обновляется"
 
-#: src/Views/FirmwareView.vala:299
+#: src/Views/FirmwareView.vala:309
 msgid "Failed to install firmware release"
 msgstr "Не удалось установить версию прошивки"
 
-#: src/Views/FirmwareView.vala:320
+#: src/Views/FirmwareView.vala:330
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "«%s» нужно вручную перевести в режим обновления"
 
-#: src/Views/FirmwareView.vala:329
+#: src/Views/FirmwareView.vala:339
 msgid "Continue"
 msgstr "Продолжить"
 
-#: src/Views/FirmwareView.vala:347
+#: src/Views/FirmwareView.vala:357
 msgid "An update requires the system to restart to complete"
 msgstr "Обновление требует перезагрузки системы для завершения"
 
-#: src/Views/FirmwareView.vala:348
+#: src/Views/FirmwareView.vala:358
 msgid "This will close all open applications and restart this device."
 msgstr "Это закроет все открытые приложения и перезапустит данное устройство."
 
-#: src/Views/FirmwareView.vala:356
+#: src/Views/FirmwareView.vala:366
 msgid "Restart"
 msgstr "Перезагрузка"
 
-#: src/Views/FirmwareView.vala:369
+#: src/Views/FirmwareView.vala:379
 msgid "An update requires the system to shut down to complete"
 msgstr "Обновление требует завершения работы системы"
 
-#: src/Views/FirmwareView.vala:370
+#: src/Views/FirmwareView.vala:380
 msgid "This will close all open applications and turn off this device."
 msgstr "Это закроет все открытые приложения и выключит данное устройство."
 
-#: src/Views/FirmwareView.vala:378
+#: src/Views/FirmwareView.vala:388
 msgid "Shut Down"
 msgstr "Выключить"
 
