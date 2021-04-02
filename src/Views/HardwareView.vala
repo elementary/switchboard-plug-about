@@ -23,7 +23,7 @@
 public class About.HardwareView : Gtk.Grid {
     private bool oem_enabled;
     private string manufacturer_icon_path;
-    private string manufacturer_icon_dark_path;
+    private string? manufacturer_icon_dark_path = null;
     private string manufacturer_name;
     private string manufacturer_support_url;
     private string memory;
@@ -42,7 +42,11 @@ public class About.HardwareView : Gtk.Grid {
 
     private Gtk.Label storage_info;
 
+    private Granite.Settings granite_settings;
+
     construct {
+        granite_settings = Granite.Settings.get_default ();
+
         fetch_hardware_info ();
 
         var product_name_info = new Gtk.Label (get_host_name ()) {
@@ -152,12 +156,20 @@ public class About.HardwareView : Gtk.Grid {
 
         add (manufacturer_logo);
         add (details_grid);
+
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            update_manufacturer_logo ();
+        });
     }
 
     private void update_manufacturer_logo () {
-        var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
+        string path = manufacturer_icon_path;
+        if (granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK && manufacturer_icon_dark_path != null) {
+            path = manufacturer_icon_dark_path;
+        }
+        var fileicon = new FileIcon (File.new_for_path (path));
 
-        if (manufacturer_icon_path != null) {
+        if (path != null) {
             manufacturer_logo.gicon = fileicon;
         }
 
