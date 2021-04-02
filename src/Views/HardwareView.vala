@@ -23,6 +23,7 @@
 public class About.HardwareView : Gtk.Grid {
     private bool oem_enabled;
     private string manufacturer_icon_path;
+    private string manufacturer_icon_dark_path;
     private string manufacturer_name;
     private string manufacturer_support_url;
     private string memory;
@@ -352,6 +353,10 @@ public class About.HardwareView : Gtk.Grid {
 
             if (oem_file.has_key ("OEM", "Logo")) {
                 manufacturer_icon_path = oem_file.get_string ("OEM", "Logo");
+            }
+
+            if (oem_file.has_key ("OEM", "LogoDark")) {
+                manufacturer_icon_dark_path = oem_file.get_string ("OEM", "LogoDark");
             }
 
             if (oem_file.has_key ("OEM", "URL")) {
