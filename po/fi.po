@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-02-09 20:16+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"POT-Creation-Date: 2021-03-25 22:00+0000\n"
+"PO-Revision-Date: 2021-03-26 00:33+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fi/>\n"
 "Language: fi\n"
@@ -72,56 +72,136 @@ msgstr "Hanki tukea"
 msgid "Updates"
 msgstr "Päivitykset"
 
-#: src/Views/FirmwareView.vala:35
+#: src/Views/FirmwareReleaseView.vala:42
+#, fuzzy
+#| msgid "Updates"
+msgid "All Updates"
+msgstr "Päivitykset"
+
+#: src/Views/FirmwareReleaseView.vala:81
+msgid "Version:"
+msgstr "Versio:"
+
+#: src/Views/FirmwareReleaseView.vala:90
+msgid "Vendor:"
+msgstr ""
+
+#: src/Views/FirmwareReleaseView.vala:99
+msgid "Size:"
+msgstr ""
+
+#: src/Views/FirmwareReleaseView.vala:108
+msgid "Estimated time to install:"
+msgstr ""
+
+#: src/Views/FirmwareReleaseView.vala:137
+msgid "There are no releases available for this device."
+msgstr ""
+
+#: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
+msgid "Update"
+msgstr "Päivitä"
+
+#: src/Views/FirmwareReleaseView.vala:211
+#, fuzzy
+#| msgid "Up to Date"
+msgid "Up to date"
+msgstr "Ajan tasalla"
+
+#: src/Views/FirmwareReleaseView.vala:228
+msgid "less than a minute"
+msgstr ""
+
+#: src/Views/FirmwareReleaseView.vala:230
+#, c-format
+msgid "%llu minute"
+msgid_plural "%llu minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
 msgstr "Älä kytke laitetta irti päivityksen aikana."
 
-#: src/Views/FirmwareView.vala:46
-#, fuzzy
-#| msgid "Check for Updates"
+#: src/Views/FirmwareView.vala:43
 msgid "Checking for Updates"
-msgstr "Tarkista päivitykset"
+msgstr "Tarkistetaan päivityksiä"
 
-#: src/Views/FirmwareView.vala:47
+#: src/Views/FirmwareView.vala:44
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "Yhdistetään laiteohjelmistopalveluun ja etsitään päivityksiä."
 
-#: src/Views/FirmwareView.vala:107
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
+#: src/Views/FirmwareView.vala:113
 msgid "Firmware Updates Are Not Available"
-msgstr "%u päivitys saatavilla"
+msgstr "Laiteohjelmistopäivityksiä ei ole saatavilla"
 
-#: src/Views/FirmwareView.vala:108
+#: src/Views/FirmwareView.vala:114
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Laiteohjelmiston päivitykset eivät ole tuettuja tällä tai millään muullakaan "
 "yhdistetyllä laitteella."
 
-#: src/Views/FirmwareView.vala:111
+#: src/Views/FirmwareView.vala:117
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "Laiteohjelmistopalvelu ei ole käytettävissä"
 
-#: src/Views/FirmwareView.vala:112
+#: src/Views/FirmwareView.vala:118
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "Varmista että “fwupd” on asennettu ja käytössä."
 
-#: src/Views/FirmwareView.vala:130
-#, c-format
-msgid "“%s” is being updated"
-msgstr "“%s” on päivityksen alaisena"
-
-#: src/Views/FirmwareView.vala:186
+#: src/Views/FirmwareView.vala:209
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u päivitys saatavilla"
 msgstr[1] "%u päivitystä saatavilla"
 
-#: src/Views/FirmwareView.vala:190
+#: src/Views/FirmwareView.vala:213
 msgid "Up to Date"
 msgstr "Ajan tasalla"
+
+#: src/Views/FirmwareView.vala:233
+#, c-format
+msgid "“%s” is being updated"
+msgstr "“%s” on päivityksen alaisena"
+
+#: src/Views/FirmwareView.vala:299
+msgid "Failed to install firmware release"
+msgstr "Laiteohjelmiston julkaisun asentaminen epäonnistui"
+
+#: src/Views/FirmwareView.vala:320
+#, c-format
+msgid "“%s” needs to manually be put in update mode"
+msgstr "“%s” tulee asettaa manuaalisesti päivitystilaan"
+
+#: src/Views/FirmwareView.vala:329
+msgid "Continue"
+msgstr "Jatka"
+
+#: src/Views/FirmwareView.vala:347
+msgid "An update requires the system to restart to complete"
+msgstr "Päivitys vaatii valmistuakseen järjestelmän uudelleenkäynnistyksen"
+
+#: src/Views/FirmwareView.vala:348
+msgid "This will close all open applications and restart this device."
+msgstr ""
+"Tämä sulkee kaikki avoimet sovellukset ja käynnistää laitteen uudelleen."
+
+#: src/Views/FirmwareView.vala:356
+msgid "Restart"
+msgstr "Käynnistä uudelleen"
+
+#: src/Views/FirmwareView.vala:369
+msgid "An update requires the system to shut down to complete"
+msgstr "Päivitys vaatii valmistuakseen järjestelmän sammuttamisen"
+
+#: src/Views/FirmwareView.vala:370
+msgid "This will close all open applications and turn off this device."
+msgstr "Tämä sulkee kaikki avoimet sovellukset ja sammuttaa laitteen."
+
+#: src/Views/FirmwareView.vala:378
+msgid "Shut Down"
+msgstr "Sammuta"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -217,48 +297,6 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:232
 msgid "Restore Settings"
 msgstr "Palauta oletusasetukset"
-
-#: src/Widgets/FirmwareUpdateRow.vala:77
-msgid "Update"
-msgstr "Päivitä"
-
-#: src/Widgets/FirmwareUpdateRow.vala:153
-msgid "Failed to install firmware release"
-msgstr "Laiteohjelmiston julkaisun asentaminen epäonnistui"
-
-#: src/Widgets/FirmwareUpdateRow.vala:168
-#, c-format
-msgid "“%s” needs to manually be put in update mode"
-msgstr "“%s” tulee asettaa manuaalisesti päivitystilaan"
-
-#: src/Widgets/FirmwareUpdateRow.vala:175
-msgid "Continue"
-msgstr "Jatka"
-
-#: src/Widgets/FirmwareUpdateRow.vala:195
-msgid "An update requires the system to restart to complete"
-msgstr "Päivitys vaatii valmistuakseen järjestelmän uudelleenkäynnistyksen"
-
-#: src/Widgets/FirmwareUpdateRow.vala:196
-msgid "This will close all open applications and restart this device."
-msgstr ""
-"Tämä sulkee kaikki avoimet sovellukset ja käynnistää laitteen uudelleen."
-
-#: src/Widgets/FirmwareUpdateRow.vala:202
-msgid "Restart"
-msgstr "Käynnistä uudelleen"
-
-#: src/Widgets/FirmwareUpdateRow.vala:217
-msgid "An update requires the system to shut down to complete"
-msgstr "Päivitys vaatii valmistuakseen järjestelmän sammuttamisen"
-
-#: src/Widgets/FirmwareUpdateRow.vala:218
-msgid "This will close all open applications and turn off this device."
-msgstr "Tämä sulkee kaikki avoimet sovellukset ja sammuttaa laitteen."
-
-#: src/Widgets/FirmwareUpdateRow.vala:224
-msgid "Shut Down"
-msgstr "Sammuta"
 
 #~ msgid "No Updatable Devices"
 #~ msgstr "Ei päivitettävissä olevia laitteita"
@@ -361,9 +399,6 @@ msgstr "Sammuta"
 
 #~ msgid "Notifications"
 #~ msgstr "Ilmoitukset"
-
-#~ msgid "Session"
-#~ msgstr "Istunto"
 
 #~ msgid "Panel Indicators"
 #~ msgstr "Paneelin ilmaisimet"

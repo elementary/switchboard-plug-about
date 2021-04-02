@@ -3,6 +3,7 @@ plug_files = files(
     'Interfaces/FirmwareClient.vala',
     'Interfaces/LoginManager.vala',
     'Utils/ARMPartDecoder.vala',
+    'Views/FirmwareReleaseView.vala',
     'Views/FirmwareView.vala',
     'Views/HardwareView.vala',
     'Views/OperatingSystemView.vala',
@@ -12,9 +13,18 @@ plug_files = files(
 switchboard_dep = dependency('switchboard-2.0')
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
+config_data = configuration_data()
+config_data.set('GETTEXT_PACKAGE', meson.project_name())
+config_vala = configure_file(
+    input: 'Config.vala.in',
+    output: '@BASENAME@',
+    configuration: config_data
+)
+
 shared_module(
     meson.project_name(),
     plug_files,
+    config_vala,
     css_gresource,
     dependencies: [
         dependency('fwupd'),
@@ -25,6 +35,7 @@ shared_module(
         dependency('gtk+-3.0'),
         dependency('libgtop-2.0'),
         dependency('libhandy-1'),
+        dependency ('appstream', version: '>=0.12.10'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep
     ],

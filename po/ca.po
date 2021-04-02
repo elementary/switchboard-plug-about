@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-20 14:22+0000\n"
-"PO-Revision-Date: 2021-02-22 22:57+0000\n"
+"POT-Creation-Date: 2021-03-25 22:00+0000\n"
+"PO-Revision-Date: 2021-03-28 18:59+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ca/>\n"
@@ -72,52 +72,135 @@ msgstr "Obteniu assistència"
 msgid "Updates"
 msgstr "Actualitzacions"
 
-#: src/Views/FirmwareView.vala:35
+#: src/Views/FirmwareReleaseView.vala:42
+msgid "All Updates"
+msgstr "Totes les actualitzacions"
+
+#: src/Views/FirmwareReleaseView.vala:81
+msgid "Version:"
+msgstr "Versió:"
+
+#: src/Views/FirmwareReleaseView.vala:90
+msgid "Vendor:"
+msgstr "Proveïdor:"
+
+#: src/Views/FirmwareReleaseView.vala:99
+msgid "Size:"
+msgstr "Mida:"
+
+#: src/Views/FirmwareReleaseView.vala:108
+msgid "Estimated time to install:"
+msgstr "Temps d'instal·lació estimat:"
+
+#: src/Views/FirmwareReleaseView.vala:137
+msgid "There are no releases available for this device."
+msgstr "No hi ha cap versió nova disponible per a aquest dispositiu."
+
+#: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
+msgid "Update"
+msgstr "Actualitza"
+
+#: src/Views/FirmwareReleaseView.vala:211
+msgid "Up to date"
+msgstr "Actualitzat"
+
+#: src/Views/FirmwareReleaseView.vala:228
+msgid "less than a minute"
+msgstr "menys d'un minut"
+
+#: src/Views/FirmwareReleaseView.vala:230
+#, c-format
+msgid "%llu minute"
+msgid_plural "%llu minutes"
+msgstr[0] "%llu minut"
+msgstr[1] "%llu minuts"
+
+#: src/Views/FirmwareView.vala:37
 msgid "Do not unplug the device during the update."
 msgstr "No desendolleu el dispositiu durant l'actualització."
 
-#: src/Views/FirmwareView.vala:46
+#: src/Views/FirmwareView.vala:43
 msgid "Checking for Updates"
 msgstr "Es comprova si hi ha actualitzacions."
 
-#: src/Views/FirmwareView.vala:47
+#: src/Views/FirmwareView.vala:44
 msgid "Connecting to the firmware service and searching for updates."
 msgstr ""
 "Es connecta al servei de microprogramari i es comprova si hi ha "
 "actualitzacions."
 
-#: src/Views/FirmwareView.vala:107
+#: src/Views/FirmwareView.vala:113
 msgid "Firmware Updates Are Not Available"
 msgstr "No hi ha cap actualització de microprogramari disponible."
 
-#: src/Views/FirmwareView.vala:108
+#: src/Views/FirmwareView.vala:114
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "No s'admeten actualitzacions d'aquest o qualsevol dispositiu connectat."
 
-#: src/Views/FirmwareView.vala:111
+#: src/Views/FirmwareView.vala:117
 msgid "The Firmware Service Is Not Available"
 msgstr "El servei de microprogramari no està disponible."
 
-#: src/Views/FirmwareView.vala:112
+#: src/Views/FirmwareView.vala:118
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Si us plau, assegureu-vos que fwupd estigui instal·lat i habilitat."
 
-#: src/Views/FirmwareView.vala:130
-#, c-format
-msgid "“%s” is being updated"
-msgstr "S'actualitza %s."
-
-#: src/Views/FirmwareView.vala:186
+#: src/Views/FirmwareView.vala:209
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u actualització disponible"
 msgstr[1] "%u actualitzacions disponibles"
 
-#: src/Views/FirmwareView.vala:190
+#: src/Views/FirmwareView.vala:213
 msgid "Up to Date"
 msgstr "Actualitzada"
+
+#: src/Views/FirmwareView.vala:233
+#, c-format
+msgid "“%s” is being updated"
+msgstr "S'actualitza %s."
+
+#: src/Views/FirmwareView.vala:299
+msgid "Failed to install firmware release"
+msgstr "Ha fallat instal·lar la versió del microprogramari."
+
+#: src/Views/FirmwareView.vala:320
+#, c-format
+msgid "“%s” needs to manually be put in update mode"
+msgstr "Cal que es posi %s en mode d'actualització manualment."
+
+#: src/Views/FirmwareView.vala:329
+msgid "Continue"
+msgstr "Continua"
+
+#: src/Views/FirmwareView.vala:347
+msgid "An update requires the system to restart to complete"
+msgstr ""
+"Una actualització requereix que els sistema es reiniciï per completar-se."
+
+#: src/Views/FirmwareView.vala:348
+msgid "This will close all open applications and restart this device."
+msgstr ""
+"Això tancarà totes les aplicacions obertes i reiniciarà aquest dispositiu."
+
+#: src/Views/FirmwareView.vala:356
+msgid "Restart"
+msgstr "Reinicia"
+
+#: src/Views/FirmwareView.vala:369
+msgid "An update requires the system to shut down to complete"
+msgstr "Una actualització requereix que els sistema s'aturi per completar-se."
+
+#: src/Views/FirmwareView.vala:370
+msgid "This will close all open applications and turn off this device."
+msgstr ""
+"Això tancarà totes les aplicacions obertes i aturarà aquest dispositiu."
+
+#: src/Views/FirmwareView.vala:378
+msgid "Shut Down"
+msgstr "Atura't"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -214,50 +297,6 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:232
 msgid "Restore Settings"
 msgstr "Restaura els paràmetres"
-
-#: src/Widgets/FirmwareUpdateRow.vala:77
-msgid "Update"
-msgstr "Actualitza"
-
-#: src/Widgets/FirmwareUpdateRow.vala:153
-msgid "Failed to install firmware release"
-msgstr "Ha fallat instal·lar la versió del microprogramari."
-
-#: src/Widgets/FirmwareUpdateRow.vala:168
-#, c-format
-msgid "“%s” needs to manually be put in update mode"
-msgstr "Cal que es posi %s en mode d'actualització manualment."
-
-#: src/Widgets/FirmwareUpdateRow.vala:175
-msgid "Continue"
-msgstr "Continua"
-
-#: src/Widgets/FirmwareUpdateRow.vala:195
-msgid "An update requires the system to restart to complete"
-msgstr ""
-"Una actualització requereix que els sistema es reiniciï per completar-se."
-
-#: src/Widgets/FirmwareUpdateRow.vala:196
-msgid "This will close all open applications and restart this device."
-msgstr ""
-"Això tancarà totes les aplicacions obertes i reiniciarà aquest dispositiu."
-
-#: src/Widgets/FirmwareUpdateRow.vala:202
-msgid "Restart"
-msgstr "Reinicia"
-
-#: src/Widgets/FirmwareUpdateRow.vala:217
-msgid "An update requires the system to shut down to complete"
-msgstr "Una actualització requereix que els sistema s'aturi per completar-se."
-
-#: src/Widgets/FirmwareUpdateRow.vala:218
-msgid "This will close all open applications and turn off this device."
-msgstr ""
-"Això tancarà totes les aplicacions obertes i aturarà aquest dispositiu."
-
-#: src/Widgets/FirmwareUpdateRow.vala:224
-msgid "Shut Down"
-msgstr "Atura't"
 
 #~ msgid "No Updatable Devices"
 #~ msgstr "Dispositius no actualitzables"
@@ -368,9 +407,6 @@ msgstr "Atura't"
 
 #~ msgid "Notifications"
 #~ msgstr "Notificacions"
-
-#~ msgid "Session"
-#~ msgstr "Sessió"
 
 #~ msgid "Panel Indicators"
 #~ msgstr "Indicadors del plafó"

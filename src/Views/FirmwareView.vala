@@ -21,12 +21,13 @@
 
 public class About.FirmwareView : Granite.SimpleSettingsPage {
     private Gtk.Stack stack;
-    private Gtk.ScrolledWindow scrolled_window;
+    private Hdy.Deck deck;
+    private FirmwareReleaseView firmware_release_view;
     private Granite.Widgets.AlertView progress_alert_view;
     private Granite.Widgets.AlertView placeholder_alert_view;
-    private Gtk.Grid progress_view;
     private Gtk.ListBox update_list;
     private uint num_updates = 0;
+    private Fwupd.Client fwupd_client;
 
     public FirmwareView () {
         Object (
@@ -44,11 +45,6 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         );
         progress_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
-        progress_view = new Gtk.Grid () {
-            margin = 24
-        };
-        progress_view.attach (progress_alert_view, 0, 0);
-
         placeholder_alert_view = new Granite.Widgets.AlertView (
             _("Checking for Updates"),
             _("Connecting to the firmware service and searching for updates."),
@@ -65,21 +61,30 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         update_list.set_header_func ((Gtk.ListBoxUpdateHeaderFunc) header_rows);
         update_list.set_placeholder (placeholder_alert_view);
 
-        scrolled_window = new Gtk.ScrolledWindow (null, null);
-        scrolled_window.add (update_list);
+        var update_scrolled = new Gtk.ScrolledWindow (null, null);
+        update_scrolled.add (update_list);
+
+        firmware_release_view = new FirmwareReleaseView ();
+
+        deck = new Hdy.Deck () {
+            can_swipe_back = true
+        };
+        deck.add (update_scrolled);
+        deck.add (firmware_release_view);
+        deck.visible_child = update_scrolled;
 
         stack = new Gtk.Stack () {
             transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT
         };
-        stack.add (scrolled_window);
-        stack.add (progress_view);
+        stack.add (deck);
+        stack.add (progress_alert_view);
 
         var frame = new Gtk.Frame (null);
         frame.add (stack);
 
         content_area.add (frame);
 
-        var fwupd_client = new Fwupd.Client ();
+        fwupd_client = new Fwupd.Client ();
         FirmwareClient.connect.begin (fwupd_client, (obj, res) => {
             try {
                 FirmwareClient.connect.end (res);
@@ -87,14 +92,20 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
                 fwupd_client.device_added.connect (on_device_added);
                 fwupd_client.device_removed.connect (on_device_removed);
 
-                update_list_view.begin (fwupd_client);
+                update_list_view.begin ();
             } catch (Error e) {
                 critical (e.message);
             }
         });
+
+        update_list.row_activated.connect (show_release);
+
+        firmware_release_view.update.connect ((device, release) => {
+            update.begin (device, release);
+        });
     }
 
-    private async void update_list_view (Fwupd.Client client) {
+    private async void update_list_view () {
         foreach (unowned Gtk.Widget widget in update_list.get_children ()) {
             if (widget is Widgets.FirmwareUpdateRow) {
                 update_list.remove (widget);
@@ -104,52 +115,67 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         num_updates = 0;
 
         try {
-            var devices = yield FirmwareClient.get_devices (client);
+            var devices = yield FirmwareClient.get_devices (fwupd_client);
             for (int i = 0; i < devices.length; i++) {
-                add_device (client, devices[i]);
+                add_device (devices[i]);
             }
 
             placeholder_alert_view.title = _("Firmware Updates Are Not Available");
             placeholder_alert_view.description = _("Firmware updates are not supported on this or any connected devices.");
-            placeholder_alert_view.icon_name = "";
             update_list.show_all ();
         } catch (Error e) {
             placeholder_alert_view.title = _("The Firmware Service Is Not Available");
             placeholder_alert_view.description = _("Please make sure “fwupd” is installed and enabled.");
-            placeholder_alert_view.icon_name = "dialog-error";
         }
 
-        stack.visible_child = scrolled_window;
+        stack.visible_child = deck;
     }
 
-    private void add_device (Fwupd.Client client, Fwupd.Device device) {
+    private void add_device (Fwupd.Device device) {
         if (device.has_flag (Fwupd.DEVICE_FLAG_UPDATABLE)) {
-            var row = new Widgets.FirmwareUpdateRow (client, device);
+            FirmwareClient.get_upgrades.begin (fwupd_client, device.get_id (), (obj, res) => {
+                Fwupd.Release? release = null;
 
-            if (row.is_updatable) {
-                num_updates++;
-            }
+                try {
+                    var upgrades = FirmwareClient.get_upgrades.end (res);
+                    if (upgrades != null) {
+                        release = upgrades[0];
+                    }
+                } catch (Error e) {
+                    debug (e.message);
+                }
 
-            update_list.add (row);
-            update_list.invalidate_sort ();
+                var row = new Widgets.FirmwareUpdateRow (device, release);
 
-            row.on_update_start.connect (() => {
-                progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
-                stack.visible_child = progress_view;
+                if (row.is_updatable) {
+                    num_updates++;
+                }
+
+                update_list.add (row);
+                update_list.invalidate_sort ();
+                update_list.show_all ();
+
+                row.update.connect ((device, release) => {
+                    update.begin (device, release);
+                });
             });
-            row.on_update_end.connect (() => {
-                stack.visible_child = scrolled_window;
-                update_list_view.begin (client);
-            });
+        }
+    }
+
+    private void show_release (Gtk.ListBoxRow widget) {
+        if (widget is Widgets.FirmwareUpdateRow) {
+            var row = (Widgets.FirmwareUpdateRow) widget;
+            firmware_release_view.update_view (row.device, row.release);
+            deck.visible_child = firmware_release_view;
         }
     }
 
     private void on_device_added (Fwupd.Client client, Fwupd.Device device) {
         debug ("Added device: %s", device.get_name ());
 
-        add_device (client, device);
+        add_device (device);
 
-        stack.visible_child = scrolled_window;
+        stack.visible_child = deck;
         update_list.show_all ();
     }
 
@@ -190,7 +216,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
     private void header_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
         if (row2 == null && row1.is_updatable) {
             var header = new FirmwareHeaderRow (
-                ngettext ("%u Update Available", "%u Updates Available", num_updates).printf (num_updates)
+                dngettext (GETTEXT_PACKAGE, "%u Update Available", "%u Updates Available", num_updates).printf (num_updates)
             );
             row1.set_header (header);
         } else if (row2 == null || row1.is_updatable != row2.is_updatable) {
@@ -211,5 +237,162 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             margin = 3;
             get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
         }
+    }
+
+    private async void update (Fwupd.Device device, Fwupd.Release release) {
+        progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
+        stack.visible_child = progress_alert_view;
+
+        unowned var detach_caption = release.get_detach_caption ();
+        if (detach_caption != null) {
+            var detach_image = release.get_detach_image ();
+
+            if (detach_image != null) {
+                detach_image = yield download_file (device, detach_image);
+            }
+
+            if (show_details_dialog (device, detach_caption, detach_image) == false) {
+                stack.visible_child = deck;
+                return;
+            }
+        }
+
+        var path = yield download_file (device, release.get_uri ());
+
+        try {
+            if (yield FirmwareClient.install (fwupd_client, device.get_id (), path)) {
+                if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
+                    show_reboot_dialog ();
+                } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
+                    show_shutdown_dialog ();
+                }
+            }
+        } catch (Error e) {
+            show_error_dialog (device, e.message);
+        }
+
+        stack.visible_child = deck;
+        update_list_view.begin ();
+    }
+
+    private async string? download_file (Fwupd.Device device, string uri) {
+        var server_file = File.new_for_uri (uri);
+        var path = Path.build_filename (Environment.get_tmp_dir (), server_file.get_basename ());
+        var local_file = File.new_for_path (path);
+
+        bool result;
+        try {
+            result = yield server_file.copy_async (local_file, FileCopyFlags.OVERWRITE, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => {
+            // TODO: provide useful information for user
+            });
+        } catch (Error e) {
+            show_error_dialog (device, "Could not download file: %s".printf (e.message));
+            return null;
+        }
+
+        if (!result) {
+            show_error_dialog (device, "Download of %s was not succesfull".printf (uri));
+            return null;
+        }
+
+        return path;
+    }
+
+    private void show_error_dialog (Fwupd.Device device, string secondary_text) {
+        var gicon = new ThemedIcon ("application-x-firmware");
+        var icons = device.get_icons ();
+        if (icons.data != null) {
+            gicon = new GLib.ThemedIcon.from_names (icons.data);
+        }
+
+        var message_dialog = new Granite.MessageDialog (
+            _("Failed to install firmware release"),
+            secondary_text,
+            gicon,
+            Gtk.ButtonsType.CLOSE
+        ) {
+            badge_icon = new ThemedIcon ("dialog-error"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
+        message_dialog.show_all ();
+        message_dialog.run ();
+        message_dialog.destroy ();
+    }
+
+    private bool show_details_dialog (Fwupd.Device device, string detach_caption, string? detach_image) {
+        var gicon = new ThemedIcon ("application-x-firmware");
+        var icons = device.get_icons ();
+        if (icons.data != null) {
+            gicon = new GLib.ThemedIcon.from_names (icons.data);
+        }
+
+        var message_dialog = new Granite.MessageDialog (
+            _("“%s” needs to manually be put in update mode").printf (device.get_name ()),
+            detach_caption,
+            gicon,
+            Gtk.ButtonsType.CANCEL
+        ) {
+            badge_icon = new ThemedIcon ("dialog-information"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
+
+        var suggested_button = (Gtk.Button) message_dialog.add_button (_("Continue"), Gtk.ResponseType.ACCEPT);
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+        if (detach_image != null) {
+            var custom_widget = new Gtk.Image.from_file (detach_image);
+            message_dialog.custom_bin.add (custom_widget);
+        }
+
+        message_dialog.show_all ();
+        bool should_continue = message_dialog.run () == Gtk.ResponseType.ACCEPT;
+
+        message_dialog.destroy ();
+
+        return should_continue;
+    }
+
+    private void show_reboot_dialog () {
+        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("An update requires the system to restart to complete"),
+            _("This will close all open applications and restart this device."),
+            "application-x-firmware",
+            Gtk.ButtonsType.CANCEL
+        ) {
+            badge_icon = new ThemedIcon ("system-reboot"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
+
+        var suggested_button = (Gtk.Button) message_dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+
+        message_dialog.show_all ();
+        if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
+            LoginManager.get_instance ().reboot ();
+        }
+
+        message_dialog.destroy ();
+    }
+
+    private void show_shutdown_dialog () {
+        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("An update requires the system to shut down to complete"),
+            _("This will close all open applications and turn off this device."),
+            "application-x-firmware",
+            Gtk.ButtonsType.CANCEL
+        ) {
+            badge_icon = new ThemedIcon ("system-shutdown"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
+
+        var suggested_button = (Gtk.Button) message_dialog.add_button (_("Shut Down"), Gtk.ResponseType.ACCEPT);
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+        message_dialog.show_all ();
+        if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
+            LoginManager.get_instance ().shutdown ();
+        }
+
+        message_dialog.destroy ();
     }
 }
