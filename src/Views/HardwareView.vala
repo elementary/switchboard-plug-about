@@ -102,12 +102,6 @@ public class About.HardwareView : Gtk.Grid {
         };
 
         if (oem_enabled) {
-            var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
-
-            if (manufacturer_icon_path != null) {
-                manufacturer_logo.gicon = fileicon;
-            }
-
             if (product_name != null) {
                 product_name_info.label = "<b>%s</b>".printf (product_name);
                 product_name_info.use_markup = true;
@@ -130,9 +124,7 @@ public class About.HardwareView : Gtk.Grid {
             details_grid.add (product_name_info);
         }
 
-        if (manufacturer_logo.gicon == null) {
-            load_fallback_manufacturer_icon.begin ();
-        }
+        update_manufacturer_logo ();
 
         details_grid.add (processor_info);
         details_grid.add (graphics_grid);
@@ -158,6 +150,18 @@ public class About.HardwareView : Gtk.Grid {
 
         add (manufacturer_logo);
         add (details_grid);
+    }
+
+    private void update_manufacturer_logo () {
+        var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
+
+        if (manufacturer_icon_path != null) {
+            manufacturer_logo.gicon = fileicon;
+        }
+
+        if (manufacturer_logo.gicon == null) {
+            load_fallback_manufacturer_icon.begin ();
+        }
     }
 
     private async void load_fallback_manufacturer_icon () {
