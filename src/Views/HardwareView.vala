@@ -163,14 +163,16 @@ public class About.HardwareView : Gtk.Grid {
     }
 
     private void update_manufacturer_logo () {
-        string path = manufacturer_icon_path;
-        if (granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK && manufacturer_icon_dark_path != null) {
-            path = manufacturer_icon_dark_path;
-        }
-        var fileicon = new FileIcon (File.new_for_path (path));
+        if (oem_enabled) {
+            string path = manufacturer_icon_path;
+            if (granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK && manufacturer_icon_dark_path != null) {
+                path = manufacturer_icon_dark_path;
+            }
+            var fileicon = new FileIcon (File.new_for_path (path));
 
-        if (path != null) {
-            manufacturer_logo.gicon = fileicon;
+            if (path != null) {
+                manufacturer_logo.gicon = fileicon;
+            }
         }
 
         if (manufacturer_logo.gicon == null) {
