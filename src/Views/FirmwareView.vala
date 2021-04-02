@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2020 elementary, Inc. (https://elementary.io)
+* Copyright 2020-2021 elementary, Inc. (https://elementary.io)
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -19,19 +19,25 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.FirmwareView : Gtk.Stack {
+public class About.FirmwareView : Granite.SimpleSettingsPage {
+    private Gtk.Stack stack;
     private Hdy.Deck deck;
     private FirmwareReleaseView firmware_release_view;
-    private Gtk.Frame frame;
     private Granite.Widgets.AlertView progress_alert_view;
     private Granite.Widgets.AlertView placeholder_alert_view;
     private Gtk.ListBox update_list;
     private uint num_updates = 0;
     private Fwupd.Client fwupd_client;
 
-    construct {
-        transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
+    public FirmwareView () {
+        Object (
+            icon_name: "application-x-firmware",
+            title: _("Firmware"),
+            description: _("Firmware updates provided by device manufacturers can improve performance and fix critical security issues.")
+        );
+    }
 
+    construct {
         progress_alert_view = new Granite.Widgets.AlertView (
             "",
             _("Do not unplug the device during the update."),
@@ -42,7 +48,7 @@ public class About.FirmwareView : Gtk.Stack {
         placeholder_alert_view = new Granite.Widgets.AlertView (
             _("Checking for Updates"),
             _("Connecting to the firmware service and searching for updates."),
-            "application-x-firmware"
+            "sync-synchronizing"
         );
         placeholder_alert_view.show_all ();
         placeholder_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
@@ -67,12 +73,16 @@ public class About.FirmwareView : Gtk.Stack {
         deck.add (firmware_release_view);
         deck.visible_child = update_scrolled;
 
-        frame = new Gtk.Frame (null);
-        frame.add (deck);
+        stack = new Gtk.Stack () {
+            transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT
+        };
+        stack.add (deck);
+        stack.add (progress_alert_view);
 
-        margin = 12;
-        add (frame);
-        add (progress_alert_view);
+        var frame = new Gtk.Frame (null);
+        frame.add (stack);
+
+        content_area.add (frame);
 
         fwupd_client = new Fwupd.Client ();
         FirmwareClient.connect.begin (fwupd_client, (obj, res) => {
@@ -118,7 +128,7 @@ public class About.FirmwareView : Gtk.Stack {
             placeholder_alert_view.description = _("Please make sure “fwupd” is installed and enabled.");
         }
 
-        visible_child = frame;
+        stack.visible_child = deck;
     }
 
     private void add_device (Fwupd.Device device) {
@@ -165,7 +175,7 @@ public class About.FirmwareView : Gtk.Stack {
 
         add_device (device);
 
-        visible_child = frame;
+        stack.visible_child = deck;
         update_list.show_all ();
     }
 
@@ -231,7 +241,7 @@ public class About.FirmwareView : Gtk.Stack {
 
     private async void update (Fwupd.Device device, Fwupd.Release release) {
         progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
-        visible_child = progress_alert_view;
+        stack.visible_child = progress_alert_view;
 
         unowned var detach_caption = release.get_detach_caption ();
         if (detach_caption != null) {
@@ -242,7 +252,7 @@ public class About.FirmwareView : Gtk.Stack {
             }
 
             if (show_details_dialog (device, detach_caption, detach_image) == false) {
-                visible_child = frame;
+                stack.visible_child = deck;
                 return;
             }
         }
@@ -261,7 +271,7 @@ public class About.FirmwareView : Gtk.Stack {
             show_error_dialog (device, e.message);
         }
 
-        visible_child = frame;
+        stack.visible_child = deck;
         update_list_view.begin ();
     }
 
