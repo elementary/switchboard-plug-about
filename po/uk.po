@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-25 22:00+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2021-04-02 20:56+0000\n"
+"PO-Revision-Date: 2021-04-03 02:07+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
 "Language: uk\n"
@@ -37,7 +37,7 @@ msgstr "Операційна система"
 msgid "Hardware"
 msgstr "Обладнання"
 
-#: src/Plug.vala:61 src/Plug.vala:109
+#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Мікропрограма"
 
@@ -117,37 +117,45 @@ msgstr[0] "%llu хвилина"
 msgstr[1] "%llu хвилини"
 msgstr[2] "%llu хвилин"
 
-#: src/Views/FirmwareView.vala:37
+#: src/Views/FirmwareView.vala:36
+msgid ""
+"Firmware updates provided by device manufacturers can improve performance "
+"and fix critical security issues."
+msgstr ""
+"Оновлення прошивки, надані виробниками пристроїв, можуть підвищити швидкодію "
+"та виправити критичні вади безпеки."
+
+#: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
 msgstr "Не від'єднуйте пристрій від мережі під час оновлення."
 
-#: src/Views/FirmwareView.vala:43
+#: src/Views/FirmwareView.vala:49
 msgid "Checking for Updates"
 msgstr "Перевірка наявності оновлень"
 
-#: src/Views/FirmwareView.vala:44
+#: src/Views/FirmwareView.vala:50
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Під'єднання до служби оновлення мікропрограми та пошук оновлень."
 
-#: src/Views/FirmwareView.vala:113
+#: src/Views/FirmwareView.vala:123
 msgid "Firmware Updates Are Not Available"
 msgstr "Оновлення мікропрограми недоступні"
 
-#: src/Views/FirmwareView.vala:114
+#: src/Views/FirmwareView.vala:124
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Оновлення мікропрограми не підтримується цим та будь-яким під'єднаним "
 "пристроєм."
 
-#: src/Views/FirmwareView.vala:117
+#: src/Views/FirmwareView.vala:127
 msgid "The Firmware Service Is Not Available"
 msgstr "Служба оновлення мікропрограми недоступна"
 
-#: src/Views/FirmwareView.vala:118
+#: src/Views/FirmwareView.vala:128
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Переконайтесь, що встановлено та увімкнено функцію “fwupd”."
 
-#: src/Views/FirmwareView.vala:209
+#: src/Views/FirmwareView.vala:219
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
@@ -155,49 +163,49 @@ msgstr[0] "%u оновлення доступне"
 msgstr[1] "%u оновлення доступні"
 msgstr[2] "%u оновлень доступні"
 
-#: src/Views/FirmwareView.vala:213
+#: src/Views/FirmwareView.vala:223
 msgid "Up to Date"
 msgstr "В оновленому стані"
 
-#: src/Views/FirmwareView.vala:233
+#: src/Views/FirmwareView.vala:243
 #, c-format
 msgid "“%s” is being updated"
 msgstr "«%s» оновлюється"
 
-#: src/Views/FirmwareView.vala:299
+#: src/Views/FirmwareView.vala:309
 msgid "Failed to install firmware release"
 msgstr "Не вдалося встановити випуск мікропрограми"
 
-#: src/Views/FirmwareView.vala:320
+#: src/Views/FirmwareView.vala:330
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "«%s» потрібно власноруч перевести в режим оновлення"
 
-#: src/Views/FirmwareView.vala:329
+#: src/Views/FirmwareView.vala:339
 msgid "Continue"
 msgstr "Продовжити"
 
-#: src/Views/FirmwareView.vala:347
+#: src/Views/FirmwareView.vala:357
 msgid "An update requires the system to restart to complete"
 msgstr "Оновлення вимагає перезапуску системи для завершення"
 
-#: src/Views/FirmwareView.vala:348
+#: src/Views/FirmwareView.vala:358
 msgid "This will close all open applications and restart this device."
 msgstr "Це закриє всі відкриті застосунки та перезапустить цей пристрій."
 
-#: src/Views/FirmwareView.vala:356
+#: src/Views/FirmwareView.vala:366
 msgid "Restart"
 msgstr "Перезапуск"
 
-#: src/Views/FirmwareView.vala:369
+#: src/Views/FirmwareView.vala:379
 msgid "An update requires the system to shut down to complete"
 msgstr "Оновлення вимагає завершення роботи системи"
 
-#: src/Views/FirmwareView.vala:370
+#: src/Views/FirmwareView.vala:380
 msgid "This will close all open applications and turn off this device."
 msgstr "Це закриє всі відкриті застосунки та вимкне цей пристрій."
 
-#: src/Views/FirmwareView.vala:378
+#: src/Views/FirmwareView.vala:388
 msgid "Shut Down"
 msgstr "Вимкнути"
 

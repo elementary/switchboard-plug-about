@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-25 22:00+0000\n"
+"POT-Creation-Date: 2021-04-02 20:56+0000\n"
 "PO-Revision-Date: 2016-06-07 04:47+0000\n"
 "Last-Translator: Timothy <timothy.wong@rocketmail.com>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Hardware"
 msgstr "Perkakasan"
 
-#: src/Plug.vala:61 src/Plug.vala:109
+#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
 #, fuzzy
 #| msgid "Hardware"
 msgid "Firmware"
@@ -125,39 +125,45 @@ msgid_plural "%llu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/FirmwareView.vala:37
-msgid "Do not unplug the device during the update."
+#: src/Views/FirmwareView.vala:36
+msgid ""
+"Firmware updates provided by device manufacturers can improve performance "
+"and fix critical security issues."
 msgstr ""
 
 #: src/Views/FirmwareView.vala:43
+msgid "Do not unplug the device during the update."
+msgstr ""
+
+#: src/Views/FirmwareView.vala:49
 #, fuzzy
 #| msgid "Check for Updates"
 msgid "Checking for Updates"
 msgstr "Semak Kemaskini"
 
-#: src/Views/FirmwareView.vala:44
+#: src/Views/FirmwareView.vala:50
 msgid "Connecting to the firmware service and searching for updates."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:113
+#: src/Views/FirmwareView.vala:123
 #, fuzzy
 #| msgid "Updates"
 msgid "Firmware Updates Are Not Available"
 msgstr "Kemas kini"
 
-#: src/Views/FirmwareView.vala:114
+#: src/Views/FirmwareView.vala:124
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:117
+#: src/Views/FirmwareView.vala:127
 msgid "The Firmware Service Is Not Available"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:118
+#: src/Views/FirmwareView.vala:128
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:209
+#: src/Views/FirmwareView.vala:219
 #, fuzzy, c-format
 #| msgid "Updates"
 msgid "%u Update Available"
@@ -165,51 +171,51 @@ msgid_plural "%u Updates Available"
 msgstr[0] "Kemas kini"
 msgstr[1] "Kemas kini"
 
-#: src/Views/FirmwareView.vala:213
+#: src/Views/FirmwareView.vala:223
 #, fuzzy
 #| msgid "Updates"
 msgid "Up to Date"
 msgstr "Kemas kini"
 
-#: src/Views/FirmwareView.vala:233
+#: src/Views/FirmwareView.vala:243
 #, c-format
 msgid "“%s” is being updated"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:299
+#: src/Views/FirmwareView.vala:309
 msgid "Failed to install firmware release"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:320
+#: src/Views/FirmwareView.vala:330
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:329
+#: src/Views/FirmwareView.vala:339
 msgid "Continue"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:347
+#: src/Views/FirmwareView.vala:357
 msgid "An update requires the system to restart to complete"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:348
+#: src/Views/FirmwareView.vala:358
 msgid "This will close all open applications and restart this device."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:356
+#: src/Views/FirmwareView.vala:366
 msgid "Restart"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:369
+#: src/Views/FirmwareView.vala:379
 msgid "An update requires the system to shut down to complete"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:370
+#: src/Views/FirmwareView.vala:380
 msgid "This will close all open applications and turn off this device."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:378
+#: src/Views/FirmwareView.vala:388
 msgid "Shut Down"
 msgstr ""
 
