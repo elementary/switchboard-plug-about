@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 20:56+0000\n"
-"PO-Revision-Date: 2021-04-08 19:51+0000\n"
+"PO-Revision-Date: 2021-04-08 22:32+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/tr/>\n"
@@ -94,34 +94,34 @@ msgstr "Yükleme için tahmini süre:"
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "Bu cihaz için mevcut sürüm yok."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
 msgid "Update"
 msgstr "Güncelle"
 
 #: src/Views/FirmwareReleaseView.vala:211
-#, fuzzy
-#| msgid "Up to Date"
 msgid "Up to date"
 msgstr "Güncel"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr ""
+msgstr "bir dakikadan az"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%llu dakika"
+msgstr[1] "%llu dakika"
 
 #: src/Views/FirmwareView.vala:36
 msgid ""
 "Firmware updates provided by device manufacturers can improve performance "
 "and fix critical security issues."
 msgstr ""
+"Cihaz üreticileri tarafından sağlanan üretici yazılımı güncellemeleri, "
+"performansı artırabilir ve kritik güvenlik sorunlarını düzeltebilir."
 
 #: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
