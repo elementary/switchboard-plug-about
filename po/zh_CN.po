@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 20:56+0000\n"
 "PO-Revision-Date: 2021-05-05 08:15+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"Last-Translator: Chengyu Liu <wer5lcy@live.cn>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -184,15 +184,15 @@ msgstr "完成某项更新需要重新启动操作系统"
 
 #: src/Views/FirmwareView.vala:358
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "这会关闭所有应用程序并重启本设备"
 
 #: src/Views/FirmwareView.vala:366
 msgid "Restart"
-msgstr ""
+msgstr "重新启动"
 
 #: src/Views/FirmwareView.vala:379
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "完成某项更新需要关闭操作系统"
 
 #: src/Views/FirmwareView.vala:380
 msgid "This will close all open applications and turn off this device."
