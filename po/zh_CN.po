@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 20:56+0000\n"
 "PO-Revision-Date: 2021-05-05 08:14+0000\n"
-"Last-Translator: Chengyu Liu <wer5lcy@live.cn>\n"
+"Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -140,7 +140,7 @@ msgstr "固件更新服务不可用"
 
 #: src/Views/FirmwareView.vala:124
 msgid "Firmware updates are not supported on this or any connected devices."
-msgstr "该设备或已连接设备不支持固件更新"
+msgstr "当前设备或其他已连接设备不支持固件更新。"
 
 #: src/Views/FirmwareView.vala:127
 msgid "The Firmware Service Is Not Available"
