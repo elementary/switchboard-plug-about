@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 20:56+0000\n"
 "PO-Revision-Date: 2021-05-05 08:12+0000\n"
-"Last-Translator: Chengyu Liu <wer5lcy@live.cn>\n"
+"Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -108,7 +108,7 @@ msgstr "已是最新"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr "少于1分钟"
+msgstr "少于 1 分钟"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
