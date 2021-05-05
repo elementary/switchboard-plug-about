@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 20:56+0000\n"
 "PO-Revision-Date: 2021-05-05 21:17+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"Last-Translator: Chengyu Liu <wer5lcy@live.cn>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -196,11 +196,11 @@ msgstr "某项更新需要完全关闭操作系统"
 
 #: src/Views/FirmwareView.vala:380
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "这会关闭所有程序并使本设备关机。"
 
 #: src/Views/FirmwareView.vala:388
 msgid "Shut Down"
-msgstr ""
+msgstr "关机"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -212,10 +212,8 @@ msgid "Unknown Graphics"
 msgstr "未知显卡"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Unknown Processor"
 msgid "Unknown storage"
-msgstr "未知处理器"
+msgstr "未知存储器"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
