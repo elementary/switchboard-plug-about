@@ -45,33 +45,33 @@ public class About.HardwareView : Gtk.Grid {
         fetch_hardware_info ();
 
         var product_name_info = new Gtk.Label (Environment.get_host_name ()) {
-            ellipsize = Pango.EllipsizeMode.END,
+            ellipsize = Pango.EllipsizeMode.MIDDLE,
             selectable = true,
             xalign = 0
         };
         product_name_info.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
         var processor_info = new Gtk.Label (processor) {
-            ellipsize = Pango.EllipsizeMode.END,
+            ellipsize = Pango.EllipsizeMode.MIDDLE,
             margin_top = 12,
             selectable = true,
             xalign = 0
         };
 
         var memory_info = new Gtk.Label (_("%s memory").printf (memory)) {
-            ellipsize = Pango.EllipsizeMode.END,
+            ellipsize = Pango.EllipsizeMode.MIDDLE,
             selectable = true,
             xalign = 0
         };
 
         primary_graphics_info = new Gtk.Label (_("Unknown Graphics")) {
-            ellipsize = Pango.EllipsizeMode.END,
+            ellipsize = Pango.EllipsizeMode.MIDDLE,
             selectable = true,
             xalign = 0
         };
 
         secondary_graphics_info = new Gtk.Label (null) {
-            ellipsize = Pango.EllipsizeMode.END,
+            ellipsize = Pango.EllipsizeMode.MIDDLE,
             selectable = true,
             xalign = 0
         };
@@ -84,7 +84,7 @@ public class About.HardwareView : Gtk.Grid {
         graphics_grid.add (primary_graphics_info);
 
         storage_info = new Gtk.Label (_("Unknown storage")) {
-            ellipsize = Pango.EllipsizeMode.END,
+            ellipsize = Pango.EllipsizeMode.MIDDLE,
             selectable = true,
             xalign = 0
         };
@@ -117,7 +117,7 @@ public class About.HardwareView : Gtk.Grid {
             }
 
             var manufacturer_info = new Gtk.Label (manufacturer_name) {
-                ellipsize = Pango.EllipsizeMode.END,
+                ellipsize = Pango.EllipsizeMode.MIDDLE,
                 selectable = true,
                 xalign = 0
             };
