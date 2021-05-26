@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 20:56+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-05-05 21:17+0000\n"
+"Last-Translator: Chengyu Liu <wer5lcy@live.cn>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -38,7 +38,7 @@ msgstr "硬件"
 
 #: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
 msgid "Firmware"
-msgstr "硬件"
+msgstr "固件"
 
 #: src/Plug.vala:107
 msgid "Operating System Information"
@@ -73,10 +73,8 @@ msgid "Updates"
 msgstr "检查更新"
 
 #: src/Views/FirmwareReleaseView.vala:42
-#, fuzzy
-#| msgid "Updates"
 msgid "All Updates"
-msgstr "检查更新"
+msgstr "全部更新"
 
 #: src/Views/FirmwareReleaseView.vala:81
 msgid "Version:"
@@ -84,19 +82,19 @@ msgstr "版本："
 
 #: src/Views/FirmwareReleaseView.vala:90
 msgid "Vendor:"
-msgstr ""
+msgstr "供应商："
 
 #: src/Views/FirmwareReleaseView.vala:99
 msgid "Size:"
-msgstr ""
+msgstr "大小："
 
 #: src/Views/FirmwareReleaseView.vala:108
 msgid "Estimated time to install:"
-msgstr ""
+msgstr "预计安装时长："
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "未找到该设备的新发行版。"
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
 #, fuzzy
@@ -105,59 +103,52 @@ msgid "Update"
 msgstr "检查更新"
 
 #: src/Views/FirmwareReleaseView.vala:211
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "检查更新"
+msgstr "已是最新"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr ""
+msgstr "少于 1 分钟"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] ""
+msgstr[0] "%ll 分钟"
 
 #: src/Views/FirmwareView.vala:36
 msgid ""
 "Firmware updates provided by device manufacturers can improve performance "
 "and fix critical security issues."
-msgstr ""
+msgstr "由设备制造商提供的固件更新可以提高性能并修复关键安全问题。"
 
 #: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "升级期间请勿断开设备电源。"
 
 #: src/Views/FirmwareView.vala:49
-#, fuzzy
-#| msgid "Check for Updates"
 msgid "Checking for Updates"
-msgstr "检查更新"
+msgstr "正在检查更新"
 
 #: src/Views/FirmwareView.vala:50
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "正在连接固件服务并查找更新。"
 
 #: src/Views/FirmwareView.vala:123
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Firmware Updates Are Not Available"
-msgstr "%u 更新可用"
+msgstr "固件更新服务不可用"
 
 #: src/Views/FirmwareView.vala:124
 msgid "Firmware updates are not supported on this or any connected devices."
-msgstr ""
+msgstr "当前设备或其他已连接设备不支持固件更新。"
 
 #: src/Views/FirmwareView.vala:127
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "固件服务不可用"
 
 #: src/Views/FirmwareView.vala:128
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "请确保 \"fwupd\" 软件包已安装并启用。"
 
 #: src/Views/FirmwareView.vala:219
 #, c-format
@@ -166,52 +157,50 @@ msgid_plural "%u Updates Available"
 msgstr[0] "%u 更新可用"
 
 #: src/Views/FirmwareView.vala:223
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to Date"
-msgstr "检查更新"
+msgstr "已是最新"
 
 #: src/Views/FirmwareView.vala:243
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "正在更新 “%s”"
 
 #: src/Views/FirmwareView.vala:309
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "安装固件失败"
 
 #: src/Views/FirmwareView.vala:330
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "“%s” 需要手动设置为更新模式"
 
 #: src/Views/FirmwareView.vala:339
 msgid "Continue"
-msgstr ""
+msgstr "继续"
 
 #: src/Views/FirmwareView.vala:357
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "某项更新需要重新启动操作系统"
 
 #: src/Views/FirmwareView.vala:358
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "这会关闭所有应用程序并重启本设备。"
 
 #: src/Views/FirmwareView.vala:366
 msgid "Restart"
-msgstr ""
+msgstr "重新启动"
 
 #: src/Views/FirmwareView.vala:379
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "某项更新需要完全关闭操作系统"
 
 #: src/Views/FirmwareView.vala:380
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "这会关闭所有程序并使本设备关机。"
 
 #: src/Views/FirmwareView.vala:388
 msgid "Shut Down"
-msgstr ""
+msgstr "关机"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -223,10 +212,8 @@ msgid "Unknown Graphics"
 msgstr "未知显卡"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Unknown Processor"
 msgid "Unknown storage"
-msgstr "未知处理器"
+msgstr "未知存储器"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
