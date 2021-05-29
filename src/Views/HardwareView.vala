@@ -278,6 +278,10 @@ public class About.HardwareView : Gtk.Grid {
 
         string? gpu_name = null;
 
+        const string[] FALLBACKS = {
+            "Intel Corporation"
+        };
+
         if (switcheroo_interface != null) {
             if (!primary && !switcheroo_interface.has_dual_gpu) {
                 return null;
@@ -287,7 +291,11 @@ public class About.HardwareView : Gtk.Grid {
                 bool is_default = gpu.get ("Default").get_boolean ();
 
                 if (is_default == primary) {
-                    gpu_name = clean_name (gpu.get ("Name").get_string ());
+                    unowned string candidate = gpu.get ("Name").get_string ();
+                    if (candidate in FALLBACKS) {
+                        continue;
+                    }
+                    gpu_name = clean_name (candidate);
                 }
             }
         }
