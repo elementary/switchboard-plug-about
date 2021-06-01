@@ -395,6 +395,7 @@ public class About.HardwareView : Gtk.Grid {
 
         const GraphicsReplaceStrings REPLACE_STRINGS[] = {
             { "Mesa DRI ", ""},
+            { "Mesa (.*)", "\\1"},
             { "[(]R[)]", "®"},
             { "[(]TM[)]", "™"},
             { "Gallium .* on (AMD .*)", "\\1"},
