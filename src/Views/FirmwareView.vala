@@ -124,7 +124,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             placeholder_alert_view.description = _("None of your devices support installing new firmware this way.");
             update_list.show_all ();
         } catch (Error e) {
-            placeholder_alert_view.title = _("Firmware service unvailable");
+            placeholder_alert_view.title = _("Firmware service unavailable");
             placeholder_alert_view.description = _("“fwupd” must be installed and running.");
         }
 
