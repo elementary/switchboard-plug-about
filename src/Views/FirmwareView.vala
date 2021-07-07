@@ -46,7 +46,8 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         progress_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
         placeholder_alert_view = new Granite.Widgets.AlertView (
-            _("Looking for new firmware…"),
+            _("Finding new firmware…"),
+            _("Looking for software to be isntalled on actual hardware…"),
             "sync-synchronizing"
         );
         placeholder_alert_view.show_all ();
@@ -124,7 +125,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             update_list.show_all ();
         } catch (Error e) {
             placeholder_alert_view.title = _("Firmware service unavailable");
-            placeholder_alert_view.description = _("“fwupd” must be installed and running.");
+            placeholder_alert_view.description = _("Ensure “fwupd” is installed and running.");
         }
 
         stack.visible_child = deck;
