@@ -119,8 +119,8 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
                 add_device (devices[i]);
             }
 
-            placeholder_alert_view.title = _("No new firmware available");
-            placeholder_alert_view.description = _("None of your devices support installing new firmware this way.");
+            placeholder_alert_view.title = _("No new firmware found");
+            placeholder_alert_view.description = _("Nothing on or connected to your system supports installing new firmware this way.");
             update_list.show_all ();
         } catch (Error e) {
             placeholder_alert_view.title = _("Firmware service unavailable");
