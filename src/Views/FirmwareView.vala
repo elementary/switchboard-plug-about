@@ -47,7 +47,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
         placeholder_alert_view = new Granite.Widgets.AlertView (
             _("Finding new firmware…"),
-            _("Looking for software to be installed on your hardware…"),
+            _("Looking for new software for your hardware…"),
             "sync-synchronizing"
         );
         placeholder_alert_view.show_all ();
