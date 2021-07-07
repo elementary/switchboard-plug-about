@@ -33,7 +33,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         Object (
             icon_name: "application-x-firmware",
             title: _("Firmware"),
-            description: _("New firmware is released by device manufacturers to improve performance, and fix security issues.")
+            description: _("Upgrade internal systems stored or running on system- and pheriperial devices issued by their makers, which is sometimes critical for performance and security.")
         );
     }
 
@@ -47,7 +47,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
         placeholder_alert_view = new Granite.Widgets.AlertView (
             _("Finding new firmware…"),
-            _("Looking for software to be isntalled on actual hardware…"),
+            _("Looking for software to be installed on your actual hardware…"),
             "sync-synchronizing"
         );
         placeholder_alert_view.show_all ();
