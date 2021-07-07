@@ -33,7 +33,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         Object (
             icon_name: "application-x-firmware",
             title: _("Firmware"),
-            description: _("Firmware updates provided by device manufacturers can improve performance and fix critical security issues.")
+            description: _("Upgrade internal systems stored or running on system- and peripheral devices (issued by their makers), sometimes containing critical performance and security fixes.")
         );
     }
 
@@ -46,8 +46,8 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         progress_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
         placeholder_alert_view = new Granite.Widgets.AlertView (
-            _("Checking for Updates"),
-            _("Connecting to the firmware service and searching for updates."),
+            _("Finding new firmware…"),
+            _("Looking for new software for your hardware…"),
             "sync-synchronizing"
         );
         placeholder_alert_view.show_all ();
@@ -120,12 +120,12 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
                 add_device (devices[i]);
             }
 
-            placeholder_alert_view.title = _("Firmware Updates Are Not Available");
-            placeholder_alert_view.description = _("Firmware updates are not supported on this or any connected devices.");
+            placeholder_alert_view.title = _("No new firmware found");
+            placeholder_alert_view.description = _("Nothing on or connected to your system supports installing new firmware this way.");
             update_list.show_all ();
         } catch (Error e) {
-            placeholder_alert_view.title = _("The Firmware Service Is Not Available");
-            placeholder_alert_view.description = _("Please make sure “fwupd” is installed and enabled.");
+            placeholder_alert_view.title = _("Firmware service unavailable");
+            placeholder_alert_view.description = _("Ensure “fwupd” is installed and running.");
         }
 
         stack.visible_child = deck;
@@ -216,7 +216,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
     private void header_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
         if (row2 == null && row1.is_updatable) {
             var header = new FirmwareHeaderRow (
-                dngettext (GETTEXT_PACKAGE, "%u Update Available", "%u Updates Available", num_updates).printf (num_updates)
+                dngettext (GETTEXT_PACKAGE, "%u available firmware upgrade", "%u available firmware upgrades", num_updates).printf (num_updates)
             );
             row1.set_header (header);
         } else if (row2 == null || row1.is_updatable != row2.is_updatable) {
@@ -240,7 +240,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
     }
 
     private async void update (Fwupd.Device device, Fwupd.Release release) {
-        progress_alert_view.title = _("“%s” is being updated").printf (device.get_name ());
+        progress_alert_view.title = _("Installing new firmware on “%s”…").printf (device.get_name ());
         stack.visible_child = progress_alert_view;
 
         unowned var detach_caption = release.get_detach_caption ();
@@ -291,7 +291,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         }
 
         if (!result) {
-            show_error_dialog (device, "Download of %s was not succesfull".printf (uri));
+            show_error_dialog (device, "Could not download %s".printf (uri));
             return null;
         }
 
@@ -327,7 +327,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         }
 
         var message_dialog = new Granite.MessageDialog (
-            _("“%s” needs to manually be put in update mode").printf (device.get_name ()),
+            _("Put “%s” in a firmware-upgradable mode manually").printf (device.get_name ()),
             detach_caption,
             gicon,
             Gtk.ButtonsType.CANCEL
@@ -354,8 +354,8 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
     private void show_reboot_dialog () {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("An update requires the system to restart to complete"),
-            _("This will close all open applications and restart this device."),
+            _("Restart the system to finish installing the new firmware"),
+            _("This closes all open apps and restarts the device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
         ) {
@@ -376,8 +376,8 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
     private void show_shutdown_dialog () {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("An update requires the system to shut down to complete"),
-            _("This will close all open applications and turn off this device."),
+            _("Shut down the system to finish installing the new firmware"),
+            _("This closes all open apps and turns off this device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
         ) {
