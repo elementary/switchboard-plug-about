@@ -353,7 +353,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
     private void show_reboot_dialog () {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("Installing new firmware requires restarting the system"),
+            _("Restart the system to finish installing the new firmware"),
             _("This closes all open apps and restarts the device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
@@ -375,7 +375,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
     private void show_shutdown_dialog () {
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("The system must be shut down after installing new firmware"),
+            _("Shut down the system to finish installing the new firmware"),
             _("This closes all open apps and turns off this device."),
             "application-x-firmware",
             Gtk.ButtonsType.CANCEL
