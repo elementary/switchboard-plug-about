@@ -33,7 +33,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         Object (
             icon_name: "application-x-firmware",
             title: _("Firmware"),
-            description: _("New firmware is released by device manufacturers to improve performance and fix security issues.")
+            description: _("New firmware is released by device manufacturers to improve performance, and fix security issues.")
         );
     }
 
