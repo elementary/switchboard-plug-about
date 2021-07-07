@@ -215,7 +215,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
     private void header_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
         if (row2 == null && row1.is_updatable) {
             var header = new FirmwareHeaderRow (
-                dngettext (GETTEXT_PACKAGE, "%u New", "%u New", num_updates).printf (num_updates)
+                dngettext (GETTEXT_PACKAGE, "%u available firmware upgrade", "%u available firmware upgrades", num_updates).printf (num_updates)
             );
             row1.set_header (header);
         } else if (row2 == null || row1.is_updatable != row2.is_updatable) {
