@@ -33,7 +33,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         Object (
             icon_name: "application-x-firmware",
             title: _("Firmware"),
-            description: _("Upgrade internal systems stored or running on system- and pheriperial devices issued by their makers, which is sometimes critical for performance and security.")
+            description: _("Upgrade internal systems stored or running on system- and peripheral devices (issued by their makers), sometimes containing critical performance and security fixes.")
         );
     }
 
