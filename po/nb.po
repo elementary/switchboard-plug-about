@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-02 20:56+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-07-03 07:44+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/nb/>\n"
 "Language: nb\n"
@@ -76,7 +76,7 @@ msgstr "Oppdateringer"
 #, fuzzy
 #| msgid "Updates"
 msgid "All Updates"
-msgstr "Oppdateringer"
+msgstr "Alle oppgraderinger"
 
 #: src/Views/FirmwareReleaseView.vala:81
 msgid "Version:"
@@ -88,21 +88,23 @@ msgstr ""
 
 #: src/Views/FirmwareReleaseView.vala:99
 msgid "Size:"
-msgstr ""
+msgstr "Størrelse:"
 
 #: src/Views/FirmwareReleaseView.vala:108
+#, fuzzy
 msgid "Estimated time to install:"
-msgstr ""
+msgstr "Anslått installsjonstid:"
 
 #: src/Views/FirmwareReleaseView.vala:137
+#, fuzzy
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "Ingen tilgjengelige utgaver for denne enheten."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
 #, fuzzy
 #| msgid "Updates"
 msgid "Update"
-msgstr "Oppdatering"
+msgstr "Oppgrader"
 
 #: src/Views/FirmwareReleaseView.vala:211
 #, fuzzy
@@ -112,20 +114,22 @@ msgstr "Oppdatert"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr ""
+msgstr "mindre enn ett minutt"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%llu minutt"
+msgstr[1] "%llu minutter"
 
 #: src/Views/FirmwareView.vala:36
 msgid ""
 "Firmware updates provided by device manufacturers can improve performance "
 "and fix critical security issues."
 msgstr ""
+"Fastvareoppgraderiger tilbys av utstyrsprodusenter, og kan forbedre ytelsen "
+"og fikse kritiske sikkerhetsfeil."
 
 #: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
@@ -135,7 +139,7 @@ msgstr "Ikke plugg ut enheten under oppdateringen."
 #, fuzzy
 #| msgid "Check for Updates"
 msgid "Checking for Updates"
-msgstr "Ser etter oppdateringer …"
+msgstr "Ser etter oppgraderinger …"
 
 #: src/Views/FirmwareView.vala:50
 msgid "Connecting to the firmware service and searching for updates."
