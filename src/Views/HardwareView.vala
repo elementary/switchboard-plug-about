@@ -23,6 +23,7 @@
 public class About.HardwareView : Gtk.Grid {
     private bool oem_enabled;
     private string manufacturer_icon_path;
+    private string? manufacturer_icon_dark_path = null;
     private string manufacturer_name;
     private string manufacturer_support_url;
     private string memory;
@@ -41,7 +42,11 @@ public class About.HardwareView : Gtk.Grid {
 
     private Gtk.Label storage_info;
 
+    private Granite.Settings granite_settings;
+
     construct {
+        granite_settings = Granite.Settings.get_default ();
+
         fetch_hardware_info ();
 
         var product_name_info = new Gtk.Label (Environment.get_host_name ()) {
@@ -101,12 +106,6 @@ public class About.HardwareView : Gtk.Grid {
         };
 
         if (oem_enabled) {
-            var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
-
-            if (manufacturer_icon_path != null) {
-                manufacturer_logo.gicon = fileicon;
-            }
-
             if (product_name != null) {
                 product_name_info.label = "<b>%s</b>".printf (product_name);
                 product_name_info.use_markup = true;
@@ -129,9 +128,7 @@ public class About.HardwareView : Gtk.Grid {
             details_grid.add (product_name_info);
         }
 
-        if (manufacturer_logo.gicon == null) {
-            load_fallback_manufacturer_icon.begin ();
-        }
+        update_manufacturer_logo ();
 
         details_grid.add (processor_info);
         details_grid.add (graphics_grid);
@@ -159,6 +156,28 @@ public class About.HardwareView : Gtk.Grid {
 
         add (manufacturer_logo);
         add (details_grid);
+
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            update_manufacturer_logo ();
+        });
+    }
+
+    private void update_manufacturer_logo () {
+        if (oem_enabled) {
+            string path = manufacturer_icon_path;
+            if (granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK && manufacturer_icon_dark_path != null) {
+                path = manufacturer_icon_dark_path;
+            }
+            var fileicon = new FileIcon (File.new_for_path (path));
+
+            if (path != null) {
+                manufacturer_logo.gicon = fileicon;
+            }
+        }
+
+        if (manufacturer_logo.gicon == null) {
+            load_fallback_manufacturer_icon.begin ();
+        }
     }
 
     private async void load_fallback_manufacturer_icon () {
@@ -354,6 +373,10 @@ public class About.HardwareView : Gtk.Grid {
 
             if (oem_file.has_key ("OEM", "Logo")) {
                 manufacturer_icon_path = oem_file.get_string ("OEM", "Logo");
+            }
+
+            if (oem_file.has_key ("OEM", "LogoDark")) {
+                manufacturer_icon_dark_path = oem_file.get_string ("OEM", "LogoDark");
             }
 
             if (oem_file.has_key ("OEM", "URL")) {
