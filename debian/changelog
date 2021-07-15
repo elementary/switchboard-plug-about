@@ -1,3 +1,58 @@
+switchboard-plug-about (6.0.0) bionic; urgency=medium
+
+  * Release 6.0.0 (#221)
+  * Handle long hardware names (#214)
+  * Update translation files
+  * Update translation template
+  * FirmwareView: subclass SimpleSettingsPage (#204)
+  * Add detail page for firmware releases (#206)
+  * Use dngettext instead of ngettext (#208)
+  * Fix logic if device is up to date (#205)
+  * FirmwareView: Improve alert view messaging (#203)
+  * Update POTFILES
+  * Use LibFwupd (#202)
+  * format memory size using units based on powers of 2 (#194)
+  * Re-namespace Fwupd classes to About.Firmware (#199)
+  * Provide fallback icon for firmware devices (#201)
+  * Show devices without releases (#195)
+  * OperatingSystemView: Add Keyboard indicator settings to reset (#197)
+  * HardwareView: Asyncify storage methods (#189)
+  * HardwareView: Connect to systemd-hostnamed asynchronously (#190)
+  * FwupdManager: Use an async future to initialize dbus (#186)
+  * OperatingSystemView: Read upstream release file asynchronously
+    (#188)
+  * HardwareView: Get GPU info asynchronously (#187)
+  * Update POTFILES and correct gettext syntax (#180)
+  * Plug: Add and clean up search strings (#179)
+  * Add support for fwupd (#150)
+  * Use switcheroo-control to get dual GPU information (#169)
+  * LINGUAS: sort, remove en_US
+  * Reduce column spacing to 32 (#165)
+  * OSView: Overlay logo on default wallpaper (#158)
+  * OperatingSystemView: Better align links (#164)
+  * HardwareView: Use 24px of column spacing (#160)
+  * HardwareView: Redesign with side-by-side layout (#155)
+  * Relayout with links
+  * OSView: Remove GTK version (#157)
+  * OperatingSystemView: Redesign to be laid out side-by-side (#154)
+  * Split Hardware and OS views into tabs (#153)
+  * Change icon to the cute CPU looking one (#151)
+  * Fix plug destroyed on navigation (#149)
+  * Rename user-facing strings to System (#146)
+  * Plug: Update search term (#143)
+  * Plug: “Report a Problem” → “Send Feedback” (#142)
+  * libgtop-2.0: Replace GLib.PtrArray by GLib.GenericArray (#140)
+  * Release Action: Retarget to Odin
+  * Add missing libgtop build dependency to the readme (#137)
+  * Plug: Use pretty name when available (#134)
+  * Support ARM CPUs and use libgtop to get info (#133)
+  * Plug: Get OS Info from GLib.Environment (#128)
+  * HardwareView: More specific Unknowns (#132)
+  * Get GPU model from SessionManager (#130)
+  * Plug: Replace deprecated Settings.list_keys (#126)
+
+ -- elementary OS Team <builds@elementary.io>  Thu, 15 Jul 2021 22:24:07 +0000
+
 switchboard-plug-about (2.6.3) bionic; urgency=medium
 
   * Release 2.6.3 (#122)
