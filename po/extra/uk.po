@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2020-11-16 17:16+0000\n"
+"PO-Revision-Date: 2021-07-15 23:09+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/uk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
 msgid "System"
@@ -30,33 +30,32 @@ msgstr "Огляд операційної системи та подробиць
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
 msgid "Redesign and new features:"
-msgstr ""
+msgstr "Редизайн та нові можливості:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Rename from About to System"
-msgstr ""
+msgstr "Перейменування з вкладки Про систему"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Split Hardware and Operating System info into their own tabs"
-msgstr ""
+msgstr "Розділено дані про обладнання та операційну систему на окремі вкладки"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:16
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
+"Перероблено вкладки операційної системи з чіткішими посиланнями та кнопками"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:17
 msgid "Add a Firmware view to manage device firmware updates"
-msgstr ""
+msgstr "Додано перегляд прошивки для керування оновленнями прошивки пристроїв"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:19
 msgid "More information:"
-msgstr ""
+msgstr "Докладніші відомості:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:21
-#, fuzzy
-#| msgid "Provide information for more types of Graphics"
 msgid "Provide information for ARM CPUs"
-msgstr "Надає відомості про більше типів графіки"
+msgstr "Надає відомості про ARM-процесори"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:22
 msgid "Provide information for more types of Graphics"
@@ -64,27 +63,27 @@ msgstr "Надає відомості про більше типів графі�
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Fixes:"
-msgstr ""
+msgstr "Виправлення:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Fix an issue where the view was destroyed early when navigating away"
-msgstr ""
+msgstr "Виправлено проблему, коли подання нищилося зарано під час переходів"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Fix system memory calculation"
-msgstr ""
+msgstr "Виправлено обчислення системної пам'яті"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:29
 msgid "Minor updates:"
-msgstr ""
+msgstr "Незначні оновлення:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:31
 msgid "Ellipsize long hardware names"
-msgstr ""
+msgstr "Ховання частини довгих назв обладнання"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:32
 msgid "Performance improvements"
-msgstr ""
+msgstr "Поліпшено швидкодію"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:33
 #: data/io.elementary.switchboard.about.appdata.xml.in:39
