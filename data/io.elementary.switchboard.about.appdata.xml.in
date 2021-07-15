@@ -7,9 +7,18 @@
   <icon type="stock">application-x-firmware</icon>
   <translation type="gettext">about-plug</translation>
   <releases>
-    <release version="2.6.4" date="2020-07-22" urgency="medium">
+    <release version="6.0.0" date="2021-07-15" urgency="medium">
       <description>
+        <p>Rename from About to System</p>
+        <p>Provide information for ARM CPUs</p>
         <p>Provide information for more types of Graphics</p>
+        <p>Split Hardware and Operating System info into their own tabs</p>
+        <p>Redesign the Operating System tab with clearer links and buttons</p>
+        <p>Add a Firmware view to manage device firmware updates</p>
+        <p>Fix an issue where the view was destroyed early when navigating away</p>
+        <p>Fix system memory calculation</p>
+        <p>Ellipsize long hardware names</p>
+        <p>Performance improvements</p>
         <p>Updated translations</p>
       </description>
     </release>
