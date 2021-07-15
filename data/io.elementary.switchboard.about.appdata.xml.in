@@ -9,17 +9,29 @@
   <releases>
     <release version="6.0.0" date="2021-07-15" urgency="medium">
       <description>
-        <p>Rename from About to System</p>
-        <p>Provide information for ARM CPUs</p>
-        <p>Provide information for more types of Graphics</p>
-        <p>Split Hardware and Operating System info into their own tabs</p>
-        <p>Redesign the Operating System tab with clearer links and buttons</p>
-        <p>Add a Firmware view to manage device firmware updates</p>
-        <p>Fix an issue where the view was destroyed early when navigating away</p>
-        <p>Fix system memory calculation</p>
-        <p>Ellipsize long hardware names</p>
-        <p>Performance improvements</p>
-        <p>Updated translations</p>
+        <p>Redesign and new features:</p>
+        <ul>
+          <li>Rename from About to System</li>
+          <li>Split Hardware and Operating System info into their own tabs</li>
+          <li>Redesign the Operating System tab with clearer links and buttons</li>
+          <li>Add a Firmware view to manage device firmware updates</li>
+        </ul>
+        <p>More information:</p>
+        <ul>
+          <li>Provide information for ARM CPUs</li>
+          <li>Provide information for more types of Graphics</li>
+        </ul>
+        <p>Fixes:</p>
+        <ul>
+          <li>Fix an issue where the view was destroyed early when navigating away</li>
+          <li>Fix system memory calculation</li>
+        </ul>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Ellipsize long hardware names</li>
+          <li>Performance improvements</li>
+          <li>Updated translations</li>
+        </ul>
       </description>
     </release>
     <release version="2.6.3" date="2020-05-28" urgency="medium">
@@ -39,9 +51,15 @@
     </release>
   </releases>
   <screenshots>
-      <screenshot type="default">
-          <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/master/data/screenshot.png</image>
-      </screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/master/data/screenshot.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/master/data/screenshot-hardware.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/master/data/screenshot-firmware.png</image>
+    </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>
   <url type="bugtracker">https://github.com/elementary/switchboard-plug-about/issues</url>
