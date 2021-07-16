@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2021-07-16 13:51+0000\n"
+"PO-Revision-Date: 2021-07-17 02:31+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/tr/>\n"
@@ -29,11 +29,11 @@ msgstr "İşletim sistemini ve donanım bilgilerini görüntüle"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
 msgid "Redesign and new features:"
-msgstr ""
+msgstr "Yeniden tasarım ve yeni özellikler:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Rename from About to System"
-msgstr ""
+msgstr "Hakkında, Sistem olarak yeniden adlandırıldı"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Split Hardware and Operating System info into their own tabs"
@@ -63,7 +63,7 @@ msgstr "Daha çok ekran kartı türü için bilgi sağlar"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Fixes:"
-msgstr ""
+msgstr "Düzeltmeler:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Fix an issue where the view was destroyed early when navigating away"
