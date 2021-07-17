@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-02 20:56+0000\n"
+"POT-Creation-Date: 2021-07-15 22:24+0000\n"
 "PO-Revision-Date: 2014-07-08 06:17+0000\n"
 "Last-Translator: Иван Благојевић <ivan_blagojevic@mail.com>\n"
 "Language-Team: Serbian Latin <sr@latin@li.org>\n"
@@ -205,7 +205,7 @@ msgstr ""
 msgid "%s memory"
 msgstr "Memorija:"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:309
 #, fuzzy
 #| msgid "Graphics:"
 msgid "Unknown Graphics"
@@ -221,53 +221,53 @@ msgstr "Procesor:"
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:241
 #, c-format
 msgid "Dual-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Quad-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:245
 #, c-format
 msgid "Hexa-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:326
+#: src/Views/HardwareView.vala:328
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Procesor:"
 
-#: src/Views/HardwareView.vala:376
+#: src/Views/HardwareView.vala:378
 msgid "Unknown"
 msgstr "Nepoznato"
 
-#: src/Views/HardwareView.vala:423
+#: src/Views/HardwareView.vala:425
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Skladište"
 
-#: src/Views/HardwareView.vala:425
+#: src/Views/HardwareView.vala:427
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "Skladište"
 
-#: src/Views/HardwareView.vala:427
+#: src/Views/HardwareView.vala:429
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Skladište"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:432
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "Skladište"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:437
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Skladište"

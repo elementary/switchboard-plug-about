@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-02 20:56+0000\n"
+"POT-Creation-Date: 2021-07-15 22:24+0000\n"
 "PO-Revision-Date: 2021-04-03 02:07+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -119,7 +119,8 @@ msgid ""
 "Firmware updates provided by device manufacturers can improve performance "
 "and fix critical security issues."
 msgstr ""
-"デバイスの製造元が提供するファームウェアアップデートは、パフォーマンスを改善したり、致命的なセキュリティー面での不具合を修正したりすることがあります。"
+"デバイスの製造元が提供するファームウェアアップデートは、パフォーマンスを改善"
+"したり、致命的なセキュリティー面での不具合を修正したりすることがあります。"
 
 #: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
@@ -212,7 +213,7 @@ msgstr "シャットダウン"
 msgid "%s memory"
 msgstr "%s メモリー"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:309
 msgid "Unknown Graphics"
 msgstr "不明なグラフィックス"
 
@@ -224,51 +225,51 @@ msgstr "不明なストレージ"
 msgid "Manufacturer Website"
 msgstr "製造元の Web サイト"
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:241
 #, c-format
 msgid "Dual-Core %s"
 msgstr "デュアルコア %s"
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Quad-Core %s"
 msgstr "クアッドコア %s"
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:245
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "ヘキサコア %s"
 
-#: src/Views/HardwareView.vala:326
+#: src/Views/HardwareView.vala:328
 msgid "Unknown Processor"
 msgstr "不明なプロセッサー"
 
-#: src/Views/HardwareView.vala:376
+#: src/Views/HardwareView.vala:378
 msgid "Unknown"
 msgstr "不明"
 
-#: src/Views/HardwareView.vala:423
+#: src/Views/HardwareView.vala:425
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s ストレージ (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:425
+#: src/Views/HardwareView.vala:427
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s ストレージ (eMMC)"
 
-#: src/Views/HardwareView.vala:427
+#: src/Views/HardwareView.vala:429
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s ストレージ (SATA SSD)"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:432
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s ストレージ (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:437
 #, c-format
 msgid "%s storage"
 msgstr "%s ストレージ"
