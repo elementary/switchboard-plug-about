@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2020-11-16 17:16+0000\n"
+"PO-Revision-Date: 2021-07-17 13:00+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
 msgid "System"
@@ -63,7 +63,7 @@ msgstr "検出可能なグラフィックスの種類が増加"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Fixes:"
-msgstr ""
+msgstr "修正点:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Fix an issue where the view was destroyed early when navigating away"
@@ -75,7 +75,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:29
 msgid "Minor updates:"
-msgstr ""
+msgstr "軽微なアップデート:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:31
 msgid "Ellipsize long hardware names"
