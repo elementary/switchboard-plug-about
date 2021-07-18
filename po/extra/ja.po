@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2021-07-17 13:00+0000\n"
+"PO-Revision-Date: 2021-07-18 12:03+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ja/>\n"
@@ -29,33 +29,31 @@ msgstr "オペレーティングシステムとハードウェアの情報を参
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
 msgid "Redesign and new features:"
-msgstr ""
+msgstr "デザイン変更と新機能:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Rename from About to System"
-msgstr ""
+msgstr "“このシステムについて”から“システム”に名称変更"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Split Hardware and Operating System info into their own tabs"
-msgstr ""
+msgstr "“ハードウェア”と“オペレーティングシステム”を独立したタブに分割"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:16
 msgid "Redesign the Operating System tab with clearer links and buttons"
-msgstr ""
+msgstr "“オペレーティングシステム”タブに、より明確なリンクとボタンを配置するデザイン変更"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:17
 msgid "Add a Firmware view to manage device firmware updates"
-msgstr ""
+msgstr "デバイスファームウェアのアップデートを管理する“ファームウェア”ビューを追加"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:19
 msgid "More information:"
-msgstr ""
+msgstr "追加された情報:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:21
-#, fuzzy
-#| msgid "Provide information for more types of Graphics"
 msgid "Provide information for ARM CPUs"
-msgstr "検出可能なグラフィックスの種類が増加"
+msgstr "ARM CPU の情報を表示できるように変更"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:22
 msgid "Provide information for more types of Graphics"
@@ -67,11 +65,11 @@ msgstr "修正点:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Fix an issue where the view was destroyed early when navigating away"
-msgstr ""
+msgstr "このプラグから移動する場合にビューが先に破棄される不具合を修正"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Fix system memory calculation"
-msgstr ""
+msgstr "システムメモリー容量の検出方法を修正"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:29
 msgid "Minor updates:"
@@ -79,11 +77,11 @@ msgstr "軽微なアップデート:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:31
 msgid "Ellipsize long hardware names"
-msgstr ""
+msgstr "ハードウェア名が長い場合に省略表示"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:32
 msgid "Performance improvements"
-msgstr ""
+msgstr "パフォーマンスの改善"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:33
 #: data/io.elementary.switchboard.about.appdata.xml.in:39
