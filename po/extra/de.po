@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2021-07-21 04:50+0000\n"
+"PO-Revision-Date: 2021-07-21 14:31+0000\n"
 "Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/de/>\n"
@@ -37,27 +37,28 @@ msgstr "Umbenennung von About in System"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Split Hardware and Operating System info into their own tabs"
-msgstr ""
+msgstr "Unterteile Hardware und Betriebssystem in jeweils eigene Tabs"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:16
 msgid "Redesign the Operating System tab with clearer links and buttons"
-msgstr ""
+msgstr "Redesign des Betriebssystem-Tabs mit klareren Links und Buttons"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:17
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
+"Firmware-Ansicht hinzugefügt um Firmware Updates für Geräte zu verwalten"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:19
 msgid "More information:"
-msgstr ""
+msgstr "Weitere Informationen:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:21
 msgid "Provide information for ARM CPUs"
-msgstr ""
+msgstr "Informationen für ARM CPUs hinzugefügt"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:22
 msgid "Provide information for more types of Graphics"
-msgstr ""
+msgstr "Informationen für weitere Grafik-Dateitypen hinzugefügt"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Fixes:"
@@ -66,10 +67,12 @@ msgstr "Fehlerbehebungen:"
 #: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr ""
+"Fehler behoben, der dazu führte, dass die Ansicht zu früh zerstört wurde, "
+"wenn wegnavigiert wurde"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Fix system memory calculation"
-msgstr ""
+msgstr "Korrektur bei der Berechnung des Arbeitsspeichers"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:29
 msgid "Minor updates:"
@@ -77,7 +80,7 @@ msgstr "Kleinere Aktualisierungen:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:31
 msgid "Ellipsize long hardware names"
-msgstr ""
+msgstr "Lange Hardwarenamen auslaufen lassen (...)"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:32
 msgid "Performance improvements"
