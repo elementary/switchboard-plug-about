@@ -68,12 +68,25 @@ public class About.OperatingSystemView : Gtk.Grid {
         logo_overlay.add (logo);
         logo_overlay.add_overlay (icon);
 
-        // Intentionally not using GLib.OsInfoKey.PRETTY_NAME here because we
-        // want more granular control over text formatting
+        // Use GLib.OsInfoKey.PRETTY_NAME only when GLib.OsInfoKey.NAME is a
+        // prefix of it so we can get more granular control over text formatting
+        var os_name = Environment.get_os_info (GLib.OsInfoKey.NAME);
+        var os_version = Environment.get_os_info (GLib.OsInfoKey.VERSION);
+        var os_pretty_name = Environment.get_os_info (GLib.OsInfoKey.PRETTY_NAME);
+
         var pretty_name = "<b>%s</b> %s".printf (
-            Environment.get_os_info (GLib.OsInfoKey.NAME),
-            Environment.get_os_info (GLib.OsInfoKey.VERSION)
+            os_name,
+            os_version
         );
+
+        if (os_pretty_name != null
+            && os_name != null
+            && os_pretty_name.has_prefix (os_name + " ")) {
+            pretty_name = "<b>%s</b>%s".printf (
+                os_name,
+                os_pretty_name.slice (os_name.length, os_pretty_name.length)
+            );
+        }
 
         var title = new Gtk.Label (pretty_name) {
             ellipsize = Pango.EllipsizeMode.END,
