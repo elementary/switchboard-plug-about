@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2020-02-22 14:09+0000\n"
+"PO-Revision-Date: 2021-07-25 12:43+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/fi/>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
 msgid "System"
-msgstr ""
+msgstr "Järjestelmä"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
@@ -61,7 +61,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Fixes:"
-msgstr ""
+msgstr "Korjaukset:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Fix an issue where the view was destroyed early when navigating away"
@@ -73,7 +73,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:29
 msgid "Minor updates:"
-msgstr ""
+msgstr "Pienet päivitykset:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:31
 msgid "Ellipsize long hardware names"
@@ -88,7 +88,7 @@ msgstr ""
 #: data/io.elementary.switchboard.about.appdata.xml.in:44
 #: data/io.elementary.switchboard.about.appdata.xml.in:49
 msgid "Updated translations"
-msgstr "Päivitetyt käännökset"
+msgstr "Päivityksiä kielikäännöksiin"
 
 #~ msgid "About"
 #~ msgstr "Tietoja"
