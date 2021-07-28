@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-02 20:56+0000\n"
+"POT-Creation-Date: 2021-07-15 22:24+0000\n"
 "PO-Revision-Date: 2021-01-04 22:57+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Azerbaijani <https://l10n.elementary.io/projects/switchboard/"
@@ -204,7 +204,7 @@ msgstr ""
 msgid "%s memory"
 msgstr ""
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:309
 msgid "Unknown Graphics"
 msgstr ""
 
@@ -216,51 +216,51 @@ msgstr ""
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:241
 #, c-format
 msgid "Dual-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Quad-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:245
 #, c-format
 msgid "Hexa-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:326
+#: src/Views/HardwareView.vala:328
 msgid "Unknown Processor"
 msgstr ""
 
-#: src/Views/HardwareView.vala:376
+#: src/Views/HardwareView.vala:378
 msgid "Unknown"
-msgstr ""
-
-#: src/Views/HardwareView.vala:423
-#, c-format
-msgid "%s storage (NVMe SSD)"
 msgstr ""
 
 #: src/Views/HardwareView.vala:425
 #, c-format
-msgid "%s storage (eMMC)"
+msgid "%s storage (NVMe SSD)"
 msgstr ""
 
 #: src/Views/HardwareView.vala:427
 #, c-format
+msgid "%s storage (eMMC)"
+msgstr ""
+
+#: src/Views/HardwareView.vala:429
+#, c-format
 msgid "%s storage (SATA SSD)"
 msgstr ""
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:432
 #, c-format
 msgid "%s storage (HDD)"
 msgstr ""
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:437
 #, c-format
 msgid "%s storage"
 msgstr ""

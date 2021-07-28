@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-02 20:56+0000\n"
+"POT-Creation-Date: 2021-07-15 22:24+0000\n"
 "PO-Revision-Date: 2021-03-26 00:33+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -212,7 +212,7 @@ msgstr "Угаси"
 msgid "%s memory"
 msgstr "„%s“ меморија"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:307
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:309
 msgid "Unknown Graphics"
 msgstr "Непозната графика"
 
@@ -224,51 +224,51 @@ msgstr "Непознато складиште"
 msgid "Manufacturer Website"
 msgstr "Веб сајт произвођача"
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:241
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Два језгра %s"
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:243
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Четири језгра %s"
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:245
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Хекса језгро %s"
 
-#: src/Views/HardwareView.vala:326
+#: src/Views/HardwareView.vala:328
 msgid "Unknown Processor"
 msgstr "Непознат процесор"
 
-#: src/Views/HardwareView.vala:376
+#: src/Views/HardwareView.vala:378
 msgid "Unknown"
 msgstr "Непознато"
 
-#: src/Views/HardwareView.vala:423
+#: src/Views/HardwareView.vala:425
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "„%s“ смештај (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:425
+#: src/Views/HardwareView.vala:427
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "„%s“ смештај (eMMC)"
 
-#: src/Views/HardwareView.vala:427
+#: src/Views/HardwareView.vala:429
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "„%s“ смештај (SATA SSD)"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:432
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "„%s“ смештај (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:437
 #, c-format
 msgid "%s storage"
 msgstr "„%s“ смештај"
