@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 22:24+0000\n"
+"POT-Creation-Date: 2021-08-08 21:51+0000\n"
 "PO-Revision-Date: 2021-05-05 21:17+0000\n"
 "Last-Translator: Chengyu Liu <wer5lcy@live.cn>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -207,7 +207,7 @@ msgstr "关机"
 msgid "%s memory"
 msgstr "%s 内存"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:309
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:317
 msgid "Unknown Graphics"
 msgstr "未知显卡"
 
@@ -234,36 +234,36 @@ msgstr "四核 %s"
 msgid "Hexa-Core %s"
 msgstr "六核 %s"
 
-#: src/Views/HardwareView.vala:328
+#: src/Views/HardwareView.vala:336
 msgid "Unknown Processor"
 msgstr "未知处理器"
 
-#: src/Views/HardwareView.vala:378
+#: src/Views/HardwareView.vala:386
 msgid "Unknown"
 msgstr "未知设备"
 
-#: src/Views/HardwareView.vala:425
+#: src/Views/HardwareView.vala:434
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s NVMe 固态硬盘"
 
-#: src/Views/HardwareView.vala:427
+#: src/Views/HardwareView.vala:436
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s eMMC 介质"
 
-#: src/Views/HardwareView.vala:429
+#: src/Views/HardwareView.vala:438
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s SATA 固态硬盘"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:441
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s 机械硬盘"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:437
+#: src/Views/HardwareView.vala:446
 #, c-format
 msgid "%s storage"
 msgstr "%s 硬盘"
