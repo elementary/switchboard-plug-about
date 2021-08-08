@@ -9,6 +9,15 @@
   <releases>
     <release version="6.0.0" date="2021-07-15" urgency="medium">
       <description>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Display more information for certain GPUs, including Intel® Xe Graphics</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="6.0.0" date="2021-07-15" urgency="medium">
+      <description>
         <p>Redesign and new features:</p>
         <ul>
           <li>Rename from About to System</li>
