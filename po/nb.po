@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 22:24+0000\n"
+"POT-Creation-Date: 2021-08-08 21:51+0000\n"
 "PO-Revision-Date: 2021-07-22 17:45+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -224,7 +224,7 @@ msgstr "Slå av"
 msgid "%s memory"
 msgstr "%s minne"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:309
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:317
 msgid "Unknown Graphics"
 msgstr "Ukjent grafikk"
 
@@ -251,36 +251,36 @@ msgstr "Fire-kjerner %s"
 msgid "Hexa-Core %s"
 msgstr "Sekskjerner %s"
 
-#: src/Views/HardwareView.vala:328
+#: src/Views/HardwareView.vala:336
 msgid "Unknown Processor"
 msgstr "Ukjent prosessor"
 
-#: src/Views/HardwareView.vala:378
+#: src/Views/HardwareView.vala:386
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: src/Views/HardwareView.vala:425
+#: src/Views/HardwareView.vala:434
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s lagring (NVMe-SSD)"
 
-#: src/Views/HardwareView.vala:427
+#: src/Views/HardwareView.vala:436
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s lagring (eMMC)"
 
-#: src/Views/HardwareView.vala:429
+#: src/Views/HardwareView.vala:438
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s lagring (SATA-SSD)"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:441
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "%s lagring (harddisk)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:437
+#: src/Views/HardwareView.vala:446
 #, c-format
 msgid "%s storage"
 msgstr "%s lagring"

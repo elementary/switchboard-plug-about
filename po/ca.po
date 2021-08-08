@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 22:24+0000\n"
+"POT-Creation-Date: 2021-08-08 21:51+0000\n"
 "PO-Revision-Date: 2021-04-04 17:40+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -216,7 +216,7 @@ msgstr "Atura't"
 msgid "%s memory"
 msgstr "Memòria: %s"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:309
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:317
 msgid "Unknown Graphics"
 msgstr "Gràfics desconeguts"
 
@@ -243,36 +243,36 @@ msgstr "Nucli quàdruple %s"
 msgid "Hexa-Core %s"
 msgstr "Nucli sèxtuple %s"
 
-#: src/Views/HardwareView.vala:328
+#: src/Views/HardwareView.vala:336
 msgid "Unknown Processor"
 msgstr "Processador desconegut"
 
-#: src/Views/HardwareView.vala:378
+#: src/Views/HardwareView.vala:386
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: src/Views/HardwareView.vala:425
+#: src/Views/HardwareView.vala:434
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Emmagatzematge (SSD NVMe): %s"
 
-#: src/Views/HardwareView.vala:427
+#: src/Views/HardwareView.vala:436
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "Emmagatzematge (eMMC): %s"
 
-#: src/Views/HardwareView.vala:429
+#: src/Views/HardwareView.vala:438
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Emmagatzematge (SSD SATA): %s"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:441
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "Emmagatzematge (HDD): %s"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:437
+#: src/Views/HardwareView.vala:446
 #, c-format
 msgid "%s storage"
 msgstr "Emmagatzematge: %s"

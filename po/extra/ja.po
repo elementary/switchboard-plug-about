@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 22:24+0000\n"
+"POT-Creation-Date: 2021-08-08 21:51+0000\n"
 "PO-Revision-Date: 2021-07-18 12:03+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -28,67 +28,76 @@ msgid "View operating system and hardware information"
 msgstr "オペレーティングシステムとハードウェアの情報を参照します"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-msgid "Redesign and new features:"
-msgstr "デザイン変更と新機能:"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:14
-msgid "Rename from About to System"
-msgstr "“このシステムについて”から“システム”に名称変更"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:15
-msgid "Split Hardware and Operating System info into their own tabs"
-msgstr "“ハードウェア”と“オペレーティングシステム”を独立したタブに分割"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:16
-msgid "Redesign the Operating System tab with clearer links and buttons"
-msgstr "“オペレーティングシステム”タブに、より明確なリンクとボタンを配置するデザイン変更"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:17
-msgid "Add a Firmware view to manage device firmware updates"
-msgstr "デバイスファームウェアのアップデートを管理する“ファームウェア”ビューを追加"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:19
-msgid "More information:"
-msgstr "追加された情報:"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:21
-msgid "Provide information for ARM CPUs"
-msgstr "ARM CPU の情報を表示できるように変更"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:22
-msgid "Provide information for more types of Graphics"
-msgstr "検出可能なグラフィックスの種類が増加"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:24
-msgid "Fixes:"
-msgstr "修正点:"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:26
-msgid "Fix an issue where the view was destroyed early when navigating away"
-msgstr "このプラグから移動する場合にビューが先に破棄される不具合を修正"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:27
-msgid "Fix system memory calculation"
-msgstr "システムメモリー容量の検出方法を修正"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:29
+#: data/io.elementary.switchboard.about.appdata.xml.in:38
 msgid "Minor updates:"
 msgstr "軽微なアップデート:"
 
+#: data/io.elementary.switchboard.about.appdata.xml.in:14
+msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
+msgstr ""
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:15
+#: data/io.elementary.switchboard.about.appdata.xml.in:42
+#: data/io.elementary.switchboard.about.appdata.xml.in:48
+#: data/io.elementary.switchboard.about.appdata.xml.in:53
+#: data/io.elementary.switchboard.about.appdata.xml.in:58
+msgid "Updated translations"
+msgstr "翻訳の更新"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:21
+msgid "Redesign and new features:"
+msgstr "デザイン変更と新機能:"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:23
+msgid "Rename from About to System"
+msgstr "“このシステムについて”から“システム”に名称変更"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:24
+msgid "Split Hardware and Operating System info into their own tabs"
+msgstr "“ハードウェア”と“オペレーティングシステム”を独立したタブに分割"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:25
+msgid "Redesign the Operating System tab with clearer links and buttons"
+msgstr ""
+"“オペレーティングシステム”タブに、より明確なリンクとボタンを配置するデザイン"
+"変更"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:26
+msgid "Add a Firmware view to manage device firmware updates"
+msgstr ""
+"デバイスファームウェアのアップデートを管理する“ファームウェア”ビューを追加"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:28
+msgid "More information:"
+msgstr "追加された情報:"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:30
+msgid "Provide information for ARM CPUs"
+msgstr "ARM CPU の情報を表示できるように変更"
+
 #: data/io.elementary.switchboard.about.appdata.xml.in:31
+msgid "Provide information for more types of Graphics"
+msgstr "検出可能なグラフィックスの種類が増加"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:33
+msgid "Fixes:"
+msgstr "修正点:"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:35
+msgid "Fix an issue where the view was destroyed early when navigating away"
+msgstr "このプラグから移動する場合にビューが先に破棄される不具合を修正"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:36
+msgid "Fix system memory calculation"
+msgstr "システムメモリー容量の検出方法を修正"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:40
 msgid "Ellipsize long hardware names"
 msgstr "ハードウェア名が長い場合に省略表示"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:32
+#: data/io.elementary.switchboard.about.appdata.xml.in:41
 msgid "Performance improvements"
 msgstr "パフォーマンスの改善"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:33
-#: data/io.elementary.switchboard.about.appdata.xml.in:39
-#: data/io.elementary.switchboard.about.appdata.xml.in:44
-#: data/io.elementary.switchboard.about.appdata.xml.in:49
-msgid "Updated translations"
-msgstr "翻訳の更新"
 
 #~ msgid "About"
 #~ msgstr "このシステムについて"
