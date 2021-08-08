@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2021-07-19 19:06+0000\n"
+"PO-Revision-Date: 2021-08-08 14:22+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/pt/>\n"
@@ -29,7 +29,7 @@ msgstr "Ver informações sobre o sistema operativo e o hardware"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
 msgid "Redesign and new features:"
-msgstr ""
+msgstr "Redesenho e novas funcionalidades:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Rename from About to System"
@@ -63,7 +63,7 @@ msgstr "Fornece informação para mais tipos de Gráficos"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Fixes:"
-msgstr ""
+msgstr "Correções:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Fix an issue where the view was destroyed early when navigating away"
