@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-08 21:51+0000\n"
-"PO-Revision-Date: 2021-07-18 12:03+0000\n"
+"PO-Revision-Date: 2021-08-09 00:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ja/>\n"
@@ -34,7 +34,7 @@ msgstr "軽微なアップデート:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
-msgstr ""
+msgstr "Intel® Xe Graphics などの特定の GPU に関する情報を詳細に表示するように修正"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 #: data/io.elementary.switchboard.about.appdata.xml.in:42
