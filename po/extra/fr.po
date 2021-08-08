@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2021-07-30 18:07+0000\n"
+"PO-Revision-Date: 2021-08-03 17:14+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/fr/>\n"
@@ -85,7 +85,7 @@ msgstr "Mises à jour mineures :"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:31
 msgid "Ellipsize long hardware names"
-msgstr ""
+msgstr "Les noms de matériels trop longs sont désormais tronqués"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:32
 msgid "Performance improvements"

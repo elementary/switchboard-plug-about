@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2021-07-19 19:06+0000\n"
+"PO-Revision-Date: 2021-08-08 19:03+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/pt/>\n"
@@ -29,33 +29,36 @@ msgstr "Ver informações sobre o sistema operativo e o hardware"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
 msgid "Redesign and new features:"
-msgstr ""
+msgstr "Redesenho e novas funcionalidades:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Rename from About to System"
-msgstr ""
+msgstr "Renomear de Acerca para Sistema"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr ""
+"Dividir a informação do Hardware e do Sistema Operativo nos seus próprios "
+"separadores"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:16
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
+"Redesenha o separador Sistema Operativo com ligações e botões mais claros"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:17
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
+"Adiciona uma vista de Firmware para gerir atualizações de firmware do "
+"dispositivo"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:19
 msgid "More information:"
-msgstr ""
+msgstr "Mais informação:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:21
-#, fuzzy
-#| msgid "Provide information for more types of Graphics"
 msgid "Provide information for ARM CPUs"
-msgstr "Fornece informação para mais tipos de Gráficos"
+msgstr "Fornece informação para CPUs ARM"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:22
 msgid "Provide information for more types of Graphics"
@@ -63,15 +66,17 @@ msgstr "Fornece informação para mais tipos de Gráficos"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Fixes:"
-msgstr ""
+msgstr "Correções:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr ""
+"Corrige um problema em que a vista foi destruída prematuramente quando se "
+"navegava para longe"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Fix system memory calculation"
-msgstr ""
+msgstr "Corrige o cálculo de memória do sistema"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:29
 msgid "Minor updates:"
