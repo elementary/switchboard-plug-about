@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2021-08-08 21:51+0000\n"
+"PO-Revision-Date: 2021-08-09 16:35+0000\n"
+"Last-Translator: Rosvi <rosvi@disroot.org>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -73,10 +73,8 @@ msgid "Updates"
 msgstr "Atualizações"
 
 #: src/Views/FirmwareReleaseView.vala:42
-#, fuzzy
-#| msgid "Updates"
 msgid "All Updates"
-msgstr "Atualizações"
+msgstr "Todas as Atualizações"
 
 #: src/Views/FirmwareReleaseView.vala:81
 msgid "Version:"
@@ -84,46 +82,46 @@ msgstr "Versão:"
 
 #: src/Views/FirmwareReleaseView.vala:90
 msgid "Vendor:"
-msgstr ""
+msgstr "Fornecedor:"
 
 #: src/Views/FirmwareReleaseView.vala:99
 msgid "Size:"
-msgstr ""
+msgstr "Tamanho:"
 
 #: src/Views/FirmwareReleaseView.vala:108
 msgid "Estimated time to install:"
-msgstr ""
+msgstr "Tempo estimado de instalação:"
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "Não há versões novas disponíveis para este dispositivo."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
 msgid "Update"
 msgstr "Atualização"
 
 #: src/Views/FirmwareReleaseView.vala:211
-#, fuzzy
-#| msgid "Up to Date"
 msgid "Up to date"
 msgstr "Atualizado"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr ""
+msgstr "menos de um minuto"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%llu minuto"
+msgstr[1] "%llu minutos"
 
 #: src/Views/FirmwareView.vala:36
 msgid ""
 "Firmware updates provided by device manufacturers can improve performance "
 "and fix critical security issues."
 msgstr ""
+"As atualizações de firmware fornecidas pelos fabricantes de dispositivos "
+"podem melhorar o desempenho e corrigir problemas críticos de segurança."
 
 #: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
@@ -216,7 +214,7 @@ msgstr "Desligar"
 msgid "%s memory"
 msgstr "%s memória"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:309
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:317
 msgid "Unknown Graphics"
 msgstr "Gráficos desconhecidos"
 
@@ -243,36 +241,36 @@ msgstr "Quad Core %s"
 msgid "Hexa-Core %s"
 msgstr "Hexa Core %s"
 
-#: src/Views/HardwareView.vala:328
+#: src/Views/HardwareView.vala:336
 msgid "Unknown Processor"
 msgstr "Processador desconhecido"
 
-#: src/Views/HardwareView.vala:378
+#: src/Views/HardwareView.vala:386
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: src/Views/HardwareView.vala:425
+#: src/Views/HardwareView.vala:434
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s armazenamento (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:427
+#: src/Views/HardwareView.vala:436
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s armazenamento (eMMC)"
 
-#: src/Views/HardwareView.vala:429
+#: src/Views/HardwareView.vala:438
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s armazenamento (SATA SSD)"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:441
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s armazenamento (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:437
+#: src/Views/HardwareView.vala:446
 #, c-format
 msgid "%s storage"
 msgstr "%s armazenamento"

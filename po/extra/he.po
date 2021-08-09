@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 22:24+0000\n"
-"PO-Revision-Date: 2021-07-16 09:57+0000\n"
+"POT-Creation-Date: 2021-08-08 21:51+0000\n"
+"PO-Revision-Date: 2021-08-09 06:39+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/he/>\n"
@@ -28,67 +28,73 @@ msgid "View operating system and hardware information"
 msgstr "צפייה במידע חומרה ומערכת ההפעלה"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-msgid "Redesign and new features:"
-msgstr "עיצוב מחדש ויכולות חדשות:"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:14
-msgid "Rename from About to System"
-msgstr "שינוי שם מ„על אודות” ל„מערכת”"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:15
-msgid "Split Hardware and Operating System info into their own tabs"
-msgstr "פיצול פרטי חומרה ומערכת הפעלה ללשוניות עצמאיות"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:16
-msgid "Redesign the Operating System tab with clearer links and buttons"
-msgstr "עיצוב מחדש של לשונית מערכת ההפעלה ונוספו קישורים וכפתורים ברורים יותר"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:17
-msgid "Add a Firmware view to manage device firmware updates"
-msgstr "הוספת תצוגת קושחה כדי לנהל את עדכוני קושחות ההתקנים"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:19
-msgid "More information:"
-msgstr "מידע נוסף:"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:21
-msgid "Provide information for ARM CPUs"
-msgstr "אספקת מידע לסוגים נוספים של מעבדי ARM"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:22
-msgid "Provide information for more types of Graphics"
-msgstr "אספקת מידע לסוגים נוספים של גרפיקה"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:24
-msgid "Fixes:"
-msgstr "תיקונים:"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:26
-msgid "Fix an issue where the view was destroyed early when navigating away"
-msgstr "תוקנה תקלה בה התצוגה הושמדה מוקדם מדי בעת ניווט אל מחוצה לה"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:27
-msgid "Fix system memory calculation"
-msgstr "חישוב זיכרון המערכת תוקן"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:29
+#: data/io.elementary.switchboard.about.appdata.xml.in:38
 msgid "Minor updates:"
 msgstr "עדכונים משניים:"
 
+#: data/io.elementary.switchboard.about.appdata.xml.in:14
+msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
+msgstr "הצגת מידע נוסף על מעבדים גרפיים מסוימים לרבות Intel® Xe Graphics"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:15
+#: data/io.elementary.switchboard.about.appdata.xml.in:42
+#: data/io.elementary.switchboard.about.appdata.xml.in:48
+#: data/io.elementary.switchboard.about.appdata.xml.in:53
+#: data/io.elementary.switchboard.about.appdata.xml.in:58
+msgid "Updated translations"
+msgstr "תרגומים עודכנו"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:21
+msgid "Redesign and new features:"
+msgstr "עיצוב מחדש ויכולות חדשות:"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:23
+msgid "Rename from About to System"
+msgstr "שינוי שם מ„על אודות” ל„מערכת”"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:24
+msgid "Split Hardware and Operating System info into their own tabs"
+msgstr "פיצול פרטי חומרה ומערכת הפעלה ללשוניות עצמאיות"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:25
+msgid "Redesign the Operating System tab with clearer links and buttons"
+msgstr "עיצוב מחדש של לשונית מערכת ההפעלה ונוספו קישורים וכפתורים ברורים יותר"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:26
+msgid "Add a Firmware view to manage device firmware updates"
+msgstr "הוספת תצוגת קושחה כדי לנהל את עדכוני קושחות ההתקנים"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:28
+msgid "More information:"
+msgstr "מידע נוסף:"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:30
+msgid "Provide information for ARM CPUs"
+msgstr "אספקת מידע לסוגים נוספים של מעבדי ARM"
+
 #: data/io.elementary.switchboard.about.appdata.xml.in:31
+msgid "Provide information for more types of Graphics"
+msgstr "אספקת מידע לסוגים נוספים של גרפיקה"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:33
+msgid "Fixes:"
+msgstr "תיקונים:"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:35
+msgid "Fix an issue where the view was destroyed early when navigating away"
+msgstr "תוקנה תקלה בה התצוגה הושמדה מוקדם מדי בעת ניווט אל מחוצה לה"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:36
+msgid "Fix system memory calculation"
+msgstr "חישוב זיכרון המערכת תוקן"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:40
 msgid "Ellipsize long hardware names"
 msgstr "שמות רכיבי חומרה ארוכים מקוצרים"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:32
+#: data/io.elementary.switchboard.about.appdata.xml.in:41
 msgid "Performance improvements"
 msgstr "שיפורי ביצועים"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:33
-#: data/io.elementary.switchboard.about.appdata.xml.in:39
-#: data/io.elementary.switchboard.about.appdata.xml.in:44
-#: data/io.elementary.switchboard.about.appdata.xml.in:49
-msgid "Updated translations"
-msgstr "תרגומים עודכנו"
 
 #~ msgid "About"
 #~ msgstr "על אודות"

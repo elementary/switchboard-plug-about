@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 22:24+0000\n"
+"POT-Creation-Date: 2021-08-08 21:51+0000\n"
 "PO-Revision-Date: 2021-04-05 18:56+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -214,7 +214,7 @@ msgstr "Выключить"
 msgid "%s memory"
 msgstr "Память: %s"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:309
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:317
 msgid "Unknown Graphics"
 msgstr "Неизвестная графика"
 
@@ -241,36 +241,36 @@ msgstr "Четырехъядерный %s"
 msgid "Hexa-Core %s"
 msgstr "Шестиядерный %s"
 
-#: src/Views/HardwareView.vala:328
+#: src/Views/HardwareView.vala:336
 msgid "Unknown Processor"
 msgstr "Иеизвестный процессор"
 
-#: src/Views/HardwareView.vala:378
+#: src/Views/HardwareView.vala:386
 msgid "Unknown"
 msgstr "Неизвестно"
 
-#: src/Views/HardwareView.vala:425
+#: src/Views/HardwareView.vala:434
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s хранилище (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:427
+#: src/Views/HardwareView.vala:436
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s хранилище (eMMC)"
 
-#: src/Views/HardwareView.vala:429
+#: src/Views/HardwareView.vala:438
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s хранилище (SATA SSD)"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:441
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s хранилище (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:437
+#: src/Views/HardwareView.vala:446
 #, c-format
 msgid "%s storage"
 msgstr "Системный раздел: %s"

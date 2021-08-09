@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 22:24+0000\n"
+"POT-Creation-Date: 2021-08-08 21:51+0000\n"
 "PO-Revision-Date: 2017-02-07 12:15+0000\n"
 "Last-Translator: iakovos athanasiadhs <liam21iakovos@gmail.com>\n"
 "Language-Team: Greek <el@li.org>\n"
@@ -224,7 +224,7 @@ msgstr ""
 msgid "%s memory"
 msgstr "Μνήμη:"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:309
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:317
 #, fuzzy
 #| msgid "Graphics:"
 msgid "Unknown Graphics"
@@ -257,38 +257,38 @@ msgstr "Τετραπύρηνος"
 msgid "Hexa-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:328
+#: src/Views/HardwareView.vala:336
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Επεξεργαστής:"
 
-#: src/Views/HardwareView.vala:378
+#: src/Views/HardwareView.vala:386
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: src/Views/HardwareView.vala:425
+#: src/Views/HardwareView.vala:434
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Αποθηκευτικός χώρος:"
 
-#: src/Views/HardwareView.vala:427
+#: src/Views/HardwareView.vala:436
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "Αποθηκευτικός χώρος:"
 
-#: src/Views/HardwareView.vala:429
+#: src/Views/HardwareView.vala:438
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Αποθηκευτικός χώρος:"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:441
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "Αποθηκευτικός χώρος:"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:437
+#: src/Views/HardwareView.vala:446
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Αποθηκευτικός χώρος:"
