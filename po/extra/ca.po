@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-08 21:51+0000\n"
-"PO-Revision-Date: 2021-07-19 19:06+0000\n"
+"PO-Revision-Date: 2021-08-09 14:19+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ca/>\n"
@@ -34,7 +34,7 @@ msgstr "Actualitzacions menors:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
-msgstr ""
+msgstr "Es mostra més informació per a certes GPU, inclosa Intel® Xe Graphics."
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 #: data/io.elementary.switchboard.about.appdata.xml.in:42
