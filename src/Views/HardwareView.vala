@@ -44,7 +44,7 @@ public class About.HardwareView : Gtk.Grid {
     construct {
         fetch_hardware_info ();
 
-        var product_name_info = new Gtk.Label (Environment.get_host_name ()) {
+        var product_name_info = new Gtk.Label (get_host_name ()) {
             ellipsize = Pango.EllipsizeMode.MIDDLE,
             selectable = true,
             xalign = 0
@@ -487,6 +487,10 @@ public class About.HardwareView : Gtk.Grid {
     struct GraphicsReplaceStrings {
         string regex;
         string replacement;
+    }
+
+    private string get_host_name () {
+        return GLib.Environment.get_host_name ();
     }
 }
 
