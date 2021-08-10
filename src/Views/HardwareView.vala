@@ -162,17 +162,8 @@ public class About.HardwareView : Gtk.Grid {
     }
 
     private async void load_fallback_manufacturer_icon () {
-        try {
-            system_interface = yield Bus.get_proxy (
-                BusType.SYSTEM,
-                "org.freedesktop.hostname1",
-                "/org/freedesktop/hostname1"
-            );
-
-            manufacturer_logo.icon_name = system_interface.icon_name;
-        } catch (IOError e) {
-            critical (e.message);
-        }
+        get_system_interface_instance ();
+        manufacturer_logo.icon_name = system_interface.icon_name;
     }
 
     private string? try_get_arm_model (GLib.HashTable<string, string> values) {
@@ -489,8 +480,30 @@ public class About.HardwareView : Gtk.Grid {
         string replacement;
     }
 
+    private void get_system_interface_instance () {
+        if (system_interface == null) {
+            try {
+                system_interface = Bus.get_proxy_sync (
+                    BusType.SYSTEM,
+                    "org.freedesktop.hostname1",
+                    "/org/freedesktop/hostname1"
+                );
+            } catch (GLib.Error e) {
+                warning ("%s", e.message);
+            }
+        }
+    }
+
     private string get_host_name () {
-        return GLib.Environment.get_host_name ();
+        get_system_interface_instance ();
+
+        string hostname = system_interface.pretty_hostname;
+
+        if (hostname.length == 0) {
+            hostname = system_interface.static_hostname;
+        }
+
+        return hostname;
     }
 }
 
@@ -498,6 +511,9 @@ public class About.HardwareView : Gtk.Grid {
 public interface SystemInterface : Object {
     [DBus (name = "IconName")]
     public abstract string icon_name { owned get; }
+
+    public abstract string pretty_hostname { owned get; }
+    public abstract string static_hostname { owned get; }
 }
 
 [DBus (name = "org.gnome.SessionManager")]
