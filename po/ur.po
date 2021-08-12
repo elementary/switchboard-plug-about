@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-08 21:51+0000\n"
+"POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2016-12-08 17:26+0000\n"
 "Last-Translator: Waqar Ahmed <waqar.17a@gmail.com>\n"
 "Language-Team: Urdu <ur@li.org>\n"
@@ -224,7 +224,7 @@ msgstr ""
 msgid "%s memory"
 msgstr "میموری:"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
 #, fuzzy
 #| msgid "Graphics:"
 msgid "Unknown Graphics"
@@ -240,55 +240,55 @@ msgstr "پراسیسر:"
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:235
 #, fuzzy, c-format
 #| msgid "Dual-Core"
 msgid "Dual-Core %s"
 msgstr "ڈوئل-کور"
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:237
 #, fuzzy, c-format
 #| msgid "Quad-Core"
 msgid "Quad-Core %s"
 msgstr "کواڈ-کور"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:239
 #, c-format
 msgid "Hexa-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:336
+#: src/Views/HardwareView.vala:330
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "پراسیسر:"
 
-#: src/Views/HardwareView.vala:386
+#: src/Views/HardwareView.vala:380
 msgid "Unknown"
 msgstr "نا معلوم"
 
-#: src/Views/HardwareView.vala:434
+#: src/Views/HardwareView.vala:428
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "سٹوریج:"
 
-#: src/Views/HardwareView.vala:436
+#: src/Views/HardwareView.vala:430
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "سٹوریج:"
 
-#: src/Views/HardwareView.vala:438
+#: src/Views/HardwareView.vala:432
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "سٹوریج:"
 
-#: src/Views/HardwareView.vala:441
+#: src/Views/HardwareView.vala:435
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "سٹوریج:"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:446
+#: src/Views/HardwareView.vala:440
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "سٹوریج:"

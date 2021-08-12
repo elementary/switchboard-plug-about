@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-08 21:51+0000\n"
+"POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2021-05-04 12:26+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -212,7 +212,7 @@ msgstr "Sammuta"
 msgid "%s memory"
 msgstr "%s keskusmuistia"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
 msgid "Unknown Graphics"
 msgstr "Tuntematon grafiikka"
 
@@ -224,51 +224,51 @@ msgstr "Tuntematon massamuisti"
 msgid "Manufacturer Website"
 msgstr "Valmistajan verkkosivusto"
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:235
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Tuplaydin %s"
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:237
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Neliydin %s"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:239
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Heksaydin %s"
 
-#: src/Views/HardwareView.vala:336
+#: src/Views/HardwareView.vala:330
 msgid "Unknown Processor"
 msgstr "Tuntematon suoritin"
 
-#: src/Views/HardwareView.vala:386
+#: src/Views/HardwareView.vala:380
 msgid "Unknown"
 msgstr "Tuntematon"
 
-#: src/Views/HardwareView.vala:434
+#: src/Views/HardwareView.vala:428
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s tallennustilaa (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:436
+#: src/Views/HardwareView.vala:430
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s tallennustilaa (eMMC)"
 
-#: src/Views/HardwareView.vala:438
+#: src/Views/HardwareView.vala:432
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s tallennustilaa (SATA SSD)"
 
-#: src/Views/HardwareView.vala:441
+#: src/Views/HardwareView.vala:435
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s tallennustilaa (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:446
+#: src/Views/HardwareView.vala:440
 #, c-format
 msgid "%s storage"
 msgstr "%s tallennustilaa"

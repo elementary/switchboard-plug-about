@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-08 21:51+0000\n"
+"POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2021-04-05 18:56+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -214,7 +214,7 @@ msgstr "Выключить"
 msgid "%s memory"
 msgstr "Память: %s"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
 msgid "Unknown Graphics"
 msgstr "Неизвестная графика"
 
@@ -226,51 +226,51 @@ msgstr "Неизвестное хранилище"
 msgid "Manufacturer Website"
 msgstr "Сайт производителя"
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:235
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Двухъядерный %s"
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:237
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Четырехъядерный %s"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:239
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Шестиядерный %s"
 
-#: src/Views/HardwareView.vala:336
+#: src/Views/HardwareView.vala:330
 msgid "Unknown Processor"
 msgstr "Иеизвестный процессор"
 
-#: src/Views/HardwareView.vala:386
+#: src/Views/HardwareView.vala:380
 msgid "Unknown"
 msgstr "Неизвестно"
 
-#: src/Views/HardwareView.vala:434
+#: src/Views/HardwareView.vala:428
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s хранилище (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:436
+#: src/Views/HardwareView.vala:430
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s хранилище (eMMC)"
 
-#: src/Views/HardwareView.vala:438
+#: src/Views/HardwareView.vala:432
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s хранилище (SATA SSD)"
 
-#: src/Views/HardwareView.vala:441
+#: src/Views/HardwareView.vala:435
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s хранилище (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:446
+#: src/Views/HardwareView.vala:440
 #, c-format
 msgid "%s storage"
 msgstr "Системный раздел: %s"

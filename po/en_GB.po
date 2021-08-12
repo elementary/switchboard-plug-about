@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-08 21:51+0000\n"
+"POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2021-04-07 15:37+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -209,7 +209,7 @@ msgstr "Shut Down"
 msgid "%s memory"
 msgstr "%s memory"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
 msgid "Unknown Graphics"
 msgstr "Unknown Graphics"
 
@@ -221,51 +221,51 @@ msgstr "Unknown storage"
 msgid "Manufacturer Website"
 msgstr "Manufacturer Website"
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:235
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Dual-Core %s"
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:237
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Quad-Core %s"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:239
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Hexa-Core %s"
 
-#: src/Views/HardwareView.vala:336
+#: src/Views/HardwareView.vala:330
 msgid "Unknown Processor"
 msgstr "Unknown Processor"
 
-#: src/Views/HardwareView.vala:386
+#: src/Views/HardwareView.vala:380
 msgid "Unknown"
 msgstr "Unknown"
 
-#: src/Views/HardwareView.vala:434
+#: src/Views/HardwareView.vala:428
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s storage (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:436
+#: src/Views/HardwareView.vala:430
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s storage (eMMC)"
 
-#: src/Views/HardwareView.vala:438
+#: src/Views/HardwareView.vala:432
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s storage (SATA SSD)"
 
-#: src/Views/HardwareView.vala:441
+#: src/Views/HardwareView.vala:435
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s storage (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:446
+#: src/Views/HardwareView.vala:440
 #, c-format
 msgid "%s storage"
 msgstr "%s storage"
