@@ -163,7 +163,10 @@ public class About.HardwareView : Gtk.Grid {
 
     private async void load_fallback_manufacturer_icon () {
         get_system_interface_instance ();
-        manufacturer_logo.icon_name = system_interface.icon_name;
+
+        if (system_interface != null) {
+            manufacturer_logo.icon_name = system_interface.icon_name;
+        }
     }
 
     private string? try_get_arm_model (GLib.HashTable<string, string> values) {
@@ -496,6 +499,10 @@ public class About.HardwareView : Gtk.Grid {
 
     private string get_host_name () {
         get_system_interface_instance ();
+
+        if (system_interface == null) {
+            return GLib.Environment.get_host_name ();
+        }
 
         string hostname = system_interface.pretty_hostname;
 
