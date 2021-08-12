@@ -27,6 +27,9 @@ public class About.Plug : Switchboard.Plug {
     private Gtk.Stack stack;
 
     public Plug () {
+        GLib.Intl.bindtextdomain (About.GETTEXT_PACKAGE, About.LOCALEDIR);
+        GLib.Intl.bind_textdomain_codeset (About.GETTEXT_PACKAGE, "UTF-8");
+
         var settings = new Gee.TreeMap<string, string?> (null, null);
         settings.set ("about", null);
         settings.set ("about/os", OPERATING_SYSTEM);

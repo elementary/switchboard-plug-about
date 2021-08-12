@@ -14,7 +14,8 @@ switchboard_dep = dependency('switchboard-2.0')
 switchboard_plugsdir = switchboard_dep.get_pkgconfig_variable('plugsdir', define_variable: ['libdir', libdir])
 
 config_data = configuration_data()
-config_data.set('GETTEXT_PACKAGE', meson.project_name())
+config_data.set('GETTEXT_PACKAGE', meson.project_name() + '-plug')
+config_data.set('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
 config_vala = configure_file(
     input: 'Config.vala.in',
     output: '@BASENAME@',
