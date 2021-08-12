@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-08 21:51+0000\n"
+"POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2021-08-09 00:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -28,74 +28,79 @@ msgid "View operating system and hardware information"
 msgstr "オペレーティングシステムとハードウェアの情報を参照します"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-#: data/io.elementary.switchboard.about.appdata.xml.in:38
+#: data/io.elementary.switchboard.about.appdata.xml.in:39
 msgid "Minor updates:"
 msgstr "軽微なアップデート:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
-msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
-msgstr "Intel® Xe Graphics などの特定の GPU に関する情報を詳細に表示するように修正"
+msgid "Use formatted device name when available"
+msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
-#: data/io.elementary.switchboard.about.appdata.xml.in:42
-#: data/io.elementary.switchboard.about.appdata.xml.in:48
-#: data/io.elementary.switchboard.about.appdata.xml.in:53
-#: data/io.elementary.switchboard.about.appdata.xml.in:58
+msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
+msgstr ""
+"Intel® Xe Graphics などの特定の GPU に関する情報を詳細に表示するように修正"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:16
+#: data/io.elementary.switchboard.about.appdata.xml.in:43
+#: data/io.elementary.switchboard.about.appdata.xml.in:49
+#: data/io.elementary.switchboard.about.appdata.xml.in:54
+#: data/io.elementary.switchboard.about.appdata.xml.in:59
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:21
+#: data/io.elementary.switchboard.about.appdata.xml.in:22
 msgid "Redesign and new features:"
 msgstr "デザイン変更と新機能:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:23
+#: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Rename from About to System"
 msgstr "“このシステムについて”から“システム”に名称変更"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:24
+#: data/io.elementary.switchboard.about.appdata.xml.in:25
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr "“ハードウェア”と“オペレーティングシステム”を独立したタブに分割"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:25
+#: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
 "“オペレーティングシステム”タブに、より明確なリンクとボタンを配置するデザイン"
 "変更"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:26
+#: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
 "デバイスファームウェアのアップデートを管理する“ファームウェア”ビューを追加"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:28
+#: data/io.elementary.switchboard.about.appdata.xml.in:29
 msgid "More information:"
 msgstr "追加された情報:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:30
+#: data/io.elementary.switchboard.about.appdata.xml.in:31
 msgid "Provide information for ARM CPUs"
 msgstr "ARM CPU の情報を表示できるように変更"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:31
+#: data/io.elementary.switchboard.about.appdata.xml.in:32
 msgid "Provide information for more types of Graphics"
 msgstr "検出可能なグラフィックスの種類が増加"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:33
+#: data/io.elementary.switchboard.about.appdata.xml.in:34
 msgid "Fixes:"
 msgstr "修正点:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:35
+#: data/io.elementary.switchboard.about.appdata.xml.in:36
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr "このプラグから移動する場合にビューが先に破棄される不具合を修正"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:36
+#: data/io.elementary.switchboard.about.appdata.xml.in:37
 msgid "Fix system memory calculation"
 msgstr "システムメモリー容量の検出方法を修正"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:40
+#: data/io.elementary.switchboard.about.appdata.xml.in:41
 msgid "Ellipsize long hardware names"
 msgstr "ハードウェア名が長い場合に省略表示"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:41
+#: data/io.elementary.switchboard.about.appdata.xml.in:42
 msgid "Performance improvements"
 msgstr "パフォーマンスの改善"
 
