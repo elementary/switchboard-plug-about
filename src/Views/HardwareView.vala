@@ -44,7 +44,7 @@ public class About.HardwareView : Gtk.Grid {
     construct {
         fetch_hardware_info ();
 
-        var product_name_info = new Gtk.Label (Environment.get_host_name ()) {
+        var product_name_info = new Gtk.Label (get_host_name ()) {
             ellipsize = Pango.EllipsizeMode.MIDDLE,
             selectable = true,
             xalign = 0
@@ -162,16 +162,10 @@ public class About.HardwareView : Gtk.Grid {
     }
 
     private async void load_fallback_manufacturer_icon () {
-        try {
-            system_interface = yield Bus.get_proxy (
-                BusType.SYSTEM,
-                "org.freedesktop.hostname1",
-                "/org/freedesktop/hostname1"
-            );
+        get_system_interface_instance ();
 
+        if (system_interface != null) {
             manufacturer_logo.icon_name = system_interface.icon_name;
-        } catch (IOError e) {
-            critical (e.message);
         }
     }
 
@@ -488,12 +482,45 @@ public class About.HardwareView : Gtk.Grid {
         string regex;
         string replacement;
     }
+
+    private void get_system_interface_instance () {
+        if (system_interface == null) {
+            try {
+                system_interface = Bus.get_proxy_sync (
+                    BusType.SYSTEM,
+                    "org.freedesktop.hostname1",
+                    "/org/freedesktop/hostname1"
+                );
+            } catch (GLib.Error e) {
+                warning ("%s", e.message);
+            }
+        }
+    }
+
+    private string get_host_name () {
+        get_system_interface_instance ();
+
+        if (system_interface == null) {
+            return GLib.Environment.get_host_name ();
+        }
+
+        string hostname = system_interface.pretty_hostname;
+
+        if (hostname.length == 0) {
+            hostname = system_interface.static_hostname;
+        }
+
+        return hostname;
+    }
 }
 
 [DBus (name = "org.freedesktop.hostname1")]
 public interface SystemInterface : Object {
     [DBus (name = "IconName")]
     public abstract string icon_name { owned get; }
+
+    public abstract string pretty_hostname { owned get; }
+    public abstract string static_hostname { owned get; }
 }
 
 [DBus (name = "org.gnome.SessionManager")]
