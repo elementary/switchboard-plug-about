@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-08-13 16:30+0000\n"
+"PO-Revision-Date: 2021-08-14 01:28+0000\n"
 "Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ru/>\n"
@@ -73,7 +73,7 @@ msgstr ""
 #: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
-"Добавлено представление Прошивка для управления обновлениями прошивок "
+"Добавлено представление «Прошивка» для управления обновлениями прошивок "
 "устройств"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:29
