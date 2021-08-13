@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2021-08-13 16:26+0000\n"
-"Last-Translator: asdffdsdaf <useruseruser1233211@gmail.com>\n"
+"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -97,11 +97,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:37
 msgid "Fix system memory calculation"
-msgstr ""
+msgstr "Исправлено вычисление системной памяти"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:41
 msgid "Ellipsize long hardware names"
-msgstr ""
+msgstr "Сокращение длинных названий оборудования"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:42
 msgid "Performance improvements"
