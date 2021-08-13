@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2021-08-13 16:29+0000\n"
-"Last-Translator: asdffdsdaf <useruseruser1233211@gmail.com>\n"
+"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -35,12 +35,12 @@ msgstr "Незначительные обновления:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Use formatted device name when available"
-msgstr ""
+msgstr "Применение названия отформатированного устройства, если оно доступно"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr ""
-"Отображать больше информации для определённых видеокарт, включая Intel® Xe "
+"Отображение большей информации для определённых видеокарт, включая Intel® Xe "
 "Graphics"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:16
@@ -57,7 +57,7 @@ msgstr "Редизайн и новые возможности:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Rename from About to System"
-msgstr ""
+msgstr "Переименовано из «О системе» в «Система»"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:25
 msgid "Split Hardware and Operating System info into their own tabs"
@@ -79,10 +79,8 @@ msgid "More information:"
 msgstr "Больше информации:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:31
-#, fuzzy
-#| msgid "Provide information for more types of Graphics"
 msgid "Provide information for ARM CPUs"
-msgstr "Предоставляет информацию для большего количества типов графики"
+msgstr "Предоставление информации для процессоров ARM"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:32
 msgid "Provide information for more types of Graphics"
