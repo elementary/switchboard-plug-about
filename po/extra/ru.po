@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2021-08-13 16:30+0000\n"
-"Last-Translator: asdffdsdaf <useruseruser1233211@gmail.com>\n"
+"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -68,7 +68,7 @@ msgstr ""
 #: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
-"Редизайн вкладки Операционная система с более понятными ссылками и кнопками"
+"Редизайн вкладки «Операционная система» с более понятными ссылками и кнопками"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Add a Firmware view to manage device firmware updates"
