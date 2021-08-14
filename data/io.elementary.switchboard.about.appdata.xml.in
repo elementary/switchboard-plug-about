@@ -11,6 +11,7 @@
       <description>
         <p>Minor updates:</p>
         <ul>
+          <li>Use formatted device name when available</li>
           <li>Display more information for certain GPUs, including Intel® Xe Graphics</li>
           <li>Updated translations</li>
         </ul>

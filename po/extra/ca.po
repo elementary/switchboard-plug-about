@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-08 21:51+0000\n"
-"PO-Revision-Date: 2021-08-09 14:19+0000\n"
+"POT-Creation-Date: 2021-08-12 19:25+0000\n"
+"PO-Revision-Date: 2021-08-14 01:28+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ca/>\n"
@@ -28,78 +28,82 @@ msgid "View operating system and hardware information"
 msgstr "Mostra la informació del sistema operatiu i del maquinari"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-#: data/io.elementary.switchboard.about.appdata.xml.in:38
+#: data/io.elementary.switchboard.about.appdata.xml.in:39
 msgid "Minor updates:"
 msgstr "Actualitzacions menors:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
+msgid "Use formatted device name when available"
+msgstr "Usa el nom del dispositiu formatat quan està disponible."
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr "Es mostra més informació per a certes GPU, inclosa Intel® Xe Graphics."
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:15
-#: data/io.elementary.switchboard.about.appdata.xml.in:42
-#: data/io.elementary.switchboard.about.appdata.xml.in:48
-#: data/io.elementary.switchboard.about.appdata.xml.in:53
-#: data/io.elementary.switchboard.about.appdata.xml.in:58
+#: data/io.elementary.switchboard.about.appdata.xml.in:16
+#: data/io.elementary.switchboard.about.appdata.xml.in:43
+#: data/io.elementary.switchboard.about.appdata.xml.in:49
+#: data/io.elementary.switchboard.about.appdata.xml.in:54
+#: data/io.elementary.switchboard.about.appdata.xml.in:59
 msgid "Updated translations"
 msgstr "Traduccions actualitzades"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:21
+#: data/io.elementary.switchboard.about.appdata.xml.in:22
 msgid "Redesign and new features:"
 msgstr "Redisseny i funcions noves:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:23
+#: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Rename from About to System"
 msgstr "Canvi de nom des de l'apartat Quant al sistema"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:24
+#: data/io.elementary.switchboard.about.appdata.xml.in:25
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr ""
 "Divisió de la informació del maquinari i del sistema operatiu a les seves "
 "pestanyes"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:25
+#: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
 "Redisseny de la pestanya del Sistema operatiu amb enllaços i botons més clars"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:26
+#: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
 "Addició d'una vista de microprogramari per gestionar les actualitzacions de "
 "microprogramari del dispositiu"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:28
+#: data/io.elementary.switchboard.about.appdata.xml.in:29
 msgid "More information:"
 msgstr "Més informació:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:30
+#: data/io.elementary.switchboard.about.appdata.xml.in:31
 msgid "Provide information for ARM CPUs"
 msgstr "Es proporciona informació per a les CPU d'ARM."
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:31
+#: data/io.elementary.switchboard.about.appdata.xml.in:32
 msgid "Provide information for more types of Graphics"
 msgstr "Proporciona informació per a més tipus de gràfics."
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:33
+#: data/io.elementary.switchboard.about.appdata.xml.in:34
 msgid "Fixes:"
 msgstr "Correccions:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:35
+#: data/io.elementary.switchboard.about.appdata.xml.in:36
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr ""
 "Solució d'un problema que provocava que la vista es destruís aviat en "
 "allunyar-se'n"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:36
+#: data/io.elementary.switchboard.about.appdata.xml.in:37
 msgid "Fix system memory calculation"
 msgstr "Correcció del càlcul de la memòria del sistema"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:40
+#: data/io.elementary.switchboard.about.appdata.xml.in:41
 msgid "Ellipsize long hardware names"
 msgstr "El·lipsi dels noms de maquinari llargs"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:41
+#: data/io.elementary.switchboard.about.appdata.xml.in:42
 msgid "Performance improvements"
 msgstr "Millores de rendiment"
 
