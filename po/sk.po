@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-01-04 22:57+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2021-08-23 13:11+0000\n"
+"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/sk/>\n"
 "Language: sk\n"
@@ -17,40 +17,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:39
 msgid "System"
-msgstr ""
+msgstr "Systém"
 
 #: src/Plug.vala:40
 msgid "View operating system and hardware information"
-msgstr "Zobraziť informácie o operačnom systéme a hardware"
+msgstr "Zobraziť informácie o operačnom systéme a hardvéri"
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "Operačný systém"
 
 #: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Hardvér"
 
 #: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Hardvér"
+msgstr "Firmvér"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "View operating system and hardware information"
 msgid "Operating System Information"
-msgstr "Zobraziť informácie o operačnom systéme a hardware"
+msgstr "Informácie o operačnom systéme"
 
 #: src/Plug.vala:108
 msgid "Hardware Information"
-msgstr ""
+msgstr "Informácie o hardvéri"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
@@ -62,7 +58,7 @@ msgstr "Navrhnúť preklady"
 
 #: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "Poslať spätnú väzbu"
 
 #: src/Plug.vala:113
 msgid "Report a Problem"
@@ -70,219 +66,213 @@ msgstr "Nahlásiť problém"
 
 #: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Získať podporu"
 
 #: src/Plug.vala:115
 msgid "Updates"
-msgstr ""
+msgstr "Aktualizácie"
 
 #: src/Views/FirmwareReleaseView.vala:42
 msgid "All Updates"
-msgstr ""
+msgstr "Všetky aktualizácie"
 
 #: src/Views/FirmwareReleaseView.vala:81
 msgid "Version:"
-msgstr ""
+msgstr "Verzia:"
 
 #: src/Views/FirmwareReleaseView.vala:90
 msgid "Vendor:"
-msgstr ""
+msgstr "Predajca:"
 
 #: src/Views/FirmwareReleaseView.vala:99
 msgid "Size:"
-msgstr ""
+msgstr "Veľkosť:"
 
 #: src/Views/FirmwareReleaseView.vala:108
 msgid "Estimated time to install:"
-msgstr ""
+msgstr "Odhadovaný čas inštalácie:"
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "Pre toto zariadenie nie sú dostupné žiadne vydania."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
 msgid "Update"
-msgstr ""
+msgstr "Aktualizovať"
 
 #: src/Views/FirmwareReleaseView.vala:211
 msgid "Up to date"
-msgstr ""
+msgstr "Aktualizované"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr ""
+msgstr "menej ako minúta"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%llu minúta"
+msgstr[1] "%llu minúty"
+msgstr[2] "%llu minút"
 
 #: src/Views/FirmwareView.vala:36
 msgid ""
 "Firmware updates provided by device manufacturers can improve performance "
 "and fix critical security issues."
 msgstr ""
+"Aktualizácie firmvéru od výrobcov zariadení môžu zvýšiť výkon a opraviť "
+"kritické bezpečnostné chyby."
 
 #: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "Neodpájajte napájanie zariadenia počas aktualizácie."
 
 #: src/Views/FirmwareView.vala:49
-#, fuzzy
-#| msgid "Check for Updates"
 msgid "Checking for Updates"
-msgstr "Skontrolovať aktualizácie"
+msgstr "Hľadajú sa aktualizácie"
 
 #: src/Views/FirmwareView.vala:50
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "Pripája sa k službe firmvéru a hľadajú sa aktualizácie."
 
 #: src/Views/FirmwareView.vala:123
 msgid "Firmware Updates Are Not Available"
-msgstr ""
+msgstr "Aktualizácie firmvéru nie sú k dispozícii"
 
 #: src/Views/FirmwareView.vala:124
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"Aktualizácie firmvéru nie sú podporované týmto zariadením ani žiadnym z "
+"pripojených zariadení."
 
 #: src/Views/FirmwareView.vala:127
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "Služba firmvéru nie je k dispozícii"
 
 #: src/Views/FirmwareView.vala:128
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "Uistite sa, že „fwupd“ je nainštalovaný a zapnutý."
 
 #: src/Views/FirmwareView.vala:219
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%u dostupná aktualizácia"
+msgstr[1] "%u dostupné aktualizácie"
+msgstr[2] "%u dostupných aktualizácií"
 
 #: src/Views/FirmwareView.vala:223
 msgid "Up to Date"
-msgstr ""
+msgstr "Aktualizované"
 
 #: src/Views/FirmwareView.vala:243
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "„%s“ sa aktualizuje"
 
 #: src/Views/FirmwareView.vala:309
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Nepodarilo sa nainštalovať vydanie firmvéru"
 
 #: src/Views/FirmwareView.vala:330
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "„%s“ musí byť manuálne prestavené do režimu aktualizácie"
 
 #: src/Views/FirmwareView.vala:339
 msgid "Continue"
-msgstr ""
+msgstr "Pokračovať"
 
 #: src/Views/FirmwareView.vala:357
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "Aktualizácia vyžaduje reštart systému na dokončenie"
 
 #: src/Views/FirmwareView.vala:358
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "Všetky otvorené aplikácie budú ukončené a zariadenie sa reštartuje."
 
 #: src/Views/FirmwareView.vala:366
 msgid "Restart"
-msgstr ""
+msgstr "Reštartovať"
 
 #: src/Views/FirmwareView.vala:379
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "Aktualizácia vyžaduje reštart systému na dokončenie"
 
 #: src/Views/FirmwareView.vala:380
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "Všetky otvorené aplikácie budú ukončené a zariadenie sa reštartuje."
 
 #: src/Views/FirmwareView.vala:388
 msgid "Shut Down"
-msgstr ""
+msgstr "Vypnúť"
 
 #: src/Views/HardwareView.vala:61
-#, fuzzy, c-format
+#, c-format
 msgid "%s memory"
-msgstr "Pamäť:"
+msgstr "%s pamäť"
 
 #: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "Grafika:"
+msgstr "Neznáma grafika"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown storage"
-msgstr "Procesor:"
+msgstr "Neznáme úložisko"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
-msgstr ""
+msgstr "Webstránka výrobcu"
 
 #: src/Views/HardwareView.vala:235
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "dvojjadrový"
+msgstr "Dvojjadrový %s"
 
 #: src/Views/HardwareView.vala:237
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "štvojjadrový"
+msgstr "Štvorjadrový %s"
 
 #: src/Views/HardwareView.vala:239
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "Osemjadrový %s"
 
 #: src/Views/HardwareView.vala:330
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "Procesor:"
+msgstr "Neznámy procesor"
 
 #: src/Views/HardwareView.vala:380
 msgid "Unknown"
 msgstr "Neznáme"
 
 #: src/Views/HardwareView.vala:428
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "Úložisko:"
+msgstr "%s úložisko (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:430
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "Úložisko:"
+msgstr "%s úložisko (eMMC)"
 
 #: src/Views/HardwareView.vala:432
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "Úložisko:"
+msgstr "%s úložisko (SATA SSD)"
 
 #: src/Views/HardwareView.vala:435
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "Úložisko:"
+msgstr "%s úložisko (HDD)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:440
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage"
-msgstr "Úložisko:"
+msgstr "%s úložisko"
 
 #: src/Views/OperatingSystemView.vala:97
 msgid "Website"
@@ -295,19 +285,19 @@ msgstr "Skontrolovať aktualizácie"
 #: src/Views/OperatingSystemView.vala:203
 #, c-format
 msgid "Built on %s"
-msgstr ""
+msgstr "Postavené na %s"
 
 #: src/Views/OperatingSystemView.vala:225
-#, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "Nastavenia systému sa obnovia na predvolené továrenské nastavenia"
+msgstr "Systémové nastavenia budú obnovené do továrenského nastavenia"
 
 #: src/Views/OperatingSystemView.vala:226
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
-msgstr "Všetky nastavenia a dáta systému sa obnovia na predvolené hodnoty."
+msgstr ""
+"Všetky systémové nastavenia a dáta budú vrátené do pôvodného stavu. Osobné "
+"dáta ako hudbu a obrázky to neovplyvní."
 
 #: src/Views/OperatingSystemView.vala:232
 msgid "Restore Settings"
