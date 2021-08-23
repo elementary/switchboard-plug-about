@@ -22,26 +22,6 @@
 * versions of LibFwupd. It should be removed when LibFwupd is updated.
 */
 public class About.FirmwareClient {
-    public static async void connect (Fwupd.Client client) throws GLib.Error {
-        SourceFunc callback = connect.callback;
-        GLib.Error error = null;
-
-        new Thread<void> ("connect", () => {
-            try {
-                client.connect ();
-            } catch (Error e) {
-                error = e;
-            }
-            Idle.add ((owned) callback);
-        });
-
-        yield;
-
-        if (error != null) {
-            throw error;
-        }
-    }
-
     public static async GLib.GenericArray<weak Fwupd.Device> get_devices (Fwupd.Client client) throws GLib.Error {
         SourceFunc callback = get_devices.callback;
         GLib.Error error = null;

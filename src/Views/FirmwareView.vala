@@ -85,18 +85,10 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         content_area.add (frame);
 
         fwupd_client = new Fwupd.Client ();
-        FirmwareClient.connect.begin (fwupd_client, (obj, res) => {
-            try {
-                FirmwareClient.connect.end (res);
+        fwupd_client.device_added.connect (on_device_added);
+        fwupd_client.device_removed.connect (on_device_removed);
 
-                fwupd_client.device_added.connect (on_device_added);
-                fwupd_client.device_removed.connect (on_device_removed);
-
-                update_list_view.begin ();
-            } catch (Error e) {
-                critical (e.message);
-            }
-        });
+        update_list_view.begin ();
 
         update_list.row_activated.connect (show_release);
 
