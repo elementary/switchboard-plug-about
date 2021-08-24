@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-08-23 13:11+0000\n"
+"PO-Revision-Date: 2021-08-24 18:20+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/sk/>\n"
@@ -26,7 +26,7 @@ msgstr "Systém"
 
 #: src/Plug.vala:40
 msgid "View operating system and hardware information"
-msgstr "Zobraziť informácie o operačnom systéme a hardvéri"
+msgstr "Zobrazujte informácie o operačnom systéme a hardvéri"
 
 #: src/Plug.vala:59
 msgid "Operating System"
