@@ -1,3 +1,16 @@
+switchboard-plug-about (6.0.1) bionic; urgency=medium
+
+  * Release 6.0.1 (#232)
+  * fwupd: Remove call to connect (#230)
+  * l10n: Correctly setup the locales (#229)
+  * Update translation files
+  * Update translation template
+  * Use Pretty Hostname (#227)
+  * Fallback from switcheroo to gnome session manager for GPU info.
+    (#218)
+
+ -- elementary OS Team <builds@elementary.io>  Tue, 24 Aug 2021 20:35:43 +0000
+
 switchboard-plug-about (6.0.0) bionic; urgency=medium
 
   * Release 6.0.0 (#221)
