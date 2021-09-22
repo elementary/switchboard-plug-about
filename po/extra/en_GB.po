@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-08-10 09:00+0000\n"
+"PO-Revision-Date: 2021-09-22 22:06+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/about-plug-extra/en_GB/>\n"
@@ -34,7 +34,7 @@ msgstr "Minor updates:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Use formatted device name when available"
-msgstr ""
+msgstr "Use formatted device name when available"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
