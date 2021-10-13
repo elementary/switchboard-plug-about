@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-02-17 13:39+0000\n"
+"PO-Revision-Date: 2021-08-27 08:04+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/es/>\n"
@@ -30,7 +30,7 @@ msgstr "Vea información del sistema operativo y el equipo"
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
 #: data/io.elementary.switchboard.about.appdata.xml.in:39
 msgid "Minor updates:"
-msgstr ""
+msgstr "Actualizaciones menores:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Use formatted device name when available"
@@ -84,7 +84,7 @@ msgstr "Se brinda información para más tipos de tarjetas gráficas"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:34
 msgid "Fixes:"
-msgstr ""
+msgstr "Correcciones:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:36
 msgid "Fix an issue where the view was destroyed early when navigating away"
