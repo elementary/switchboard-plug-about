@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2021-11-14 08:19+0000\n"
-"Last-Translator: Niels Van Laerhoven <niels1995@gmail.com>\n"
+"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/nl/>\n"
 "Language: nl\n"
@@ -94,7 +94,7 @@ msgstr "Geschatte tijd om te installeren:"
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr "Er zijn geen vrijgaven voor dit apparaat."
+msgstr "Er is geen versie beschikbaar voor dit apparaat."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
 msgid "Update"
