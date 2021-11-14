@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2021-11-14 08:17+0000\n"
-"Last-Translator: Niels Van Laerhoven <niels1995@gmail.com>\n"
+"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/nl/>\n"
 "Language: nl\n"
@@ -30,7 +30,7 @@ msgstr "Bekijk informatie over het besturingssysteem en hardware"
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "Besturingssysteem"
 
 #: src/Plug.vala:60
 msgid "Hardware"
@@ -58,7 +58,7 @@ msgstr "Suggereer vertaling"
 
 #: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "Feedback Verzenden"
 
 #: src/Plug.vala:113
 msgid "Report a Problem"
@@ -66,7 +66,7 @@ msgstr "Meld een probleem"
 
 #: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Krijg Ondersteuning"
 
 #: src/Plug.vala:115
 msgid "Updates"
