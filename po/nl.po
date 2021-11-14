@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
 "PO-Revision-Date: 2021-11-14 08:27+0000\n"
-"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
+"Last-Translator: Niels Van Laerhoven <niels1995@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/nl/>\n"
 "Language: nl\n"
@@ -205,7 +205,7 @@ msgstr "Dit zal alle open toepassingen afsluiten en het toestel uit zetten."
 
 #: src/Views/FirmwareView.vala:388
 msgid "Shut Down"
-msgstr ""
+msgstr "Uitschakelen"
 
 #: src/Views/HardwareView.vala:61
 #, c-format
@@ -217,10 +217,8 @@ msgid "Unknown Graphics"
 msgstr "Onbekende Videokaart"
 
 #: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Unknown Processor"
 msgid "Unknown storage"
-msgstr "Onbekende Processor"
+msgstr "Onbekende Opslag"
 
 #: src/Views/HardwareView.vala:145
 msgid "Manufacturer Website"
