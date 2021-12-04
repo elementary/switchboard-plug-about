@@ -39,6 +39,7 @@ public class About.OperatingSystemView : Gtk.Grid {
             logo_icon_name = "distributor-logo";
         }
 
+#if WALLPAPER
         var logo = new Hdy.Avatar (128, "", false) {
             // In case the wallpaper can't be loaded, we don't want an icon or text
             icon_name = "invalid-icon-name",
@@ -53,6 +54,7 @@ public class About.OperatingSystemView : Gtk.Grid {
             }
         });
         logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+#endif
 
         var icon = new Gtk.Image () {
             icon_name = logo_icon_name + "-symbolic",
@@ -64,9 +66,11 @@ public class About.OperatingSystemView : Gtk.Grid {
         icon_style_context.add_class ("logo");
         icon_style_context.add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
+#if WALLPAPER
         var logo_overlay = new Gtk.Overlay ();
         logo_overlay.add (logo);
         logo_overlay.add_overlay (icon);
+#endif
 
         // Intentionally not using GLib.OsInfoKey.PRETTY_NAME here because we
         // want more granular control over text formatting
@@ -145,7 +149,11 @@ public class About.OperatingSystemView : Gtk.Grid {
             valign = Gtk.Align.CENTER,
             vexpand = true
         };
+#if WALLPAPER
         software_grid.attach (logo_overlay, 0, 0, 1, 4);
+#else
+        software_grid.attach (icon, 0, 0, 1, 4);
+#endif
         software_grid.attach (title, 1, 0, 3);
 
         software_grid.attach (kernel_version_label, 1, 2, 3);
