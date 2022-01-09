@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-01-09 23:15+0000\n"
+"Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/cs/>\n"
 "Language: cs\n"
@@ -26,33 +26,27 @@ msgstr "Systém"
 
 #: src/Plug.vala:40
 msgid "View operating system and hardware information"
-msgstr "Zobrazit informace o  operačním systému a hardwaru"
+msgstr "Zobrazit informace o operačním systému a hardwaru"
 
 #: src/Plug.vala:59
 msgid "Operating System"
-msgstr ""
+msgstr "Operační systém"
 
 #: src/Plug.vala:60
 msgid "Hardware"
 msgstr "Hardware"
 
 #: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "Hardware"
+msgstr "Firmware"
 
 #: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
 msgid "Operating System Information"
-msgstr "Informace o systému"
+msgstr "Informace o operačním systému"
 
 #: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
 msgid "Hardware Information"
-msgstr "Informace o systému"
+msgstr "Informace o hardware"
 
 #: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
@@ -64,7 +58,7 @@ msgstr "Pomoci s překlady"
 
 #: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "Odeslat zpětnou vazbu"
 
 #: src/Plug.vala:113
 msgid "Report a Problem"
@@ -72,17 +66,15 @@ msgstr "Nahlásit problém"
 
 #: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Získat podporu"
 
 #: src/Plug.vala:115
 msgid "Updates"
 msgstr "Aktualizace"
 
 #: src/Views/FirmwareReleaseView.vala:42
-#, fuzzy
-#| msgid "Updates"
 msgid "All Updates"
-msgstr "Aktualizace"
+msgstr "Všechny aktualizace"
 
 #: src/Views/FirmwareReleaseView.vala:81
 msgid "Version:"
@@ -90,31 +82,27 @@ msgstr "Verze:"
 
 #: src/Views/FirmwareReleaseView.vala:90
 msgid "Vendor:"
-msgstr ""
+msgstr "Výrobce:"
 
 #: src/Views/FirmwareReleaseView.vala:99
 msgid "Size:"
-msgstr ""
+msgstr "Velikost:"
 
 #: src/Views/FirmwareReleaseView.vala:108
 msgid "Estimated time to install:"
-msgstr ""
+msgstr "Odhadovaná doba do dokončení instalace:"
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "Pro toto zařízení nejsou k dispozici žádná vydání."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Aktualizace"
+msgstr "Aktualizovat"
 
 #: src/Views/FirmwareReleaseView.vala:211
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "Aktualizace"
+msgstr "Aktuální"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
