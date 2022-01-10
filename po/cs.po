@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2022-01-09 23:15+0000\n"
+"PO-Revision-Date: 2022-01-10 13:13+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/cs/>\n"
@@ -155,13 +155,12 @@ msgid "Please make sure “fwupd” is installed and enabled."
 msgstr ""
 
 #: src/Views/FirmwareView.vala:219
-#, fuzzy, c-format
-#| msgid "Updates"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Aktualizace"
-msgstr[1] "Aktualizace"
-msgstr[2] "Aktualizace"
+msgstr[0] "Je k dispozici %u aktualizace"
+msgstr[1] "Jsou k dispozici %u aktualizace"
+msgstr[2] "Je k dispozici %u aktualizací"
 
 #: src/Views/FirmwareView.vala:223
 #, fuzzy
