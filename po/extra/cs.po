@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2022-01-10 13:13+0000\n"
+"PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/cs/>\n"
@@ -34,11 +34,13 @@ msgstr "Drobné aktualizace:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Use formatted device name when available"
-msgstr ""
+msgstr "Když je k dispozici, je použit formátovaný název zařízení"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr ""
+"Zobrazování dalších informací pro určité grafické čipy, včetně Intel® Xe "
+"Graphics"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:16
 #: data/io.elementary.switchboard.about.appdata.xml.in:43
@@ -50,33 +52,31 @@ msgstr "Aktualizovány překlady"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:22
 msgid "Redesign and new features:"
-msgstr ""
+msgstr "Předělání a nové funkce:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:24
 msgid "Rename from About to System"
-msgstr ""
+msgstr "Přejmenováno z O systému"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:25
 msgid "Split Hardware and Operating System info into their own tabs"
-msgstr ""
+msgstr "Rozdělení Hardware a Operačního systému do oddělených panelů"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:26
 msgid "Redesign the Operating System tab with clearer links and buttons"
-msgstr ""
+msgstr "Předělán panel Operační systém – lépe uspořádané odkazy a tlačítka"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Add a Firmware view to manage device firmware updates"
-msgstr ""
+msgstr "Přidáno zobrazení Firmware pro správu aktualizací firmware"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:29
 msgid "More information:"
-msgstr ""
+msgstr "Další informace:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:31
-#, fuzzy
-#| msgid "Provide information for more types of Graphics"
 msgid "Provide information for ARM CPUs"
-msgstr "Poskytovány informace pro více typů grafického zobrazování"
+msgstr "Poskytování informací o procesorech platformy ARM"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:32
 msgid "Provide information for more types of Graphics"
@@ -88,19 +88,19 @@ msgstr "Opravy:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:36
 msgid "Fix an issue where the view was destroyed early when navigating away"
-msgstr ""
+msgstr "Opraven problém kdy pohled byl při odchodu zlikvidován příliš brzy"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:37
 msgid "Fix system memory calculation"
-msgstr ""
+msgstr "Opraveno počítání kapacit operační paměti"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:41
 msgid "Ellipsize long hardware names"
-msgstr ""
+msgstr "Zkrátit dlouhé názvy hardware pomocí výpustky"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:42
 msgid "Performance improvements"
-msgstr ""
+msgstr "Vylepšení výkonu"
 
 #~ msgid "About"
 #~ msgstr "O systému"
