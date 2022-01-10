@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2022-01-09 23:15+0000\n"
+"PO-Revision-Date: 2022-01-10 12:16+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/cs/>\n"
@@ -30,7 +30,7 @@ msgstr "Zobrazit informace o operačním systému a hardwaru"
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
 #: data/io.elementary.switchboard.about.appdata.xml.in:39
 msgid "Minor updates:"
-msgstr ""
+msgstr "Drobné aktualizace:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Use formatted device name when available"
@@ -84,7 +84,7 @@ msgstr "Poskytovány informace pro více typů grafického zobrazování"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:34
 msgid "Fixes:"
-msgstr ""
+msgstr "Opravy:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:36
 msgid "Fix an issue where the view was destroyed early when navigating away"
