@@ -283,7 +283,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         }
 
         if (!result) {
-            show_error_dialog (device, "Download of %s was not succesfull".printf (uri));
+            show_error_dialog (device, "Download of %s was not successful".printf (uri));
             return null;
         }
 
