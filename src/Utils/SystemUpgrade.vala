@@ -39,7 +39,7 @@ public class About.SystemUpgrade : Object {
     }
 
     public void start_upgrade () {
-        if (system_upgrade_instance == null) {
+        if (system_upgrade_instance != null) {
             system_upgrade_instance.start_upgrade ();
         }
     }
