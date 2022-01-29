@@ -19,10 +19,8 @@
  * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
  */
 
-public class About.SystemUpgrade {
-    public static void restart () {
-        get_system_instance ();
-
+public class About.SystemUpgrade : Object {
+    public void restart () {
         try {
             system_instance.reboot (false);
         } catch (GLib.Error e) {
@@ -30,13 +28,38 @@ public class About.SystemUpgrade {
         }
     }
 
+    public bool system_upgrade_available {
+        get {
+            if (system_upgrade_instance == null) {
+                return false;
+            }
+
+            return system_upgrade_instance.system_upgrade_available;
+        }
+    }
+
+    public void start_upgrade () {
+        if (system_upgrade_instance == null) {
+            system_upgrade_instance.start_upgrade ();
+        }
+    }
+
+    public signal void system_upgrade_progress (int percentage);
+
+    public signal void system_upgrade_finished ();
+
+    construct {
+        get_system_instance ();
+        get_system_upgrade_instance ();
+    }
+
     [DBus (name = "org.freedesktop.login1.Manager")]
     interface SystemInterface : Object {
         public abstract void reboot (bool interactive) throws GLib.Error;
     }
 
-    private static SystemInterface? system_instance;
-    private static void get_system_instance () {
+    private SystemInterface? system_instance;
+    private void get_system_instance () {
         if (system_instance == null) {
             try {
                 system_instance = Bus.get_proxy_sync (
@@ -50,25 +73,19 @@ public class About.SystemUpgrade {
         }
     }
 
-    public static bool system_upgrade_available {
-        get {
-            get_system_upgrade_instance ();
-
-            if (system_upgrade_instance == null) {
-                return false;
-            }
-
-            return system_upgrade_instance.system_upgrade_available;
-        }
-    }
-
     [DBus (name = "io.elementary.SystemUpgrade")]
     interface SystemUpgradeInterface : Object {
         public abstract bool system_upgrade_available { get; }
+
+        public abstract void start_upgrade ();
+
+        public signal void system_upgrade_progress (int percentage);
+
+        public signal void system_upgrade_finished ();
     }
 
-    private static SystemUpgradeInterface? system_upgrade_instance;
-    private static void get_system_upgrade_instance () {
+    private SystemUpgradeInterface? system_upgrade_instance;
+    private void get_system_upgrade_instance () {
         if (system_upgrade_instance == null) {
             try {
                 system_upgrade_instance = Bus.get_proxy_sync (
@@ -76,6 +93,10 @@ public class About.SystemUpgrade {
                     "io.elementary.settings-daemon",
                     "/io/elementary/settings_daemon"
                 );
+
+                system_upgrade_instance.system_upgrade_progress.connect ((percentage) => { system_upgrade_progress (percentage); });
+
+                system_upgrade_instance.system_upgrade_finished.connect (() => { system_upgrade_finished (); });
             } catch (GLib.Error e) {
                 warning ("%s", e.message);
             }

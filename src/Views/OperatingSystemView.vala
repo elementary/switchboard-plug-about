@@ -322,6 +322,8 @@ public class About.OperatingSystemView : Gtk.Grid {
     }
 
     private void show_upgrade_dialog () {
+        var system_upgrade = new SystemUpgrade ();
+
         int seconds_remaining = RESTART_TIMEOUT;
 
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
@@ -392,21 +394,17 @@ public class About.OperatingSystemView : Gtk.Grid {
                     suggested_button.visible = false;
                     stack.set_visible_child (progress_view);
 
-                    progress_view.notify["fraction"].connect (() => {
-                        if (progress_view.fraction >= 1.0) {
-                            suggested_button.activate ();
-                        }
+                    progress_view.pulse ();
+
+                    system_upgrade.system_upgrade_finished.connect (() => {
+                        suggested_button.activate ();
                     });
 
-                    Timeout.add_seconds (1, () => {
-                        progress_view.fraction += Random.next_double () * 0.1;
-
-                        if (progress_view.fraction >= 1.0) {
-                            return Source.REMOVE;
-                        }
-            
-                        return Source.CONTINUE;
+                    system_upgrade.system_upgrade_progress.connect ((percentage) => {
+                        progress_view.fraction = percentage / 100.0;
                     });
+
+                    system_upgrade.start_upgrade ();
 
                     break;
                 case State.SUCCESS:
@@ -437,7 +435,7 @@ public class About.OperatingSystemView : Gtk.Grid {
                     break;
                 case State.RESTART:
                     message_dialog.destroy ();
-                    SystemUpgrade.restart ();
+                    system_upgrade.restart ();
                     break;
             }
         });
