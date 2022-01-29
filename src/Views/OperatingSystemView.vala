@@ -19,11 +19,15 @@
 */
 
 public class About.OperatingSystemView : Gtk.Grid {
+    private SystemUpgrade system_upgrade;
+
     private string support_url;
 
     private Gtk.Grid software_grid;
 
     construct {
+        system_upgrade = new SystemUpgrade ();
+
         var style_provider = new Gtk.CssProvider ();
         style_provider.load_from_resource ("io/elementary/switchboard/system/OperatingSystemView.css");
 
@@ -118,7 +122,7 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         var upgrade_revealer = new Gtk.Revealer ();
         upgrade_revealer.add (upgrade_button);
-        upgrade_revealer.reveal_child = SystemUpgrade.system_upgrade_available;
+        upgrade_revealer.reveal_child = system_upgrade.system_upgrade_available;
 
         var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
 
@@ -322,8 +326,6 @@ public class About.OperatingSystemView : Gtk.Grid {
     }
 
     private void show_upgrade_dialog () {
-        var system_upgrade = new SystemUpgrade ();
-
         int seconds_remaining = RESTART_TIMEOUT;
 
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
