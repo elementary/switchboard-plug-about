@@ -112,6 +112,14 @@ public class About.OperatingSystemView : Gtk.Grid {
             margin_top = 12
         };
 
+        var upgrade_button = new Gtk.Button.with_label (_("Upgrade system"));
+        upgrade_button.get_style_context ().add_class (Granite.STYLE_CLASS_ACCENT);
+        upgrade_button.clicked.connect (show_upgrade_dialog);
+
+        var upgrade_revealer = new Gtk.Revealer ();
+        upgrade_revealer.add (upgrade_button);
+        upgrade_revealer.reveal_child = true;
+
         var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
 
         Gtk.Button? update_button = null;
@@ -131,6 +139,7 @@ public class About.OperatingSystemView : Gtk.Grid {
             spacing = 6
         };
         button_grid.add (settings_restore_button);
+        button_grid.add (upgrade_revealer);
         button_grid.add (bug_button);
         if (update_button != null) {
             button_grid.add (update_button);
@@ -300,5 +309,148 @@ public class About.OperatingSystemView : Gtk.Grid {
         }
         settings.apply ();
         GLib.Settings.sync ();
+    }
+
+    private const int RESTART_TIMEOUT = 30;
+
+    enum State {
+        OVERVIEW,
+        WARNING,
+        PROGRESS,
+        SUCCESS,
+        RESTART
+    }
+
+    private void show_upgrade_dialog () {
+        int seconds_remaining = RESTART_TIMEOUT;
+
+        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            "elementary OS Next",
+            "To setup the installation of elementary OS Next, click Continue.",
+            "distributor-logo",
+            Gtk.ButtonsType.CANCEL
+        ) {
+            badge_icon = new ThemedIcon ("system-software-update"),
+            transient_for = (Gtk.Window) get_toplevel (),
+            modal = true
+        };
+
+        var suggested_button = new Gtk.Button.with_label (_("Continue"));
+        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        message_dialog.add_action_widget (suggested_button, Gtk.ResponseType.ACCEPT);
+
+        var stack = new Gtk.Stack ();
+        stack.set_transition_type (Gtk.StackTransitionType.SLIDE_LEFT_RIGHT);
+
+        var state = State.OVERVIEW;
+
+        var overview_view = new Gtk.Label ("");
+        stack.add (overview_view);
+
+        var warning_view = new Gtk.Label (
+            "· " + _("Before you upgrade, we recommend that you back up your data") + "\n" +
+            "· " + _("To prevent data loss close all open applications and documents")
+        ) {
+            max_width_chars = 60,
+            wrap = true,
+            xalign = 0,
+            use_markup = true
+        };
+        stack.add (warning_view);
+
+        var progress_view = new Gtk.ProgressBar ();
+        stack.add (progress_view);
+
+        var success_view = new Gtk.Label ("") {
+            max_width_chars = 60,
+            wrap = true,
+            xalign = 0,
+            use_markup = true
+        };
+        stack.add (success_view);
+
+        message_dialog.custom_bin.add (stack);
+
+        message_dialog.show_all ();
+        message_dialog.response.connect ((response_id) => {
+            if (response_id == Gtk.ResponseType.ACCEPT) {
+               state = state + 1;
+            } else if (response_id == Gtk.ResponseType.CANCEL) {
+                message_dialog.destroy ();
+            }
+
+            switch (state) {
+                case State.WARNING:
+                    message_dialog.badge_icon = new ThemedIcon ("dialog-warning");
+                    message_dialog.secondary_text = _("Make sure you are ready to upgrade.");
+                    suggested_button.label = _("Upgrade");
+                    stack.set_visible_child (warning_view);
+                    break;
+                case State.PROGRESS:
+                    message_dialog.badge_icon = new ThemedIcon ("system-software-update");
+                    message_dialog.secondary_text = _("The upgrade is being prepared. Please do not shut down your device.");
+                    suggested_button.visible = false;
+                    stack.set_visible_child (progress_view);
+
+                    progress_view.notify["fraction"].connect (() => {
+                        if (progress_view.fraction >= 1.0) {
+                            suggested_button.activate ();
+                        }
+                    });
+
+                    Timeout.add_seconds (1, () => {
+                        progress_view.fraction += Random.next_double () * 0.1;
+
+                        if (progress_view.fraction >= 1.0) {
+                            return Source.REMOVE;
+                        }
+            
+                        return Source.CONTINUE;
+                    });
+
+                    break;
+                case State.SUCCESS:
+                    message_dialog.badge_icon = new ThemedIcon ("process-completed");
+                    message_dialog.secondary_text = _("Upgrade was successfully prepared.");
+                    success_view.label = get_restart_text (seconds_remaining);
+                    suggested_button.label = _("Restart");
+                    suggested_button.visible = true;
+                    stack.set_visible_child (success_view);
+
+                    Timeout.add_seconds (RESTART_TIMEOUT, () => {
+                        suggested_button.activate ();
+
+                        return GLib.Source.REMOVE;
+                    });
+
+                    Timeout.add_seconds (1, () => {
+                        seconds_remaining = seconds_remaining - 1;
+                        success_view.label = get_restart_text (seconds_remaining);
+
+                        if (seconds_remaining == 0) {
+                            return Source.REMOVE;
+                        }
+            
+                        return Source.CONTINUE;
+                    });
+
+                    break;
+                case State.RESTART:
+                    message_dialog.destroy ();
+                    //  Utils.restart ();
+                    break;
+            }
+        });
+    }
+
+    private string get_restart_text (int seconds_remaining) {
+        return "<span font-features='tnum'>%s</span>".printf (
+            ngettext (
+                "Your device will automatically restart in %i second.",
+                "Your device will automatically restart in %i seconds.",
+                seconds_remaining
+            ).printf (seconds_remaining) + " " +
+            _("Your device may restart more than once during installation.")
+        );
     }
 }
