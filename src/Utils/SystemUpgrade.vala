@@ -49,4 +49,36 @@ public class About.SystemUpgrade {
             }
         }
     }
+
+    public static bool system_upgrade_available {
+        get {
+            get_system_upgrade_instance ();
+
+            if (system_upgrade_instance == null) {
+                return false;
+            }
+
+            return system_upgrade_instance.system_upgrade_available;
+        }
+    }
+
+    [DBus (name = "io.elementary.SystemUpgrade")]
+    interface SystemUpgradeInterface : Object {
+        public abstract bool system_upgrade_available { get; }
+    }
+
+    private static SystemUpgradeInterface? system_upgrade_instance;
+    private static void get_system_upgrade_instance () {
+        if (system_upgrade_instance == null) {
+            try {
+                system_upgrade_instance = Bus.get_proxy_sync (
+                    BusType.SESSION,
+                    "io.elementary.settings-daemon",
+                    "/io/elementary/settings_daemon"
+                );
+            } catch (GLib.Error e) {
+                warning ("%s", e.message);
+            }
+        }
+    }
 }

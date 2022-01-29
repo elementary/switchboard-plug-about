@@ -118,7 +118,7 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         var upgrade_revealer = new Gtk.Revealer ();
         upgrade_revealer.add (upgrade_button);
-        upgrade_revealer.reveal_child = true;
+        upgrade_revealer.reveal_child = SystemUpgrade.system_upgrade_available;
 
         var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
 
