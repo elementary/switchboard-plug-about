@@ -363,6 +363,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         stack.add (warning_view);
 
         var progress_view = new Gtk.ProgressBar ();
+        progress_view.pulse ();
         stack.add (progress_view);
 
         var success_view = new Gtk.Label ("") {
@@ -395,8 +396,6 @@ public class About.OperatingSystemView : Gtk.Grid {
                     message_dialog.secondary_text = _("The upgrade is being prepared. Please do not shut down your device.");
                     suggested_button.visible = false;
                     stack.set_visible_child (progress_view);
-
-                    progress_view.pulse ();
 
                     system_upgrade.system_upgrade_finished.connect (() => {
                         suggested_button.activate ();
