@@ -437,7 +437,7 @@ public class About.OperatingSystemView : Gtk.Grid {
                     break;
                 case State.RESTART:
                     message_dialog.destroy ();
-                    //  Utils.restart ();
+                    SystemUpgrade.restart ();
                     break;
             }
         });
