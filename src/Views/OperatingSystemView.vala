@@ -429,7 +429,7 @@ public class About.OperatingSystemView : Gtk.Grid {
                         if (seconds_remaining == 0) {
                             return Source.REMOVE;
                         }
-            
+
                         return Source.CONTINUE;
                     });
 
