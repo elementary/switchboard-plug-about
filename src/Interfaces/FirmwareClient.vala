@@ -68,14 +68,14 @@ public class About.FirmwareClient {
         return releases;
     }
 
-    public static async bool install (Fwupd.Client client, string device_id, string path) throws GLib.Error {
+    public static async bool install (Fwupd.Client client, string device_id, string path, Fwupd.InstallFlags install_flags = Fwupd.InstallFlags.NONE) throws GLib.Error {
         SourceFunc callback = install.callback;
         GLib.Error error = null;
         bool result = false;
 
         new Thread<void> ("install", () => {
             try {
-                result = client.install (device_id, path, Fwupd.InstallFlags.NONE);
+                result = client.install (device_id, path, install_flags);
             } catch (Error e) {
                 error = e;
             }
