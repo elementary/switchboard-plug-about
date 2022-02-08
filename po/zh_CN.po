@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
+"POT-Creation-Date: 2022-02-08 17:16+0000\n"
 "PO-Revision-Date: 2022-01-28 09:40+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -20,55 +20,55 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:39
+#: src/Plug.vala:42
 msgid "System"
 msgstr "系统信息"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:43
 msgid "View operating system and hardware information"
 msgstr "查看操作系统和硬件信息"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:62
 msgid "Operating System"
 msgstr "系统"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr "硬件"
 
-#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "固件"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:110
 msgid "Operating System Information"
 msgstr "操作系统信息"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:111
 msgid "Hardware Information"
 msgstr "硬件信息"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "重置设置"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "助力翻译"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
 msgstr "提交反馈"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Report a Problem"
 msgstr "报告问题"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
 msgstr "获取支持"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:118
 msgid "Updates"
 msgstr "检查更新"
 
@@ -132,136 +132,136 @@ msgstr "正在检查更新"
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "正在连接固件服务并查找更新。"
 
-#: src/Views/FirmwareView.vala:123
+#: src/Views/FirmwareView.vala:115
 msgid "Firmware Updates Are Not Available"
 msgstr "固件更新服务不可用"
 
-#: src/Views/FirmwareView.vala:124
+#: src/Views/FirmwareView.vala:116
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr "当前设备或其他已连接设备不支持固件更新。"
 
-#: src/Views/FirmwareView.vala:127
+#: src/Views/FirmwareView.vala:119
 msgid "The Firmware Service Is Not Available"
 msgstr "固件服务不可用"
 
-#: src/Views/FirmwareView.vala:128
+#: src/Views/FirmwareView.vala:120
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "请确保 \"fwupd\" 软件包已安装并启用。"
 
-#: src/Views/FirmwareView.vala:219
+#: src/Views/FirmwareView.vala:211
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u 更新可用"
 
-#: src/Views/FirmwareView.vala:223
+#: src/Views/FirmwareView.vala:215
 msgid "Up to Date"
 msgstr "已是最新"
 
-#: src/Views/FirmwareView.vala:243
+#: src/Views/FirmwareView.vala:235
 #, c-format
 msgid "“%s” is being updated"
 msgstr "正在更新 “%s”"
 
-#: src/Views/FirmwareView.vala:309
+#: src/Views/FirmwareView.vala:306
 msgid "Failed to install firmware release"
 msgstr "安装固件失败"
 
-#: src/Views/FirmwareView.vala:330
+#: src/Views/FirmwareView.vala:327
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "“%s” 需要手动设置为更新模式"
 
-#: src/Views/FirmwareView.vala:339
+#: src/Views/FirmwareView.vala:336
 msgid "Continue"
 msgstr "继续"
 
-#: src/Views/FirmwareView.vala:357
+#: src/Views/FirmwareView.vala:354
 msgid "An update requires the system to restart to complete"
 msgstr "某项更新需要重新启动操作系统"
 
-#: src/Views/FirmwareView.vala:358
+#: src/Views/FirmwareView.vala:355
 msgid "This will close all open applications and restart this device."
 msgstr "这会关闭所有应用程序并重启本设备。"
 
-#: src/Views/FirmwareView.vala:366
+#: src/Views/FirmwareView.vala:363
 msgid "Restart"
 msgstr "重新启动"
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:376
 msgid "An update requires the system to shut down to complete"
 msgstr "某项更新需要完全关闭操作系统"
 
-#: src/Views/FirmwareView.vala:380
+#: src/Views/FirmwareView.vala:377
 msgid "This will close all open applications and turn off this device."
 msgstr "这会关闭所有程序并使本设备关机。"
 
-#: src/Views/FirmwareView.vala:388
+#: src/Views/FirmwareView.vala:385
 msgid "Shut Down"
 msgstr "关机"
 
-#: src/Views/HardwareView.vala:61
+#: src/Views/HardwareView.vala:66
 #, c-format
 msgid "%s memory"
 msgstr "%s 内存"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
+#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
 msgid "Unknown Graphics"
 msgstr "未知显卡"
 
-#: src/Views/HardwareView.vala:86
+#: src/Views/HardwareView.vala:91
 msgid "Unknown storage"
 msgstr "未知存储器"
 
-#: src/Views/HardwareView.vala:145
+#: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
 msgstr "项目网站"
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:254
 #, c-format
 msgid "Dual-Core %s"
 msgstr "双核 %s"
 
-#: src/Views/HardwareView.vala:237
+#: src/Views/HardwareView.vala:256
 #, c-format
 msgid "Quad-Core %s"
 msgstr "四核 %s"
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "六核 %s"
 
-#: src/Views/HardwareView.vala:330
+#: src/Views/HardwareView.vala:349
 msgid "Unknown Processor"
 msgstr "未知处理器"
 
-#: src/Views/HardwareView.vala:380
+#: src/Views/HardwareView.vala:403
 msgid "Unknown"
 msgstr "未知设备"
 
-#: src/Views/HardwareView.vala:428
+#: src/Views/HardwareView.vala:451
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s NVMe 固态硬盘"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:453
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s eMMC 介质"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:455
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s SATA 固态硬盘"
 
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:458
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s 机械硬盘"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:440
+#: src/Views/HardwareView.vala:463
 #, c-format
 msgid "%s storage"
 msgstr "%s 硬盘"
