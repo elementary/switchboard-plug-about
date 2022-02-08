@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
+"POT-Creation-Date: 2022-02-08 17:16+0000\n"
 "PO-Revision-Date: 2015-05-26 12:27+0000\n"
 "Last-Translator: Viktuk <register885@gmail.com>\n"
 "Language-Team: Belarusian <be@li.org>\n"
@@ -18,55 +18,55 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: src/Plug.vala:39
+#: src/Plug.vala:42
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:40
+#: src/Plug.vala:43
 msgid "View operating system and hardware information"
 msgstr ""
 
-#: src/Plug.vala:59
+#: src/Plug.vala:62
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:60
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr ""
 
-#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr ""
 
-#: src/Plug.vala:107
+#: src/Plug.vala:110
 msgid "Operating System Information"
 msgstr ""
 
-#: src/Plug.vala:108
+#: src/Plug.vala:111
 msgid "Hardware Information"
 msgstr ""
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Адновіце налады па змаўчанні"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Прапануеце пераклады"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Report a Problem"
 msgstr "Паведаміць аб праблеме"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
 msgstr ""
 
-#: src/Plug.vala:115
+#: src/Plug.vala:118
 msgid "Updates"
 msgstr ""
 
@@ -133,145 +133,145 @@ msgstr "Праверыць наяўнасць абнаўленняў"
 msgid "Connecting to the firmware service and searching for updates."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:123
+#: src/Views/FirmwareView.vala:115
 msgid "Firmware Updates Are Not Available"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:124
+#: src/Views/FirmwareView.vala:116
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:127
+#: src/Views/FirmwareView.vala:119
 msgid "The Firmware Service Is Not Available"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:128
+#: src/Views/FirmwareView.vala:120
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:219
+#: src/Views/FirmwareView.vala:211
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/FirmwareView.vala:223
+#: src/Views/FirmwareView.vala:215
 msgid "Up to Date"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:243
+#: src/Views/FirmwareView.vala:235
 #, c-format
 msgid "“%s” is being updated"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:309
+#: src/Views/FirmwareView.vala:306
 msgid "Failed to install firmware release"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:330
+#: src/Views/FirmwareView.vala:327
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:339
+#: src/Views/FirmwareView.vala:336
 msgid "Continue"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:357
+#: src/Views/FirmwareView.vala:354
 msgid "An update requires the system to restart to complete"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:358
+#: src/Views/FirmwareView.vala:355
 msgid "This will close all open applications and restart this device."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:366
+#: src/Views/FirmwareView.vala:363
 msgid "Restart"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:376
 msgid "An update requires the system to shut down to complete"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:380
+#: src/Views/FirmwareView.vala:377
 msgid "This will close all open applications and turn off this device."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:388
+#: src/Views/FirmwareView.vala:385
 msgid "Shut Down"
 msgstr ""
 
-#: src/Views/HardwareView.vala:61
+#: src/Views/HardwareView.vala:66
 #, fuzzy, c-format
 msgid "%s memory"
 msgstr "Памяць:"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
+#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
 #, fuzzy
 #| msgid "Graphics:"
 msgid "Unknown Graphics"
 msgstr "Графіка:"
 
-#: src/Views/HardwareView.vala:86
+#: src/Views/HardwareView.vala:91
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown storage"
 msgstr "Працэсар:"
 
-#: src/Views/HardwareView.vala:145
+#: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
 msgstr ""
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:254
 #, fuzzy, c-format
 #| msgid "Dual-Core"
 msgid "Dual-Core %s"
 msgstr "Два ядра"
 
-#: src/Views/HardwareView.vala:237
+#: src/Views/HardwareView.vala:256
 #, fuzzy, c-format
 #| msgid "Quad-Core"
 msgid "Quad-Core %s"
 msgstr "Чатыры ядра"
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:330
+#: src/Views/HardwareView.vala:349
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Працэсар:"
 
-#: src/Views/HardwareView.vala:380
+#: src/Views/HardwareView.vala:403
 msgid "Unknown"
 msgstr "Невядома"
 
-#: src/Views/HardwareView.vala:428
+#: src/Views/HardwareView.vala:451
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Памяць:"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:453
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "Памяць:"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:455
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Памяць:"
 
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:458
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "Памяць:"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:440
+#: src/Views/HardwareView.vala:463
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Памяць:"
