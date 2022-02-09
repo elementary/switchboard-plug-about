@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 17:16+0000\n"
-"PO-Revision-Date: 2021-11-10 14:38+0000\n"
+"PO-Revision-Date: 2022-02-09 07:18+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
-"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/about-"
-"plug-extra/pl/>\n"
+"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
+"about-plug-extra/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,18 +29,16 @@ msgid "View operating system and hardware information"
 msgstr "Wyświetl informacje o systemie oraz sprzęcie"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-#, fuzzy
-#| msgid "Redesign and new features:"
 msgid "New features:"
-msgstr "Przeprojektowanie i nowe funkcje:"
+msgstr "Nowe funkcje:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Added support for dark style manufacturer logos"
-msgstr ""
+msgstr "Dodano wsparcie dla marki producenta w ciemnym stylu"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Added support for offline firmware updates"
-msgstr ""
+msgstr "Dodano wsparcie dla aktualizacji sprzętu bez internetu"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:17
 #: data/io.elementary.switchboard.about.appdata.xml.in:25
