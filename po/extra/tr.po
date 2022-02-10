@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 17:16+0000\n"
-"PO-Revision-Date: 2021-12-22 21:50+0000\n"
+"PO-Revision-Date: 2022-02-10 16:44+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/tr/>\n"
@@ -28,10 +28,8 @@ msgid "View operating system and hardware information"
 msgstr "İşletim sistemini ve donanım bilgilerini görüntüle"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-#, fuzzy
-#| msgid "Redesign and new features:"
 msgid "New features:"
-msgstr "Yeniden tasarım ve yeni özellikler:"
+msgstr "Yeni özellikler:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Added support for dark style manufacturer logos"
