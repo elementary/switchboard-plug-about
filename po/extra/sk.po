@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 17:16+0000\n"
-"PO-Revision-Date: 2021-08-24 18:20+0000\n"
+"PO-Revision-Date: 2022-02-26 00:14+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/about-"
-"plug-extra/sk/>\n"
+"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
+"about-plug-extra/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,18 +28,16 @@ msgid "View operating system and hardware information"
 msgstr "Zobrazujte informácie o operačnom systéme a hardvéri"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-#, fuzzy
-#| msgid "Redesign and new features:"
 msgid "New features:"
-msgstr "Redizajn a nové funkcie:"
+msgstr "Nové funkcie:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Added support for dark style manufacturer logos"
-msgstr ""
+msgstr "Pridaná podpora pre logá výrobcov s podporou tmavého štýlu"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Added support for offline firmware updates"
-msgstr ""
+msgstr "Pridaná podpora pre offline aktualizácie firmvéru"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:17
 #: data/io.elementary.switchboard.about.appdata.xml.in:25
