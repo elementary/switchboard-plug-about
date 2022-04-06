@@ -7,7 +7,7 @@
   <icon type="stock">application-x-firmware</icon>
   <translation type="gettext">about-plug</translation>
   <releases>
-    <release version="6.1.0" date="2022-02-07" urgency="medium">
+    <release version="6.1.0" date="2022-04-06" urgency="medium">
       <description>
         <p>New features:</p>
         <ul>
