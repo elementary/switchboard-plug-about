@@ -1,3 +1,21 @@
+switchboard-plug-about (6.1.0) bionic; urgency=medium
+
+  * Release 6.1.0 (#247)
+  * README: Update oem.conf documentation
+  * Update translation files
+  * Update translation template
+  * AppData: describe recent changes
+  * Add support for offline firmware updates (#244)
+  * FirmwareView: Fix typo with "successful" (#242)
+  * Check if OEM is enabled
+  * React to dark mode
+  * Move logic to update manufacturer logo
+  * Get LogoDark from /etc/oem.conf
+  * Avoid ugly (null) label on some rolling releases distributions
+    (#238)
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 06 Apr 2022 18:15:58 +0000
+
 switchboard-plug-about (6.0.1) bionic; urgency=medium
 
   * Release 6.0.1 (#232)
