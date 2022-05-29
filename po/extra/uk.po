@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 17:16+0000\n"
-"PO-Revision-Date: 2022-02-08 20:38+0000\n"
+"PO-Revision-Date: 2022-05-29 23:10+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/uk/>\n"
@@ -53,7 +53,7 @@ msgstr "Незначні оновлення:"
 #: data/io.elementary.switchboard.about.appdata.xml.in:67
 #: data/io.elementary.switchboard.about.appdata.xml.in:72
 msgid "Updated translations"
-msgstr "Оновлено переклади"
+msgstr "Оновлені переклади"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Use formatted device name when available"
