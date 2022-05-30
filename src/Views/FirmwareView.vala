@@ -21,10 +21,10 @@
 
 public class About.FirmwareView : Granite.SimpleSettingsPage {
     private Gtk.Stack stack;
-    private Hdy.Deck deck;
+    private Adw.Leaflet deck;
     private FirmwareReleaseView firmware_release_view;
-    private Granite.Widgets.AlertView progress_alert_view;
-    private Granite.Widgets.AlertView placeholder_alert_view;
+    private Granite.Placeholder progress_alert_view;
+    private Granite.Placeholder placeholder_alert_view;
     private Gtk.ListBox update_list;
     private uint num_updates = 0;
     private Fwupd.Client fwupd_client;
@@ -38,20 +38,17 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
     }
 
     construct {
-        progress_alert_view = new Granite.Widgets.AlertView (
-            "",
-            _("Do not unplug the device during the update."),
-            "emblem-synchronized"
-        );
-        progress_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+        progress_alert_view = new Granite.Placeholder ("") {
+            description = _("Do not unplug the device during the update."),
+            icon = new ThemedIcon ("emblem-synchronized")
+        };
+        progress_alert_view.get_style_context ().remove_class (Granite.STYLE_CLASS_VIEW);
 
-        placeholder_alert_view = new Granite.Widgets.AlertView (
-            _("Checking for Updates"),
-            _("Connecting to the firmware service and searching for updates."),
-            "sync-synchronizing"
-        );
-        placeholder_alert_view.show_all ();
-        placeholder_alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+        placeholder_alert_view = new Granite.Placeholder (_("Checking for Updates")) {
+            description = _("Connecting to the firmware service and searching for updates."),
+            icon = new ThemedIcon ("sync-synchronizing")
+        };
+        placeholder_alert_view.get_style_context ().remove_class (Granite.STYLE_CLASS_VIEW);
 
         update_list = new Gtk.ListBox () {
             vexpand = true,
@@ -61,28 +58,30 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         update_list.set_header_func ((Gtk.ListBoxUpdateHeaderFunc) header_rows);
         update_list.set_placeholder (placeholder_alert_view);
 
-        var update_scrolled = new Gtk.ScrolledWindow (null, null);
-        update_scrolled.add (update_list);
+        var update_scrolled = new Gtk.ScrolledWindow () {
+            child = update_list
+        };
 
         firmware_release_view = new FirmwareReleaseView ();
 
-        deck = new Hdy.Deck () {
-            can_swipe_back = true
+        deck = new Adw.Leaflet () {
+            can_navigate_back = true
         };
-        deck.add (update_scrolled);
-        deck.add (firmware_release_view);
+        deck.append (update_scrolled);
+        deck.append (firmware_release_view);
         deck.visible_child = update_scrolled;
 
         stack = new Gtk.Stack () {
             transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT
         };
-        stack.add (deck);
-        stack.add (progress_alert_view);
+        stack.add_child (deck);
+        stack.add_child (progress_alert_view);
 
-        var frame = new Gtk.Frame (null);
-        frame.add (stack);
+        var frame = new Gtk.Frame (null) {
+            child = stack
+        };
 
-        content_area.add (frame);
+        content_area.attach (frame, 0, 0);
 
         if (LoginManager.get_instance ().can_reboot_to_firmware_setup ()) {
             var reboot_to_firmware_setup_button = new Gtk.Button.with_label (_("Restart to Firmware Setup…"));
@@ -120,7 +119,6 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
             placeholder_alert_view.title = _("Firmware Updates Are Not Available");
             placeholder_alert_view.description = _("Firmware updates are not supported on this or any connected devices.");
-            update_list.show_all ();
         } catch (Error e) {
             placeholder_alert_view.title = _("The Firmware Service Is Not Available");
             placeholder_alert_view.description = _("Please make sure “fwupd” is installed and enabled.");
@@ -149,9 +147,8 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
                     num_updates++;
                 }
 
-                update_list.add (row);
+                update_list.append (row);
                 update_list.invalidate_sort ();
-                update_list.show_all ();
 
                 row.update.connect ((device, release) => {
                     update.begin (device, release);
@@ -174,7 +171,6 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         add_device (device);
 
         stack.visible_child = deck;
-        update_list.show_all ();
     }
 
     private void on_device_removed (Fwupd.Client client, Fwupd.Device device) {
@@ -193,8 +189,6 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
                 }
             }
         }
-
-        update_list.show_all ();
     }
 
     [CCode (instance_pos = -1)]
@@ -327,7 +321,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             Gtk.ButtonsType.CLOSE
         ) {
             badge_icon = new ThemedIcon ("dialog-error"),
-            transient_for = (Gtk.Window) get_toplevel ()
+            transient_for = (Gtk.Window) get_root ()
         };
 
         message_dialog.response.connect (message_dialog.destroy);
@@ -348,15 +342,15 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             Gtk.ButtonsType.CANCEL
         ) {
             badge_icon = new ThemedIcon ("dialog-information"),
-            transient_for = (Gtk.Window) get_toplevel ()
+            transient_for = (Gtk.Window) get_root ()
         };
 
         var suggested_button = (Gtk.Button) message_dialog.add_button (_("Continue"), Gtk.ResponseType.ACCEPT);
-        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        suggested_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         if (detach_image != null) {
             var custom_widget = new Gtk.Image.from_file (detach_image);
-            message_dialog.custom_bin.add (custom_widget);
+            message_dialog.custom_bin.append (custom_widget);
         }
 
         return message_dialog;
@@ -370,11 +364,11 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             Gtk.ButtonsType.CANCEL
         ) {
             badge_icon = new ThemedIcon ("system-reboot"),
-            transient_for = (Gtk.Window) get_toplevel ()
+            transient_for = (Gtk.Window) get_root ()
         };
 
         var suggested_button = (Gtk.Button) message_dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
-        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        suggested_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         message_dialog.response.connect ((response) => {
             if (response == Gtk.ResponseType.ACCEPT) {
@@ -394,11 +388,11 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             Gtk.ButtonsType.CANCEL
         ) {
             badge_icon = new ThemedIcon ("system-shutdown"),
-            transient_for = (Gtk.Window) get_toplevel ()
+            transient_for = (Gtk.Window) get_root ()
         };
 
         var suggested_button = (Gtk.Button) message_dialog.add_button (_("Shut Down"), Gtk.ResponseType.ACCEPT);
-        suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        suggested_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         message_dialog.response.connect ((response) => {
             if (response == Gtk.ResponseType.ACCEPT) {

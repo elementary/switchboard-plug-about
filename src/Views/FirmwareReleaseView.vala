@@ -24,7 +24,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
     private Fwupd.Device device;
     private Fwupd.Release? release;
-    private Granite.Widgets.AlertView placeholder;
+    private Granite.Placeholder placeholder;
     private Gtk.ScrolledWindow scrolled_window;
     private Gtk.Stack content;
     private Gtk.Revealer update_button_revealer;
@@ -36,7 +36,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
     private Gtk.Label vendor_value_label;
     private Gtk.Label size_value_label;
     private Gtk.Label install_duration_value_label;
-    private Hdy.Deck? deck;
+    private Adw.Leaflet? deck;
 
     construct {
         var back_button = new Gtk.Button.with_label (_("All Updates")) {
@@ -55,7 +55,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             margin = 6,
             sensitive = false
         };
-        update_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        update_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         update_button_revealer = new Gtk.Revealer ();
         update_button_revealer.add (update_button);
@@ -121,7 +121,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             margin_top = 12,
             row_spacing = 3
         };
-        key_val_grid.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+        key_val_grid.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
         key_val_grid.attach (version_label, 0, 0);
         key_val_grid.attach (version_value_label, 1, 0);
@@ -132,12 +132,10 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         key_val_grid.attach (install_duration_label, 0, 3);
         key_val_grid.attach (install_duration_value_label, 1, 3);
 
-        placeholder = new Granite.Widgets.AlertView (
-            "",
-            _("There are no releases available for this device."),
-            ""
-        );
-        placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+        placeholder = new Granite.Placeholder ("") {
+            description = _("There are no releases available for this device.")
+        };
+        placeholder.get_style_context ().remove_class (Granite.STYLE_CLASS_VIEW);
 
         var grid = new Gtk.Grid () {
             halign = Gtk.Align.CENTER,
@@ -150,22 +148,21 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         grid.add (description_label);
         grid.add (key_val_grid);
 
-        scrolled_window = new Gtk.ScrolledWindow (null, null) {
+        scrolled_window = new Gtk.ScrolledWindow () {
+            child = grid,
             hscrollbar_policy = Gtk.PolicyType.NEVER,
             vexpand = true
         };
-        scrolled_window.add (grid);
 
         content = new Gtk.Stack ();
-        content.add (placeholder);
-        content.add (scrolled_window);
+        content.add_child (placeholder);
+        content.add_child (scrolled_window);
 
         orientation = Gtk.Orientation.VERTICAL;
-        get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        get_style_context ().add_class (Granite.STYLE_CLASS_VIEW);
         add (header_box);
         add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
         add (content);
-        show_all ();
 
         back_button.clicked.connect (() => {
             go_back ();
@@ -191,9 +188,9 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
             var icons = device.get_icons ();
             if (icons.data != null) {
-                placeholder.icon_name = icons.data[0];
+                placeholder.icon = new ThemedIcon (icons.data[0]);
             } else {
-                placeholder.icon_name = "application-x-firmware";
+                placeholder.icon = new ThemedIcon ("application-x-firmware");
             }
 
             content.visible_child = placeholder;
@@ -233,15 +230,13 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         } else {
             install_duration_value_label.label = GLib.ngettext ("%llu minute", "%llu minutes", duration_minutes).printf (duration_minutes);
         }
-
-        show_all ();
     }
 
     private void go_back () {
         if (deck == null) {
-            deck = (Hdy.Deck) get_ancestor (typeof (Hdy.Deck));
+            deck = (Adw.Leaflet) get_ancestor (typeof (Adw.Leaflet));
         }
 
-        deck.navigate (Hdy.NavigationDirection.BACK);
+        deck.navigate (Adw.NavigationDirection.BACK);
     }
 }

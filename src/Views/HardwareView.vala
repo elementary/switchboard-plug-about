@@ -20,7 +20,7 @@
 * Boston, MA 02110-1301 USA
 */
 
-public class About.HardwareView : Gtk.Grid {
+public class About.HardwareView : Gtk.Box {
     private bool oem_enabled;
     private string manufacturer_icon_path;
     private string? manufacturer_icon_dark_path = null;
@@ -120,7 +120,7 @@ public class About.HardwareView : Gtk.Grid {
                 selectable = true,
                 xalign = 0
             };
-            manufacturer_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            manufacturer_info.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             details_grid.add (product_name_info);
             details_grid.add (manufacturer_info);
@@ -154,8 +154,8 @@ public class About.HardwareView : Gtk.Grid {
         column_spacing = 32;
         halign = Gtk.Align.CENTER;
 
-        add (manufacturer_logo);
-        add (details_grid);
+        append (manufacturer_logo);
+        append (details_grid);
 
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             update_manufacturer_logo ();
@@ -338,7 +338,6 @@ public class About.HardwareView : Gtk.Grid {
         if (secondary_gpu != null) {
             secondary_graphics_info.label = secondary_gpu;
             graphics_grid.add (secondary_graphics_info);
-            graphics_grid.show_all ();
         }
     }
 

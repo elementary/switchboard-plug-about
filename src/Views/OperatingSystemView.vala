@@ -18,7 +18,7 @@
 * Boston, MA 02110-1301 USA
 */
 
-public class About.OperatingSystemView : Gtk.Grid {
+public class About.OperatingSystemView : Gtk.Box {
     private string support_url;
 
     private Gtk.Grid software_grid;
@@ -168,10 +168,9 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         margin = 12;
         orientation = Gtk.Orientation.VERTICAL;
-        row_spacing = 12;
-        add (software_grid);
-        add (button_grid);
-        show_all ();
+        spacing = 12;
+        append (software_grid);
+        append (button_grid);
 
         settings_restore_button.clicked.connect (settings_restore_clicked);
 
@@ -226,7 +225,6 @@ public class About.OperatingSystemView : Gtk.Grid {
                 xalign = 0
             };
             software_grid.attach (based_off, 1, 1, 3);
-            software_grid.show_all ();
         }
     }
 
@@ -245,10 +243,10 @@ public class About.OperatingSystemView : Gtk.Grid {
             "dialog-warning",
             Gtk.ButtonsType.CANCEL
         );
-        dialog.transient_for = (Gtk.Window) get_toplevel ();
+        dialog.transient_for = (Gtk.Window) get_root ();
 
         var continue_button = dialog.add_button (_("Restore Settings"), Gtk.ResponseType.ACCEPT);
-        continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        continue_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         dialog.response.connect ((response) => {
             dialog.destroy ();

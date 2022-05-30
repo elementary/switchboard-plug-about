@@ -75,7 +75,6 @@ public class About.Plug : Switchboard.Plug {
             };
             main_grid.attach (stack_switcher, 0, 0);
             main_grid.attach (stack, 0, 1);
-            main_grid.show_all ();
         }
 
         return main_grid;
