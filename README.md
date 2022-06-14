@@ -7,14 +7,14 @@
 
 You'll need the following dependencies:
 
-* libswitchboard-2.0-dev
+* libswitchboard-3-dev
 * libfwupd-dev
-* libgranite-dev
-* libgtk-3-dev
+* libgranite-7-dev
+* libgtk-4-dev
 * libgtop2-dev
 * libgudev-1.0-dev
 * libudisks2-dev
-* libhandy-1-dev
+* libadwaita-1-dev
 * libappstream-dev
 * meson
 * valac
