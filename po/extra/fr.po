@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 17:16+0000\n"
-"PO-Revision-Date: 2022-05-30 10:51+0000\n"
+"PO-Revision-Date: 2022-06-30 10:04+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/fr/>\n"
@@ -106,7 +106,7 @@ msgstr "Informations supplémentaires pour plus de cartes graphiques"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:47
 msgid "Fixes:"
-msgstr "Corrections :"
+msgstr "Corrections :"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:49
 msgid "Fix an issue where the view was destroyed early when navigating away"
