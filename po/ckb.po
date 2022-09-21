@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 17:16+0000\n"
-"PO-Revision-Date: 2022-09-21 12:46+0000\n"
+"PO-Revision-Date: 2022-09-21 15:36+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/ckb/>\n"
@@ -171,125 +171,128 @@ msgstr "دامەزراندنی ڕیلیسی پتەوەکاڵا شکستی هێن
 #: src/Views/FirmwareView.vala:327
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "پێویستە \"%s\" بە دەستی بخرێتە دۆخی بەڕۆژبوونەوەوە"
 
 #: src/Views/FirmwareView.vala:336
 msgid "Continue"
-msgstr ""
+msgstr "بەردەوام بوون"
 
 #: src/Views/FirmwareView.vala:354
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "بەڕۆژبوونەوەیەک پێویستی بە سیستەمە پێبێتەوە بۆ تەواوبوون"
 
 #: src/Views/FirmwareView.vala:355
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "بەمە هەموو بەرنامە کراوەکان دادەخرێنەوە و ئامێرەکەت پێ دەبێتەوە."
 
 #: src/Views/FirmwareView.vala:363
 msgid "Restart"
-msgstr ""
+msgstr "پێبوونەوە"
 
 #: src/Views/FirmwareView.vala:376
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "بەڕۆژبوونەوەیەک پێویستی بە سیستەمە خامۆش ببێت بۆ تەواوبوون"
 
 #: src/Views/FirmwareView.vala:377
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "بەمە هەموو بەرنامەکراوەکان دادەخرێنەوە و ئامێرەکەت دەکوژێتەوە."
 
 #: src/Views/FirmwareView.vala:385
 msgid "Shut Down"
-msgstr ""
+msgstr "خامۆشکردن"
 
 #: src/Views/HardwareView.vala:66
 #, c-format
 msgid "%s memory"
-msgstr ""
+msgstr "%s میمۆری"
 
 #: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
 msgid "Unknown Graphics"
-msgstr ""
+msgstr "گرافیکی نەزانراو"
 
 #: src/Views/HardwareView.vala:91
 msgid "Unknown storage"
-msgstr ""
+msgstr "بیرگەی نەزانراو"
 
 #: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
-msgstr ""
+msgstr "ماڵپەڕی بەرهەمهێنەر"
 
 #: src/Views/HardwareView.vala:254
 #, c-format
 msgid "Dual-Core %s"
-msgstr ""
+msgstr "دوو-کۆڕ %s"
 
 #: src/Views/HardwareView.vala:256
 #, c-format
 msgid "Quad-Core %s"
-msgstr ""
+msgstr "چوار-کۆڕ %s"
 
 #: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "شەش-کۆڕ %s"
 
 #: src/Views/HardwareView.vala:349
 msgid "Unknown Processor"
-msgstr ""
+msgstr "پرۆسێسەری نەزانراو"
 
 #: src/Views/HardwareView.vala:403
 msgid "Unknown"
-msgstr ""
+msgstr "نەزانراو"
 
 #: src/Views/HardwareView.vala:451
 #, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr ""
+msgstr "%s بیرگە (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:453
 #, c-format
 msgid "%s storage (eMMC)"
-msgstr ""
+msgstr "%s بیرگە (eMMC)"
 
 #: src/Views/HardwareView.vala:455
 #, c-format
 msgid "%s storage (SATA SSD)"
-msgstr ""
+msgstr "%s بیرگە (SATA SSD)"
 
 #: src/Views/HardwareView.vala:458
 #, c-format
 msgid "%s storage (HDD)"
-msgstr ""
+msgstr "%s بیرگە (HDD)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:463
 #, c-format
 msgid "%s storage"
-msgstr ""
+msgstr "%s بیرگە"
 
 #: src/Views/OperatingSystemView.vala:97
 msgid "Website"
-msgstr ""
+msgstr "ماڵپەڕ"
 
 #: src/Views/OperatingSystemView.vala:120
 msgid "Check for Updates"
-msgstr ""
+msgstr "پشکنین بۆ بەڕۆژبوونەوە"
 
 #: src/Views/OperatingSystemView.vala:203
 #, c-format
 msgid "Built on %s"
-msgstr ""
+msgstr "بنچینەکراوی سەر %s"
 
 #: src/Views/OperatingSystemView.vala:225
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr ""
+msgstr "ڕێکخستنەکانی سیستەم دەگەڕێندرێنەوە دۆخی بنەڕەتی سەرەتا"
 
 #: src/Views/OperatingSystemView.vala:226
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
+"هەموو ڕێکخستنەکانی سیستەم و داتاکان دەگەڕێندرێنەوە دۆخی بنەڕەتی خۆیان و "
+"بەهای سەرەتایان وەردەگرنەوە. ئەمە کاریگەری لەسەر داتای کەسی وەکو مۆسیقا و "
+"وێنەکان نابێت."
 
 #: src/Views/OperatingSystemView.vala:232
 msgid "Restore Settings"
-msgstr ""
+msgstr "گەڕاندنەوەی ڕێکخستنەکان"
