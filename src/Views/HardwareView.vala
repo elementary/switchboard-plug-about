@@ -257,7 +257,7 @@ public class About.HardwareView : Gtk.Grid {
             } else if (cpu.@value == 6) {
                 result += _("Hexa-Core %s").printf (clean_name (cpu.key));
             } else {
-                result += "%u\u00D7 %s ".printf (cpu.@value, clean_name (cpu.key));
+                result += "%u \u00D7 %s ".printf (cpu.@value, clean_name (cpu.key));
             }
         }
 
@@ -410,23 +410,29 @@ public class About.HardwareView : Gtk.Grid {
 
         string pretty = GLib.Markup.escape_text (info).strip ();
 
-        const GraphicsReplaceStrings REPLACE_STRINGS[] = {
+        const ReplaceStrings REPLACE_STRINGS[] = {
             { "Mesa DRI ", ""},
             { "Mesa (.*)", "\\1"},
             { "[(]R[)]", "®"},
             { "[(]TM[)]", "™"},
             { "Gallium .* on (AMD .*)", "\\1"},
             { "(AMD .*) [(].*", "\\1"},
+            { "(AMD Ryzen) (.*)", "\\1 \\2"},
             { "(AMD [A-Z])(.*)", "\\1\\L\\2\\E"},
+            { "Advanced Micro Devices, Inc\\. \\[.*?\\] .*? \\[(.*?)\\] .*", "\\1"},
             { "Graphics Controller", "Graphics"},
             { "Intel Corporation", "Intel®"},
             { "NVIDIA Corporation (.*) \\[(\\S*) (\\S*) (.*)\\]", "NVIDIA® \\2® \\3® \\4"}
         };
 
         try {
-            foreach (GraphicsReplaceStrings replace_string in REPLACE_STRINGS) {
+            foreach (ReplaceStrings replace_string in REPLACE_STRINGS) {
                 GLib.Regex re = new GLib.Regex (replace_string.regex, 0, 0);
+                bool matched = re.match (pretty);
                 pretty = re.replace (pretty, -1, 0, replace_string.replacement, 0);
+                if (matched) {
+                    break;
+                }
             }
         } catch (Error e) {
             critical ("Couldn't cleanup vendor string: %s", e.message);
@@ -501,7 +507,7 @@ public class About.HardwareView : Gtk.Grid {
         return disk_name;
     }
 
-    struct GraphicsReplaceStrings {
+    struct ReplaceStrings {
         string regex;
         string replacement;
     }
