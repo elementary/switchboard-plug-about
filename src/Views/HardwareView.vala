@@ -419,7 +419,8 @@ public class About.HardwareView : Gtk.Grid {
             { "(AMD .*) [(].*", "\\1"},
             { "(AMD Ryzen) (.*)", "\\1 \\2"},
             { "(AMD [A-Z])(.*)", "\\1\\L\\2\\E"},
-            { "Advanced Micro Devices, Inc\\. \\[.*?\\] .*? \\[(.*?)\\] .*", "\\1"},
+            { "Advanced Micro Devices, Inc\\. \\[.*?\\] .*? \\[(.*?)\\] .*", "AMD® \\1"},
+            { "Advanced Micro Devices, Inc\\. \\[.*?\\] (.*)", "AMD® \\1"},
             { "Graphics Controller", "Graphics"},
             { "Intel Corporation", "Intel®"},
             { "NVIDIA Corporation (.*) \\[(\\S*) (\\S*) (.*)\\]", "NVIDIA® \\2® \\3® \\4"}
