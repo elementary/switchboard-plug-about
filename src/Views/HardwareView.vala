@@ -342,6 +342,28 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
+    private string get_mem_info () {
+        uint64 mem_total = 0;
+
+        GUdev.Client client = new GUdev.Client ({"dmi"});
+        GUdev.Device? device = client.query_by_sysfs_path ("/sys/devices/virtual/dmi/id");
+
+        if (device != null) {
+            uint64 devices = device.get_property_as_uint64 ("MEMORY_ARRAY_NUM_DEVICES");
+            for (int item = 0; item < devices; item++) {
+                mem_total += device.get_property_as_uint64 ("MEMORY_DEVICE_%d_SIZE".printf (item));
+            }
+        }
+
+        if (mem_total == 0) {
+            GLibTop.mem mem;
+            GLibTop.get_mem (out mem);
+            mem_total = mem.total;
+        }
+
+        return GLib.format_size (mem_total, GLib.FormatSizeFlags.IEC_UNITS);
+    }
+
     private void fetch_hardware_info () {
         string? cpu = get_cpu_info ();
 
@@ -351,9 +373,7 @@ public class About.HardwareView : Gtk.Grid {
             processor = cpu;
         }
 
-        GLibTop.mem mem;
-        GLibTop.get_mem (out mem);
-        memory = GLib.format_size (mem.total, GLib.FormatSizeFlags.IEC_UNITS);
+        memory = get_mem_info ();
 
         get_graphics_info.begin ();
         get_storage_info.begin ();
