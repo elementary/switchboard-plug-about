@@ -415,6 +415,27 @@ public class About.HardwareView : Gtk.Grid {
     private async void get_storage_info () {
         var file_root = GLib.File.new_for_path ("/");
         string storage_capacity = "";
+
+        uint64 storage_total = 0;
+
+        try {
+            UDisks.Client client = yield new UDisks.Client (null);
+            foreach (var object in client.object_manager.get_objects ()) {
+                UDisks.Drive drive = ((UDisks.Object)object).drive;
+                if (drive == null || drive.removable || drive.ejectable) {
+                    continue;
+                }
+                storage_total += drive.size;
+            }
+            if (storage_total != 0) {
+                storage_capacity = GLib.format_size (storage_total);
+                storage_info.label = yield get_storage_type (storage_capacity);
+                return;
+            }
+        } catch (Error e) {
+            warning (e.message);
+        }
+
         try {
             var info = yield file_root.query_filesystem_info_async (GLib.FileAttribute.FILESYSTEM_SIZE);
             storage_capacity = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));

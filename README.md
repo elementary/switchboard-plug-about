@@ -13,6 +13,7 @@ You'll need the following dependencies:
 * libgtk-3-dev
 * libgtop2-dev
 * libgudev-1.0-dev
+* libudisks2-dev
 * libhandy-1-dev
 * libappstream-dev
 * meson
