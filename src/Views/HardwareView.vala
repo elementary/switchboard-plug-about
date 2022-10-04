@@ -361,7 +361,7 @@ public class About.HardwareView : Gtk.Grid {
             mem_total = mem.total;
         }
 
-        return GLib.format_size (mem_total, GLib.FormatSizeFlags.IEC_UNITS);
+        return custom_format_size (mem_total, true);
     }
 
     private void fetch_hardware_info () {
@@ -428,7 +428,7 @@ public class About.HardwareView : Gtk.Grid {
                 storage_total += drive.size;
             }
             if (storage_total != 0) {
-                storage_capacity = GLib.format_size (storage_total);
+                storage_capacity = custom_format_size (storage_total, false);
                 storage_info.label = yield get_storage_type (storage_capacity);
                 return;
             }
@@ -438,7 +438,7 @@ public class About.HardwareView : Gtk.Grid {
 
         try {
             var info = yield file_root.query_filesystem_info_async (GLib.FileAttribute.FILESYSTEM_SIZE);
-            storage_capacity = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
+            storage_capacity = custom_format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE), false);
         } catch (Error e) {
             critical (e.message);
             storage_capacity = _("Unknown");
@@ -582,6 +582,24 @@ public class About.HardwareView : Gtk.Grid {
         }
 
         return hostname;
+    }
+
+    // Format layperson-friendly size string, replacement for GLib.format_size ().
+    // Always return "GB", "TB" etc. even if IEC_UNITS requested, instead
+    // of "GiB", "TiB" etc. for the benefit of average users.
+    private string custom_format_size (uint64 size, bool iec_units) {
+        uint divisor = iec_units ? 1024 : 1000;
+
+        string[] units = { _("bytes"), _("KB"), _("MB"), _("GB"), _("TB")};
+
+        int unit_index = 0;
+
+        while ((size/divisor) > 0 && unit_index < units.length) {
+            unit_index++;
+            size /= divisor;
+        }
+
+        return "%llu %s".printf(size, units[unit_index]);
     }
 }
 
