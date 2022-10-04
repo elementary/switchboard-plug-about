@@ -420,7 +420,7 @@ public class About.HardwareView : Gtk.Grid {
 
         try {
             UDisks.Client client = yield new UDisks.Client (null);
-            foreach (var object in client.object_manager.get_objects ()) {
+            foreach (unowned var object in client.object_manager.get_objects ()) {
                 UDisks.Drive drive = ((UDisks.Object)object).drive;
                 if (drive == null || drive.removable || drive.ejectable) {
                     continue;
