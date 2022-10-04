@@ -587,19 +587,22 @@ public class About.HardwareView : Gtk.Grid {
     // Format layperson-friendly size string, replacement for GLib.format_size ().
     // Always return "GB", "TB" etc. even if IEC_UNITS requested, instead
     // of "GiB", "TiB" etc. for the benefit of average users.
-    private string custom_format_size (uint64 size, bool iec_units) {
-        uint divisor = iec_units ? 1024 : 1000;
+    private string custom_format_size (uint64 size, bool iec_unit) {
+        uint divisor = iec_unit ? 1024 : 1000;
 
-        string[] units = { _("bytes"), _("KB"), _("MB"), _("GB"), _("TB"), _("PB")};
+        string[] si_units = { _("bytes"), _("KB"), _("MB"), _("GB"), _("TB"), _("PB")};
+        string[] iec_units = { _("bytes"), _("KiB"), _("MiB"), _("GiB"), _("TiB"), _("PiB")};
+
+        assert (si_units.length == iec_units.length);
 
         int unit_index = 0;
 
-        while ((size / divisor) > 0 && (unit_index < units.length)) {
+        while ((size / divisor) > 0 && (unit_index < si_units.length)) {
             unit_index++;
             size /= divisor;
         }
 
-        return "%llu %s".printf (size, units[unit_index]);
+        return "%llu %s".printf (size, iec_unit ? iec_units[unit_index] : si_units[unit_index]);
     }
 }
 
