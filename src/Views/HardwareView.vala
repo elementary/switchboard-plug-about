@@ -594,12 +594,12 @@ public class About.HardwareView : Gtk.Grid {
 
         int unit_index = 0;
 
-        while ((size/divisor) > 0 && unit_index < units.length) {
+        while ((size / divisor) > 0 && (unit_index < units.length)) {
             unit_index++;
             size /= divisor;
         }
 
-        return "%llu %s".printf(size, units[unit_index]);
+        return "%llu %s".printf (size, units[unit_index]);
     }
 }
 
