@@ -590,7 +590,7 @@ public class About.HardwareView : Gtk.Grid {
     private string custom_format_size (uint64 size, bool iec_units) {
         uint divisor = iec_units ? 1024 : 1000;
 
-        string[] units = { _("bytes"), _("KB"), _("MB"), _("GB"), _("TB")};
+        string[] units = { _("bytes"), _("KB"), _("MB"), _("GB"), _("TB"), _("PB")};
 
         int unit_index = 0;
 
