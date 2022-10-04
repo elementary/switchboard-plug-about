@@ -4,12 +4,14 @@ Priority: optional
 Maintainer: elementary OS Team <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
                gettext,
+               libappstream-dev,
                libfwupd-dev,
                libgranite-dev,
+               libgtop2-dev,
+               libgudev-1.0-dev,
                libhandy-1-dev,
                libswitchboard-2.0-dev,
-               libappstream-dev,
-               libgtop2-dev,
+               libudisks2-dev,
                meson,
                valac (>= 0.22)
 Standards-Version: 4.1.1
