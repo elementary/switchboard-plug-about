@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-08 17:16+0000\n"
-"PO-Revision-Date: 2022-10-04 21:31+0000\n"
+"PO-Revision-Date: 2022-10-07 17:33+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ru/>\n"
@@ -252,22 +252,22 @@ msgstr "Неизвестно"
 #: src/Views/HardwareView.vala:451
 #, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "%s хранилище (NVMe SSD)"
+msgstr "%s хранилища (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:453
 #, c-format
 msgid "%s storage (eMMC)"
-msgstr "%s хранилище (eMMC)"
+msgstr "%s хранилища (eMMC)"
 
 #: src/Views/HardwareView.vala:455
 #, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "%s хранилище (SATA SSD)"
+msgstr "%s хранилища (SATA SSD)"
 
 #: src/Views/HardwareView.vala:458
 #, c-format
 msgid "%s storage (HDD)"
-msgstr "%s хранилище (HDD)"
+msgstr "%s хранилища (HDD)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:463
