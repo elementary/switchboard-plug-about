@@ -23,6 +23,7 @@
 public interface About.LoginInterface : Object {
     public abstract void reboot (bool interactive) throws GLib.Error;
     public abstract void power_off (bool interactive) throws GLib.Error;
+    public abstract void set_reboot_to_firmware_setup (bool interactive) throws GLib.Error;
 }
 
 public class About.LoginManager : Object {
@@ -67,5 +68,13 @@ public class About.LoginManager : Object {
         }
 
         return true;
+    }
+
+    public void set_reboot_to_firmware_setup () {
+        try {
+            interface.set_reboot_to_firmware_setup (true);
+        } catch (Error e) {
+            warning ("Could not connect to login interface: %s", e.message);
+        }
     }
 }

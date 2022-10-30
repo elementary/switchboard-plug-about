@@ -166,6 +166,8 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         settings_restore_button.clicked.connect (settings_restore_clicked);
 
+        reboot_to_firmware_setup_button.clicked.connect (reboot_to_firmware_setup_clicked);
+
         bug_button.clicked.connect (() => {
             var appinfo = new GLib.DesktopAppInfo ("io.elementary.feedback.desktop");
             if (appinfo != null) {
@@ -249,6 +251,33 @@ public class About.OperatingSystemView : Gtk.Grid {
             foreach (var schema in all_schemas) {
                 reset_recursively (schema);
             }
+        }
+    }
+
+    private bool confirm_reboot_to_firmware_setup_action () {
+        var dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("Are you sure you want to Reboot?"),
+            _("This will close all open applications and turn off this device."),
+            "system-shutdown",
+            Gtk.ButtonsType.CANCEL
+        );
+        dialog.transient_for = (Gtk.Window) get_toplevel ();
+
+        var continue_button = dialog.add_button (_("Reboot"), Gtk.ResponseType.ACCEPT);
+        continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+        var result = dialog.run ();
+        dialog.destroy ();
+
+        return result == Gtk.ResponseType.ACCEPT;
+    }
+
+    private void reboot_to_firmware_setup_clicked () {
+        if (confirm_reboot_to_firmware_setup_action ()) {
+            var login_manager = LoginManager.get_instance ();
+
+            login_manager.set_reboot_to_firmware_setup ();
+            login_manager.reboot ();
         }
     }
 
