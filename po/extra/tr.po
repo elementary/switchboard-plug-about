@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-12-22 21:50+0000\n"
+"POT-Creation-Date: 2022-02-08 17:16+0000\n"
+"PO-Revision-Date: 2022-02-10 16:44+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/tr/>\n"
@@ -28,81 +28,95 @@ msgid "View operating system and hardware information"
 msgstr "İşletim sistemini ve donanım bilgilerini görüntüle"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-#: data/io.elementary.switchboard.about.appdata.xml.in:39
-msgid "Minor updates:"
-msgstr "Küçük güncellemeler:"
+msgid "New features:"
+msgstr "Yeni özellikler:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
-msgid "Use formatted device name when available"
+msgid "Added support for dark style manufacturer logos"
 msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
-msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
+msgid "Added support for offline firmware updates"
 msgstr ""
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:16
-#: data/io.elementary.switchboard.about.appdata.xml.in:43
-#: data/io.elementary.switchboard.about.appdata.xml.in:49
-#: data/io.elementary.switchboard.about.appdata.xml.in:54
-#: data/io.elementary.switchboard.about.appdata.xml.in:59
+#: data/io.elementary.switchboard.about.appdata.xml.in:17
+#: data/io.elementary.switchboard.about.appdata.xml.in:25
+#: data/io.elementary.switchboard.about.appdata.xml.in:52
+msgid "Minor updates:"
+msgstr "Küçük güncellemeler:"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:19
+#: data/io.elementary.switchboard.about.appdata.xml.in:29
+#: data/io.elementary.switchboard.about.appdata.xml.in:56
+#: data/io.elementary.switchboard.about.appdata.xml.in:62
+#: data/io.elementary.switchboard.about.appdata.xml.in:67
+#: data/io.elementary.switchboard.about.appdata.xml.in:72
 msgid "Updated translations"
 msgstr "Çeviriler güncellendi"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:22
+#: data/io.elementary.switchboard.about.appdata.xml.in:27
+msgid "Use formatted device name when available"
+msgstr ""
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:28
+msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
+msgstr ""
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:35
 msgid "Redesign and new features:"
 msgstr "Yeniden tasarım ve yeni özellikler:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:24
+#: data/io.elementary.switchboard.about.appdata.xml.in:37
 msgid "Rename from About to System"
 msgstr "Hakkında, Sistem olarak yeniden adlandırıldı"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:25
+#: data/io.elementary.switchboard.about.appdata.xml.in:38
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr "Donanım ve İşletim Sistemi bilgileri kendi sekmelerine ayrıldı"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:26
+#: data/io.elementary.switchboard.about.appdata.xml.in:39
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
 "İşletim Sistemi sekmesini daha net bağlantılar ve düğmelerle yeniden "
 "tasarladık"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:27
+#: data/io.elementary.switchboard.about.appdata.xml.in:40
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
 "Cihaz üretici yazılımı güncellemelerini yönetmek için bir Üretici Yazılımı "
 "görünümü eklendi"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:29
+#: data/io.elementary.switchboard.about.appdata.xml.in:42
 msgid "More information:"
 msgstr "Daha fazla bilgi:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:31
+#: data/io.elementary.switchboard.about.appdata.xml.in:44
 msgid "Provide information for ARM CPUs"
 msgstr "ARM CPU'lar için bilgi sağlar"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:32
+#: data/io.elementary.switchboard.about.appdata.xml.in:45
 msgid "Provide information for more types of Graphics"
 msgstr "Daha çok ekran kartı türü için bilgi sağlar"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:34
+#: data/io.elementary.switchboard.about.appdata.xml.in:47
 msgid "Fixes:"
 msgstr "Düzeltmeler:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:36
+#: data/io.elementary.switchboard.about.appdata.xml.in:49
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr ""
 "Sayfadan ayrılmadan önce görünümün erken yok olmasına neden olan bir sorun "
 "düzeltildi"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:37
+#: data/io.elementary.switchboard.about.appdata.xml.in:50
 msgid "Fix system memory calculation"
 msgstr "Sistem belleği hesaplaması düzeltildi"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:41
+#: data/io.elementary.switchboard.about.appdata.xml.in:54
 msgid "Ellipsize long hardware names"
 msgstr "Uzun donanım adları kısaltıldı"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:42
+#: data/io.elementary.switchboard.about.appdata.xml.in:55
 msgid "Performance improvements"
 msgstr "Performans iyileştirmeleri"
 

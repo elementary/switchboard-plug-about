@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-11-10 14:38+0000\n"
+"POT-Creation-Date: 2022-02-08 17:16+0000\n"
+"PO-Revision-Date: 2022-02-09 07:18+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/pl/>\n"
@@ -29,82 +29,96 @@ msgid "View operating system and hardware information"
 msgstr "Wyświetl informacje o systemie oraz sprzęcie"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-#: data/io.elementary.switchboard.about.appdata.xml.in:39
+msgid "New features:"
+msgstr "Nowe funkcje:"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:14
+msgid "Added support for dark style manufacturer logos"
+msgstr "Dodano wsparcie dla marki producenta w ciemnym stylu"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:15
+msgid "Added support for offline firmware updates"
+msgstr "Dodano wsparcie dla aktualizacji sprzętu bez internetu"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:17
+#: data/io.elementary.switchboard.about.appdata.xml.in:25
+#: data/io.elementary.switchboard.about.appdata.xml.in:52
 msgid "Minor updates:"
 msgstr "Mniejsze aktualizacje:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:14
+#: data/io.elementary.switchboard.about.appdata.xml.in:19
+#: data/io.elementary.switchboard.about.appdata.xml.in:29
+#: data/io.elementary.switchboard.about.appdata.xml.in:56
+#: data/io.elementary.switchboard.about.appdata.xml.in:62
+#: data/io.elementary.switchboard.about.appdata.xml.in:67
+#: data/io.elementary.switchboard.about.appdata.xml.in:72
+msgid "Updated translations"
+msgstr "Zaktualizowane tłumaczenia"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Use formatted device name when available"
 msgstr "Zformatowana nazwa urządzenia jest wykorzystywana tam gdzie to możliwe"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:15
+#: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr ""
 "Dla niektórych kart graficznych, m.in. Intel® Xe Graphics, wyświetlane jest "
 "teraz więcej informacji"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:16
-#: data/io.elementary.switchboard.about.appdata.xml.in:43
-#: data/io.elementary.switchboard.about.appdata.xml.in:49
-#: data/io.elementary.switchboard.about.appdata.xml.in:54
-#: data/io.elementary.switchboard.about.appdata.xml.in:59
-msgid "Updated translations"
-msgstr "Zaktualizowane tłumaczenia"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:22
+#: data/io.elementary.switchboard.about.appdata.xml.in:35
 msgid "Redesign and new features:"
 msgstr "Przeprojektowanie i nowe funkcje:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:24
+#: data/io.elementary.switchboard.about.appdata.xml.in:37
 msgid "Rename from About to System"
 msgstr "Zmiana nazwy z Informacje na System"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:25
+#: data/io.elementary.switchboard.about.appdata.xml.in:38
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr "Rozdzielono Sprzęt i System operacyjny do osobnych zakładek"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:26
+#: data/io.elementary.switchboard.about.appdata.xml.in:39
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
 "Przeprojektowano kartę systemu operacyjnego z wyraźniejszymi linkami i "
 "przyciskami"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:27
+#: data/io.elementary.switchboard.about.appdata.xml.in:40
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
 "Dodano widok firmware'u by zarządzać aktualizacjami firmware'u urządzenia"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:29
+#: data/io.elementary.switchboard.about.appdata.xml.in:42
 msgid "More information:"
 msgstr "Więcej informacji:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:31
+#: data/io.elementary.switchboard.about.appdata.xml.in:44
 msgid "Provide information for ARM CPUs"
 msgstr "Dodano informacje dla procesorów ARM"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:32
+#: data/io.elementary.switchboard.about.appdata.xml.in:45
 msgid "Provide information for more types of Graphics"
 msgstr "Dodano informacje dla większej liczby kart graficznych"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:34
+#: data/io.elementary.switchboard.about.appdata.xml.in:47
 msgid "Fixes:"
 msgstr "Poprawki:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:36
+#: data/io.elementary.switchboard.about.appdata.xml.in:49
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr ""
 "Naprawiono problem gdzie widok był zbyt wcześnie niszczony podczas nawigacji "
 "z niego"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:37
+#: data/io.elementary.switchboard.about.appdata.xml.in:50
 msgid "Fix system memory calculation"
 msgstr "Naprawiono obliczanie pamięci systemu"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:41
+#: data/io.elementary.switchboard.about.appdata.xml.in:54
 msgid "Ellipsize long hardware names"
 msgstr "Przycięto długie nazwy sprzętu"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:42
+#: data/io.elementary.switchboard.about.appdata.xml.in:55
 msgid "Performance improvements"
 msgstr "Zwiększona wydajność"
 

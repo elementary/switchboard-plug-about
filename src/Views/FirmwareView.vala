@@ -252,7 +252,12 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         var path = yield download_file (device, release.get_uri ());
 
         try {
-            if (yield FirmwareClient.install (fwupd_client, device.get_id (), path)) {
+            var install_flags = Fwupd.InstallFlags.NONE;
+            if (device.has_flag (Fwupd.DEVICE_FLAG_ONLY_OFFLINE)) {
+                install_flags = Fwupd.InstallFlags.OFFLINE;
+            }
+
+            if (yield FirmwareClient.install (fwupd_client, device.get_id (), path, install_flags)) {
                 if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
                     show_reboot_dialog ();
                 } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {

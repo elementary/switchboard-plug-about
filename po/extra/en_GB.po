@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
+"POT-Creation-Date: 2022-02-08 17:16+0000\n"
 "PO-Revision-Date: 2021-09-22 22:06+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -28,76 +28,92 @@ msgid "View operating system and hardware information"
 msgstr "View operating system and hardware information"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:12
-#: data/io.elementary.switchboard.about.appdata.xml.in:39
+#, fuzzy
+#| msgid "Redesign and new features:"
+msgid "New features:"
+msgstr "Redesign and new features:"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:14
+msgid "Added support for dark style manufacturer logos"
+msgstr ""
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:15
+msgid "Added support for offline firmware updates"
+msgstr ""
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:17
+#: data/io.elementary.switchboard.about.appdata.xml.in:25
+#: data/io.elementary.switchboard.about.appdata.xml.in:52
 msgid "Minor updates:"
 msgstr "Minor updates:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:14
+#: data/io.elementary.switchboard.about.appdata.xml.in:19
+#: data/io.elementary.switchboard.about.appdata.xml.in:29
+#: data/io.elementary.switchboard.about.appdata.xml.in:56
+#: data/io.elementary.switchboard.about.appdata.xml.in:62
+#: data/io.elementary.switchboard.about.appdata.xml.in:67
+#: data/io.elementary.switchboard.about.appdata.xml.in:72
+msgid "Updated translations"
+msgstr "Updated translations"
+
+#: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Use formatted device name when available"
 msgstr "Use formatted device name when available"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:15
+#: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr ""
 "Display more information for certain GPUs, including Intel® Xe Graphics"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:16
-#: data/io.elementary.switchboard.about.appdata.xml.in:43
-#: data/io.elementary.switchboard.about.appdata.xml.in:49
-#: data/io.elementary.switchboard.about.appdata.xml.in:54
-#: data/io.elementary.switchboard.about.appdata.xml.in:59
-msgid "Updated translations"
-msgstr "Updated translations"
-
-#: data/io.elementary.switchboard.about.appdata.xml.in:22
+#: data/io.elementary.switchboard.about.appdata.xml.in:35
 msgid "Redesign and new features:"
 msgstr "Redesign and new features:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:24
+#: data/io.elementary.switchboard.about.appdata.xml.in:37
 msgid "Rename from About to System"
 msgstr "Rename from About to System"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:25
+#: data/io.elementary.switchboard.about.appdata.xml.in:38
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr "Split Hardware and Operating System info into their own tabs"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:26
+#: data/io.elementary.switchboard.about.appdata.xml.in:39
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr "Redesign the Operating System tab with clearer links and buttons"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:27
+#: data/io.elementary.switchboard.about.appdata.xml.in:40
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr "Add a Firmware view to manage device firmware updates"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:29
+#: data/io.elementary.switchboard.about.appdata.xml.in:42
 msgid "More information:"
 msgstr "More information:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:31
+#: data/io.elementary.switchboard.about.appdata.xml.in:44
 msgid "Provide information for ARM CPUs"
 msgstr "Provide information for ARM CPUs"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:32
+#: data/io.elementary.switchboard.about.appdata.xml.in:45
 msgid "Provide information for more types of Graphics"
 msgstr "Provide information for more types of Graphics"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:34
+#: data/io.elementary.switchboard.about.appdata.xml.in:47
 msgid "Fixes:"
 msgstr "Fixes:"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:36
+#: data/io.elementary.switchboard.about.appdata.xml.in:49
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr "Fix an issue where the view was destroyed early when navigating away"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:37
+#: data/io.elementary.switchboard.about.appdata.xml.in:50
 msgid "Fix system memory calculation"
 msgstr "Fix system memory calculation"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:41
+#: data/io.elementary.switchboard.about.appdata.xml.in:54
 msgid "Ellipsize long hardware names"
 msgstr "Ellipsise long hardware names"
 
-#: data/io.elementary.switchboard.about.appdata.xml.in:42
+#: data/io.elementary.switchboard.about.appdata.xml.in:55
 msgid "Performance improvements"
 msgstr "Performance improvements"
 

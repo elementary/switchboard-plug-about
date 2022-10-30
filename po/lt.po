@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
+"POT-Creation-Date: 2022-02-08 17:16+0000\n"
 "PO-Revision-Date: 2021-03-26 00:33+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -21,61 +21,61 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:39
+#: src/Plug.vala:42
 msgid "System"
 msgstr "Sistema"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:43
 msgid "View operating system and hardware information"
 msgstr "Rodyti operacinės sistemos ir aparatinės įrangos informaciją"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:62
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:60
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr "Aparatinė įranga"
 
-#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
 #, fuzzy
 #| msgid "Hardware"
 msgid "Firmware"
 msgstr "Aparatinė įranga"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:110
 #, fuzzy
 #| msgid "System Information"
 msgid "Operating System Information"
 msgstr "Sistemos informacija"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:111
 #, fuzzy
 #| msgid "System Information"
 msgid "Hardware Information"
 msgstr "Sistemos informacija"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Atkurti numatytuosius nustatymus"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Siūlyti vertimus"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Report a Problem"
 msgstr "Pranešti apie klaidą"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
 msgstr ""
 
-#: src/Plug.vala:115
+#: src/Plug.vala:118
 msgid "Updates"
 msgstr "Atnaujinimai"
 
@@ -150,25 +150,25 @@ msgstr "Tikrinti ar yra atnaujinimų"
 msgid "Connecting to the firmware service and searching for updates."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:123
+#: src/Views/FirmwareView.vala:115
 #, fuzzy
 #| msgid "Updates"
 msgid "Firmware Updates Are Not Available"
 msgstr "Atnaujinimai"
 
-#: src/Views/FirmwareView.vala:124
+#: src/Views/FirmwareView.vala:116
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:127
+#: src/Views/FirmwareView.vala:119
 msgid "The Firmware Service Is Not Available"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:128
+#: src/Views/FirmwareView.vala:120
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:219
+#: src/Views/FirmwareView.vala:211
 #, fuzzy, c-format
 #| msgid "Updates"
 msgid "%u Update Available"
@@ -178,124 +178,124 @@ msgstr[1] "Atnaujinimai"
 msgstr[2] "Atnaujinimai"
 msgstr[3] "Atnaujinimai"
 
-#: src/Views/FirmwareView.vala:223
+#: src/Views/FirmwareView.vala:215
 #, fuzzy
 #| msgid "Updates"
 msgid "Up to Date"
 msgstr "Atnaujinimai"
 
-#: src/Views/FirmwareView.vala:243
+#: src/Views/FirmwareView.vala:235
 #, c-format
 msgid "“%s” is being updated"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:309
+#: src/Views/FirmwareView.vala:306
 msgid "Failed to install firmware release"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:330
+#: src/Views/FirmwareView.vala:327
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:339
+#: src/Views/FirmwareView.vala:336
 msgid "Continue"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:357
+#: src/Views/FirmwareView.vala:354
 msgid "An update requires the system to restart to complete"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:358
+#: src/Views/FirmwareView.vala:355
 msgid "This will close all open applications and restart this device."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:366
+#: src/Views/FirmwareView.vala:363
 msgid "Restart"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:376
 msgid "An update requires the system to shut down to complete"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:380
+#: src/Views/FirmwareView.vala:377
 msgid "This will close all open applications and turn off this device."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:388
+#: src/Views/FirmwareView.vala:385
 msgid "Shut Down"
 msgstr ""
 
-#: src/Views/HardwareView.vala:61
+#: src/Views/HardwareView.vala:66
 #, c-format
 msgid "%s memory"
 msgstr "Atmintis: %s"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
+#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
 #, fuzzy
 #| msgid "Graphics:"
 msgid "Unknown Graphics"
 msgstr "Vaizdo posistemė:"
 
-#: src/Views/HardwareView.vala:86
+#: src/Views/HardwareView.vala:91
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown storage"
 msgstr "Procesorius:"
 
-#: src/Views/HardwareView.vala:145
+#: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
 msgstr "Gamintojo svetainė"
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:254
 #, fuzzy, c-format
 #| msgid "Dual-Core"
 msgid "Dual-Core %s"
 msgstr "Dviejų branduolių"
 
-#: src/Views/HardwareView.vala:237
+#: src/Views/HardwareView.vala:256
 #, fuzzy, c-format
 #| msgid "Quad-Core"
 msgid "Quad-Core %s"
 msgstr "Keturių branduolių"
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:330
+#: src/Views/HardwareView.vala:349
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Procesorius:"
 
-#: src/Views/HardwareView.vala:380
+#: src/Views/HardwareView.vala:403
 msgid "Unknown"
 msgstr "Nežinoma"
 
-#: src/Views/HardwareView.vala:428
+#: src/Views/HardwareView.vala:451
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s kaupiklis (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:453
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s kaupiklis (eMMC)"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:455
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s kaupiklis (SATA SSD)"
 
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:458
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s kaupiklis (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:440
+#: src/Views/HardwareView.vala:463
 #, c-format
 msgid "%s storage"
 msgstr "Kaupiklis: %s"
