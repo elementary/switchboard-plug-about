@@ -432,7 +432,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
             login_manager.reboot ();
         });
-        
+
         dialog.show ();
     }
 
