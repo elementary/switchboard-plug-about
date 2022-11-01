@@ -426,7 +426,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             var login_manager = LoginManager.get_instance ();
 
             if (!login_manager.set_reboot_to_firmware_setup ()) {
-                // TODO(meisenzahl): throw an error to the user that we're unable to restart into the firmware setup screen
+                show_reboot_to_firmware_setup_error_dialog ();
                 return;
             }
 
@@ -434,5 +434,22 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         });
         
         dialog.show ();
+    }
+
+    private void show_reboot_to_firmware_setup_error_dialog () {
+        var gicon = new ThemedIcon ("system-reboot");
+
+        var message_dialog = new Granite.MessageDialog (
+            _("Restart to firmware setup"),
+            _("Unable to restart to firmware setup."),
+            gicon,
+            Gtk.ButtonsType.CLOSE
+        ) {
+            badge_icon = new ThemedIcon ("dialog-error"),
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
+        message_dialog.show_all ();
+        message_dialog.show ();
+        message_dialog.destroy ();
     }
 }
