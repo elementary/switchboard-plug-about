@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2022-02-12 06:42+0000\n"
+"PO-Revision-Date: 2022-11-02 06:57+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/hu/>\n"
@@ -33,11 +33,11 @@ msgstr "Új funkciók:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:14
 msgid "Added support for dark style manufacturer logos"
-msgstr ""
+msgstr "Támogatás sötét gyártói logókhoz"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Added support for offline firmware updates"
-msgstr ""
+msgstr "Kikapcsolt állapotot igénylő firmwarefrissítések támogatása"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:17
 #: data/io.elementary.switchboard.about.appdata.xml.in:25
@@ -56,11 +56,12 @@ msgstr "Frissített fordítások"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:27
 msgid "Use formatted device name when available"
-msgstr ""
+msgstr "Formázott készüléknév használata, ha elérhető"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:28
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr ""
+"Több információ kijelzése némelyik GPU-khoz, beleértve az Intel® Xe Graphicst"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:35
 msgid "Redesign and new features:"
