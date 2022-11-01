@@ -257,7 +257,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         }
     }
 
-    private bool confirm_reboot_to_firmware_setup_action () {
+    private Granite.MessageDialog create_confirm_reboot_to_firmware_setup_dialog () {
         var dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("Restart to firmware setup?"),
             _("This will close all open applications, restart this device, and open the firmware setup screen."),
@@ -269,14 +269,18 @@ public class About.OperatingSystemView : Gtk.Grid {
         var continue_button = dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
         continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-        var result = dialog.run ();
-        dialog.destroy ();
-
-        return result == Gtk.ResponseType.ACCEPT;
+        return dialog;
     }
 
     private void reboot_to_firmware_setup_clicked () {
-        if (confirm_reboot_to_firmware_setup_action ()) {
+        var dialog = create_confirm_reboot_to_firmware_setup_dialog ();
+        dialog.response.connect ((result) => {
+            dialog.destroy ();
+
+            if (result != Gtk.ResponseType.ACCEPT) {
+                return;
+            }
+
             var login_manager = LoginManager.get_instance ();
 
             if (!login_manager.set_reboot_to_firmware_setup ()) {
@@ -285,7 +289,9 @@ public class About.OperatingSystemView : Gtk.Grid {
             }
 
             login_manager.reboot ();
-        }
+        });
+        
+        dialog.show ();
     }
 
     private static void reset_all_keys (GLib.Settings settings) {
