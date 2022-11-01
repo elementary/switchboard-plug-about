@@ -125,8 +125,6 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
-        var reboot_to_firmware_setup_button = new Gtk.Button.with_label (_("Restart to Firmware Setup"));
-
         var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
             hexpand = true,
             layout_style = Gtk.ButtonBoxStyle.END,
@@ -134,11 +132,6 @@ public class About.OperatingSystemView : Gtk.Grid {
         };
         button_grid.add (settings_restore_button);
         button_grid.set_child_secondary (settings_restore_button, true);
-        if (LoginManager.get_instance ().can_reboot_to_firmware_setup ()) {
-            button_grid.add (reboot_to_firmware_setup_button);
-            button_grid.set_child_secondary (reboot_to_firmware_setup_button, true);
-        }
-        button_grid.set_child_secondary (reboot_to_firmware_setup_button, true);
         button_grid.add (bug_button);
         if (update_button != null) {
             button_grid.add (update_button);
@@ -168,8 +161,6 @@ public class About.OperatingSystemView : Gtk.Grid {
         show_all ();
 
         settings_restore_button.clicked.connect (settings_restore_clicked);
-
-        reboot_to_firmware_setup_button.clicked.connect (reboot_to_firmware_setup_clicked);
 
         bug_button.clicked.connect (() => {
             var appinfo = new GLib.DesktopAppInfo ("io.elementary.feedback.desktop");
@@ -255,43 +246,6 @@ public class About.OperatingSystemView : Gtk.Grid {
                 reset_recursively (schema);
             }
         }
-    }
-
-    private Granite.MessageDialog create_confirm_reboot_to_firmware_setup_dialog () {
-        var dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("Restart to firmware setup?"),
-            _("This will close all open applications, restart this device, and open the firmware setup screen."),
-            "system-reboot",
-            Gtk.ButtonsType.CANCEL
-        );
-        dialog.transient_for = (Gtk.Window) get_toplevel ();
-
-        var continue_button = dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
-        continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
-
-        return dialog;
-    }
-
-    private void reboot_to_firmware_setup_clicked () {
-        var dialog = create_confirm_reboot_to_firmware_setup_dialog ();
-        dialog.response.connect ((result) => {
-            dialog.destroy ();
-
-            if (result != Gtk.ResponseType.ACCEPT) {
-                return;
-            }
-
-            var login_manager = LoginManager.get_instance ();
-
-            if (!login_manager.set_reboot_to_firmware_setup ()) {
-                // TODO(meisenzahl): throw an error to the user that we're unable to restart into the firmware setup screen
-                return;
-            }
-
-            login_manager.reboot ();
-        });
-        
-        dialog.show ();
     }
 
     private static void reset_all_keys (GLib.Settings settings) {

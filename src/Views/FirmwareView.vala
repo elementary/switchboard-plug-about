@@ -84,6 +84,12 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
         content_area.add (frame);
 
+        if (LoginManager.get_instance ().can_reboot_to_firmware_setup ()) {
+            var reboot_to_firmware_setup_button = new Gtk.Button.with_label (_("Restart to Firmware Setup"));
+            reboot_to_firmware_setup_button.clicked.connect (reboot_to_firmware_setup_clicked);
+            action_area.add (reboot_to_firmware_setup_button);
+        }
+
         fwupd_client = new Fwupd.Client ();
         fwupd_client.device_added.connect (on_device_added);
         fwupd_client.device_removed.connect (on_device_removed);
@@ -391,5 +397,42 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         }
 
         message_dialog.destroy ();
+    }
+
+    private Granite.MessageDialog create_confirm_reboot_to_firmware_setup_dialog () {
+        var dialog = new Granite.MessageDialog.with_image_from_icon_name (
+            _("Restart to firmware setup?"),
+            _("This will close all open applications, restart this device, and open the firmware setup screen."),
+            "system-reboot",
+            Gtk.ButtonsType.CANCEL
+        );
+        dialog.transient_for = (Gtk.Window) get_toplevel ();
+
+        var continue_button = dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
+        continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+        return dialog;
+    }
+
+    private void reboot_to_firmware_setup_clicked () {
+        var dialog = create_confirm_reboot_to_firmware_setup_dialog ();
+        dialog.response.connect ((result) => {
+            dialog.destroy ();
+
+            if (result != Gtk.ResponseType.ACCEPT) {
+                return;
+            }
+
+            var login_manager = LoginManager.get_instance ();
+
+            if (!login_manager.set_reboot_to_firmware_setup ()) {
+                // TODO(meisenzahl): throw an error to the user that we're unable to restart into the firmware setup screen
+                return;
+            }
+
+            login_manager.reboot ();
+        });
+        
+        dialog.show ();
     }
 }
