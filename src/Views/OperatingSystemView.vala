@@ -125,7 +125,7 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
-        var reboot_to_firmware_setup_button = new Gtk.Button.with_label (_("Reboot to Firmware Setup"));
+        var reboot_to_firmware_setup_button = new Gtk.Button.with_label (_("Restart to Firmware Setup"));
 
         var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
             hexpand = true,
@@ -259,14 +259,14 @@ public class About.OperatingSystemView : Gtk.Grid {
 
     private bool confirm_reboot_to_firmware_setup_action () {
         var dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("Are you sure you want to Reboot?"),
-            _("This will close all open applications and turn off this device."),
-            "system-shutdown",
+            _("Restart to firmware setup?"),
+            _("This will close all open applications, restart this device, and open the firmware setup screen."),
+            "system-reboot",
             Gtk.ButtonsType.CANCEL
         );
         dialog.transient_for = (Gtk.Window) get_toplevel ();
 
-        var continue_button = dialog.add_button (_("Reboot"), Gtk.ResponseType.ACCEPT);
+        var continue_button = dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
         continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         var result = dialog.run ();
