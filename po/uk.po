@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 17:16+0000\n"
+"POT-Creation-Date: 2022-11-01 18:42+0000\n"
 "PO-Revision-Date: 2021-07-21 04:50+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -137,25 +137,29 @@ msgstr "Перевірка наявності оновлень"
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Під'єднання до служби оновлення мікропрограми та пошук оновлень."
 
-#: src/Views/FirmwareView.vala:115
+#: src/Views/FirmwareView.vala:88
+msgid "Restart to Firmware Setup"
+msgstr ""
+
+#: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
 msgstr "Оновлення мікропрограми недоступні"
 
-#: src/Views/FirmwareView.vala:116
+#: src/Views/FirmwareView.vala:122
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Оновлення мікропрограми не підтримується цим та будь-яким під'єднаним "
 "пристроєм."
 
-#: src/Views/FirmwareView.vala:119
+#: src/Views/FirmwareView.vala:125
 msgid "The Firmware Service Is Not Available"
 msgstr "Служба оновлення мікропрограми недоступна"
 
-#: src/Views/FirmwareView.vala:120
+#: src/Views/FirmwareView.vala:126
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Переконайтесь, що встановлено та увімкнено функцію «fwupd»."
 
-#: src/Views/FirmwareView.vala:211
+#: src/Views/FirmwareView.vala:217
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
@@ -163,51 +167,73 @@ msgstr[0] "%u оновлення доступне"
 msgstr[1] "%u оновлення доступні"
 msgstr[2] "%u оновлень доступні"
 
-#: src/Views/FirmwareView.vala:215
+#: src/Views/FirmwareView.vala:221
 msgid "Up to Date"
 msgstr "В оновленому стані"
 
-#: src/Views/FirmwareView.vala:235
+#: src/Views/FirmwareView.vala:241
 #, c-format
 msgid "“%s” is being updated"
 msgstr "«%s» оновлюється"
 
-#: src/Views/FirmwareView.vala:306
+#: src/Views/FirmwareView.vala:312
 msgid "Failed to install firmware release"
 msgstr "Не вдалося встановити випуск мікропрограми"
 
-#: src/Views/FirmwareView.vala:327
+#: src/Views/FirmwareView.vala:333
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "«%s» потрібно власноруч перевести в режим оновлення"
 
-#: src/Views/FirmwareView.vala:336
+#: src/Views/FirmwareView.vala:342
 msgid "Continue"
 msgstr "Продовжити"
 
-#: src/Views/FirmwareView.vala:354
+#: src/Views/FirmwareView.vala:360
 msgid "An update requires the system to restart to complete"
 msgstr "Оновлення вимагає перезапуску системи для завершення"
 
-#: src/Views/FirmwareView.vala:355
+#: src/Views/FirmwareView.vala:361
 msgid "This will close all open applications and restart this device."
 msgstr "Це закриє всі відкриті застосунки та перезапустить цей пристрій."
 
-#: src/Views/FirmwareView.vala:363
+#: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
 msgid "Restart"
 msgstr "Перезапуск"
 
-#: src/Views/FirmwareView.vala:376
+#: src/Views/FirmwareView.vala:382
 msgid "An update requires the system to shut down to complete"
 msgstr "Оновлення вимагає завершення роботи системи"
 
-#: src/Views/FirmwareView.vala:377
+#: src/Views/FirmwareView.vala:383
 msgid "This will close all open applications and turn off this device."
 msgstr "Це закриє всі відкриті застосунки та вимкне цей пристрій."
 
-#: src/Views/FirmwareView.vala:385
+#: src/Views/FirmwareView.vala:391
 msgid "Shut Down"
 msgstr "Вимкнути"
+
+#: src/Views/FirmwareView.vala:404
+msgid "Restart to firmware setup"
+msgstr ""
+
+#: src/Views/FirmwareView.vala:405
+#, fuzzy
+#| msgid "This will close all open applications and restart this device."
+msgid ""
+"This will close all open applications, restart this device, and open the "
+"firmware setup screen."
+msgstr "Це закриє всі відкриті застосунки та перезапустить цей пристрій."
+
+#: src/Views/FirmwareView.vala:429
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Unable to restart to firmware setup"
+msgstr "Не вдалося встановити випуск мікропрограми"
+
+#: src/Views/FirmwareView.vala:430
+msgid "A system error prevented automatically restarting into firmware setup."
+msgstr ""
 
 #: src/Views/HardwareView.vala:66
 #, c-format
@@ -241,36 +267,36 @@ msgstr "Чотириядерний %s"
 msgid "Hexa-Core %s"
 msgstr "Шестиядерний %s"
 
-#: src/Views/HardwareView.vala:349
+#: src/Views/HardwareView.vala:371
 msgid "Unknown Processor"
 msgstr "Невідомий процесор"
 
-#: src/Views/HardwareView.vala:403
+#: src/Views/HardwareView.vala:444
 msgid "Unknown"
 msgstr "Невідомо"
 
-#: src/Views/HardwareView.vala:451
+#: src/Views/HardwareView.vala:499
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s сховища (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:453
+#: src/Views/HardwareView.vala:501
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s сховища (eMMC)"
 
-#: src/Views/HardwareView.vala:455
+#: src/Views/HardwareView.vala:503
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s сховища (SATA SSD)"
 
-#: src/Views/HardwareView.vala:458
+#: src/Views/HardwareView.vala:506
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s сховища (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:463
+#: src/Views/HardwareView.vala:511
 #, c-format
 msgid "%s storage"
 msgstr "%s сховища"
