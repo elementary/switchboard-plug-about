@@ -85,7 +85,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         content_area.add (frame);
 
         if (LoginManager.get_instance ().can_reboot_to_firmware_setup ()) {
-            var reboot_to_firmware_setup_button = new Gtk.Button.with_label (_("Restart to Firmware Setup"));
+            var reboot_to_firmware_setup_button = new Gtk.Button.with_label (_("Restart to Firmware Setup…"));
             reboot_to_firmware_setup_button.clicked.connect (reboot_to_firmware_setup_clicked);
             action_area.add (reboot_to_firmware_setup_button);
         }
