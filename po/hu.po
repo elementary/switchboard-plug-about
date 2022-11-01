@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2021-08-24 21:51+0000\n"
+"PO-Revision-Date: 2022-11-02 06:57+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/hu/>\n"
@@ -136,10 +136,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "Csatlakozás a firmwareszolgáltatáshoz és frissítések keresése."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "Firmwarekiadás frissítése sikertelen"
+msgstr "Újraindítás a firmwarebeállításokba…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -214,26 +212,24 @@ msgstr "Leállítás"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "Újraindítás a firmwarebeállításokba"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
 msgstr ""
-"Ez bezárja az összes megnyitott alkalmazást és újraindítja a készüléket."
+"Ez bezárja az összes megnyitott alkalmazást, újraindítja a készüléket és "
+"megnyitja a firmwarebeállítások képernyőt."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "Firmwarekiadás frissítése sikertelen"
+msgstr "Újraindítás a firmwarebeállításokba sikertelen"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
+"Egy rendszerhiba megadakályozta az újraindítást a firmwarebeállításokba."
 
 #: src/Views/HardwareView.vala:66
 #, c-format
