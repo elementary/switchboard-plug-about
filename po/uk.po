@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2021-07-21 04:50+0000\n"
+"PO-Revision-Date: 2022-11-01 22:06+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
@@ -138,10 +138,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "Під'єднання до служби оновлення мікропрограми та пошук оновлень."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "Не вдалося встановити випуск мікропрограми"
+msgstr "Перезапустити для налаштування мікропрограми…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -217,25 +215,25 @@ msgstr "Вимкнути"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "Перезапустити для налаштування мікропрограми"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
-msgstr "Це закриє всі відкриті застосунки та перезапустить цей пристрій."
+msgstr ""
+"Це закриє всі відкриті застосунки, перезапустить цей пристрій і відкриє "
+"екран налаштування мікропрограми."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "Не вдалося встановити випуск мікропрограми"
+msgstr "Не вдалося перезапустити для налаштування мікропрограми"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
+"Системна помилка завадила автоперезапуску в режимі встановлення "
+"мікропрограми."
 
 #: src/Views/HardwareView.vala:66
 #, c-format
