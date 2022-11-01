@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-01 18:42+0000\n"
+"POT-Creation-Date: 2022-11-01 18:54+0000\n"
 "PO-Revision-Date: 2022-01-28 09:40+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -133,8 +133,10 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "正在连接固件服务并查找更新。"
 
 #: src/Views/FirmwareView.vala:88
-msgid "Restart to Firmware Setup"
-msgstr ""
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Restart to Firmware Setup…"
+msgstr "安装固件失败"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"

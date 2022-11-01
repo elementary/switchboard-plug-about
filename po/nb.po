@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-01 18:42+0000\n"
+"POT-Creation-Date: 2022-11-01 18:54+0000\n"
 "PO-Revision-Date: 2021-07-22 17:45+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -147,8 +147,10 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "Kobler til fastvaretjeneste og søker etter oppdateringer der."
 
 #: src/Views/FirmwareView.vala:88
-msgid "Restart to Firmware Setup"
-msgstr ""
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Restart to Firmware Setup…"
+msgstr "Klarte ikke å installere fastvareutgivelse"
 
 #: src/Views/FirmwareView.vala:121
 #, fuzzy

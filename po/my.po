@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-01 18:42+0000\n"
+"POT-Creation-Date: 2022-11-01 18:54+0000\n"
 "PO-Revision-Date: 2014-10-18 14:56+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Burmese <my@li.org>\n"
@@ -132,7 +132,7 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr ""
 
 #: src/Views/FirmwareView.vala:88
-msgid "Restart to Firmware Setup"
+msgid "Restart to Firmware Setup…"
 msgstr ""
 
 #: src/Views/FirmwareView.vala:121
