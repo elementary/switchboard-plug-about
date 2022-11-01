@@ -401,7 +401,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
     private Granite.MessageDialog create_confirm_reboot_to_firmware_setup_dialog () {
         var dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            _("Restart to firmware setup?"),
+            _("Restart to firmware setup"),
             _("This will close all open applications, restart this device, and open the firmware setup screen."),
             "system-reboot",
             Gtk.ButtonsType.CANCEL
