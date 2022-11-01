@@ -279,7 +279,11 @@ public class About.OperatingSystemView : Gtk.Grid {
         if (confirm_reboot_to_firmware_setup_action ()) {
             var login_manager = LoginManager.get_instance ();
 
-            login_manager.set_reboot_to_firmware_setup ();
+            if (!login_manager.set_reboot_to_firmware_setup ()) {
+                // TODO(meisenzahl): throw an error to the user that we're unable to restart into the firmware setup screen
+                return;
+            }
+
             login_manager.reboot ();
         }
     }
