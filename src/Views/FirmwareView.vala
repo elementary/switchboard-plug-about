@@ -399,23 +399,21 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         message_dialog.destroy ();
     }
 
-    private Granite.MessageDialog create_confirm_reboot_to_firmware_setup_dialog () {
-        var dialog = new Granite.MessageDialog.with_image_from_icon_name (
+    private void reboot_to_firmware_setup_clicked () {
+        var dialog = new Granite.MessageDialog (
             _("Restart to firmware setup"),
             _("This will close all open applications, restart this device, and open the firmware setup screen."),
-            "system-reboot",
+            new ThemedIcon ("system-reboot"),
             Gtk.ButtonsType.CANCEL
-        );
-        dialog.transient_for = (Gtk.Window) get_toplevel ();
+        ) {
+            badge_icon = new ThemedIcon ("application-x-firmware"),
+            modal = true,
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
 
         var continue_button = dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
         continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-        return dialog;
-    }
-
-    private void reboot_to_firmware_setup_clicked () {
-        var dialog = create_confirm_reboot_to_firmware_setup_dialog ();
         dialog.response.connect ((result) => {
             dialog.destroy ();
 
@@ -424,32 +422,29 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             }
 
             var login_manager = LoginManager.get_instance ();
+            var error = login_manager.set_reboot_to_firmware_setup ();
 
-            if (!login_manager.set_reboot_to_firmware_setup ()) {
-                show_reboot_to_firmware_setup_error_dialog ();
+            if (error != null) {
+                var message_dialog = new Granite.MessageDialog (
+                    _("Unable to restart to firmware setup"),
+                    _("A system error prevented automatically restarting into firmware setup."),
+                    new ThemedIcon ("system-reboot"),
+                    Gtk.ButtonsType.CLOSE
+                ) {
+                    badge_icon = new ThemedIcon ("dialog-error"),
+                    modal = true,
+                    transient_for = (Gtk.Window) get_toplevel ()
+                };
+                message_dialog.show_error_details (error.message);
+                message_dialog.present ();
+                message_dialog.response.connect (message_dialog.destroy);
+
                 return;
             }
 
             login_manager.reboot ();
         });
 
-        dialog.show ();
-    }
-
-    private void show_reboot_to_firmware_setup_error_dialog () {
-        var gicon = new ThemedIcon ("system-reboot");
-
-        var message_dialog = new Granite.MessageDialog (
-            _("Restart to firmware setup"),
-            _("Unable to restart to firmware setup."),
-            gicon,
-            Gtk.ButtonsType.CLOSE
-        ) {
-            badge_icon = new ThemedIcon ("dialog-error"),
-            transient_for = (Gtk.Window) get_toplevel ()
-        };
-        message_dialog.show_all ();
-        message_dialog.show ();
-        message_dialog.destroy ();
+        dialog.present ();
     }
 }

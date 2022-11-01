@@ -71,15 +71,15 @@ public class About.LoginManager : Object {
         return true;
     }
 
-    public bool set_reboot_to_firmware_setup () {
+    public Error? set_reboot_to_firmware_setup () {
         try {
             interface.set_reboot_to_firmware_setup (true);
         } catch (Error e) {
-            warning ("Could not connect to login interface: %s", e.message);
-            return false;
+            warning ("Could not set reboot to firmware setup: %s", e.message);
+            return e;
         }
 
-        return true;
+        return null;
     }
 
     public bool can_reboot_to_firmware_setup () {
