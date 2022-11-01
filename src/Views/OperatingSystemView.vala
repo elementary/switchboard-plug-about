@@ -131,11 +131,11 @@ public class About.OperatingSystemView : Gtk.Grid {
             spacing = 6
         };
         button_grid.add (settings_restore_button);
-        button_grid.set_child_secondary (settings_restore_button, true);
         button_grid.add (bug_button);
         if (update_button != null) {
             button_grid.add (update_button);
         }
+        button_grid.set_child_secondary (settings_restore_button, true);
 
         software_grid = new Gtk.Grid () {
             // The avatar has some built-in margin for shadows
