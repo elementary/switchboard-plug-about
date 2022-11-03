@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-08 17:16+0000\n"
+"POT-Creation-Date: 2022-11-01 18:54+0000\n"
 "PO-Revision-Date: 2021-04-03 02:43+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -135,82 +135,112 @@ msgstr "Nach Aktualisierungen suchen"
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Mit Firmware-Dienst verbinden und nach Aktualisierungen suchen."
 
-#: src/Views/FirmwareView.vala:115
+#: src/Views/FirmwareView.vala:88
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Restart to Firmware Setup…"
+msgstr "Installation der Firmware gescheitert"
+
+#: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
 msgstr "Keine Firmware-Aktualisierungen verfügbar"
 
-#: src/Views/FirmwareView.vala:116
+#: src/Views/FirmwareView.vala:122
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Firmware-Aktualisierungen werden weder bei diesem noch bei angeschlossenen "
 "Geräten unterstützt."
 
-#: src/Views/FirmwareView.vala:119
+#: src/Views/FirmwareView.vala:125
 msgid "The Firmware Service Is Not Available"
 msgstr "Der Firmware-Dienst ist nicht verfügbar"
 
-#: src/Views/FirmwareView.vala:120
+#: src/Views/FirmwareView.vala:126
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Stellen Sie sicher, dass »fwupd« installiert und aktiviert ist."
 
-#: src/Views/FirmwareView.vala:211
+#: src/Views/FirmwareView.vala:217
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u Aktualisierung verfügbar"
 msgstr[1] "%u Aktualisierungen verfügbar"
 
-#: src/Views/FirmwareView.vala:215
+#: src/Views/FirmwareView.vala:221
 msgid "Up to Date"
 msgstr "Aktuell"
 
-#: src/Views/FirmwareView.vala:235
+#: src/Views/FirmwareView.vala:241
 #, c-format
 msgid "“%s” is being updated"
 msgstr "»%s« wird aktualisiert"
 
-#: src/Views/FirmwareView.vala:306
+#: src/Views/FirmwareView.vala:312
 msgid "Failed to install firmware release"
 msgstr "Installation der Firmware gescheitert"
 
-#: src/Views/FirmwareView.vala:327
+#: src/Views/FirmwareView.vala:333
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "»%s« muss manuell in den Aktualisierungsmodus versetzt werden"
 
-#: src/Views/FirmwareView.vala:336
+#: src/Views/FirmwareView.vala:342
 msgid "Continue"
 msgstr "Weiter"
 
-#: src/Views/FirmwareView.vala:354
+#: src/Views/FirmwareView.vala:360
 msgid "An update requires the system to restart to complete"
 msgstr ""
 "Zum Abschluss einer der Aktualisierungen muss das System neu gestartet werden"
 
-#: src/Views/FirmwareView.vala:355
+#: src/Views/FirmwareView.vala:361
 msgid "This will close all open applications and restart this device."
 msgstr ""
 "Dabei werden alle geöffneten Anwendungen geschlossen und dieses Gerät neu "
 "gestartet."
 
-#: src/Views/FirmwareView.vala:363
+#: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
 msgid "Restart"
 msgstr "Neu starten"
 
-#: src/Views/FirmwareView.vala:376
+#: src/Views/FirmwareView.vala:382
 msgid "An update requires the system to shut down to complete"
 msgstr ""
 "Zum Abschluss einer der Aktualisierungen muss das System ausgeschaltet werden"
 
-#: src/Views/FirmwareView.vala:377
+#: src/Views/FirmwareView.vala:383
 msgid "This will close all open applications and turn off this device."
 msgstr ""
 "Dabei werden alle geöffneten Anwendungen geschlossen und dieses Gerät "
 "ausgeschaltet."
 
-#: src/Views/FirmwareView.vala:385
+#: src/Views/FirmwareView.vala:391
 msgid "Shut Down"
 msgstr "Ausschalten"
+
+#: src/Views/FirmwareView.vala:404
+msgid "Restart to firmware setup"
+msgstr ""
+
+#: src/Views/FirmwareView.vala:405
+#, fuzzy
+#| msgid "This will close all open applications and restart this device."
+msgid ""
+"This will close all open applications, restart this device, and open the "
+"firmware setup screen."
+msgstr ""
+"Dabei werden alle geöffneten Anwendungen geschlossen und dieses Gerät neu "
+"gestartet."
+
+#: src/Views/FirmwareView.vala:429
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Unable to restart to firmware setup"
+msgstr "Installation der Firmware gescheitert"
+
+#: src/Views/FirmwareView.vala:430
+msgid "A system error prevented automatically restarting into firmware setup."
+msgstr ""
 
 #: src/Views/HardwareView.vala:66
 #, c-format
@@ -244,36 +274,36 @@ msgstr "Vierkern %s"
 msgid "Hexa-Core %s"
 msgstr "Achtkern %s"
 
-#: src/Views/HardwareView.vala:349
+#: src/Views/HardwareView.vala:371
 msgid "Unknown Processor"
 msgstr "Unbekannter Prozessor"
 
-#: src/Views/HardwareView.vala:403
+#: src/Views/HardwareView.vala:444
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: src/Views/HardwareView.vala:451
+#: src/Views/HardwareView.vala:499
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s Massenspeicher (NVMe-SSD)"
 
-#: src/Views/HardwareView.vala:453
+#: src/Views/HardwareView.vala:501
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s Massenspeicher (eMMC)"
 
-#: src/Views/HardwareView.vala:455
+#: src/Views/HardwareView.vala:503
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s Massenspeicher (SATA-SSD)"
 
-#: src/Views/HardwareView.vala:458
+#: src/Views/HardwareView.vala:506
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s Massenspeicher (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:463
+#: src/Views/HardwareView.vala:511
 #, c-format
 msgid "%s storage"
 msgstr "%s Massenspeicher"
