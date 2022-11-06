@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2021-04-08 22:32+0000\n"
-"Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
+"PO-Revision-Date: 2022-11-07 18:58+0000\n"
+"Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/tr/>\n"
 "Language: tr\n"
@@ -136,10 +136,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "Üretici yazılımı hizmetine bağlanıp güncellemeler aranıyor."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "Üretici yazılımı sürümü yüklenemedi"
+msgstr "Üretici Yazılımı Kurulumu için Yeniden Başlat…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -216,26 +214,25 @@ msgstr "Bilgisayarı Kapat"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "Üretici yazılımı kurulumu için yeniden başlat"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
 msgstr ""
-"Bu, tüm açık uygulamaları kapatacak ve bu cihazı yeniden başlatacaktır."
+"Bu, tüm açık uygulamaları kapatacak, bu cihazı yeniden başlatacak ve üretici "
+"yazılımı kurulumu ekranını açacaktır."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "Üretici yazılımı sürümü yüklenemedi"
+msgstr "Üretici yazılımı kurulumu için yeniden başlatılamıyor"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
+"Bir sistem hatası, üretici yazılımı kurulumuna otomatik olarak yeniden "
+"başlamayı engelledi."
 
 #: src/Views/HardwareView.vala:66
 #, c-format
