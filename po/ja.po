@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2021-04-03 02:07+0000\n"
+"PO-Revision-Date: 2022-11-04 07:03+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -135,10 +135,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "ファームウェアサービスに接続して、アップデートを確認しています。"
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "ファームウェアをインストールできませんでした"
+msgstr "再起動してファームウェアの設定に入る…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -216,27 +214,21 @@ msgstr "シャットダウン"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "再起動してファームウェアの設定に入る"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
-msgstr ""
-"続行すると、開いているすべてのアプリケーションを閉じてこのデバイスを再起動し"
-"ます。"
+msgstr "続行すると、開いているすべてのアプリケーションを閉じてこのデバイスを再起動し、ファームウェアの設定画面を開きます。"
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "ファームウェアをインストールできませんでした"
+msgstr "再起動してファームウェアの設定に入ることができませんでした"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
-msgstr ""
+msgstr "システムエラーのため、再起動して自動的にファームウェアの設定に入ることができませんでした。"
 
 #: src/Views/HardwareView.vala:66
 #, c-format

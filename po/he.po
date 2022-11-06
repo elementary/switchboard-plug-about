@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2021-04-03 22:11+0000\n"
+"PO-Revision-Date: 2022-11-04 07:03+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -136,10 +136,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "מתבצעת התחברות לשירות הקושחה לטובת איתור עדכונים."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "התקנת גרסת הקושחה נכשלה"
+msgstr "הפעלה מחדש לתוך הגדרות הקושחה…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -212,25 +210,23 @@ msgstr "כיבוי"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "הפעלה מחדש להגדרות הקושחה"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
-msgstr "פעולה זו תסגור את כל היישומים הפתוחים ותפעיל את ההתקן הזה מחדש."
+msgstr ""
+"פעולה זו תסגור את כל היישומים הפתוחים, תפעיל את ההתקן הזה מחדש ותפתח את מסך "
+"הגדרת הקושחה."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "התקנת גרסת הקושחה נכשלה"
+msgstr "לא ניתן להפעיל את הגדרת הקושחה מחדש"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
-msgstr ""
+msgstr "שגיאת מערכת מנעה הפעלה אוטומטית מחדש לתוך הגדרות הקושחה."
 
 #: src/Views/HardwareView.vala:66
 #, c-format

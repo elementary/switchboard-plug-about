@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2021-04-04 17:40+0000\n"
+"PO-Revision-Date: 2022-11-04 18:29+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ca/>\n"
@@ -139,10 +139,8 @@ msgstr ""
 "actualitzacions."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "Ha fallat instal·lar la versió del microprogramari."
+msgstr "Reinicia a la configuració del microprogramari…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -219,26 +217,25 @@ msgstr "Atura't"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "Reinici a la configuració del microprogramari"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
 msgstr ""
-"Això tancarà totes les aplicacions obertes i reiniciarà aquest dispositiu."
+"Això tancarà totes les aplicacions obertes, reiniciarà aquest dispositiu i "
+"obrirà la configuració del microprogramari."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "Ha fallat instal·lar la versió del microprogramari."
+msgstr "No es pot reiniciar a la configuració del microprogramari."
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
+"Un error del sistema ha evitat reiniciar automàticament a la configuració "
+"del microprogramari."
 
 #: src/Views/HardwareView.vala:66
 #, c-format

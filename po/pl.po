@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2021-11-08 09:18+0000\n"
-"Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
+"PO-Revision-Date: 2022-11-04 07:03+0000\n"
+"Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pl/>\n"
 "Language: pl\n"
@@ -138,10 +138,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "Łączenie z usługą oprogramowania i sprawdzanie aktualizacji."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "Niepowodzenie instalacji wydania oprogramowania"
+msgstr "Zrestartuj do ustawień Firmware…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -220,27 +218,23 @@ msgstr "Wyłącz"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "Zrestartuj do ustawień Firmware"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
 msgstr ""
-"To spowoduje zamknięcie wszystkich aplikacji i ponowne uruchomienie "
-"urządzenia."
+"To spowoduje zamknięcie wszystkich aplikacji, ponowne uruchomienie "
+"urządzenia i otwarcie ekranu ustawień firmware."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "Niepowodzenie instalacji wydania oprogramowania"
+msgstr "Nie udało się zrestartować do ustawień firmware"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
-msgstr ""
+msgstr "Błąd systemu uniemożliwił automatyczny restart do ustawień firmware."
 
 #: src/Views/HardwareView.vala:66
 #, c-format
