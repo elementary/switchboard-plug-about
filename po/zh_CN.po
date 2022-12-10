@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2022-01-28 09:40+0000\n"
+"PO-Revision-Date: 2022-12-10 05:25+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:42
@@ -133,10 +133,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "正在连接固件服务并查找更新。"
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "安装固件失败"
+msgstr "重启至固件设置界面…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -208,25 +206,21 @@ msgstr "关机"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "重启至固件设置界面"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
-msgstr "这会关闭所有应用程序并重启本设备。"
+msgstr "这会关闭所有应用程序、重启设备并打开固件设置界面。"
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "安装固件失败"
+msgstr "无法重启至固件设置界面"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
-msgstr ""
+msgstr "某个系统错误已阻止自动重启至固件设置界面。"
 
 #: src/Views/HardwareView.vala:66
 #, c-format
