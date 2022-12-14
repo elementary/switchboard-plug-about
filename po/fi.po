@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2021-05-04 12:26+0000\n"
+"PO-Revision-Date: 2022-12-15 19:25+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:42
@@ -136,10 +136,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "Yhdistetään laiteohjelmistopalveluun ja etsitään päivityksiä."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "Laiteohjelmiston julkaisun asentaminen epäonnistui"
+msgstr "Käynnistä uudelleen laiteohjelmiston asetuksiin…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -215,26 +213,25 @@ msgstr "Sammuta"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "Käynnistä uudelleen laiteohjelmiston asetuksiin"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
 msgstr ""
-"Tämä sulkee kaikki avoimet sovellukset ja käynnistää laitteen uudelleen."
+"Tämä sulkee kaikki avoimet sovellukset, käynnistää laitteen uudelleen ja "
+"avaa laiteohjelmiston asetusten näkymän."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "Laiteohjelmiston julkaisun asentaminen epäonnistui"
+msgstr "Uudelleenkäynnistäminen laiteohjelmiston asetuksiin epäonnistui"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
+"Järjestelmävirhe esti automaattisesti käynnistämästä uudelleen "
+"laiteohjelmiston asetuksiin."
 
 #: src/Views/HardwareView.vala:66
 #, c-format
