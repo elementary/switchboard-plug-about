@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2021-04-04 17:40+0000\n"
+"PO-Revision-Date: 2022-11-09 09:29+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:42
@@ -137,10 +137,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "Connexion au service du micrologiciel et recherche de mises à jour."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "Échec de l'installation du micrologiciel"
+msgstr "Redémarrer vers la configuration du micrologiciel…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -216,26 +214,25 @@ msgstr "Arrêter"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "Redémarrer vers la configuration du micrologiciel"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
 msgstr ""
-"Ceci fermera toutes les applications ouvertes et redémarrera le système."
+"Ceci fermera toutes les applications ouvertes, redémarrera cet appareil et "
+"ouvrira l'écran de configuration du micrologiciel."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "Échec de l'installation du micrologiciel"
+msgstr "Échec du redémarrage vers le micrologiciel"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
+"Une erreur système a empêché le redémarrage automatique vers la "
+"configuration du micrologiciel."
 
 #: src/Views/HardwareView.vala:66
 #, c-format
