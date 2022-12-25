@@ -329,8 +329,8 @@ public class About.OperatingSystemView : Gtk.Grid {
         int seconds_remaining = RESTART_TIMEOUT;
 
         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (
-            "elementary OS Next",
-            "To setup the installation of elementary OS Next, click Continue.",
+            "elementary OS 7",
+            "To setup the installation of elementary OS 7, click Continue.",
             "distributor-logo",
             Gtk.ButtonsType.CANCEL
         ) {
