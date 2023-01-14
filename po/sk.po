@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-01 18:54+0000\n"
-"PO-Revision-Date: 2021-08-24 18:20+0000\n"
+"PO-Revision-Date: 2022-12-26 20:25+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/sk/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:42
@@ -137,10 +137,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "Pripája sa k službe firmvéru a hľadajú sa aktualizácie."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "Nepodarilo sa nainštalovať vydanie firmvéru"
+msgstr "Reštartovať do Nastavenia firmvéru…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -216,25 +214,24 @@ msgstr "Vypnúť"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "Reštartovať do Nastavenia firmvéru"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
-msgstr "Všetky otvorené aplikácie budú ukončené a zariadenie sa reštartuje."
+msgstr ""
+"Všetky otvorené aplikácie budú ukončené, zariadenie sa reštartuje a otvorí "
+"sa obrazovka nastavenia firmvéru."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "Nepodarilo sa nainštalovať vydanie firmvéru"
+msgstr "Neporadilo sa reštartovať do nastavenia firmvéru"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
+"Systémová chyba zabránila automatickému reštartu do nastavenia firmvéru."
 
 #: src/Views/HardwareView.vala:66
 #, c-format
