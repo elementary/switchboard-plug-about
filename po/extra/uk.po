@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-26 18:46+0000\n"
-"PO-Revision-Date: 2022-05-29 23:10+0000\n"
+"PO-Revision-Date: 2023-01-28 05:25+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/uk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
 msgid "System"
@@ -35,7 +35,7 @@ msgstr "Нові функції:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Add a button to restart to firmware setup"
-msgstr ""
+msgstr "Додано кнопку перезапуску до налаштування мікропрограми"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:17
 #: data/io.elementary.switchboard.about.appdata.xml.in:33
@@ -45,14 +45,13 @@ msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:19
-#, fuzzy
-#| msgid "View operating system and hardware information"
 msgid "Get more accurate memory and storage information"
-msgstr "Огляд операційної системи та подробиць про апаратні засоби"
+msgstr "Отримуйте точніші дані про пам'ять і сховище"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:20
 msgid "Handle Ryzen CPU and AMD GPU vendor string"
 msgstr ""
+"Обробка лінійки постачальників процесорів Ryzen і графічних процесорів AMD"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:21
 #: data/io.elementary.switchboard.about.appdata.xml.in:35
