@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-04-08 22:32+0000\n"
-"Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
+"POT-Creation-Date: 2023-01-26 16:37+0000\n"
+"PO-Revision-Date: 2022-11-07 18:58+0000\n"
+"Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/tr/>\n"
 "Language: tr\n"
@@ -20,55 +20,55 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:39
+#: src/Plug.vala:42
 msgid "System"
 msgstr "Sistem"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:43
 msgid "View operating system and hardware information"
 msgstr "İşletim sistemini ve donanım bilgilerini görüntüle"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:62
 msgid "Operating System"
 msgstr "İşletim Sistemi"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr "Donanım"
 
-#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Üretici Yazılımı"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:110
 msgid "Operating System Information"
 msgstr "İşletim Sistemi Bilgisi"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:111
 msgid "Hardware Information"
 msgstr "Donanım Bilgisi"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Varsayılan Ayarları Geri Yükle"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Çeviri Öner"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
 msgstr "Geri Bildirim Gönder"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Report a Problem"
 msgstr "Sorun Bildir"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
 msgstr "Destek Alın"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:118
 msgid "Updates"
 msgstr "Güncellemeler"
 
@@ -135,141 +135,167 @@ msgstr "Güncellemeler Denetleniyor"
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Üretici yazılımı hizmetine bağlanıp güncellemeler aranıyor."
 
-#: src/Views/FirmwareView.vala:123
+#: src/Views/FirmwareView.vala:88
+msgid "Restart to Firmware Setup…"
+msgstr "Üretici Yazılımı Kurulumu için Yeniden Başlat…"
+
+#: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
 msgstr "Üretici Yazılımı Güncellemeleri Yok"
 
-#: src/Views/FirmwareView.vala:124
+#: src/Views/FirmwareView.vala:122
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Üretici yazılımı güncellemeleri, bu veya herhangi bir bağlı cihazda "
 "desteklenmiyor."
 
-#: src/Views/FirmwareView.vala:127
+#: src/Views/FirmwareView.vala:125
 msgid "The Firmware Service Is Not Available"
 msgstr "Üretici Yazılımı Hizmeti Yok"
 
-#: src/Views/FirmwareView.vala:128
+#: src/Views/FirmwareView.vala:126
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Lütfen \"fwupd\" uygulamasının kurulu ve etkin olduğundan emin olun."
 
-#: src/Views/FirmwareView.vala:219
+#: src/Views/FirmwareView.vala:217
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u Güncelleme Var"
 msgstr[1] "%u Güncelleme Var"
 
-#: src/Views/FirmwareView.vala:223
+#: src/Views/FirmwareView.vala:221
 msgid "Up to Date"
 msgstr "Güncel"
 
-#: src/Views/FirmwareView.vala:243
+#: src/Views/FirmwareView.vala:241
 #, c-format
 msgid "“%s” is being updated"
 msgstr "“%s” güncelleniyor"
 
-#: src/Views/FirmwareView.vala:309
+#: src/Views/FirmwareView.vala:312
 msgid "Failed to install firmware release"
 msgstr "Üretici yazılımı sürümü yüklenemedi"
 
-#: src/Views/FirmwareView.vala:330
+#: src/Views/FirmwareView.vala:333
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "\"%s\" cihazının el ile güncelleme moduna alınması gerekiyor"
 
-#: src/Views/FirmwareView.vala:339
+#: src/Views/FirmwareView.vala:342
 msgid "Continue"
 msgstr "Devam"
 
-#: src/Views/FirmwareView.vala:357
+#: src/Views/FirmwareView.vala:360
 msgid "An update requires the system to restart to complete"
 msgstr ""
 "Bir güncellemenin tamamlanması için sistemin yeniden başlatılması gerekir"
 
-#: src/Views/FirmwareView.vala:358
+#: src/Views/FirmwareView.vala:361
 msgid "This will close all open applications and restart this device."
 msgstr ""
 "Bu, tüm açık uygulamaları kapatacak ve bu cihazı yeniden başlatacaktır."
 
-#: src/Views/FirmwareView.vala:366
+#: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
 msgid "Restart"
 msgstr "Yeniden Başlat"
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:382
 msgid "An update requires the system to shut down to complete"
 msgstr "Bir güncellemenin tamamlanması için sistemin kapatılması gerekir"
 
-#: src/Views/FirmwareView.vala:380
+#: src/Views/FirmwareView.vala:383
 msgid "This will close all open applications and turn off this device."
 msgstr "Bu, tüm açık uygulamaları ve sonra bu cihazı kapatacaktır."
 
-#: src/Views/FirmwareView.vala:388
+#: src/Views/FirmwareView.vala:391
 msgid "Shut Down"
 msgstr "Bilgisayarı Kapat"
 
-#: src/Views/HardwareView.vala:61
+#: src/Views/FirmwareView.vala:404
+msgid "Restart to firmware setup"
+msgstr "Üretici yazılımı kurulumu için yeniden başlat"
+
+#: src/Views/FirmwareView.vala:405
+msgid ""
+"This will close all open applications, restart this device, and open the "
+"firmware setup screen."
+msgstr ""
+"Bu, tüm açık uygulamaları kapatacak, bu cihazı yeniden başlatacak ve üretici "
+"yazılımı kurulumu ekranını açacaktır."
+
+#: src/Views/FirmwareView.vala:429
+msgid "Unable to restart to firmware setup"
+msgstr "Üretici yazılımı kurulumu için yeniden başlatılamıyor"
+
+#: src/Views/FirmwareView.vala:430
+msgid "A system error prevented automatically restarting into firmware setup."
+msgstr ""
+"Bir sistem hatası, üretici yazılımı kurulumuna otomatik olarak yeniden "
+"başlamayı engelledi."
+
+#: src/Views/HardwareView.vala:66
 #, c-format
 msgid "%s memory"
 msgstr "%s bellek"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
+#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
 msgid "Unknown Graphics"
 msgstr "Bilinmeyen Ekran Kartı"
 
-#: src/Views/HardwareView.vala:86
+#: src/Views/HardwareView.vala:91
 msgid "Unknown storage"
 msgstr "Bilinmeyen depolama"
 
-#: src/Views/HardwareView.vala:145
+#: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
 msgstr "Üretici Web Sitesi"
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:254
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Çift Çekirdekli %s"
 
-#: src/Views/HardwareView.vala:237
+#: src/Views/HardwareView.vala:256
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Dört Çekirdekli %s"
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Altı Çekirdekli %s"
 
-#: src/Views/HardwareView.vala:330
+#: src/Views/HardwareView.vala:371
 msgid "Unknown Processor"
 msgstr "Bilinmeyen İşlemci"
 
-#: src/Views/HardwareView.vala:380
+#: src/Views/HardwareView.vala:444
 msgid "Unknown"
 msgstr "Bilinmiyor"
 
-#: src/Views/HardwareView.vala:428
+#: src/Views/HardwareView.vala:499
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s depolama alanı (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:501
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s depolama alanı (eMMC)"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:503
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s depolama alanı (SATA SSD)"
 
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:506
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s depolama alanı (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:440
+#: src/Views/HardwareView.vala:511
 #, c-format
 msgid "%s storage"
 msgstr "%s depolama alanı"

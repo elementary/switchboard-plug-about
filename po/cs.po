@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2023-01-26 16:37+0000\n"
+"PO-Revision-Date: 2022-01-10 21:58+0000\n"
+"Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/cs/>\n"
 "Language: cs\n"
@@ -20,69 +20,61 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:39
+#: src/Plug.vala:42
 msgid "System"
 msgstr "Systém"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:43
 msgid "View operating system and hardware information"
-msgstr "Zobrazit informace o  operačním systému a hardwaru"
+msgstr "Zobrazit informace o operačním systému a hardwaru"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:62
 msgid "Operating System"
-msgstr ""
+msgstr "Operační systém"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr "Hardware"
 
-#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
-#, fuzzy
-#| msgid "Hardware"
+#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
 msgid "Firmware"
-msgstr "Hardware"
+msgstr "Firmware"
 
-#: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
+#: src/Plug.vala:110
 msgid "Operating System Information"
-msgstr "Informace o systému"
+msgstr "Informace o operačním systému"
 
-#: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
+#: src/Plug.vala:111
 msgid "Hardware Information"
-msgstr "Informace o systému"
+msgstr "Informace o hardware"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Obnovit výchozí nastavení"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Pomoci s překlady"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "Odeslat zpětnou vazbu"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Report a Problem"
 msgstr "Nahlásit problém"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "Získat podporu"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:118
 msgid "Updates"
 msgstr "Aktualizace"
 
 #: src/Views/FirmwareReleaseView.vala:42
-#, fuzzy
-#| msgid "Updates"
 msgid "All Updates"
-msgstr "Aktualizace"
+msgstr "Všechny aktualizace"
 
 #: src/Views/FirmwareReleaseView.vala:81
 msgid "Version:"
@@ -90,203 +82,222 @@ msgstr "Verze:"
 
 #: src/Views/FirmwareReleaseView.vala:90
 msgid "Vendor:"
-msgstr ""
+msgstr "Výrobce:"
 
 #: src/Views/FirmwareReleaseView.vala:99
 msgid "Size:"
-msgstr ""
+msgstr "Velikost:"
 
 #: src/Views/FirmwareReleaseView.vala:108
 msgid "Estimated time to install:"
-msgstr ""
+msgstr "Odhadovaná doba do dokončení instalace:"
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "Pro toto zařízení nejsou k dispozici žádná vydání."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
-msgstr "Aktualizace"
+msgstr "Aktualizovat"
 
 #: src/Views/FirmwareReleaseView.vala:211
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "Aktualizace"
+msgstr "Aktuální"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr ""
+msgstr "méně než minuta"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%llu minuta"
+msgstr[1] "%llu minuty"
+msgstr[2] "%llu minut"
 
 #: src/Views/FirmwareView.vala:36
 msgid ""
 "Firmware updates provided by device manufacturers can improve performance "
 "and fix critical security issues."
 msgstr ""
+"Aktualizace firmware poskytované výrobci zařízení mohou vylepšovat výkon a "
+"opravovat kritické problémy se zabezpečením."
 
 #: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "V průběhu aktualizace zařízení neodpojujte."
 
 #: src/Views/FirmwareView.vala:49
-#, fuzzy
-#| msgid "Check for Updates"
 msgid "Checking for Updates"
-msgstr "Zkontrolovat aktualizace"
+msgstr "Kontrolují se aktualizace"
 
 #: src/Views/FirmwareView.vala:50
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "Připojování ke službě aktualizací firmware a hledání aktualizací."
 
-#: src/Views/FirmwareView.vala:123
+#: src/Views/FirmwareView.vala:88
 #, fuzzy
-#| msgid "Updates"
-msgid "Firmware Updates Are Not Available"
-msgstr "Aktualizace"
+#| msgid "Failed to install firmware release"
+msgid "Restart to Firmware Setup…"
+msgstr "Nepodařilo se nainstalovat vydání firmware"
 
-#: src/Views/FirmwareView.vala:124
+#: src/Views/FirmwareView.vala:121
+msgid "Firmware Updates Are Not Available"
+msgstr "Nejsou k dispozici žádné aktualizace firmware"
+
+#: src/Views/FirmwareView.vala:122
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"Na tomto ani žádném z připojených zařízení nejsou podporovány aktualizace "
+"firmware."
 
-#: src/Views/FirmwareView.vala:127
+#: src/Views/FirmwareView.vala:125
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "Služba pro aktualizace firmware není k dispozici"
 
-#: src/Views/FirmwareView.vala:128
+#: src/Views/FirmwareView.vala:126
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "Ověřte, že je nainstalovaný a spuštěný proces služby „fwupd“."
 
-#: src/Views/FirmwareView.vala:219
-#, fuzzy, c-format
-#| msgid "Updates"
+#: src/Views/FirmwareView.vala:217
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Aktualizace"
-msgstr[1] "Aktualizace"
-msgstr[2] "Aktualizace"
+msgstr[0] "Je k dispozici %u aktualizace"
+msgstr[1] "Jsou k dispozici %u aktualizace"
+msgstr[2] "Je k dispozici %u aktualizací"
 
-#: src/Views/FirmwareView.vala:223
-#, fuzzy
-#| msgid "Updates"
+#: src/Views/FirmwareView.vala:221
 msgid "Up to Date"
-msgstr "Aktualizace"
+msgstr "Aktuální"
 
-#: src/Views/FirmwareView.vala:243
+#: src/Views/FirmwareView.vala:241
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "„%s“ je právě aktulizováno"
 
-#: src/Views/FirmwareView.vala:309
+#: src/Views/FirmwareView.vala:312
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "Nepodařilo se nainstalovat vydání firmware"
 
-#: src/Views/FirmwareView.vala:330
+#: src/Views/FirmwareView.vala:333
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "„%s“ je třeba ručně přepnout do režimu aktualizace"
 
-#: src/Views/FirmwareView.vala:339
+#: src/Views/FirmwareView.vala:342
 msgid "Continue"
-msgstr ""
+msgstr "Pokračovat"
 
-#: src/Views/FirmwareView.vala:357
+#: src/Views/FirmwareView.vala:360
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "Aktualizace vyžaduje pro dokončení restart systému"
 
-#: src/Views/FirmwareView.vala:358
+#: src/Views/FirmwareView.vala:361
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "Toto zavře veškeré otevřené aplikace a restartuje toto zařízení."
 
-#: src/Views/FirmwareView.vala:366
+#: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
 msgid "Restart"
-msgstr ""
+msgstr "Restart"
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:382
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "Aktualizace vyžaduje pro dokončení vypnutí systému"
 
-#: src/Views/FirmwareView.vala:380
+#: src/Views/FirmwareView.vala:383
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "Toto zavře veškeré otevřené aplikace a vypne toto zařízení."
 
-#: src/Views/FirmwareView.vala:388
+#: src/Views/FirmwareView.vala:391
 msgid "Shut Down"
+msgstr "Vypnout"
+
+#: src/Views/FirmwareView.vala:404
+msgid "Restart to firmware setup"
 msgstr ""
 
-#: src/Views/HardwareView.vala:61
+#: src/Views/FirmwareView.vala:405
+#, fuzzy
+#| msgid "This will close all open applications and restart this device."
+msgid ""
+"This will close all open applications, restart this device, and open the "
+"firmware setup screen."
+msgstr "Toto zavře veškeré otevřené aplikace a restartuje toto zařízení."
+
+#: src/Views/FirmwareView.vala:429
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Unable to restart to firmware setup"
+msgstr "Nepodařilo se nainstalovat vydání firmware"
+
+#: src/Views/FirmwareView.vala:430
+msgid "A system error prevented automatically restarting into firmware setup."
+msgstr ""
+
+#: src/Views/HardwareView.vala:66
 #, c-format
 msgid "%s memory"
 msgstr "%s paměti"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
+#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
 msgid "Unknown Graphics"
 msgstr "Neznámá grafika"
 
-#: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Unknown Processor"
+#: src/Views/HardwareView.vala:91
 msgid "Unknown storage"
-msgstr "Neznámý procesor"
+msgstr "Neznámé úložiště"
 
-#: src/Views/HardwareView.vala:145
+#: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
 msgstr "Webové stránky výrobce"
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:254
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Dvoujádrový %s"
 
-#: src/Views/HardwareView.vala:237
+#: src/Views/HardwareView.vala:256
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Čtyřjádrový %s"
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Osmijádrový %s"
 
-#: src/Views/HardwareView.vala:330
+#: src/Views/HardwareView.vala:371
 msgid "Unknown Processor"
 msgstr "Neznámý procesor"
 
-#: src/Views/HardwareView.vala:380
+#: src/Views/HardwareView.vala:444
 msgid "Unknown"
 msgstr "Neznámé"
 
-#: src/Views/HardwareView.vala:428
+#: src/Views/HardwareView.vala:499
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s úložiště (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:501
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s úložiště (eMMC)"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:503
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s úložiště (SATA SSD)"
 
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:506
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s úložiště (pevný disk)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:440
+#: src/Views/HardwareView.vala:511
 #, c-format
 msgid "%s storage"
 msgstr "%s úložiště"

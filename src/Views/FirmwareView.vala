@@ -84,6 +84,12 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
         content_area.add (frame);
 
+        if (LoginManager.get_instance ().can_reboot_to_firmware_setup ()) {
+            var reboot_to_firmware_setup_button = new Gtk.Button.with_label (_("Restart to Firmware Setup…"));
+            reboot_to_firmware_setup_button.clicked.connect (reboot_to_firmware_setup_clicked);
+            action_area.add (reboot_to_firmware_setup_button);
+        }
+
         fwupd_client = new Fwupd.Client ();
         fwupd_client.device_added.connect (on_device_added);
         fwupd_client.device_removed.connect (on_device_removed);
@@ -252,7 +258,12 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         var path = yield download_file (device, release.get_uri ());
 
         try {
-            if (yield FirmwareClient.install (fwupd_client, device.get_id (), path)) {
+            var install_flags = Fwupd.InstallFlags.NONE;
+            if (device.has_flag (Fwupd.DEVICE_FLAG_ONLY_OFFLINE)) {
+                install_flags = Fwupd.InstallFlags.OFFLINE;
+            }
+
+            if (yield FirmwareClient.install (fwupd_client, device.get_id (), path, install_flags)) {
                 if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
                     show_reboot_dialog ();
                 } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
@@ -283,7 +294,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         }
 
         if (!result) {
-            show_error_dialog (device, "Download of %s was not succesfull".printf (uri));
+            show_error_dialog (device, "Download of %s was not successful".printf (uri));
             return null;
         }
 
@@ -386,5 +397,54 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         }
 
         message_dialog.destroy ();
+    }
+
+    private void reboot_to_firmware_setup_clicked () {
+        var dialog = new Granite.MessageDialog (
+            _("Restart to firmware setup"),
+            _("This will close all open applications, restart this device, and open the firmware setup screen."),
+            new ThemedIcon ("system-reboot"),
+            Gtk.ButtonsType.CANCEL
+        ) {
+            badge_icon = new ThemedIcon ("application-x-firmware"),
+            modal = true,
+            transient_for = (Gtk.Window) get_toplevel ()
+        };
+
+        var continue_button = dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
+        continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+
+        dialog.response.connect ((result) => {
+            dialog.destroy ();
+
+            if (result != Gtk.ResponseType.ACCEPT) {
+                return;
+            }
+
+            var login_manager = LoginManager.get_instance ();
+            var error = login_manager.set_reboot_to_firmware_setup ();
+
+            if (error != null) {
+                var message_dialog = new Granite.MessageDialog (
+                    _("Unable to restart to firmware setup"),
+                    _("A system error prevented automatically restarting into firmware setup."),
+                    new ThemedIcon ("system-reboot"),
+                    Gtk.ButtonsType.CLOSE
+                ) {
+                    badge_icon = new ThemedIcon ("dialog-error"),
+                    modal = true,
+                    transient_for = (Gtk.Window) get_toplevel ()
+                };
+                message_dialog.show_error_details (error.message);
+                message_dialog.present ();
+                message_dialog.response.connect (message_dialog.destroy);
+
+                return;
+            }
+
+            login_manager.reboot ();
+        });
+
+        dialog.present ();
     }
 }

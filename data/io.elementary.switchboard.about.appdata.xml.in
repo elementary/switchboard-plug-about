@@ -6,7 +6,36 @@
   <summary>View operating system and hardware information</summary>
   <icon type="stock">application-x-firmware</icon>
   <translation type="gettext">about-plug</translation>
+
   <releases>
+    <release version="6.2.0" date="2023-01-26" urgency="medium">
+      <description>
+        <p>New features:</p>
+        <ul>
+          <li>Add a button to restart to firmware setup</li>
+        </ul>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Get more accurate memory and storage information</li>
+          <li>Handle Ryzen CPU and AMD GPU vendor string</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="6.1.0" date="2022-04-06" urgency="medium">
+      <description>
+        <p>New features:</p>
+        <ul>
+          <li>Added support for dark style manufacturer logos</li>
+          <li>Added support for offline firmware updates</li>
+        </ul>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="6.0.1" date="2021-08-23" urgency="medium">
       <description>
         <p>Minor updates:</p>

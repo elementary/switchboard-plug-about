@@ -23,6 +23,8 @@
 public interface About.LoginInterface : Object {
     public abstract void reboot (bool interactive) throws GLib.Error;
     public abstract void power_off (bool interactive) throws GLib.Error;
+    public abstract void set_reboot_to_firmware_setup (bool interactive) throws GLib.Error;
+    public abstract string can_reboot_to_firmware_setup () throws GLib.Error;
 }
 
 public class About.LoginManager : Object {
@@ -67,5 +69,26 @@ public class About.LoginManager : Object {
         }
 
         return true;
+    }
+
+    public Error? set_reboot_to_firmware_setup () {
+        try {
+            interface.set_reboot_to_firmware_setup (true);
+        } catch (Error e) {
+            warning ("Could not set reboot to firmware setup: %s", e.message);
+            return e;
+        }
+
+        return null;
+    }
+
+    public bool can_reboot_to_firmware_setup () {
+        try {
+            return interface.can_reboot_to_firmware_setup () == "yes";
+        } catch (Error e) {
+            warning ("Could not connect to login interface: %s", e.message);
+        }
+
+        return false;
     }
 }

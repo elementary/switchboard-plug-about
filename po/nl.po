@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
+"POT-Creation-Date: 2023-01-26 16:37+0000\n"
 "PO-Revision-Date: 2021-11-14 13:00+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -20,55 +20,55 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:39
+#: src/Plug.vala:42
 msgid "System"
 msgstr "Systeem"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:43
 msgid "View operating system and hardware information"
 msgstr "Bekijk informatie over het besturingssysteem en hardware"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:62
 msgid "Operating System"
 msgstr "Besturingssysteem"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr "Hardware"
 
-#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Firmware"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:110
 msgid "Operating System Information"
 msgstr "Besturingssysteem informatie"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:111
 msgid "Hardware Information"
 msgstr "Hardware informatie"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Herstel standaardinstellingen"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Suggereer vertaling"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
 msgstr "Feedback Verzenden"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Report a Problem"
 msgstr "Meld een probleem"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
 msgstr "Krijg Ondersteuning"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:118
 msgid "Updates"
 msgstr "Updates"
 
@@ -135,140 +135,169 @@ msgstr "Controleren op updates"
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Verbinden met de firmware-service en zoeken naar updates."
 
-#: src/Views/FirmwareView.vala:123
+#: src/Views/FirmwareView.vala:88
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Restart to Firmware Setup…"
+msgstr "Installeren van firmware-uitgave is mislukt"
+
+#: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
 msgstr "Er zijn geen firmware updates beschikbaar"
 
-#: src/Views/FirmwareView.vala:124
+#: src/Views/FirmwareView.vala:122
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Firmware updates worden niet ondersteund op dit apparaat of andere verbonden "
 "apparaten."
 
-#: src/Views/FirmwareView.vala:127
+#: src/Views/FirmwareView.vala:125
 msgid "The Firmware Service Is Not Available"
 msgstr "De firmware-service is niet beschikbaar"
 
-#: src/Views/FirmwareView.vala:128
+#: src/Views/FirmwareView.vala:126
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Zorg ervoor dat “fwupd” geïnstalleerd en geactiveerd is."
 
-#: src/Views/FirmwareView.vala:219
+#: src/Views/FirmwareView.vala:217
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u Update Beschikbaar"
 msgstr[1] "%u Updates Beschikbaar"
 
-#: src/Views/FirmwareView.vala:223
+#: src/Views/FirmwareView.vala:221
 msgid "Up to Date"
 msgstr "Actueel"
 
-#: src/Views/FirmwareView.vala:243
+#: src/Views/FirmwareView.vala:241
 #, c-format
 msgid "“%s” is being updated"
 msgstr "“%s” wordt ge-update"
 
-#: src/Views/FirmwareView.vala:309
+#: src/Views/FirmwareView.vala:312
 msgid "Failed to install firmware release"
 msgstr "Installeren van firmware-uitgave is mislukt"
 
-#: src/Views/FirmwareView.vala:330
+#: src/Views/FirmwareView.vala:333
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "“%s” moet handmatig in update modus gezet worden"
 
-#: src/Views/FirmwareView.vala:339
+#: src/Views/FirmwareView.vala:342
 msgid "Continue"
 msgstr "Doorgaan"
 
-#: src/Views/FirmwareView.vala:357
+#: src/Views/FirmwareView.vala:360
 msgid "An update requires the system to restart to complete"
 msgstr "Om de update te voltooien is opnieuw opstarten noodzakelijk"
 
-#: src/Views/FirmwareView.vala:358
+#: src/Views/FirmwareView.vala:361
 msgid "This will close all open applications and restart this device."
 msgstr ""
 "Dit zal alle open toepassingen sluiten en dit apparaat opnieuw opstarten."
 
-#: src/Views/FirmwareView.vala:366
+#: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
 msgid "Restart"
 msgstr "Opnieuw opstarten"
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:382
 msgid "An update requires the system to shut down to complete"
 msgstr "Een update vereist dat het systeem wordt afgesloten"
 
-#: src/Views/FirmwareView.vala:380
+#: src/Views/FirmwareView.vala:383
 msgid "This will close all open applications and turn off this device."
 msgstr "Dit zal alle open toepassingen afsluiten en dit apparaat uit zetten."
 
-#: src/Views/FirmwareView.vala:388
+#: src/Views/FirmwareView.vala:391
 msgid "Shut Down"
 msgstr "Uitschakelen"
 
-#: src/Views/HardwareView.vala:61
+#: src/Views/FirmwareView.vala:404
+msgid "Restart to firmware setup"
+msgstr ""
+
+#: src/Views/FirmwareView.vala:405
+#, fuzzy
+#| msgid "This will close all open applications and restart this device."
+msgid ""
+"This will close all open applications, restart this device, and open the "
+"firmware setup screen."
+msgstr ""
+"Dit zal alle open toepassingen sluiten en dit apparaat opnieuw opstarten."
+
+#: src/Views/FirmwareView.vala:429
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Unable to restart to firmware setup"
+msgstr "Installeren van firmware-uitgave is mislukt"
+
+#: src/Views/FirmwareView.vala:430
+msgid "A system error prevented automatically restarting into firmware setup."
+msgstr ""
+
+#: src/Views/HardwareView.vala:66
 #, c-format
 msgid "%s memory"
 msgstr "%s geheugen"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
+#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
 msgid "Unknown Graphics"
 msgstr "Onbekende Videokaart"
 
-#: src/Views/HardwareView.vala:86
+#: src/Views/HardwareView.vala:91
 msgid "Unknown storage"
 msgstr "Onbekende opslag"
 
-#: src/Views/HardwareView.vala:145
+#: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
 msgstr "Website fabrikant"
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:254
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Dual-Core %s"
 
-#: src/Views/HardwareView.vala:237
+#: src/Views/HardwareView.vala:256
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Quad-Core %s"
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Hexa-Core %s"
 
-#: src/Views/HardwareView.vala:330
+#: src/Views/HardwareView.vala:371
 msgid "Unknown Processor"
 msgstr "Onbekende Processor"
 
-#: src/Views/HardwareView.vala:380
+#: src/Views/HardwareView.vala:444
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: src/Views/HardwareView.vala:428
+#: src/Views/HardwareView.vala:499
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s opslagruimte (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:501
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s opslagruimte (eMMC)"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:503
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s opslagruimte (SATA SSD)"
 
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:506
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s opslagruimte (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:440
+#: src/Views/HardwareView.vala:511
 #, c-format
 msgid "%s storage"
 msgstr "%s opslagruimte"

@@ -12,6 +12,8 @@ You'll need the following dependencies:
 * libgranite-dev
 * libgtk-3-dev
 * libgtop2-dev
+* libgudev-1.0-dev
+* libudisks2-dev
 * libhandy-1-dev
 * libappstream-dev
 * meson
@@ -32,9 +34,23 @@ To install, use `ninja install`
 
 The Switchboard System plug can load OEM information supplied by an `oem.conf` file placed in `/etc` with the following format:
 
-    [OEM]
-    Manufacturer=System76 Inc.
-    Product=Meerkat
-    Version=meer1
-    Logo=/etc/oem/logo.png
-    URL=https://support.system76.com
+```ini
+[OEM]
+# Human-facing OEM name
+Manufacturer=Star Labs
+
+# Device name
+Product=StarBook
+
+# Human-facing model number or version, expected to be slightly de-emphasized
+Version=Mk V
+
+# Path to a logo or hardware image, expected to be shown on a light background
+Logo=/etc/oem/logo.png
+
+# Optional version of the above image expected to be shown on a dark background
+# LogoDark=/etc/oem/logo-dark.png
+
+# OEM URL, e.g. for information and/or end user support
+URL=https://support.starlabs.systems/
+```

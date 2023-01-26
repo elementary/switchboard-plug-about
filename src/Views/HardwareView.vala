@@ -23,6 +23,7 @@
 public class About.HardwareView : Gtk.Grid {
     private bool oem_enabled;
     private string manufacturer_icon_path;
+    private string? manufacturer_icon_dark_path = null;
     private string manufacturer_name;
     private string manufacturer_support_url;
     private string memory;
@@ -41,7 +42,11 @@ public class About.HardwareView : Gtk.Grid {
 
     private Gtk.Label storage_info;
 
+    private Granite.Settings granite_settings;
+
     construct {
+        granite_settings = Granite.Settings.get_default ();
+
         fetch_hardware_info ();
 
         var product_name_info = new Gtk.Label (get_host_name ()) {
@@ -101,12 +106,6 @@ public class About.HardwareView : Gtk.Grid {
         };
 
         if (oem_enabled) {
-            var fileicon = new FileIcon (File.new_for_path (manufacturer_icon_path));
-
-            if (manufacturer_icon_path != null) {
-                manufacturer_logo.gicon = fileicon;
-            }
-
             if (product_name != null) {
                 product_name_info.label = "<b>%s</b>".printf (product_name);
                 product_name_info.use_markup = true;
@@ -129,9 +128,7 @@ public class About.HardwareView : Gtk.Grid {
             details_grid.add (product_name_info);
         }
 
-        if (manufacturer_logo.gicon == null) {
-            load_fallback_manufacturer_icon.begin ();
-        }
+        update_manufacturer_logo ();
 
         details_grid.add (processor_info);
         details_grid.add (graphics_grid);
@@ -159,6 +156,28 @@ public class About.HardwareView : Gtk.Grid {
 
         add (manufacturer_logo);
         add (details_grid);
+
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            update_manufacturer_logo ();
+        });
+    }
+
+    private void update_manufacturer_logo () {
+        if (oem_enabled) {
+            string path = manufacturer_icon_path;
+            if (granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK && manufacturer_icon_dark_path != null) {
+                path = manufacturer_icon_dark_path;
+            }
+            var fileicon = new FileIcon (File.new_for_path (path));
+
+            if (path != null) {
+                manufacturer_logo.gicon = fileicon;
+            }
+        }
+
+        if (manufacturer_logo.gicon == null) {
+            load_fallback_manufacturer_icon.begin ();
+        }
     }
 
     private async void load_fallback_manufacturer_icon () {
@@ -238,7 +257,7 @@ public class About.HardwareView : Gtk.Grid {
             } else if (cpu.@value == 6) {
                 result += _("Hexa-Core %s").printf (clean_name (cpu.key));
             } else {
-                result += "%u\u00D7 %s ".printf (cpu.@value, clean_name (cpu.key));
+                result += "%u \u00D7 %s ".printf (cpu.@value, clean_name (cpu.key));
             }
         }
 
@@ -323,6 +342,28 @@ public class About.HardwareView : Gtk.Grid {
         }
     }
 
+    private string get_mem_info () {
+        uint64 mem_total = 0;
+
+        GUdev.Client client = new GUdev.Client ({"dmi"});
+        GUdev.Device? device = client.query_by_sysfs_path ("/sys/devices/virtual/dmi/id");
+
+        if (device != null) {
+            uint64 devices = device.get_property_as_uint64 ("MEMORY_ARRAY_NUM_DEVICES");
+            for (int item = 0; item < devices; item++) {
+                mem_total += device.get_property_as_uint64 ("MEMORY_DEVICE_%d_SIZE".printf (item));
+            }
+        }
+
+        if (mem_total == 0) {
+            GLibTop.mem mem;
+            GLibTop.get_mem (out mem);
+            mem_total = mem.total;
+        }
+
+        return GLib.format_size (mem_total, GLib.FormatSizeFlags.IEC_UNITS);
+    }
+
     private void fetch_hardware_info () {
         string? cpu = get_cpu_info ();
 
@@ -332,9 +373,7 @@ public class About.HardwareView : Gtk.Grid {
             processor = cpu;
         }
 
-        GLibTop.mem mem;
-        GLibTop.get_mem (out mem);
-        memory = GLib.format_size (mem.total, GLib.FormatSizeFlags.IEC_UNITS);
+        memory = get_mem_info ();
 
         get_graphics_info.begin ();
         get_storage_info.begin ();
@@ -358,6 +397,10 @@ public class About.HardwareView : Gtk.Grid {
                 manufacturer_icon_path = oem_file.get_string ("OEM", "Logo");
             }
 
+            if (oem_file.has_key ("OEM", "LogoDark")) {
+                manufacturer_icon_dark_path = oem_file.get_string ("OEM", "LogoDark");
+            }
+
             if (oem_file.has_key ("OEM", "URL")) {
                 manufacturer_support_url = oem_file.get_string ("OEM", "URL");
             }
@@ -372,6 +415,27 @@ public class About.HardwareView : Gtk.Grid {
     private async void get_storage_info () {
         var file_root = GLib.File.new_for_path ("/");
         string storage_capacity = "";
+
+        uint64 storage_total = 0;
+
+        try {
+            UDisks.Client client = yield new UDisks.Client (null);
+            foreach (unowned var object in client.object_manager.get_objects ()) {
+                UDisks.Drive drive = ((UDisks.Object)object).drive;
+                if (drive == null || drive.removable || drive.ejectable) {
+                    continue;
+                }
+                storage_total += drive.size;
+            }
+            if (storage_total != 0) {
+                storage_capacity = GLib.format_size (storage_total);
+                storage_info.label = yield get_storage_type (storage_capacity);
+                return;
+            }
+        } catch (Error e) {
+            warning (e.message);
+        }
+
         try {
             var info = yield file_root.query_filesystem_info_async (GLib.FileAttribute.FILESYSTEM_SIZE);
             storage_capacity = GLib.format_size (info.get_attribute_uint64 (GLib.FileAttribute.FILESYSTEM_SIZE));
@@ -387,23 +451,30 @@ public class About.HardwareView : Gtk.Grid {
 
         string pretty = GLib.Markup.escape_text (info).strip ();
 
-        const GraphicsReplaceStrings REPLACE_STRINGS[] = {
+        const ReplaceStrings REPLACE_STRINGS[] = {
             { "Mesa DRI ", ""},
             { "Mesa (.*)", "\\1"},
             { "[(]R[)]", "®"},
             { "[(]TM[)]", "™"},
             { "Gallium .* on (AMD .*)", "\\1"},
             { "(AMD .*) [(].*", "\\1"},
+            { "(AMD Ryzen) (.*)", "\\1 \\2"},
             { "(AMD [A-Z])(.*)", "\\1\\L\\2\\E"},
+            { "Advanced Micro Devices, Inc\\. \\[.*?\\] .*? \\[(.*?)\\] .*", "AMD® \\1"},
+            { "Advanced Micro Devices, Inc\\. \\[.*?\\] (.*)", "AMD® \\1"},
             { "Graphics Controller", "Graphics"},
             { "Intel Corporation", "Intel®"},
             { "NVIDIA Corporation (.*) \\[(\\S*) (\\S*) (.*)\\]", "NVIDIA® \\2® \\3® \\4"}
         };
 
         try {
-            foreach (GraphicsReplaceStrings replace_string in REPLACE_STRINGS) {
+            foreach (ReplaceStrings replace_string in REPLACE_STRINGS) {
                 GLib.Regex re = new GLib.Regex (replace_string.regex, 0, 0);
+                bool matched = re.match (pretty);
                 pretty = re.replace (pretty, -1, 0, replace_string.replacement, 0);
+                if (matched) {
+                    break;
+                }
             }
         } catch (Error e) {
             critical ("Couldn't cleanup vendor string: %s", e.message);
@@ -478,7 +549,7 @@ public class About.HardwareView : Gtk.Grid {
         return disk_name;
     }
 
-    struct GraphicsReplaceStrings {
+    struct ReplaceStrings {
         string regex;
         string replacement;
     }

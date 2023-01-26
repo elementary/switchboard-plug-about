@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
+"POT-Creation-Date: 2023-01-26 16:37+0000\n"
 "PO-Revision-Date: 2021-05-19 09:24+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -20,55 +20,55 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:39
+#: src/Plug.vala:42
 msgid "System"
 msgstr "Sistema"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:43
 msgid "View operating system and hardware information"
 msgstr "Vea información del sistema operativo y el equipo"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:62
 msgid "Operating System"
 msgstr "Sistema operativo"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr "Hardware"
 
-#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Firmware"
 
-#: src/Plug.vala:107
+#: src/Plug.vala:110
 msgid "Operating System Information"
 msgstr "Información del sistema operativo"
 
-#: src/Plug.vala:108
+#: src/Plug.vala:111
 msgid "Hardware Information"
 msgstr "Información de hardware"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "Restaurar configuración predeterminada"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "Sugerir traducciones"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
 msgstr "Enviar observaciones"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Report a Problem"
 msgstr "Informar de un problema"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
 msgstr "Obtener asistencia"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:118
 msgid "Updates"
 msgstr "Actualizaciones"
 
@@ -136,141 +136,170 @@ msgstr "Comprobando actualizaciones"
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Conexión al servicio de firmware y búsqueda de actualizaciones."
 
-#: src/Views/FirmwareView.vala:123
+#: src/Views/FirmwareView.vala:88
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Restart to Firmware Setup…"
+msgstr "No se pudo instalar la versión de firmware"
+
+#: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
 msgstr "Las actualizaciones de firmware no están disponibles"
 
-#: src/Views/FirmwareView.vala:124
+#: src/Views/FirmwareView.vala:122
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Las actualizaciones de firmware no son compatibles con este ni con ningún "
 "dispositivo conectado."
 
-#: src/Views/FirmwareView.vala:127
+#: src/Views/FirmwareView.vala:125
 msgid "The Firmware Service Is Not Available"
 msgstr "El servicio de firmware no está disponible"
 
-#: src/Views/FirmwareView.vala:128
+#: src/Views/FirmwareView.vala:126
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Asegúrese de que «fwupd» esté instalado y activado."
 
-#: src/Views/FirmwareView.vala:219
+#: src/Views/FirmwareView.vala:217
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u actualización disponible"
 msgstr[1] "%u actualizaciones disponibles"
 
-#: src/Views/FirmwareView.vala:223
+#: src/Views/FirmwareView.vala:221
 msgid "Up to Date"
 msgstr "Al día"
 
-#: src/Views/FirmwareView.vala:243
+#: src/Views/FirmwareView.vala:241
 #, c-format
 msgid "“%s” is being updated"
 msgstr "Se está actualizando «%s»"
 
-#: src/Views/FirmwareView.vala:309
+#: src/Views/FirmwareView.vala:312
 msgid "Failed to install firmware release"
 msgstr "No se pudo instalar la versión de firmware"
 
-#: src/Views/FirmwareView.vala:330
+#: src/Views/FirmwareView.vala:333
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "«%s» debe ponerse en modo de actualización manualmente"
 
-#: src/Views/FirmwareView.vala:339
+#: src/Views/FirmwareView.vala:342
 msgid "Continue"
 msgstr "Continuar"
 
-#: src/Views/FirmwareView.vala:357
+#: src/Views/FirmwareView.vala:360
 msgid "An update requires the system to restart to complete"
 msgstr "Una actualización necesita reiniciar el equipo para completarse"
 
-#: src/Views/FirmwareView.vala:358
+#: src/Views/FirmwareView.vala:361
 msgid "This will close all open applications and restart this device."
 msgstr ""
 "Se cerrarán todas las aplicaciones abiertas y se reiniciará este dispositivo."
 
-#: src/Views/FirmwareView.vala:366
+#: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:382
 msgid "An update requires the system to shut down to complete"
 msgstr "Una actualización necesita apagar el equipo para completarse"
 
-#: src/Views/FirmwareView.vala:380
+#: src/Views/FirmwareView.vala:383
 msgid "This will close all open applications and turn off this device."
 msgstr ""
 "Se cerrarán todas las aplicaciones abiertas y se apagará este dispositivo."
 
-#: src/Views/FirmwareView.vala:388
+#: src/Views/FirmwareView.vala:391
 msgid "Shut Down"
 msgstr "Apagar"
 
-#: src/Views/HardwareView.vala:61
+#: src/Views/FirmwareView.vala:404
+msgid "Restart to firmware setup"
+msgstr ""
+
+#: src/Views/FirmwareView.vala:405
+#, fuzzy
+#| msgid "This will close all open applications and restart this device."
+msgid ""
+"This will close all open applications, restart this device, and open the "
+"firmware setup screen."
+msgstr ""
+"Se cerrarán todas las aplicaciones abiertas y se reiniciará este dispositivo."
+
+#: src/Views/FirmwareView.vala:429
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Unable to restart to firmware setup"
+msgstr "No se pudo instalar la versión de firmware"
+
+#: src/Views/FirmwareView.vala:430
+msgid "A system error prevented automatically restarting into firmware setup."
+msgstr ""
+
+#: src/Views/HardwareView.vala:66
 #, c-format
 msgid "%s memory"
 msgstr "%s de memoria"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
+#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
 msgid "Unknown Graphics"
 msgstr "Tarjeta gráfica desconocida"
 
-#: src/Views/HardwareView.vala:86
+#: src/Views/HardwareView.vala:91
 msgid "Unknown storage"
 msgstr "Almacenamiento desconocido"
 
-#: src/Views/HardwareView.vala:145
+#: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
 msgstr "Sitio web del fabricante"
 
-#: src/Views/HardwareView.vala:235
+#: src/Views/HardwareView.vala:254
 #, c-format
 msgid "Dual-Core %s"
 msgstr "%s de doble núcleo"
 
-#: src/Views/HardwareView.vala:237
+#: src/Views/HardwareView.vala:256
 #, c-format
 msgid "Quad-Core %s"
 msgstr "%s de cuádruple núcleo"
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "%s de séxtuple núcleo"
 
-#: src/Views/HardwareView.vala:330
+#: src/Views/HardwareView.vala:371
 msgid "Unknown Processor"
 msgstr "Procesador desconocido"
 
-#: src/Views/HardwareView.vala:380
+#: src/Views/HardwareView.vala:444
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: src/Views/HardwareView.vala:428
+#: src/Views/HardwareView.vala:499
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s de almacenamiento (SSD por NVMe)"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:501
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s de almacenamiento (eMMC)"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:503
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s de almacenamiento (SSD por SATA)"
 
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:506
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s de almacenamiento (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:440
+#: src/Views/HardwareView.vala:511
 #, c-format
 msgid "%s storage"
 msgstr "%s de almacenamiento"

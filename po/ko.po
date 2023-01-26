@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 19:25+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"POT-Creation-Date: 2023-01-26 16:37+0000\n"
+"PO-Revision-Date: 2022-08-06 22:53+0000\n"
+"Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ko/>\n"
 "Language: ko\n"
@@ -20,69 +20,61 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:39
+#: src/Plug.vala:42
 msgid "System"
 msgstr "시스템"
 
-#: src/Plug.vala:40
+#: src/Plug.vala:43
 msgid "View operating system and hardware information"
 msgstr "운영 체제와 하드웨어 정보 보기"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:62
 msgid "Operating System"
-msgstr ""
+msgstr "운영 체제"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr "하드웨어"
 
-#: src/Plug.vala:61 src/Plug.vala:109 src/Views/FirmwareView.vala:35
-#, fuzzy
-#| msgid "Hardware"
+#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
 msgid "Firmware"
-msgstr "하드웨어"
+msgstr "펌웨어"
 
-#: src/Plug.vala:107
-#, fuzzy
-#| msgid "System Information"
+#: src/Plug.vala:110
 msgid "Operating System Information"
-msgstr "시스템 정보"
+msgstr "운영 체제 정보"
 
-#: src/Plug.vala:108
-#, fuzzy
-#| msgid "System Information"
+#: src/Plug.vala:111
 msgid "Hardware Information"
-msgstr "시스템 정보"
+msgstr "하드웨어 정보"
 
-#: src/Plug.vala:110 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
 msgid "Restore Default Settings"
 msgstr "기본 설정으로 복원"
 
-#: src/Plug.vala:111 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
 msgid "Suggest Translations"
 msgstr "번역 제안하기"
 
-#: src/Plug.vala:112 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
 msgid "Send Feedback"
-msgstr ""
+msgstr "피드백 보내기"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Report a Problem"
 msgstr "버그 리포트 작성"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
 msgid "Get Support"
-msgstr ""
+msgstr "지원받기"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:118
 msgid "Updates"
 msgstr "업데이트"
 
 #: src/Views/FirmwareReleaseView.vala:42
-#, fuzzy
-#| msgid "Updates"
 msgid "All Updates"
-msgstr "업데이트"
+msgstr "모두 업데이트"
 
 #: src/Views/FirmwareReleaseView.vala:81
 msgid "Version:"
@@ -90,205 +82,216 @@ msgstr "버전:"
 
 #: src/Views/FirmwareReleaseView.vala:90
 msgid "Vendor:"
-msgstr ""
+msgstr "제공:"
 
 #: src/Views/FirmwareReleaseView.vala:99
 msgid "Size:"
-msgstr ""
+msgstr "크기:"
 
 #: src/Views/FirmwareReleaseView.vala:108
 msgid "Estimated time to install:"
-msgstr ""
+msgstr "설치 예상 시간:"
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "이 장치에 사용할 수 있는 버전이 없습니다."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
-#, fuzzy
-#| msgid "Updates"
 msgid "Update"
 msgstr "업데이트"
 
 #: src/Views/FirmwareReleaseView.vala:211
-#, fuzzy
-#| msgid "Updates"
 msgid "Up to date"
-msgstr "업데이트"
+msgstr "최신 버전입니다"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr ""
+msgstr "잠시 후"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] ""
+msgstr[0] "%llu 분"
 
 #: src/Views/FirmwareView.vala:36
 msgid ""
 "Firmware updates provided by device manufacturers can improve performance "
 "and fix critical security issues."
 msgstr ""
+"장치 제조업체에서 제공하는 펌웨어 업데이트는 성능을 개선하고 중요한 보안 문제"
+"를 해결할 수 있습니다."
 
 #: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "업데이트하는 동안 전원을 뽑지 마세요."
 
 #: src/Views/FirmwareView.vala:49
-#, fuzzy
-#| msgid "Check for Updates"
 msgid "Checking for Updates"
 msgstr "업데이트 확인"
 
 #: src/Views/FirmwareView.vala:50
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "펌웨어 서비스에 연결하고 업데이트를 검색합니다."
 
-#: src/Views/FirmwareView.vala:123
+#: src/Views/FirmwareView.vala:88
 #, fuzzy
-#| msgid "Updates"
+#| msgid "Failed to install firmware release"
+msgid "Restart to Firmware Setup…"
+msgstr "펌웨어를 설치하지 못했습니다"
+
+#: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
-msgstr "업데이트"
+msgstr "펌웨어 업데이트 불가능"
 
-#: src/Views/FirmwareView.vala:124
+#: src/Views/FirmwareView.vala:122
 msgid "Firmware updates are not supported on this or any connected devices."
-msgstr ""
+msgstr "이 장치 또는 연결된 장치에서 펌웨어 업데이트를 지원하지 않습니다."
 
-#: src/Views/FirmwareView.vala:127
+#: src/Views/FirmwareView.vala:125
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "펌웨어 서비스 사용할 수 없음"
 
-#: src/Views/FirmwareView.vala:128
+#: src/Views/FirmwareView.vala:126
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "\"fwupd\"가 설치되어 있고 활성화되어 있는지 확인하세요."
 
-#: src/Views/FirmwareView.vala:219
-#, fuzzy, c-format
-#| msgid "Updates"
+#: src/Views/FirmwareView.vala:217
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "업데이트"
+msgstr[0] "%u 업데이트 가능"
 
-#: src/Views/FirmwareView.vala:223
-#, fuzzy
-#| msgid "Updates"
+#: src/Views/FirmwareView.vala:221
 msgid "Up to Date"
-msgstr "업데이트"
+msgstr "최신 버전입니다"
 
-#: src/Views/FirmwareView.vala:243
+#: src/Views/FirmwareView.vala:241
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "\"%s\" 업데이트 중"
 
-#: src/Views/FirmwareView.vala:309
+#: src/Views/FirmwareView.vala:312
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "펌웨어를 설치하지 못했습니다"
 
-#: src/Views/FirmwareView.vala:330
+#: src/Views/FirmwareView.vala:333
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "\"%s\"의 업데이트를 수동으로 전환해야 합니다"
 
-#: src/Views/FirmwareView.vala:339
+#: src/Views/FirmwareView.vala:342
 msgid "Continue"
-msgstr ""
+msgstr "계속"
 
-#: src/Views/FirmwareView.vala:357
+#: src/Views/FirmwareView.vala:360
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "업데이트를 마무리하려면 시스템을 다시 시작해야 합니다"
 
-#: src/Views/FirmwareView.vala:358
+#: src/Views/FirmwareView.vala:361
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "모든 애플리케이션을 닫고 컴퓨터를 다시 시작합니다."
 
-#: src/Views/FirmwareView.vala:366
+#: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
 msgid "Restart"
-msgstr ""
+msgstr "다시 시작"
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:382
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "업데이트를 마무리하려면 시스템을 꺼야 합니다"
 
-#: src/Views/FirmwareView.vala:380
+#: src/Views/FirmwareView.vala:383
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "모든 애플리케이션을 닫고 컴퓨터를 다시 시작합니다."
 
-#: src/Views/FirmwareView.vala:388
+#: src/Views/FirmwareView.vala:391
 msgid "Shut Down"
+msgstr "컴퓨터 끄기"
+
+#: src/Views/FirmwareView.vala:404
+msgid "Restart to firmware setup"
 msgstr ""
 
-#: src/Views/HardwareView.vala:61
+#: src/Views/FirmwareView.vala:405
+#, fuzzy
+#| msgid "This will close all open applications and restart this device."
+msgid ""
+"This will close all open applications, restart this device, and open the "
+"firmware setup screen."
+msgstr "모든 애플리케이션을 닫고 컴퓨터를 다시 시작합니다."
+
+#: src/Views/FirmwareView.vala:429
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Unable to restart to firmware setup"
+msgstr "펌웨어를 설치하지 못했습니다"
+
+#: src/Views/FirmwareView.vala:430
+msgid "A system error prevented automatically restarting into firmware setup."
+msgstr ""
+
+#: src/Views/HardwareView.vala:66
 #, c-format
 msgid "%s memory"
 msgstr "%s 메모리"
 
-#: src/Views/HardwareView.vala:67 src/Views/HardwareView.vala:311
-#, fuzzy
-#| msgid "Graphics:"
+#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
 msgid "Unknown Graphics"
-msgstr "그래픽:"
+msgstr "알 수 없는 그래픽"
 
-#: src/Views/HardwareView.vala:86
-#, fuzzy
-#| msgid "Processor:"
+#: src/Views/HardwareView.vala:91
 msgid "Unknown storage"
-msgstr "프로세서:"
+msgstr "알 수 없는 저장 장치"
 
-#: src/Views/HardwareView.vala:145
+#: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
 msgstr "제조 업체 웹사이트"
 
-#: src/Views/HardwareView.vala:235
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#: src/Views/HardwareView.vala:254
+#, c-format
 msgid "Dual-Core %s"
-msgstr "듀얼 코어"
+msgstr "듀얼 코어 %s"
 
-#: src/Views/HardwareView.vala:237
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#: src/Views/HardwareView.vala:256
+#, c-format
 msgid "Quad-Core %s"
-msgstr "쿼드 코어"
+msgstr "쿼드 코어 %s"
 
-#: src/Views/HardwareView.vala:239
+#: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "헥사 코어 %s"
 
-#: src/Views/HardwareView.vala:330
-#, fuzzy
-#| msgid "Processor:"
+#: src/Views/HardwareView.vala:371
 msgid "Unknown Processor"
-msgstr "프로세서:"
+msgstr "알 수 없는 프로세서"
 
-#: src/Views/HardwareView.vala:380
+#: src/Views/HardwareView.vala:444
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: src/Views/HardwareView.vala:428
+#: src/Views/HardwareView.vala:499
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s 저장장치 (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:501
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s 저장장치 (eMMC)"
 
-#: src/Views/HardwareView.vala:432
+#: src/Views/HardwareView.vala:503
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s 저장장치 (SATA SSD)"
 
-#: src/Views/HardwareView.vala:435
+#: src/Views/HardwareView.vala:506
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s 저장장치 (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:440
+#: src/Views/HardwareView.vala:511
 #, c-format
 msgid "%s storage"
 msgstr "%s 저장장치"
