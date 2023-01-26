@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-01 18:54+0000\n"
+"POT-Creation-Date: 2023-01-26 16:37+0000\n"
 "PO-Revision-Date: 2022-11-04 07:03+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -220,7 +220,9 @@ msgstr "再起動してファームウェアの設定に入る"
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
-msgstr "続行すると、開いているすべてのアプリケーションを閉じてこのデバイスを再起動し、ファームウェアの設定画面を開きます。"
+msgstr ""
+"続行すると、開いているすべてのアプリケーションを閉じてこのデバイスを再起動"
+"し、ファームウェアの設定画面を開きます。"
 
 #: src/Views/FirmwareView.vala:429
 msgid "Unable to restart to firmware setup"
@@ -228,7 +230,9 @@ msgstr "再起動してファームウェアの設定に入ることができま
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
-msgstr "システムエラーのため、再起動して自動的にファームウェアの設定に入ることができませんでした。"
+msgstr ""
+"システムエラーのため、再起動して自動的にファームウェアの設定に入ることができ"
+"ませんでした。"
 
 #: src/Views/HardwareView.vala:66
 #, c-format
