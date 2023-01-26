@@ -1,3 +1,9 @@
+switchboard-plug-about (6.2.0) jammy; urgency=medium
+
+  * Release 6.2.0
+
+ -- Danielle Foré <danielle@elementary.io>  Thu, 26 Jan 2023 13:28:00 -0800
+
 switchboard-plug-about (6.1.0) bionic; urgency=medium
 
   * Release 6.1.0 (#247)
