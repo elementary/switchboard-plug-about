@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-26 16:37+0000\n"
+"POT-Creation-Date: 2023-01-26 18:46+0000\n"
 "PO-Revision-Date: 2022-08-06 22:53+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -48,15 +48,15 @@ msgstr "운영 체제 정보"
 msgid "Hardware Information"
 msgstr "하드웨어 정보"
 
-#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:130
 msgid "Restore Default Settings"
 msgstr "기본 설정으로 복원"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:114
 msgid "Suggest Translations"
 msgstr "번역 제안하기"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:119
 msgid "Send Feedback"
 msgstr "피드백 보내기"
 
@@ -64,7 +64,7 @@ msgstr "피드백 보내기"
 msgid "Report a Problem"
 msgstr "버그 리포트 작성"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:106
 msgid "Get Support"
 msgstr "지원받기"
 
@@ -296,24 +296,57 @@ msgstr "%s 저장장치 (HDD)"
 msgid "%s storage"
 msgstr "%s 저장장치"
 
-#: src/Views/OperatingSystemView.vala:97
+#: src/Views/HardwareView.vala:593
+msgid "KB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "MB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "GB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "TB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "PB"
+msgstr ""
+
+#. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
+#: src/Views/HardwareView.vala:606
+msgid "byte"
+msgid_plural "bytes"
+msgstr[0] ""
+
+#. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
+#. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
+#: src/Views/HardwareView.vala:613
+#, c-format
+msgid "%llu %s"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:101
 msgid "Website"
 msgstr "웹 사이트"
 
-#: src/Views/OperatingSystemView.vala:120
+#: src/Views/OperatingSystemView.vala:124
 msgid "Check for Updates"
 msgstr "업데이트 확인"
 
-#: src/Views/OperatingSystemView.vala:203
+#: src/Views/OperatingSystemView.vala:219
 #, c-format
 msgid "Built on %s"
 msgstr "%s 기반"
 
-#: src/Views/OperatingSystemView.vala:225
+#: src/Views/OperatingSystemView.vala:241
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "시스템 설정이 공장 초기화 됩니다"
 
-#: src/Views/OperatingSystemView.vala:226
+#: src/Views/OperatingSystemView.vala:242
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -321,7 +354,7 @@ msgstr ""
 "모든 시스템 설정과 데이터가 기본 값으로 초기화됩니다. 음악이나 사진 등의, 개"
 "인 데이터는, 영향받지 않습니다."
 
-#: src/Views/OperatingSystemView.vala:232
+#: src/Views/OperatingSystemView.vala:248
 msgid "Restore Settings"
 msgstr "설정 복원"
 

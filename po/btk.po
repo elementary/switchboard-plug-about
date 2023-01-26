@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-26 16:37+0000\n"
+"POT-Creation-Date: 2023-01-26 18:46+0000\n"
 "PO-Revision-Date: 2014-07-08 06:08+0000\n"
 "Last-Translator: Eduard Gotwig <g@ox.io>\n"
 "Language-Team: Batak (Indonesia) <btk@li.org>\n"
@@ -46,15 +46,15 @@ msgstr ""
 msgid "Hardware Information"
 msgstr ""
 
-#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:130
 msgid "Restore Default Settings"
 msgstr ""
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:114
 msgid "Suggest Translations"
 msgstr ""
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:119
 msgid "Send Feedback"
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Report a Problem"
 msgstr ""
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:106
 msgid "Get Support"
 msgstr ""
 
@@ -288,29 +288,63 @@ msgstr ""
 msgid "%s storage"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:97
+#: src/Views/HardwareView.vala:593
+msgid "KB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "MB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "GB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "TB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "PB"
+msgstr ""
+
+#. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
+#: src/Views/HardwareView.vala:606
+msgid "byte"
+msgid_plural "bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
+#. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
+#: src/Views/HardwareView.vala:613
+#, c-format
+msgid "%llu %s"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:101
 msgid "Website"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:120
+#: src/Views/OperatingSystemView.vala:124
 msgid "Check for Updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:203
+#: src/Views/OperatingSystemView.vala:219
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:225
+#: src/Views/OperatingSystemView.vala:241
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:226
+#: src/Views/OperatingSystemView.vala:242
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:232
+#: src/Views/OperatingSystemView.vala:248
 msgid "Restore Settings"
 msgstr ""
