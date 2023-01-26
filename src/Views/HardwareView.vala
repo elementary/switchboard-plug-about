@@ -149,8 +149,8 @@ public class About.HardwareView : Gtk.Grid {
             details_grid.add (manufacturer_website_info);
         }
 
-        margin_left = 16;
-        margin_right = 16;
+        margin_start = 16;
+        margin_end = 16;
         column_spacing = 32;
         halign = Gtk.Align.CENTER;
 
