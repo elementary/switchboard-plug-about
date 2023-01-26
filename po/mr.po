@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-26 16:37+0000\n"
+"POT-Creation-Date: 2023-01-26 18:46+0000\n"
 "PO-Revision-Date: 2021-03-26 00:33+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -54,15 +54,15 @@ msgstr "सिस्टम माहिती"
 msgid "Hardware Information"
 msgstr "सिस्टम माहिती"
 
-#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:130
 msgid "Restore Default Settings"
 msgstr "डीफॉल्ट सेटिंग्ज पुनर्संचयित करा"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:114
 msgid "Suggest Translations"
 msgstr "भाषांतर सुचवा"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:119
 msgid "Send Feedback"
 msgstr "अभिप्राय पाठवा"
 
@@ -70,7 +70,7 @@ msgstr "अभिप्राय पाठवा"
 msgid "Report a Problem"
 msgstr "तक्रार नोंदवा"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:106
 msgid "Get Support"
 msgstr ""
 
@@ -311,24 +311,58 @@ msgstr "%s स्टोरेज (HDD)"
 msgid "%s storage"
 msgstr "%s स्टोरेज"
 
-#: src/Views/OperatingSystemView.vala:97
+#: src/Views/HardwareView.vala:593
+msgid "KB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "MB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "GB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "TB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "PB"
+msgstr ""
+
+#. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
+#: src/Views/HardwareView.vala:606
+msgid "byte"
+msgid_plural "bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
+#. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
+#: src/Views/HardwareView.vala:613
+#, c-format
+msgid "%llu %s"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:101
 msgid "Website"
 msgstr "संकेतस्थळ"
 
-#: src/Views/OperatingSystemView.vala:120
+#: src/Views/OperatingSystemView.vala:124
 msgid "Check for Updates"
 msgstr "सुधारणीसाठी तपासा"
 
-#: src/Views/OperatingSystemView.vala:203
+#: src/Views/OperatingSystemView.vala:219
 #, c-format
 msgid "Built on %s"
 msgstr "%s वर बनविले"
 
-#: src/Views/OperatingSystemView.vala:225
+#: src/Views/OperatingSystemView.vala:241
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "सिस्टम सेटिंग्ज फॅक्टरी डीफॉल्टवर पुनर्संचयित केल्या जातील"
 
-#: src/Views/OperatingSystemView.vala:226
+#: src/Views/OperatingSystemView.vala:242
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -336,7 +370,7 @@ msgstr ""
 "सर्व सिस्टिम सेटिंग्ज आणि डेटा डीफॉल्ट मूल्यांवर रीसेट केले जातील. वैयक्तिक डेटा, जसे की संगीत "
 "आणि चित्र, अप्रभावित असतील."
 
-#: src/Views/OperatingSystemView.vala:232
+#: src/Views/OperatingSystemView.vala:248
 msgid "Restore Settings"
 msgstr "सेटिंग्ज पुनर्संचयित करा"
 

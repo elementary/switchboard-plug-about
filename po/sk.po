@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-26 16:37+0000\n"
+"POT-Creation-Date: 2023-01-26 18:46+0000\n"
 "PO-Revision-Date: 2022-12-26 20:25+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -48,15 +48,15 @@ msgstr "Informácie o operačnom systéme"
 msgid "Hardware Information"
 msgstr "Informácie o hardvéri"
 
-#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:130
 msgid "Restore Default Settings"
 msgstr "Obnoviť predvolené nastavenia"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:114
 msgid "Suggest Translations"
 msgstr "Navrhnúť preklady"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:119
 msgid "Send Feedback"
 msgstr "Poslať spätnú väzbu"
 
@@ -64,7 +64,7 @@ msgstr "Poslať spätnú väzbu"
 msgid "Report a Problem"
 msgstr "Nahlásiť problém"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:106
 msgid "Get Support"
 msgstr "Získať podporu"
 
@@ -299,24 +299,59 @@ msgstr "%s úložisko (HDD)"
 msgid "%s storage"
 msgstr "%s úložisko"
 
-#: src/Views/OperatingSystemView.vala:97
+#: src/Views/HardwareView.vala:593
+msgid "KB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "MB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "GB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "TB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "PB"
+msgstr ""
+
+#. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
+#: src/Views/HardwareView.vala:606
+msgid "byte"
+msgid_plural "bytes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
+#. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
+#: src/Views/HardwareView.vala:613
+#, c-format
+msgid "%llu %s"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:101
 msgid "Website"
 msgstr "Webstránka"
 
-#: src/Views/OperatingSystemView.vala:120
+#: src/Views/OperatingSystemView.vala:124
 msgid "Check for Updates"
 msgstr "Skontrolovať aktualizácie"
 
-#: src/Views/OperatingSystemView.vala:203
+#: src/Views/OperatingSystemView.vala:219
 #, c-format
 msgid "Built on %s"
 msgstr "Postavené na %s"
 
-#: src/Views/OperatingSystemView.vala:225
+#: src/Views/OperatingSystemView.vala:241
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systémové nastavenia budú obnovené do továrenského nastavenia"
 
-#: src/Views/OperatingSystemView.vala:226
+#: src/Views/OperatingSystemView.vala:242
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -324,7 +359,7 @@ msgstr ""
 "Všetky systémové nastavenia a dáta budú vrátené do pôvodného stavu. Osobné "
 "dáta ako hudbu a obrázky to neovplyvní."
 
-#: src/Views/OperatingSystemView.vala:232
+#: src/Views/OperatingSystemView.vala:248
 msgid "Restore Settings"
 msgstr "Obnoviť nastavenia"
 

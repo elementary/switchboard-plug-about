@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-26 16:37+0000\n"
+"POT-Creation-Date: 2023-01-26 18:46+0000\n"
 "PO-Revision-Date: 2021-03-26 00:33+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovenian <https://l10n.elementary.io/projects/switchboard/"
@@ -55,15 +55,15 @@ msgstr "Sistemske informacije"
 msgid "Hardware Information"
 msgstr "Sistemske informacije"
 
-#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:130
 msgid "Restore Default Settings"
 msgstr "Povrni tovarniške nastavitve"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:110
+#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:114
 msgid "Suggest Translations"
 msgstr "Predlagaj prevode"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:115
+#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:119
 msgid "Send Feedback"
 msgstr ""
 
@@ -71,7 +71,7 @@ msgstr ""
 msgid "Report a Problem"
 msgstr "Opozorite na težavo"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:102
+#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:106
 msgid "Get Support"
 msgstr ""
 
@@ -322,24 +322,60 @@ msgstr "%s shrambe (HDD)"
 msgid "%s storage"
 msgstr "%s shrambe"
 
-#: src/Views/OperatingSystemView.vala:97
+#: src/Views/HardwareView.vala:593
+msgid "KB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "MB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "GB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "TB"
+msgstr ""
+
+#: src/Views/HardwareView.vala:593
+msgid "PB"
+msgstr ""
+
+#. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
+#: src/Views/HardwareView.vala:606
+msgid "byte"
+msgid_plural "bytes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
+#. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
+#: src/Views/HardwareView.vala:613
+#, c-format
+msgid "%llu %s"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:101
 msgid "Website"
 msgstr "Spletna stran"
 
-#: src/Views/OperatingSystemView.vala:120
+#: src/Views/OperatingSystemView.vala:124
 msgid "Check for Updates"
 msgstr "Preveri za posodobitve"
 
-#: src/Views/OperatingSystemView.vala:203
+#: src/Views/OperatingSystemView.vala:219
 #, c-format
 msgid "Built on %s"
 msgstr "Zgrajen na osnovi %s"
 
-#: src/Views/OperatingSystemView.vala:225
+#: src/Views/OperatingSystemView.vala:241
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Sistemske nastavitve bodo povrnjene na tovarniško stanje"
 
-#: src/Views/OperatingSystemView.vala:226
+#: src/Views/OperatingSystemView.vala:242
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -347,7 +383,7 @@ msgstr ""
 "Vsi podatki in sistemske nastavitve bodo povrnjene na privzete vrednosti. "
 "Osebni podatki, kot so npr. slike in glasba, bodo ostali nespremenjeni."
 
-#: src/Views/OperatingSystemView.vala:232
+#: src/Views/OperatingSystemView.vala:248
 msgid "Restore Settings"
 msgstr "Povrni nastavitve"
 
