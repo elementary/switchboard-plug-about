@@ -20,6 +20,14 @@ add_project_arguments(
 vapi_dir = join_paths(meson.current_source_dir(), 'vapi')
 add_project_arguments(['--vapidir', vapi_dir], language: 'vala')
 
+vala_flags = []
+
+if get_option('wallpaper')
+    vala_flags += ['--define', 'WALLPAPER']
+endif
+
+add_project_arguments(vala_flags, language: 'vala')
+
 subdir('data')
 subdir('src')
 subdir('po')
