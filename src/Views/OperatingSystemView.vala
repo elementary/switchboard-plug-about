@@ -46,34 +46,36 @@ public class About.OperatingSystemView : Gtk.Grid {
         var logo_overlay = new Gtk.Overlay ();
 
 #if WALLPAPER
-        foreach (unowned var path in Environment.get_system_data_dirs ()) {
-            var file = File.new_for_path (Path.build_path (
-                Path.DIR_SEPARATOR_S, path, "backgrounds", "elementaryos-default")
-            );
+        if (Gtk.IconTheme.get_default ().has_icon (logo_icon_name + "-symbolic")) {
+            foreach (unowned var path in Environment.get_system_data_dirs ()) {
+                var file = File.new_for_path (Path.build_path (
+                    Path.DIR_SEPARATOR_S, path, "backgrounds", "elementaryos-default")
+                );
 
-            if (file.query_exists ()) {
-                var file_icon = new FileIcon (file);
+                if (file.query_exists ()) {
+                    var file_icon = new FileIcon (file);
 
-                var logo = new Hdy.Avatar (128, "", false) {
-                    // In case the wallpaper can't be loaded, we don't want an icon or text
-                    icon_name = "invalid-icon-name",
-                    loadable_icon = file_icon,
-                    // We need this for the shadow to not get clipped by Gtk.Overlay
-                    margin = 6
-                };
-                logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+                    var logo = new Hdy.Avatar (128, "", false) {
+                        // In case the wallpaper can't be loaded, we don't want an icon or text
+                        icon_name = "invalid-icon-name",
+                        loadable_icon = file_icon,
+                        // We need this for the shadow to not get clipped by Gtk.Overlay
+                        margin = 6
+                    };
+                    logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-                logo_overlay.add (logo);
-                logo_overlay.add_overlay (icon);
+                    logo_overlay.add (logo);
+                    logo_overlay.add_overlay (icon);
 
-                // 128 minus 3px padding on each side
-                icon.pixel_size = 128 - 6;
+                    // 128 minus 3px padding on each side
+                    icon.pixel_size = 128 - 6;
 
-                unowned var icon_style_context = icon.get_style_context ();
-                icon_style_context.add_class ("logo");
-                icon_style_context.add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+                    unowned var icon_style_context = icon.get_style_context ();
+                    icon_style_context.add_class ("logo");
+                    icon_style_context.add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-                break;
+                    break;
+                }
             }
         }
 #endif
