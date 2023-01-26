@@ -191,20 +191,28 @@ public class About.OperatingSystemView : Gtk.Grid {
         // Upstream distro version (for "Built on" text)
         // FIXME: Add distro specific field to /etc/os-release and use that instead
         // Like "ELEMENTARY_UPSTREAM_DISTRO_NAME" or something
-        var file = File.new_for_path ("/etc/upstream-release/lsb-release");
+        var file = File.new_for_path ("/usr/lib/upstream-os-release");
         string? upstream_release = null;
         try {
             var dis = new DataInputStream (yield file.read_async ());
             string line;
             // Read lines until end of file (null) is reached
             while ((line = yield dis.read_line_async ()) != null) {
-                var distrib_component = line.split ("=", 2);
-                if (distrib_component.length == 2) {
-                    upstream_release = distrib_component[1].replace ("\"", "");
+                if (line.has_prefix ("PRETTY_NAME")) {
+                    var distrib_component = line.split ("=", 2);
+                    if (distrib_component.length == 2) {
+                        upstream_release = (owned) distrib_component[1];
+                        if (upstream_release.has_prefix ("\"") && upstream_release.has_suffix ("\"")) {
+                            upstream_release = upstream_release.substring (1, upstream_release.length - 2);
+                        }
+
+                        break;
+                    }
                 }
             }
         } catch (Error e) {
             warning ("Couldn't read upstream lsb-release file, assuming none");
+            debug ("Error was: %s", e.message);
         }
 
         if (upstream_release != null) {
