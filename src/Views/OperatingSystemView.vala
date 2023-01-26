@@ -48,8 +48,8 @@ public class About.OperatingSystemView : Gtk.Grid {
 #if WALLPAPER
         if (Gtk.IconTheme.get_default ().has_icon (logo_icon_name + "-symbolic")) {
             foreach (unowned var path in Environment.get_system_data_dirs ()) {
-                var file = File.new_for_path (Path.build_path (
-                    Path.DIR_SEPARATOR_S, path, "backgrounds", "elementaryos-default")
+                var file = File.new_for_path (
+                    Path.build_path (Path.DIR_SEPARATOR_S, path, "backgrounds", "elementaryos-default")
                 );
 
                 if (file.query_exists ()) {
