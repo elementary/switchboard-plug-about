@@ -590,27 +590,24 @@ public class About.HardwareView : Gtk.Grid {
     private string custom_format_size (uint64 size, bool iec_unit) {
         uint divisor = iec_unit ? 1024 : 1000;
 
-        string[] units = {_("KB"), _("MB"), _("GB"), _("TB"), _("PB")};
+        const string[] UNITS = {"kB", "MB", "GB", "TB", "PB", "EB"};
 
         int unit_index = 0;
 
-        while ((size / divisor) > 0 && (unit_index < units.length)) {
+        while ((size / divisor) > 0 && (unit_index < UNITS.length)) {
             unit_index++;
             size /= divisor;
         }
 
-        string unit;
+        unowned string unit;
 
         if (unit_index == 0) {
-            // TRANSLATORS: Examples of use: "1 byte", "2 bytes"
-            unit = ngettext ("byte", "bytes", (ulong) size);
+            unit = dngettext ("glib20", "byte", "bytes", (ulong) size);
         } else {
-            unit = units[unit_index - 1];
+            unit = dgettext ("glib20", UNITS[unit_index - 1]);
         }
 
-        /* TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
-           The order can be changed with "%$2s %$1llu". An example: "2 bytes" */
-        return _("%llu %s").printf (size, unit);
+        return dpgettext2 ("glib20", "format-size", "%u %s").printf ((uint) size, unit);
     }
 }
 
