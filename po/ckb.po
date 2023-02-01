@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-26 18:46+0000\n"
-"PO-Revision-Date: 2022-09-21 15:36+0000\n"
+"PO-Revision-Date: 2023-02-02 21:25+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/ckb/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:42
@@ -131,10 +131,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "پەیوەستبوون بە پخزمەتگووزاری پتەوەکاڵاکە و گەڕان بۆ بەڕۆژبوونەوەکان."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "دامەزراندنی ڕیلیسی پتەوەکاڵا شکستی هێنا"
+msgstr "کۆمپیتەرەکەت پێبکەوە بۆ دامەزراندنی فیرموەیر…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -209,25 +207,25 @@ msgstr "خامۆشکردن"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "کۆمپیتەرەکەت پێبکەوە بۆ دامەزراندنی فیرموەیر"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
-msgstr "بەمە هەموو بەرنامە کراوەکان دادەخرێنەوە و ئامێرەکەت پێ دەبێتەوە."
+msgstr ""
+"بەمە هەموو بەرنامە کراوەکان دادەخرێنەوە و ئامێرەکەت پێ دەبێتەوە، پاشان "
+"ڕونمای دامەزراندنی فیرموەیر دەکرێتەوە."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "دامەزراندنی ڕیلیسی پتەوەکاڵا شکستی هێنا"
+msgstr "نەتوانرا دامەزراندنی فیرموەیر دوبارە بکرێتەوە"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
+"هەڵەیەکی سیستەم ڕێگری لە دووبارە دەستپێکردنەوەی ئۆتۆماتیکی کرد لە "
+"دامەزراندنی فیرموێردا."
 
 #: src/Views/HardwareView.vala:66
 #, c-format
@@ -297,37 +295,37 @@ msgstr "%s بیرگە"
 
 #: src/Views/HardwareView.vala:593
 msgid "KB"
-msgstr ""
+msgstr "کیلۆبایت"
 
 #: src/Views/HardwareView.vala:593
 msgid "MB"
-msgstr ""
+msgstr "مێگابیت"
 
 #: src/Views/HardwareView.vala:593
 msgid "GB"
-msgstr ""
+msgstr "گێگابایت"
 
 #: src/Views/HardwareView.vala:593
 msgid "TB"
-msgstr ""
+msgstr "تێرابایت"
 
 #: src/Views/HardwareView.vala:593
 msgid "PB"
-msgstr ""
+msgstr "پێبابایت"
 
 #. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
 #: src/Views/HardwareView.vala:606
 msgid "byte"
 msgid_plural "bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "بایت"
+msgstr[1] "بایت"
 
 #. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
 #. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
 #: src/Views/HardwareView.vala:613
 #, c-format
 msgid "%llu %s"
-msgstr ""
+msgstr "%ll %s"
 
 #: src/Views/OperatingSystemView.vala:101
 msgid "Website"
