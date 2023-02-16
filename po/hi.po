@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-26 18:46+0000\n"
-"PO-Revision-Date: 2021-01-04 22:57+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-02-18 10:25+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: Hindi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/hi/>\n"
 "Language: hi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:42
@@ -233,9 +233,9 @@ msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
 
 #: src/Views/HardwareView.vala:66
-#, fuzzy, c-format
+#, c-format
 msgid "%s memory"
-msgstr "स्मृतिः"
+msgstr ""
 
 #: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
 #, fuzzy
@@ -254,16 +254,14 @@ msgid "Manufacturer Website"
 msgstr ""
 
 #: src/Views/HardwareView.vala:254
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "दोहरे कोर"
+msgstr ""
 
 #: src/Views/HardwareView.vala:256
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "चार कोर"
+msgstr ""
 
 #: src/Views/HardwareView.vala:258
 #, c-format
@@ -281,30 +279,30 @@ msgid "Unknown"
 msgstr "अज्ञात"
 
 #: src/Views/HardwareView.vala:499
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "संचयन"
+msgstr ""
 
 #: src/Views/HardwareView.vala:501
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "संचयन"
+msgstr ""
 
 #: src/Views/HardwareView.vala:503
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "संचयन"
+msgstr ""
 
 #: src/Views/HardwareView.vala:506
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "संचयन"
+msgstr ""
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:511
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage"
-msgstr "संचयन"
+msgstr ""
 
 #: src/Views/HardwareView.vala:593
 msgid "KB"
