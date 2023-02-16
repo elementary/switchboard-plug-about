@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-26 18:46+0000\n"
-"PO-Revision-Date: 2022-12-15 19:25+0000\n"
+"PO-Revision-Date: 2023-01-28 05:25+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fi/>\n"
@@ -301,37 +301,37 @@ msgstr "%s tallennustilaa"
 
 #: src/Views/HardwareView.vala:593
 msgid "KB"
-msgstr ""
+msgstr "kt"
 
 #: src/Views/HardwareView.vala:593
 msgid "MB"
-msgstr ""
+msgstr "Mt"
 
 #: src/Views/HardwareView.vala:593
 msgid "GB"
-msgstr ""
+msgstr "Gt"
 
 #: src/Views/HardwareView.vala:593
 msgid "TB"
-msgstr ""
+msgstr "Tt"
 
 #: src/Views/HardwareView.vala:593
 msgid "PB"
-msgstr ""
+msgstr "Pt"
 
 #. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
 #: src/Views/HardwareView.vala:606
 msgid "byte"
 msgid_plural "bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "tavu"
+msgstr[1] "tavua"
 
 #. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
 #. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
 #: src/Views/HardwareView.vala:613
 #, c-format
 msgid "%llu %s"
-msgstr ""
+msgstr "%llu %s"
 
 #: src/Views/OperatingSystemView.vala:101
 msgid "Website"

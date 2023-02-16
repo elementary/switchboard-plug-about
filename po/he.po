@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-26 18:46+0000\n"
-"PO-Revision-Date: 2022-11-04 07:03+0000\n"
+"PO-Revision-Date: 2023-01-28 05:25+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:42
@@ -296,37 +296,37 @@ msgstr "%s אחסון"
 
 #: src/Views/HardwareView.vala:593
 msgid "KB"
-msgstr ""
+msgstr "ק״ב"
 
 #: src/Views/HardwareView.vala:593
 msgid "MB"
-msgstr ""
+msgstr "מ״ב"
 
 #: src/Views/HardwareView.vala:593
 msgid "GB"
-msgstr ""
+msgstr "ג״ב"
 
 #: src/Views/HardwareView.vala:593
 msgid "TB"
-msgstr ""
+msgstr "ט״ב"
 
 #: src/Views/HardwareView.vala:593
 msgid "PB"
-msgstr ""
+msgstr "פ״ב"
 
 #. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
 #: src/Views/HardwareView.vala:606
 msgid "byte"
 msgid_plural "bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "בית"
+msgstr[1] "בתים"
 
 #. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
 #. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
 #: src/Views/HardwareView.vala:613
 #, c-format
 msgid "%llu %s"
-msgstr ""
+msgstr "%llu %s"
 
 #: src/Views/OperatingSystemView.vala:101
 msgid "Website"
