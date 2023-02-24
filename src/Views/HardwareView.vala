@@ -590,7 +590,11 @@ public class About.HardwareView : Gtk.Grid {
     private string custom_format_size (uint64 size, bool iec_unit) {
         uint divisor = iec_unit ? 1024 : 1000;
 
+#if HAS_GLIB_2_73
         const string[] UNITS = {"kB", "MB", "GB", "TB", "PB", "EB"};
+#else
+        const string[] UNITS = {"%.1f kB", "%.1f MB", "%.1f GB", "%.1f TB", "%.1f PB", "%.1f EB"};
+#endif
 
         int unit_index = 0;
 
@@ -602,12 +606,20 @@ public class About.HardwareView : Gtk.Grid {
         unowned string unit;
 
         if (unit_index == 0) {
+#if HAS_GLIB_2_73
             unit = dngettext ("glib20", "byte", "bytes", (ulong) size);
+#else
+            return dngettext ("glib20", "%u byte", "%u bytes", (ulong) size).printf ((uint) size);
+#endif
         } else {
             unit = dgettext ("glib20", UNITS[unit_index - 1]);
         }
 
+#if HAS_GLIB_2_73
         return dpgettext2 ("glib20", "format-size", "%u %s").printf ((uint) size, unit);
+#else
+        return unit.printf ((float) size);
+#endif
     }
 }
 

@@ -29,7 +29,7 @@ shared_module(
     css_gresource,
     dependencies: [
         dependency('fwupd'),
-        dependency('glib-2.0', version: '>=2.64.0'),
+        glib_dep,
         dependency('gio-2.0'),
         dependency('gobject-2.0'),
         dependency('granite'),
