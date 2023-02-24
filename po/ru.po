@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-24 10:45+0000\n"
-"PO-Revision-Date: 2023-01-28 05:25+0000\n"
-"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"PO-Revision-Date: 2023-02-24 13:00+0000\n"
+"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ru/>\n"
 "Language: ru\n"
@@ -306,11 +306,10 @@ msgstr[1] "байта"
 msgstr[2] "байтов"
 
 #: src/Views/HardwareView.vala:610
-#, fuzzy, c-format
-#| msgid "%llu %s"
+#, c-format
 msgctxt "format-size"
 msgid "%u %s"
-msgstr "%llu %s"
+msgstr "%u %s"
 
 #: src/Views/OperatingSystemView.vala:101
 msgid "Website"
