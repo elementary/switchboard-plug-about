@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 10:45+0000\n"
+"POT-Creation-Date: 2023-02-24 13:04+0000\n"
 "PO-Revision-Date: 2023-02-07 00:25+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
@@ -297,13 +297,22 @@ msgstr "%s tárhely (HDD)"
 msgid "%s storage"
 msgstr "%s tárhely"
 
-#: src/Views/HardwareView.vala:605
+#: src/Views/HardwareView.vala:610
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "bájt"
 msgstr[1] "bájt"
 
-#: src/Views/HardwareView.vala:610
+#: src/Views/HardwareView.vala:612
+#, fuzzy, c-format
+#| msgid "byte"
+#| msgid_plural "bytes"
+msgid "%u byte"
+msgid_plural "%u bytes"
+msgstr[0] "bájt"
+msgstr[1] "bájt"
+
+#: src/Views/HardwareView.vala:619
 #, fuzzy, c-format
 #| msgid "%llu %s"
 msgctxt "format-size"

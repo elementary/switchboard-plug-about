@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 10:45+0000\n"
+"POT-Creation-Date: 2023-02-24 13:04+0000\n"
 "PO-Revision-Date: 2023-02-04 12:25+0000\n"
 "Last-Translator: imgradeone Yan <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -288,12 +288,20 @@ msgstr "%s 机械硬盘"
 msgid "%s storage"
 msgstr "%s 硬盘"
 
-#: src/Views/HardwareView.vala:605
+#: src/Views/HardwareView.vala:610
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "字节"
 
-#: src/Views/HardwareView.vala:610
+#: src/Views/HardwareView.vala:612
+#, fuzzy, c-format
+#| msgid "byte"
+#| msgid_plural "bytes"
+msgid "%u byte"
+msgid_plural "%u bytes"
+msgstr[0] "字节"
+
+#: src/Views/HardwareView.vala:619
 #, fuzzy, c-format
 msgctxt "format-size"
 msgid "%u %s"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 10:45+0000\n"
+"POT-Creation-Date: 2023-02-24 13:04+0000\n"
 "PO-Revision-Date: 2023-01-28 05:25+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -294,13 +294,22 @@ msgstr "%s אחסון (HDD)"
 msgid "%s storage"
 msgstr "%s אחסון"
 
-#: src/Views/HardwareView.vala:605
+#: src/Views/HardwareView.vala:610
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "בית"
 msgstr[1] "בתים"
 
-#: src/Views/HardwareView.vala:610
+#: src/Views/HardwareView.vala:612
+#, fuzzy, c-format
+#| msgid "byte"
+#| msgid_plural "bytes"
+msgid "%u byte"
+msgid_plural "%u bytes"
+msgstr[0] "בית"
+msgstr[1] "בתים"
+
+#: src/Views/HardwareView.vala:619
 #, fuzzy, c-format
 #| msgid "%llu %s"
 msgctxt "format-size"

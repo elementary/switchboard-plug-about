@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 10:45+0000\n"
+"POT-Creation-Date: 2023-02-24 13:04+0000\n"
 "PO-Revision-Date: 2021-03-26 00:33+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -301,13 +301,20 @@ msgstr "„%s“ смештај (HDD)"
 msgid "%s storage"
 msgstr "„%s“ смештај"
 
-#: src/Views/HardwareView.vala:605
+#: src/Views/HardwareView.vala:610
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/HardwareView.vala:610
+#: src/Views/HardwareView.vala:612
+#, c-format
+msgid "%u byte"
+msgid_plural "%u bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Views/HardwareView.vala:619
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"

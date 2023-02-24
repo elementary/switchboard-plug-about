@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 10:45+0000\n"
+"POT-Creation-Date: 2023-02-24 13:04+0000\n"
 "PO-Revision-Date: 2019-05-13 23:02+0000\n"
 "Last-Translator: Daniel Foré <daniel@elementary.io>\n"
 "Language-Team: Chinese <https://l10n.elementary.io/projects/switchboard/"
@@ -283,12 +283,18 @@ msgstr ""
 msgid "%s storage"
 msgstr ""
 
-#: src/Views/HardwareView.vala:605
+#: src/Views/HardwareView.vala:610
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] ""
 
-#: src/Views/HardwareView.vala:610
+#: src/Views/HardwareView.vala:612
+#, c-format
+msgid "%u byte"
+msgid_plural "%u bytes"
+msgstr[0] ""
+
+#: src/Views/HardwareView.vala:619
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"

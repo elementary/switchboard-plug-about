@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 10:45+0000\n"
+"POT-Creation-Date: 2023-02-24 13:04+0000\n"
 "PO-Revision-Date: 2023-02-02 21:25+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -293,13 +293,22 @@ msgstr "%s بیرگە (HDD)"
 msgid "%s storage"
 msgstr "%s بیرگە"
 
-#: src/Views/HardwareView.vala:605
+#: src/Views/HardwareView.vala:610
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "بایت"
 msgstr[1] "بایت"
 
-#: src/Views/HardwareView.vala:610
+#: src/Views/HardwareView.vala:612
+#, fuzzy, c-format
+#| msgid "byte"
+#| msgid_plural "bytes"
+msgid "%u byte"
+msgid_plural "%u bytes"
+msgstr[0] "بایت"
+msgstr[1] "بایت"
+
+#: src/Views/HardwareView.vala:619
 #, fuzzy, c-format
 #| msgid "%llu %s"
 msgctxt "format-size"
