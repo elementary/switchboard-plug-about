@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-26 18:46+0000\n"
-"PO-Revision-Date: 2021-04-07 15:37+0000\n"
-"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
+"PO-Revision-Date: 2023-02-18 10:25+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/en_GB/>\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:42
@@ -136,10 +136,8 @@ msgid "Connecting to the firmware service and searching for updates."
 msgstr "Connecting to the firmware service and searching for updates."
 
 #: src/Views/FirmwareView.vala:88
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "Failed to install firmware release"
+msgstr "Restart to Firmware Setup…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
@@ -212,25 +210,23 @@ msgstr "Shut Down"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "Restart to firmware setup"
 
 #: src/Views/FirmwareView.vala:405
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
-msgstr "This will close all open applications and restart this device."
+msgstr ""
+"This will close all open applications, restart this device, and open the "
+"firmware setup screen."
 
 #: src/Views/FirmwareView.vala:429
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "Failed to install firmware release"
+msgstr "Unable to restart to firmware setup"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
-msgstr ""
+msgstr "A system error prevented automatically restarting into firmware setup."
 
 #: src/Views/HardwareView.vala:66
 #, c-format
@@ -300,37 +296,37 @@ msgstr "%s storage"
 
 #: src/Views/HardwareView.vala:593
 msgid "KB"
-msgstr ""
+msgstr "KB"
 
 #: src/Views/HardwareView.vala:593
 msgid "MB"
-msgstr ""
+msgstr "MB"
 
 #: src/Views/HardwareView.vala:593
 msgid "GB"
-msgstr ""
+msgstr "GB"
 
 #: src/Views/HardwareView.vala:593
 msgid "TB"
-msgstr ""
+msgstr "TB"
 
 #: src/Views/HardwareView.vala:593
 msgid "PB"
-msgstr ""
+msgstr "PB"
 
 #. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
 #: src/Views/HardwareView.vala:606
 msgid "byte"
 msgid_plural "bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "byte"
+msgstr[1] "bytes"
 
 #. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
 #. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
 #: src/Views/HardwareView.vala:613
 #, c-format
 msgid "%llu %s"
-msgstr ""
+msgstr "%llu %s"
 
 #: src/Views/OperatingSystemView.vala:101
 msgid "Website"

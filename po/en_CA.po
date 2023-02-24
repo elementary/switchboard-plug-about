@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-26 18:46+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-02-18 10:25+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (Canada) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/en_CA/>\n"
 "Language: en_CA\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:42
@@ -170,12 +170,11 @@ msgid "Please make sure “fwupd” is installed and enabled."
 msgstr ""
 
 #: src/Views/FirmwareView.vala:217
-#, fuzzy, c-format
-#| msgid "Updates"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Updates"
-msgstr[1] "Updates"
+msgstr[0] "%u Update Available"
+msgstr[1] "%u Updates Available"
 
 #: src/Views/FirmwareView.vala:221
 #, fuzzy
@@ -265,16 +264,14 @@ msgid "Manufacturer Website"
 msgstr "Manufacturer Website"
 
 #: src/Views/HardwareView.vala:254
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "Dual-Core"
+msgstr "Dual-Core %s"
 
 #: src/Views/HardwareView.vala:256
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "Quad-Core"
+msgstr "Quad-Core %s"
 
 #: src/Views/HardwareView.vala:258
 #, c-format

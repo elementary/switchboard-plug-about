@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-26 18:46+0000\n"
-"PO-Revision-Date: 2022-06-30 10:04+0000\n"
+"PO-Revision-Date: 2023-02-02 21:25+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
-"Language-Team: French <https://l10n.elementary.io/projects/switchboard/about-"
-"plug-extra/fr/>\n"
+"Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
+"about-plug-extra/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
 msgid "System"
@@ -35,6 +35,8 @@ msgstr "Nouvelles fonctionnalités :"
 #: data/io.elementary.switchboard.about.appdata.xml.in:15
 msgid "Add a button to restart to firmware setup"
 msgstr ""
+"Ajout d'un bouton pour redémarrer vers la page de configuration du "
+"micrologiciel"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:17
 #: data/io.elementary.switchboard.about.appdata.xml.in:33
@@ -44,14 +46,15 @@ msgid "Minor updates:"
 msgstr "Mises à jour mineures :"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:19
-#, fuzzy
-#| msgid "View operating system and hardware information"
 msgid "Get more accurate memory and storage information"
-msgstr "Afficher les informations du système d'exploitation et du matériel"
+msgstr ""
+"Récupération plus précise des informations sur la mémoire et le stockage"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:20
 msgid "Handle Ryzen CPU and AMD GPU vendor string"
 msgstr ""
+"Prise en charge des chaînes de vendeur des processeurs Ryzen et des cartes "
+"graphiques AMD"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:21
 #: data/io.elementary.switchboard.about.appdata.xml.in:35
