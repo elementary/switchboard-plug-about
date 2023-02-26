@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-24 13:04+0000\n"
-"PO-Revision-Date: 2023-02-07 00:25+0000\n"
+"PO-Revision-Date: 2023-02-28 18:25+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/hu/>\n"
@@ -304,20 +304,17 @@ msgstr[0] "bájt"
 msgstr[1] "bájt"
 
 #: src/Views/HardwareView.vala:612
-#, fuzzy, c-format
-#| msgid "byte"
-#| msgid_plural "bytes"
+#, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
-msgstr[0] "bájt"
-msgstr[1] "bájt"
+msgstr[0] "%u bájt"
+msgstr[1] "%u bájt"
 
 #: src/Views/HardwareView.vala:619
-#, fuzzy, c-format
-#| msgid "%llu %s"
+#, c-format
 msgctxt "format-size"
 msgid "%u %s"
-msgstr "%llu %s"
+msgstr "%u %s"
 
 #: src/Views/OperatingSystemView.vala:101
 msgid "Website"
