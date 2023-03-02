@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-26 18:46+0000\n"
-"PO-Revision-Date: 2023-01-28 05:25+0000\n"
+"POT-Creation-Date: 2023-02-24 13:04+0000\n"
+"PO-Revision-Date: 2023-02-28 18:25+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
@@ -301,40 +301,26 @@ msgstr "%s сховища (HDD)"
 msgid "%s storage"
 msgstr "%s сховища"
 
-#: src/Views/HardwareView.vala:593
-msgid "KB"
-msgstr "кБ"
-
-#: src/Views/HardwareView.vala:593
-msgid "MB"
-msgstr "МБ"
-
-#: src/Views/HardwareView.vala:593
-msgid "GB"
-msgstr "ГБ"
-
-#: src/Views/HardwareView.vala:593
-msgid "TB"
-msgstr "ТБ"
-
-#: src/Views/HardwareView.vala:593
-msgid "PB"
-msgstr "ПБ"
-
-#. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
-#: src/Views/HardwareView.vala:606
+#: src/Views/HardwareView.vala:610
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "байт"
 msgstr[1] "байти"
 msgstr[2] "байтів"
 
-#. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
-#. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
-#: src/Views/HardwareView.vala:613
+#: src/Views/HardwareView.vala:612
 #, c-format
-msgid "%llu %s"
-msgstr "%llu %s"
+msgid "%u byte"
+msgid_plural "%u bytes"
+msgstr[0] "%u байт"
+msgstr[1] "%u байти"
+msgstr[2] "%u байтів"
+
+#: src/Views/HardwareView.vala:619
+#, c-format
+msgctxt "format-size"
+msgid "%u %s"
+msgstr "%u %s"
 
 #: src/Views/OperatingSystemView.vala:101
 msgid "Website"
@@ -364,6 +350,21 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:248
 msgid "Restore Settings"
 msgstr "Відновити налаштування"
+
+#~ msgid "KB"
+#~ msgstr "кБ"
+
+#~ msgid "MB"
+#~ msgstr "МБ"
+
+#~ msgid "GB"
+#~ msgstr "ГБ"
+
+#~ msgid "TB"
+#~ msgstr "ТБ"
+
+#~ msgid "PB"
+#~ msgstr "ПБ"
 
 #~ msgid "No Updatable Devices"
 #~ msgstr "Немає пристроїв, які можна оновити"

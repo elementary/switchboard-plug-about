@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-26 18:46+0000\n"
+"POT-Creation-Date: 2023-02-24 13:04+0000\n"
 "PO-Revision-Date: 2023-02-04 12:25+0000\n"
 "Last-Translator: imgradeone Yan <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -288,37 +288,23 @@ msgstr "%s 机械硬盘"
 msgid "%s storage"
 msgstr "%s 硬盘"
 
-#: src/Views/HardwareView.vala:593
-msgid "KB"
-msgstr "KB"
-
-#: src/Views/HardwareView.vala:593
-msgid "MB"
-msgstr "MB"
-
-#: src/Views/HardwareView.vala:593
-msgid "GB"
-msgstr "GB"
-
-#: src/Views/HardwareView.vala:593
-msgid "TB"
-msgstr "TB"
-
-#: src/Views/HardwareView.vala:593
-msgid "PB"
-msgstr "PB"
-
-#. TRANSLATORS: Examples of use: "1 byte", "2 bytes"
-#: src/Views/HardwareView.vala:606
+#: src/Views/HardwareView.vala:610
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "字节"
 
-#. TRANSLATORS: The first "%llu" is replaced with the value, the "%s" with a unit of the value.
-#. The order can be changed with "%$2s %$1llu". An example: "2 bytes"
-#: src/Views/HardwareView.vala:613
-#, c-format, fuzzy
-msgid "%llu %s"
+#: src/Views/HardwareView.vala:612
+#, fuzzy, c-format
+#| msgid "byte"
+#| msgid_plural "bytes"
+msgid "%u byte"
+msgid_plural "%u bytes"
+msgstr[0] "字节"
+
+#: src/Views/HardwareView.vala:619
+#, fuzzy, c-format
+msgctxt "format-size"
+msgid "%u %s"
 msgstr "%llu %s"
 
 #: src/Views/OperatingSystemView.vala:101
@@ -348,6 +334,21 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:248
 msgid "Restore Settings"
 msgstr "重置设置"
+
+#~ msgid "KB"
+#~ msgstr "KB"
+
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "GB"
+#~ msgstr "GB"
+
+#~ msgid "TB"
+#~ msgstr "TB"
+
+#~ msgid "PB"
+#~ msgstr "PB"
 
 #~ msgid "Internal device"
 #~ msgstr "内置硬件"
