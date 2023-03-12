@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-24 13:04+0000\n"
-"PO-Revision-Date: 2023-03-11 14:25+0000\n"
+"PO-Revision-Date: 2023-03-12 14:25+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ka/>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:5
 msgid "System"
-msgstr ""
+msgstr "სისტემა"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:6
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "ოპერაციული სისტემის და აპარატურის ინფორმაციის ნახვა"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:13
 #: data/io.elementary.switchboard.about.appdata.xml.in:28
@@ -111,7 +111,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:63
 msgid "Fixes:"
-msgstr ""
+msgstr "შეცდომების გასწორებები:"
 
 #: data/io.elementary.switchboard.about.appdata.xml.in:65
 msgid "Fix an issue where the view was destroyed early when navigating away"
