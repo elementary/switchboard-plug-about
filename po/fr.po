@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-24 13:04+0000\n"
 "PO-Revision-Date: 2023-03-14 08:58+0000\n"
-"Last-Translator: Chris Lombardo <chris.lombardo@outlook.com.au>\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
 "Language: fr\n"
@@ -307,20 +307,17 @@ msgstr[0] "octet"
 msgstr[1] "octets"
 
 #: src/Views/HardwareView.vala:612
-#, fuzzy, c-format
-#| msgid "byte"
-#| msgid_plural "bytes"
+#, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
-msgstr[0] "octet"
-msgstr[1] "octets"
+msgstr[0] "%u octet"
+msgstr[1] "%u octets"
 
 #: src/Views/HardwareView.vala:619
-#, fuzzy, c-format
-#| msgid "%llu %s"
+#, c-format
 msgctxt "format-size"
 msgid "%u %s"
-msgstr "%llu %s"
+msgstr "%u %s"
 
 #: src/Views/OperatingSystemView.vala:101
 msgid "Website"
