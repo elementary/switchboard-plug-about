@@ -45,7 +45,6 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         var logo_overlay = new Gtk.Overlay ();
 
-#if WALLPAPER
         if (Gtk.IconTheme.get_default ().has_icon (logo_icon_name + "-symbolic")) {
             foreach (unowned var path in Environment.get_system_data_dirs ()) {
                 var file = File.new_for_path (
@@ -56,8 +55,6 @@ public class About.OperatingSystemView : Gtk.Grid {
                     var file_icon = new FileIcon (file);
 
                     var logo = new Hdy.Avatar (128, "", false) {
-                        // In case the wallpaper can't be loaded, we don't want an icon or text
-                        icon_name = "invalid-icon-name",
                         loadable_icon = file_icon,
                         // We need this for the shadow to not get clipped by Gtk.Overlay
                         margin = 6
@@ -78,7 +75,6 @@ public class About.OperatingSystemView : Gtk.Grid {
                 }
             }
         }
-#endif
 
         if (icon.parent == null) {
             icon.pixel_size = 128;
