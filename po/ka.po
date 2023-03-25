@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-24 13:04+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-03-12 14:25+0000\n"
+"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ka/>\n"
 "Language: ka\n"
@@ -17,38 +17,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.14.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:42
 msgid "System"
-msgstr ""
+msgstr "სისტემა"
 
 #: src/Plug.vala:43
 msgid "View operating system and hardware information"
-msgstr ""
+msgstr "ოპერაციული სისტემის და აპარატურის ინფორმაციის ნახვა"
 
 #: src/Plug.vala:62
 msgid "Operating System"
-msgstr ""
+msgstr "ოპერაციული სისტემა"
 
 #: src/Plug.vala:63
 msgid "Hardware"
-msgstr "მოწყობილობები"
+msgstr "აპარატურა"
 
 #: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
-#, fuzzy
-#| msgid "Hardware"
 msgid "Firmware"
-msgstr "მოწყობილობები"
+msgstr "მიკროკოდი"
 
 #: src/Plug.vala:110
 msgid "Operating System Information"
-msgstr ""
+msgstr "ინფორმაცია ოპერაციული სისტემის შესახებ"
 
 #: src/Plug.vala:111
 msgid "Hardware Information"
-msgstr ""
+msgstr "ინფორმაცია აპარატურის შესახებ"
 
 #: src/Plug.vala:113 src/Views/OperatingSystemView.vala:130
 msgid "Restore Default Settings"
@@ -60,7 +58,7 @@ msgstr "თარგმნაში დახმარება"
 
 #: src/Plug.vala:115 src/Views/OperatingSystemView.vala:119
 msgid "Send Feedback"
-msgstr ""
+msgstr "უკუკავშირის გაგზავნა"
 
 #: src/Plug.vala:116
 msgid "Report a Problem"
@@ -68,284 +66,279 @@ msgstr "პრობლემის შეტყობინება"
 
 #: src/Plug.vala:117 src/Views/OperatingSystemView.vala:106
 msgid "Get Support"
-msgstr ""
+msgstr "მხარდაჭერის მიღება"
 
 #: src/Plug.vala:118
 msgid "Updates"
-msgstr ""
+msgstr "განახლებები"
 
 #: src/Views/FirmwareReleaseView.vala:42
 msgid "All Updates"
-msgstr ""
+msgstr "ყველა განახლება"
 
 #: src/Views/FirmwareReleaseView.vala:81
 msgid "Version:"
-msgstr "ვერისა:"
+msgstr "ვერსია:"
 
 #: src/Views/FirmwareReleaseView.vala:90
 msgid "Vendor:"
-msgstr ""
+msgstr "მომწოდებელი:"
 
 #: src/Views/FirmwareReleaseView.vala:99
 msgid "Size:"
-msgstr ""
+msgstr "ზომა:"
 
 #: src/Views/FirmwareReleaseView.vala:108
 msgid "Estimated time to install:"
-msgstr ""
+msgstr "დაყენების სავარაუდო დრო:"
 
 #: src/Views/FirmwareReleaseView.vala:137
 msgid "There are no releases available for this device."
-msgstr ""
+msgstr "ამ მოწყობილობისთვის რელიზები არ არსებობს."
 
 #: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
 msgid "Update"
-msgstr ""
+msgstr "განახლება"
 
 #: src/Views/FirmwareReleaseView.vala:211
 msgid "Up to date"
-msgstr ""
+msgstr "განახლებულია"
 
 #: src/Views/FirmwareReleaseView.vala:228
 msgid "less than a minute"
-msgstr ""
+msgstr "წუთზე ნაკლები"
 
 #: src/Views/FirmwareReleaseView.vala:230
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%llu წუთი"
+msgstr[1] "%llu წუთი"
 
 #: src/Views/FirmwareView.vala:36
 msgid ""
 "Firmware updates provided by device manufacturers can improve performance "
 "and fix critical security issues."
 msgstr ""
+"მიკროკოდის განახლებებს, რომლებიც მოწყობილობის მწარმოებლის მიერ გამოიცემა, "
+"თქვენი მოწყობილობის წარმადობის გაზრდა და შეცდომების გასწორება შეუძლია."
 
 #: src/Views/FirmwareView.vala:43
 msgid "Do not unplug the device during the update."
-msgstr ""
+msgstr "არ გამორთოთ მოწყობილობა განახლების დროს."
 
 #: src/Views/FirmwareView.vala:49
-#, fuzzy
-#| msgid "Check for Updates"
 msgid "Checking for Updates"
-msgstr "განხლებებისშემოწმება"
+msgstr "მიმდინარეობს განახლებების შემოწმება"
 
 #: src/Views/FirmwareView.vala:50
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
+msgstr "მიკროკოდის სერვისთან დაკავშირება და განახლებების ძებნა."
 
 #: src/Views/FirmwareView.vala:88
 msgid "Restart to Firmware Setup…"
-msgstr ""
+msgstr "მიკროკოდის მოსარგებად გადატვირთეთ…"
 
 #: src/Views/FirmwareView.vala:121
 msgid "Firmware Updates Are Not Available"
-msgstr ""
+msgstr "მიკროკოდის განახლებების გარეშე"
 
 #: src/Views/FirmwareView.vala:122
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
+"მიკროკოდის განახლება ამჟამად მიერთებულ მოწყობილობებზე მხარდაჭერილი არაა."
 
 #: src/Views/FirmwareView.vala:125
 msgid "The Firmware Service Is Not Available"
-msgstr ""
+msgstr "მიკროკოდის სერვისი მიუწვდომელია"
 
 #: src/Views/FirmwareView.vala:126
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr ""
+msgstr "დარწმუნდით, რომ \"fwupd\" დაყენებული და ჩართულია."
 
 #: src/Views/FirmwareView.vala:217
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ხელმისაწვდომია %u განახლება"
+msgstr[1] "ხელმისაწვდომია %u განახლება"
 
 #: src/Views/FirmwareView.vala:221
 msgid "Up to Date"
-msgstr ""
+msgstr "განახლებულია"
 
 #: src/Views/FirmwareView.vala:241
 #, c-format
 msgid "“%s” is being updated"
-msgstr ""
+msgstr "მიმდინარეობს “%s”-ის განახლება"
 
 #: src/Views/FirmwareView.vala:312
 msgid "Failed to install firmware release"
-msgstr ""
+msgstr "მიკროკოდის დაყენების შეცდომა"
 
 #: src/Views/FirmwareView.vala:333
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr ""
+msgstr "\"%s\"-ი განახლების რეჟიმში ხელით უნდა გადართოთ"
 
 #: src/Views/FirmwareView.vala:342
 msgid "Continue"
-msgstr ""
+msgstr "გაგრძელება"
 
 #: src/Views/FirmwareView.vala:360
 msgid "An update requires the system to restart to complete"
-msgstr ""
+msgstr "განახლებას დასასრულებლად სისტემის გადატვირთვა ესაჭიროება"
 
 #: src/Views/FirmwareView.vala:361
 msgid "This will close all open applications and restart this device."
-msgstr ""
+msgstr "ეს დახურავს ყველა ღია აპლიკაციას და გადატვირთავს კომპიუტერს."
 
 #: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
 msgid "Restart"
-msgstr ""
+msgstr "გადატვირთვა"
 
 #: src/Views/FirmwareView.vala:382
 msgid "An update requires the system to shut down to complete"
-msgstr ""
+msgstr "განახლებას სისტემის გამორთვა ესაჭიროება"
 
 #: src/Views/FirmwareView.vala:383
 msgid "This will close all open applications and turn off this device."
-msgstr ""
+msgstr "ეს დახურავს ყველა ღია აპლიკაციას და გამორთავს ამ მოწყობილობას."
 
 #: src/Views/FirmwareView.vala:391
 msgid "Shut Down"
-msgstr ""
+msgstr "გამორთვა"
 
 #: src/Views/FirmwareView.vala:404
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "მიკროკოდის მორგების ფანჯარაში გადატვირთვა"
 
 #: src/Views/FirmwareView.vala:405
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
 msgstr ""
+"ეს დახურავს ყველა ღია აპლიკაციას, გადატვირთავს ამ მოწყობილობას და მიკროკოდის "
+"მორგების ფანჯარას გახსნის."
 
 #: src/Views/FirmwareView.vala:429
 msgid "Unable to restart to firmware setup"
-msgstr ""
+msgstr "მიკროკოდის მორგების ფანჯარაში გადატვირთვის სეცდომა"
 
 #: src/Views/FirmwareView.vala:430
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
+"მიკროკოდის მორგების ფანჯარაში გადატვირთვა შეუძლებელია სისტემური შეცდომის "
+"გამო."
 
 #: src/Views/HardwareView.vala:66
-#, fuzzy, c-format
+#, c-format
 msgid "%s memory"
-msgstr "მეხსიერება:"
+msgstr "%s მეხსიერება"
 
 #: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "გრაფიკა:"
+msgstr "უცნობი გრაფიკა"
 
 #: src/Views/HardwareView.vala:91
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown storage"
-msgstr "პროცესორი:"
+msgstr "უცნობი საცავი"
 
 #: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
-msgstr ""
+msgstr "მწარმოებელი ვებგვერდი"
 
 #: src/Views/HardwareView.vala:254
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "ორბირთვიანი"
+msgstr "ორბირთვიანი %s"
 
 #: src/Views/HardwareView.vala:256
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "ოთხბირთვიანი"
+msgstr "ოთხბირთვიანი %s"
 
 #: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "ექვსბირთვიანი %s"
 
 #: src/Views/HardwareView.vala:371
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "პროცესორი:"
+msgstr "უცნობი პროცესორი"
 
 #: src/Views/HardwareView.vala:444
 msgid "Unknown"
 msgstr "უცნობი"
 
 #: src/Views/HardwareView.vala:499
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (NVMe SSD)"
-msgstr "საწყობი:"
+msgstr "%s საცავი (NVMe SSD)"
 
 #: src/Views/HardwareView.vala:501
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (eMMC)"
-msgstr "საწყობი:"
+msgstr "%s საცავი (eMMC)"
 
 #: src/Views/HardwareView.vala:503
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (SATA SSD)"
-msgstr "საწყობი:"
+msgstr "%s საცავი (SATA SSD)"
 
 #: src/Views/HardwareView.vala:506
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage (HDD)"
-msgstr "საწყობი:"
+msgstr "%s საცავი (HDD)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:511
-#, fuzzy, c-format
+#, c-format
 msgid "%s storage"
-msgstr "საწყობი:"
+msgstr "%s საცავი"
 
 #: src/Views/HardwareView.vala:610
 msgid "byte"
 msgid_plural "bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ბაიტი"
+msgstr[1] "ბაიტი"
 
 #: src/Views/HardwareView.vala:612
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%u ბაიტი"
+msgstr[1] "%u ბაიტი"
 
 #: src/Views/HardwareView.vala:619
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
-msgstr ""
+msgstr "%u %s"
 
 #: src/Views/OperatingSystemView.vala:101
 msgid "Website"
-msgstr "ვებ-გვერდი"
+msgstr "ვებგვერდი"
 
 #: src/Views/OperatingSystemView.vala:124
 msgid "Check for Updates"
-msgstr "განხლებებისშემოწმება"
+msgstr "განახლებების შემოწმება"
 
 #: src/Views/OperatingSystemView.vala:219
 #, c-format
 msgid "Built on %s"
-msgstr ""
+msgstr "აგებულია %s-ზე"
 
 #: src/Views/OperatingSystemView.vala:241
-#, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr "სისტემის პარამეტრები დაბრუნდება ქარხნულ ნაგულისხმევებზე"
+msgstr "სისტემის პარამეტრები მწარმოებლის ნაგულისხმევ მნიშვნელობებზე აღდგება"
 
 #: src/Views/OperatingSystemView.vala:242
-#, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
-"სისტემის ყველა პარამეტრი და მონაცემები დაბრუნდება ნაგულისხმევ ღირებულებებზე."
+"სისტემის ყველა პარამეტრი და მონაცემები ნაგულისხმებ მნიშვნელობებზე დაბრუნდება."
 
 #: src/Views/OperatingSystemView.vala:248
 msgid "Restore Settings"
