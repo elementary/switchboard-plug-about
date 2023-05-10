@@ -24,10 +24,6 @@ add_project_arguments(['--vapidir', vapi_dir], language: 'vala')
 
 vala_flags = []
 
-if get_option('wallpaper')
-    vala_flags += ['--define', 'WALLPAPER']
-endif
-
 if glib_dep.version().version_compare ('>=2.73.0')
     vala_flags += ['--define', 'HAS_GLIB_2_73']
 endif

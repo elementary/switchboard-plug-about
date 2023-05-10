@@ -1,1 +1,0 @@
-option('wallpaper', type : 'boolean', value : true, description : 'Overlay logo on default wallpaper')

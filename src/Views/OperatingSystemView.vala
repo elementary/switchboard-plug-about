@@ -39,38 +39,47 @@ public class About.OperatingSystemView : Gtk.Grid {
             logo_icon_name = "distributor-logo";
         }
 
-#if WALLPAPER
-        var logo = new Hdy.Avatar (128, "", false) {
-            // In case the wallpaper can't be loaded, we don't want an icon or text
-            icon_name = "invalid-icon-name",
-            // We need this for the shadow to not get clipped by Gtk.Overlay
-            margin = 6
-        };
-        logo.set_image_load_func ((size) => {
-            try {
-                return new Gdk.Pixbuf.from_file_at_scale ("/usr/share/backgrounds/elementaryos-default", -1, size, true);
-            } catch (Error e) {
-                critical (e.message);
-            }
-        });
-        logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-#endif
-
         var icon = new Gtk.Image () {
-            icon_name = logo_icon_name + "-symbolic",
-            // 128 minus 3px padding on each side
-            pixel_size = 128 - 6
+            icon_name = logo_icon_name,
         };
 
-        unowned var icon_style_context = icon.get_style_context ();
-        icon_style_context.add_class ("logo");
-        icon_style_context.add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-#if WALLPAPER
         var logo_overlay = new Gtk.Overlay ();
-        logo_overlay.add (logo);
-        logo_overlay.add_overlay (icon);
-#endif
+
+        if (Gtk.IconTheme.get_default ().has_icon (logo_icon_name + "-symbolic")) {
+            foreach (unowned var path in Environment.get_system_data_dirs ()) {
+                var file = File.new_for_path (
+                    Path.build_path (Path.DIR_SEPARATOR_S, path, "backgrounds", "elementaryos-default")
+                );
+
+                if (file.query_exists ()) {
+                    var file_icon = new FileIcon (file);
+
+                    var logo = new Hdy.Avatar (128, "", false) {
+                        loadable_icon = file_icon,
+                        // We need this for the shadow to not get clipped by Gtk.Overlay
+                        margin = 6
+                    };
+                    logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+                    logo_overlay.add (logo);
+                    logo_overlay.add_overlay (icon);
+
+                    // 128 minus 3px padding on each side
+                    icon.pixel_size = 128 - 6;
+
+                    unowned var icon_style_context = icon.get_style_context ();
+                    icon_style_context.add_class ("logo");
+                    icon_style_context.add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+                    break;
+                }
+            }
+        }
+
+        if (icon.parent == null) {
+            icon.pixel_size = 128;
+            logo_overlay.add (icon);
+        }
 
         // Intentionally not using GLib.OsInfoKey.PRETTY_NAME here because we
         // want more granular control over text formatting
@@ -149,11 +158,7 @@ public class About.OperatingSystemView : Gtk.Grid {
             valign = Gtk.Align.CENTER,
             vexpand = true
         };
-#if WALLPAPER
         software_grid.attach (logo_overlay, 0, 0, 1, 4);
-#else
-        software_grid.attach (icon, 0, 0, 1, 4);
-#endif
         software_grid.attach (title, 1, 0, 3);
 
         software_grid.attach (kernel_version_label, 1, 2, 3);
