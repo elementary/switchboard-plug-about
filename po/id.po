@@ -7,8 +7,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-02-24 13:04+0000\n"
-"PO-Revision-Date: 2021-03-26 00:33+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2023-06-02 08:07+0000\n"
+"Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
+"io>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/id/>\n"
 "Language: id\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.17\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:42
@@ -168,11 +169,10 @@ msgid "Please make sure “fwupd” is installed and enabled."
 msgstr ""
 
 #: src/Views/FirmwareView.vala:217
-#, fuzzy, c-format
-#| msgid "Updates"
+#, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "Pembaruan"
+msgstr[0] "%u Pembaruan Tersedia"
 
 #: src/Views/FirmwareView.vala:221
 #, fuzzy
@@ -246,43 +246,35 @@ msgid "%s memory"
 msgstr "Memori %s"
 
 #: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
-#, fuzzy
-#| msgid "Graphics:"
 msgid "Unknown Graphics"
-msgstr "Kartu Grafis:"
+msgstr "Kartu Grafis Tidak Dikenal"
 
 #: src/Views/HardwareView.vala:91
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown storage"
-msgstr "Prosesor:"
+msgstr "Penyimpanan Tidak Dikenal"
 
 #: src/Views/HardwareView.vala:142
 msgid "Manufacturer Website"
 msgstr "Situs Web Produsen"
 
 #: src/Views/HardwareView.vala:254
-#, fuzzy, c-format
-#| msgid "Dual-Core"
+#, c-format
 msgid "Dual-Core %s"
-msgstr "Dua Inti (Dual-Core)"
+msgstr "Dua Inti %s"
 
 #: src/Views/HardwareView.vala:256
-#, fuzzy, c-format
-#| msgid "Quad-Core"
+#, c-format
 msgid "Quad-Core %s"
-msgstr "Empat Inti (Quad-Core)"
+msgstr "Empat Inti %s"
 
 #: src/Views/HardwareView.vala:258
 #, c-format
 msgid "Hexa-Core %s"
-msgstr ""
+msgstr "Enam Inti %s"
 
 #: src/Views/HardwareView.vala:371
-#, fuzzy
-#| msgid "Processor:"
 msgid "Unknown Processor"
-msgstr "Prosesor:"
+msgstr "Prosesor Tidak Dikenal"
 
 #: src/Views/HardwareView.vala:444
 msgid "Unknown"
