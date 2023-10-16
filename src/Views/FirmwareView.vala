@@ -86,7 +86,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         if (LoginManager.get_instance ().can_reboot_to_firmware_setup ()) {
             var reboot_to_firmware_setup_button = new Gtk.Button.with_label (_("Restart to Firmware Setup…"));
             reboot_to_firmware_setup_button.clicked.connect (reboot_to_firmware_setup_clicked);
-            action_area.add (reboot_to_firmware_setup_button);
+            action_area.append (reboot_to_firmware_setup_button);
         }
 
         fwupd_client = new Fwupd.Client ();
@@ -226,8 +226,11 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
         construct {
             xalign = 0;
-            margin = 3;
-            get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
+            margin_top = 3;
+            margin_end = 3;
+            margin_bottom = 3;
+            margin_start = 3;
+            add_css_class (Granite.STYLE_CLASS_H4_LABEL);
         }
     }
 
@@ -346,7 +349,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         };
 
         var suggested_button = (Gtk.Button) message_dialog.add_button (_("Continue"), Gtk.ResponseType.ACCEPT);
-        suggested_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+        suggested_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         if (detach_image != null) {
             var custom_widget = new Gtk.Image.from_file (detach_image);
@@ -368,7 +371,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         };
 
         var suggested_button = (Gtk.Button) message_dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
-        suggested_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+        suggested_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         message_dialog.response.connect ((response) => {
             if (response == Gtk.ResponseType.ACCEPT) {
@@ -392,7 +395,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         };
 
         var suggested_button = (Gtk.Button) message_dialog.add_button (_("Shut Down"), Gtk.ResponseType.ACCEPT);
-        suggested_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        suggested_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         message_dialog.response.connect ((response) => {
             if (response == Gtk.ResponseType.ACCEPT) {
@@ -413,11 +416,11 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         ) {
             badge_icon = new ThemedIcon ("application-x-firmware"),
             modal = true,
-            transient_for = (Gtk.Window) get_toplevel ()
+            transient_for = (Gtk.Window) get_root ()
         };
 
         var continue_button = dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
-        continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        continue_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         dialog.response.connect ((result) => {
             dialog.destroy ();
@@ -438,7 +441,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
                 ) {
                     badge_icon = new ThemedIcon ("dialog-error"),
                     modal = true,
-                    transient_for = (Gtk.Window) get_toplevel ()
+                    transient_for = (Gtk.Window) get_root ()
                 };
                 message_dialog.show_error_details (error.message);
                 message_dialog.present ();

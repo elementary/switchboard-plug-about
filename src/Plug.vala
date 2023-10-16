@@ -65,7 +65,7 @@ public class About.Plug : Switchboard.Plug {
 
             var stack_switcher = new Gtk.StackSwitcher () {
                 halign = Gtk.Align.CENTER,
-                homogeneous = true,
+                // homogeneous = true,
                 margin_top = 24,
                 stack = stack
             };
