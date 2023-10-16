@@ -238,10 +238,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         }
     }
 
-     /**
-     * returns true to continue, false to cancel
-     */
-    private bool confirm_restore_action () {
+    private void settings_restore_clicked () {
         var dialog = new Granite.MessageDialog.with_image_from_icon_name (
             _("System Settings Will Be Restored to The Factory Defaults"),
             _("All system settings and data will be reset to the default values. Personal data, such as music and pictures, will be unaffected."),
@@ -253,20 +250,18 @@ public class About.OperatingSystemView : Gtk.Grid {
         var continue_button = dialog.add_button (_("Restore Settings"), Gtk.ResponseType.ACCEPT);
         continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-        var result = dialog.run ();
-        dialog.destroy ();
+        dialog.response.connect ((response) => {
+            if (response == Gtk.ResponseType.ACCEPT) {
+                var all_schemas = get_pantheon_schemas ();
 
-        return result == Gtk.ResponseType.ACCEPT;
-    }
-
-    private void settings_restore_clicked () {
-        if (confirm_restore_action ()) {
-            var all_schemas = get_pantheon_schemas ();
-
-            foreach (var schema in all_schemas) {
-                reset_recursively (schema);
+                foreach (var schema in all_schemas) {
+                    reset_recursively (schema);
+                }
             }
-        }
+
+            dialog.destroy ();
+        });
+        dialog.present ();
     }
 
     private static void reset_all_keys (GLib.Settings settings) {
