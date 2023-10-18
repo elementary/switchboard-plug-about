@@ -251,6 +251,7 @@ public class About.OperatingSystemView : Gtk.Grid {
         continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         dialog.response.connect ((response) => {
+            dialog.destroy ();
             if (response == Gtk.ResponseType.ACCEPT) {
                 var all_schemas = get_pantheon_schemas ();
 
@@ -258,8 +259,6 @@ public class About.OperatingSystemView : Gtk.Grid {
                     reset_recursively (schema);
                 }
             }
-
-            dialog.destroy ();
         });
         dialog.present ();
     }
