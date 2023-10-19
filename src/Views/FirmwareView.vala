@@ -249,12 +249,24 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
                 detach_image = yield download_file (device, detach_image);
             }
 
-            if (show_details_dialog (device, detach_caption, detach_image) == false) {
-                stack.visible_child = deck;
-                return;
-            }
-        }
+            var details_dialog = show_details_dialog (device, detach_caption, detach_image);
+            details_dialog.response.connect ((response) => {
+                details_dialog.destroy ();
+                if (response == Gtk.ResponseType.ACCEPT) {
+                    continue_update.begin (device, release);
+                } else {
+                    stack.visible_child = deck;
+                    return;
+                }
+            });
 
+            details_dialog.present ();
+        } else {
+            continue_update.begin (device, release);
+        }
+    }
+
+    private async void continue_update (Fwupd.Device device, Fwupd.Release release) {
         var path = yield download_file (device, release.get_uri ());
 
         try {
@@ -317,12 +329,12 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             badge_icon = new ThemedIcon ("dialog-error"),
             transient_for = (Gtk.Window) get_toplevel ()
         };
-        message_dialog.show_all ();
-        message_dialog.run ();
-        message_dialog.destroy ();
+
+        message_dialog.response.connect (message_dialog.destroy);
+        message_dialog.present ();
     }
 
-    private bool show_details_dialog (Fwupd.Device device, string detach_caption, string? detach_image) {
+    private Granite.MessageDialog show_details_dialog (Fwupd.Device device, string detach_caption, string? detach_image) {
         var gicon = new ThemedIcon ("application-x-firmware");
         var icons = device.get_icons ();
         if (icons.data != null) {
@@ -347,12 +359,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             message_dialog.custom_bin.add (custom_widget);
         }
 
-        message_dialog.show_all ();
-        bool should_continue = message_dialog.run () == Gtk.ResponseType.ACCEPT;
-
-        message_dialog.destroy ();
-
-        return should_continue;
+        return message_dialog;
     }
 
     private void show_reboot_dialog () {
@@ -369,12 +376,14 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         var suggested_button = (Gtk.Button) message_dialog.add_button (_("Restart"), Gtk.ResponseType.ACCEPT);
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-        message_dialog.show_all ();
-        if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
-            LoginManager.get_instance ().reboot ();
-        }
+        message_dialog.response.connect ((response) => {
+            if (response == Gtk.ResponseType.ACCEPT) {
+                LoginManager.get_instance ().reboot ();
+            }
+            message_dialog.destroy ();
+        });
 
-        message_dialog.destroy ();
+        message_dialog.present ();
     }
 
     private void show_shutdown_dialog () {
@@ -391,12 +400,14 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         var suggested_button = (Gtk.Button) message_dialog.add_button (_("Shut Down"), Gtk.ResponseType.ACCEPT);
         suggested_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
-        message_dialog.show_all ();
-        if (message_dialog.run () == Gtk.ResponseType.ACCEPT) {
-            LoginManager.get_instance ().shutdown ();
-        }
+        message_dialog.response.connect ((response) => {
+            if (response == Gtk.ResponseType.ACCEPT) {
+                LoginManager.get_instance ().shutdown ();
+            }
+            message_dialog.destroy ();
+        });
 
-        message_dialog.destroy ();
+        message_dialog.present ();
     }
 
     private void reboot_to_firmware_setup_clicked () {
