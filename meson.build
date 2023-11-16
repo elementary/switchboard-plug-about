@@ -14,6 +14,8 @@ libdir = join_paths(prefix, get_option('libdir'))
 
 glib_dep = dependency('glib-2.0', version: '>=2.64.0')
 
+appstream_dep = dependency ('appstream', version: '>=0.12.10')
+
 add_project_arguments(
     '-DGETTEXT_PACKAGE="@0@"'.format(gettext_name),
     language:'c'
@@ -26,6 +28,10 @@ vala_flags = []
 
 if glib_dep.version().version_compare ('>=2.73.0')
     vala_flags += ['--define', 'HAS_GLIB_2_73']
+endif
+
+if appstream_dep.version().version_compare('>=1.0')
+    vala_flags += ['--define', 'HAS_APPSTREAM_1_0']
 endif
 
 add_project_arguments(vala_flags, language: 'vala')
