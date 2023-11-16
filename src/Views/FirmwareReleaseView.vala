@@ -214,7 +214,11 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
         summary_label.label = release.get_summary ();
         try {
+#if HAS_APPSTREAM_1_0
+            description_label.label = AppStream.markup_convert (release.get_description (), AppStream.MarkupKind.XML);
+#else
             description_label.label = AppStream.markup_convert_simple (release.get_description ());
+#endif
         } catch (Error e) {
             description_label.label = "";
             warning ("Could not convert markup of release: %s", e.message);
