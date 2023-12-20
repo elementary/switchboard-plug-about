@@ -1,5 +1,5 @@
-.logo {
-    background-image: linear-gradient(
+.card.circular {
+    background: linear-gradient(
         to bottom,
         alpha(@accent_color_500, 0.25),
         alpha(@accent_color_700, 0.75)

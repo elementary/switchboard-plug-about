@@ -53,8 +53,10 @@ public class About.OperatingSystemView : Gtk.Box {
 
                 if (file.query_exists ()) {
                     var logo = new Gtk.Image.from_file (file.get_path ()) {
+                        overflow = HIDDEN,
                         pixel_size = 128
                     };
+                    logo.add_css_class (Granite.STYLE_CLASS_CIRCULAR);
                     logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
                     logo_overlay.child = logo;
@@ -63,9 +65,9 @@ public class About.OperatingSystemView : Gtk.Box {
                     // 128 minus 3px padding on each side
                     icon.pixel_size = 128 - 6;
 
-                    unowned var icon_style_context = icon.get_style_context ();
-                    icon_style_context.add_class ("logo");
-                    icon_style_context.add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+                    icon.add_css_class (Granite.STYLE_CLASS_CARD);
+                    icon.add_css_class (Granite.STYLE_CLASS_CIRCULAR);
+                    icon.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
                     break;
                 }
