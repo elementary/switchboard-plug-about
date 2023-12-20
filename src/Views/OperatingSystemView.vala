@@ -150,10 +150,8 @@ public class About.OperatingSystemView : Gtk.Box {
         button_grid.append (settings_restore_button);
         button_grid.append (primary_button_box);
 
-
         software_grid = new Gtk.Grid () {
-            // The avatar has some built-in margin for shadows
-            column_spacing = 32 - 6,
+            column_spacing = 32,
             halign = Gtk.Align.CENTER,
             row_spacing = 6,
             valign = Gtk.Align.CENTER,
