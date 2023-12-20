@@ -134,20 +134,15 @@ public class About.OperatingSystemView : Gtk.Box {
             });
         }
 
-        var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings")) {
-            halign = START,
-            hexpand = true
-        };
+        var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
-        var button_grid = new Gtk.Box (HORIZONTAL, 6) {
-            homogeneous = true
-        };
+        var button_grid = new Gtk.Box (HORIZONTAL, 6);
         button_grid.append (settings_restore_button);
+        button_grid.append (new Gtk.Grid () { hexpand = true });
         button_grid.append (bug_button);
         if (update_button != null) {
             button_grid.append (update_button);
         }
-        button_grid.append (settings_restore_button);
 
         software_grid = new Gtk.Grid () {
             // The avatar has some built-in margin for shadows
