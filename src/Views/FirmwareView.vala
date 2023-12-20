@@ -65,7 +65,8 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
         firmware_release_view = new FirmwareReleaseView ();
 
         deck = new Adw.Leaflet () {
-            can_navigate_back = true
+            can_navigate_back = true,
+            can_unfold = false
         };
         deck.append (update_scrolled);
         deck.append (firmware_release_view);
