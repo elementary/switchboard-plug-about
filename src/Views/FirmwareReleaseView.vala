@@ -1,32 +1,18 @@
 /*
- * Copyright (c) 2021 elementary, Inc. (https://elementary.io)
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public
- * License as published by the Free Software Foundation; either
- * version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public
- * License along with this program; if not, write to the
- * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- * Boston, MA 02110-1301 USA
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2021-2023 elementary, Inc. (https://elementary.io)
  *
  * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
  */
 
-public class About.FirmwareReleaseView : Gtk.Grid {
+public class About.FirmwareReleaseView : Gtk.Box {
     public signal void update (Fwupd.Device device, Fwupd.Release release);
 
     private Fwupd.Device device;
     private Fwupd.Release? release;
     private Granite.Widgets.AlertView placeholder;
     private Gtk.ScrolledWindow scrolled_window;
-    private Gtk.Stack content;
+    private Gtk.Stack stack;
     private Gtk.Revealer update_button_revealer;
     private Gtk.Button update_button;
     private Gtk.Label title_label;
@@ -40,27 +26,34 @@ public class About.FirmwareReleaseView : Gtk.Grid {
 
     construct {
         var back_button = new Gtk.Button.with_label (_("All Updates")) {
-            halign = Gtk.Align.START,
-            margin = 6
+            halign = START,
+            margin_top = 6,
+            margin_end = 6,
+            margin_bottom = 6,
+            margin_start = 6,
         };
         back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
         title_label = new Gtk.Label ("") {
-            ellipsize = Pango.EllipsizeMode.END,
+            ellipsize = END,
             use_markup = true
         };
 
         update_button = new Gtk.Button.with_label ("") {
-            halign = Gtk.Align.END,
-            margin = 6,
+            halign = END,
+            margin_top = 6,
+            margin_end = 6,
+            margin_bottom = 6,
+            margin_start = 6,
             sensitive = false
         };
         update_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
 
-        update_button_revealer = new Gtk.Revealer ();
-        update_button_revealer.add (update_button);
+        update_button_revealer = new Gtk.Revealer () {
+            child = update_button
+        };
 
-        var header_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6) {
+        var header_box = new Gtk.Box (HORIZONTAL, 6) {
             hexpand = true
         };
         header_box.pack_start (back_button);
@@ -68,13 +61,13 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         header_box.pack_end (update_button_revealer);
 
         summary_label = new Gtk.Label ("") {
-            halign = Gtk.Align.START,
+            halign = START,
             wrap = true
         };
         summary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
         description_label = new Gtk.Label ("") {
-            halign = Gtk.Align.START,
+            halign = START,
             wrap = true
         };
 
@@ -117,7 +110,7 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         var key_val_grid = new Gtk.Grid () {
             column_homogeneous = true,
             column_spacing = 6,
-            halign = Gtk.Align.CENTER,
+            halign = CENTER,
             margin_top = 12,
             row_spacing = 3
         };
@@ -139,32 +132,33 @@ public class About.FirmwareReleaseView : Gtk.Grid {
         );
         placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
-        var grid = new Gtk.Grid () {
-            halign = Gtk.Align.CENTER,
-            margin = 12,
-            orientation = Gtk.Orientation.VERTICAL,
-            row_spacing = 12,
+        var box = new Gtk.Box (VERTICAL, 12) {
+            halign = CENTER,
+            margin_top = 12,
+            margin_end = 12,
+            margin_bottom = 12,
+            margin_start = 12,
             vexpand = true
         };
-        grid.add (summary_label);
-        grid.add (description_label);
-        grid.add (key_val_grid);
+        box.add (summary_label);
+        box.add (description_label);
+        box.add (key_val_grid);
 
         scrolled_window = new Gtk.ScrolledWindow (null, null) {
-            hscrollbar_policy = Gtk.PolicyType.NEVER,
+            child = box,
+            hscrollbar_policy = NEVER,
             vexpand = true
         };
-        scrolled_window.add (grid);
 
-        content = new Gtk.Stack ();
-        content.add (placeholder);
-        content.add (scrolled_window);
+        stack = new Gtk.Stack ();
+        stack.add (placeholder);
+        stack.add (scrolled_window);
 
-        orientation = Gtk.Orientation.VERTICAL;
+        orientation = VERTICAL;
         get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
         add (header_box);
-        add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-        add (content);
+        add (new Gtk.Separator (HORIZONTAL));
+        add (stack);
         show_all ();
 
         back_button.clicked.connect (() => {
@@ -196,12 +190,12 @@ public class About.FirmwareReleaseView : Gtk.Grid {
                 placeholder.icon_name = "application-x-firmware";
             }
 
-            content.visible_child = placeholder;
+            stack.visible_child = placeholder;
 
             return;
         }
 
-        content.visible_child = scrolled_window;
+        stack.visible_child = scrolled_window;
 
         var release_version = release.get_version ();
         if (release.get_flags () == Fwupd.RELEASE_FLAG_IS_UPGRADE && release_version != device.get_version ()) {
@@ -242,6 +236,6 @@ public class About.FirmwareReleaseView : Gtk.Grid {
             deck = (Hdy.Deck) get_ancestor (typeof (Hdy.Deck));
         }
 
-        deck.navigate (Hdy.NavigationDirection.BACK);
+        deck.navigate (BACK);
     }
 }
