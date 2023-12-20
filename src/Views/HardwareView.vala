@@ -67,7 +67,7 @@ public class About.HardwareView : Gtk.Box {
             xalign = 0
         };
 
-        graphics_box = new Gtk.Grid (VERTICAL, 6);
+        graphics_box = new Gtk.Box (VERTICAL, 6);
         graphics_box.add (primary_graphics_info);
 
         storage_info = new Gtk.Label (_("Unknown storage")) {
@@ -76,7 +76,7 @@ public class About.HardwareView : Gtk.Box {
             xalign = 0
         };
 
-        var details_box = new Gtk.BOX (VERTICAL, 6);
+        var details_box = new Gtk.Box (VERTICAL, 6);
 
         manufacturer_logo = new Gtk.Image () {
             halign = END,
