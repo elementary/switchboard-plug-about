@@ -136,13 +136,20 @@ public class About.OperatingSystemView : Gtk.Box {
 
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
+        var primary_button_box = new Gtk.Box (HORIZONTAL, 6) {
+            hexpand = true,
+            halign = END,
+            homogeneous = true
+        };
+        primary_button_box.append (bug_button);
+        if (update_button != null) {
+            primary_button_box.append (update_button);
+        }
+
         var button_grid = new Gtk.Box (HORIZONTAL, 6);
         button_grid.append (settings_restore_button);
-        button_grid.append (new Gtk.Grid () { hexpand = true });
-        button_grid.append (bug_button);
-        if (update_button != null) {
-            button_grid.append (update_button);
-        }
+        button_grid.append (primary_button_box);
+
 
         software_grid = new Gtk.Grid () {
             // The avatar has some built-in margin for shadows
