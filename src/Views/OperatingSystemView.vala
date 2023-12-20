@@ -45,23 +45,19 @@ public class About.OperatingSystemView : Gtk.Box {
 
         var logo_overlay = new Gtk.Overlay ();
 
-        if (Gtk.IconTheme.get_default ().has_icon (logo_icon_name + "-symbolic")) {
+        if (Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).has_icon (logo_icon_name + "-symbolic")) {
             foreach (unowned var path in Environment.get_system_data_dirs ()) {
                 var file = File.new_for_path (
                     Path.build_path (Path.DIR_SEPARATOR_S, path, "backgrounds", "elementaryos-default")
                 );
 
                 if (file.query_exists ()) {
-                    var file_icon = new FileIcon (file);
-
-                    var logo = new Hdy.Avatar (128, "", false) {
-                        loadable_icon = file_icon,
-                        // We need this for the shadow to not get clipped by Gtk.Overlay
-                        margin = 6
+                    var logo = new Gtk.Image.from_file (file.get_path ()) {
+                        pixel_size = 128
                     };
                     logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-                    logo_overlay.add (logo);
+                    logo_overlay.child = logo;
                     logo_overlay.add_overlay (icon);
 
                     // 128 minus 3px padding on each side
@@ -78,7 +74,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         if (icon.parent == null) {
             icon.pixel_size = 128;
-            logo_overlay.add (icon);
+            logo_overlay.child = icon;
         }
 
         // Intentionally not using GLib.OsInfoKey.PRETTY_NAME here because we
@@ -136,19 +132,20 @@ public class About.OperatingSystemView : Gtk.Box {
             });
         }
 
-        var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
-
-        var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
-            hexpand = true,
-            layout_style = Gtk.ButtonBoxStyle.END,
-            spacing = 6
+        var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings")) {
+            halign = START,
+            hexpand = true
         };
-        button_grid.add (settings_restore_button);
-        button_grid.add (bug_button);
+
+        var button_grid = new Gtk.Box (HORIZONTAL, 6) {
+            homogeneous = true
+        };
+        button_grid.append (settings_restore_button);
+        button_grid.append (bug_button);
         if (update_button != null) {
-            button_grid.add (update_button);
+            button_grid.append (update_button);
         }
-        button_grid.set_child_secondary (settings_restore_button, true);
+        button_grid.append (settings_restore_button);
 
         software_grid = new Gtk.Grid () {
             // The avatar has some built-in margin for shadows
@@ -166,7 +163,10 @@ public class About.OperatingSystemView : Gtk.Box {
         software_grid.attach (help_button, 2, 3);
         software_grid.attach (translate_button, 3, 3);
 
-        margin = 12;
+        margin_top = 12;
+        margin_end = 12;
+        margin_bottom = 12;
+        margin_start = 12;
         orientation = Gtk.Orientation.VERTICAL;
         spacing = 12;
         append (software_grid);
