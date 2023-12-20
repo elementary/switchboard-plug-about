@@ -24,7 +24,7 @@ public class About.HardwareView : Gtk.Box {
 
     private Gtk.Label primary_graphics_info;
     private Gtk.Label secondary_graphics_info;
-    private Gtk.Grid graphics_box;
+    private Gtk.Box graphics_box;
 
     private Gtk.Label storage_info;
 
