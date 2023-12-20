@@ -153,7 +153,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
         stack.add_child (scrolled_window);
 
         orientation = VERTICAL;
-        get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        get_style_context ().add_class (Granite.STYLE_CLASS_VIEW);
         append (header_box);
         append (new Gtk.Separator (HORIZONTAL));
         append (stack);

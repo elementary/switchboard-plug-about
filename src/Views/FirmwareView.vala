@@ -103,10 +103,8 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
     }
 
     private async void update_list_view () {
-        foreach (unowned Gtk.Widget widget in update_list.get_children ()) {
-            if (widget is Widgets.FirmwareUpdateRow) {
-                update_list.remove (widget);
-            }
+        while (update_list.get_row_at_index (0) != null) {
+            update_list.remove (update_list.get_row_at_index (0));
         }
 
         num_updates = 0;
@@ -176,19 +174,27 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
     private void on_device_removed (Fwupd.Client client, Fwupd.Device device) {
         debug ("Removed device: %s", device.get_name ());
 
-        foreach (unowned Gtk.Widget widget in update_list.get_children ()) {
-            if (widget is Widgets.FirmwareUpdateRow) {
-                var row = (Widgets.FirmwareUpdateRow) widget;
+        unowned var child = update_list.get_first_child ();
+        while (child != null) {
+            Widgets.FirmwareUpdateRow row = null;
+            if (child is Widgets.FirmwareUpdateRow) {
+                row = (Widgets.FirmwareUpdateRow) child;
+            }
+
+            child = child.get_next_sibling ();
+
+            if (row != null) {
                 if (row.device.get_id () == device.get_id ()) {
                     if (row.is_updatable) {
                         num_updates--;
                     }
 
-                    update_list.remove (widget);
-                    update_list.invalidate_sort ();
+                    update_list.remove (row);
                 }
             }
         }
+
+        update_list.invalidate_sort ();
     }
 
     [CCode (instance_pos = -1)]
@@ -207,30 +213,15 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
     [CCode (instance_pos = -1)]
     private void header_rows (Widgets.FirmwareUpdateRow row1, Widgets.FirmwareUpdateRow? row2) {
         if (row2 == null && row1.is_updatable) {
-            var header = new FirmwareHeaderRow (
+            var header = new Granite.HeaderLabel (
                 dngettext (GETTEXT_PACKAGE, "%u Update Available", "%u Updates Available", num_updates).printf (num_updates)
             );
             row1.set_header (header);
         } else if (row2 == null || row1.is_updatable != row2.is_updatable) {
-            var header = new FirmwareHeaderRow (_("Up to Date"));
+            var header = new Granite.HeaderLabel (_("Up to Date"));
             row1.set_header (header);
         } else {
             row1.set_header (null);
-        }
-    }
-
-    private class FirmwareHeaderRow : Gtk.Label {
-        public FirmwareHeaderRow (string label) {
-            Object (label: label);
-        }
-
-        construct {
-            xalign = 0;
-            margin_top = 3;
-            margin_end = 3;
-            margin_bottom = 3;
-            margin_start = 3;
-            add_css_class (Granite.STYLE_CLASS_H4_LABEL);
         }
     }
 
