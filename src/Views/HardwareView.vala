@@ -122,7 +122,6 @@ public class About.HardwareView : Gtk.Box {
             ) {
                 halign = START,
                 margin_top = 12
-                // xalign = 0
             };
 
             details_box.append (manufacturer_website_info);
