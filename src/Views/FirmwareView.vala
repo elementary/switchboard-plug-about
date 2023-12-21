@@ -42,13 +42,11 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             description = _("Do not unplug the device during the update."),
             icon = new ThemedIcon ("emblem-synchronized")
         };
-        progress_alert_view.get_style_context ().remove_class (Granite.STYLE_CLASS_VIEW);
 
         placeholder_alert_view = new Granite.Placeholder (_("Checking for Updates")) {
             description = _("Connecting to the firmware service and searching for updates."),
             icon = new ThemedIcon ("sync-synchronizing")
         };
-        placeholder_alert_view.get_style_context ().remove_class (Granite.STYLE_CLASS_VIEW);
 
         update_list = new Gtk.ListBox () {
             vexpand = true,
