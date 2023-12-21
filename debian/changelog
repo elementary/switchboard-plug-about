@@ -1,10 +1,10 @@
-switchboard-plug-about (6.2.0) jammy; urgency=medium
+io.elementary.settings.system (6.2.0) jammy; urgency=medium
 
   * Release 6.2.0
 
  -- Danielle Foré <danielle@elementary.io>  Thu, 26 Jan 2023 13:28:00 -0800
 
-switchboard-plug-about (6.1.0) bionic; urgency=medium
+io.elementary.settings.system (6.1.0) bionic; urgency=medium
 
   * Release 6.1.0 (#247)
   * README: Update oem.conf documentation
@@ -22,7 +22,7 @@ switchboard-plug-about (6.1.0) bionic; urgency=medium
 
  -- elementary OS Team <builds@elementary.io>  Wed, 06 Apr 2022 18:15:58 +0000
 
-switchboard-plug-about (6.0.1) bionic; urgency=medium
+io.elementary.settings.system (6.0.1) bionic; urgency=medium
 
   * Release 6.0.1 (#232)
   * fwupd: Remove call to connect (#230)
@@ -35,7 +35,7 @@ switchboard-plug-about (6.0.1) bionic; urgency=medium
 
  -- elementary OS Team <builds@elementary.io>  Tue, 24 Aug 2021 20:35:43 +0000
 
-switchboard-plug-about (6.0.0) bionic; urgency=medium
+io.elementary.settings.system (6.0.0) bionic; urgency=medium
 
   * Release 6.0.0 (#221)
   * Handle long hardware names (#214)
@@ -90,21 +90,21 @@ switchboard-plug-about (6.0.0) bionic; urgency=medium
 
  -- elementary OS Team <builds@elementary.io>  Thu, 15 Jul 2021 22:24:07 +0000
 
-switchboard-plug-about (2.6.3) bionic; urgency=medium
+io.elementary.settings.system (2.6.3) bionic; urgency=medium
 
   * Release 2.6.3 (#122)
   * AppData: Add Icon & Gettext domain (#118)
 
  -- elementary OS Team <builds@elementary.io>  Thu, 28 May 2020 18:42:17 +0000
 
-switchboard-plug-about (2.6.2) bionic; urgency=medium
+io.elementary.settings.system (2.6.2) bionic; urgency=medium
 
   * Release 2.6.2 (#117)
   * Update translation files
 
  -- elementary OS Team <builds@elementary.io>  Wed, 08 Apr 2020 20:32:42 +0000
 
-switchboard-plug-about (2.6.1) bionic; urgency=medium
+io.elementary.settings.system (2.6.1) bionic; urgency=medium
 
   * Release 2.6.1 (#111)
   * Update translation template
@@ -122,91 +122,91 @@ switchboard-plug-about (2.6.1) bionic; urgency=medium
 
  -- elementary OS Team <builds@elementary.io>  Fri, 15 Nov 2019 22:28:17 +0000
 
-switchboard-plug-about (2.6.0) bionic; urgency=medium
+io.elementary.settings.system (2.6.0) bionic; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <codygarver@gmail.com>  Tue, 17 Sep 2019 09:40:40 -0500
 
-switchboard-plug-about (2.5.2) bionic; urgency=medium
+io.elementary.settings.system (2.5.2) bionic; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Tue, 04 Dec 2018 10:36:36 -0600
 
-switchboard-plug-about (2.5.1) bionic; urgency=medium
+io.elementary.settings.system (2.5.1) bionic; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Mon, 15 Oct 2018 18:30:48 -0500
 
-switchboard-plug-about (0.2.5) bionic; urgency=medium
+io.elementary.settings.system (0.2.5) bionic; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Fri, 08 Jun 2018 08:14:40 -0500
 
-switchboard-plug-about (0.2.4) xenial; urgency=medium
+io.elementary.settings.system (0.2.4) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Thu, 21 Sep 2017 12:04:50 -0500
 
-switchboard-plug-about (0.2.3.1) xenial; urgency=medium
+io.elementary.settings.system (0.2.3.1) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Thu, 22 Jun 2017 05:25:18 -0500
 
-switchboard-plug-about (0.2.3) xenial; urgency=medium
+io.elementary.settings.system (0.2.3) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Tue, 13 Jun 2017 13:32:19 -0500
 
-switchboard-plug-about (0.2.2) xenial; urgency=medium
+io.elementary.settings.system (0.2.2) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Wed, 19 Apr 2017 02:04:54 -0500
 
-switchboard-plug-about (0.2.1.1) xenial; urgency=medium
+io.elementary.settings.system (0.2.1.1) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Tue, 20 Sep 2016 13:30:00 -0500
 
-switchboard-plug-about (0.2.1) xenial; urgency=medium
+io.elementary.settings.system (0.2.1) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Thu, 11 Aug 2016 00:49:38 -0500
 
-switchboard-plug-about (0.2.0.1) trusty; urgency=medium
+io.elementary.settings.system (0.2.0.1) trusty; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Tue, 10 Nov 2015 06:30:31 -0600
 
-switchboard-plug-about (0.2.0) trusty; urgency=low
+io.elementary.settings.system (0.2.0) trusty; urgency=low
 
   * New upstream release.
 
  -- Cody Garver <cody@elementaryos.org>  Mon, 06 Apr 2015 19:07:09 -0500
 
-switchboard-plug-about (0.1.2) trusty; urgency=low
+io.elementary.settings.system (0.1.2) trusty; urgency=low
 
   * New upstream release.
 
  -- Cody Garver <cody@elementaryos.org>  Sat, 10 Aug 2013 23:46:06 -0500
 
-switchboard-plug-about (0.1.1) precise; urgency=low
+io.elementary.settings.system (0.1.1) precise; urgency=low
 
   * New upstream release.
 
  -- Cody Garver <cody@elementaryos.org>  Sun, 09 Jun 2013 19:27:30 -0500
 
-switchboard-plug-about (0.1) unstable; urgency=low
+io.elementary.settings.system (0.1) unstable; urgency=low
 
   * Initial Release.
 
