@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
-  <id>io.elementary.switchboard.about</id>
-  <extends>io.elementary.switchboard</extends>
+  <id>io.elementary.settings.system</id>
+  <extends>io.elementary.settings</extends>
   <name>System</name>
   <summary>View operating system and hardware information</summary>
   <icon type="stock">application-x-firmware</icon>
-  <translation type="gettext">about-plug</translation>
+  <translation type="gettext">io.elementary.settings.system</translation>
 
   <releases>
     <release version="6.2.0" date="2023-01-26" urgency="medium">
@@ -91,13 +91,13 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/master/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/main/data/screenshot.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/master/data/screenshot-hardware.png</image>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/main/data/screenshot-hardware.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/master/data/screenshot-firmware.png</image>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/main/data/screenshot-firmware.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>

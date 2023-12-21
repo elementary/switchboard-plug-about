@@ -1,10 +1,10 @@
 project(
-    'about',
+    'system',
     'vala', 'c',
     version: '6.2.0'
 )
 
-gettext_name = meson.project_name() + '-plug'
+gettext_name = 'io.elementary.settings.' + meson.project_name()
 gnome = import('gnome')
 i18n = import('i18n')
 
