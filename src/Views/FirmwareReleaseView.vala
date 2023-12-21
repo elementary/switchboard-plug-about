@@ -128,7 +128,6 @@ public class About.FirmwareReleaseView : Gtk.Box {
         placeholder = new Granite.Placeholder ("") {
             description = _("There are no releases available for this device.")
         };
-        placeholder.get_style_context ().remove_class (Granite.STYLE_CLASS_VIEW);
 
         var box = new Gtk.Box (VERTICAL, 12) {
             halign = CENTER,
