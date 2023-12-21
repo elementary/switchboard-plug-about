@@ -40,7 +40,7 @@ public class About.HardwareView : Gtk.Box {
             selectable = true,
             xalign = 0
         };
-        product_name_info.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
+        product_name_info.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
         var processor_info = new Gtk.Label (processor) {
             ellipsize = MIDDLE,
@@ -99,7 +99,7 @@ public class About.HardwareView : Gtk.Box {
                 selectable = true,
                 xalign = 0
             };
-            manufacturer_info.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+            manufacturer_info.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
             details_box.append (product_name_info);
             details_box.append (manufacturer_info);

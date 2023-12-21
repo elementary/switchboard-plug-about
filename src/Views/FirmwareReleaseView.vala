@@ -32,7 +32,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
             margin_bottom = 6,
             margin_start = 6,
         };
-        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
+        back_button.add_css_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
         title_label = new Gtk.Label ("") {
             ellipsize = END,
@@ -47,7 +47,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
             margin_start = 6,
             sensitive = false
         };
-        update_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+        update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         update_button_revealer = new Gtk.Revealer () {
             child = update_button
@@ -64,7 +64,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
             halign = START,
             wrap = true
         };
-        summary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
+        summary_label.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
         description_label = new Gtk.Label ("") {
             halign = START,
@@ -114,7 +114,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
             margin_top = 12,
             row_spacing = 3
         };
-        key_val_grid.get_style_context ().add_class (Granite.STYLE_CLASS_DIM_LABEL);
+        key_val_grid.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
         key_val_grid.attach (version_label, 0, 0);
         key_val_grid.attach (version_value_label, 1, 0);
@@ -153,7 +153,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
         stack.add_child (scrolled_window);
 
         orientation = VERTICAL;
-        get_style_context ().add_class (Granite.STYLE_CLASS_VIEW);
+        add_css_class (Granite.STYLE_CLASS_VIEW);
         append (header_box);
         append (new Gtk.Separator (HORIZONTAL));
         append (stack);
