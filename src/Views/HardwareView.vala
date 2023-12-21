@@ -1,26 +1,12 @@
 /*
-* Copyright 2017–2021 elementary, Inc. (https://elementary.io)
-*           2020 Justin Haygood <jhaygood86@gmail.com>
-*           2010 Red Hat, Inc
-*           2008 William Jon McCann <jmccann@redhat.com>
-*
-* This program is free software; you can redistribute it and/or
-* modify it under the terms of the GNU General Public
-* License as published by the Free Software Foundation; either
-* version 3 of the License, or (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-* General Public License for more details.
-*
-* You should have received a copy of the GNU General Public
-* License along with this program; if not, write to the
-* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-* Boston, MA 02110-1301 USA
-*/
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2017–2023 elementary, Inc. (https://elementary.io)
+ *                         2020 Justin Haygood <jhaygood86@gmail.com>
+ *                         2010 Red Hat, Inc
+ *                         2008 William Jon McCann <jmccann@redhat.com>
+ */
 
-public class About.HardwareView : Gtk.Grid {
+public class About.HardwareView : Gtk.Box {
     private bool oem_enabled;
     private string manufacturer_icon_path;
     private string? manufacturer_icon_dark_path = null;
@@ -38,7 +24,7 @@ public class About.HardwareView : Gtk.Grid {
 
     private Gtk.Label primary_graphics_info;
     private Gtk.Label secondary_graphics_info;
-    private Gtk.Grid graphics_grid;
+    private Gtk.Box graphics_box;
 
     private Gtk.Label storage_info;
 
@@ -50,57 +36,50 @@ public class About.HardwareView : Gtk.Grid {
         fetch_hardware_info ();
 
         var product_name_info = new Gtk.Label (get_host_name ()) {
-            ellipsize = Pango.EllipsizeMode.MIDDLE,
+            ellipsize = MIDDLE,
             selectable = true,
             xalign = 0
         };
         product_name_info.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
 
         var processor_info = new Gtk.Label (processor) {
-            ellipsize = Pango.EllipsizeMode.MIDDLE,
+            ellipsize = MIDDLE,
             margin_top = 12,
             selectable = true,
             xalign = 0
         };
 
         var memory_info = new Gtk.Label (_("%s memory").printf (memory)) {
-            ellipsize = Pango.EllipsizeMode.MIDDLE,
+            ellipsize = MIDDLE,
             selectable = true,
             xalign = 0
         };
 
         primary_graphics_info = new Gtk.Label (_("Unknown Graphics")) {
-            ellipsize = Pango.EllipsizeMode.MIDDLE,
+            ellipsize = MIDDLE,
             selectable = true,
             xalign = 0
         };
 
         secondary_graphics_info = new Gtk.Label (null) {
-            ellipsize = Pango.EllipsizeMode.MIDDLE,
+            ellipsize = MIDDLE,
             selectable = true,
             xalign = 0
         };
 
-        graphics_grid = new Gtk.Grid () {
-            orientation = Gtk.Orientation.VERTICAL,
-            row_spacing = 6
-        };
-
-        graphics_grid.add (primary_graphics_info);
+        graphics_box = new Gtk.Box (VERTICAL, 6);
+        graphics_box.add (primary_graphics_info);
 
         storage_info = new Gtk.Label (_("Unknown storage")) {
-            ellipsize = Pango.EllipsizeMode.MIDDLE,
+            ellipsize = MIDDLE,
             selectable = true,
             xalign = 0
         };
 
-        var details_grid = new Gtk.Grid () {
-            orientation = Gtk.Orientation.VERTICAL,
-            row_spacing = 6
-        };
+        var details_box = new Gtk.Box (VERTICAL, 6);
 
         manufacturer_logo = new Gtk.Image () {
-            halign = Gtk.Align.END,
+            halign = END,
             pixel_size = 128,
             use_fallback = true
         };
@@ -116,46 +95,46 @@ public class About.HardwareView : Gtk.Grid {
             }
 
             var manufacturer_info = new Gtk.Label (manufacturer_name) {
-                ellipsize = Pango.EllipsizeMode.MIDDLE,
+                ellipsize = MIDDLE,
                 selectable = true,
                 xalign = 0
             };
             manufacturer_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
 
-            details_grid.add (product_name_info);
-            details_grid.add (manufacturer_info);
+            details_box.add (product_name_info);
+            details_box.add (manufacturer_info);
         } else {
-            details_grid.add (product_name_info);
+            details_box.add (product_name_info);
         }
 
         update_manufacturer_logo ();
 
-        details_grid.add (processor_info);
-        details_grid.add (graphics_grid);
+        details_box.add (processor_info);
+        details_box.add (graphics_box);
 
-        details_grid.add (memory_info);
-        details_grid.add (storage_info);
+        details_box.add (memory_info);
+        details_box.add (storage_info);
 
         if (oem_enabled && manufacturer_support_url != null) {
             var manufacturer_website_info = new Gtk.LinkButton.with_label (
                 manufacturer_support_url,
                 _("Manufacturer Website")
             ) {
-                halign = Gtk.Align.START,
+                halign = START,
                 margin_top = 12,
                 xalign = 0
             };
 
-            details_grid.add (manufacturer_website_info);
+            details_box.add (manufacturer_website_info);
         }
 
         margin_start = 16;
         margin_end = 16;
-        column_spacing = 32;
-        halign = Gtk.Align.CENTER;
+        spacing = 32;
+        halign = CENTER;
 
         add (manufacturer_logo);
-        add (details_grid);
+        add (details_box);
 
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             update_manufacturer_logo ();
@@ -337,8 +316,8 @@ public class About.HardwareView : Gtk.Grid {
         var secondary_gpu = yield get_gpu_info (false);
         if (secondary_gpu != null) {
             secondary_graphics_info.label = secondary_gpu;
-            graphics_grid.add (secondary_graphics_info);
-            graphics_grid.show_all ();
+            graphics_box.add (secondary_graphics_info);
+            graphics_box.show_all ();
         }
     }
 
