@@ -70,6 +70,13 @@ public class About.Plug : Switchboard.Plug {
                 stack = stack
             };
 
+            var size_group = new Gtk.SizeGroup (HORIZONTAL);
+            var child = stack_switcher.get_first_child ();
+            while (child != null) {
+                size_group.add_widget (child);
+                child = child.get_next_sibling ();
+            }
+
             main_grid = new Gtk.Grid () {
                 row_spacing = 12
             };
