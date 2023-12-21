@@ -1,4 +1,4 @@
-# Switchboard System Plug
+# System Settings
 [![Translation status](https://l10n.elementary.io/widgets/switchboard/-/switchboard-plug-about/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
 ![screenshot](data/screenshot.png?raw=true)
@@ -32,7 +32,7 @@ To install, use `ninja install`
 
 ## OEM Configuration
 
-The Switchboard System plug can load OEM information supplied by an `oem.conf` file placed in `/etc` with the following format:
+System Settings can load OEM information supplied by an `oem.conf` file placed in `/etc` with the following format:
 
 ```ini
 [OEM]

@@ -25,7 +25,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
     construct {
         var style_provider = new Gtk.CssProvider ();
-        style_provider.load_from_resource ("io/elementary/switchboard/system/OperatingSystemView.css");
+        style_provider.load_from_resource ("io/elementary/settings/system/OperatingSystemView.css");
 
         var uts_name = Posix.utsname ();
 
