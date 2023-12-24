@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 13:04+0000\n"
+"POT-Creation-Date: 2023-12-24 16:02+0000\n"
 "PO-Revision-Date: 2023-02-28 18:25+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -37,79 +37,79 @@ msgstr "Операционная система"
 msgid "Hardware"
 msgstr "Оборудование"
 
-#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:117 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Прошивка"
 
-#: src/Plug.vala:110
+#: src/Plug.vala:115
 msgid "Operating System Information"
 msgstr "Сведения об операционной системе"
 
-#: src/Plug.vala:111
+#: src/Plug.vala:116
 msgid "Hardware Information"
 msgstr "Сведения об оборудовании"
 
-#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:130
+#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:133
 msgid "Restore Default Settings"
 msgstr "Восстановить настройки"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:114
+#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:117
 msgid "Suggest Translations"
 msgstr "Предложить перевод"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:122
 msgid "Send Feedback"
 msgstr "Отправить отзыв"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:121
 msgid "Report a Problem"
 msgstr "Сообщить об ошибке"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:106
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:109
 msgid "Get Support"
 msgstr "Получить поддержку"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:123
 msgid "Updates"
 msgstr "Обновления"
 
-#: src/Views/FirmwareReleaseView.vala:42
+#: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
 msgstr "Все обновления"
 
-#: src/Views/FirmwareReleaseView.vala:81
+#: src/Views/FirmwareReleaseView.vala:74
 msgid "Version:"
 msgstr "Версия:"
 
-#: src/Views/FirmwareReleaseView.vala:90
+#: src/Views/FirmwareReleaseView.vala:83
 msgid "Vendor:"
 msgstr "Поставщик:"
 
-#: src/Views/FirmwareReleaseView.vala:99
+#: src/Views/FirmwareReleaseView.vala:92
 msgid "Size:"
 msgstr "Размер:"
 
-#: src/Views/FirmwareReleaseView.vala:108
+#: src/Views/FirmwareReleaseView.vala:101
 msgid "Estimated time to install:"
 msgstr "Примерное время установки:"
 
-#: src/Views/FirmwareReleaseView.vala:137
+#: src/Views/FirmwareReleaseView.vala:129
 msgid "There are no releases available for this device."
 msgstr "Для этого устройства нет выпусков."
 
-#: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
+#: src/Views/FirmwareReleaseView.vala:198 src/Widgets/FirmwareUpdateRow.vala:73
 msgid "Update"
 msgstr "Обновление"
 
-#: src/Views/FirmwareReleaseView.vala:211
+#: src/Views/FirmwareReleaseView.vala:201
 msgid "Up to date"
 msgstr "В актуальном состоянии"
 
-#: src/Views/FirmwareReleaseView.vala:228
+#: src/Views/FirmwareReleaseView.vala:222
 msgid "less than a minute"
 msgstr "меньше минуты"
 
-#: src/Views/FirmwareReleaseView.vala:230
+#: src/Views/FirmwareReleaseView.vala:224
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
@@ -125,40 +125,40 @@ msgstr ""
 "Обновления прошивки, предоставляемые производителями устройств, могут "
 "повысить производительность и устранить критические проблемы безопасности."
 
-#: src/Views/FirmwareView.vala:43
+#: src/Views/FirmwareView.vala:42
 msgid "Do not unplug the device during the update."
 msgstr "Не отключайте устройство во время обновления."
 
-#: src/Views/FirmwareView.vala:49
+#: src/Views/FirmwareView.vala:46
 msgid "Checking for Updates"
 msgstr "Проверка обновлений"
 
-#: src/Views/FirmwareView.vala:50
+#: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Подключение к службе прошивки и поиск обновлений."
 
-#: src/Views/FirmwareView.vala:88
+#: src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
 msgstr "Перезагрузиться в BIOS…"
 
-#: src/Views/FirmwareView.vala:121
+#: src/Views/FirmwareView.vala:117
 msgid "Firmware Updates Are Not Available"
 msgstr "Обновления прошивки недоступны"
 
-#: src/Views/FirmwareView.vala:122
+#: src/Views/FirmwareView.vala:118
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Обновления прошивки не поддерживаются этим и любым подключённым устройством."
 
-#: src/Views/FirmwareView.vala:125
+#: src/Views/FirmwareView.vala:120
 msgid "The Firmware Service Is Not Available"
 msgstr "Служба прошивки недоступна"
 
-#: src/Views/FirmwareView.vala:126
+#: src/Views/FirmwareView.vala:121
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Убедитесь, что «fwupd» установлен и включён."
 
-#: src/Views/FirmwareView.vala:217
+#: src/Views/FirmwareView.vala:216
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
@@ -166,57 +166,57 @@ msgstr[0] "Доступно %u обновление"
 msgstr[1] "Доступно %u обновления"
 msgstr[2] "Доступно %u обновлений"
 
-#: src/Views/FirmwareView.vala:221
+#: src/Views/FirmwareView.vala:220
 msgid "Up to Date"
 msgstr "Обновления не требуются"
 
-#: src/Views/FirmwareView.vala:241
+#: src/Views/FirmwareView.vala:228
 #, c-format
 msgid "“%s” is being updated"
 msgstr "«%s» обновляется"
 
-#: src/Views/FirmwareView.vala:312
+#: src/Views/FirmwareView.vala:311
 msgid "Failed to install firmware release"
 msgstr "Не удалось установить версию прошивки"
 
-#: src/Views/FirmwareView.vala:333
+#: src/Views/FirmwareView.vala:332
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "«%s» нужно вручную перевести в режим обновления"
 
-#: src/Views/FirmwareView.vala:342
+#: src/Views/FirmwareView.vala:341
 msgid "Continue"
 msgstr "Продолжить"
 
-#: src/Views/FirmwareView.vala:360
+#: src/Views/FirmwareView.vala:354
 msgid "An update requires the system to restart to complete"
 msgstr "Обновление требует перезагрузки системы для завершения"
 
-#: src/Views/FirmwareView.vala:361
+#: src/Views/FirmwareView.vala:355
 msgid "This will close all open applications and restart this device."
 msgstr "Это закроет все открытые приложения и перезапустит данное устройство."
 
-#: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
+#: src/Views/FirmwareView.vala:363 src/Views/FirmwareView.vala:412
 msgid "Restart"
 msgstr "Перезагрузить"
 
-#: src/Views/FirmwareView.vala:382
+#: src/Views/FirmwareView.vala:378
 msgid "An update requires the system to shut down to complete"
 msgstr "Обновление требует завершения работы системы"
 
-#: src/Views/FirmwareView.vala:383
+#: src/Views/FirmwareView.vala:379
 msgid "This will close all open applications and turn off this device."
 msgstr "Это закроет все открытые приложения и выключит данное устройство."
 
-#: src/Views/FirmwareView.vala:391
+#: src/Views/FirmwareView.vala:387
 msgid "Shut Down"
 msgstr "Выключить"
 
-#: src/Views/FirmwareView.vala:404
+#: src/Views/FirmwareView.vala:402
 msgid "Restart to firmware setup"
 msgstr "Перезагрузиться в BIOS"
 
-#: src/Views/FirmwareView.vala:405
+#: src/Views/FirmwareView.vala:403
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
@@ -224,88 +224,88 @@ msgstr ""
 "Это закроет все открытые приложения, перезапустит данное устройство и "
 "откроет BIOS."
 
-#: src/Views/FirmwareView.vala:429
+#: src/Views/FirmwareView.vala:427
 msgid "Unable to restart to firmware setup"
 msgstr "Не удалось перезагрузиться в BIOS"
 
-#: src/Views/FirmwareView.vala:430
+#: src/Views/FirmwareView.vala:428
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr "Системная ошибка препятствует автоматической перезагрузке в BIOS."
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:52
 #, c-format
 msgid "%s memory"
 msgstr "Память: %s"
 
-#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
+#: src/Views/HardwareView.vala:58 src/Views/HardwareView.vala:308
 msgid "Unknown Graphics"
 msgstr "Неизвестная графика"
 
-#: src/Views/HardwareView.vala:91
+#: src/Views/HardwareView.vala:73
 msgid "Unknown storage"
 msgstr "Неизвестное хранилище"
 
-#: src/Views/HardwareView.vala:142
+#: src/Views/HardwareView.vala:121
 msgid "Manufacturer Website"
 msgstr "Сайт производителя"
 
-#: src/Views/HardwareView.vala:254
+#: src/Views/HardwareView.vala:232
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Двухъядерный %s"
 
-#: src/Views/HardwareView.vala:256
+#: src/Views/HardwareView.vala:234
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Четырёхъядерный %s"
 
-#: src/Views/HardwareView.vala:258
+#: src/Views/HardwareView.vala:236
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Шестиядерный %s"
 
-#: src/Views/HardwareView.vala:371
+#: src/Views/HardwareView.vala:348
 msgid "Unknown Processor"
 msgstr "Неизвестный процессор"
 
-#: src/Views/HardwareView.vala:444
+#: src/Views/HardwareView.vala:421
 msgid "Unknown"
 msgstr "Неизвестно"
 
-#: src/Views/HardwareView.vala:499
+#: src/Views/HardwareView.vala:476
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s хранилища (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:501
+#: src/Views/HardwareView.vala:478
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s хранилища (eMMC)"
 
-#: src/Views/HardwareView.vala:503
+#: src/Views/HardwareView.vala:480
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s хранилища (SATA SSD)"
 
-#: src/Views/HardwareView.vala:506
+#: src/Views/HardwareView.vala:483
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s хранилища (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:511
+#: src/Views/HardwareView.vala:488
 #, c-format
 msgid "%s storage"
 msgstr "%s хранилища"
 
-#: src/Views/HardwareView.vala:610
+#: src/Views/HardwareView.vala:587
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "байт"
 msgstr[1] "байта"
 msgstr[2] "байтов"
 
-#: src/Views/HardwareView.vala:612
+#: src/Views/HardwareView.vala:589
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
@@ -313,30 +313,30 @@ msgstr[0] "%u байт"
 msgstr[1] "%u байта"
 msgstr[2] "%u байтов"
 
-#: src/Views/HardwareView.vala:619
+#: src/Views/HardwareView.vala:596
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:101
+#: src/Views/OperatingSystemView.vala:104
 msgid "Website"
 msgstr "Веб-сайт"
 
-#: src/Views/OperatingSystemView.vala:124
+#: src/Views/OperatingSystemView.vala:127
 msgid "Check for Updates"
 msgstr "Проверить обновления"
 
-#: src/Views/OperatingSystemView.vala:219
+#: src/Views/OperatingSystemView.vala:221
 #, c-format
 msgid "Built on %s"
 msgstr "Построена на базе %s"
 
-#: src/Views/OperatingSystemView.vala:241
+#: src/Views/OperatingSystemView.vala:239
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Системные настройки будут восстановлены до настроек по умолчанию"
 
-#: src/Views/OperatingSystemView.vala:242
+#: src/Views/OperatingSystemView.vala:240
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -344,7 +344,7 @@ msgstr ""
 "Все системные настройки и данные будут сброшены до значений по умолчанию. "
 "Личные данные, такие как музыка и изображения, не будут затронуты."
 
-#: src/Views/OperatingSystemView.vala:248
+#: src/Views/OperatingSystemView.vala:246
 msgid "Restore Settings"
 msgstr "Восстановить настройки"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 13:04+0000\n"
+"POT-Creation-Date: 2023-12-24 16:02+0000\n"
 "PO-Revision-Date: 2023-02-04 12:25+0000\n"
 "Last-Translator: imgradeone Yan <imgradeone@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -36,79 +36,79 @@ msgstr "系统"
 msgid "Hardware"
 msgstr "硬件"
 
-#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:117 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "固件"
 
-#: src/Plug.vala:110
+#: src/Plug.vala:115
 msgid "Operating System Information"
 msgstr "操作系统信息"
 
-#: src/Plug.vala:111
+#: src/Plug.vala:116
 msgid "Hardware Information"
 msgstr "硬件信息"
 
-#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:130
+#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:133
 msgid "Restore Default Settings"
 msgstr "重置设置"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:114
+#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:117
 msgid "Suggest Translations"
 msgstr "助力翻译"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:122
 msgid "Send Feedback"
 msgstr "提交反馈"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:121
 msgid "Report a Problem"
 msgstr "报告问题"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:106
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:109
 msgid "Get Support"
 msgstr "获取支持"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:123
 msgid "Updates"
 msgstr "检查更新"
 
-#: src/Views/FirmwareReleaseView.vala:42
+#: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
 msgstr "全部更新"
 
-#: src/Views/FirmwareReleaseView.vala:81
+#: src/Views/FirmwareReleaseView.vala:74
 msgid "Version:"
 msgstr "版本："
 
-#: src/Views/FirmwareReleaseView.vala:90
+#: src/Views/FirmwareReleaseView.vala:83
 msgid "Vendor:"
 msgstr "供应商："
 
-#: src/Views/FirmwareReleaseView.vala:99
+#: src/Views/FirmwareReleaseView.vala:92
 msgid "Size:"
 msgstr "字符大小："
 
-#: src/Views/FirmwareReleaseView.vala:108
+#: src/Views/FirmwareReleaseView.vala:101
 msgid "Estimated time to install:"
 msgstr "预计安装时长："
 
-#: src/Views/FirmwareReleaseView.vala:137
+#: src/Views/FirmwareReleaseView.vala:129
 msgid "There are no releases available for this device."
 msgstr "未找到可用的固件更新。"
 
-#: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
+#: src/Views/FirmwareReleaseView.vala:198 src/Widgets/FirmwareUpdateRow.vala:73
 msgid "Update"
 msgstr "更新"
 
-#: src/Views/FirmwareReleaseView.vala:211
+#: src/Views/FirmwareReleaseView.vala:201
 msgid "Up to date"
 msgstr "已是最新"
 
-#: src/Views/FirmwareReleaseView.vala:228
+#: src/Views/FirmwareReleaseView.vala:222
 msgid "less than a minute"
 msgstr "少于 1 分钟"
 
-#: src/Views/FirmwareReleaseView.vala:230
+#: src/Views/FirmwareReleaseView.vala:224
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
@@ -120,180 +120,180 @@ msgid ""
 "and fix critical security issues."
 msgstr "由设备制造商提供的固件更新可以提高性能并修复关键安全问题。"
 
-#: src/Views/FirmwareView.vala:43
+#: src/Views/FirmwareView.vala:42
 msgid "Do not unplug the device during the update."
 msgstr "升级期间请勿断开设备电源。"
 
-#: src/Views/FirmwareView.vala:49
+#: src/Views/FirmwareView.vala:46
 msgid "Checking for Updates"
 msgstr "正在检查更新"
 
-#: src/Views/FirmwareView.vala:50
+#: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "正在连接固件服务并查找更新。"
 
-#: src/Views/FirmwareView.vala:88
+#: src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
 msgstr "重启至固件设置界面…"
 
-#: src/Views/FirmwareView.vala:121
+#: src/Views/FirmwareView.vala:117
 msgid "Firmware Updates Are Not Available"
 msgstr "固件更新服务不可用"
 
-#: src/Views/FirmwareView.vala:122
+#: src/Views/FirmwareView.vala:118
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr "当前设备或其他已连接设备不支持固件更新。"
 
-#: src/Views/FirmwareView.vala:125
+#: src/Views/FirmwareView.vala:120
 msgid "The Firmware Service Is Not Available"
 msgstr "固件服务不可用"
 
-#: src/Views/FirmwareView.vala:126
+#: src/Views/FirmwareView.vala:121
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "请确保 \"fwupd\" 软件包已安装并启用。"
 
-#: src/Views/FirmwareView.vala:217
+#: src/Views/FirmwareView.vala:216
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u 更新可用"
 
-#: src/Views/FirmwareView.vala:221
+#: src/Views/FirmwareView.vala:220
 msgid "Up to Date"
 msgstr "已是最新"
 
-#: src/Views/FirmwareView.vala:241
+#: src/Views/FirmwareView.vala:228
 #, c-format
 msgid "“%s” is being updated"
 msgstr "正在更新 “%s”"
 
-#: src/Views/FirmwareView.vala:312
+#: src/Views/FirmwareView.vala:311
 msgid "Failed to install firmware release"
 msgstr "安装固件失败"
 
-#: src/Views/FirmwareView.vala:333
+#: src/Views/FirmwareView.vala:332
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "“%s” 需要手动设置为更新模式"
 
-#: src/Views/FirmwareView.vala:342
+#: src/Views/FirmwareView.vala:341
 msgid "Continue"
 msgstr "继续"
 
-#: src/Views/FirmwareView.vala:360
+#: src/Views/FirmwareView.vala:354
 msgid "An update requires the system to restart to complete"
 msgstr "某项更新需要重新启动操作系统"
 
-#: src/Views/FirmwareView.vala:361
+#: src/Views/FirmwareView.vala:355
 msgid "This will close all open applications and restart this device."
 msgstr "这会关闭所有应用程序并重启本设备。"
 
-#: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
+#: src/Views/FirmwareView.vala:363 src/Views/FirmwareView.vala:412
 msgid "Restart"
 msgstr "重新启动"
 
-#: src/Views/FirmwareView.vala:382
+#: src/Views/FirmwareView.vala:378
 msgid "An update requires the system to shut down to complete"
 msgstr "某项更新需要完全关闭操作系统"
 
-#: src/Views/FirmwareView.vala:383
+#: src/Views/FirmwareView.vala:379
 msgid "This will close all open applications and turn off this device."
 msgstr "这会关闭所有程序并使本设备关机。"
 
-#: src/Views/FirmwareView.vala:391
+#: src/Views/FirmwareView.vala:387
 msgid "Shut Down"
 msgstr "关机"
 
-#: src/Views/FirmwareView.vala:404
+#: src/Views/FirmwareView.vala:402
 msgid "Restart to firmware setup"
 msgstr "重启至固件设置界面"
 
-#: src/Views/FirmwareView.vala:405
+#: src/Views/FirmwareView.vala:403
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
 msgstr "这会关闭所有应用程序、重启设备并打开固件设置界面。"
 
-#: src/Views/FirmwareView.vala:429
+#: src/Views/FirmwareView.vala:427
 msgid "Unable to restart to firmware setup"
 msgstr "无法重启至固件设置界面"
 
-#: src/Views/FirmwareView.vala:430
+#: src/Views/FirmwareView.vala:428
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr "某个系统错误已阻止自动重启至固件设置界面。"
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:52
 #, c-format
 msgid "%s memory"
 msgstr "%s 内存"
 
-#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
+#: src/Views/HardwareView.vala:58 src/Views/HardwareView.vala:308
 msgid "Unknown Graphics"
 msgstr "未知显卡"
 
-#: src/Views/HardwareView.vala:91
+#: src/Views/HardwareView.vala:73
 msgid "Unknown storage"
 msgstr "未知存储器"
 
-#: src/Views/HardwareView.vala:142
+#: src/Views/HardwareView.vala:121
 msgid "Manufacturer Website"
 msgstr "项目网站"
 
-#: src/Views/HardwareView.vala:254
+#: src/Views/HardwareView.vala:232
 #, c-format
 msgid "Dual-Core %s"
 msgstr "双核 %s"
 
-#: src/Views/HardwareView.vala:256
+#: src/Views/HardwareView.vala:234
 #, c-format
 msgid "Quad-Core %s"
 msgstr "四核 %s"
 
-#: src/Views/HardwareView.vala:258
+#: src/Views/HardwareView.vala:236
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "六核 %s"
 
-#: src/Views/HardwareView.vala:371
+#: src/Views/HardwareView.vala:348
 msgid "Unknown Processor"
 msgstr "未知处理器"
 
-#: src/Views/HardwareView.vala:444
+#: src/Views/HardwareView.vala:421
 msgid "Unknown"
 msgstr "未知设备"
 
-#: src/Views/HardwareView.vala:499
+#: src/Views/HardwareView.vala:476
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s NVMe 固态硬盘"
 
-#: src/Views/HardwareView.vala:501
+#: src/Views/HardwareView.vala:478
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s eMMC 介质"
 
-#: src/Views/HardwareView.vala:503
+#: src/Views/HardwareView.vala:480
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s SATA 固态硬盘"
 
-#: src/Views/HardwareView.vala:506
+#: src/Views/HardwareView.vala:483
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s 机械硬盘"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:511
+#: src/Views/HardwareView.vala:488
 #, c-format
 msgid "%s storage"
 msgstr "%s 硬盘"
 
-#: src/Views/HardwareView.vala:610
+#: src/Views/HardwareView.vala:587
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "字节"
 
-#: src/Views/HardwareView.vala:612
+#: src/Views/HardwareView.vala:589
 #, fuzzy, c-format
 #| msgid "byte"
 #| msgid_plural "bytes"
@@ -301,37 +301,37 @@ msgid "%u byte"
 msgid_plural "%u bytes"
 msgstr[0] "字节"
 
-#: src/Views/HardwareView.vala:619
+#: src/Views/HardwareView.vala:596
 #, fuzzy, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr "%llu %s"
 
-#: src/Views/OperatingSystemView.vala:101
+#: src/Views/OperatingSystemView.vala:104
 msgid "Website"
 msgstr "项目主页"
 
-#: src/Views/OperatingSystemView.vala:124
+#: src/Views/OperatingSystemView.vala:127
 msgid "Check for Updates"
 msgstr "检查更新"
 
-#: src/Views/OperatingSystemView.vala:219
+#: src/Views/OperatingSystemView.vala:221
 #, c-format
 msgid "Built on %s"
 msgstr "基于 %s 构建"
 
-#: src/Views/OperatingSystemView.vala:241
+#: src/Views/OperatingSystemView.vala:239
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "系统设置将会被重置为出厂默认值"
 
-#: src/Views/OperatingSystemView.vala:242
+#: src/Views/OperatingSystemView.vala:240
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 "所有系统设置参数将会被重置为默认值，个人数据，如音乐和照片等不会受影响。"
 
-#: src/Views/OperatingSystemView.vala:248
+#: src/Views/OperatingSystemView.vala:246
 msgid "Restore Settings"
 msgstr "重置设置"
 

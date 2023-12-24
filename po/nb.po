@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 13:04+0000\n"
+"POT-Creation-Date: 2023-12-24 16:02+0000\n"
 "PO-Revision-Date: 2023-02-14 13:25+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -36,88 +36,88 @@ msgstr "Operativsystem"
 msgid "Hardware"
 msgstr "Maskinvare"
 
-#: src/Plug.vala:64 src/Plug.vala:112 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:117 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Fastvare"
 
-#: src/Plug.vala:110
+#: src/Plug.vala:115
 msgid "Operating System Information"
 msgstr "Operativsystemsinfo"
 
-#: src/Plug.vala:111
+#: src/Plug.vala:116
 msgid "Hardware Information"
 msgstr "Maskinvareinfo"
 
-#: src/Plug.vala:113 src/Views/OperatingSystemView.vala:130
+#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:133
 msgid "Restore Default Settings"
 msgstr "Gjenopprett standardinnstillinger"
 
-#: src/Plug.vala:114 src/Views/OperatingSystemView.vala:114
+#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:117
 msgid "Suggest Translations"
 msgstr "Foreslå oversettelser"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:122
 msgid "Send Feedback"
 msgstr "Send tilbakemelding"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:121
 msgid "Report a Problem"
 msgstr "Rapporter et problem"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:106
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:109
 msgid "Get Support"
 msgstr "Få støtte"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:123
 msgid "Updates"
 msgstr "Oppdateringer"
 
-#: src/Views/FirmwareReleaseView.vala:42
+#: src/Views/FirmwareReleaseView.vala:28
 #, fuzzy
 #| msgid "Updates"
 msgid "All Updates"
 msgstr "Alle oppgraderinger"
 
-#: src/Views/FirmwareReleaseView.vala:81
+#: src/Views/FirmwareReleaseView.vala:74
 msgid "Version:"
 msgstr "Versjon:"
 
-#: src/Views/FirmwareReleaseView.vala:90
+#: src/Views/FirmwareReleaseView.vala:83
 #, fuzzy
 msgid "Vendor:"
 msgstr "Tilbyder:"
 
-#: src/Views/FirmwareReleaseView.vala:99
+#: src/Views/FirmwareReleaseView.vala:92
 msgid "Size:"
 msgstr "Størrelse:"
 
-#: src/Views/FirmwareReleaseView.vala:108
+#: src/Views/FirmwareReleaseView.vala:101
 #, fuzzy
 msgid "Estimated time to install:"
 msgstr "Anslått installsjonstid:"
 
-#: src/Views/FirmwareReleaseView.vala:137
+#: src/Views/FirmwareReleaseView.vala:129
 #, fuzzy
 msgid "There are no releases available for this device."
 msgstr "Ingen tilgjengelige utgaver for denne enheten."
 
-#: src/Views/FirmwareReleaseView.vala:208 src/Widgets/FirmwareUpdateRow.vala:70
+#: src/Views/FirmwareReleaseView.vala:198 src/Widgets/FirmwareUpdateRow.vala:73
 #, fuzzy
 #| msgid "Updates"
 msgid "Update"
 msgstr "Oppgrader"
 
-#: src/Views/FirmwareReleaseView.vala:211
+#: src/Views/FirmwareReleaseView.vala:201
 #, fuzzy
 #| msgid "Up to Date"
 msgid "Up to date"
 msgstr "Oppdatert"
 
-#: src/Views/FirmwareReleaseView.vala:228
+#: src/Views/FirmwareReleaseView.vala:222
 msgid "less than a minute"
 msgstr "mindre enn ett minutt"
 
-#: src/Views/FirmwareReleaseView.vala:230
+#: src/Views/FirmwareReleaseView.vala:224
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
@@ -132,104 +132,104 @@ msgstr ""
 "Fastvareoppgraderiger tilbys av utstyrsprodusenter, og kan forbedre ytelsen "
 "og fikse kritiske sikkerhetsfeil."
 
-#: src/Views/FirmwareView.vala:43
+#: src/Views/FirmwareView.vala:42
 msgid "Do not unplug the device during the update."
 msgstr "Ikke plugg ut enheten under oppdateringen."
 
-#: src/Views/FirmwareView.vala:49
+#: src/Views/FirmwareView.vala:46
 #, fuzzy
 #| msgid "Check for Updates"
 msgid "Checking for Updates"
 msgstr "Ser etter oppgraderinger …"
 
-#: src/Views/FirmwareView.vala:50
+#: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Kobler til fastvaretjeneste og søker etter oppdateringer der."
 
-#: src/Views/FirmwareView.vala:88
+#: src/Views/FirmwareView.vala:86
 #, fuzzy
 #| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
 msgstr "Klarte ikke å installere fastvareutgivelse"
 
-#: src/Views/FirmwareView.vala:121
+#: src/Views/FirmwareView.vala:117
 #, fuzzy
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
 msgid "Firmware Updates Are Not Available"
 msgstr "Ingen tilgjengelige fastvareoppdateringer"
 
-#: src/Views/FirmwareView.vala:122
+#: src/Views/FirmwareView.vala:118
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Fastvareoppdateringer støttes ikke på denne eller andre tilkoblede enheter."
 
-#: src/Views/FirmwareView.vala:125
+#: src/Views/FirmwareView.vala:120
 msgid "The Firmware Service Is Not Available"
 msgstr "Fastvaretjenesten er ikke tilgjengelig"
 
-#: src/Views/FirmwareView.vala:126
+#: src/Views/FirmwareView.vala:121
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Sørg for at «fwupd» er installert og påskrudd."
 
-#: src/Views/FirmwareView.vala:217
+#: src/Views/FirmwareView.vala:216
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u oppgradering tilgjengelig"
 msgstr[1] "%u oppgraderinger tilgjengelig"
 
-#: src/Views/FirmwareView.vala:221
+#: src/Views/FirmwareView.vala:220
 msgid "Up to Date"
 msgstr "Oppdatert"
 
-#: src/Views/FirmwareView.vala:241
+#: src/Views/FirmwareView.vala:228
 #, fuzzy, c-format
 msgid "“%s” is being updated"
 msgstr "«%s» oppdateres …"
 
-#: src/Views/FirmwareView.vala:312
+#: src/Views/FirmwareView.vala:311
 msgid "Failed to install firmware release"
 msgstr "Klarte ikke å installere fastvareutgivelse"
 
-#: src/Views/FirmwareView.vala:333
+#: src/Views/FirmwareView.vala:332
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "«%s» må settes i oppgraderingsmodus manuelt"
 
-#: src/Views/FirmwareView.vala:342
+#: src/Views/FirmwareView.vala:341
 msgid "Continue"
 msgstr "Fortsett"
 
-#: src/Views/FirmwareView.vala:360
+#: src/Views/FirmwareView.vala:354
 msgid "An update requires the system to restart to complete"
 msgstr "En oppgradering krever omstart av systemet for å fullføres"
 
-#: src/Views/FirmwareView.vala:361
+#: src/Views/FirmwareView.vala:355
 msgid "This will close all open applications and restart this device."
 msgstr "Dette vil lukke alle åpne programmer og slå av enheten."
 
-#: src/Views/FirmwareView.vala:369 src/Views/FirmwareView.vala:414
+#: src/Views/FirmwareView.vala:363 src/Views/FirmwareView.vala:412
 msgid "Restart"
 msgstr "Omstart"
 
-#: src/Views/FirmwareView.vala:382
+#: src/Views/FirmwareView.vala:378
 msgid "An update requires the system to shut down to complete"
 msgstr "En oppgradering krever at systemet slås av for å fullføres"
 
-#: src/Views/FirmwareView.vala:383
+#: src/Views/FirmwareView.vala:379
 msgid "This will close all open applications and turn off this device."
 msgstr "Dette vil lukke alle åpne programmer og slå av enheten."
 
-#: src/Views/FirmwareView.vala:391
+#: src/Views/FirmwareView.vala:387
 msgid "Shut Down"
 msgstr "Slå av"
 
-#: src/Views/FirmwareView.vala:404
+#: src/Views/FirmwareView.vala:402
 msgid "Restart to firmware setup"
 msgstr "Omstart til fastvareoppsett"
 
-#: src/Views/FirmwareView.vala:405
+#: src/Views/FirmwareView.vala:403
 #, fuzzy
 #| msgid "This will close all open applications and restart this device."
 msgid ""
@@ -237,90 +237,90 @@ msgid ""
 "firmware setup screen."
 msgstr "Dette vil lukke alle åpne programmer og slå av enheten."
 
-#: src/Views/FirmwareView.vala:429
+#: src/Views/FirmwareView.vala:427
 #, fuzzy
 #| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
 msgstr "Klarte ikke å installere fastvareutgivelse"
 
-#: src/Views/FirmwareView.vala:430
+#: src/Views/FirmwareView.vala:428
 #, fuzzy
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr "En systemfeil forhindret automatisk omstart inn i fastvareoppsett."
 
-#: src/Views/HardwareView.vala:66
+#: src/Views/HardwareView.vala:52
 #, c-format
 msgid "%s memory"
 msgstr "%s minne"
 
-#: src/Views/HardwareView.vala:72 src/Views/HardwareView.vala:330
+#: src/Views/HardwareView.vala:58 src/Views/HardwareView.vala:308
 msgid "Unknown Graphics"
 msgstr "Ukjent grafikk"
 
-#: src/Views/HardwareView.vala:91
+#: src/Views/HardwareView.vala:73
 msgid "Unknown storage"
 msgstr "Ukjent lagring"
 
-#: src/Views/HardwareView.vala:142
+#: src/Views/HardwareView.vala:121
 msgid "Manufacturer Website"
 msgstr "Utviklernettside"
 
-#: src/Views/HardwareView.vala:254
+#: src/Views/HardwareView.vala:232
 #, c-format
 msgid "Dual-Core %s"
 msgstr "To-kjerner %s"
 
-#: src/Views/HardwareView.vala:256
+#: src/Views/HardwareView.vala:234
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Fire-kjerner %s"
 
-#: src/Views/HardwareView.vala:258
+#: src/Views/HardwareView.vala:236
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Sekskjerner %s"
 
-#: src/Views/HardwareView.vala:371
+#: src/Views/HardwareView.vala:348
 msgid "Unknown Processor"
 msgstr "Ukjent prosessor"
 
-#: src/Views/HardwareView.vala:444
+#: src/Views/HardwareView.vala:421
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: src/Views/HardwareView.vala:499
+#: src/Views/HardwareView.vala:476
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s lagring (NVMe-SSD)"
 
-#: src/Views/HardwareView.vala:501
+#: src/Views/HardwareView.vala:478
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s lagring (eMMC)"
 
-#: src/Views/HardwareView.vala:503
+#: src/Views/HardwareView.vala:480
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s lagring (SATA-SSD)"
 
-#: src/Views/HardwareView.vala:506
+#: src/Views/HardwareView.vala:483
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "%s lagring (harddisk)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:511
+#: src/Views/HardwareView.vala:488
 #, c-format
 msgid "%s storage"
 msgstr "%s lagring"
 
-#: src/Views/HardwareView.vala:610
+#: src/Views/HardwareView.vala:587
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "byte"
 msgstr[1] "byte"
 
-#: src/Views/HardwareView.vala:612
+#: src/Views/HardwareView.vala:589
 #, fuzzy, c-format
 #| msgid "byte"
 #| msgid_plural "bytes"
@@ -329,31 +329,31 @@ msgid_plural "%u bytes"
 msgstr[0] "byte"
 msgstr[1] "byte"
 
-#: src/Views/HardwareView.vala:619
+#: src/Views/HardwareView.vala:596
 #, fuzzy, c-format
 #| msgid "%llu %s"
 msgctxt "format-size"
 msgid "%u %s"
 msgstr "%llu %s"
 
-#: src/Views/OperatingSystemView.vala:101
+#: src/Views/OperatingSystemView.vala:104
 msgid "Website"
 msgstr "Nettside"
 
-#: src/Views/OperatingSystemView.vala:124
+#: src/Views/OperatingSystemView.vala:127
 msgid "Check for Updates"
 msgstr "Se etter oppdateringer"
 
-#: src/Views/OperatingSystemView.vala:219
+#: src/Views/OperatingSystemView.vala:221
 #, c-format
 msgid "Built on %s"
 msgstr "Bygget på %s"
 
-#: src/Views/OperatingSystemView.vala:241
+#: src/Views/OperatingSystemView.vala:239
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systeminnstillinger vil bli gjenopprettet til forvalg"
 
-#: src/Views/OperatingSystemView.vala:242
+#: src/Views/OperatingSystemView.vala:240
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -361,7 +361,7 @@ msgstr ""
 "Alle systeminnstillinger og data vil bli tilbakestilt til forvalgte verdier. "
 "Personlig data, som musikk og bilder, vil ikke bli endret."
 
-#: src/Views/OperatingSystemView.vala:248
+#: src/Views/OperatingSystemView.vala:246
 msgid "Restore Settings"
 msgstr "Gjenopprett innstillinger"
 
