@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: elementary OS Team <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
                gettext,
-               libadw-1-dev,
+               libadwaita-1-dev,
                libappstream-dev,
                libfwupd-dev,
                libgranite-7-dev,
