@@ -1,26 +1,27 @@
-Source: switchboard-plug-about
+Source: io.elementary.settings.system
 Section: x11
 Priority: optional
 Maintainer: elementary OS Team <builds@elementary.io>
 Build-Depends: debhelper (>= 10.5.1),
                gettext,
+               libadw-1-dev,
                libappstream-dev,
                libfwupd-dev,
-               libgranite-dev,
+               libgranite-7-dev,
+               libgtk-4-dev,
                libgtop2-dev,
                libgudev-1.0-dev,
-               libhandy-1-dev,
-               libswitchboard-2.0-dev,
+               libswitchboard-3-dev,
                libudisks2-dev,
                meson,
                valac (>= 0.22)
 Standards-Version: 4.1.1
 Homepage: https://github.com/elementary/switchboard-plug-about
 
-Package: switchboard-plug-about
+Package: io.elementary.settings.system
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: io.elementary.feedback, fwupd, switcheroo-control
-Enhances: switchboard
-Description: About plug for Switchboard
- This plug displays information about the system.
+Enhances: io.elementary.settings
+Description: System plugin for elementary System Settings
+ This plugin displays information about the system.
