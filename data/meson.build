@@ -1,6 +1,6 @@
 i18n.merge_file(
-    input: 'io.elementary.switchboard.about.appdata.xml.in',
-    output: 'io.elementary.switchboard.about.appdata.xml',
+    input: 'system.metainfo.xml.in',
+    output: 'io.elementary.settings.system.metainfo.xml.in',
     po_dir: join_paths(meson.source_root (), 'po', 'extra'),
     install_dir: join_paths(datadir, 'metainfo'),
     install: true

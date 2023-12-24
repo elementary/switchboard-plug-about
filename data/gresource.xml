@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/io/elementary/switchboard/system">
+  <gresource prefix="/io/elementary/settings/system">
     <file alias="OperatingSystemView.css" compressed="true">OperatingSystemView.css</file>
   </gresource>
 </gresources>

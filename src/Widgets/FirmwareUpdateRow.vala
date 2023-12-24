@@ -34,7 +34,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
     }
 
     construct {
-        var image = new Gtk.Image.from_icon_name ("application-x-firmware", Gtk.IconSize.DND) {
+        var image = new Gtk.Image.from_icon_name ("application-x-firmware") {
             pixel_size = 32
         };
 
@@ -51,7 +51,10 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
 
         var grid = new Gtk.Grid () {
             column_spacing = 12,
-            margin = 6
+            margin_top = 6,
+            margin_end = 6,
+            margin_bottom = 6,
+            margin_start = 6
         };
         grid.attach (image, 0, 0, 1, 2);
         grid.attach (device_name_label, 1, 0);
@@ -78,6 +81,6 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             grid.attach (update_button, 2, 0, 1, 2);
         }
 
-        add (grid);
+        child = grid;
     }
 }

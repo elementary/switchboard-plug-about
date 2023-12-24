@@ -38,7 +38,7 @@ public class About.Plug : Switchboard.Plug {
 
         Object (
             category: Category.SYSTEM,
-            code_name: "io.elementary.switchboard.about",
+            code_name: "io.elementary.settings.system",
             display_name: _("System"),
             description: _("View operating system and hardware information"),
             icon: "application-x-firmware",
@@ -65,17 +65,22 @@ public class About.Plug : Switchboard.Plug {
 
             var stack_switcher = new Gtk.StackSwitcher () {
                 halign = Gtk.Align.CENTER,
-                homogeneous = true,
                 margin_top = 24,
                 stack = stack
             };
+
+            var size_group = new Gtk.SizeGroup (HORIZONTAL);
+            var child = stack_switcher.get_first_child ();
+            while (child != null) {
+                size_group.add_widget (child);
+                child = child.get_next_sibling ();
+            }
 
             main_grid = new Gtk.Grid () {
                 row_spacing = 12
             };
             main_grid.attach (stack_switcher, 0, 0);
             main_grid.attach (stack, 0, 1);
-            main_grid.show_all ();
         }
 
         return main_grid;

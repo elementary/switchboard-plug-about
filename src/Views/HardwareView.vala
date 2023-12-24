@@ -40,7 +40,7 @@ public class About.HardwareView : Gtk.Box {
             selectable = true,
             xalign = 0
         };
-        product_name_info.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
+        product_name_info.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
         var processor_info = new Gtk.Label (processor) {
             ellipsize = MIDDLE,
@@ -68,7 +68,7 @@ public class About.HardwareView : Gtk.Box {
         };
 
         graphics_box = new Gtk.Box (VERTICAL, 6);
-        graphics_box.add (primary_graphics_info);
+        graphics_box.append (primary_graphics_info);
 
         storage_info = new Gtk.Label (_("Unknown storage")) {
             ellipsize = MIDDLE,
@@ -99,21 +99,21 @@ public class About.HardwareView : Gtk.Box {
                 selectable = true,
                 xalign = 0
             };
-            manufacturer_info.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+            manufacturer_info.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            details_box.add (product_name_info);
-            details_box.add (manufacturer_info);
+            details_box.append (product_name_info);
+            details_box.append (manufacturer_info);
         } else {
-            details_box.add (product_name_info);
+            details_box.append (product_name_info);
         }
 
         update_manufacturer_logo ();
 
-        details_box.add (processor_info);
-        details_box.add (graphics_box);
+        details_box.append (processor_info);
+        details_box.append (graphics_box);
 
-        details_box.add (memory_info);
-        details_box.add (storage_info);
+        details_box.append (memory_info);
+        details_box.append (storage_info);
 
         if (oem_enabled && manufacturer_support_url != null) {
             var manufacturer_website_info = new Gtk.LinkButton.with_label (
@@ -121,11 +121,10 @@ public class About.HardwareView : Gtk.Box {
                 _("Manufacturer Website")
             ) {
                 halign = START,
-                margin_top = 12,
-                xalign = 0
+                margin_top = 12
             };
 
-            details_box.add (manufacturer_website_info);
+            details_box.append (manufacturer_website_info);
         }
 
         margin_start = 16;
@@ -133,8 +132,8 @@ public class About.HardwareView : Gtk.Box {
         spacing = 32;
         halign = CENTER;
 
-        add (manufacturer_logo);
-        add (details_box);
+        append (manufacturer_logo);
+        append (details_box);
 
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             update_manufacturer_logo ();
@@ -316,8 +315,7 @@ public class About.HardwareView : Gtk.Box {
         var secondary_gpu = yield get_gpu_info (false);
         if (secondary_gpu != null) {
             secondary_graphics_info.label = secondary_gpu;
-            graphics_box.add (secondary_graphics_info);
-            graphics_box.show_all ();
+            graphics_box.append (secondary_graphics_info);
         }
     }
 

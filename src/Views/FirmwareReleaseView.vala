@@ -10,7 +10,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
 
     private Fwupd.Device device;
     private Fwupd.Release? release;
-    private Granite.Widgets.AlertView placeholder;
+    private Granite.Placeholder placeholder;
     private Gtk.ScrolledWindow scrolled_window;
     private Gtk.Stack stack;
     private Gtk.Revealer update_button_revealer;
@@ -22,7 +22,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
     private Gtk.Label vendor_value_label;
     private Gtk.Label size_value_label;
     private Gtk.Label install_duration_value_label;
-    private Hdy.Deck? deck;
+    private Adw.Leaflet? deck;
 
     construct {
         var back_button = new Gtk.Button.with_label (_("All Updates")) {
@@ -32,7 +32,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
             margin_bottom = 6,
             margin_start = 6,
         };
-        back_button.get_style_context ().add_class (Granite.STYLE_CLASS_BACK_BUTTON);
+        back_button.add_css_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
         title_label = new Gtk.Label ("") {
             ellipsize = END,
@@ -47,24 +47,24 @@ public class About.FirmwareReleaseView : Gtk.Box {
             margin_start = 6,
             sensitive = false
         };
-        update_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         update_button_revealer = new Gtk.Revealer () {
             child = update_button
         };
 
-        var header_box = new Gtk.Box (HORIZONTAL, 6) {
-            hexpand = true
+        var header_box = new Gtk.CenterBox () {
+            hexpand = true,
+            start_widget = back_button,
+            center_widget = title_label,
+            end_widget = update_button_revealer
         };
-        header_box.pack_start (back_button);
-        header_box.set_center_widget (title_label);
-        header_box.pack_end (update_button_revealer);
 
         summary_label = new Gtk.Label ("") {
             halign = START,
             wrap = true
         };
-        summary_label.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
+        summary_label.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
         description_label = new Gtk.Label ("") {
             halign = START,
@@ -114,7 +114,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
             margin_top = 12,
             row_spacing = 3
         };
-        key_val_grid.get_style_context ().add_class (Gtk.STYLE_CLASS_DIM_LABEL);
+        key_val_grid.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
         key_val_grid.attach (version_label, 0, 0);
         key_val_grid.attach (version_value_label, 1, 0);
@@ -125,12 +125,9 @@ public class About.FirmwareReleaseView : Gtk.Box {
         key_val_grid.attach (install_duration_label, 0, 3);
         key_val_grid.attach (install_duration_value_label, 1, 3);
 
-        placeholder = new Granite.Widgets.AlertView (
-            "",
-            _("There are no releases available for this device."),
-            ""
-        );
-        placeholder.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
+        placeholder = new Granite.Placeholder ("") {
+            description = _("There are no releases available for this device.")
+        };
 
         var box = new Gtk.Box (VERTICAL, 12) {
             halign = CENTER,
@@ -140,26 +137,25 @@ public class About.FirmwareReleaseView : Gtk.Box {
             margin_start = 12,
             vexpand = true
         };
-        box.add (summary_label);
-        box.add (description_label);
-        box.add (key_val_grid);
+        box.append (summary_label);
+        box.append (description_label);
+        box.append (key_val_grid);
 
-        scrolled_window = new Gtk.ScrolledWindow (null, null) {
+        scrolled_window = new Gtk.ScrolledWindow () {
             child = box,
             hscrollbar_policy = NEVER,
             vexpand = true
         };
 
         stack = new Gtk.Stack ();
-        stack.add (placeholder);
-        stack.add (scrolled_window);
+        stack.add_child (placeholder);
+        stack.add_child (scrolled_window);
 
         orientation = VERTICAL;
-        get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-        add (header_box);
-        add (new Gtk.Separator (HORIZONTAL));
-        add (stack);
-        show_all ();
+        add_css_class (Granite.STYLE_CLASS_VIEW);
+        append (header_box);
+        append (new Gtk.Separator (HORIZONTAL));
+        append (stack);
 
         back_button.clicked.connect (() => {
             go_back ();
@@ -185,9 +181,9 @@ public class About.FirmwareReleaseView : Gtk.Box {
 
             var icons = device.get_icons ();
             if (icons.data != null) {
-                placeholder.icon_name = icons.data[0];
+                placeholder.icon = new ThemedIcon (icons.data[0]);
             } else {
-                placeholder.icon_name = "application-x-firmware";
+                placeholder.icon = new ThemedIcon ("application-x-firmware");
             }
 
             stack.visible_child = placeholder;
@@ -227,13 +223,11 @@ public class About.FirmwareReleaseView : Gtk.Box {
         } else {
             install_duration_value_label.label = GLib.ngettext ("%llu minute", "%llu minutes", duration_minutes).printf (duration_minutes);
         }
-
-        show_all ();
     }
 
     private void go_back () {
         if (deck == null) {
-            deck = (Hdy.Deck) get_ancestor (typeof (Hdy.Deck));
+            deck = (Adw.Leaflet) get_ancestor (typeof (Adw.Leaflet));
         }
 
         deck.navigate (BACK);

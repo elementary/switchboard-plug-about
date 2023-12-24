@@ -1,4 +1,4 @@
-# Switchboard System Plug
+# System Settings
 [![Translation status](https://l10n.elementary.io/widgets/switchboard/-/switchboard-plug-about/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
 ![screenshot](data/screenshot.png?raw=true)
@@ -7,14 +7,14 @@
 
 You'll need the following dependencies:
 
-* libswitchboard-2.0-dev
+* libswitchboard-3-dev
 * libfwupd-dev
-* libgranite-dev
-* libgtk-3-dev
+* libgranite-7-dev
+* libgtk-4-dev
 * libgtop2-dev
 * libgudev-1.0-dev
 * libudisks2-dev
-* libhandy-1-dev
+* libadwaita-1-dev
 * libappstream-dev
 * meson
 * valac
@@ -32,7 +32,7 @@ To install, use `ninja install`
 
 ## OEM Configuration
 
-The Switchboard System plug can load OEM information supplied by an `oem.conf` file placed in `/etc` with the following format:
+System Settings can load OEM information supplied by an `oem.conf` file placed in `/etc` with the following format:
 
 ```ini
 [OEM]

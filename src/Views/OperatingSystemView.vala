@@ -18,14 +18,14 @@
 * Boston, MA 02110-1301 USA
 */
 
-public class About.OperatingSystemView : Gtk.Grid {
+public class About.OperatingSystemView : Gtk.Box {
     private string support_url;
 
     private Gtk.Grid software_grid;
 
     construct {
         var style_provider = new Gtk.CssProvider ();
-        style_provider.load_from_resource ("io/elementary/switchboard/system/OperatingSystemView.css");
+        style_provider.load_from_resource ("io/elementary/settings/system/OperatingSystemView.css");
 
         var uts_name = Posix.utsname ();
 
@@ -45,31 +45,25 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         var logo_overlay = new Gtk.Overlay ();
 
-        if (Gtk.IconTheme.get_default ().has_icon (logo_icon_name + "-symbolic")) {
+        if (Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).has_icon (logo_icon_name + "-symbolic")) {
             foreach (unowned var path in Environment.get_system_data_dirs ()) {
                 var file = File.new_for_path (
                     Path.build_path (Path.DIR_SEPARATOR_S, path, "backgrounds", "elementaryos-default")
                 );
 
                 if (file.query_exists ()) {
-                    var file_icon = new FileIcon (file);
-
-                    var logo = new Hdy.Avatar (128, "", false) {
-                        loadable_icon = file_icon,
-                        // We need this for the shadow to not get clipped by Gtk.Overlay
-                        margin = 6
+                    var logo = new Adw.Avatar (128, "", false) {
+                        custom_image = Gdk.Texture.from_file (file)
                     };
                     logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-                    logo_overlay.add (logo);
+                    logo_overlay.child = logo;
                     logo_overlay.add_overlay (icon);
 
                     // 128 minus 3px padding on each side
                     icon.pixel_size = 128 - 6;
-
-                    unowned var icon_style_context = icon.get_style_context ();
-                    icon_style_context.add_class ("logo");
-                    icon_style_context.add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+                    icon.add_css_class ("logo");
+                    icon.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
                     break;
                 }
@@ -78,7 +72,7 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         if (icon.parent == null) {
             icon.pixel_size = 128;
-            logo_overlay.add (icon);
+            logo_overlay.child = icon;
         }
 
         // Intentionally not using GLib.OsInfoKey.PRETTY_NAME here because we
@@ -138,21 +132,22 @@ public class About.OperatingSystemView : Gtk.Grid {
 
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
-        var button_grid = new Gtk.ButtonBox (Gtk.Orientation.HORIZONTAL) {
+        var primary_button_box = new Gtk.Box (HORIZONTAL, 6) {
             hexpand = true,
-            layout_style = Gtk.ButtonBoxStyle.END,
-            spacing = 6
+            halign = END,
+            homogeneous = true
         };
-        button_grid.add (settings_restore_button);
-        button_grid.add (bug_button);
+        primary_button_box.append (bug_button);
         if (update_button != null) {
-            button_grid.add (update_button);
+            primary_button_box.append (update_button);
         }
-        button_grid.set_child_secondary (settings_restore_button, true);
+
+        var button_grid = new Gtk.Box (HORIZONTAL, 6);
+        button_grid.append (settings_restore_button);
+        button_grid.append (primary_button_box);
 
         software_grid = new Gtk.Grid () {
-            // The avatar has some built-in margin for shadows
-            column_spacing = 32 - 6,
+            column_spacing = 32,
             halign = Gtk.Align.CENTER,
             row_spacing = 6,
             valign = Gtk.Align.CENTER,
@@ -166,12 +161,14 @@ public class About.OperatingSystemView : Gtk.Grid {
         software_grid.attach (help_button, 2, 3);
         software_grid.attach (translate_button, 3, 3);
 
-        margin = 12;
+        margin_top = 12;
+        margin_end = 12;
+        margin_bottom = 12;
+        margin_start = 12;
         orientation = Gtk.Orientation.VERTICAL;
-        row_spacing = 12;
-        add (software_grid);
-        add (button_grid);
-        show_all ();
+        spacing = 12;
+        append (software_grid);
+        append (button_grid);
 
         settings_restore_button.clicked.connect (settings_restore_clicked);
 
@@ -226,7 +223,6 @@ public class About.OperatingSystemView : Gtk.Grid {
                 xalign = 0
             };
             software_grid.attach (based_off, 1, 1, 3);
-            software_grid.show_all ();
         }
     }
 
@@ -245,10 +241,10 @@ public class About.OperatingSystemView : Gtk.Grid {
             "dialog-warning",
             Gtk.ButtonsType.CANCEL
         );
-        dialog.transient_for = (Gtk.Window) get_toplevel ();
+        dialog.transient_for = (Gtk.Window) get_root ();
 
         var continue_button = dialog.add_button (_("Restore Settings"), Gtk.ResponseType.ACCEPT);
-        continue_button.get_style_context ().add_class (Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        continue_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         dialog.response.connect ((response) => {
             dialog.destroy ();
