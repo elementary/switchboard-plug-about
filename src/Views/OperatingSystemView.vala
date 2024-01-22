@@ -316,6 +316,18 @@ public class About.OperatingSystemView : Gtk.Box {
                 });
             }
         });
+
+        error_button.clicked.connect (() => {
+            if (update_proxy != null) {
+                update_proxy.check_for_updates.begin (true, (obj, res) => {
+                    try {
+                        update_proxy.check_for_updates.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to force refresh: %s", e.message);
+                    }
+                });
+            }
+        });
     }
 
     private async void get_upstream_release () {
@@ -420,8 +432,8 @@ public class About.OperatingSystemView : Gtk.Box {
                 break;
             case ERROR:
                 updates_image.icon_name = "dialog-error";
-                updates_title.label = _("Error");
-                updates_description.label = _("An error occured while trying to update the system");
+                updates_title.label = _("Failed to download updates");
+                updates_description.label = _("Manually refreshing updates may resolve the issue.");
                 check_button.sensitive = false;
                 break;
         }
