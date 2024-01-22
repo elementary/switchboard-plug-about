@@ -22,6 +22,7 @@ public interface SystemUpdate : Object {
 
     public abstract async CurrentState get_current_state () throws DBusError, IOError;
     public abstract async UpdateDetails get_update_details () throws DBusError, IOError;
-    public abstract async void update () throws DBusError, IOError;
+    public abstract async void cancel () throws DBusError, IOError;
     public abstract async void check_for_updates (bool force = false) throws DBusError, IOError;
+    public abstract async void update () throws DBusError, IOError;
 }

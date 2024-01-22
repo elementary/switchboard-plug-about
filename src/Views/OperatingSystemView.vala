@@ -29,6 +29,7 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.Label updates_title;
     private Gtk.Label updates_description;
     private Gtk.Revealer update_button_revealer;
+    private Gtk.Revealer cancel_button_revealer;
 
     construct {
         var style_provider = new Gtk.CssProvider ();
@@ -166,6 +167,17 @@ public class About.OperatingSystemView : Gtk.Box {
             transition_type = SLIDE_LEFT
         };
 
+        var cancel_button = new Gtk.Button.with_label (_("Cancel")) {
+            margin_end = 6,
+            valign = CENTER
+        };
+
+        cancel_button_revealer = new Gtk.Revealer () {
+            child = update_button,
+            overflow = VISIBLE,
+            transition_type = SLIDE_LEFT
+        };
+
         var updates_grid = new Gtk.Grid () {
             column_spacing = 6,
             margin_top = 6,
@@ -176,6 +188,7 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_grid.attach (updates_title, 1, 0);
         updates_grid.attach (updates_description, 1, 1);
         updates_grid.attach (update_button_revealer, 2, 0, 1, 2);
+        updates_grid.attach (cancel_button_revealer, 3, 0, 1, 2);
 
         var frame = new Gtk.Frame (null) {
             child = updates_grid,
@@ -251,6 +264,16 @@ public class About.OperatingSystemView : Gtk.Box {
                 update_state.begin ();
             } catch (Error e) {
                 critical ("Failed to get updates proxy");
+            }
+        });
+
+        cancel_button.clicked.connect (() => {
+            if (update_proxy != null) {
+                try {
+                    update_proxy.cancel.begin ();
+                } catch (Error e) {
+                    critical ("Failed to cancel update: %s", e.message);
+                }
             }
         });
 
@@ -356,6 +379,7 @@ public class About.OperatingSystemView : Gtk.Box {
                 updates_image.icon_name = "browser-download";
                 updates_title.label = _("Downloading Updates");
                 updates_description.label = current_state.message;
+                cancel_button_revealer.reveal_child = true;
                 check_button.sensitive = false;
                 break;
             case RESTART_REQUIRED:
