@@ -267,23 +267,39 @@ public class About.OperatingSystemView : Gtk.Box {
             }
         });
 
-        cancel_button.clicked.connect (() => {
+        check_button.clicked.connect (() => {
             if (update_proxy != null) {
-                try {
-                    update_proxy.cancel.begin ();
-                } catch (Error e) {
-                    critical ("Failed to cancel update: %s", e.message);
-                }
+                update_proxy.check_for_updates.begin (false, (obj, res) => {
+                    try {
+                        update_proxy.check_for_updates.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to check for updates: %s", e.message);
+                    }
+                });
             }
         });
 
-        check_button.clicked.connect (() => {
+        update_button.clicked.connect (() => {
             if (update_proxy != null) {
-                try {
-                    update_proxy.check_for_updates.begin ();
-                } catch (Error e) {
-                    warning ("Failed to check for updates: %s", e.message);
-                }
+                update_proxy.update.begin ((obj, res) => {
+                    try {
+                        update_proxy.update.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to update: %s", e.message);
+                    }
+                });
+            }
+        });
+
+        cancel_button.clicked.connect (() => {
+            if (update_proxy != null) {
+                update_proxy.cancel.begin ((obj, res) => {
+                    try {
+                        update_proxy.cancel.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to cancel update: %s", e.message);
+                    }
+                });
             }
         });
     }
@@ -385,6 +401,12 @@ public class About.OperatingSystemView : Gtk.Box {
                 updates_image.icon_name = "system-reboot";
                 updates_title.label = _("Restart Required");
                 updates_description.label = _("A restart is required to finish installing updates");
+                check_button.sensitive = false;
+                break;
+            case ERROR:
+                updates_image.icon_name = "dialog-error";
+                updates_title.label = _("Error");
+                updates_description.label = _("An error occured while trying to update the system");
                 check_button.sensitive = false;
                 break;
         }
