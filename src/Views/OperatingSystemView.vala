@@ -202,7 +202,7 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_grid.attach (updates_description, 1, 1);
         updates_grid.attach (update_button_revealer, 2, 0, 1, 2);
         updates_grid.attach (cancel_button_revealer, 3, 0, 1, 2);
-        updates_grid.attach (error_button_revealer, 2, 0, 1, 2);
+        updates_grid.attach (error_button_revealer, 4, 0, 1, 2);
 
         var frame = new Gtk.Frame (null) {
             child = updates_grid,
