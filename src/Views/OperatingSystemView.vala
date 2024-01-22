@@ -174,7 +174,6 @@ public class About.OperatingSystemView : Gtk.Box {
         button_stack.add_named (update_button, "update");
         button_stack.add_named (cancel_button, "cancel");
         button_stack.add_named (refresh_button, "refresh");
-        button_stack.add_named (new Gtk.Grid (), "blank");
 
         var updates_grid = new Gtk.Grid () {
             column_spacing = 6,
