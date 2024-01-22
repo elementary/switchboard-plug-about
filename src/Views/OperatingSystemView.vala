@@ -340,7 +340,8 @@ public class About.OperatingSystemView : Gtk.Box {
             return;
         }
 
-        update_button_revealer.reveal_child = false;
+        update_button_revealer.reveal_child = current_state.state == AVAILABLE;
+        cancel_button_revealer.reveal_child = current_state.state == DOWNLOADING;
 
         switch (current_state.state) {
             case UP_TO_DATE:
@@ -358,7 +359,6 @@ public class About.OperatingSystemView : Gtk.Box {
             case AVAILABLE:
                 updates_image.icon_name = "software-update-available";
                 updates_title.label = _("Updates Available");
-                update_button_revealer.reveal_child = true;
                 check_button.sensitive = true;
 
                 try {
@@ -379,7 +379,6 @@ public class About.OperatingSystemView : Gtk.Box {
                 updates_image.icon_name = "browser-download";
                 updates_title.label = _("Downloading Updates");
                 updates_description.label = current_state.message;
-                cancel_button_revealer.reveal_child = true;
                 check_button.sensitive = false;
                 break;
             case RESTART_REQUIRED:
