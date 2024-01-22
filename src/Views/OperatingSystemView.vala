@@ -28,9 +28,7 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.Image updates_image;
     private Gtk.Label updates_title;
     private Gtk.Label updates_description;
-    private Gtk.Revealer update_button_revealer;
-    private Gtk.Revealer cancel_button_revealer;
-    private Gtk.Revealer error_button_revealer;
+    private Gtk.Stack button_stack;
 
     construct {
         var style_provider = new Gtk.CssProvider ();
@@ -165,22 +163,10 @@ public class About.OperatingSystemView : Gtk.Box {
         };
         update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        update_button_revealer = new Gtk.Revealer () {
-            child = update_button,
-            overflow = VISIBLE,
-            transition_type = SLIDE_LEFT
-        };
-
         var cancel_button = new Gtk.Button.with_label (_("Cancel")) {
             margin_start = 6,
             margin_end = 6,
             valign = CENTER
-        };
-
-        cancel_button_revealer = new Gtk.Revealer () {
-            child = cancel_button,
-            overflow = VISIBLE,
-            transition_type = SLIDE_LEFT
         };
 
         var error_button = new Gtk.Button.with_label (_("Refresh")) {
@@ -189,11 +175,13 @@ public class About.OperatingSystemView : Gtk.Box {
             valign = CENTER
         };
 
-        error_button_revealer = new Gtk.Revealer () {
-            child = error_button,
-            overflow = VISIBLE,
-            transition_type = SLIDE_LEFT
+        button_stack = new Gtk.Stack () {
+            transition_type = CROSSFADE
         };
+        button_stack.add_named (update_button, "update");
+        button_stack.add_named (cancel_button, "cancel");
+        button_stack.add_named (error_button, "error");
+        button_stack.add_named (new Gtk.Grid (), "blank");
 
         var updates_grid = new Gtk.Grid () {
             margin_top = 6,
@@ -203,9 +191,7 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_grid.attach (updates_image, 0, 0, 1, 2);
         updates_grid.attach (updates_title, 1, 0);
         updates_grid.attach (updates_description, 1, 1);
-        updates_grid.attach (update_button_revealer, 2, 0, 1, 2);
-        updates_grid.attach (cancel_button_revealer, 3, 0, 1, 2);
-        updates_grid.attach (error_button_revealer, 4, 0, 1, 2);
+        updates_grid.attach (button_stack, 2, 0, 1, 2);
 
         var frame = new Gtk.Frame (null) {
             child = updates_grid,
@@ -385,27 +371,26 @@ public class About.OperatingSystemView : Gtk.Box {
             return;
         }
 
-        update_button_revealer.reveal_child = current_state.state == AVAILABLE;
-        cancel_button_revealer.reveal_child = current_state.state == DOWNLOADING;
-        error_button_revealer.reveal_child = current_state.state == ERROR;
-
         switch (current_state.state) {
             case UP_TO_DATE:
                 updates_image.icon_name = "process-completed";
                 updates_title.label = _("Up To Date");
                 updates_description.label = _("No updates available");
                 check_button.sensitive = true;
+                button_stack.visible_child_name = "blank";
                 break;
             case CHECKING:
                 updates_image.icon_name = "emblem-synchronized";
                 updates_title.label = _("Checking for Updates");
                 updates_description.label = current_state.message;
                 check_button.sensitive = false;
+                button_stack.visible_child_name = "blank";
                 break;
             case AVAILABLE:
                 updates_image.icon_name = "software-update-available";
                 updates_title.label = _("Updates Available");
                 check_button.sensitive = true;
+                button_stack.visible_child_name = "update";
 
                 try {
                     var details = yield update_proxy.get_update_details ();
@@ -426,18 +411,21 @@ public class About.OperatingSystemView : Gtk.Box {
                 updates_title.label = _("Downloading Updates");
                 updates_description.label = current_state.message;
                 check_button.sensitive = false;
+                button_stack.visible_child_name = "cancel";
                 break;
             case RESTART_REQUIRED:
                 updates_image.icon_name = "system-reboot";
                 updates_title.label = _("Restart Required");
                 updates_description.label = _("A restart is required to finish installing updates");
                 check_button.sensitive = false;
+                button_stack.visible_child_name = "blank";
                 break;
             case ERROR:
                 updates_image.icon_name = "dialog-error";
                 updates_title.label = _("Failed to download updates");
                 updates_description.label = _("Manually refreshing updates may resolve the issue.");
                 check_button.sensitive = false;
+                button_stack.visible_child_name = "error";
                 break;
         }
     }
