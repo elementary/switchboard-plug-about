@@ -278,17 +278,7 @@ public class About.OperatingSystemView : Gtk.Box {
             }
         });
 
-        refresh_button.clicked.connect (() => {
-            if (update_proxy != null) {
-                update_proxy.check_for_updates.begin (true, false, (obj, res) => {
-                    try {
-                        update_proxy.check_for_updates.end (res);
-                    } catch (Error e) {
-                        critical ("Failed to force refresh: %s", e.message);
-                    }
-                });
-            }
-        });
+        refresh_button.clicked.connect (refresh_clicked);
     }
 
     private async void get_upstream_release () {
@@ -397,6 +387,19 @@ public class About.OperatingSystemView : Gtk.Box {
                 updates_description.label = _("Manually refreshing updates may resolve the issue.");
                 button_stack.visible_child_name = "refresh";
                 break;
+        }
+    }
+
+    private async void refresh_clicked () {
+        if (update_proxy == null) {
+            return;
+        }
+
+        try {
+            var force = (yield update_proxy.get_current_state ()).state == ERROR;
+            yield update_proxy.check_for_updates (force, false);
+        } catch (Error e) {
+            critical ("Failed to check for updates: %s", e.message);
         }
     }
 
