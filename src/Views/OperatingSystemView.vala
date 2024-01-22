@@ -30,6 +30,7 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.Label updates_description;
     private Gtk.Revealer update_button_revealer;
     private Gtk.Revealer cancel_button_revealer;
+    private Gtk.Revealer error_button_revealer;
 
     construct {
         var style_provider = new Gtk.CssProvider ();
@@ -161,7 +162,7 @@ public class About.OperatingSystemView : Gtk.Box {
             margin_end = 6,
             valign = CENTER
         };
-        update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION)
+        update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         update_button_revealer = new Gtk.Revealer () {
             child = update_button,
@@ -175,7 +176,18 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         cancel_button_revealer = new Gtk.Revealer () {
-            child = update_button,
+            child = cancel_button,
+            overflow = VISIBLE,
+            transition_type = SLIDE_LEFT
+        };
+
+        var error_button = new Gtk.Button.with_label (_("Refresh")) {
+            margin_end = 6,
+            valign = CENTER
+        };
+
+        error_button_revealer = new Gtk.Revealer () {
+            child = error_button,
             overflow = VISIBLE,
             transition_type = SLIDE_LEFT
         };
@@ -190,6 +202,7 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_grid.attach (updates_description, 1, 1);
         updates_grid.attach (update_button_revealer, 2, 0, 1, 2);
         updates_grid.attach (cancel_button_revealer, 3, 0, 1, 2);
+        updates_grid.attach (error_button_revealer, 2, 0, 1, 2);
 
         var frame = new Gtk.Frame (null) {
             child = updates_grid,
@@ -359,6 +372,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         update_button_revealer.reveal_child = current_state.state == AVAILABLE;
         cancel_button_revealer.reveal_child = current_state.state == DOWNLOADING;
+        error_button_revealer.reveal_child = current_state.state == ERROR;
 
         switch (current_state.state) {
             case UP_TO_DATE:
