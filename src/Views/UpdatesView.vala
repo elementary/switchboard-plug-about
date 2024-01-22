@@ -70,7 +70,12 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
         update_list.set_placeholder (up_to_date_alert_view);
         update_list.bind_model (updates, (obj) => {
             var str = ((Gtk.StringObject) obj).string;
-            return new Gtk.Label (str);
+            return new Gtk.Label (str) {
+                halign = START,
+                valign = CENTER,
+                margin_start = 6,
+                margin_top = 3
+            };
         });
 
         var update_scrolled = new Gtk.ScrolledWindow () {
@@ -179,7 +184,7 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
                 status_bar.visible = false;
                 try {
                     var details = yield update_proxy.get_update_details ();
-                    updates.splice (0, 0, details.packages);
+                    updates.splice (0, updates.get_n_items (), details.packages);
                     button_stack.visible_child_name = "update";
                 } catch (Error e) {
                     warning ("Failed to get updates list from backend: %s", e.message);
