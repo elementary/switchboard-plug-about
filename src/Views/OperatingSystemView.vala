@@ -360,7 +360,7 @@ public class About.OperatingSystemView : Gtk.Box {
             case RESTART_REQUIRED:
                 updates_image.icon_name = "system-reboot";
                 updates_title.label = _("Restart Required");
-                updates_description.label = _("Restart to finish installing updates");
+                updates_description.label = _("A restart is required to finish installing updates");
                 check_button.sensitive = false;
                 break;
         }
