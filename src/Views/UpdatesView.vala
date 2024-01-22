@@ -22,8 +22,9 @@ public interface SystemUpdate : Object {
 
     public abstract async CurrentState get_current_state () throws DBusError, IOError;
     public abstract async UpdateDetails get_update_details () throws DBusError, IOError;
-    public abstract async void update () throws DBusError, IOError;
+    public abstract async void cancel () throws DBusError, IOError;
     public abstract async void check_for_updates (bool force = false) throws DBusError, IOError;
+    public abstract async void update () throws DBusError, IOError;
 }
 
 public class About.UpdatesView : Granite.SimpleSettingsPage {
@@ -39,8 +40,8 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
     public UpdatesView () {
         Object (
             icon_name: "system-software-update",
-            title: _("Updates"),
-            description: _("System updates.")
+            title: _("Operating System Updates"),
+            description: _("Updates to system components")
         );
     }
 
@@ -108,14 +109,15 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
         var update_button = new Gtk.Button.with_label (_("Download"));
         update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var blank = new Gtk.Grid ();
+        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
 
         button_stack = new Gtk.Stack () {
             transition_type = CROSSFADE
         };
         button_stack.add_named (check_button, "check");
         button_stack.add_named (update_button, "update");
-        button_stack.add_named (blank, "blank");
+        button_stack.add_named (cancel_button, "cancel");
+        button_stack.add_named (new Gtk.Grid (), "blank");
 
         action_area.append (button_stack);
 
@@ -127,6 +129,18 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
                 update_state.begin ();
             } catch (Error e) {
                 critical ("Failed to get updates proxy");
+            }
+        });
+
+        check_button.clicked.connect (() => {
+            if (update_proxy != null) {
+                update_proxy.check_for_updates.begin (false, (obj, res) => {
+                    try {
+                        update_proxy.check_for_updates.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to check for updates: %s", e.message);
+                    }
+                });
             }
         });
 
@@ -142,13 +156,13 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
             }
         });
 
-        check_button.clicked.connect (() => {
+        cancel_button.clicked.connect (() => {
             if (update_proxy != null) {
-                update_proxy.check_for_updates.begin (false, (obj, res) => {
+                update_proxy.cancel.begin ((obj, res) => {
                     try {
-                        update_proxy.update.end (res);
+                        update_proxy.cancel.end (res);
                     } catch (Error e) {
-                        critical ("Failed to check for updates: %s", e.message);
+                        critical ("Failed to cancel update: %s", e.message);
                     }
                 });
             }
@@ -193,7 +207,7 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
             case DOWNLOADING:
                 status_bar.visible = true;
                 status_bar.label = current_state.message;
-                button_stack.visible_child_name = "blank";
+                button_stack.visible_child_name = "cancel";
                 break;
             case RESTART_REQUIRED:
                 reboot_infobar.revealed = true;
