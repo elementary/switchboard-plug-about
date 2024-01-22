@@ -19,6 +19,8 @@
 */
 
 public class About.OperatingSystemView : Gtk.Box {
+    private static Settings update_settings = new Settings ("io.elementary.settings-daemon.system-updates");
+
     private string support_url;
 
     private Gtk.StringList updates;
@@ -375,7 +377,11 @@ public class About.OperatingSystemView : Gtk.Box {
             case UP_TO_DATE:
                 updates_image.icon_name = "process-completed";
                 updates_title.label = _("Up To Date");
-                updates_description.label = _("No updates available");
+                updates_description.label = _("Last checked %s.").printf (
+                    Granite.DateTime.get_relative_datetime (
+                        new DateTime.from_unix_local (update_settings.get_int64 ("last-refresh-time"))
+                    )
+                );
                 check_button.sensitive = true;
                 button_stack.visible_child_name = "blank";
                 break;
