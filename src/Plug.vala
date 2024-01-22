@@ -56,12 +56,15 @@ public class About.Plug : Switchboard.Plug {
 
             var firmware_view = new FirmwareView ();
 
+            var update_view = new UpdatesView ();
+
             stack = new Gtk.Stack () {
                 vexpand = true
             };
             stack.add_titled (operating_system_view, OPERATING_SYSTEM, _("Operating System"));
             stack.add_titled (hardware_view, HARDWARE, _("Hardware"));
             stack.add_titled (firmware_view, FIRMWARE, _("Firmware"));
+            stack.add_titled (update_view, "updates", _("Updates"));
 
             var stack_switcher = new Gtk.StackSwitcher () {
                 halign = Gtk.Align.CENTER,

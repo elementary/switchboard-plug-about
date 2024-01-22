@@ -7,6 +7,7 @@ plug_files = files(
     'Views/FirmwareView.vala',
     'Views/HardwareView.vala',
     'Views/OperatingSystemView.vala',
+    'Views/UpdatesView.vala',
     'Widgets/FirmwareUpdateRow.vala'
 )
 
