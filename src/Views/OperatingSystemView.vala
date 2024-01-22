@@ -162,6 +162,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         update_button_revealer = new Gtk.Revealer () {
             child = update_button,
+            overflow = VISIBLE,
             transition_type = SLIDE_LEFT
         };
 
