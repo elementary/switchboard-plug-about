@@ -180,10 +180,10 @@ public class About.OperatingSystemView : Gtk.Box {
         button_stack = new Gtk.Stack () {
             transition_type = CROSSFADE
         };
+        button_stack.add_named (new Gtk.Grid (), "blank");
         button_stack.add_named (update_button, "update");
         button_stack.add_named (cancel_button, "cancel");
         button_stack.add_named (error_button, "error");
-        button_stack.add_named (new Gtk.Grid (), "blank");
 
         var updates_grid = new Gtk.Grid () {
             margin_top = 6,
@@ -274,7 +274,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         check_button.clicked.connect (() => {
             if (update_proxy != null) {
-                update_proxy.check_for_updates.begin (false, (obj, res) => {
+                update_proxy.check_for_updates.begin (false, false, (obj, res) => {
                     try {
                         update_proxy.check_for_updates.end (res);
                     } catch (Error e) {
@@ -310,7 +310,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         error_button.clicked.connect (() => {
             if (update_proxy != null) {
-                update_proxy.check_for_updates.begin (true, (obj, res) => {
+                update_proxy.check_for_updates.begin (true, false, (obj, res) => {
                     try {
                         update_proxy.check_for_updates.end (res);
                     } catch (Error e) {
