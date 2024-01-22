@@ -159,6 +159,7 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_description.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
         var update_button = new Gtk.Button.with_label (_("Download")) {
+            margin_start = 6,
             margin_end = 6,
             valign = CENTER
         };
@@ -171,6 +172,7 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         var cancel_button = new Gtk.Button.with_label (_("Cancel")) {
+            margin_start = 6,
             margin_end = 6,
             valign = CENTER
         };
@@ -182,6 +184,7 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         var error_button = new Gtk.Button.with_label (_("Refresh")) {
+            margin_start = 6,
             margin_end = 6,
             valign = CENTER
         };
