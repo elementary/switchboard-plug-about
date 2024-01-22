@@ -30,6 +30,7 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.Label updates_description;
     private Gtk.Revealer update_button_revealer;
     private Gtk.Revealer cancel_button_revealer;
+    private Gtk.Revealer error_button_revealer;
 
     construct {
         var style_provider = new Gtk.CssProvider ();
@@ -161,6 +162,7 @@ public class About.OperatingSystemView : Gtk.Box {
             margin_end = 6,
             valign = CENTER
         };
+        update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
         update_button_revealer = new Gtk.Revealer () {
             child = update_button,
@@ -174,7 +176,18 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         cancel_button_revealer = new Gtk.Revealer () {
-            child = update_button,
+            child = cancel_button,
+            overflow = VISIBLE,
+            transition_type = SLIDE_LEFT
+        };
+
+        var error_button = new Gtk.Button.with_label (_("Refresh")) {
+            margin_end = 6,
+            valign = CENTER
+        };
+
+        error_button_revealer = new Gtk.Revealer () {
+            child = error_button,
             overflow = VISIBLE,
             transition_type = SLIDE_LEFT
         };
@@ -189,6 +202,7 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_grid.attach (updates_description, 1, 1);
         updates_grid.attach (update_button_revealer, 2, 0, 1, 2);
         updates_grid.attach (cancel_button_revealer, 3, 0, 1, 2);
+        updates_grid.attach (error_button_revealer, 2, 0, 1, 2);
 
         var frame = new Gtk.Frame (null) {
             child = updates_grid,
@@ -267,23 +281,51 @@ public class About.OperatingSystemView : Gtk.Box {
             }
         });
 
-        cancel_button.clicked.connect (() => {
+        check_button.clicked.connect (() => {
             if (update_proxy != null) {
-                try {
-                    update_proxy.cancel.begin ();
-                } catch (Error e) {
-                    critical ("Failed to cancel update: %s", e.message);
-                }
+                update_proxy.check_for_updates.begin (false, (obj, res) => {
+                    try {
+                        update_proxy.check_for_updates.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to check for updates: %s", e.message);
+                    }
+                });
             }
         });
 
-        check_button.clicked.connect (() => {
+        update_button.clicked.connect (() => {
             if (update_proxy != null) {
-                try {
-                    update_proxy.check_for_updates.begin ();
-                } catch (Error e) {
-                    warning ("Failed to check for updates: %s", e.message);
-                }
+                update_proxy.update.begin ((obj, res) => {
+                    try {
+                        update_proxy.update.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to update: %s", e.message);
+                    }
+                });
+            }
+        });
+
+        cancel_button.clicked.connect (() => {
+            if (update_proxy != null) {
+                update_proxy.cancel.begin ((obj, res) => {
+                    try {
+                        update_proxy.cancel.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to cancel update: %s", e.message);
+                    }
+                });
+            }
+        });
+
+        error_button.clicked.connect (() => {
+            if (update_proxy != null) {
+                update_proxy.check_for_updates.begin (true, (obj, res) => {
+                    try {
+                        update_proxy.check_for_updates.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to force refresh: %s", e.message);
+                    }
+                });
             }
         });
     }
@@ -342,6 +384,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         update_button_revealer.reveal_child = current_state.state == AVAILABLE;
         cancel_button_revealer.reveal_child = current_state.state == DOWNLOADING;
+        error_button_revealer.reveal_child = current_state.state == ERROR;
 
         switch (current_state.state) {
             case UP_TO_DATE:
@@ -389,6 +432,12 @@ public class About.OperatingSystemView : Gtk.Box {
                 updates_image.icon_name = "system-reboot";
                 updates_title.label = _("Restart Required");
                 updates_description.label = _("A restart is required to finish installing updates");
+                check_button.sensitive = false;
+                break;
+            case ERROR:
+                updates_image.icon_name = "dialog-error";
+                updates_title.label = _("Failed to download updates");
+                updates_description.label = _("Manually refreshing updates may resolve the issue.");
                 check_button.sensitive = false;
                 break;
         }

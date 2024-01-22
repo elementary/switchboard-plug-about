@@ -5,7 +5,8 @@ public interface SystemUpdate : Object {
         CHECKING,
         AVAILABLE,
         DOWNLOADING,
-        RESTART_REQUIRED
+        RESTART_REQUIRED,
+        ERROR
     }
 
     public struct CurrentState {
