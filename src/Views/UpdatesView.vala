@@ -34,6 +34,7 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
     private Gtk.ListBox update_list;
     private Gtk.Stack button_stack;
     private Granite.OverlayBar status_bar;
+    private Gtk.InfoBar reboot_infobar;
 
     public UpdatesView () {
         Object (
@@ -45,6 +46,12 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
 
     construct {
         updates = new Gtk.StringList (null);
+
+        reboot_infobar = new Gtk.InfoBar () {
+            revealed = false,
+            message_type = WARNING
+        };
+        reboot_infobar.add_child (new Gtk.Label (_("A restart is required to finish installing updates")));
 
         checking_alert_view = new Granite.Placeholder (_("Checking for Updates")) {
             description = _("Connecting to the backend and searching for updates."),
@@ -89,6 +96,7 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
         };
 
         content_area.attach (frame, 0, 0);
+        content_area.attach (reboot_infobar, 0, 1);
 
         var check_button = new Gtk.Button.with_label (_("Check for updates"));
 
@@ -114,6 +122,16 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
                 update_state.begin ();
             } catch (Error e) {
                 critical ("Failed to get updates proxy");
+            }
+        });
+
+        update_button.clicked.connect (() => {
+            if (update_proxy != null) {
+                try {
+                    update_proxy.update.begin ();
+                } catch (Error e) {
+                    warning ("Failed to updates: %s", e.message);
+                }
             }
         });
 
@@ -169,6 +187,7 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
                 button_stack.visible_child_name = "blank";
                 break;
             case RESTART_REQUIRED:
+                reboot_infobar.revealed = true;
                 status_bar.visible = false;
                 button_stack.visible_child_name = "blank";
                 break;
