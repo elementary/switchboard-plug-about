@@ -127,21 +127,25 @@ public class About.UpdatesView : Granite.SimpleSettingsPage {
 
         update_button.clicked.connect (() => {
             if (update_proxy != null) {
-                try {
-                    update_proxy.update.begin ();
-                } catch (Error e) {
-                    warning ("Failed to updates: %s", e.message);
-                }
+                update_proxy.update.begin ((obj, res) => {
+                    try {
+                        update_proxy.update.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to update: %s", e.message);
+                    }
+                });
             }
         });
 
         check_button.clicked.connect (() => {
             if (update_proxy != null) {
-                try {
-                    update_proxy.check_for_updates.begin ();
-                } catch (Error e) {
-                    warning ("Failed to check for updates: %s", e.message);
-                }
+                update_proxy.check_for_updates.begin (false, (obj, res) => {
+                    try {
+                        update_proxy.update.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to check for updates: %s", e.message);
+                    }
+                });
             }
         });
     }
