@@ -161,6 +161,7 @@ public class About.OperatingSystemView : Gtk.Box {
             margin_end = 6,
             valign = CENTER
         };
+        update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION)
 
         update_button_revealer = new Gtk.Revealer () {
             child = update_button,
