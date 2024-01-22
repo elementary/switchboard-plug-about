@@ -141,7 +141,8 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         updates_image = new Gtk.Image () {
-            icon_size = LARGE
+            icon_size = LARGE,
+            margin_end = 6
         };
 
         updates_title = new Gtk.Label (null) {
@@ -179,7 +180,6 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         var updates_grid = new Gtk.Grid () {
-            column_spacing = 6,
             margin_top = 6,
             margin_bottom = 6,
             margin_start = 6
