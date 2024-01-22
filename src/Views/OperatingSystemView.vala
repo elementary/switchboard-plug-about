@@ -170,6 +170,7 @@ public class About.OperatingSystemView : Gtk.Box {
             transition_type = CROSSFADE,
             valign = CENTER
         };
+        button_stack.add_named (new Gtk.Grid (), "blank");
         button_stack.add_named (update_button, "update");
         button_stack.add_named (cancel_button, "cancel");
         button_stack.add_named (refresh_button, "refresh");
@@ -280,7 +281,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         refresh_button.clicked.connect (() => {
             if (update_proxy != null) {
-                update_proxy.check_for_updates.begin (true, (obj, res) => {
+                update_proxy.check_for_updates.begin (true, false, (obj, res) => {
                     try {
                         update_proxy.check_for_updates.end (res);
                     } catch (Error e) {
