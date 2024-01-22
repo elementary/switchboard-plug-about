@@ -24,7 +24,6 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.StringList updates;
     private SystemUpdate? update_proxy = null;
     private Gtk.Grid software_grid;
-    private Gtk.Button check_button;
     private Gtk.Image updates_image;
     private Gtk.Label updates_title;
     private Gtk.Label updates_description;
@@ -122,7 +121,10 @@ public class About.OperatingSystemView : Gtk.Box {
             _("Suggest Translations")
         );
 
-        var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
+        var bug_button = new Gtk.Button.with_label (_("Send Feedback")) {
+            halign = END,
+            hexpand = true
+        };
 
         updates = new Gtk.StringList (null);
 
@@ -140,8 +142,7 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         updates_image = new Gtk.Image () {
-            icon_size = LARGE,
-            margin_end = 6
+            icon_size = LARGE
         };
 
         updates_title = new Gtk.Label (null) {
@@ -156,35 +157,26 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_description.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
         updates_description.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-        var update_button = new Gtk.Button.with_label (_("Download")) {
-            margin_start = 6,
-            margin_end = 6,
-            valign = CENTER
-        };
+        var update_button = new Gtk.Button.with_label (_("Download"));
         update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var cancel_button = new Gtk.Button.with_label (_("Cancel")) {
-            margin_start = 6,
-            margin_end = 6,
-            valign = CENTER
-        };
+        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
 
-        var error_button = new Gtk.Button.with_label (_("Refresh")) {
-            margin_start = 6,
-            margin_end = 6,
-            valign = CENTER
-        };
+        var refresh_button = new Gtk.Button.with_label (_("Refresh"));
 
         button_stack = new Gtk.Stack () {
-            transition_type = CROSSFADE
+            transition_type = CROSSFADE,
+            valign = CENTER
         };
         button_stack.add_named (update_button, "update");
         button_stack.add_named (cancel_button, "cancel");
-        button_stack.add_named (error_button, "error");
+        button_stack.add_named (refresh_button, "refresh");
         button_stack.add_named (new Gtk.Grid (), "blank");
 
         var updates_grid = new Gtk.Grid () {
+            column_spacing = 6,
             margin_top = 6,
+            margin_end = 6,
             margin_bottom = 6,
             margin_start = 6
         };
@@ -201,21 +193,11 @@ public class About.OperatingSystemView : Gtk.Box {
         };
         frame.add_css_class (Granite.STYLE_CLASS_VIEW);
 
-        check_button = new Gtk.Button.with_label (_("Check for Updates"));
-
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
-
-        var primary_button_box = new Gtk.Box (HORIZONTAL, 6) {
-            hexpand = true,
-            halign = END,
-            homogeneous = true
-        };
-        primary_button_box.append (bug_button);
-        primary_button_box.append (check_button);
 
         var button_grid = new Gtk.Box (HORIZONTAL, 6);
         button_grid.append (settings_restore_button);
-        button_grid.append (primary_button_box);
+        button_grid.append (bug_button);
 
         software_grid = new Gtk.Grid () {
             column_spacing = 32,
@@ -270,18 +252,6 @@ public class About.OperatingSystemView : Gtk.Box {
             }
         });
 
-        check_button.clicked.connect (() => {
-            if (update_proxy != null) {
-                update_proxy.check_for_updates.begin (false, (obj, res) => {
-                    try {
-                        update_proxy.check_for_updates.end (res);
-                    } catch (Error e) {
-                        critical ("Failed to check for updates: %s", e.message);
-                    }
-                });
-            }
-        });
-
         update_button.clicked.connect (() => {
             if (update_proxy != null) {
                 update_proxy.update.begin ((obj, res) => {
@@ -306,7 +276,7 @@ public class About.OperatingSystemView : Gtk.Box {
             }
         });
 
-        error_button.clicked.connect (() => {
+        refresh_button.clicked.connect (() => {
             if (update_proxy != null) {
                 update_proxy.check_for_updates.begin (true, (obj, res) => {
                     try {
@@ -376,20 +346,17 @@ public class About.OperatingSystemView : Gtk.Box {
                 updates_image.icon_name = "process-completed";
                 updates_title.label = _("Up To Date");
                 updates_description.label = _("No updates available");
-                check_button.sensitive = true;
-                button_stack.visible_child_name = "blank";
+                button_stack.visible_child_name = "refresh";
                 break;
             case CHECKING:
                 updates_image.icon_name = "emblem-synchronized";
                 updates_title.label = _("Checking for Updates");
                 updates_description.label = current_state.message;
-                check_button.sensitive = false;
                 button_stack.visible_child_name = "blank";
                 break;
             case AVAILABLE:
                 updates_image.icon_name = "software-update-available";
                 updates_title.label = _("Updates Available");
-                check_button.sensitive = true;
                 button_stack.visible_child_name = "update";
 
                 try {
@@ -410,22 +377,19 @@ public class About.OperatingSystemView : Gtk.Box {
                 updates_image.icon_name = "browser-download";
                 updates_title.label = _("Downloading Updates");
                 updates_description.label = current_state.message;
-                check_button.sensitive = false;
                 button_stack.visible_child_name = "cancel";
                 break;
             case RESTART_REQUIRED:
                 updates_image.icon_name = "system-reboot";
                 updates_title.label = _("Restart Required");
                 updates_description.label = _("A restart is required to finish installing updates");
-                check_button.sensitive = false;
                 button_stack.visible_child_name = "blank";
                 break;
             case ERROR:
                 updates_image.icon_name = "dialog-error";
                 updates_title.label = _("Failed to download updates");
                 updates_description.label = _("Manually refreshing updates may resolve the issue.");
-                check_button.sensitive = false;
-                button_stack.visible_child_name = "error";
+                button_stack.visible_child_name = "refresh";
                 break;
         }
     }
