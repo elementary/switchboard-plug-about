@@ -14,11 +14,13 @@ public class About.UpdateDetailsDialog : Granite.Dialog {
         title = _("What's New");
         modal = true;
 
-        var title_label = new Gtk.Label (ngettext (
-            _("%u package will be upgraded").printf (packages.get_n_items ()),
-            _("%u packages will be upgraded").printf (packages.get_n_items ()),
-            packages.get_n_items ()
-        )) {
+        var title_label = new Gtk.Label (
+            ngettext (
+                "%u package will be upgraded",
+                "%u packages will be upgraded",
+                packages.get_n_items ()
+            ).printf (packages.get_n_items ())
+        ) {
             halign = START
         };
         title_label.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);

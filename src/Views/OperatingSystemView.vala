@@ -369,10 +369,10 @@ public class About.OperatingSystemView : Gtk.Box {
                 try {
                     var details = yield update_proxy.get_update_details ();
                     updates_description.label = ngettext (
-                        _("%i update available").printf (details.packages.length),
-                        _("%i updates available").printf (details.packages.length),
+                        "%i update available",
+                        "%i updates available",
                         details.packages.length
-                    );
+                    ).printf (details.packages.length);
 
                     packages.splice (0, packages.get_n_items (), details.packages);
                 } catch (Error e) {
