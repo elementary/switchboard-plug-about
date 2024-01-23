@@ -39,16 +39,17 @@ public class About.UpdateDetailsDialog : Granite.Dialog {
 
             var label = new Gtk.Label (str);
 
-            var grid = new Gtk.Grid () {
-                column_spacing = 6
-            };
+            var box = new Gtk.Box (HORIZONTAL, 6);
+            box.append (image);
+            box.append (label);
 
-            return grid;
+            return box;
         });
 
         var scrolled = new Gtk.ScrolledWindow () {
             child = packages_listbox,
-            max_content_height = 400
+            max_content_height = 400,
+            propagate_natural_height = true
         };
 
         var frame = new Gtk.Frame (null) {
