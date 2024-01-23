@@ -343,7 +343,7 @@ public class About.OperatingSystemView : Gtk.Box {
             case UP_TO_DATE:
                 updates_image.icon_name = "process-completed";
                 updates_title.label = _("Up To Date");
-                updates_description.label = _("Last checked %s.").printf (
+                updates_description.label = _("Last checked %s").printf (
                     Granite.DateTime.get_relative_datetime (
                         new DateTime.from_unix_local (update_settings.get_int64 ("last-refresh-time"))
                     )
@@ -390,7 +390,7 @@ public class About.OperatingSystemView : Gtk.Box {
             case ERROR:
                 updates_image.icon_name = "dialog-error";
                 updates_title.label = _("Failed to download updates");
-                updates_description.label = _("Manually refreshing updates may resolve the issue.");
+                updates_description.label = _("Manually refreshing updates may resolve the issue");
                 button_stack.visible_child_name = "refresh";
                 break;
         }
