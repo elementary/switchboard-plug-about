@@ -22,13 +22,13 @@ public class About.OperatingSystemView : Gtk.Box {
     private static Settings update_settings = new Settings ("io.elementary.settings-daemon.system-updates");
 
     private string support_url;
-
-    private Gtk.StringList updates;
+    private Gtk.StringList packages;
     private SystemUpdate? update_proxy = null;
     private Gtk.Grid software_grid;
     private Gtk.Image updates_image;
     private Gtk.Label updates_title;
     private Gtk.Label updates_description;
+    private Gtk.Revealer details_button_revealer;
     private Gtk.Stack button_stack;
 
     construct {
@@ -51,7 +51,9 @@ public class About.OperatingSystemView : Gtk.Box {
             icon_name = logo_icon_name,
         };
 
-        var logo_overlay = new Gtk.Overlay ();
+        var logo_overlay = new Gtk.Overlay () {
+            valign = START
+        };
 
         if (Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).has_icon (logo_icon_name + "-symbolic")) {
             foreach (unowned var path in Environment.get_system_data_dirs ()) {
@@ -128,20 +130,7 @@ public class About.OperatingSystemView : Gtk.Box {
             hexpand = true
         };
 
-        updates = new Gtk.StringList (null);
-
-        var update_list = new Gtk.ListBox () {
-            vexpand = true,
-            selection_mode = Gtk.SelectionMode.SINGLE
-        };
-        update_list.bind_model (updates, (obj) => {
-            var str = ((Gtk.StringObject) obj).string;
-            return new Gtk.Label (str);
-        });
-
-        var update_scrolled = new Gtk.ScrolledWindow () {
-            child = update_list
-        };
+        packages = new Gtk.StringList (null);
 
         updates_image = new Gtk.Image () {
             icon_size = LARGE
@@ -175,6 +164,18 @@ public class About.OperatingSystemView : Gtk.Box {
         button_stack.add_named (cancel_button, "cancel");
         button_stack.add_named (refresh_button, "refresh");
 
+        var details_button = new Gtk.Button.with_label (_("Learn More…")) {
+            halign = START,
+            has_frame = false,
+            margin_top = 6
+        };
+        details_button.add_css_class ("link");
+        details_button.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
+
+        details_button_revealer = new Gtk.Revealer () {
+            child = details_button
+        };
+
         var updates_grid = new Gtk.Grid () {
             column_spacing = 6,
             margin_top = 6,
@@ -186,6 +187,7 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_grid.attach (updates_title, 1, 0);
         updates_grid.attach (updates_description, 1, 1);
         updates_grid.attach (button_stack, 2, 0, 1, 2);
+        updates_grid.attach (details_button_revealer, 1, 2, 2);
 
         var frame = new Gtk.Frame (null) {
             child = updates_grid,
@@ -279,6 +281,13 @@ public class About.OperatingSystemView : Gtk.Box {
         });
 
         refresh_button.clicked.connect (refresh_clicked);
+
+        details_button.clicked.connect (() => {
+            var details_dialog = new UpdateDetailsDialog (packages) {
+                transient_for = (Gtk.Window) get_root ()
+            };
+            details_dialog.present ();
+        });
     }
 
     private async void get_upstream_release () {
@@ -333,6 +342,8 @@ public class About.OperatingSystemView : Gtk.Box {
             return;
         }
 
+        details_button_revealer.reveal_child = current_state.state == AVAILABLE;
+
         switch (current_state.state) {
             case UP_TO_DATE:
                 updates_image.icon_name = "process-completed";
@@ -358,12 +369,12 @@ public class About.OperatingSystemView : Gtk.Box {
                 try {
                     var details = yield update_proxy.get_update_details ();
                     updates_description.label = ngettext (
-                        _("%i update available").printf (details.packages.length),
-                        _("%i updates available").printf (details.packages.length),
+                        "%i update available",
+                        "%i updates available",
                         details.packages.length
-                    );
+                    ).printf (details.packages.length);
 
-                    updates.splice (0, 0, details.packages);
+                    packages.splice (0, packages.get_n_items (), details.packages);
                 } catch (Error e) {
                     updates_description.label = _("Unable to determine number of updates");
                     warning ("Failed to get updates list from backend: %s", e.message);
