@@ -8,7 +8,8 @@ plug_files = files(
     'Views/FirmwareView.vala',
     'Views/HardwareView.vala',
     'Views/OperatingSystemView.vala',
-    'Widgets/FirmwareUpdateRow.vala'
+    'Widgets/FirmwareUpdateRow.vala',
+    'Widgets' / 'UpdateDetailsDialog.vala'
 )
 
 switchboard_dep = dependency('switchboard-3')
