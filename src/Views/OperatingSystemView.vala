@@ -19,7 +19,7 @@
 */
 
 public class About.OperatingSystemView : Gtk.Box {
-    private static Settings update_settings = new Settings ("io.elementary.settings-daemon.system-updates");
+    private static Settings update_settings = new Settings ("io.elementary.settings-daemon.system-update");
 
     private string support_url;
     private Gtk.StringList packages;
@@ -430,7 +430,7 @@ public class About.OperatingSystemView : Gtk.Box {
         }
 
         try {
-            yield update_proxy.check_for_updates (current_state.state == ERROR, false);
+            yield update_proxy.check_for_updates (true, false);
         } catch (Error e) {
             critical ("Failed to check for updates: %s", e.message);
         }
