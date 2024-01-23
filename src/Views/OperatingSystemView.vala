@@ -24,6 +24,7 @@ public class About.OperatingSystemView : Gtk.Box {
     private string support_url;
     private Gtk.StringList packages;
     private SystemUpdate? update_proxy = null;
+    private SystemUpdate.CurrentState? current_state = null;
     private Gtk.Grid software_grid;
     private Gtk.Image updates_image;
     private Gtk.Label updates_title;
@@ -282,12 +283,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         refresh_button.clicked.connect (refresh_clicked);
 
-        details_button.clicked.connect (() => {
-            var details_dialog = new UpdateDetailsDialog (packages) {
-                transient_for = (Gtk.Window) get_root ()
-            };
-            details_dialog.present ();
-        });
+        details_button.clicked.connect (details_clicked);
     }
 
     private async void get_upstream_release () {
@@ -334,7 +330,6 @@ public class About.OperatingSystemView : Gtk.Box {
             return;
         }
 
-        SystemUpdate.CurrentState current_state;
         try {
             current_state = yield update_proxy.get_current_state ();
         } catch (Error e) {
@@ -342,7 +337,7 @@ public class About.OperatingSystemView : Gtk.Box {
             return;
         }
 
-        details_button_revealer.reveal_child = current_state.state == AVAILABLE;
+        details_button_revealer.reveal_child = current_state.state == AVAILABLE || current_state.state == ERROR;
 
         switch (current_state.state) {
             case UP_TO_DATE:
@@ -401,14 +396,41 @@ public class About.OperatingSystemView : Gtk.Box {
         }
     }
 
+    private void details_clicked () {
+        if (current_state == null) {
+            return;
+        }
+
+        if (current_state.state == ERROR) {
+            var message_dialog = new Granite.MessageDialog (
+                _("Failed to download updates"),
+                _("This may have been caused by sideloaded or manually compiled software, a third-party software source, or a package manager error. Manually refreshing updates may resolve the issue."),
+                new ThemedIcon ("dialog-error")
+            ) {
+                transient_for = (Gtk.Window) get_root (),
+                modal = true
+            };
+
+            message_dialog.show_error_details (current_state.message);
+
+            message_dialog.response.connect (message_dialog.destroy);
+            message_dialog.present ();
+            return;
+        }
+
+        var details_dialog = new UpdateDetailsDialog (packages) {
+            transient_for = (Gtk.Window) get_root ()
+        };
+        details_dialog.present ();
+    }
+
     private async void refresh_clicked () {
         if (update_proxy == null) {
             return;
         }
 
         try {
-            var force = (yield update_proxy.get_current_state ()).state == ERROR;
-            yield update_proxy.check_for_updates (force, false);
+            yield update_proxy.check_for_updates (current_state.state == ERROR, false);
         } catch (Error e) {
             critical ("Failed to check for updates: %s", e.message);
         }
