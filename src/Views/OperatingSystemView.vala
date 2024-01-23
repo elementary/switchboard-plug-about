@@ -235,13 +235,15 @@ public class About.OperatingSystemView : Gtk.Box {
     }
 
     private void settings_restore_clicked () {
-        var dialog = new Granite.MessageDialog.with_image_from_icon_name (
+        var dialog = new Granite.MessageDialog (
             _("System Settings Will Be Restored to The Factory Defaults"),
             _("All system settings and data will be reset to the default values. Personal data, such as music and pictures, will be unaffected."),
-            "dialog-warning",
+            new ThemedIcon ("preferences-system"),
             Gtk.ButtonsType.CANCEL
-        );
-        dialog.transient_for = (Gtk.Window) get_root ();
+        ) {
+            badge_icon = new ThemedIcon ("edit-clear"),
+            transient_for = (Gtk.Window) this.get_root ()
+        };
 
         var continue_button = dialog.add_button (_("Restore Settings"), Gtk.ResponseType.ACCEPT);
         continue_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
@@ -274,12 +276,15 @@ public class About.OperatingSystemView : Gtk.Box {
         string[] schemas = {};
         string[] pantheon_schemas = {};
         string[] prefixes = {
-            "org.pantheon.desktop",
             "io.elementary.desktop",
+            "io.elementary.dock",
             "io.elementary.onboarding",
-            "io.elementary.wingpanel.keyboard",
+            "io.elementary.settings",
+            "io.elementary.settings-daemon",
+            "io.elementary.wingpanel",
             "org.gnome.desktop",
-            "org.gnome.settings-daemon"
+            "org.gnome.settings-daemon",
+            "org.pantheon.desktop"
         };
 
         var sss = SettingsSchemaSource.get_default ();
