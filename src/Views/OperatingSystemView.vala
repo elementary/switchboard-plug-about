@@ -157,6 +157,7 @@ public class About.OperatingSystemView : Gtk.Box {
         var refresh_button = new Gtk.Button.with_label (_("Refresh"));
 
         button_stack = new Gtk.Stack () {
+            hhomogeneous = false,
             transition_type = CROSSFADE,
             valign = CENTER
         };

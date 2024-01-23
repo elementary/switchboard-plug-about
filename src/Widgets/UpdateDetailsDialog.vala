@@ -48,6 +48,7 @@ public class About.UpdateDetailsDialog : Granite.Dialog {
 
         var scrolled = new Gtk.ScrolledWindow () {
             child = packages_listbox,
+            hscrollbar_policy = NEVER,
             max_content_height = 400,
             propagate_natural_height = true
         };
