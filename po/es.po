@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-24 21:47+0000\n"
-"PO-Revision-Date: 2021-05-19 09:24+0000\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"PO-Revision-Date: 2024-01-25 02:35+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:42
@@ -337,7 +337,7 @@ msgstr "Cancelar"
 
 #: src/Views/OperatingSystemView.vala:157
 msgid "Refresh"
-msgstr ""
+msgstr "Actualizar"
 
 #: src/Views/OperatingSystemView.vala:169
 msgid "Learn More…"
@@ -442,7 +442,7 @@ msgstr[1] ""
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"
-msgstr ""
+msgstr "Cerrar"
 
 #~ msgid "Check for Updates"
 #~ msgstr "Buscar actualizaciones"
