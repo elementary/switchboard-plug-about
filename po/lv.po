@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-24 21:47+0000\n"
-"PO-Revision-Date: 2021-01-04 22:57+0000\n"
+"PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Latvian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/lv/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:42
@@ -336,7 +336,7 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:155
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
 #: src/Views/OperatingSystemView.vala:157
 msgid "Refresh"
@@ -432,7 +432,7 @@ msgstr[2] ""
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"
-msgstr ""
+msgstr "Aizvērt"
 
 #~ msgid "Check for Updates"
 #~ msgstr "Pārbaudīt atjauninājumus"
