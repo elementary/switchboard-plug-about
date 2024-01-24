@@ -19,9 +19,18 @@
 */
 
 public class About.OperatingSystemView : Gtk.Box {
-    private string support_url;
+    private static Settings update_settings = new Settings ("io.elementary.settings-daemon.system-update");
 
+    private string support_url;
+    private Gtk.StringList packages;
+    private SystemUpdate? update_proxy = null;
+    private SystemUpdate.CurrentState? current_state = null;
     private Gtk.Grid software_grid;
+    private Gtk.Image updates_image;
+    private Gtk.Label updates_title;
+    private Gtk.Label updates_description;
+    private Gtk.Revealer details_button_revealer;
+    private Gtk.Stack button_stack;
 
     construct {
         var style_provider = new Gtk.CssProvider ();
@@ -43,7 +52,9 @@ public class About.OperatingSystemView : Gtk.Box {
             icon_name = logo_icon_name,
         };
 
-        var logo_overlay = new Gtk.Overlay ();
+        var logo_overlay = new Gtk.Overlay () {
+            valign = START
+        };
 
         if (Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).has_icon (logo_icon_name + "-symbolic")) {
             foreach (unowned var path in Environment.get_system_data_dirs ()) {
@@ -84,7 +95,6 @@ public class About.OperatingSystemView : Gtk.Box {
 
         var title = new Gtk.Label (pretty_name) {
             ellipsize = Pango.EllipsizeMode.END,
-            margin_bottom = 12,
             selectable = true,
             use_markup = true,
             xalign = 0
@@ -95,61 +105,109 @@ public class About.OperatingSystemView : Gtk.Box {
             selectable = true,
             xalign = 0
         };
+        kernel_version_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
+        kernel_version_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
         var website_url = Environment.get_os_info (GLib.OsInfoKey.HOME_URL);
         if (website_url == "" || website_url == null) {
             website_url = "https://elementary.io";
         }
 
-        var website_label = new Gtk.LinkButton.with_label (website_url, _("Website")) {
-            margin_top = 12
-        };
+        var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
 
 
         var help_button = new Gtk.LinkButton.with_label (support_url, _("Get Support")) {
             halign = Gtk.Align.CENTER,
-            hexpand = true,
-            margin_top = 12
+            hexpand = true
         };
 
         var translate_button = new Gtk.LinkButton.with_label (
             "https://l10n.elementary.io/projects/",
             _("Suggest Translations")
-        ) {
-            margin_top = 12
+        );
+
+        var bug_button = new Gtk.Button.with_label (_("Send Feedback")) {
+            halign = END,
+            hexpand = true
         };
 
-        var bug_button = new Gtk.Button.with_label (_("Send Feedback"));
+        packages = new Gtk.StringList (null);
 
-        Gtk.Button? update_button = null;
-        var appcenter_info = new GLib.DesktopAppInfo ("io.elementary.appcenter.desktop");
-        if (appcenter_info != null) {
-            update_button = new Gtk.Button.with_label (_("Check for Updates"));
-            update_button.clicked.connect (() => {
-                appcenter_info.launch_action ("ShowUpdates", new GLib.AppLaunchContext ());
-            });
-        }
+        updates_image = new Gtk.Image () {
+            icon_size = LARGE
+        };
+
+        updates_title = new Gtk.Label (null) {
+            hexpand = true,
+            margin_end = 6,
+            xalign = 0
+        };
+
+        updates_description = new Gtk.Label (null) {
+            xalign = 0
+        };
+        updates_description.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
+        updates_description.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
+
+        var update_button = new Gtk.Button.with_label (_("Download"));
+        update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+
+        var cancel_button = new Gtk.Button.with_label (_("Cancel"));
+
+        var refresh_button = new Gtk.Button.with_label (_("Refresh"));
+
+        button_stack = new Gtk.Stack () {
+            hhomogeneous = false,
+            transition_type = CROSSFADE,
+            valign = CENTER
+        };
+        button_stack.add_named (new Gtk.Grid (), "blank");
+        button_stack.add_named (update_button, "update");
+        button_stack.add_named (cancel_button, "cancel");
+        button_stack.add_named (refresh_button, "refresh");
+
+        var details_button = new Gtk.Button.with_label (_("Learn More…")) {
+            halign = START,
+            has_frame = false,
+            margin_top = 6
+        };
+        details_button.add_css_class ("link");
+        details_button.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
+
+        details_button_revealer = new Gtk.Revealer () {
+            child = details_button
+        };
+
+        var updates_grid = new Gtk.Grid () {
+            column_spacing = 6,
+            margin_top = 6,
+            margin_end = 6,
+            margin_bottom = 6,
+            margin_start = 6
+        };
+        updates_grid.attach (updates_image, 0, 0, 1, 2);
+        updates_grid.attach (updates_title, 1, 0);
+        updates_grid.attach (updates_description, 1, 1);
+        updates_grid.attach (button_stack, 2, 0, 1, 2);
+        updates_grid.attach (details_button_revealer, 1, 2, 2);
+
+        var frame = new Gtk.Frame (null) {
+            child = updates_grid,
+            margin_bottom = 12,
+            margin_top = 12,
+            valign = CENTER
+        };
+        frame.add_css_class (Granite.STYLE_CLASS_VIEW);
 
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
-        var primary_button_box = new Gtk.Box (HORIZONTAL, 6) {
-            hexpand = true,
-            halign = END,
-            homogeneous = true
-        };
-        primary_button_box.append (bug_button);
-        if (update_button != null) {
-            primary_button_box.append (update_button);
-        }
-
         var button_grid = new Gtk.Box (HORIZONTAL, 6);
         button_grid.append (settings_restore_button);
-        button_grid.append (primary_button_box);
+        button_grid.append (bug_button);
 
         software_grid = new Gtk.Grid () {
             column_spacing = 32,
             halign = Gtk.Align.CENTER,
-            row_spacing = 6,
             valign = Gtk.Align.CENTER,
             vexpand = true
         };
@@ -157,9 +215,10 @@ public class About.OperatingSystemView : Gtk.Box {
         software_grid.attach (title, 1, 0, 3);
 
         software_grid.attach (kernel_version_label, 1, 2, 3);
-        software_grid.attach (website_label, 1, 3);
-        software_grid.attach (help_button, 2, 3);
-        software_grid.attach (translate_button, 3, 3);
+        software_grid.attach (frame, 1, 3, 3);
+        software_grid.attach (website_label, 1, 4);
+        software_grid.attach (help_button, 2, 4);
+        software_grid.attach (translate_button, 3, 4);
 
         margin_top = 12;
         margin_end = 12;
@@ -187,6 +246,45 @@ public class About.OperatingSystemView : Gtk.Box {
         });
 
         get_upstream_release.begin ();
+
+        Bus.get_proxy.begin<SystemUpdate> (SESSION, "io.elementary.settings-daemon", "/io/elementary/settings_daemon", 0, null, (obj, res) => {
+            try {
+                update_proxy = Bus.get_proxy.end (res);
+
+                update_proxy.state_changed.connect (update_state);
+                update_state.begin ();
+            } catch (Error e) {
+                critical ("Failed to get updates proxy");
+            }
+        });
+
+        update_button.clicked.connect (() => {
+            if (update_proxy != null) {
+                update_proxy.update.begin ((obj, res) => {
+                    try {
+                        update_proxy.update.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to update: %s", e.message);
+                    }
+                });
+            }
+        });
+
+        cancel_button.clicked.connect (() => {
+            if (update_proxy != null) {
+                update_proxy.cancel.begin ((obj, res) => {
+                    try {
+                        update_proxy.cancel.end (res);
+                    } catch (Error e) {
+                        critical ("Failed to cancel update: %s", e.message);
+                    }
+                });
+            }
+        });
+
+        refresh_button.clicked.connect (refresh_clicked);
+
+        details_button.clicked.connect (details_clicked);
     }
 
     private async void get_upstream_release () {
@@ -222,7 +320,120 @@ public class About.OperatingSystemView : Gtk.Box {
                 selectable = true,
                 xalign = 0
             };
+            based_off.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
+            based_off.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
             software_grid.attach (based_off, 1, 1, 3);
+        }
+    }
+
+    private async void update_state () {
+        if (update_proxy == null) {
+            return;
+        }
+
+        try {
+            current_state = yield update_proxy.get_current_state ();
+        } catch (Error e) {
+            critical ("Failed to get current state from Updates Backend: %s", e.message);
+            return;
+        }
+
+        details_button_revealer.reveal_child = current_state.state == AVAILABLE || current_state.state == ERROR;
+
+        switch (current_state.state) {
+            case UP_TO_DATE:
+                updates_image.icon_name = "process-completed";
+                updates_title.label = _("Up To Date");
+                updates_description.label = _("Last checked %s").printf (
+                    Granite.DateTime.get_relative_datetime (
+                        new DateTime.from_unix_utc (update_settings.get_int64 ("last-refresh-time"))
+                    )
+                );
+                button_stack.visible_child_name = "refresh";
+                break;
+            case CHECKING:
+                updates_image.icon_name = "emblem-synchronized";
+                updates_title.label = _("Checking for Updates");
+                updates_description.label = current_state.message;
+                button_stack.visible_child_name = "blank";
+                break;
+            case AVAILABLE:
+                updates_image.icon_name = "software-update-available";
+                updates_title.label = _("Updates Available");
+                button_stack.visible_child_name = "update";
+
+                try {
+                    var details = yield update_proxy.get_update_details ();
+                    updates_description.label = ngettext (
+                        "%i update available",
+                        "%i updates available",
+                        details.packages.length
+                    ).printf (details.packages.length);
+
+                    packages.splice (0, packages.get_n_items (), details.packages);
+                } catch (Error e) {
+                    updates_description.label = _("Unable to determine number of updates");
+                    warning ("Failed to get updates list from backend: %s", e.message);
+                }
+                break;
+            case DOWNLOADING:
+                updates_image.icon_name = "browser-download";
+                updates_title.label = _("Downloading Updates");
+                updates_description.label = current_state.message;
+                button_stack.visible_child_name = "cancel";
+                break;
+            case RESTART_REQUIRED:
+                updates_image.icon_name = "system-reboot";
+                updates_title.label = _("Restart Required");
+                updates_description.label = _("A restart is required to finish installing updates");
+                button_stack.visible_child_name = "blank";
+                break;
+            case ERROR:
+                updates_image.icon_name = "dialog-error";
+                updates_title.label = _("Failed to download updates");
+                updates_description.label = _("Manually refreshing updates may resolve the issue");
+                button_stack.visible_child_name = "refresh";
+                break;
+        }
+    }
+
+    private void details_clicked () {
+        if (current_state == null) {
+            return;
+        }
+
+        if (current_state.state == ERROR) {
+            var message_dialog = new Granite.MessageDialog (
+                _("Failed to download updates"),
+                _("This may have been caused by sideloaded or manually compiled software, a third-party software source, or a package manager error. Manually refreshing updates may resolve the issue."),
+                new ThemedIcon ("dialog-error")
+            ) {
+                transient_for = (Gtk.Window) get_root (),
+                modal = true
+            };
+
+            message_dialog.show_error_details (current_state.message);
+
+            message_dialog.response.connect (message_dialog.destroy);
+            message_dialog.present ();
+            return;
+        }
+
+        var details_dialog = new UpdateDetailsDialog (packages) {
+            transient_for = (Gtk.Window) get_root ()
+        };
+        details_dialog.present ();
+    }
+
+    private async void refresh_clicked () {
+        if (update_proxy == null) {
+            return;
+        }
+
+        try {
+            yield update_proxy.check_for_updates (true, false);
+        } catch (Error e) {
+            critical ("Failed to check for updates: %s", e.message);
         }
     }
 
