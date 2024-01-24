@@ -346,7 +346,7 @@ public class About.OperatingSystemView : Gtk.Box {
                 updates_title.label = _("Up To Date");
                 updates_description.label = _("Last checked %s").printf (
                     Granite.DateTime.get_relative_datetime (
-                        new DateTime.from_unix_local (update_settings.get_int64 ("last-refresh-time"))
+                        new DateTime.from_unix_utc (update_settings.get_int64 ("last-refresh-time"))
                     )
                 );
                 button_stack.visible_child_name = "refresh";
