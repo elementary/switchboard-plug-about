@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-24 21:47+0000\n"
-"PO-Revision-Date: 2023-02-28 18:25+0000\n"
-"Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
+"PO-Revision-Date: 2024-01-25 02:35+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/hu/>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:42
@@ -330,7 +330,7 @@ msgstr "Mégsem"
 
 #: src/Views/OperatingSystemView.vala:157
 msgid "Refresh"
-msgstr ""
+msgstr "Frissítés"
 
 #: src/Views/OperatingSystemView.vala:169
 msgid "Learn More…"
@@ -433,7 +433,7 @@ msgstr[1] ""
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"
-msgstr ""
+msgstr "Bezárás"
 
 #~ msgid "Check for Updates"
 #~ msgstr "Frissítések keresése"
