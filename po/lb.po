@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-24 21:47+0000\n"
-"PO-Revision-Date: 2021-01-04 22:57+0000\n"
+"PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Luxembourgish <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/lb/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:42
@@ -316,7 +316,7 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:155
 msgid "Cancel"
-msgstr ""
+msgstr "Ofbriechen"
 
 #: src/Views/OperatingSystemView.vala:157
 msgid "Refresh"
