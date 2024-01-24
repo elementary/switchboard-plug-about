@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-24 16:02+0000\n"
+"POT-Creation-Date: 2024-01-24 21:47+0000\n"
 "PO-Revision-Date: 2016-08-04 00:09+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -52,15 +52,15 @@ msgstr "Süsteemi informatsioon"
 msgid "Hardware Information"
 msgstr "Süsteemi informatsioon"
 
-#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:133
+#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:202
 msgid "Restore Default Settings"
 msgstr "Algseadistuste taastamine"
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:117
+#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:126
 msgid "Suggest Translations"
 msgstr "Aita tõlkida"
 
-#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:129
 msgid "Send Feedback"
 msgstr ""
 
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Report a Problem"
 msgstr "Teata probleemist"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:109
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:119
 msgid "Get Support"
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:46
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:356
 #, fuzzy
 #| msgid "Check for Updates"
 msgid "Checking for Updates"
@@ -334,34 +334,123 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:104
+#: src/Views/OperatingSystemView.vala:116
 msgid "Website"
 msgstr "Veebileht"
 
-#: src/Views/OperatingSystemView.vala:127
-msgid "Check for Updates"
-msgstr "Otsi uuendusi"
+#: src/Views/OperatingSystemView.vala:152
+msgid "Download"
+msgstr ""
 
-#: src/Views/OperatingSystemView.vala:221
+#: src/Views/OperatingSystemView.vala:155
+msgid "Cancel"
+msgstr "Tühista"
+
+#: src/Views/OperatingSystemView.vala:157
+msgid "Refresh"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:169
+msgid "Learn More…"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:319
 #, c-format
 msgid "Built on %s"
 msgstr "Põhineb süsteemil %s"
 
-#: src/Views/OperatingSystemView.vala:239
+#: src/Views/OperatingSystemView.vala:346
+#, fuzzy
+#| msgid "Updates"
+msgid "Up To Date"
+msgstr "Uuendused"
+
+#: src/Views/OperatingSystemView.vala:347
+#, c-format
+msgid "Last checked %s"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:362
+#, fuzzy
+#| msgid "Updates"
+msgid "Updates Available"
+msgstr "Uuendused"
+
+#: src/Views/OperatingSystemView.vala:368
+#, fuzzy, c-format
+#| msgid "Updates"
+msgid "%i update available"
+msgid_plural "%i updates available"
+msgstr[0] "Uuendused"
+msgstr[1] "Uuendused"
+
+#: src/Views/OperatingSystemView.vala:375
+msgid "Unable to determine number of updates"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:381
+#, fuzzy
+#| msgid "Updates"
+msgid "Downloading Updates"
+msgstr "Uuendused"
+
+#: src/Views/OperatingSystemView.vala:387
+msgid "Restart Required"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:388
+msgid "A restart is required to finish installing updates"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:393
+#: src/Views/OperatingSystemView.vala:407
+msgid "Failed to download updates"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:394
+msgid "Manually refreshing updates may resolve the issue"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:408
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"updates may resolve the issue."
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:450
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Süsteemi seadistused asendatakse algväärtustega."
 
-#: src/Views/OperatingSystemView.vala:240
+#: src/Views/OperatingSystemView.vala:451
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr "Kõik süsteemi seadistused ning andmed asendatakse algväärtustega."
 
-#: src/Views/OperatingSystemView.vala:246
+#: src/Views/OperatingSystemView.vala:459
 msgid "Restore Settings"
 msgstr "Taasta seadistused"
+
+#: src/Widgets/UpdateDetailsDialog.vala:14
+msgid "What's New"
+msgstr ""
+
+#: src/Widgets/UpdateDetailsDialog.vala:19
+#, c-format
+msgid "%u package will be upgraded"
+msgid_plural "%u packages will be upgraded"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Widgets/UpdateDetailsDialog.vala:66
+msgid "Close"
+msgstr ""
+
+#~ msgid "Check for Updates"
+#~ msgstr "Otsi uuendusi"
 
 #, fuzzy
 #~| msgid "Updates"
@@ -376,9 +465,6 @@ msgstr "Taasta seadistused"
 
 #~ msgid "Report Problems"
 #~ msgstr "Teate probleemist"
-
-#~ msgid "Cancel"
-#~ msgstr "Tühista"
 
 #, fuzzy
 #~ msgid "Report Problem"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-24 16:02+0000\n"
+"POT-Creation-Date: 2024-01-24 21:47+0000\n"
 "PO-Revision-Date: 2021-03-26 00:33+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -54,15 +54,15 @@ msgstr "系統資訊"
 msgid "Hardware Information"
 msgstr "系統資訊"
 
-#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:133
+#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:202
 msgid "Restore Default Settings"
 msgstr "還原預設設定"
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:117
+#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:126
 msgid "Suggest Translations"
 msgstr "建議翻譯"
 
-#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:129
 msgid "Send Feedback"
 msgstr ""
 
@@ -70,7 +70,7 @@ msgstr ""
 msgid "Report a Problem"
 msgstr "回報問題"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:109
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:119
 msgid "Get Support"
 msgstr ""
 
@@ -136,7 +136,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:46
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:356
 #, fuzzy
 #| msgid "Check for Updates"
 msgid "Checking for Updates"
@@ -332,24 +332,94 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:104
+#: src/Views/OperatingSystemView.vala:116
 msgid "Website"
 msgstr "網站"
 
-#: src/Views/OperatingSystemView.vala:127
-msgid "Check for Updates"
-msgstr "檢查更新"
+#: src/Views/OperatingSystemView.vala:152
+msgid "Download"
+msgstr ""
 
-#: src/Views/OperatingSystemView.vala:221
+#: src/Views/OperatingSystemView.vala:155
+msgid "Cancel"
+msgstr "取消"
+
+#: src/Views/OperatingSystemView.vala:157
+msgid "Refresh"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:169
+msgid "Learn More…"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:319
 #, c-format
 msgid "Built on %s"
 msgstr "建基於 %s"
 
-#: src/Views/OperatingSystemView.vala:239
+#: src/Views/OperatingSystemView.vala:346
+#, fuzzy
+#| msgid "Updates"
+msgid "Up To Date"
+msgstr "更新"
+
+#: src/Views/OperatingSystemView.vala:347
+#, c-format
+msgid "Last checked %s"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:362
+#, fuzzy
+#| msgid "Updates"
+msgid "Updates Available"
+msgstr "更新"
+
+#: src/Views/OperatingSystemView.vala:368
+#, fuzzy, c-format
+#| msgid "Updates"
+msgid "%i update available"
+msgid_plural "%i updates available"
+msgstr[0] "更新"
+
+#: src/Views/OperatingSystemView.vala:375
+msgid "Unable to determine number of updates"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:381
+#, fuzzy
+#| msgid "Updates"
+msgid "Downloading Updates"
+msgstr "更新"
+
+#: src/Views/OperatingSystemView.vala:387
+msgid "Restart Required"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:388
+msgid "A restart is required to finish installing updates"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:393
+#: src/Views/OperatingSystemView.vala:407
+msgid "Failed to download updates"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:394
+msgid "Manually refreshing updates may resolve the issue"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:408
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"updates may resolve the issue."
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:450
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "系統設定值將還原成出廠預設值"
 
-#: src/Views/OperatingSystemView.vala:240
+#: src/Views/OperatingSystemView.vala:451
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -357,9 +427,26 @@ msgstr ""
 "所有系統設定值和資料都會重設回預設值。個人資料，例如音樂或圖片等，都不會受到"
 "影響。"
 
-#: src/Views/OperatingSystemView.vala:246
+#: src/Views/OperatingSystemView.vala:459
 msgid "Restore Settings"
 msgstr "還原設定值"
+
+#: src/Widgets/UpdateDetailsDialog.vala:14
+msgid "What's New"
+msgstr ""
+
+#: src/Widgets/UpdateDetailsDialog.vala:19
+#, c-format
+msgid "%u package will be upgraded"
+msgid_plural "%u packages will be upgraded"
+msgstr[0] ""
+
+#: src/Widgets/UpdateDetailsDialog.vala:66
+msgid "Close"
+msgstr ""
+
+#~ msgid "Check for Updates"
+#~ msgstr "檢查更新"
 
 #, fuzzy
 #~| msgid "Updates"
@@ -380,9 +467,6 @@ msgstr "還原設定值"
 
 #~ msgid "GTK+ %s"
 #~ msgstr "GTK+ %s"
-
-#~ msgid "Cancel"
-#~ msgstr "取消"
 
 #, fuzzy
 #~ msgid "Report Problem"

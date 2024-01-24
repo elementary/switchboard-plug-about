@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-24 16:02+0000\n"
+"POT-Creation-Date: 2024-01-24 21:47+0000\n"
 "PO-Revision-Date: 2023-03-12 14:25+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -48,15 +48,15 @@ msgstr "ინფორმაცია ოპერაციული სის�
 msgid "Hardware Information"
 msgstr "ინფორმაცია აპარატურის შესახებ"
 
-#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:133
+#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:202
 msgid "Restore Default Settings"
 msgstr "ნაგულისხმევი პარამეტრების დაბრუნება"
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:117
+#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:126
 msgid "Suggest Translations"
 msgstr "თარგმნაში დახმარება"
 
-#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:129
 msgid "Send Feedback"
 msgstr "უკუკავშირის გაგზავნა"
 
@@ -64,7 +64,7 @@ msgstr "უკუკავშირის გაგზავნა"
 msgid "Report a Problem"
 msgstr "პრობლემის შეტყობინება"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:109
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:119
 msgid "Get Support"
 msgstr "მხარდაჭერის მიღება"
 
@@ -127,7 +127,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "არ გამორთოთ მოწყობილობა განახლების დროს."
 
-#: src/Views/FirmwareView.vala:46
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:356
 msgid "Checking for Updates"
 msgstr "მიმდინარეობს განახლებების შემოწმება"
 
@@ -316,39 +316,129 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:104
+#: src/Views/OperatingSystemView.vala:116
 msgid "Website"
 msgstr "ვებგვერდი"
 
-#: src/Views/OperatingSystemView.vala:127
-msgid "Check for Updates"
-msgstr "განახლებების შემოწმება"
+#: src/Views/OperatingSystemView.vala:152
+msgid "Download"
+msgstr ""
 
-#: src/Views/OperatingSystemView.vala:221
+#: src/Views/OperatingSystemView.vala:155
+msgid "Cancel"
+msgstr "გაუქმება"
+
+#: src/Views/OperatingSystemView.vala:157
+msgid "Refresh"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:169
+msgid "Learn More…"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:319
 #, c-format
 msgid "Built on %s"
 msgstr "აგებულია %s-ზე"
 
-#: src/Views/OperatingSystemView.vala:239
+#: src/Views/OperatingSystemView.vala:346
+#, fuzzy
+#| msgid "Up to Date"
+msgid "Up To Date"
+msgstr "განახლებულია"
+
+#: src/Views/OperatingSystemView.vala:347
+#, c-format
+msgid "Last checked %s"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:362
+#, fuzzy
+#| msgid "%u Update Available"
+#| msgid_plural "%u Updates Available"
+msgid "Updates Available"
+msgstr "ხელმისაწვდომია %u განახლება"
+
+#: src/Views/OperatingSystemView.vala:368
+#, fuzzy, c-format
+#| msgid "%u Update Available"
+#| msgid_plural "%u Updates Available"
+msgid "%i update available"
+msgid_plural "%i updates available"
+msgstr[0] "ხელმისაწვდომია %u განახლება"
+msgstr[1] "ხელმისაწვდომია %u განახლება"
+
+#: src/Views/OperatingSystemView.vala:375
+msgid "Unable to determine number of updates"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:381
+#, fuzzy
+#| msgid "All Updates"
+msgid "Downloading Updates"
+msgstr "ყველა განახლება"
+
+#: src/Views/OperatingSystemView.vala:387
+#, fuzzy
+#| msgid "Restart"
+msgid "Restart Required"
+msgstr "გადატვირთვა"
+
+#: src/Views/OperatingSystemView.vala:388
+msgid "A restart is required to finish installing updates"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:393
+#: src/Views/OperatingSystemView.vala:407
+msgid "Failed to download updates"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:394
+msgid "Manually refreshing updates may resolve the issue"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:408
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"updates may resolve the issue."
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:450
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "სისტემის პარამეტრები მწარმოებლის ნაგულისხმევ მნიშვნელობებზე აღდგება"
 
-#: src/Views/OperatingSystemView.vala:240
+#: src/Views/OperatingSystemView.vala:451
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 "სისტემის ყველა პარამეტრი და მონაცემები ნაგულისხმებ მნიშვნელობებზე დაბრუნდება."
 
-#: src/Views/OperatingSystemView.vala:246
+#: src/Views/OperatingSystemView.vala:459
 msgid "Restore Settings"
 msgstr "პარამეტრების აღდგენა"
 
+#: src/Widgets/UpdateDetailsDialog.vala:14
+msgid "What's New"
+msgstr ""
+
+#: src/Widgets/UpdateDetailsDialog.vala:19
+#, c-format
+msgid "%u package will be upgraded"
+msgid_plural "%u packages will be upgraded"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Widgets/UpdateDetailsDialog.vala:66
+msgid "Close"
+msgstr ""
+
+#~ msgid "Check for Updates"
+#~ msgstr "განახლებების შემოწმება"
+
 #~ msgid "About"
 #~ msgstr "შესახებ"
-
-#~ msgid "Cancel"
-#~ msgstr "გაუქმება"
 
 #, fuzzy
 #~ msgid "Report Problem"
