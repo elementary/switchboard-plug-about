@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-24 21:47+0000\n"
-"PO-Revision-Date: 2022-12-26 20:25+0000\n"
-"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
+"PO-Revision-Date: 2024-01-25 02:35+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/sk/>\n"
 "Language: sk\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:42
@@ -334,7 +334,7 @@ msgstr "Zrušiť"
 
 #: src/Views/OperatingSystemView.vala:157
 msgid "Refresh"
-msgstr ""
+msgstr "Obnoviť"
 
 #: src/Views/OperatingSystemView.vala:169
 msgid "Learn More…"
@@ -439,7 +439,7 @@ msgstr[2] ""
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"
-msgstr ""
+msgstr "Zatvoriť"
 
 #~ msgid "Check for Updates"
 #~ msgstr "Skontrolovať aktualizácie"
