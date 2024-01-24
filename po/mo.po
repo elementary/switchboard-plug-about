@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-24 21:47+0000\n"
-"PO-Revision-Date: 2021-01-04 22:57+0000\n"
+"PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Moldovan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/mo/>\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #: src/Plug.vala:42
 msgid "System"
@@ -343,7 +343,7 @@ msgstr "Anulare"
 
 #: src/Views/OperatingSystemView.vala:157
 msgid "Refresh"
-msgstr ""
+msgstr "Reîmprospătă"
 
 #: src/Views/OperatingSystemView.vala:169
 msgid "Learn More…"
