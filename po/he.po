@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-24 21:47+0000\n"
-"PO-Revision-Date: 2024-01-25 02:35+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-01-25 21:26+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
 "Language: he\n"
@@ -319,7 +319,7 @@ msgstr "אתר אינטרנט"
 
 #: src/Views/OperatingSystemView.vala:152
 msgid "Download"
-msgstr ""
+msgstr "הורדה"
 
 #: src/Views/OperatingSystemView.vala:155
 msgid "Cancel"
@@ -331,7 +331,7 @@ msgstr "רענון"
 
 #: src/Views/OperatingSystemView.vala:169
 msgid "Learn More…"
-msgstr ""
+msgstr "מידע נוסף…"
 
 #: src/Views/OperatingSystemView.vala:319
 #, c-format
@@ -339,27 +339,20 @@ msgid "Built on %s"
 msgstr "נבנה על גבי %s"
 
 #: src/Views/OperatingSystemView.vala:346
-#, fuzzy
-#| msgid "Up to Date"
 msgid "Up To Date"
 msgstr "עדכני"
 
 #: src/Views/OperatingSystemView.vala:347
 #, c-format
 msgid "Last checked %s"
-msgstr ""
+msgstr "בדיקה אחרונה ב־%s"
 
 #: src/Views/OperatingSystemView.vala:362
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Updates Available"
-msgstr "עדכון אחד זמין"
+msgstr "עדכונים זמינים"
 
 #: src/Views/OperatingSystemView.vala:368
-#, fuzzy, c-format
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
+#, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
 msgstr[0] "עדכון אחד זמין"
@@ -367,32 +360,28 @@ msgstr[1] "%u עדכונים זמינים"
 
 #: src/Views/OperatingSystemView.vala:375
 msgid "Unable to determine number of updates"
-msgstr ""
+msgstr "לא ניתן לקבוע מה מספר העדכונים"
 
 #: src/Views/OperatingSystemView.vala:381
-#, fuzzy
-#| msgid "All Updates"
 msgid "Downloading Updates"
-msgstr "כל העדכונים"
+msgstr "עדכונים מתקבלים"
 
 #: src/Views/OperatingSystemView.vala:387
-#, fuzzy
-#| msgid "Restart"
 msgid "Restart Required"
-msgstr "הפעלה מחדש"
+msgstr "צריך להפעיל מחדש"
 
 #: src/Views/OperatingSystemView.vala:388
 msgid "A restart is required to finish installing updates"
-msgstr ""
+msgstr "צריך להפעיל מחדש כדי לסיים להתקין את העדכונים"
 
 #: src/Views/OperatingSystemView.vala:393
 #: src/Views/OperatingSystemView.vala:407
 msgid "Failed to download updates"
-msgstr ""
+msgstr "הורדת העדכונים נכשלה"
 
 #: src/Views/OperatingSystemView.vala:394
 msgid "Manually refreshing updates may resolve the issue"
-msgstr ""
+msgstr "רענון העדכונים ידנית עשוי לפתור את הבעיה הזאת"
 
 #: src/Views/OperatingSystemView.vala:408
 msgid ""
@@ -400,6 +389,9 @@ msgid ""
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
+"יכול להיות שזה קרה בגלל טעינה צדית או תוכנה שהודרה ידנית, מקור תוכנה מגורם "
+"צד־שלישי או שגיאה במנהל החבילות. רענון עדכונים ידנית עשוי לפתור את הבעיה "
+"הזאת."
 
 #: src/Views/OperatingSystemView.vala:450
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -419,14 +411,14 @@ msgstr "שחזור הגדרות"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
-msgstr ""
+msgstr "מה חדש"
 
 #: src/Widgets/UpdateDetailsDialog.vala:19
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "חבילה תשודרג"
+msgstr[1] "%u חבילות תשודרגנה"
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"
