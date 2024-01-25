@@ -16,7 +16,7 @@ You'll need the following dependencies:
 * libudisks2-dev
 * libadwaita-1-dev
 * libappstream-dev
-* libpackagekit-glib2-deb
+* libpackagekit-glib2-dev
 * meson
 * valac
 * switcheroo-control (at runtime)
