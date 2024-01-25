@@ -370,6 +370,12 @@ public class About.OperatingSystemView : Gtk.Box {
                         details.packages.length
                     ).printf (details.packages.length);
 
+                    foreach (unowned var info in details.info) {
+                        if (info == SECURITY) {
+                            updates_image.icon_name = "software-update-urgent";
+                        }
+                    }
+
                     packages.splice (0, packages.get_n_items (), details.packages);
                 } catch (Error e) {
                     updates_description.label = _("Unable to determine number of updates");

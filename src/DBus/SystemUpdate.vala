@@ -17,6 +17,7 @@ public interface SystemUpdate : Object {
     public struct UpdateDetails {
         string[] packages;
         int size;
+        Pk.Info[] info;
     }
 
     public signal void state_changed ();
