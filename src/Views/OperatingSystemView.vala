@@ -207,7 +207,6 @@ public class About.OperatingSystemView : Gtk.Box {
 
         software_grid = new Gtk.Grid () {
             column_spacing = 32,
-            halign = Gtk.Align.CENTER,
             valign = Gtk.Align.CENTER,
             vexpand = true
         };
@@ -220,13 +219,17 @@ public class About.OperatingSystemView : Gtk.Box {
         software_grid.attach (help_button, 2, 4);
         software_grid.attach (translate_button, 3, 4);
 
+        var clamp = new Adw.Clamp () {
+            child = software_grid
+        };
+
         margin_top = 12;
         margin_end = 12;
         margin_bottom = 12;
         margin_start = 12;
         orientation = Gtk.Orientation.VERTICAL;
         spacing = 12;
-        append (software_grid);
+        append (clamp);
         append (button_grid);
 
         settings_restore_button.clicked.connect (settings_restore_clicked);
