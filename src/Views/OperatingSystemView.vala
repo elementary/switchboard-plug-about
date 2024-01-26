@@ -178,6 +178,24 @@ public class About.OperatingSystemView : Gtk.Box {
             child = details_button
         };
 
+        var automatic_updates_switch = new Gtk.Switch () {
+            valign = CENTER
+        };
+
+        var automatic_updates_header = new Granite.HeaderLabel (_("Automatic Updates")) {
+            mnemonic_widget = automatic_updates_switch,
+            secondary_text = _("Updates will be automatically downloaded. They will be installed when this device is restarted.")
+        };
+
+        var automatic_updates_box = new Gtk.Box (HORIZONTAL, 12) {
+            margin_top = 6,
+            margin_end = 6,
+            margin_bottom = 6,
+            margin_start = 6
+        };
+        automatic_updates_box.append (automatic_updates_header);
+        automatic_updates_box.append (automatic_updates_switch);
+
         var updates_grid = new Gtk.Grid () {
             column_spacing = 6,
             margin_top = 6,
@@ -191,28 +209,18 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_grid.attach (button_stack, 2, 0, 1, 2);
         updates_grid.attach (details_button_revealer, 1, 2, 2);
 
+        var updates_box = new Gtk.Box (VERTICAL, 0);
+        updates_box.append (updates_grid);
+        updates_box.append (new Gtk.Separator (HORIZONTAL));
+        updates_box.append (automatic_updates_box);
+
         var frame = new Gtk.Frame (null) {
-            child = updates_grid,
+            child = updates_box,
             margin_bottom = 12,
             margin_top = 12,
             valign = CENTER
         };
         frame.add_css_class (Granite.STYLE_CLASS_VIEW);
-
-        var automatic_updates_switch = new Gtk.Switch () {
-            valign = CENTER
-        };
-
-        var automatic_updates_header = new Granite.HeaderLabel (_("Automatic Updates")) {
-            mnemonic_widget = automatic_updates_switch,
-            secondary_text = _("Updates will be automatically downloaded. They will be installed when this device is restarted.")
-        };
-
-        var automatic_updates_box = new Gtk.Box (HORIZONTAL, 12) {
-            margin_top = 12
-        };
-        automatic_updates_box.append (automatic_updates_header);
-        automatic_updates_box.append (automatic_updates_switch);
 
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
@@ -230,11 +238,10 @@ public class About.OperatingSystemView : Gtk.Box {
         software_grid.attach (title, 1, 0, 3);
 
         software_grid.attach (kernel_version_label, 1, 2, 3);
-        software_grid.attach (automatic_updates_box, 1, 3, 3);
-        software_grid.attach (frame, 1, 4, 3);
-        software_grid.attach (website_label, 1, 5);
-        software_grid.attach (help_button, 2, 5);
-        software_grid.attach (translate_button, 3, 5);
+        software_grid.attach (frame, 1, 3, 3);
+        software_grid.attach (website_label, 1, 4);
+        software_grid.attach (help_button, 2, 4);
+        software_grid.attach (translate_button, 3, 4);
 
         margin_top = 12;
         margin_end = 12;
