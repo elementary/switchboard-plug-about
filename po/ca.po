@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-24 21:47+0000\n"
-"PO-Revision-Date: 2024-01-25 02:35+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-01-26 14:33+0000\n"
+"Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ca/>\n"
 "Language: ca\n"
@@ -328,7 +328,7 @@ msgstr "Lloc web"
 
 #: src/Views/OperatingSystemView.vala:152
 msgid "Download"
-msgstr ""
+msgstr "Baixa"
 
 #: src/Views/OperatingSystemView.vala:155
 msgid "Cancel"
@@ -340,7 +340,7 @@ msgstr "Actualitza"
 
 #: src/Views/OperatingSystemView.vala:169
 msgid "Learn More…"
-msgstr ""
+msgstr "Més informació…"
 
 #: src/Views/OperatingSystemView.vala:319
 #, c-format
@@ -348,60 +348,49 @@ msgid "Built on %s"
 msgstr "Construït sobre %s"
 
 #: src/Views/OperatingSystemView.vala:346
-#, fuzzy
-#| msgid "Up to Date"
 msgid "Up To Date"
-msgstr "Actualitzada"
+msgstr "Al dia"
 
 #: src/Views/OperatingSystemView.vala:347
 #, c-format
 msgid "Last checked %s"
-msgstr ""
+msgstr "Darrera comprovació: %s"
 
 #: src/Views/OperatingSystemView.vala:362
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Updates Available"
-msgstr "%u actualització disponible"
+msgstr "Actualitzacions disponibles"
 
 #: src/Views/OperatingSystemView.vala:368
-#, fuzzy, c-format
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
+#, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
-msgstr[0] "%u actualització disponible"
-msgstr[1] "%u actualitzacions disponibles"
+msgstr[0] "%i actualització disponible"
+msgstr[1] "%i actualitzacions disponibles"
 
 #: src/Views/OperatingSystemView.vala:375
 msgid "Unable to determine number of updates"
-msgstr ""
+msgstr "No es pot determinar el nombre d'actualitzacions."
 
 #: src/Views/OperatingSystemView.vala:381
-#, fuzzy
-#| msgid "All Updates"
 msgid "Downloading Updates"
-msgstr "Totes les actualitzacions"
+msgstr "Es baixen les actualitzacions"
 
 #: src/Views/OperatingSystemView.vala:387
-#, fuzzy
-#| msgid "Restart"
 msgid "Restart Required"
-msgstr "Reinicia"
+msgstr "Cal reiniciar"
 
 #: src/Views/OperatingSystemView.vala:388
 msgid "A restart is required to finish installing updates"
-msgstr ""
+msgstr "Cal reiniciar per acabar d'instal·lar les actualitzacions."
 
 #: src/Views/OperatingSystemView.vala:393
 #: src/Views/OperatingSystemView.vala:407
 msgid "Failed to download updates"
-msgstr ""
+msgstr "Ha fallat baixar les actualitzacions."
 
 #: src/Views/OperatingSystemView.vala:394
 msgid "Manually refreshing updates may resolve the issue"
-msgstr ""
+msgstr "L'actualització manual de les actualitzacions pot resoldre el problema."
 
 #: src/Views/OperatingSystemView.vala:408
 msgid ""
@@ -409,6 +398,10 @@ msgid ""
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
+"Això pot haver estat causat per un programari de càrrega lateral o compilat "
+"manualment, una font de programari de tercers o un error del gestor de "
+"paquets. L'actualització manual de les actualitzacions pot resoldre el "
+"problema."
 
 #: src/Views/OperatingSystemView.vala:450
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -429,14 +422,14 @@ msgstr "Restaura els paràmetres"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
-msgstr ""
+msgstr "Novetats"
 
 #: src/Widgets/UpdateDetailsDialog.vala:19
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "S'actualitzarà %u paquet."
+msgstr[1] "S'actualitzaran %u paquets."
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"
