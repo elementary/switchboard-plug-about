@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-24 21:47+0000\n"
-"PO-Revision-Date: 2024-01-25 21:26+0000\n"
+"PO-Revision-Date: 2024-01-28 00:53+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ru/>\n"
@@ -337,7 +337,7 @@ msgstr "Обновить"
 
 #: src/Views/OperatingSystemView.vala:169
 msgid "Learn More…"
-msgstr ""
+msgstr "Узнать больше…"
 
 #: src/Views/OperatingSystemView.vala:319
 #, c-format
@@ -351,53 +351,44 @@ msgstr "Обновления не требуются"
 #: src/Views/OperatingSystemView.vala:347
 #, c-format
 msgid "Last checked %s"
-msgstr ""
+msgstr "Последняя проверка: %s"
 
 #: src/Views/OperatingSystemView.vala:362
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Updates Available"
-msgstr "Доступно %u обновление"
+msgstr "Доступны обновления"
 
 #: src/Views/OperatingSystemView.vala:368
-#, fuzzy, c-format
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
+#, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
-msgstr[0] "Доступно %u обновление"
-msgstr[1] "Доступно %u обновления"
-msgstr[2] "Доступно %u обновлений"
+msgstr[0] "Доступно %i обновление"
+msgstr[1] "Доступно %i обновления"
+msgstr[2] "Доступно %i обновлений"
 
 #: src/Views/OperatingSystemView.vala:375
 msgid "Unable to determine number of updates"
-msgstr ""
+msgstr "Не удалось определить количество обновлений"
 
 #: src/Views/OperatingSystemView.vala:381
-#, fuzzy
-#| msgid "All Updates"
 msgid "Downloading Updates"
-msgstr "Все обновления"
+msgstr "Загрузка обновлений"
 
 #: src/Views/OperatingSystemView.vala:387
-#, fuzzy
-#| msgid "Restart"
 msgid "Restart Required"
-msgstr "Перезагрузить"
+msgstr "Требуется перезагрузка"
 
 #: src/Views/OperatingSystemView.vala:388
 msgid "A restart is required to finish installing updates"
-msgstr ""
+msgstr "Перезагрузка необходима, чтобы завершить установку обновлений"
 
 #: src/Views/OperatingSystemView.vala:393
 #: src/Views/OperatingSystemView.vala:407
 msgid "Failed to download updates"
-msgstr ""
+msgstr "Не удалось загрузить обновления"
 
 #: src/Views/OperatingSystemView.vala:394
 msgid "Manually refreshing updates may resolve the issue"
-msgstr ""
+msgstr "Ручная проверка обновлений может решить проблему"
 
 #: src/Views/OperatingSystemView.vala:408
 msgid ""
@@ -405,6 +396,9 @@ msgid ""
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
+"Это может быть вызвано сторонним или вручную скомпилированным программным "
+"обеспечением, сторонними репозиториями или ошибкой пакетного менеджера. "
+"Ручная проверка обновлений может решить эту проблему."
 
 #: src/Views/OperatingSystemView.vala:450
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -424,15 +418,15 @@ msgstr "Восстановить настройки"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
-msgstr ""
+msgstr "Что нового"
 
 #: src/Widgets/UpdateDetailsDialog.vala:19
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%u пакет будет обновлён"
+msgstr[1] "%u пакета будет обновлено"
+msgstr[2] "%u пакетов будет обновлено"
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"

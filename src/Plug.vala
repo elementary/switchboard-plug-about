@@ -50,10 +50,7 @@ public class About.Plug : Switchboard.Plug {
         if (main_grid == null) {
             var operating_system_view = new OperatingSystemView ();
 
-            var hardware_view = new HardwareView () {
-                valign = Gtk.Align.CENTER
-            };
-
+            var hardware_view = new HardwareView ();
             var firmware_view = new FirmwareView ();
 
             stack = new Gtk.Stack () {

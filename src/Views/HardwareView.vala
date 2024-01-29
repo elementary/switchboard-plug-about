@@ -127,13 +127,22 @@ public class About.HardwareView : Gtk.Box {
             details_box.append (manufacturer_website_info);
         }
 
-        margin_start = 16;
-        margin_end = 16;
-        spacing = 32;
-        halign = CENTER;
+        var box = new Gtk.Box (HORIZONTAL, 32) {
+            valign = CENTER
+        };
+        box.append (manufacturer_logo);
+        box.append (details_box);
 
-        append (manufacturer_logo);
-        append (details_box);
+        var clamp = new Adw.Clamp () {
+            child = box,
+            hexpand = true
+        };
+
+        margin_top = 12;
+        margin_end = 12;
+        margin_bottom = 12;
+        margin_start = 12;
+        append (clamp);
 
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             update_manufacturer_logo ();
