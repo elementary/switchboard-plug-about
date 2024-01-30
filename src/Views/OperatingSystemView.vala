@@ -183,6 +183,7 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         var automatic_updates_header = new Granite.HeaderLabel (_("Automatic Updates")) {
+            hexpand = true,
             mnemonic_widget = automatic_updates_switch,
             secondary_text = _("Updates will be automatically downloaded. They will be installed when this device is restarted.")
         };
