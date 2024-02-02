@@ -178,6 +178,25 @@ public class About.OperatingSystemView : Gtk.Box {
             child = details_button
         };
 
+        var automatic_updates_switch = new Gtk.Switch () {
+            valign = CENTER
+        };
+
+        var automatic_updates_header = new Granite.HeaderLabel (_("Automatic Updates")) {
+            hexpand = true,
+            mnemonic_widget = automatic_updates_switch,
+            secondary_text = _("Updates will be automatically downloaded. They will be installed when this device is restarted.")
+        };
+
+        var automatic_updates_box = new Gtk.Box (HORIZONTAL, 12) {
+            margin_top = 6,
+            margin_end = 6,
+            margin_bottom = 6,
+            margin_start = 6
+        };
+        automatic_updates_box.append (automatic_updates_header);
+        automatic_updates_box.append (automatic_updates_switch);
+
         var updates_grid = new Gtk.Grid () {
             column_spacing = 6,
             margin_top = 6,
@@ -191,8 +210,13 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_grid.attach (button_stack, 2, 0, 1, 2);
         updates_grid.attach (details_button_revealer, 1, 2, 2);
 
+        var updates_box = new Gtk.Box (VERTICAL, 0);
+        updates_box.append (updates_grid);
+        updates_box.append (new Gtk.Separator (HORIZONTAL));
+        updates_box.append (automatic_updates_box);
+
         var frame = new Gtk.Frame (null) {
-            child = updates_grid,
+            child = updates_box,
             margin_bottom = 12,
             margin_top = 12,
             valign = CENTER
@@ -231,6 +255,9 @@ public class About.OperatingSystemView : Gtk.Box {
         spacing = 12;
         append (clamp);
         append (button_grid);
+
+        var system_updates_settings = new Settings ("io.elementary.settings-daemon.system-update");
+        system_updates_settings.bind ("automatic-updates", automatic_updates_switch, "active", DEFAULT);
 
         settings_restore_button.clicked.connect (settings_restore_clicked);
 
