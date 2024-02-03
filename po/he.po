@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-02 15:27+0000\n"
-"PO-Revision-Date: 2024-01-25 21:26+0000\n"
+"PO-Revision-Date: 2024-02-03 13:48+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -334,16 +334,14 @@ msgid "Learn More…"
 msgstr "מידע נוסף…"
 
 #: src/Views/OperatingSystemView.vala:185
-#, fuzzy
-#| msgid "All Updates"
 msgid "Automatic Updates"
-msgstr "כל העדכונים"
+msgstr "עדכונים אוטומטיים"
 
 #: src/Views/OperatingSystemView.vala:188
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
-msgstr ""
+msgstr "עדכונים יתקבלו אוטומטית. הם יותקנו כשהמכשיר הזה יופעל מחדש."
 
 #: src/Views/OperatingSystemView.vala:349
 #, c-format
