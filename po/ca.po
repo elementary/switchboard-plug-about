@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-02 15:27+0000\n"
-"PO-Revision-Date: 2024-01-26 14:33+0000\n"
+"PO-Revision-Date: 2024-02-06 14:23+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ca/>\n"
@@ -343,16 +343,16 @@ msgid "Learn More…"
 msgstr "Més informació…"
 
 #: src/Views/OperatingSystemView.vala:185
-#, fuzzy
-#| msgid "All Updates"
 msgid "Automatic Updates"
-msgstr "Totes les actualitzacions"
+msgstr "Actualitzacions automàtiques"
 
 #: src/Views/OperatingSystemView.vala:188
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
+"Les actualitzacions es baixaran automàticament. S'instal·laran quan es "
+"reiniciï el dispositiu."
 
 #: src/Views/OperatingSystemView.vala:349
 #, c-format
