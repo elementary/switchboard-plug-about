@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-02 15:27+0000\n"
-"PO-Revision-Date: 2024-01-25 02:35+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-02-07 10:31+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
 "Language: fr\n"
@@ -325,7 +325,7 @@ msgstr "Site Web"
 
 #: src/Views/OperatingSystemView.vala:152
 msgid "Download"
-msgstr ""
+msgstr "Télécharger"
 
 #: src/Views/OperatingSystemView.vala:155
 msgid "Cancel"
@@ -337,19 +337,19 @@ msgstr "Actualiser"
 
 #: src/Views/OperatingSystemView.vala:169
 msgid "Learn More…"
-msgstr ""
+msgstr "En savoir plus…"
 
 #: src/Views/OperatingSystemView.vala:185
-#, fuzzy
-#| msgid "All Updates"
 msgid "Automatic Updates"
-msgstr "Toutes les mises à jour"
+msgstr "Mises à jour automatiques"
 
 #: src/Views/OperatingSystemView.vala:188
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
+"Les mises à jour seront téléchargées automatiquement. Elles seront "
+"installées au redémarrage de l'appareil."
 
 #: src/Views/OperatingSystemView.vala:349
 #, c-format
@@ -357,60 +357,50 @@ msgid "Built on %s"
 msgstr "Basé sur %s"
 
 #: src/Views/OperatingSystemView.vala:376
-#, fuzzy
-#| msgid "Up to Date"
 msgid "Up To Date"
 msgstr "À jour"
 
 #: src/Views/OperatingSystemView.vala:377
 #, c-format
 msgid "Last checked %s"
-msgstr ""
+msgstr "Dernière vérification %s"
 
 #: src/Views/OperatingSystemView.vala:392
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Updates Available"
-msgstr "%u mise à jour disponible"
+msgstr "Mises à jour disponibles"
 
 #: src/Views/OperatingSystemView.vala:398
-#, fuzzy, c-format
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
+#, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
-msgstr[0] "%u mise à jour disponible"
-msgstr[1] "%u mises à jour disponibles"
+msgstr[0] "%i mise à jour disponible"
+msgstr[1] "%i mises à jour disponibles"
 
 #: src/Views/OperatingSystemView.vala:409
 msgid "Unable to determine number of updates"
-msgstr ""
+msgstr "Impossible de déterminer le nombre de mises à jour"
 
 #: src/Views/OperatingSystemView.vala:415
-#, fuzzy
-#| msgid "All Updates"
 msgid "Downloading Updates"
-msgstr "Toutes les mises à jour"
+msgstr "Téléchargement des mises à jour"
 
 #: src/Views/OperatingSystemView.vala:421
-#, fuzzy
-#| msgid "Restart"
 msgid "Restart Required"
-msgstr "Redémarrer"
+msgstr "Redémarrage nécessaire"
 
 #: src/Views/OperatingSystemView.vala:422
 msgid "A restart is required to finish installing updates"
 msgstr ""
+"Un redémarrage est nécessaire pour terminer l'installation des mises à jour"
 
 #: src/Views/OperatingSystemView.vala:427
 #: src/Views/OperatingSystemView.vala:441
 msgid "Failed to download updates"
-msgstr ""
+msgstr "Échec du téléchargement des mises à jour"
 
 #: src/Views/OperatingSystemView.vala:428
 msgid "Manually refreshing updates may resolve the issue"
-msgstr ""
+msgstr "L'actualisation manuelle des mises à jour pourrait résoudre le problème"
 
 #: src/Views/OperatingSystemView.vala:442
 msgid ""
@@ -438,14 +428,14 @@ msgstr "Restaurer les paramètres"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
-msgstr ""
+msgstr "Quoi de neuf"
 
 #: src/Widgets/UpdateDetailsDialog.vala:19
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%u paquet sera mis à jour"
+msgstr[1] "%u paquets seront mis à jour"
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"
