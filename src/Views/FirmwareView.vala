@@ -19,7 +19,7 @@
 * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
 */
 
-public class About.FirmwareView : Granite.SimpleSettingsPage {
+public class About.FirmwareView : Switchboard.SettingsPage {
     private Gtk.Stack stack;
     private Adw.Leaflet deck;
     private FirmwareReleaseView firmware_release_view;
@@ -31,7 +31,7 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
 
     public FirmwareView () {
         Object (
-            icon_name: "application-x-firmware",
+            icon: new ThemedIcon ("application-x-firmware"),
             title: _("Firmware"),
             description: _("Firmware updates provided by device manufacturers can improve performance and fix critical security issues.")
         );
@@ -80,12 +80,11 @@ public class About.FirmwareView : Granite.SimpleSettingsPage {
             child = stack
         };
 
-        content_area.attach (frame, 0, 0);
+        child = frame;
 
         if (LoginManager.get_instance ().can_reboot_to_firmware_setup ()) {
-            var reboot_to_firmware_setup_button = new Gtk.Button.with_label (_("Restart to Firmware Setup…"));
+            var reboot_to_firmware_setup_button = add_button (_("Restart to Firmware Setup…"));
             reboot_to_firmware_setup_button.clicked.connect (reboot_to_firmware_setup_clicked);
-            action_area.append (reboot_to_firmware_setup_button);
         }
 
         fwupd_client = new Fwupd.Client ();
