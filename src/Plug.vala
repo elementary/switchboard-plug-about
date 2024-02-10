@@ -41,7 +41,7 @@ public class About.Plug : Switchboard.Plug {
             code_name: "io.elementary.settings.system",
             display_name: _("System"),
             description: _("View operating system and hardware information"),
-            icon: "application-x-firmware",
+            icon: "computer",
             supported_settings: settings
         );
     }
