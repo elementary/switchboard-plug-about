@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-02 15:27+0000\n"
-"PO-Revision-Date: 2024-01-25 02:35+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-02-12 16:57+0000\n"
+"Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/de/>\n"
 "Language: de\n"
@@ -329,7 +329,7 @@ msgstr "Internet-Seite"
 
 #: src/Views/OperatingSystemView.vala:152
 msgid "Download"
-msgstr ""
+msgstr "Herunterladen"
 
 #: src/Views/OperatingSystemView.vala:155
 msgid "Cancel"
@@ -341,19 +341,19 @@ msgstr "Aktualisieren"
 
 #: src/Views/OperatingSystemView.vala:169
 msgid "Learn More…"
-msgstr ""
+msgstr "Mehr erfahren …"
 
 #: src/Views/OperatingSystemView.vala:185
-#, fuzzy
-#| msgid "All Updates"
 msgid "Automatic Updates"
-msgstr "Alle Aktualisierungen"
+msgstr "Automatische Aktualisierungen"
 
 #: src/Views/OperatingSystemView.vala:188
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
+"Aktualisierungen werden automatisch heruntergeladen. Sie werden installiert, "
+"sobald das Gerät neu gestartet wird."
 
 #: src/Views/OperatingSystemView.vala:349
 #, c-format
@@ -361,27 +361,20 @@ msgid "Built on %s"
 msgstr "Auf Basis von %s"
 
 #: src/Views/OperatingSystemView.vala:376
-#, fuzzy
-#| msgid "Up to Date"
 msgid "Up To Date"
 msgstr "Aktuell"
 
 #: src/Views/OperatingSystemView.vala:377
 #, c-format
 msgid "Last checked %s"
-msgstr ""
+msgstr "%s zuletzt geprüft"
 
 #: src/Views/OperatingSystemView.vala:392
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Updates Available"
-msgstr "%u Aktualisierung verfügbar"
+msgstr "Aktualisierungen verfügbar"
 
 #: src/Views/OperatingSystemView.vala:398
-#, fuzzy, c-format
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
+#, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
 msgstr[0] "%u Aktualisierung verfügbar"
@@ -389,32 +382,32 @@ msgstr[1] "%u Aktualisierungen verfügbar"
 
 #: src/Views/OperatingSystemView.vala:409
 msgid "Unable to determine number of updates"
-msgstr ""
+msgstr "Anzahl der Aktualisierungen nicht zu ermitteln"
 
 #: src/Views/OperatingSystemView.vala:415
-#, fuzzy
-#| msgid "All Updates"
 msgid "Downloading Updates"
-msgstr "Alle Aktualisierungen"
+msgstr "Aktualisierungen herunterladen"
 
 #: src/Views/OperatingSystemView.vala:421
-#, fuzzy
-#| msgid "Restart"
 msgid "Restart Required"
-msgstr "Neu starten"
+msgstr "Neustart erforderlich"
 
 #: src/Views/OperatingSystemView.vala:422
 msgid "A restart is required to finish installing updates"
 msgstr ""
+"Zum Abschluss der Installation der Aktualisierungen ist ein Neustart "
+"erforderlich"
 
 #: src/Views/OperatingSystemView.vala:427
 #: src/Views/OperatingSystemView.vala:441
 msgid "Failed to download updates"
-msgstr ""
+msgstr "Herunterladen der Aktualisierungen fehlgeschlagen"
 
 #: src/Views/OperatingSystemView.vala:428
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
+"Ein manuelles erneutes Abrufen der Aktualisierungen behebt das Problem "
+"möglicherweise"
 
 #: src/Views/OperatingSystemView.vala:442
 msgid ""
@@ -422,6 +415,10 @@ msgid ""
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
+"Der Grund könnte in per Sideload installierter oder manuell kompilierter "
+"Software, einer Software-Dritt-Quelle oder einem Fehler in der "
+"Paketverwaltung liegen. Ein manuelles erneutes Abrufen der Aktualisierungen "
+"behebt das Problem möglicherweise."
 
 #: src/Views/OperatingSystemView.vala:484
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -443,14 +440,14 @@ msgstr "Einstellungen wiederherstellen"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
-msgstr ""
+msgstr "Neuigkeiten"
 
 #: src/Widgets/UpdateDetailsDialog.vala:19
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%u Paket wird aktualisiert"
+msgstr[1] "%u Pakete werdenaktualisiert"
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"
