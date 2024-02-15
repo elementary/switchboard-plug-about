@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-02 15:27+0000\n"
-"PO-Revision-Date: 2024-01-26 14:33+0000\n"
+"PO-Revision-Date: 2024-02-15 02:35+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/hu/>\n"
@@ -337,16 +337,16 @@ msgid "Learn More…"
 msgstr "További információk…"
 
 #: src/Views/OperatingSystemView.vala:185
-#, fuzzy
-#| msgid "All Updates"
 msgid "Automatic Updates"
-msgstr "Minden frissítés"
+msgstr "Automatikus frissítések"
 
 #: src/Views/OperatingSystemView.vala:188
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
+"A frissítések automatikusan le lesznek töltve. A készülék újraindításakor "
+"kerülnek telepítésre."
 
 #: src/Views/OperatingSystemView.vala:349
 #, c-format
