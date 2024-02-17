@@ -4,6 +4,7 @@ plug_files = files(
     'Interfaces/FirmwareClient.vala',
     'Interfaces/LoginManager.vala',
     'Utils/ARMPartDecoder.vala',
+    'Views' / 'DriversView.vala',
     'Views/FirmwareReleaseView.vala',
     'Views/FirmwareView.vala',
     'Views/HardwareView.vala',
