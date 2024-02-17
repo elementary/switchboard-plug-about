@@ -22,7 +22,7 @@
 public class About.DriversView : Switchboard.SettingsPage {
     private Gtk.Stack stack;
     private Gtk.ListBox update_list;
-    private uint num_updates = 0;
+    private Drivers? driver_proxy;
 
     public DriversView () {
         Object (
@@ -48,6 +48,7 @@ public class About.DriversView : Switchboard.SettingsPage {
             selection_mode = Gtk.SelectionMode.SINGLE
         };
         update_list.set_placeholder (checking_placeholder);
+        update_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
         var scrolled = new Gtk.ScrolledWindow () {
             child = update_list
@@ -76,6 +77,17 @@ public class About.DriversView : Switchboard.SettingsPage {
         };
 
         child = frame;
+
+        Bus.get_proxy.begin<Drivers> (SESSION, "io.elementary.settings-daemon", "/io/elementary/settings_daemon", 0, null, (obj, res) => {
+            try {
+                driver_proxy = Bus.get_proxy.end (res);
+
+                driver_proxy.state_changed.connect (update_state);
+                update_state.begin ();
+            } catch (Error e) {
+                critical ("Failed to get driver proxy: %s", e.message);
+            }
+        });
     }
 
     private async void update_state () {
@@ -83,7 +95,7 @@ public class About.DriversView : Switchboard.SettingsPage {
             return;
         }
 
-        SystemUpdate.CurrentState current_state;
+        Drivers.CurrentState current_state;
         try {
             current_state = yield driver_proxy.get_current_state ();
         } catch (Error e) {
@@ -96,23 +108,30 @@ public class About.DriversView : Switchboard.SettingsPage {
         switch (current_state.state) {
             case UP_TO_DATE:
                 stack.visible_child_name = "none";
-                update_list.remove_all ();
                 break;
+
             case CHECKING:
-                update_list.remove_all ();
+                while (update_list.get_row_at_index (0) != null) {
+                    update_list.remove (update_list.get_row_at_index (0));
+                }
                 break;
+
             case AVAILABLE:
                 try {
                     var drivers = yield driver_proxy.get_available_drivers ();
                     foreach (var driver in drivers.get_keys ()) {
-                        update_list.append (new Gtk.Label (driver));
+                        update_list.append (new DriverRow (driver, drivers[driver]));
                     }
                 } catch (Error e) {
                     warning ("Failed to get driver list from backend: %s", e.message);
                 }
                 break;
+
             case ERROR:
                 stack.visible_child_name = "error";
+                break;
+
+            default:
                 break;
         }
     }

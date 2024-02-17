@@ -1,6 +1,7 @@
 plug_files = files(
     'Plug.vala',
     'DBus' / 'SystemUpdate.vala',
+    'DBus' / 'Drivers.vala',
     'Interfaces/FirmwareClient.vala',
     'Interfaces/LoginManager.vala',
     'Utils/ARMPartDecoder.vala',
@@ -10,6 +11,7 @@ plug_files = files(
     'Views/HardwareView.vala',
     'Views/OperatingSystemView.vala',
     'Widgets/FirmwareUpdateRow.vala',
+    'Widgets' / 'DriverRow.vala',
     'Widgets' / 'UpdateDetailsDialog.vala'
 )
 
