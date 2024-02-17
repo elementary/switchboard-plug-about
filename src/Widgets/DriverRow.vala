@@ -9,7 +9,9 @@ public class About.DriverRow : Gtk.ListBoxRow {
     }
 
     construct {
-        var icon = new Gtk.Image.from_icon_name ("application-x-firmware");
+        var icon = new Gtk.Image.from_icon_name ("application-x-firmware") {
+            pixel_size = 32
+        };
 
         var label = new Gtk.Label (driver_name) {
             hexpand = true,
@@ -17,7 +19,8 @@ public class About.DriverRow : Gtk.ListBoxRow {
         };
 
         var install_button = new Gtk.Button.with_label (installed ? _("Installed") : _("Install")) {
-            sensitive = !installed
+            sensitive = !installed,
+            valign = CENTER
         };
 
         var box = new Gtk.Box (HORIZONTAL, 6);
