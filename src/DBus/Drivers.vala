@@ -1,3 +1,10 @@
+/*
+ * Copyright 2024 elementary, Inc. (https://elementary.io)
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ *
+ * Authored by: Leonhard Kargl <leo.kargl@proton.me>
+ */
+
 [DBus (name="io.elementary.settings_daemon.Drivers")]
 public interface Drivers : Object {
     public enum State {
