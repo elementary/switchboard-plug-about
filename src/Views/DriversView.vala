@@ -21,41 +21,41 @@
 
 public class About.DriversView : Switchboard.SettingsPage {
     private Gtk.Stack stack;
-    private Gtk.ListBox update_list;
+    private Gtk.ListBox driver_list;
+    private Granite.Placeholder progress_placeholder;
     private Drivers? driver_proxy;
 
     public DriversView () {
         Object (
             icon: new ThemedIcon ("application-x-firmware"),
             title: _("Drivers"),
-            description: _("Firmware updates provided by device manufacturers can improve performance and fix critical security issues.")
+            description: _("Additional drivers provided by device manufacturers can improve performance.")
         );
     }
 
     construct {
         var none_placeholder = new Granite.Placeholder (_("No drivers available")) {
-            description = _("No drivers available."),
+            description = _("Your system doesn't need any additional drivers."),
             icon = new ThemedIcon ("emblem-default")
         };
 
-        var checking_placeholder = new Granite.Placeholder (_("Checking for Updates")) {
-            description = _("Connecting to the firmware service and searching for updates."),
+        var checking_placeholder = new Granite.Placeholder (_("Checking for Drivers")) {
+            description = _("Connecting to the driver service and searching for drivers."),
             icon = new ThemedIcon ("sync-synchronizing")
         };
 
-        update_list = new Gtk.ListBox () {
+        driver_list = new Gtk.ListBox () {
             vexpand = true,
             selection_mode = Gtk.SelectionMode.SINGLE
         };
-        update_list.set_placeholder (checking_placeholder);
-        update_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
+        driver_list.set_placeholder (checking_placeholder);
+        driver_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
         var scrolled = new Gtk.ScrolledWindow () {
-            child = update_list
+            child = driver_list
         };
 
-        var progress_placeholder = new Granite.Placeholder ("") {
-            description = _("Do not unplug the device during the update."),
+        progress_placeholder = new Granite.Placeholder ("") {
             icon = new ThemedIcon ("emblem-synchronized")
         };
 
@@ -112,29 +112,37 @@ public class About.DriversView : Switchboard.SettingsPage {
 
             case CHECKING:
                 //FIXME: Replace with remove_all
-                while (update_list.get_row_at_index (0) != null) {
-                    update_list.remove (update_list.get_row_at_index (0));
+                while (driver_list.get_row_at_index (0) != null) {
+                    driver_list.remove (driver_list.get_row_at_index (0));
                 }
 
                 break;
 
             case AVAILABLE:
                 //FIXME: Replace with remove_all
-                while (update_list.get_row_at_index (0) != null) {
-                    update_list.remove (update_list.get_row_at_index (0));
+                while (driver_list.get_row_at_index (0) != null) {
+                    driver_list.remove (driver_list.get_row_at_index (0));
                 }
 
                 try {
                     var drivers = yield driver_proxy.get_available_drivers ();
                     foreach (var driver in drivers.get_keys ()) {
                         var row = new DriverRow (driver, drivers[driver]);
-                        row.install.connect (() => driver_proxy.install.begin (row.driver_name));
-                        update_list.append (row);
+                        driver_list.append (row);
+
+                        row.install.connect (() => {
+                            driver_proxy.install.begin (row.driver_name);
+                            progress_placeholder.title = _("Installing %s…").printf (row.driver_name);
+                        });
                     }
                 } catch (Error e) {
                     warning ("Failed to get driver list from backend: %s", e.message);
                 }
 
+                break;
+
+            case DOWNLOADING:
+                progress_placeholder.description = current_state.message;
                 break;
 
             case ERROR:
