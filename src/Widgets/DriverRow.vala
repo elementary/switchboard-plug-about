@@ -6,6 +6,8 @@
  */
 
 public class About.DriverRow : Gtk.ListBoxRow {
+    private static Gtk.SizeGroup button_size_group = new Gtk.SizeGroup (HORIZONTAL);
+
     public signal void install ();
 
     public string driver_name { get; construct; }
@@ -38,5 +40,7 @@ public class About.DriverRow : Gtk.ListBoxRow {
         child = box;
 
         install_button.clicked.connect (() => install ());
+
+        button_size_group.add_widget (install_button);
     }
 }
