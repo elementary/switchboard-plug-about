@@ -111,20 +111,30 @@ public class About.DriversView : Switchboard.SettingsPage {
                 break;
 
             case CHECKING:
+                //FIXME: Replace with remove_all
                 while (update_list.get_row_at_index (0) != null) {
                     update_list.remove (update_list.get_row_at_index (0));
                 }
+
                 break;
 
             case AVAILABLE:
+                //FIXME: Replace with remove_all
+                while (update_list.get_row_at_index (0) != null) {
+                    update_list.remove (update_list.get_row_at_index (0));
+                }
+
                 try {
                     var drivers = yield driver_proxy.get_available_drivers ();
                     foreach (var driver in drivers.get_keys ()) {
-                        update_list.append (new DriverRow (driver, drivers[driver]));
+                        var row = new DriverRow (driver, drivers[driver]);
+                        row.install.connect (() => driver_proxy.install.begin (row.driver_name));
+                        update_list.append (row);
                     }
                 } catch (Error e) {
                     warning ("Failed to get driver list from backend: %s", e.message);
                 }
+
                 break;
 
             case ERROR:
