@@ -17,13 +17,13 @@ public class About.DriversView : Switchboard.SettingsPage {
         Object (
             icon: new ThemedIcon ("application-x-firmware"),
             title: _("Drivers"),
-            description: _("Additional drivers provided by device manufacturers can improve performance.")
+            description: _("Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may not function properly without additional drivers.")
         );
     }
 
     construct {
         var none_placeholder = new Granite.Placeholder (_("No drivers available")) {
-            description = _("Your system doesn't need any additional drivers."),
+            description = _("This device doesn't need any additional drivers."),
             icon = new ThemedIcon ("emblem-default")
         };
 
