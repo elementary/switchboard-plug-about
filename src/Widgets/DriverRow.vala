@@ -10,11 +10,12 @@ public class About.DriverRow : Gtk.ListBoxRow {
 
     public signal void install ();
 
+    public string device { get; construct; }
     public string driver_name { get; construct; }
     public bool installed { get; construct; }
 
-    public DriverRow (string driver_name, bool installed) {
-        Object (driver_name: driver_name, installed: installed);
+    public DriverRow (string device, string driver_name, bool installed) {
+        Object (device: device, driver_name: driver_name, installed: installed);
     }
 
     construct {

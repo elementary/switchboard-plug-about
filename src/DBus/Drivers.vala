@@ -24,7 +24,7 @@ public interface Drivers : Object {
     public signal void state_changed ();
 
     public abstract async CurrentState get_current_state () throws DBusError, IOError;
-    public abstract async HashTable<string, bool> get_available_drivers () throws DBusError, IOError;
+    public abstract async HashTable<string, HashTable<string, bool>> get_available_drivers () throws DBusError, IOError;
     public abstract async void cancel () throws DBusError, IOError;
     public abstract async void check_for_drivers (bool notify) throws DBusError, IOError;
     public abstract async void install (string name) throws DBusError, IOError;

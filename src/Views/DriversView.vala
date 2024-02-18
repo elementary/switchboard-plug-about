@@ -7,7 +7,7 @@
 
 public class About.DriversView : Switchboard.SettingsPage {
     private Gtk.Stack stack;
-    private Gtk.ListBox driver_list;
+    private Gtk.ListBox devices_list;
     private Granite.Placeholder progress_placeholder;
     private Granite.Placeholder error_placeholder;
     private Drivers? driver_proxy;
@@ -32,15 +32,16 @@ public class About.DriversView : Switchboard.SettingsPage {
             icon = new ThemedIcon ("sync-synchronizing")
         };
 
-        driver_list = new Gtk.ListBox () {
+        devices_list = new Gtk.ListBox () {
             vexpand = true,
             selection_mode = Gtk.SelectionMode.SINGLE
         };
-        driver_list.set_placeholder (checking_placeholder);
-        driver_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
+        devices_list.set_placeholder (checking_placeholder);
+        devices_list.set_header_func (header_func);
+        devices_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
         var scrolled = new Gtk.ScrolledWindow () {
-            child = driver_list
+            child = devices_list
         };
 
         progress_placeholder = new Granite.Placeholder ("") {
@@ -123,8 +124,8 @@ public class About.DriversView : Switchboard.SettingsPage {
             case CHECKING:
                 stack.visible_child_name = "scrolled";
                 //FIXME: Replace with remove_all
-                while (driver_list.get_row_at_index (0) != null) {
-                    driver_list.remove (driver_list.get_row_at_index (0));
+                while (devices_list.get_row_at_index (0) != null) {
+                    devices_list.remove (devices_list.get_row_at_index (0));
                 }
 
                 break;
@@ -132,20 +133,22 @@ public class About.DriversView : Switchboard.SettingsPage {
             case AVAILABLE:
                 stack.visible_child_name = "scrolled";
                 //FIXME: Replace with remove_all
-                while (driver_list.get_row_at_index (0) != null) {
-                    driver_list.remove (driver_list.get_row_at_index (0));
+                while (devices_list.get_row_at_index (0) != null) {
+                    devices_list.remove (devices_list.get_row_at_index (0));
                 }
 
                 try {
                     var drivers = yield driver_proxy.get_available_drivers ();
-                    foreach (var driver in drivers.get_keys ()) {
-                        var row = new DriverRow (driver, drivers[driver]);
-                        driver_list.append (row);
+                    foreach (var device in drivers.get_keys ()) {
+                        foreach (var driver in drivers[device].get_keys ()) {
+                            var row = new DriverRow (device, driver, drivers[device][driver]);
+                            devices_list.append (row);
 
-                        row.install.connect (() => {
-                            driver_proxy.install.begin (row.driver_name);
-                            progress_placeholder.title = _("Installing %s…").printf (row.driver_name);
-                        });
+                            row.install.connect (() => {
+                                driver_proxy.install.begin (row.driver_name);
+                                progress_placeholder.title = _("Installing %s…").printf (row.driver_name);
+                            });
+                        }
                     }
                 } catch (Error e) {
                     warning ("Failed to get driver list from backend: %s", e.message);
@@ -165,6 +168,21 @@ public class About.DriversView : Switchboard.SettingsPage {
 
             default:
                 break;
+        }
+    }
+
+    private void header_func (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
+        var driver1 = (DriverRow) row;
+
+        bool same = false;
+        if (before != null) {
+            var driver2 = (DriverRow) before;
+            same = driver1.device == driver2.device;
+        }
+
+        if (!same) {
+            var header = new Granite.HeaderLabel (driver1.device);
+            driver1.set_header (header);
         }
     }
 }
