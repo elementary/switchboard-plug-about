@@ -6,13 +6,13 @@
  */
 
 public class About.DriverRow : Gtk.ListBoxRow {
-    private static Gtk.SizeGroup button_size_group = new Gtk.SizeGroup (HORIZONTAL);
-
     public signal void install ();
 
     public string device { get; construct; }
     public string driver_name { get; construct; }
     public bool installed { get; construct; }
+
+    public Gtk.CheckButton install_button { get; construct; }
 
     public DriverRow (string device, string driver_name, bool installed) {
         Object (device: device, driver_name: driver_name, installed: installed);
@@ -28,8 +28,8 @@ public class About.DriverRow : Gtk.ListBoxRow {
             xalign = 0
         };
 
-        var install_button = new Gtk.Button.with_label (installed ? _("Installed") : _("Install")) {
-            sensitive = !installed,
+        install_button = new Gtk.CheckButton () {
+            active = installed,
             valign = CENTER
         };
 
@@ -40,8 +40,10 @@ public class About.DriverRow : Gtk.ListBoxRow {
 
         child = box;
 
-        install_button.clicked.connect (() => install ());
-
-        button_size_group.add_widget (install_button);
+        install_button.toggled.connect (() => {
+            if (install_button.active) {
+                install ();
+            }
+        });
     }
 }

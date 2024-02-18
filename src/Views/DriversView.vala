@@ -140,9 +140,16 @@ public class About.DriversView : Switchboard.SettingsPage {
                 try {
                     var drivers = yield driver_proxy.get_available_drivers ();
                     foreach (var device in drivers.get_keys ()) {
+                        DriverRow? last_row = null;
                         foreach (var driver in drivers[device].get_keys ()) {
                             var row = new DriverRow (device, driver, drivers[device][driver]);
                             devices_list.append (row);
+
+                            if (last_row != null) {
+                                last_row.install_button.group = row.install_button;
+                            }
+
+                            last_row = row;
 
                             row.install.connect (() => {
                                 driver_proxy.install.begin (row.driver_name);
