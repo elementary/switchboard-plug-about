@@ -22,6 +22,8 @@ public class About.OperatingSystemView : Gtk.Box {
     private static Settings update_settings = new Settings ("io.elementary.settings-daemon.system-update");
 
     private string support_url;
+    private File? logo_file;
+    private Adw.Avatar? logo;
     private Gtk.StringList packages;
     private SystemUpdate? update_proxy = null;
     private SystemUpdate.CurrentState? current_state = null;
@@ -63,8 +65,9 @@ public class About.OperatingSystemView : Gtk.Box {
                 );
 
                 if (file.query_exists ()) {
-                    var logo = new Adw.Avatar (128, "", false) {
-                        custom_image = Gdk.Texture.from_file (file)
+                    logo_file = file;
+                    logo = new Adw.Avatar (128, "", false) {
+                        custom_image = Gdk.Paintable.empty (128, 128)
                     };
                     logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
@@ -184,7 +187,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         var automatic_updates_header = new Granite.HeaderLabel (_("Automatic Updates")) {
             hexpand = true,
-            mnemonic_widget = automatic_updates_switch,
+            //  mnemonic_widget = automatic_updates_switch,
             secondary_text = _("Updates will be automatically downloaded. They will be installed when this device is restarted.")
         };
 
@@ -315,6 +318,20 @@ public class About.OperatingSystemView : Gtk.Box {
         refresh_button.clicked.connect (refresh_clicked);
 
         details_button.clicked.connect (details_clicked);
+    }
+
+    public async void load_logo () {
+        if (logo == null || logo_file == null) {
+            return;
+        }
+
+        try {
+            var bytes = yield logo_file.load_bytes_async (null, null);
+            logo.custom_image = Gdk.Texture.from_bytes (bytes);
+            logo_file = null;
+        } catch (Error e) {
+            warning ("Failed to load logo file: %s", e.message);
+        }
     }
 
     private async void get_upstream_release () {
