@@ -97,6 +97,7 @@ public class About.Plug : Switchboard.Plug {
             case OPERATING_SYSTEM:
             case HARDWARE:
             case FIRMWARE:
+            case DRIVERS:
                 stack.set_visible_child_name (location);
                 break;
             default:
@@ -121,6 +122,7 @@ public class About.Plug : Switchboard.Plug {
         search_results.set ("%s → %s".printf (display_name, _("Report a Problem")), OPERATING_SYSTEM);
         search_results.set ("%s → %s".printf (display_name, _("Get Support")), OPERATING_SYSTEM);
         search_results.set ("%s → %s".printf (display_name, _("Updates")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s".printf (display_name, _("Drivers")), DRIVERS);
 
         return search_results;
     }
