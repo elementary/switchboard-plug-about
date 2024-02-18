@@ -164,7 +164,7 @@ public class About.DriversView : Switchboard.SettingsPage {
                 break;
 
             case DOWNLOADING:
-                stack.visible_child_name = "scrolled";
+                stack.visible_child_name = "progress";
                 progress_placeholder.description = current_state.message;
                 break;
 
