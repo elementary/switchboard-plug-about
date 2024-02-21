@@ -23,7 +23,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
     private string support_url;
     private File? logo_file;
-    private Adw.Avatar? logo;
+    private Gtk.Picture? logo;
     private Gtk.StringList packages;
     private SystemUpdate? update_proxy = null;
     private SystemUpdate.CurrentState? current_state = null;
@@ -55,6 +55,7 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         var logo_overlay = new Gtk.Overlay () {
+            halign = END,
             valign = START
         };
 
@@ -66,12 +67,17 @@ public class About.OperatingSystemView : Gtk.Box {
 
                 if (file.query_exists ()) {
                     logo_file = file;
-                    logo = new Adw.Avatar (128, "", false) {
-                        custom_image = Gdk.Paintable.empty (128, 128)
+                    logo = new Gtk.Picture () {
+                        content_fit = COVER
                     };
                     logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-                    logo_overlay.child = logo;
+                    var clamp = new Adw.Clamp () {
+                        child = logo,
+                        maximum_size = 128
+                    };
+
+                    logo_overlay.child = clamp;
                     logo_overlay.add_overlay (icon);
 
                     // 128 minus 3px padding on each side
@@ -326,8 +332,7 @@ public class About.OperatingSystemView : Gtk.Box {
         }
 
         try {
-            var bytes = yield logo_file.load_bytes_async (null, null);
-            logo.custom_image = Gdk.Texture.from_bytes (bytes);
+            logo.file = logo_file;
             logo_file = null;
         } catch (Error e) {
             warning ("Failed to load logo file: %s", e.message);
