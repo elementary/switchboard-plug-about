@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-02 15:27+0000\n"
-"PO-Revision-Date: 2024-02-21 09:10+0000\n"
-"Last-Translator: Marmelada <marmelada.pk@wp.pl>\n"
+"PO-Revision-Date: 2024-02-23 12:12+0000\n"
+"Last-Translator: Sebastian Bernat <srakap330@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pl/>\n"
 "Language: pl\n"
@@ -413,6 +413,9 @@ msgid ""
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
+"Może być to spowodowane poprzez zsideloadowane lub manualnie skompilowane "
+"oprogramowanie, źródło firm trzecich, lub błąd menadżera pakietów. Ręczne "
+"odświeżenie aktualizacji może rozwiązać ten problem."
 
 #: src/Views/OperatingSystemView.vala:484
 msgid "System Settings Will Be Restored to The Factory Defaults"
@@ -433,15 +436,15 @@ msgstr "Przywróć ustawienia"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
-msgstr ""
+msgstr "Co nowego"
 
 #: src/Widgets/UpdateDetailsDialog.vala:19
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%u pakiet zostanie zaktualizowany"
+msgstr[1] "%u pakiety zostaną zaktualizowane"
+msgstr[2] "%u pakietów zostanie zaktualizowanych"
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"
