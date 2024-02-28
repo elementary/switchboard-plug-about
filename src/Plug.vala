@@ -24,6 +24,7 @@ public class About.Plug : Switchboard.Plug {
     private const string FIRMWARE = "firmware";
     private const string DRIVERS = "drivers";
 
+    private OperatingSystemView operating_system_view;
     private Gtk.Grid main_grid;
     private Gtk.Stack stack;
 
@@ -50,7 +51,7 @@ public class About.Plug : Switchboard.Plug {
 
     public override Gtk.Widget get_widget () {
         if (main_grid == null) {
-            var operating_system_view = new OperatingSystemView ();
+            operating_system_view = new OperatingSystemView ();
 
             var hardware_view = new HardwareView ();
             var firmware_view = new FirmwareView ();
@@ -87,6 +88,7 @@ public class About.Plug : Switchboard.Plug {
     }
 
     public override void shown () {
+        operating_system_view.load_logo.begin ();
     }
 
     public override void hidden () {
