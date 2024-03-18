@@ -62,8 +62,6 @@ public class About.Plug : Switchboard.Plug {
             stack.add_titled (firmware_view, FIRMWARE, _("Firmware"));
 
             var stack_switcher = new Gtk.StackSwitcher () {
-                halign = Gtk.Align.CENTER,
-                margin_top = 24,
                 stack = stack
             };
 
@@ -74,10 +72,13 @@ public class About.Plug : Switchboard.Plug {
                 child = child.get_next_sibling ();
             }
 
-            main_grid = new Gtk.Grid () {
-                row_spacing = 12
+            var headerbar = new Adw.HeaderBar () {
+                title_widget = stack_switcher
             };
-            main_grid.attach (stack_switcher, 0, 0);
+            headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+
+            main_grid = new Gtk.Grid ();
+            main_grid.attach (headerbar, 0, 0);
             main_grid.attach (stack, 0, 1);
         }
 
