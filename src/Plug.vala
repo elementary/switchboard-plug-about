@@ -22,6 +22,7 @@ public class About.Plug : Switchboard.Plug {
     private const string OPERATING_SYSTEM = "operating-system";
     private const string HARDWARE = "hardware";
     private const string FIRMWARE = "firmware";
+    private const string DRIVERS = "drivers";
 
     private OperatingSystemView operating_system_view;
     private Gtk.Grid main_grid;
@@ -36,6 +37,7 @@ public class About.Plug : Switchboard.Plug {
         settings.set ("about/os", OPERATING_SYSTEM);
         settings.set ("about/hardware", HARDWARE);
         settings.set ("about/firmware", FIRMWARE);
+        settings.set ("about/drivers", DRIVERS);
 
         Object (
             category: Category.SYSTEM,
@@ -60,6 +62,7 @@ public class About.Plug : Switchboard.Plug {
             stack.add_titled (operating_system_view, OPERATING_SYSTEM, _("Operating System"));
             stack.add_titled (hardware_view, HARDWARE, _("Hardware"));
             stack.add_titled (firmware_view, FIRMWARE, _("Firmware"));
+            stack.add_titled (new DriversView (), DRIVERS, _("Drivers"));
 
             var stack_switcher = new Gtk.StackSwitcher () {
                 stack = stack
@@ -97,6 +100,7 @@ public class About.Plug : Switchboard.Plug {
             case OPERATING_SYSTEM:
             case HARDWARE:
             case FIRMWARE:
+            case DRIVERS:
                 stack.set_visible_child_name (location);
                 break;
             default:
@@ -121,6 +125,7 @@ public class About.Plug : Switchboard.Plug {
         search_results.set ("%s → %s".printf (display_name, _("Report a Problem")), OPERATING_SYSTEM);
         search_results.set ("%s → %s".printf (display_name, _("Get Support")), OPERATING_SYSTEM);
         search_results.set ("%s → %s".printf (display_name, _("Updates")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s".printf (display_name, _("Drivers")), DRIVERS);
 
         return search_results;
     }
