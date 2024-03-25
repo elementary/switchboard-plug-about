@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-02 15:27+0000\n"
-"PO-Revision-Date: 2024-03-25 20:38+0000\n"
+"PO-Revision-Date: 2024-03-26 21:13+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pt/>\n"
@@ -271,7 +271,7 @@ msgstr "Processador desconhecido"
 
 #: src/Views/HardwareView.vala:430
 msgid "Unknown"
-msgstr "Desconhecido"
+msgstr "Desconhecida"
 
 #: src/Views/HardwareView.vala:485
 #, c-format
