@@ -206,7 +206,7 @@ public class About.OperatingSystemView : Gtk.Box {
             selection_mode = NONE
         };
         updates_list.add_css_class ("boxed-list");
-        updates_list.add_css_class ("rich-list");
+        updates_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
         updates_list.append (updates_grid);
         updates_list.append (automatic_updates_button);
 
