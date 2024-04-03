@@ -368,6 +368,11 @@ public class About.OperatingSystemView : Gtk.Box {
         try {
             current_state = yield update_proxy.get_current_state ();
         } catch (Error e) {
+            updates_image.icon_name = "dialog-error";
+            updates_title.label = _("System updates not available");
+            updates_description.label = _("Couldn't connect to the backend. Try logging out to resolve the issue.");
+            button_stack.visible_child_name = "blank";
+
             critical ("Failed to get current state from Updates Backend: %s", e.message);
             return;
         }
