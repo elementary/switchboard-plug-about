@@ -33,7 +33,6 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.Label updates_description;
     private Gtk.Revealer details_button_revealer;
     private Gtk.Stack button_stack;
-    private Gtk.Stack update_stack;
 
     construct {
         var style_provider = new Gtk.CssProvider ();
@@ -199,17 +198,6 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_grid.attach (button_stack, 2, 0, 1, 2);
         updates_grid.attach (details_button_revealer, 1, 2, 2);
 
-        var no_daemon_connection_placeholder = new Granite.Placeholder (_("System updates not available")) {
-            description = _("Couldn't connect to the backend. Try logging out to resolve the issue."),
-            icon = new ThemedIcon ("dialog-error")
-        };
-
-        update_stack = new Gtk.Stack () {
-            vhomogeneous = false
-        };
-        update_stack.add_named (no_daemon_connection_placeholder, "placeholder");
-        update_stack.add_named (updates_grid, "grid");
-
         var updates_list = new Gtk.ListBox () {
             margin_bottom = 12,
             margin_top = 12,
@@ -219,7 +207,7 @@ public class About.OperatingSystemView : Gtk.Box {
         };
         updates_list.add_css_class ("boxed-list");
         updates_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
-        updates_list.append (update_stack);
+        updates_list.append (updates_grid);
         updates_list.append (automatic_updates_button);
 
         updates_list.get_first_child ().focusable = false;
@@ -380,12 +368,14 @@ public class About.OperatingSystemView : Gtk.Box {
         try {
             current_state = yield update_proxy.get_current_state ();
         } catch (Error e) {
-            update_stack.visible_child_name = "placeholder";
+            updates_image.icon_name = "dialog-error";
+            updates_title.label = _("System updates not available");
+            updates_description.label = _("Couldn't connect to the backend. Try logging out to resolve the issue.");
+            button_stack.visible_child_name = "blank";
+
             critical ("Failed to get current state from Updates Backend: %s", e.message);
             return;
         }
-
-        update_stack.visible_child_name = "grid";
 
         details_button_revealer.reveal_child = current_state.state == AVAILABLE || current_state.state == ERROR;
 
