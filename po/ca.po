@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 16:35+0000\n"
-"PO-Revision-Date: 2024-02-06 14:23+0000\n"
+"PO-Revision-Date: 2024-04-04 14:15+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ca/>\n"
@@ -360,15 +360,14 @@ msgid "Built on %s"
 msgstr "Construït sobre %s"
 
 #: src/Views/OperatingSystemView.vala:372
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "System updates not available"
-msgstr "%i actualització disponible"
+msgstr "Actualitzacions del sistema no disponibles"
 
 #: src/Views/OperatingSystemView.vala:373
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
+"No s'ha pogut connectar amb el fons. Proveu de tancar la sessió per resoldre "
+"el problema."
 
 #: src/Views/OperatingSystemView.vala:385
 msgid "Up To Date"
