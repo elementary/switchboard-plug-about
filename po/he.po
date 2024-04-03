@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 16:35+0000\n"
-"PO-Revision-Date: 2024-02-03 13:48+0000\n"
+"PO-Revision-Date: 2024-04-04 14:15+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -349,15 +349,12 @@ msgid "Built on %s"
 msgstr "נבנה על גבי %s"
 
 #: src/Views/OperatingSystemView.vala:372
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "System updates not available"
-msgstr "עדכון אחד זמין"
+msgstr "עדכוני מערכת לא זמינים"
 
 #: src/Views/OperatingSystemView.vala:373
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
-msgstr ""
+msgstr "לא ניתן להתחבר למנגנון. נא לנסות לצאת כדי לפתור את התקלה."
 
 #: src/Views/OperatingSystemView.vala:385
 msgid "Up To Date"
