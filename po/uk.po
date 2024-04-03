@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-02 15:27+0000\n"
+"POT-Creation-Date: 2024-04-03 16:35+0000\n"
 "PO-Revision-Date: 2024-02-05 00:59+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -16,60 +16,60 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:43
 msgid "System"
 msgstr "Система"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:44
 msgid "View operating system and hardware information"
 msgstr "Огляд операційної системи та подробиць про апаратні засоби"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:60
 msgid "Operating System"
 msgstr "Операційна система"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:61
 msgid "Hardware"
 msgstr "Обладнання"
 
-#: src/Plug.vala:61 src/Plug.vala:114 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:62 src/Plug.vala:117 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Мікропрограма"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:115
 msgid "Operating System Information"
 msgstr "Відомості про операційну систему"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Hardware Information"
 msgstr "Відомості про обладнання"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:226
+#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:216
 msgid "Restore Default Settings"
 msgstr "Відновити типові налаштування"
 
-#: src/Plug.vala:116 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:129
 msgid "Suggest Translations"
 msgstr "Запропонувати переклад"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "Надіслати відгук"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:121
 msgid "Report a Problem"
 msgstr "Повідомити про проблему"
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:122
 msgid "Get Support"
 msgstr "Отримати допомогу"
 
-#: src/Plug.vala:120
+#: src/Plug.vala:123
 msgid "Updates"
 msgstr "Оновлення"
 
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "Не від'єднуйте пристрій від мережі під час оновлення."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:386
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:395
 msgid "Checking for Updates"
 msgstr "Перевірка наявності оновлень"
 
@@ -141,25 +141,25 @@ msgstr "Під'єднання до служби оновлення мікроп�
 msgid "Restart to Firmware Setup…"
 msgstr "Перезапустити для налаштування мікропрограми…"
 
-#: src/Views/FirmwareView.vala:117
+#: src/Views/FirmwareView.vala:116
 msgid "Firmware Updates Are Not Available"
 msgstr "Оновлення мікропрограми недоступні"
 
-#: src/Views/FirmwareView.vala:118
+#: src/Views/FirmwareView.vala:117
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Оновлення мікропрограми не підтримується цим та будь-яким під'єднаним "
 "пристроєм."
 
-#: src/Views/FirmwareView.vala:120
+#: src/Views/FirmwareView.vala:119
 msgid "The Firmware Service Is Not Available"
 msgstr "Служба оновлення мікропрограми недоступна"
 
-#: src/Views/FirmwareView.vala:121
+#: src/Views/FirmwareView.vala:120
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Переконайтесь, що встановлено та увімкнено функцію «fwupd»."
 
-#: src/Views/FirmwareView.vala:216
+#: src/Views/FirmwareView.vala:215
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
@@ -167,57 +167,57 @@ msgstr[0] "%u оновлення доступне"
 msgstr[1] "%u оновлення доступні"
 msgstr[2] "%u оновлень доступні"
 
-#: src/Views/FirmwareView.vala:220
+#: src/Views/FirmwareView.vala:219
 msgid "Up to Date"
 msgstr "В актуальному стані"
 
-#: src/Views/FirmwareView.vala:228
+#: src/Views/FirmwareView.vala:227
 #, c-format
 msgid "“%s” is being updated"
 msgstr "«%s» оновлюється"
 
-#: src/Views/FirmwareView.vala:311
+#: src/Views/FirmwareView.vala:310
 msgid "Failed to install firmware release"
 msgstr "Не вдалося встановити випуск мікропрограми"
 
-#: src/Views/FirmwareView.vala:332
+#: src/Views/FirmwareView.vala:331
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "«%s» потрібно власноруч перевести в режим оновлення"
 
-#: src/Views/FirmwareView.vala:341
+#: src/Views/FirmwareView.vala:340
 msgid "Continue"
 msgstr "Продовжити"
 
-#: src/Views/FirmwareView.vala:354
+#: src/Views/FirmwareView.vala:353
 msgid "An update requires the system to restart to complete"
 msgstr "Оновлення вимагає перезапуску системи для завершення"
 
-#: src/Views/FirmwareView.vala:355
+#: src/Views/FirmwareView.vala:354
 msgid "This will close all open applications and restart this device."
 msgstr "Це закриє всі відкриті застосунки та перезапустить цей пристрій."
 
-#: src/Views/FirmwareView.vala:363 src/Views/FirmwareView.vala:412
+#: src/Views/FirmwareView.vala:362 src/Views/FirmwareView.vala:411
 msgid "Restart"
 msgstr "Перезапуск"
 
-#: src/Views/FirmwareView.vala:378
+#: src/Views/FirmwareView.vala:377
 msgid "An update requires the system to shut down to complete"
 msgstr "Оновлення вимагає завершення роботи системи"
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:378
 msgid "This will close all open applications and turn off this device."
 msgstr "Це закриє всі відкриті застосунки та вимкне цей пристрій."
 
-#: src/Views/FirmwareView.vala:387
+#: src/Views/FirmwareView.vala:386
 msgid "Shut Down"
 msgstr "Вимкнути"
 
-#: src/Views/FirmwareView.vala:402
+#: src/Views/FirmwareView.vala:401
 msgid "Restart to firmware setup"
 msgstr "Перезапустити для налаштування мікропрограми"
 
-#: src/Views/FirmwareView.vala:403
+#: src/Views/FirmwareView.vala:402
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
@@ -225,11 +225,11 @@ msgstr ""
 "Це закриє всі відкриті застосунки, перезапустить цей пристрій і відкриє "
 "екран налаштування мікропрограми."
 
-#: src/Views/FirmwareView.vala:427
+#: src/Views/FirmwareView.vala:426
 msgid "Unable to restart to firmware setup"
 msgstr "Не вдалося перезапустити для налаштування мікропрограми"
 
-#: src/Views/FirmwareView.vala:428
+#: src/Views/FirmwareView.vala:427
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
 "Системна помилка завадила автоперезапуску в режимі встановлення "
@@ -322,31 +322,31 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:116
+#: src/Views/OperatingSystemView.vala:119
 msgid "Website"
 msgstr "Вебсайт"
 
-#: src/Views/OperatingSystemView.vala:152
+#: src/Views/OperatingSystemView.vala:155
 msgid "Download"
 msgstr "Завантажити"
 
-#: src/Views/OperatingSystemView.vala:155
+#: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/Views/OperatingSystemView.vala:157
+#: src/Views/OperatingSystemView.vala:160
 msgid "Refresh"
 msgstr "Оновити"
 
-#: src/Views/OperatingSystemView.vala:169
+#: src/Views/OperatingSystemView.vala:172
 msgid "Learn More…"
 msgstr "Докладніше…"
 
-#: src/Views/OperatingSystemView.vala:185
+#: src/Views/OperatingSystemView.vala:184
 msgid "Automatic Updates"
 msgstr "Автооновлення"
 
-#: src/Views/OperatingSystemView.vala:188
+#: src/Views/OperatingSystemView.vala:185
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -354,25 +354,36 @@ msgstr ""
 "Оновлення завантажуватимуться автоматично. Вони встановлюватимуться після "
 "перезапуску цього пристрою."
 
-#: src/Views/OperatingSystemView.vala:349
+#: src/Views/OperatingSystemView.vala:353
 #, c-format
 msgid "Built on %s"
 msgstr "Побудовано на %s"
 
-#: src/Views/OperatingSystemView.vala:376
+#: src/Views/OperatingSystemView.vala:372
+#, fuzzy
+#| msgid "%i update available"
+#| msgid_plural "%i updates available"
+msgid "System updates not available"
+msgstr "Доступне %i оновлення"
+
+#: src/Views/OperatingSystemView.vala:373
+msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:385
 msgid "Up To Date"
 msgstr "В актуальному стані"
 
-#: src/Views/OperatingSystemView.vala:377
+#: src/Views/OperatingSystemView.vala:386
 #, c-format
 msgid "Last checked %s"
 msgstr "Востаннє перевірено %s"
 
-#: src/Views/OperatingSystemView.vala:392
+#: src/Views/OperatingSystemView.vala:401
 msgid "Updates Available"
 msgstr "Доступні оновлення"
 
-#: src/Views/OperatingSystemView.vala:398
+#: src/Views/OperatingSystemView.vala:407
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
@@ -380,32 +391,32 @@ msgstr[0] "Доступне %i оновлення"
 msgstr[1] "Доступні %i оновлення"
 msgstr[2] "Доступні %i оновлень"
 
-#: src/Views/OperatingSystemView.vala:409
+#: src/Views/OperatingSystemView.vala:418
 msgid "Unable to determine number of updates"
 msgstr "Неможливо визначити кількість оновлень"
 
-#: src/Views/OperatingSystemView.vala:415
+#: src/Views/OperatingSystemView.vala:424
 msgid "Downloading Updates"
 msgstr "Завантаження оновлень"
 
-#: src/Views/OperatingSystemView.vala:421
+#: src/Views/OperatingSystemView.vala:430
 msgid "Restart Required"
 msgstr "Потрібен перезапуск"
 
-#: src/Views/OperatingSystemView.vala:422
+#: src/Views/OperatingSystemView.vala:431
 msgid "A restart is required to finish installing updates"
 msgstr "Для завершення встановлення оновлень потрібен перезапуск"
 
-#: src/Views/OperatingSystemView.vala:427
-#: src/Views/OperatingSystemView.vala:441
+#: src/Views/OperatingSystemView.vala:436
+#: src/Views/OperatingSystemView.vala:450
 msgid "Failed to download updates"
 msgstr "Не вдалося завантажити оновлення"
 
-#: src/Views/OperatingSystemView.vala:428
+#: src/Views/OperatingSystemView.vala:437
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "Оновлення вручну може усунути проблему"
 
-#: src/Views/OperatingSystemView.vala:442
+#: src/Views/OperatingSystemView.vala:451
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -415,11 +426,11 @@ msgstr ""
 "програмним забезпеченням, стороннім програмним забезпеченням або помилкою "
 "менеджера пакунків. Проблему може усунути перезапуск оновлення вручну."
 
-#: src/Views/OperatingSystemView.vala:484
+#: src/Views/OperatingSystemView.vala:493
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Системні налаштування буде відновлено до типових заводських"
 
-#: src/Views/OperatingSystemView.vala:485
+#: src/Views/OperatingSystemView.vala:494
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -427,7 +438,7 @@ msgstr ""
 "Всі налаштування системи та дані буде відновлено до типових значень. Це не "
 "вплине на особисті дані, такі як музика та зображення."
 
-#: src/Views/OperatingSystemView.vala:493
+#: src/Views/OperatingSystemView.vala:502
 msgid "Restore Settings"
 msgstr "Відновити налаштування"
 
