@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 16:35+0000\n"
-"PO-Revision-Date: 2024-01-25 02:35+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-04-24 13:13+0000\n"
+"Last-Translator: Matheus Torres Carvalho <matheustcarvalho@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -390,13 +390,11 @@ msgid "Updates Available"
 msgstr "%u atualização disponível"
 
 #: src/Views/OperatingSystemView.vala:407
-#, fuzzy, c-format
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
+#, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
-msgstr[0] "%u atualização disponível"
-msgstr[1] "%u atualizações disponíveis"
+msgstr[0] "%i atualização disponível"
+msgstr[1] "%i atualizações disponíveis"
 
 #: src/Views/OperatingSystemView.vala:418
 msgid "Unable to determine number of updates"
