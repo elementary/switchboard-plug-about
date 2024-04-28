@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 16:35+0000\n"
-"PO-Revision-Date: 2024-02-12 16:57+0000\n"
+"PO-Revision-Date: 2024-04-29 02:13+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:43
@@ -361,15 +361,13 @@ msgid "Built on %s"
 msgstr "Auf Basis von %s"
 
 #: src/Views/OperatingSystemView.vala:372
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "System updates not available"
-msgstr "%u Aktualisierung verfügbar"
+msgstr "Keine Systemaktualisierungen verfügbar"
 
 #: src/Views/OperatingSystemView.vala:373
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
+"Verbindung um Backend nicht möglich. Zum Beheben des Problems bitte abmelden."
 
 #: src/Views/OperatingSystemView.vala:385
 msgid "Up To Date"
