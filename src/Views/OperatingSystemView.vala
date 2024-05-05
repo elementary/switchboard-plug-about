@@ -403,7 +403,8 @@ public class About.OperatingSystemView : Gtk.Box {
 
                 try {
                     var details = yield update_proxy.get_update_details ();
-                    updates_description.label = ngettext (
+                    updates_description.label = dngettext (
+                        GETTEXT_PACKAGE,
                         "%i update available",
                         "%i updates available",
                         details.packages.length
