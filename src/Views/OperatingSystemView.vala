@@ -181,24 +181,9 @@ public class About.OperatingSystemView : Gtk.Box {
             child = details_button
         };
 
-        var automatic_updates_switch = new Gtk.Switch () {
-            valign = CENTER
+        var automatic_updates_button = new Granite.SwitchModelButton (_("Automatic Updates")) {
+            description = _("Updates will be automatically downloaded. They will be installed when this device is restarted.")
         };
-
-        var automatic_updates_header = new Granite.HeaderLabel (_("Automatic Updates")) {
-            hexpand = true,
-            //  mnemonic_widget = automatic_updates_switch,
-            secondary_text = _("Updates will be automatically downloaded. They will be installed when this device is restarted.")
-        };
-
-        var automatic_updates_box = new Gtk.Box (HORIZONTAL, 12) {
-            margin_top = 6,
-            margin_end = 6,
-            margin_bottom = 6,
-            margin_start = 6
-        };
-        automatic_updates_box.append (automatic_updates_header);
-        automatic_updates_box.append (automatic_updates_switch);
 
         var updates_grid = new Gtk.Grid () {
             column_spacing = 6,
@@ -213,18 +198,20 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_grid.attach (button_stack, 2, 0, 1, 2);
         updates_grid.attach (details_button_revealer, 1, 2, 2);
 
-        var updates_box = new Gtk.Box (VERTICAL, 0);
-        updates_box.append (updates_grid);
-        updates_box.append (new Gtk.Separator (HORIZONTAL));
-        updates_box.append (automatic_updates_box);
-
-        var frame = new Gtk.Frame (null) {
-            child = updates_box,
+        var updates_list = new Gtk.ListBox () {
             margin_bottom = 12,
             margin_top = 12,
-            valign = CENTER
+            valign = CENTER,
+            show_separators = true,
+            selection_mode = NONE
         };
-        frame.add_css_class (Granite.STYLE_CLASS_VIEW);
+        updates_list.add_css_class ("boxed-list");
+        updates_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
+        updates_list.append (updates_grid);
+        updates_list.append (automatic_updates_button);
+
+        updates_list.get_first_child ().focusable = false;
+        updates_list.get_last_child ().focusable = false;
 
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
 
@@ -241,7 +228,7 @@ public class About.OperatingSystemView : Gtk.Box {
         software_grid.attach (title, 1, 0, 3);
 
         software_grid.attach (kernel_version_label, 1, 2, 3);
-        software_grid.attach (frame, 1, 3, 3);
+        software_grid.attach (updates_list, 1, 3, 3);
         software_grid.attach (website_label, 1, 4);
         software_grid.attach (help_button, 2, 4);
         software_grid.attach (translate_button, 3, 4);
@@ -260,7 +247,7 @@ public class About.OperatingSystemView : Gtk.Box {
         append (button_grid);
 
         var system_updates_settings = new Settings ("io.elementary.settings-daemon.system-update");
-        system_updates_settings.bind ("automatic-updates", automatic_updates_switch, "active", DEFAULT);
+        system_updates_settings.bind ("automatic-updates", automatic_updates_button, "active", DEFAULT);
 
         settings_restore_button.clicked.connect (settings_restore_clicked);
 
@@ -381,6 +368,11 @@ public class About.OperatingSystemView : Gtk.Box {
         try {
             current_state = yield update_proxy.get_current_state ();
         } catch (Error e) {
+            updates_image.icon_name = "dialog-error";
+            updates_title.label = _("System updates not available");
+            updates_description.label = _("Couldn't connect to the backend. Try logging out to resolve the issue.");
+            button_stack.visible_child_name = "blank";
+
             critical ("Failed to get current state from Updates Backend: %s", e.message);
             return;
         }
@@ -411,7 +403,8 @@ public class About.OperatingSystemView : Gtk.Box {
 
                 try {
                     var details = yield update_proxy.get_update_details ();
-                    updates_description.label = ngettext (
+                    updates_description.label = dngettext (
+                        GETTEXT_PACKAGE,
                         "%i update available",
                         "%i updates available",
                         details.packages.length

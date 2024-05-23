@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-02 15:27+0000\n"
+"POT-Creation-Date: 2024-04-03 16:35+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -20,55 +20,55 @@ msgstr ""
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:43
 msgid "System"
 msgstr "Систем"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:44
 msgid "View operating system and hardware information"
 msgstr "Прегледајте податке о оперативном систему и хардверу"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:60
 msgid "Operating System"
 msgstr "Оперативни систем"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:61
 msgid "Hardware"
 msgstr "Хардвер"
 
-#: src/Plug.vala:61 src/Plug.vala:114 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:62 src/Plug.vala:117 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Фирмвер"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:115
 msgid "Operating System Information"
 msgstr "Подаци о оперативном систему"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Hardware Information"
 msgstr "Подаци о хардверу"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:226
+#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:216
 msgid "Restore Default Settings"
 msgstr "Врати основна подешавања"
 
-#: src/Plug.vala:116 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:129
 msgid "Suggest Translations"
 msgstr "Предложите преводе"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "Пошаљите утиске"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:121
 msgid "Report a Problem"
 msgstr "Известите о проблему"
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:122
 msgid "Get Support"
 msgstr "Набавите подршку"
 
-#: src/Plug.vala:120
+#: src/Plug.vala:123
 msgid "Updates"
 msgstr "Освежења"
 
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "Немојте откачињати уређај за време освежавања."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:386
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:395
 msgid "Checking for Updates"
 msgstr "Проверавам освежења"
 
@@ -143,81 +143,81 @@ msgstr "Повезујем се на услугу уграђених прогр�
 msgid "Restart to Firmware Setup…"
 msgstr "Нисам успео да инсталирам издање фирмвера"
 
-#: src/Views/FirmwareView.vala:117
+#: src/Views/FirmwareView.vala:116
 msgid "Firmware Updates Are Not Available"
 msgstr "Ажурирања уграђених програма нису доступна"
 
-#: src/Views/FirmwareView.vala:118
+#: src/Views/FirmwareView.vala:117
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "Освежавања фирмвера нису подржана на овом или било ком повезаном уређају."
 
-#: src/Views/FirmwareView.vala:120
+#: src/Views/FirmwareView.vala:119
 msgid "The Firmware Service Is Not Available"
 msgstr "Услуга уграђених програма није доступна"
 
-#: src/Views/FirmwareView.vala:121
+#: src/Views/FirmwareView.vala:120
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "Проверите да ли је „fwupd“ инсталиран и укључен."
 
-#: src/Views/FirmwareView.vala:216
+#: src/Views/FirmwareView.vala:215
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "%u освежење је доступно"
 msgstr[1] "%u освежења су доступна"
 
-#: src/Views/FirmwareView.vala:220
+#: src/Views/FirmwareView.vala:219
 msgid "Up to Date"
 msgstr "Освежен је"
 
-#: src/Views/FirmwareView.vala:228
+#: src/Views/FirmwareView.vala:227
 #, c-format
 msgid "“%s” is being updated"
 msgstr "„%s“ је освежен"
 
-#: src/Views/FirmwareView.vala:311
+#: src/Views/FirmwareView.vala:310
 msgid "Failed to install firmware release"
 msgstr "Нисам успео да инсталирам издање фирмвера"
 
-#: src/Views/FirmwareView.vala:332
+#: src/Views/FirmwareView.vala:331
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "„%s“ треба ручно да буде постављен у режим освежавања"
 
-#: src/Views/FirmwareView.vala:341
+#: src/Views/FirmwareView.vala:340
 msgid "Continue"
 msgstr "Настави"
 
-#: src/Views/FirmwareView.vala:354
+#: src/Views/FirmwareView.vala:353
 msgid "An update requires the system to restart to complete"
 msgstr "Једно освежење захтева поновно покретање система да би се обавило"
 
-#: src/Views/FirmwareView.vala:355
+#: src/Views/FirmwareView.vala:354
 msgid "This will close all open applications and restart this device."
 msgstr "То ће затворити све отворене програме и поново покренути овај уређај."
 
-#: src/Views/FirmwareView.vala:363 src/Views/FirmwareView.vala:412
+#: src/Views/FirmwareView.vala:362 src/Views/FirmwareView.vala:411
 msgid "Restart"
 msgstr "Поново покрени"
 
-#: src/Views/FirmwareView.vala:378
+#: src/Views/FirmwareView.vala:377
 msgid "An update requires the system to shut down to complete"
 msgstr "Једно освежење захтева гашење система да би се обавило"
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:378
 msgid "This will close all open applications and turn off this device."
 msgstr "То ће затворити све отворене програме и угасити овај уређај."
 
-#: src/Views/FirmwareView.vala:387
+#: src/Views/FirmwareView.vala:386
 msgid "Shut Down"
 msgstr "Угаси"
 
-#: src/Views/FirmwareView.vala:402
+#: src/Views/FirmwareView.vala:401
 msgid "Restart to firmware setup"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:403
+#: src/Views/FirmwareView.vala:402
 #, fuzzy
 #| msgid "This will close all open applications and restart this device."
 msgid ""
@@ -225,13 +225,13 @@ msgid ""
 "firmware setup screen."
 msgstr "То ће затворити све отворене програме и поново покренути овај уређај."
 
-#: src/Views/FirmwareView.vala:427
+#: src/Views/FirmwareView.vala:426
 #, fuzzy
 #| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
 msgstr "Нисам успео да инсталирам издање фирмвера"
 
-#: src/Views/FirmwareView.vala:428
+#: src/Views/FirmwareView.vala:427
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
 
@@ -320,62 +320,73 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:116
+#: src/Views/OperatingSystemView.vala:119
 msgid "Website"
 msgstr "Веб страница"
 
-#: src/Views/OperatingSystemView.vala:152
+#: src/Views/OperatingSystemView.vala:155
 msgid "Download"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:155
+#: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "Откажи"
 
-#: src/Views/OperatingSystemView.vala:157
+#: src/Views/OperatingSystemView.vala:160
 msgid "Refresh"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:169
+#: src/Views/OperatingSystemView.vala:172
 msgid "Learn More…"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:185
+#: src/Views/OperatingSystemView.vala:184
 #, fuzzy
 #| msgid "Updates"
 msgid "Automatic Updates"
 msgstr "Освежења"
 
-#: src/Views/OperatingSystemView.vala:188
+#: src/Views/OperatingSystemView.vala:185
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:349
+#: src/Views/OperatingSystemView.vala:353
 #, c-format
 msgid "Built on %s"
 msgstr "Изграђено %s"
 
-#: src/Views/OperatingSystemView.vala:376
+#: src/Views/OperatingSystemView.vala:372
+#, fuzzy
+#| msgid "%u Update Available"
+#| msgid_plural "%u Updates Available"
+msgid "System updates not available"
+msgstr "%u освежење је доступно"
+
+#: src/Views/OperatingSystemView.vala:373
+msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:385
 #, fuzzy
 #| msgid "Up to Date"
 msgid "Up To Date"
 msgstr "Освежен је"
 
-#: src/Views/OperatingSystemView.vala:377
+#: src/Views/OperatingSystemView.vala:386
 #, c-format
 msgid "Last checked %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:392
+#: src/Views/OperatingSystemView.vala:401
 #, fuzzy
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
 msgid "Updates Available"
 msgstr "%u освежење је доступно"
 
-#: src/Views/OperatingSystemView.vala:398
+#: src/Views/OperatingSystemView.vala:407
 #, fuzzy, c-format
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
@@ -384,47 +395,47 @@ msgid_plural "%i updates available"
 msgstr[0] "%u освежење је доступно"
 msgstr[1] "%u освежења су доступна"
 
-#: src/Views/OperatingSystemView.vala:409
+#: src/Views/OperatingSystemView.vala:418
 msgid "Unable to determine number of updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:415
+#: src/Views/OperatingSystemView.vala:424
 #, fuzzy
 #| msgid "Updates"
 msgid "Downloading Updates"
 msgstr "Освежења"
 
-#: src/Views/OperatingSystemView.vala:421
+#: src/Views/OperatingSystemView.vala:430
 #, fuzzy
 #| msgid "Restart"
 msgid "Restart Required"
 msgstr "Поново покрени"
 
-#: src/Views/OperatingSystemView.vala:422
+#: src/Views/OperatingSystemView.vala:431
 msgid "A restart is required to finish installing updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:427
-#: src/Views/OperatingSystemView.vala:441
+#: src/Views/OperatingSystemView.vala:436
+#: src/Views/OperatingSystemView.vala:450
 msgid "Failed to download updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:428
+#: src/Views/OperatingSystemView.vala:437
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:442
+#: src/Views/OperatingSystemView.vala:451
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:484
+#: src/Views/OperatingSystemView.vala:493
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Подешавања система биће враћена на основне вредности"
 
-#: src/Views/OperatingSystemView.vala:485
+#: src/Views/OperatingSystemView.vala:494
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -432,7 +443,7 @@ msgstr ""
 "Сва подешавања система биће враћена на основне вредности. Ово неће утицати "
 "на личне податке као што је музика и слике."
 
-#: src/Views/OperatingSystemView.vala:493
+#: src/Views/OperatingSystemView.vala:502
 msgid "Restore Settings"
 msgstr "Врати подешавања"
 

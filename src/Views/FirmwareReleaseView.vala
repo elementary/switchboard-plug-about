@@ -221,7 +221,12 @@ public class About.FirmwareReleaseView : Gtk.Box {
         if (duration_minutes < 1) {
             install_duration_value_label.label = _("less than a minute");
         } else {
-            install_duration_value_label.label = GLib.ngettext ("%llu minute", "%llu minutes", duration_minutes).printf (duration_minutes);
+            install_duration_value_label.label = dngettext (
+                GETTEXT_PACKAGE,
+                "%llu minute",
+                "%llu minutes",
+                duration_minutes
+            ).printf (duration_minutes);
         }
     }
 

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-02 15:27+0000\n"
-"PO-Revision-Date: 2024-02-19 12:12+0000\n"
+"POT-Creation-Date: 2024-04-03 16:35+0000\n"
+"PO-Revision-Date: 2024-05-07 05:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -17,58 +17,58 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:43
 msgid "System"
 msgstr "システム"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:44
 msgid "View operating system and hardware information"
 msgstr "オペレーティングシステムとハードウェアの情報を参照します"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:60
 msgid "Operating System"
 msgstr "オペレーティングシステム"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:61
 msgid "Hardware"
 msgstr "ハードウェア"
 
-#: src/Plug.vala:61 src/Plug.vala:114 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:62 src/Plug.vala:117 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "ファームウェア"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:115
 msgid "Operating System Information"
 msgstr "オペレーティングシステムの情報"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Hardware Information"
 msgstr "ハードウェアの情報"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:226
+#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:216
 msgid "Restore Default Settings"
 msgstr "デフォルト設定を復元"
 
-#: src/Plug.vala:116 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:129
 msgid "Suggest Translations"
 msgstr "翻訳を提案"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "フィードバックを送信"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:121
 msgid "Report a Problem"
 msgstr "不具合を報告"
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:122
 msgid "Get Support"
 msgstr "サポートを受ける"
 
-#: src/Plug.vala:120
+#: src/Plug.vala:123
 msgid "Updates"
 msgstr "アップデート"
 
@@ -112,7 +112,7 @@ msgstr "1分以内"
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
-msgstr[0] "%llu分"
+msgstr[0] "%llu 分"
 
 #: src/Views/FirmwareView.vala:36
 msgid ""
@@ -126,7 +126,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "アップデート中はデバイスを取り外さないでください。"
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:386
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:395
 msgid "Checking for Updates"
 msgstr "アップデートを確認しています"
 
@@ -138,85 +138,85 @@ msgstr "ファームウェアサービスに接続して、アップデートを
 msgid "Restart to Firmware Setup…"
 msgstr "再起動してファームウェアの設定に入る…"
 
-#: src/Views/FirmwareView.vala:117
+#: src/Views/FirmwareView.vala:116
 msgid "Firmware Updates Are Not Available"
 msgstr "ファームウェアアップデート利用不可"
 
-#: src/Views/FirmwareView.vala:118
+#: src/Views/FirmwareView.vala:117
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "このデバイスおよび接続されたデバイスは、ファームウェアのアップデートに対応し"
 "ていません。"
 
-#: src/Views/FirmwareView.vala:120
+#: src/Views/FirmwareView.vala:119
 msgid "The Firmware Service Is Not Available"
 msgstr "ファームウェアサービス利用不可"
 
-#: src/Views/FirmwareView.vala:121
+#: src/Views/FirmwareView.vala:120
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "“fwupd” がインストール済みで有効になっているか確認してください。"
 
-#: src/Views/FirmwareView.vala:216
+#: src/Views/FirmwareView.vala:215
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
-msgstr[0] "%u件のアップデートが利用可能"
+msgstr[0] "%u 件のアップデートが利用可能"
 
-#: src/Views/FirmwareView.vala:220
+#: src/Views/FirmwareView.vala:219
 msgid "Up to Date"
 msgstr "最新の状態"
 
-#: src/Views/FirmwareView.vala:228
+#: src/Views/FirmwareView.vala:227
 #, c-format
 msgid "“%s” is being updated"
 msgstr "“%s” をアップデートしています"
 
-#: src/Views/FirmwareView.vala:311
+#: src/Views/FirmwareView.vala:310
 msgid "Failed to install firmware release"
 msgstr "ファームウェアをインストールできませんでした"
 
-#: src/Views/FirmwareView.vala:332
+#: src/Views/FirmwareView.vala:331
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "“%s” は手動でアップデートモードに切り替える必要があります"
 
-#: src/Views/FirmwareView.vala:341
+#: src/Views/FirmwareView.vala:340
 msgid "Continue"
 msgstr "続行"
 
-#: src/Views/FirmwareView.vala:354
+#: src/Views/FirmwareView.vala:353
 msgid "An update requires the system to restart to complete"
 msgstr "アップデートを完了するには、システムの再起動が必要です"
 
-#: src/Views/FirmwareView.vala:355
+#: src/Views/FirmwareView.vala:354
 msgid "This will close all open applications and restart this device."
 msgstr ""
 "続行すると、開いているすべてのアプリケーションを閉じてこのデバイスを再起動し"
 "ます。"
 
-#: src/Views/FirmwareView.vala:363 src/Views/FirmwareView.vala:412
+#: src/Views/FirmwareView.vala:362 src/Views/FirmwareView.vala:411
 msgid "Restart"
 msgstr "再起動"
 
-#: src/Views/FirmwareView.vala:378
+#: src/Views/FirmwareView.vala:377
 msgid "An update requires the system to shut down to complete"
 msgstr "アップデートを完了するには、システムのシャットダウンが必要です"
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:378
 msgid "This will close all open applications and turn off this device."
 msgstr ""
 "続行すると、開いているすべてのアプリケーションを閉じてこのデバイスの電源を切"
 "ります。"
 
-#: src/Views/FirmwareView.vala:387
+#: src/Views/FirmwareView.vala:386
 msgid "Shut Down"
 msgstr "シャットダウン"
 
-#: src/Views/FirmwareView.vala:402
+#: src/Views/FirmwareView.vala:401
 msgid "Restart to firmware setup"
 msgstr "再起動してファームウェアの設定に入る"
 
-#: src/Views/FirmwareView.vala:403
+#: src/Views/FirmwareView.vala:402
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
@@ -224,11 +224,11 @@ msgstr ""
 "続行すると、開いているすべてのアプリケーションを閉じてこのデバイスを再起動"
 "し、ファームウェアの設定画面を開きます。"
 
-#: src/Views/FirmwareView.vala:427
+#: src/Views/FirmwareView.vala:426
 msgid "Unable to restart to firmware setup"
 msgstr "再起動してファームウェアの設定に入ることができませんでした"
 
-#: src/Views/FirmwareView.vala:428
+#: src/Views/FirmwareView.vala:427
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
 "システムエラーのため、再起動して自動的にファームウェアの設定に入ることができ"
@@ -317,87 +317,97 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:116
+#: src/Views/OperatingSystemView.vala:119
 msgid "Website"
 msgstr "Web サイト"
 
-#: src/Views/OperatingSystemView.vala:152
+#: src/Views/OperatingSystemView.vala:155
 msgid "Download"
 msgstr "ダウンロード"
 
-#: src/Views/OperatingSystemView.vala:155
+#: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Views/OperatingSystemView.vala:157
+#: src/Views/OperatingSystemView.vala:160
 msgid "Refresh"
 msgstr "再読み込み"
 
-#: src/Views/OperatingSystemView.vala:169
+#: src/Views/OperatingSystemView.vala:172
 msgid "Learn More…"
 msgstr "さらに詳しく…"
 
-#: src/Views/OperatingSystemView.vala:185
+#: src/Views/OperatingSystemView.vala:184
 msgid "Automatic Updates"
 msgstr "自動アップデート"
 
-#: src/Views/OperatingSystemView.vala:188
+#: src/Views/OperatingSystemView.vala:185
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
-msgstr "アップデートを自動的にダウンロードし、デバイスの再起動時に自動的にインストー"
+msgstr ""
+"アップデートを自動的にダウンロードし、デバイスの再起動時に自動的にインストー"
 "ルします。"
 
-#: src/Views/OperatingSystemView.vala:349
+#: src/Views/OperatingSystemView.vala:353
 #, c-format
 msgid "Built on %s"
 msgstr "%s ベース"
 
-#: src/Views/OperatingSystemView.vala:376
+#: src/Views/OperatingSystemView.vala:372
+msgid "System updates not available"
+msgstr "システムアップデート利用不可"
+
+#: src/Views/OperatingSystemView.vala:373
+msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
+msgstr "バックエンドに接続できませんでした。問題を解消するには、ログアウトしてみてく"
+"ださい。"
+
+#: src/Views/OperatingSystemView.vala:385
 msgid "Up To Date"
 msgstr "最新の状態"
 
-#: src/Views/OperatingSystemView.vala:377
+#: src/Views/OperatingSystemView.vala:386
 #, c-format
 msgid "Last checked %s"
 msgstr "最終確認: %s"
 
-#: src/Views/OperatingSystemView.vala:392
+#: src/Views/OperatingSystemView.vala:401
 msgid "Updates Available"
 msgstr "アップデート利用可能"
 
-#: src/Views/OperatingSystemView.vala:398
+#: src/Views/OperatingSystemView.vala:407
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
-msgstr[0] "%i件のアップデートが利用可能"
+msgstr[0] "%i 件のアップデートが利用可能"
 
-#: src/Views/OperatingSystemView.vala:409
+#: src/Views/OperatingSystemView.vala:418
 msgid "Unable to determine number of updates"
 msgstr "アップデート件数を判断できません"
 
-#: src/Views/OperatingSystemView.vala:415
+#: src/Views/OperatingSystemView.vala:424
 msgid "Downloading Updates"
 msgstr "アップデートをダウンロードしています"
 
-#: src/Views/OperatingSystemView.vala:421
+#: src/Views/OperatingSystemView.vala:430
 msgid "Restart Required"
 msgstr "再起動が必要"
 
-#: src/Views/OperatingSystemView.vala:422
+#: src/Views/OperatingSystemView.vala:431
 msgid "A restart is required to finish installing updates"
 msgstr "アップデートのインストールを完了するには再起動が必要です"
 
-#: src/Views/OperatingSystemView.vala:427
-#: src/Views/OperatingSystemView.vala:441
+#: src/Views/OperatingSystemView.vala:436
+#: src/Views/OperatingSystemView.vala:450
 msgid "Failed to download updates"
 msgstr "アップデートのダウンロードに失敗"
 
-#: src/Views/OperatingSystemView.vala:428
+#: src/Views/OperatingSystemView.vala:437
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "手動でアップデートを再読み込みすると問題が解消する可能性があります"
 
-#: src/Views/OperatingSystemView.vala:442
+#: src/Views/OperatingSystemView.vala:451
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -407,11 +417,11 @@ msgstr ""
 "トリ、パッケージマネージャーのエラーなどに起因している可能性があります。この"
 "問題は、手動でアップデートを再読み込みすると解決することがあります。"
 
-#: src/Views/OperatingSystemView.vala:484
+#: src/Views/OperatingSystemView.vala:493
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "システム設定が出荷時のデフォルトに復元されます"
 
-#: src/Views/OperatingSystemView.vala:485
+#: src/Views/OperatingSystemView.vala:494
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -419,7 +429,7 @@ msgstr ""
 "すべてのシステム設定とデータがデフォルト値にリセットされます。音楽や写真など"
 "の個人データは影響を受けません。"
 
-#: src/Views/OperatingSystemView.vala:493
+#: src/Views/OperatingSystemView.vala:502
 msgid "Restore Settings"
 msgstr "設定を復元"
 
@@ -431,7 +441,7 @@ msgstr "新機能"
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
-msgstr[0] "%u件のパッケージがアップグレードされます"
+msgstr[0] "%u 件のパッケージがアップグレードされます"
 
 #: src/Widgets/UpdateDetailsDialog.vala:66
 msgid "Close"

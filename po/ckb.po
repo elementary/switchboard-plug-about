@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-02 15:27+0000\n"
+"POT-Creation-Date: 2024-04-03 16:35+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -15,55 +15,55 @@ msgstr ""
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:42
+#: src/Plug.vala:43
 msgid "System"
 msgstr "سیستەم"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:44
 msgid "View operating system and hardware information"
 msgstr "بینینی زانیاری سیستەمی وەگەڕخەر و ڕەقەکاڵا"
 
-#: src/Plug.vala:59
+#: src/Plug.vala:60
 msgid "Operating System"
 msgstr "سیستەمی وەگەڕخەر"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:61
 msgid "Hardware"
 msgstr "ڕەقەکاڵا"
 
-#: src/Plug.vala:61 src/Plug.vala:114 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:62 src/Plug.vala:117 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "پتەوەکاڵا"
 
-#: src/Plug.vala:112
+#: src/Plug.vala:115
 msgid "Operating System Information"
 msgstr "زانیاری سیستەمی وەگەڕخەر"
 
-#: src/Plug.vala:113
+#: src/Plug.vala:116
 msgid "Hardware Information"
 msgstr "زانیاری ڕەقەکاڵا"
 
-#: src/Plug.vala:115 src/Views/OperatingSystemView.vala:226
+#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:216
 msgid "Restore Default Settings"
 msgstr "گەڕاندنەوەی ڕێکخستنەکان بۆ دۆخی بنەڕەتیان"
 
-#: src/Plug.vala:116 src/Views/OperatingSystemView.vala:126
+#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:129
 msgid "Suggest Translations"
 msgstr "بەشداریکردن لە وەرگێڕان"
 
-#: src/Plug.vala:117 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "ناردنی فیدباک"
 
-#: src/Plug.vala:118
+#: src/Plug.vala:121
 msgid "Report a Problem"
 msgstr "ناردنی کێشەیەک"
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:119
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:122
 msgid "Get Support"
 msgstr "وەرگرتنی پاڵپشتی"
 
-#: src/Plug.vala:120
+#: src/Plug.vala:123
 msgid "Updates"
 msgstr "بەڕۆژبوونەوەکان"
 
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "تکایە بارگاویکردنی ئامێرەکەت مەوەستێنە لە کاتی بەڕۆژکردنەوەدا."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:386
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:395
 msgid "Checking for Updates"
 msgstr "پشکنین بۆ بەڕۆژبوونەوەکان"
 
@@ -134,82 +134,82 @@ msgstr "پەیوەستبوون بە پخزمەتگووزاری پتەوەکاڵ�
 msgid "Restart to Firmware Setup…"
 msgstr "کۆمپیتەرەکەت پێبکەوە بۆ دامەزراندنی فیرموەیر…"
 
-#: src/Views/FirmwareView.vala:117
+#: src/Views/FirmwareView.vala:116
 msgid "Firmware Updates Are Not Available"
 msgstr "بەڕۆژبوونەوەی پتەوەکاڵا بەردەست نییە"
 
-#: src/Views/FirmwareView.vala:118
+#: src/Views/FirmwareView.vala:117
 msgid "Firmware updates are not supported on this or any connected devices."
 msgstr ""
 "بەڕۆژبوونەوەی پتەوەکاڵا لەسەر ئەم ئامێرە هەر ئامێرێکی پەیوەستکراو پاڵپشتی "
 "ناکرێت."
 
-#: src/Views/FirmwareView.vala:120
+#: src/Views/FirmwareView.vala:119
 msgid "The Firmware Service Is Not Available"
 msgstr "خزمەتگووزاری پتەوەکاڵا بەردەست نییە"
 
-#: src/Views/FirmwareView.vala:121
+#: src/Views/FirmwareView.vala:120
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr "تکایە دڵنیابە کە \"fwupd\" دامەزراوە و کاراکراوە."
 
-#: src/Views/FirmwareView.vala:216
+#: src/Views/FirmwareView.vala:215
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] "تەنها %u بەڕۆژبوونەوە بەردەستە"
 msgstr[1] "%u بەڕۆژبوونەوە بەردەستن"
 
-#: src/Views/FirmwareView.vala:220
+#: src/Views/FirmwareView.vala:219
 msgid "Up to Date"
 msgstr "بەڕۆژە"
 
-#: src/Views/FirmwareView.vala:228
+#: src/Views/FirmwareView.vala:227
 #, c-format
 msgid "“%s” is being updated"
 msgstr "\"%s\" بەڕۆژ دەبێتەوە"
 
-#: src/Views/FirmwareView.vala:311
+#: src/Views/FirmwareView.vala:310
 msgid "Failed to install firmware release"
 msgstr "دامەزراندنی ڕیلیسی پتەوەکاڵا شکستی هێنا"
 
-#: src/Views/FirmwareView.vala:332
+#: src/Views/FirmwareView.vala:331
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr "پێویستە \"%s\" بە دەستی بخرێتە دۆخی بەڕۆژبوونەوەوە"
 
-#: src/Views/FirmwareView.vala:341
+#: src/Views/FirmwareView.vala:340
 msgid "Continue"
 msgstr "بەردەوام بوون"
 
-#: src/Views/FirmwareView.vala:354
+#: src/Views/FirmwareView.vala:353
 msgid "An update requires the system to restart to complete"
 msgstr "بەڕۆژبوونەوەیەک پێویستی بە سیستەمە پێبێتەوە بۆ تەواوبوون"
 
-#: src/Views/FirmwareView.vala:355
+#: src/Views/FirmwareView.vala:354
 msgid "This will close all open applications and restart this device."
 msgstr "بەمە هەموو بەرنامە کراوەکان دادەخرێنەوە و ئامێرەکەت پێ دەبێتەوە."
 
-#: src/Views/FirmwareView.vala:363 src/Views/FirmwareView.vala:412
+#: src/Views/FirmwareView.vala:362 src/Views/FirmwareView.vala:411
 msgid "Restart"
 msgstr "پێبوونەوە"
 
-#: src/Views/FirmwareView.vala:378
+#: src/Views/FirmwareView.vala:377
 msgid "An update requires the system to shut down to complete"
 msgstr "بەڕۆژبوونەوەیەک پێویستی بە سیستەمە خامۆش ببێت بۆ تەواوبوون"
 
-#: src/Views/FirmwareView.vala:379
+#: src/Views/FirmwareView.vala:378
 msgid "This will close all open applications and turn off this device."
 msgstr "بەمە هەموو بەرنامەکراوەکان دادەخرێنەوە و ئامێرەکەت دەکوژێتەوە."
 
-#: src/Views/FirmwareView.vala:387
+#: src/Views/FirmwareView.vala:386
 msgid "Shut Down"
 msgstr "خامۆشکردن"
 
-#: src/Views/FirmwareView.vala:402
+#: src/Views/FirmwareView.vala:401
 msgid "Restart to firmware setup"
 msgstr "کۆمپیتەرەکەت پێبکەوە بۆ دامەزراندنی فیرموەیر"
 
-#: src/Views/FirmwareView.vala:403
+#: src/Views/FirmwareView.vala:402
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
@@ -217,11 +217,11 @@ msgstr ""
 "بەمە هەموو بەرنامە کراوەکان دادەخرێنەوە و ئامێرەکەت پێ دەبێتەوە، پاشان "
 "ڕونمای دامەزراندنی فیرموەیر دەکرێتەوە."
 
-#: src/Views/FirmwareView.vala:427
+#: src/Views/FirmwareView.vala:426
 msgid "Unable to restart to firmware setup"
 msgstr "نەتوانرا دامەزراندنی فیرموەیر دوبارە بکرێتەوە"
 
-#: src/Views/FirmwareView.vala:428
+#: src/Views/FirmwareView.vala:427
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
 "هەڵەیەکی سیستەم ڕێگری لە دووبارە دەستپێکردنەوەی ئۆتۆماتیکی کرد لە "
@@ -315,62 +315,73 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr "%ll %s"
 
-#: src/Views/OperatingSystemView.vala:116
+#: src/Views/OperatingSystemView.vala:119
 msgid "Website"
 msgstr "ماڵپەڕ"
 
-#: src/Views/OperatingSystemView.vala:152
+#: src/Views/OperatingSystemView.vala:155
 msgid "Download"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:155
+#: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "هەڵوەشاندنەوە"
 
-#: src/Views/OperatingSystemView.vala:157
+#: src/Views/OperatingSystemView.vala:160
 msgid "Refresh"
 msgstr "نوێکردنەوە"
 
-#: src/Views/OperatingSystemView.vala:169
+#: src/Views/OperatingSystemView.vala:172
 msgid "Learn More…"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:185
+#: src/Views/OperatingSystemView.vala:184
 #, fuzzy
 #| msgid "All Updates"
 msgid "Automatic Updates"
 msgstr "هەموو بەڕۆژبوونەوەکان"
 
-#: src/Views/OperatingSystemView.vala:188
+#: src/Views/OperatingSystemView.vala:185
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:349
+#: src/Views/OperatingSystemView.vala:353
 #, c-format
 msgid "Built on %s"
 msgstr "بنچینەکراوی سەر %s"
 
-#: src/Views/OperatingSystemView.vala:376
+#: src/Views/OperatingSystemView.vala:372
+#, fuzzy
+#| msgid "%u Update Available"
+#| msgid_plural "%u Updates Available"
+msgid "System updates not available"
+msgstr "تەنها %u بەڕۆژبوونەوە بەردەستە"
+
+#: src/Views/OperatingSystemView.vala:373
+msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:385
 #, fuzzy
 #| msgid "Up to Date"
 msgid "Up To Date"
 msgstr "بەڕۆژە"
 
-#: src/Views/OperatingSystemView.vala:377
+#: src/Views/OperatingSystemView.vala:386
 #, c-format
 msgid "Last checked %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:392
+#: src/Views/OperatingSystemView.vala:401
 #, fuzzy
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
 msgid "Updates Available"
 msgstr "تەنها %u بەڕۆژبوونەوە بەردەستە"
 
-#: src/Views/OperatingSystemView.vala:398
+#: src/Views/OperatingSystemView.vala:407
 #, fuzzy, c-format
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
@@ -379,47 +390,47 @@ msgid_plural "%i updates available"
 msgstr[0] "تەنها %u بەڕۆژبوونەوە بەردەستە"
 msgstr[1] "%u بەڕۆژبوونەوە بەردەستن"
 
-#: src/Views/OperatingSystemView.vala:409
+#: src/Views/OperatingSystemView.vala:418
 msgid "Unable to determine number of updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:415
+#: src/Views/OperatingSystemView.vala:424
 #, fuzzy
 #| msgid "All Updates"
 msgid "Downloading Updates"
 msgstr "هەموو بەڕۆژبوونەوەکان"
 
-#: src/Views/OperatingSystemView.vala:421
+#: src/Views/OperatingSystemView.vala:430
 #, fuzzy
 #| msgid "Restart"
 msgid "Restart Required"
 msgstr "پێبوونەوە"
 
-#: src/Views/OperatingSystemView.vala:422
+#: src/Views/OperatingSystemView.vala:431
 msgid "A restart is required to finish installing updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:427
-#: src/Views/OperatingSystemView.vala:441
+#: src/Views/OperatingSystemView.vala:436
+#: src/Views/OperatingSystemView.vala:450
 msgid "Failed to download updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:428
+#: src/Views/OperatingSystemView.vala:437
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:442
+#: src/Views/OperatingSystemView.vala:451
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:484
+#: src/Views/OperatingSystemView.vala:493
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "ڕێکخستنەکانی سیستەم دەگەڕێندرێنەوە دۆخی بنەڕەتی سەرەتا"
 
-#: src/Views/OperatingSystemView.vala:485
+#: src/Views/OperatingSystemView.vala:494
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -428,7 +439,7 @@ msgstr ""
 "بەهای سەرەتایان وەردەگرنەوە. ئەمە کاریگەری لەسەر داتای کەسی وەکو مۆسیقا و "
 "وێنەکان نابێت."
 
-#: src/Views/OperatingSystemView.vala:493
+#: src/Views/OperatingSystemView.vala:502
 msgid "Restore Settings"
 msgstr "گەڕاندنەوەی ڕێکخستنەکان"
 

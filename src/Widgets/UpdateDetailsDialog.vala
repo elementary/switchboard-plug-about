@@ -15,7 +15,8 @@ public class About.UpdateDetailsDialog : Granite.Dialog {
         modal = true;
 
         var title_label = new Gtk.Label (
-            ngettext (
+            dngettext (
+                GETTEXT_PACKAGE,
                 "%u package will be upgraded",
                 "%u packages will be upgraded",
                 packages.get_n_items ()
