@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 16:35+0000\n"
-"PO-Revision-Date: 2024-05-07 05:13+0000\n"
+"PO-Revision-Date: 2024-05-26 07:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -106,7 +106,7 @@ msgstr "最新の状態"
 
 #: src/Views/FirmwareReleaseView.vala:222
 msgid "less than a minute"
-msgstr "1分以内"
+msgstr "1 分以内"
 
 #: src/Views/FirmwareReleaseView.vala:224
 #, c-format
