@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 16:35+0000\n"
+"POT-Creation-Date: 2024-05-30 15:54+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -20,55 +20,59 @@ msgstr ""
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:45
 msgid "System"
 msgstr "Systém"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:46
 msgid "View operating system and hardware information"
 msgstr "Zobrazit informace o operačním systému a hardwaru"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:62
 msgid "Operating System"
 msgstr "Operační systém"
 
-#: src/Plug.vala:61
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr "Hardware"
 
-#: src/Plug.vala:62 src/Plug.vala:117 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:121 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Firmware"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:65 src/Plug.vala:128
+msgid "Drivers"
+msgstr ""
+
+#: src/Plug.vala:119
 msgid "Operating System Information"
 msgstr "Informace o operačním systému"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:120
 msgid "Hardware Information"
 msgstr "Informace o hardware"
 
-#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:216
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:216
 msgid "Restore Default Settings"
 msgstr "Obnovit výchozí nastavení"
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:129
 msgid "Suggest Translations"
 msgstr "Pomoci s překlady"
 
-#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "Odeslat zpětnou vazbu"
 
-#: src/Plug.vala:121
+#: src/Plug.vala:125
 msgid "Report a Problem"
 msgstr "Nahlásit problém"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:122
 msgid "Get Support"
 msgstr "Získat podporu"
 
-#: src/Plug.vala:123
+#: src/Plug.vala:127
 msgid "Updates"
 msgstr "Aktualizace"
 
@@ -108,7 +112,7 @@ msgstr "Aktuální"
 msgid "less than a minute"
 msgstr "méně než minuta"
 
-#: src/Views/FirmwareReleaseView.vala:224
+#: src/Views/FirmwareReleaseView.vala:226
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
@@ -389,7 +393,7 @@ msgstr ""
 msgid "Updates Available"
 msgstr "Je k dispozici %u aktualizace"
 
-#: src/Views/OperatingSystemView.vala:407
+#: src/Views/OperatingSystemView.vala:408
 #, fuzzy, c-format
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
@@ -399,47 +403,47 @@ msgstr[0] "Je k dispozici %u aktualizace"
 msgstr[1] "Jsou k dispozici %u aktualizace"
 msgstr[2] "Je k dispozici %u aktualizací"
 
-#: src/Views/OperatingSystemView.vala:418
+#: src/Views/OperatingSystemView.vala:419
 msgid "Unable to determine number of updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:424
+#: src/Views/OperatingSystemView.vala:425
 #, fuzzy
 #| msgid "All Updates"
 msgid "Downloading Updates"
 msgstr "Všechny aktualizace"
 
-#: src/Views/OperatingSystemView.vala:430
+#: src/Views/OperatingSystemView.vala:431
 #, fuzzy
 #| msgid "Restart"
 msgid "Restart Required"
 msgstr "Restart"
 
-#: src/Views/OperatingSystemView.vala:431
+#: src/Views/OperatingSystemView.vala:432
 msgid "A restart is required to finish installing updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:436
-#: src/Views/OperatingSystemView.vala:450
+#: src/Views/OperatingSystemView.vala:437
+#: src/Views/OperatingSystemView.vala:451
 msgid "Failed to download updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:437
+#: src/Views/OperatingSystemView.vala:438
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:451
+#: src/Views/OperatingSystemView.vala:452
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:493
+#: src/Views/OperatingSystemView.vala:494
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systémová nastavení budou vrácena do výchozího stavu"
 
-#: src/Views/OperatingSystemView.vala:494
+#: src/Views/OperatingSystemView.vala:495
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -447,7 +451,7 @@ msgstr ""
 "Veškerá systémová nastavení a data budou vrácena do výchozího stavu. Osobní "
 "data, jako hudba či obrázky, tím nebudou ovlivněna."
 
-#: src/Views/OperatingSystemView.vala:502
+#: src/Views/OperatingSystemView.vala:503
 msgid "Restore Settings"
 msgstr "Obnovit nastavení"
 
@@ -455,7 +459,7 @@ msgstr "Obnovit nastavení"
 msgid "What's New"
 msgstr ""
 
-#: src/Widgets/UpdateDetailsDialog.vala:19
+#: src/Widgets/UpdateDetailsDialog.vala:20
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
@@ -463,7 +467,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/Widgets/UpdateDetailsDialog.vala:66
+#: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Zavřít"
 

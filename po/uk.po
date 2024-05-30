@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 16:35+0000\n"
+"POT-Creation-Date: 2024-05-30 15:54+0000\n"
 "PO-Revision-Date: 2024-04-09 21:13+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -21,55 +21,59 @@ msgstr ""
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:45
 msgid "System"
 msgstr "Система"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:46
 msgid "View operating system and hardware information"
 msgstr "Огляд операційної системи та подробиць про апаратні засоби"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:62
 msgid "Operating System"
 msgstr "Операційна система"
 
-#: src/Plug.vala:61
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr "Обладнання"
 
-#: src/Plug.vala:62 src/Plug.vala:117 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:121 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Мікропрограма"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:65 src/Plug.vala:128
+msgid "Drivers"
+msgstr ""
+
+#: src/Plug.vala:119
 msgid "Operating System Information"
 msgstr "Відомості про операційну систему"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:120
 msgid "Hardware Information"
 msgstr "Відомості про обладнання"
 
-#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:216
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:216
 msgid "Restore Default Settings"
 msgstr "Відновити типові налаштування"
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:129
 msgid "Suggest Translations"
 msgstr "Запропонувати переклад"
 
-#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "Надіслати відгук"
 
-#: src/Plug.vala:121
+#: src/Plug.vala:125
 msgid "Report a Problem"
 msgstr "Повідомити про проблему"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:122
 msgid "Get Support"
 msgstr "Отримати допомогу"
 
-#: src/Plug.vala:123
+#: src/Plug.vala:127
 msgid "Updates"
 msgstr "Оновлення"
 
@@ -109,7 +113,7 @@ msgstr "В актуальному стані"
 msgid "less than a minute"
 msgstr "менше хвилини"
 
-#: src/Views/FirmwareReleaseView.vala:224
+#: src/Views/FirmwareReleaseView.vala:226
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
@@ -382,7 +386,7 @@ msgstr "Востаннє перевірено %s"
 msgid "Updates Available"
 msgstr "Доступні оновлення"
 
-#: src/Views/OperatingSystemView.vala:407
+#: src/Views/OperatingSystemView.vala:408
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
@@ -390,32 +394,32 @@ msgstr[0] "Доступне %i оновлення"
 msgstr[1] "Доступні %i оновлення"
 msgstr[2] "Доступні %i оновлень"
 
-#: src/Views/OperatingSystemView.vala:418
+#: src/Views/OperatingSystemView.vala:419
 msgid "Unable to determine number of updates"
 msgstr "Неможливо визначити кількість оновлень"
 
-#: src/Views/OperatingSystemView.vala:424
+#: src/Views/OperatingSystemView.vala:425
 msgid "Downloading Updates"
 msgstr "Завантаження оновлень"
 
-#: src/Views/OperatingSystemView.vala:430
+#: src/Views/OperatingSystemView.vala:431
 msgid "Restart Required"
 msgstr "Потрібен перезапуск"
 
-#: src/Views/OperatingSystemView.vala:431
+#: src/Views/OperatingSystemView.vala:432
 msgid "A restart is required to finish installing updates"
 msgstr "Для завершення встановлення оновлень потрібен перезапуск"
 
-#: src/Views/OperatingSystemView.vala:436
-#: src/Views/OperatingSystemView.vala:450
+#: src/Views/OperatingSystemView.vala:437
+#: src/Views/OperatingSystemView.vala:451
 msgid "Failed to download updates"
 msgstr "Не вдалося завантажити оновлення"
 
-#: src/Views/OperatingSystemView.vala:437
+#: src/Views/OperatingSystemView.vala:438
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "Оновлення вручну може усунути проблему"
 
-#: src/Views/OperatingSystemView.vala:451
+#: src/Views/OperatingSystemView.vala:452
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -425,11 +429,11 @@ msgstr ""
 "програмним забезпеченням, стороннім програмним забезпеченням або помилкою "
 "менеджера пакунків. Проблему може усунути перезапуск оновлення вручну."
 
-#: src/Views/OperatingSystemView.vala:493
+#: src/Views/OperatingSystemView.vala:494
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Системні налаштування буде відновлено до типових заводських"
 
-#: src/Views/OperatingSystemView.vala:494
+#: src/Views/OperatingSystemView.vala:495
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -437,7 +441,7 @@ msgstr ""
 "Всі налаштування системи та дані буде відновлено до типових значень. Це не "
 "вплине на особисті дані, такі як музика та зображення."
 
-#: src/Views/OperatingSystemView.vala:502
+#: src/Views/OperatingSystemView.vala:503
 msgid "Restore Settings"
 msgstr "Відновити налаштування"
 
@@ -445,7 +449,7 @@ msgstr "Відновити налаштування"
 msgid "What's New"
 msgstr "Що нового"
 
-#: src/Widgets/UpdateDetailsDialog.vala:19
+#: src/Widgets/UpdateDetailsDialog.vala:20
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
@@ -453,7 +457,7 @@ msgstr[0] "%u пакунок буде оновлено"
 msgstr[1] "%u пакунки буде оновлено"
 msgstr[2] "%u пакунків буде оновлено"
 
-#: src/Widgets/UpdateDetailsDialog.vala:66
+#: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Закрити"
 

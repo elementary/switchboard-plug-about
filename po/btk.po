@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 16:35+0000\n"
+"POT-Creation-Date: 2024-05-30 15:54+0000\n"
 "PO-Revision-Date: 2014-07-08 06:08+0000\n"
 "Last-Translator: Eduard Gotwig <g@ox.io>\n"
 "Language-Team: Batak (Indonesia) <btk@li.org>\n"
@@ -18,55 +18,59 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:45
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:44
+#: src/Plug.vala:46
 msgid "View operating system and hardware information"
 msgstr ""
 
-#: src/Plug.vala:60
+#: src/Plug.vala:62
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:61
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr ""
 
-#: src/Plug.vala:62 src/Plug.vala:117 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:121 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr ""
 
-#: src/Plug.vala:115
+#: src/Plug.vala:65 src/Plug.vala:128
+msgid "Drivers"
+msgstr ""
+
+#: src/Plug.vala:119
 msgid "Operating System Information"
 msgstr ""
 
-#: src/Plug.vala:116
+#: src/Plug.vala:120
 msgid "Hardware Information"
 msgstr ""
 
-#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:216
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:216
 msgid "Restore Default Settings"
 msgstr ""
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:129
 msgid "Suggest Translations"
 msgstr ""
 
-#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:121
+#: src/Plug.vala:125
 msgid "Report a Problem"
 msgstr ""
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:122
 msgid "Get Support"
 msgstr ""
 
-#: src/Plug.vala:123
+#: src/Plug.vala:127
 msgid "Updates"
 msgstr ""
 
@@ -106,7 +110,7 @@ msgstr ""
 msgid "less than a minute"
 msgstr ""
 
-#: src/Views/FirmwareReleaseView.vala:224
+#: src/Views/FirmwareReleaseView.vala:226
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
@@ -363,56 +367,56 @@ msgstr ""
 msgid "Updates Available"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:407
+#: src/Views/OperatingSystemView.vala:408
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/OperatingSystemView.vala:418
+#: src/Views/OperatingSystemView.vala:419
 msgid "Unable to determine number of updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:424
+#: src/Views/OperatingSystemView.vala:425
 msgid "Downloading Updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:430
+#: src/Views/OperatingSystemView.vala:431
 msgid "Restart Required"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:431
+#: src/Views/OperatingSystemView.vala:432
 msgid "A restart is required to finish installing updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:436
-#: src/Views/OperatingSystemView.vala:450
+#: src/Views/OperatingSystemView.vala:437
+#: src/Views/OperatingSystemView.vala:451
 msgid "Failed to download updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:437
+#: src/Views/OperatingSystemView.vala:438
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:451
+#: src/Views/OperatingSystemView.vala:452
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:493
+#: src/Views/OperatingSystemView.vala:494
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:494
+#: src/Views/OperatingSystemView.vala:495
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:502
+#: src/Views/OperatingSystemView.vala:503
 msgid "Restore Settings"
 msgstr ""
 
@@ -420,13 +424,13 @@ msgstr ""
 msgid "What's New"
 msgstr ""
 
-#: src/Widgets/UpdateDetailsDialog.vala:19
+#: src/Widgets/UpdateDetailsDialog.vala:20
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Widgets/UpdateDetailsDialog.vala:66
+#: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr ""

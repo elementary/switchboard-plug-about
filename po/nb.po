@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 16:35+0000\n"
+"POT-Creation-Date: 2024-05-30 15:54+0000\n"
 "PO-Revision-Date: 2024-02-09 15:13+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -20,55 +20,59 @@ msgstr ""
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
-#: src/Plug.vala:43
+#: src/Plug.vala:45
 msgid "System"
 msgstr "System"
 
-#: src/Plug.vala:44
+#: src/Plug.vala:46
 msgid "View operating system and hardware information"
 msgstr "Vis informasjon for system og maskinvare"
 
-#: src/Plug.vala:60
+#: src/Plug.vala:62
 msgid "Operating System"
 msgstr "Operativsystem"
 
-#: src/Plug.vala:61
+#: src/Plug.vala:63
 msgid "Hardware"
 msgstr "Maskinvare"
 
-#: src/Plug.vala:62 src/Plug.vala:117 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:121 src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Fastvare"
 
-#: src/Plug.vala:115
+#: src/Plug.vala:65 src/Plug.vala:128
+msgid "Drivers"
+msgstr ""
+
+#: src/Plug.vala:119
 msgid "Operating System Information"
 msgstr "Operativsystemsinfo"
 
-#: src/Plug.vala:116
+#: src/Plug.vala:120
 msgid "Hardware Information"
 msgstr "Maskinvareinfo"
 
-#: src/Plug.vala:118 src/Views/OperatingSystemView.vala:216
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:216
 msgid "Restore Default Settings"
 msgstr "Gjenopprett standardinnstillinger"
 
-#: src/Plug.vala:119 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:129
 msgid "Suggest Translations"
 msgstr "Foreslå oversettelser"
 
-#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:132
 msgid "Send Feedback"
 msgstr "Send tilbakemelding"
 
-#: src/Plug.vala:121
+#: src/Plug.vala:125
 msgid "Report a Problem"
 msgstr "Rapporter et problem"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:122
 msgid "Get Support"
 msgstr "Få støtte"
 
-#: src/Plug.vala:123
+#: src/Plug.vala:127
 msgid "Updates"
 msgstr "Oppdateringer"
 
@@ -117,7 +121,7 @@ msgstr "Oppdatert"
 msgid "less than a minute"
 msgstr "mindre enn ett minutt"
 
-#: src/Views/FirmwareReleaseView.vala:224
+#: src/Views/FirmwareReleaseView.vala:226
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
@@ -405,7 +409,7 @@ msgstr "Sist sjekket %s"
 msgid "Updates Available"
 msgstr "%u oppgradering tilgjengelig"
 
-#: src/Views/OperatingSystemView.vala:407
+#: src/Views/OperatingSystemView.vala:408
 #, fuzzy, c-format
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
@@ -414,40 +418,40 @@ msgid_plural "%i updates available"
 msgstr[0] "%u oppgradering tilgjengelig"
 msgstr[1] "%u oppgraderinger tilgjengelig"
 
-#: src/Views/OperatingSystemView.vala:418
+#: src/Views/OperatingSystemView.vala:419
 #, fuzzy
 msgid "Unable to determine number of updates"
 msgstr "Kunne ikke fastsette antallet oppgraderinger"
 
-#: src/Views/OperatingSystemView.vala:424
+#: src/Views/OperatingSystemView.vala:425
 #, fuzzy
 #| msgid "Updates"
 msgid "Downloading Updates"
 msgstr "Alle oppgraderinger"
 
-#: src/Views/OperatingSystemView.vala:430
+#: src/Views/OperatingSystemView.vala:431
 #, fuzzy
 #| msgid "Restart"
 msgid "Restart Required"
 msgstr "Omstart"
 
-#: src/Views/OperatingSystemView.vala:431
+#: src/Views/OperatingSystemView.vala:432
 #, fuzzy
 msgid "A restart is required to finish installing updates"
 msgstr "Omstart kreves for å installere alle oppgraderinger"
 
-#: src/Views/OperatingSystemView.vala:436
-#: src/Views/OperatingSystemView.vala:450
+#: src/Views/OperatingSystemView.vala:437
+#: src/Views/OperatingSystemView.vala:451
 #, fuzzy
 msgid "Failed to download updates"
 msgstr "Klarte ikke å laste ned oppgraderinger"
 
-#: src/Views/OperatingSystemView.vala:437
+#: src/Views/OperatingSystemView.vala:438
 #, fuzzy
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "Å gjenoppfriske oppgraderinger manuelt kan løse problemet"
 
-#: src/Views/OperatingSystemView.vala:451
+#: src/Views/OperatingSystemView.vala:452
 #, fuzzy
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
@@ -459,11 +463,11 @@ msgstr ""
 "pakkehåndteringsfeil. Manuell gjenoppfrisking av oppgraderinger kan løse "
 "problemet."
 
-#: src/Views/OperatingSystemView.vala:493
+#: src/Views/OperatingSystemView.vala:494
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systeminnstillinger vil bli gjenopprettet til forvalg"
 
-#: src/Views/OperatingSystemView.vala:494
+#: src/Views/OperatingSystemView.vala:495
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -471,7 +475,7 @@ msgstr ""
 "Alle systeminnstillinger og data vil bli tilbakestilt til forvalgte verdier. "
 "Personlig data, som musikk og bilder, vil ikke bli endret."
 
-#: src/Views/OperatingSystemView.vala:502
+#: src/Views/OperatingSystemView.vala:503
 msgid "Restore Settings"
 msgstr "Gjenopprett innstillinger"
 
@@ -480,14 +484,14 @@ msgstr "Gjenopprett innstillinger"
 msgid "What's New"
 msgstr "Nyheter"
 
-#: src/Widgets/UpdateDetailsDialog.vala:19
+#: src/Widgets/UpdateDetailsDialog.vala:20
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
 msgstr[0] "%s pakke vil bli oppgradert"
 msgstr[1] "%s pakker vil bli oppgradert"
 
-#: src/Widgets/UpdateDetailsDialog.vala:66
+#: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Lukk"
 
