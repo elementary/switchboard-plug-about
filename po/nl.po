@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-30 15:54+0000\n"
-"PO-Revision-Date: 2024-05-29 20:51+0000\n"
+"PO-Revision-Date: 2024-05-31 01:46+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/nl/>\n"
@@ -275,7 +275,7 @@ msgstr "Onbekende Processor"
 
 #: src/Views/HardwareView.vala:430
 msgid "Unknown"
-msgstr "Onbekend"
+msgstr "Niet bekend"
 
 #: src/Views/HardwareView.vala:485
 #, c-format
