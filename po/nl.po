@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 16:35+0000\n"
-"PO-Revision-Date: 2024-02-10 18:59+0000\n"
-"Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
+"PO-Revision-Date: 2024-05-29 20:51+0000\n"
+"Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/nl/>\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:43
@@ -356,15 +356,14 @@ msgid "Built on %s"
 msgstr "Gebouwd op %s"
 
 #: src/Views/OperatingSystemView.vala:372
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "System updates not available"
-msgstr "%u update beschikbaar"
+msgstr "Systeemupdates niet beschikbaar"
 
 #: src/Views/OperatingSystemView.vala:373
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
+"Kan geen verbinding maken met de backend. Probeer uit te loggen om het "
+"probleem op te lossen."
 
 #: src/Views/OperatingSystemView.vala:385
 msgid "Up To Date"
@@ -383,8 +382,8 @@ msgstr "Updates zijn beschikbaar"
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
-msgstr[0] "%u update beschikbaar"
-msgstr[1] "%u updates beschikbaar"
+msgstr[0] "%i update beschikbaar"
+msgstr[1] "%i updates beschikbaar"
 
 #: src/Views/OperatingSystemView.vala:418
 msgid "Unable to determine number of updates"
