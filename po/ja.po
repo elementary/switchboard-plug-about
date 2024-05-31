@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-31 12:19+0000\n"
-"PO-Revision-Date: 2024-05-31 01:46+0000\n"
+"PO-Revision-Date: 2024-06-01 04:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -81,68 +81,50 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
+"Broadcom® Wi-Fi アダプター、NVIDIA® グラフィックス、およびの一部仮想マシンは"
+"、追加のドライバーがないと正しく動作しないことがあります。"
 
 #: src/Views/DriversView.vala:25
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "No drivers available"
-msgstr "%i 件のアップデートが利用可能"
+msgstr "利用可能なドライバーなし"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "このデバイスには追加のドライバーは不要です。"
 
 #: src/Views/DriversView.vala:30
-#, fuzzy
-#| msgid "Checking for Updates"
 msgid "Checking for Drivers"
-msgstr "アップデートを確認しています"
+msgstr "ドライバーを確認しています"
 
 #: src/Views/DriversView.vala:31
-#, fuzzy
-#| msgid "Connecting to the firmware service and searching for updates."
 msgid "Connecting to the driver service and searching for drivers."
-msgstr "ファームウェアサービスに接続して、アップデートを確認しています。"
+msgstr "ドライバーサービスに接続して、ドライバーを確認しています。"
 
 #: src/Views/DriversView.vala:51
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install driver"
-msgstr "ファームウェアをインストールできませんでした"
+msgstr "ドライバーをインストールできませんでした"
 
 #: src/Views/DriversView.vala:52
-#, fuzzy
-#| msgid "Manually refreshing updates may resolve the issue"
 msgid "Manually refreshing driver information may resolve the issue"
-msgstr "手動でアップデートを再読み込みすると問題が解消する可能性があります"
+msgstr "手動でドライバー情報を再読み込みすると問題が解消する可能性があります"
 
 #: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
 msgid "Refresh"
 msgstr "再読み込み"
 
 #: src/Views/DriversView.vala:55
-#, fuzzy
-#| msgid "Hardware Information"
 msgid "Refresh driver information"
-msgstr "ハードウェアの情報"
+msgstr "ドライバー情報を再読み込み"
 
 #: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
 msgid "Learn More…"
 msgstr "さらに詳しく…"
 
 #: src/Views/DriversView.vala:91
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install"
-msgstr "ファームウェアをインストールできませんでした"
+msgstr "インストールできませんでした"
 
 #: src/Views/DriversView.vala:92
-#, fuzzy
-#| msgid ""
-#| "This may have been caused by sideloaded or manually compiled software, a "
-#| "third-party software source, or a package manager error. Manually "
-#| "refreshing updates may resolve the issue."
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -150,12 +132,12 @@ msgid ""
 msgstr ""
 "これは、サイドロードしたソフトウェアや、サードパーティーのソフトウェアリポジ"
 "トリ、パッケージマネージャーのエラーなどに起因している可能性があります。この"
-"問題は、手動でアップデートを再読み込みすると解決することがあります。"
+"問題は、手動で再読み込みすると解決することがあります。"
 
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "%s をインストールしています…"
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
