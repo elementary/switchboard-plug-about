@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 15:54+0000\n"
+"POT-Creation-Date: 2024-05-31 12:19+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -40,7 +40,7 @@ msgstr "硬件"
 msgid "Firmware"
 msgstr "固件"
 
-#: src/Plug.vala:65 src/Plug.vala:128
+#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr ""
 
@@ -75,6 +75,77 @@ msgstr "获取支持"
 #: src/Plug.vala:127
 msgid "Updates"
 msgstr "检查更新"
+
+#: src/Views/DriversView.vala:20
+msgid ""
+"Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
+"not function properly without additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:25
+#, fuzzy
+#| msgid "%u Update Available"
+#| msgid_plural "%u Updates Available"
+msgid "No drivers available"
+msgstr "%u 更新可用"
+
+#: src/Views/DriversView.vala:26
+msgid "This device doesn't need any additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:30
+#, fuzzy
+#| msgid "Checking for Updates"
+msgid "Checking for Drivers"
+msgstr "正在检查更新"
+
+#: src/Views/DriversView.vala:31
+#, fuzzy
+#| msgid "Connecting to the firmware service and searching for updates."
+msgid "Connecting to the driver service and searching for drivers."
+msgstr "正在连接固件服务并查找更新。"
+
+#: src/Views/DriversView.vala:51
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install driver"
+msgstr "安装固件失败"
+
+#: src/Views/DriversView.vala:52
+msgid "Manually refreshing driver information may resolve the issue"
+msgstr ""
+
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+msgid "Refresh"
+msgstr "刷新"
+
+#: src/Views/DriversView.vala:55
+#, fuzzy
+#| msgid "Hardware Information"
+msgid "Refresh driver information"
+msgstr "硬件信息"
+
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+msgid "Learn More…"
+msgstr ""
+
+#: src/Views/DriversView.vala:91
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install"
+msgstr "安装固件失败"
+
+#: src/Views/DriversView.vala:92
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"may resolve the issue."
+msgstr ""
+
+#: src/Views/DriversView.vala:156
+#, c-format
+msgid "Installing %s…"
+msgstr ""
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
@@ -322,14 +393,6 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "取消"
-
-#: src/Views/OperatingSystemView.vala:160
-msgid "Refresh"
-msgstr "刷新"
-
-#: src/Views/OperatingSystemView.vala:172
-msgid "Learn More…"
-msgstr ""
 
 #: src/Views/OperatingSystemView.vala:184
 #, fuzzy

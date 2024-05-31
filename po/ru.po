@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 15:54+0000\n"
+"POT-Creation-Date: 2024-05-31 12:19+0000\n"
 "PO-Revision-Date: 2024-05-31 04:29+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -41,7 +41,7 @@ msgstr "Оборудование"
 msgid "Firmware"
 msgstr "Прошивка"
 
-#: src/Plug.vala:65 src/Plug.vala:128
+#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr "Драйверы"
 
@@ -76,6 +76,87 @@ msgstr "Получить поддержку"
 #: src/Plug.vala:127
 msgid "Updates"
 msgstr "Обновления"
+
+#: src/Views/DriversView.vala:20
+msgid ""
+"Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
+"not function properly without additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:25
+#, fuzzy
+#| msgid "%i update available"
+#| msgid_plural "%i updates available"
+msgid "No drivers available"
+msgstr "Доступно %i обновление"
+
+#: src/Views/DriversView.vala:26
+msgid "This device doesn't need any additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:30
+#, fuzzy
+#| msgid "Checking for Updates"
+msgid "Checking for Drivers"
+msgstr "Проверка обновлений"
+
+#: src/Views/DriversView.vala:31
+#, fuzzy
+#| msgid "Connecting to the firmware service and searching for updates."
+msgid "Connecting to the driver service and searching for drivers."
+msgstr "Подключение к службе прошивки и поиск обновлений."
+
+#: src/Views/DriversView.vala:51
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install driver"
+msgstr "Не удалось установить версию прошивки"
+
+#: src/Views/DriversView.vala:52
+#, fuzzy
+#| msgid "Manually refreshing updates may resolve the issue"
+msgid "Manually refreshing driver information may resolve the issue"
+msgstr "Ручная проверка обновлений может решить проблему"
+
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+msgid "Refresh"
+msgstr "Проверить обновления"
+
+#: src/Views/DriversView.vala:55
+#, fuzzy
+#| msgid "Hardware Information"
+msgid "Refresh driver information"
+msgstr "Сведения об оборудовании"
+
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+msgid "Learn More…"
+msgstr "Узнать больше…"
+
+#: src/Views/DriversView.vala:91
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install"
+msgstr "Не удалось установить версию прошивки"
+
+#: src/Views/DriversView.vala:92
+#, fuzzy
+#| msgid ""
+#| "This may have been caused by sideloaded or manually compiled software, a "
+#| "third-party software source, or a package manager error. Manually "
+#| "refreshing updates may resolve the issue."
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"may resolve the issue."
+msgstr ""
+"Это может быть вызвано сторонним или вручную скомпилированным программным "
+"обеспечением, сторонними репозиториями или ошибкой менеджера пакетов. Ручная "
+"проверка обновлений может решить эту проблему."
+
+#: src/Views/DriversView.vala:156
+#, c-format
+msgid "Installing %s…"
+msgstr ""
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
@@ -334,14 +415,6 @@ msgstr "Скачать"
 #: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "Отменить"
-
-#: src/Views/OperatingSystemView.vala:160
-msgid "Refresh"
-msgstr "Проверить обновления"
-
-#: src/Views/OperatingSystemView.vala:172
-msgid "Learn More…"
-msgstr "Узнать больше…"
 
 #: src/Views/OperatingSystemView.vala:184
 msgid "Automatic Updates"

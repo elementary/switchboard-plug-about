@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 15:54+0000\n"
+"POT-Creation-Date: 2024-05-31 12:19+0000\n"
 "PO-Revision-Date: 2024-02-09 15:13+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -40,7 +40,7 @@ msgstr "Maskinvare"
 msgid "Firmware"
 msgstr "Fastvare"
 
-#: src/Plug.vala:65 src/Plug.vala:128
+#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr ""
 
@@ -75,6 +75,83 @@ msgstr "Få støtte"
 #: src/Plug.vala:127
 msgid "Updates"
 msgstr "Oppdateringer"
+
+#: src/Views/DriversView.vala:20
+msgid ""
+"Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
+"not function properly without additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:25
+#, fuzzy
+#| msgid "%u Update Available"
+#| msgid_plural "%u Updates Available"
+msgid "No drivers available"
+msgstr "%u oppgradering tilgjengelig"
+
+#: src/Views/DriversView.vala:26
+msgid "This device doesn't need any additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:30
+#, fuzzy
+#| msgid "Check for Updates"
+msgid "Checking for Drivers"
+msgstr "Ser etter oppgraderinger …"
+
+#: src/Views/DriversView.vala:31
+#, fuzzy
+#| msgid "Connecting to the firmware service and searching for updates."
+msgid "Connecting to the driver service and searching for drivers."
+msgstr "Kobler til fastvaretjeneste og søker etter oppdateringer der."
+
+#: src/Views/DriversView.vala:51
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install driver"
+msgstr "Klarte ikke å installere fastvareutgivelse"
+
+#: src/Views/DriversView.vala:52
+#, fuzzy
+msgid "Manually refreshing driver information may resolve the issue"
+msgstr "Å gjenoppfriske oppgraderinger manuelt kan løse problemet"
+
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+msgid "Refresh"
+msgstr "Oppdater"
+
+#: src/Views/DriversView.vala:55
+#, fuzzy
+#| msgid "Hardware Information"
+msgid "Refresh driver information"
+msgstr "Maskinvareinfo"
+
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+msgid "Learn More…"
+msgstr "Lær mer …"
+
+#: src/Views/DriversView.vala:91
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install"
+msgstr "Klarte ikke å installere fastvareutgivelse"
+
+#: src/Views/DriversView.vala:92
+#, fuzzy
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"may resolve the issue."
+msgstr ""
+"Dette kan ha blitt forårsaket av programmer annensteds fra, eller manuelt "
+"kompilert programvare, en programvarekilde fra tredjepart, eller en "
+"pakkehåndteringsfeil. Manuell gjenoppfrisking av oppgraderinger kan løse "
+"problemet."
+
+#: src/Views/DriversView.vala:156
+#, c-format
+msgid "Installing %s…"
+msgstr ""
 
 #: src/Views/FirmwareReleaseView.vala:28
 #, fuzzy
@@ -351,14 +428,6 @@ msgstr "Last ned"
 #: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "Avbryt"
-
-#: src/Views/OperatingSystemView.vala:160
-msgid "Refresh"
-msgstr "Oppdater"
-
-#: src/Views/OperatingSystemView.vala:172
-msgid "Learn More…"
-msgstr "Lær mer …"
 
 #: src/Views/OperatingSystemView.vala:184
 #, fuzzy

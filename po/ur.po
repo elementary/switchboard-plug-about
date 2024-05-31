@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 15:54+0000\n"
+"POT-Creation-Date: 2024-05-31 12:19+0000\n"
 "PO-Revision-Date: 2016-12-08 17:26+0000\n"
 "Last-Translator: Waqar Ahmed <waqar.17a@gmail.com>\n"
 "Language-Team: Urdu <ur@li.org>\n"
@@ -40,7 +40,7 @@ msgstr "ہارڈ ویئر"
 msgid "Firmware"
 msgstr "ہارڈ ویئر"
 
-#: src/Plug.vala:65 src/Plug.vala:128
+#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr ""
 
@@ -79,6 +79,70 @@ msgstr ""
 #: src/Plug.vala:127
 msgid "Updates"
 msgstr "اپ ڈیٹس"
+
+#: src/Views/DriversView.vala:20
+msgid ""
+"Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
+"not function properly without additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:25
+#, fuzzy
+#| msgid "Updates"
+msgid "No drivers available"
+msgstr "اپ ڈیٹس"
+
+#: src/Views/DriversView.vala:26
+msgid "This device doesn't need any additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:30
+#, fuzzy
+#| msgid "Check for Updates"
+msgid "Checking for Drivers"
+msgstr "اپڈیٹ کے لیے چیک کریں"
+
+#: src/Views/DriversView.vala:31
+msgid "Connecting to the driver service and searching for drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:51
+msgid "Failed to install driver"
+msgstr ""
+
+#: src/Views/DriversView.vala:52
+msgid "Manually refreshing driver information may resolve the issue"
+msgstr ""
+
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+msgid "Refresh"
+msgstr ""
+
+#: src/Views/DriversView.vala:55
+#, fuzzy
+#| msgid "System Information"
+msgid "Refresh driver information"
+msgstr "سسٹم کی معلومات"
+
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+msgid "Learn More…"
+msgstr ""
+
+#: src/Views/DriversView.vala:91
+msgid "Failed to install"
+msgstr ""
+
+#: src/Views/DriversView.vala:92
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"may resolve the issue."
+msgstr ""
+
+#: src/Views/DriversView.vala:156
+#, c-format
+msgid "Installing %s…"
+msgstr ""
 
 #: src/Views/FirmwareReleaseView.vala:28
 #, fuzzy
@@ -349,14 +413,6 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "منسوخ کریں"
-
-#: src/Views/OperatingSystemView.vala:160
-msgid "Refresh"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:172
-msgid "Learn More…"
-msgstr ""
 
 #: src/Views/OperatingSystemView.vala:184
 #, fuzzy

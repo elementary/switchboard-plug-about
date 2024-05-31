@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 15:54+0000\n"
+"POT-Creation-Date: 2024-05-31 12:19+0000\n"
 "PO-Revision-Date: 2024-04-09 21:13+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -41,7 +41,7 @@ msgstr "Обладнання"
 msgid "Firmware"
 msgstr "Мікропрограма"
 
-#: src/Plug.vala:65 src/Plug.vala:128
+#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr ""
 
@@ -76,6 +76,87 @@ msgstr "Отримати допомогу"
 #: src/Plug.vala:127
 msgid "Updates"
 msgstr "Оновлення"
+
+#: src/Views/DriversView.vala:20
+msgid ""
+"Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
+"not function properly without additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:25
+#, fuzzy
+#| msgid "%i update available"
+#| msgid_plural "%i updates available"
+msgid "No drivers available"
+msgstr "Доступне %i оновлення"
+
+#: src/Views/DriversView.vala:26
+msgid "This device doesn't need any additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:30
+#, fuzzy
+#| msgid "Checking for Updates"
+msgid "Checking for Drivers"
+msgstr "Перевірка наявності оновлень"
+
+#: src/Views/DriversView.vala:31
+#, fuzzy
+#| msgid "Connecting to the firmware service and searching for updates."
+msgid "Connecting to the driver service and searching for drivers."
+msgstr "Під'єднання до служби оновлення мікропрограми та пошук оновлень."
+
+#: src/Views/DriversView.vala:51
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install driver"
+msgstr "Не вдалося встановити випуск мікропрограми"
+
+#: src/Views/DriversView.vala:52
+#, fuzzy
+#| msgid "Manually refreshing updates may resolve the issue"
+msgid "Manually refreshing driver information may resolve the issue"
+msgstr "Оновлення вручну може усунути проблему"
+
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+msgid "Refresh"
+msgstr "Оновити"
+
+#: src/Views/DriversView.vala:55
+#, fuzzy
+#| msgid "Hardware Information"
+msgid "Refresh driver information"
+msgstr "Відомості про обладнання"
+
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+msgid "Learn More…"
+msgstr "Докладніше…"
+
+#: src/Views/DriversView.vala:91
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install"
+msgstr "Не вдалося встановити випуск мікропрограми"
+
+#: src/Views/DriversView.vala:92
+#, fuzzy
+#| msgid ""
+#| "This may have been caused by sideloaded or manually compiled software, a "
+#| "third-party software source, or a package manager error. Manually "
+#| "refreshing updates may resolve the issue."
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"may resolve the issue."
+msgstr ""
+"Це могло бути спричинено додатково завантаженим або скомпільованим вручну "
+"програмним забезпеченням, стороннім програмним забезпеченням або помилкою "
+"менеджера пакунків. Проблему може усунути перезапуск оновлення вручну."
+
+#: src/Views/DriversView.vala:156
+#, c-format
+msgid "Installing %s…"
+msgstr ""
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
@@ -337,14 +418,6 @@ msgstr "Завантажити"
 #: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "Скасувати"
-
-#: src/Views/OperatingSystemView.vala:160
-msgid "Refresh"
-msgstr "Оновити"
-
-#: src/Views/OperatingSystemView.vala:172
-msgid "Learn More…"
-msgstr "Докладніше…"
 
 #: src/Views/OperatingSystemView.vala:184
 msgid "Automatic Updates"

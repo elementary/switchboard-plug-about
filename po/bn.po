@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 15:54+0000\n"
+"POT-Creation-Date: 2024-05-31 12:19+0000\n"
 "PO-Revision-Date: 2021-01-04 22:57+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Bengali <https://l10n.elementary.io/projects/switchboard/"
@@ -37,7 +37,7 @@ msgstr "হার্ডওয়্যার"
 msgid "Firmware"
 msgstr "হার্ডওয়্যার"
 
-#: src/Plug.vala:65 src/Plug.vala:128
+#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr ""
 
@@ -71,6 +71,64 @@ msgstr ""
 
 #: src/Plug.vala:127
 msgid "Updates"
+msgstr ""
+
+#: src/Views/DriversView.vala:20
+msgid ""
+"Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
+"not function properly without additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:25
+msgid "No drivers available"
+msgstr ""
+
+#: src/Views/DriversView.vala:26
+msgid "This device doesn't need any additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:30
+msgid "Checking for Drivers"
+msgstr ""
+
+#: src/Views/DriversView.vala:31
+msgid "Connecting to the driver service and searching for drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:51
+msgid "Failed to install driver"
+msgstr ""
+
+#: src/Views/DriversView.vala:52
+msgid "Manually refreshing driver information may resolve the issue"
+msgstr ""
+
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+msgid "Refresh"
+msgstr ""
+
+#: src/Views/DriversView.vala:55
+msgid "Refresh driver information"
+msgstr ""
+
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+msgid "Learn More…"
+msgstr ""
+
+#: src/Views/DriversView.vala:91
+msgid "Failed to install"
+msgstr ""
+
+#: src/Views/DriversView.vala:92
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"may resolve the issue."
+msgstr ""
+
+#: src/Views/DriversView.vala:156
+#, c-format
+msgid "Installing %s…"
 msgstr ""
 
 #: src/Views/FirmwareReleaseView.vala:28
@@ -320,14 +378,6 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:160
-msgid "Refresh"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:172
-msgid "Learn More…"
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:184

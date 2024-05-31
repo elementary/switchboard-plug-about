@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 15:54+0000\n"
+"POT-Creation-Date: 2024-05-31 12:19+0000\n"
 "PO-Revision-Date: 2024-05-09 12:49+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
@@ -40,7 +40,7 @@ msgstr "Hardver"
 msgid "Firmware"
 msgstr "Firmware"
 
-#: src/Plug.vala:65 src/Plug.vala:128
+#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr ""
 
@@ -75,6 +75,87 @@ msgstr "Segítség kérése"
 #: src/Plug.vala:127
 msgid "Updates"
 msgstr "Frissítések"
+
+#: src/Views/DriversView.vala:20
+msgid ""
+"Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
+"not function properly without additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:25
+#, fuzzy
+#| msgid "%i update available"
+#| msgid_plural "%i updates available"
+msgid "No drivers available"
+msgstr "%i frissítés érhető el"
+
+#: src/Views/DriversView.vala:26
+msgid "This device doesn't need any additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:30
+#, fuzzy
+#| msgid "Checking for Updates"
+msgid "Checking for Drivers"
+msgstr "Frissítések keresése"
+
+#: src/Views/DriversView.vala:31
+#, fuzzy
+#| msgid "Connecting to the firmware service and searching for updates."
+msgid "Connecting to the driver service and searching for drivers."
+msgstr "Csatlakozás a firmwareszolgáltatáshoz és frissítések keresése."
+
+#: src/Views/DriversView.vala:51
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install driver"
+msgstr "Firmwarekiadás frissítése sikertelen"
+
+#: src/Views/DriversView.vala:52
+#, fuzzy
+#| msgid "Manually refreshing updates may resolve the issue"
+msgid "Manually refreshing driver information may resolve the issue"
+msgstr "A frissítések manuális keresése megoldhatja a problémát"
+
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+msgid "Refresh"
+msgstr "Frissítés"
+
+#: src/Views/DriversView.vala:55
+#, fuzzy
+#| msgid "Hardware Information"
+msgid "Refresh driver information"
+msgstr "A hardver információi"
+
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+msgid "Learn More…"
+msgstr "További információk…"
+
+#: src/Views/DriversView.vala:91
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install"
+msgstr "Firmwarekiadás frissítése sikertelen"
+
+#: src/Views/DriversView.vala:92
+#, fuzzy
+#| msgid ""
+#| "This may have been caused by sideloaded or manually compiled software, a "
+#| "third-party software source, or a package manager error. Manually "
+#| "refreshing updates may resolve the issue."
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"may resolve the issue."
+msgstr ""
+"Ennek egy külső, kézzel hozzáadott vagy épített szoftvergyűjtemény, harmadik "
+"féltől származó forrás vagy egy csomagkezelő-hiba lehet az oka. A "
+"frissítések manuális keresése megoldhatja a problémát."
+
+#: src/Views/DriversView.vala:156
+#, c-format
+msgid "Installing %s…"
+msgstr ""
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
@@ -331,14 +412,6 @@ msgstr "Letöltés"
 #: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "Mégsem"
-
-#: src/Views/OperatingSystemView.vala:160
-msgid "Refresh"
-msgstr "Frissítés"
-
-#: src/Views/OperatingSystemView.vala:172
-msgid "Learn More…"
-msgstr "További információk…"
 
 #: src/Views/OperatingSystemView.vala:184
 msgid "Automatic Updates"

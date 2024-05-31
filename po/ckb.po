@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-30 15:54+0000\n"
+"POT-Creation-Date: 2024-05-31 12:19+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -35,7 +35,7 @@ msgstr "ڕەقەکاڵا"
 msgid "Firmware"
 msgstr "پتەوەکاڵا"
 
-#: src/Plug.vala:65 src/Plug.vala:128
+#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr ""
 
@@ -70,6 +70,77 @@ msgstr "وەرگرتنی پاڵپشتی"
 #: src/Plug.vala:127
 msgid "Updates"
 msgstr "بەڕۆژبوونەوەکان"
+
+#: src/Views/DriversView.vala:20
+msgid ""
+"Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
+"not function properly without additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:25
+#, fuzzy
+#| msgid "%u Update Available"
+#| msgid_plural "%u Updates Available"
+msgid "No drivers available"
+msgstr "تەنها %u بەڕۆژبوونەوە بەردەستە"
+
+#: src/Views/DriversView.vala:26
+msgid "This device doesn't need any additional drivers."
+msgstr ""
+
+#: src/Views/DriversView.vala:30
+#, fuzzy
+#| msgid "Checking for Updates"
+msgid "Checking for Drivers"
+msgstr "پشکنین بۆ بەڕۆژبوونەوەکان"
+
+#: src/Views/DriversView.vala:31
+#, fuzzy
+#| msgid "Connecting to the firmware service and searching for updates."
+msgid "Connecting to the driver service and searching for drivers."
+msgstr "پەیوەستبوون بە پخزمەتگووزاری پتەوەکاڵاکە و گەڕان بۆ بەڕۆژبوونەوەکان."
+
+#: src/Views/DriversView.vala:51
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install driver"
+msgstr "دامەزراندنی ڕیلیسی پتەوەکاڵا شکستی هێنا"
+
+#: src/Views/DriversView.vala:52
+msgid "Manually refreshing driver information may resolve the issue"
+msgstr ""
+
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+msgid "Refresh"
+msgstr "نوێکردنەوە"
+
+#: src/Views/DriversView.vala:55
+#, fuzzy
+#| msgid "Hardware Information"
+msgid "Refresh driver information"
+msgstr "زانیاری ڕەقەکاڵا"
+
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+msgid "Learn More…"
+msgstr ""
+
+#: src/Views/DriversView.vala:91
+#, fuzzy
+#| msgid "Failed to install firmware release"
+msgid "Failed to install"
+msgstr "دامەزراندنی ڕیلیسی پتەوەکاڵا شکستی هێنا"
+
+#: src/Views/DriversView.vala:92
+msgid ""
+"This may have been caused by sideloaded or manually compiled software, a "
+"third-party software source, or a package manager error. Manually refreshing "
+"may resolve the issue."
+msgstr ""
+
+#: src/Views/DriversView.vala:156
+#, c-format
+msgid "Installing %s…"
+msgstr ""
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
@@ -330,14 +401,6 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:158
 msgid "Cancel"
 msgstr "هەڵوەشاندنەوە"
-
-#: src/Views/OperatingSystemView.vala:160
-msgid "Refresh"
-msgstr "نوێکردنەوە"
-
-#: src/Views/OperatingSystemView.vala:172
-msgid "Learn More…"
-msgstr ""
 
 #: src/Views/OperatingSystemView.vala:184
 #, fuzzy
