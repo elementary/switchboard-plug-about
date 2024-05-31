@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-30 15:54+0000\n"
-"PO-Revision-Date: 2024-04-04 14:15+0000\n"
+"PO-Revision-Date: 2024-05-31 12:19+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:45
@@ -42,19 +42,19 @@ msgstr "קושחה"
 
 #: src/Plug.vala:65 src/Plug.vala:128
 msgid "Drivers"
-msgstr ""
+msgstr "מנהלי התקנים"
 
 #: src/Plug.vala:119
 msgid "Operating System Information"
-msgstr "מידע מערכת הפעלה"
+msgstr "פרטי מערכת הפעלה"
 
 #: src/Plug.vala:120
 msgid "Hardware Information"
-msgstr "מידע על חומרה"
+msgstr "פרטי חומרה"
 
 #: src/Plug.vala:122 src/Views/OperatingSystemView.vala:216
 msgid "Restore Default Settings"
-msgstr "שחזור הגדרות בררת המחדל"
+msgstr "שחזור הגדרות ברירת המחדל"
 
 #: src/Plug.vala:123 src/Views/OperatingSystemView.vala:129
 msgid "Suggest Translations"
