@@ -35,12 +35,12 @@ public class About.HardwareView : Gtk.Box {
 
         fetch_hardware_info ();
 
-        var product_name_info = new Gtk.Label (get_host_name ()) {
+        var hostname_info = new Gtk.Label (get_host_name ()) {
             ellipsize = MIDDLE,
             selectable = true,
             xalign = 0
         };
-        product_name_info.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
+        hostname_info.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
         var processor_info = new Gtk.Label (processor) {
             ellipsize = MIDDLE,
@@ -84,16 +84,9 @@ public class About.HardwareView : Gtk.Box {
             use_fallback = true
         };
 
+        details_box.append (hostname_info);
+
         if (oem_enabled) {
-            if (product_name != null) {
-                product_name_info.label = "<b>%s</b>".printf (product_name);
-                product_name_info.use_markup = true;
-            }
-
-            if (product_version != null) {
-                 product_name_info.label += " %s".printf (product_version);
-            }
-
             var manufacturer_info = new Gtk.Label (manufacturer_name) {
                 ellipsize = MIDDLE,
                 selectable = true,
@@ -101,10 +94,16 @@ public class About.HardwareView : Gtk.Box {
             };
             manufacturer_info.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-            details_box.append (product_name_info);
+            if (product_name != null) {
+                manufacturer_info.label += " <b>%s</b>".printf (product_name);
+                manufacturer_info.use_markup = true;
+            }
+
+            if (product_version != null) {
+                manufacturer_info.label += " %s".printf (product_version);
+            }
+
             details_box.append (manufacturer_info);
-        } else {
-            details_box.append (product_name_info);
         }
 
         update_manufacturer_logo ();
