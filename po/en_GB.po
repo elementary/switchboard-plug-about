@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-31 12:19+0000\n"
-"PO-Revision-Date: 2024-04-29 02:13+0000\n"
+"PO-Revision-Date: 2024-06-01 04:01+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/en_GB/>\n"
@@ -42,7 +42,7 @@ msgstr "Firmware"
 
 #: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
-msgstr ""
+msgstr "Drivers"
 
 #: src/Plug.vala:119
 msgid "Operating System Information"
@@ -81,68 +81,50 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
+"Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
+"not function properly without additional drivers."
 
 #: src/Views/DriversView.vala:25
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "No drivers available"
-msgstr "%i update available"
+msgstr "No drivers available"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "This device doesn't need any additional drivers."
 
 #: src/Views/DriversView.vala:30
-#, fuzzy
-#| msgid "Checking for Updates"
 msgid "Checking for Drivers"
-msgstr "Checking for Updates"
+msgstr "Checking for Drivers"
 
 #: src/Views/DriversView.vala:31
-#, fuzzy
-#| msgid "Connecting to the firmware service and searching for updates."
 msgid "Connecting to the driver service and searching for drivers."
-msgstr "Connecting to the firmware service and searching for updates."
+msgstr "Connecting to the driver service and searching for drivers."
 
 #: src/Views/DriversView.vala:51
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install driver"
-msgstr "Failed to install firmware release"
+msgstr "Failed to install driver"
 
 #: src/Views/DriversView.vala:52
-#, fuzzy
-#| msgid "Manually refreshing updates may resolve the issue"
 msgid "Manually refreshing driver information may resolve the issue"
-msgstr "Manually refreshing updates may resolve the issue"
+msgstr "Manually refreshing driver information may resolve the issue"
 
 #: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
 msgid "Refresh"
 msgstr "Refresh"
 
 #: src/Views/DriversView.vala:55
-#, fuzzy
-#| msgid "Hardware Information"
 msgid "Refresh driver information"
-msgstr "Hardware Information"
+msgstr "Refresh driver information"
 
 #: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
 msgid "Learn More…"
 msgstr "Learn More…"
 
 #: src/Views/DriversView.vala:91
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install"
-msgstr "Failed to install firmware release"
+msgstr "Failed to install"
 
 #: src/Views/DriversView.vala:92
-#, fuzzy
-#| msgid ""
-#| "This may have been caused by sideloaded or manually compiled software, a "
-#| "third-party software source, or a package manager error. Manually "
-#| "refreshing updates may resolve the issue."
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -150,12 +132,12 @@ msgid ""
 msgstr ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
-"updates may resolve the issue."
+"may resolve the issue."
 
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "Installing %s…"
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
