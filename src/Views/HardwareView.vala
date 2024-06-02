@@ -17,6 +17,7 @@ public class About.HardwareView : Gtk.Box {
     private string product_name;
     private string product_version;
     private SystemInterface system_interface;
+    private Polkit.Permission? hostname_permission = null;
     private SessionManager? session_manager;
     private SwitcherooControl? switcheroo_interface;
 
@@ -35,12 +36,19 @@ public class About.HardwareView : Gtk.Box {
 
         fetch_hardware_info ();
 
-        var hostname_info = new Gtk.Label (get_host_name ()) {
-            ellipsize = MIDDLE,
-            selectable = true,
-            xalign = 0
+        var hostname_info = new Gtk.Entry () {
+            xalign = 0,
+            hexpand = true,
+            sensitive = has_hostname_permission (),
+            text = get_host_name ()
         };
         hostname_info.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
+
+        var hostname_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
+            tooltip_text = _("You do not have permission to change this"),
+            visible = !has_hostname_permission ()
+        };
+        hostname_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
         var processor_info = new Gtk.Label (processor) {
             ellipsize = MIDDLE,
@@ -76,15 +84,18 @@ public class About.HardwareView : Gtk.Box {
             xalign = 0
         };
 
+        var hostname_box = new Gtk.Box (HORIZONTAL, 6);
+        hostname_box.append (hostname_info);
+        hostname_box.append (hostname_lock);
+
         var details_box = new Gtk.Box (VERTICAL, 6);
+        details_box.append (hostname_box);
 
         manufacturer_logo = new Gtk.Image () {
             halign = END,
             pixel_size = 128,
             use_fallback = true
         };
-
-        details_box.append (hostname_info);
 
         if (oem_enabled) {
             var manufacturer_info = new Gtk.Label (manufacturer_name) {
@@ -145,6 +156,10 @@ public class About.HardwareView : Gtk.Box {
 
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             update_manufacturer_logo ();
+        });
+
+        hostname_info.activate.connect (() => {
+            set_host_name.begin (hostname_info.text);
         });
     }
 
@@ -553,6 +568,51 @@ public class About.HardwareView : Gtk.Box {
         }
     }
 
+    private void request_hostname_permission () {
+        if (hostname_permission != null) {
+            return;
+        }
+
+        try {
+            // Asks for permission to execute SetStaticHostname and SetPrettyHostname
+            hostname_permission = new Polkit.Permission.sync (
+                "org.freedesktop.hostname1.set-static-hostname",
+                new Polkit.UnixProcess (Posix.getpid ())
+            );
+        } catch (Error e) {
+            warning (e.message);
+        }
+    }
+
+    private bool has_hostname_permission () {
+        request_hostname_permission ();
+
+        return hostname_permission != null && hostname_permission.allowed;
+    }
+
+    // Generate static hostname from pretty hostname
+    private string generate_hostname (string pretty_hostname) {
+        string hostname = "";
+        bool met_alpha = false;
+        bool whitespace_before = false;
+
+        foreach (char c in pretty_hostname.to_ascii ().to_utf8 ()) {
+            if (c.isalpha ()) {
+                hostname += c.to_string ();
+                met_alpha = true;
+                whitespace_before = false;
+            } else if ((c.isdigit () || c == '-') && met_alpha) {
+                hostname += c.to_string ();
+                whitespace_before = false;
+            } else if (c.isspace () && !whitespace_before) {
+                hostname += "-";
+                whitespace_before = true;
+            }
+        }
+
+        return hostname;
+    }
+
     private string get_host_name () {
         get_system_interface_instance ();
 
@@ -567,6 +627,28 @@ public class About.HardwareView : Gtk.Box {
         }
 
         return hostname;
+    }
+
+    private async void set_host_name (string hostname) {
+        get_system_interface_instance ();
+
+        if (system_interface == null) {
+            return;
+        }
+
+        request_hostname_permission ();
+
+        if (hostname_permission == null) {
+            return;
+        }
+
+        string static_hostname = generate_hostname (hostname);
+        try {
+            yield system_interface.set_pretty_hostname (hostname, false);
+            yield system_interface.set_static_hostname (static_hostname, false);
+        } catch (Error e) {
+            warning (e.message);
+        }
     }
 
     // Format layperson-friendly size string, replacement for GLib.format_size ().
@@ -615,6 +697,9 @@ public interface SystemInterface : Object {
 
     public abstract string pretty_hostname { owned get; }
     public abstract string static_hostname { owned get; }
+
+    public abstract async void set_pretty_hostname (string hostname, bool interactive) throws GLib.Error;
+    public abstract async void set_static_hostname (string hostname, bool interactive) throws GLib.Error;
 }
 
 [DBus (name = "org.gnome.SessionManager")]
