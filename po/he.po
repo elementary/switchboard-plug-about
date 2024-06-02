@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-31 12:19+0000\n"
-"PO-Revision-Date: 2024-05-31 12:19+0000\n"
+"PO-Revision-Date: 2024-06-02 09:13+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -81,81 +81,62 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
+"מתאמי רשת אלחוטית של Broadcom®‎, התקני גרפיקה של NVidia ומכונות וירטואליות "
+"עלולים שלא לעבוד כראוי בלי מנהלי התקנים נוספים."
 
 #: src/Views/DriversView.vala:25
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "No drivers available"
-msgstr "עדכון אחד זמין"
+msgstr "אין מנהלי התקנים זמינים"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "המכשיר הזה לא צריך מנהלי התקנים נוספים."
 
 #: src/Views/DriversView.vala:30
-#, fuzzy
-#| msgid "Checking for Updates"
 msgid "Checking for Drivers"
-msgstr "בדיקה לאיתור עדכונים"
+msgstr "בדיקה לאיתור מנהלי התקנים"
 
 #: src/Views/DriversView.vala:31
-#, fuzzy
-#| msgid "Connecting to the firmware service and searching for updates."
 msgid "Connecting to the driver service and searching for drivers."
-msgstr "מתבצעת התחברות לשירות הקושחה לטובת איתור עדכונים."
+msgstr "מתבצעת התחברות לשירות מנהלי ההתקנים לטובת איתור מנהלי התקנים."
 
 #: src/Views/DriversView.vala:51
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install driver"
-msgstr "התקנת גרסת הקושחה נכשלה"
+msgstr "התקנת מנהל ההתקן נכשלה"
 
 #: src/Views/DriversView.vala:52
-#, fuzzy
-#| msgid "Manually refreshing updates may resolve the issue"
 msgid "Manually refreshing driver information may resolve the issue"
-msgstr "רענון העדכונים ידנית עשוי לפתור את הבעיה הזאת"
+msgstr "רענון פרטי מנהלי ההתקן ידנית עשוי לפתור את הבעיה הזאת"
 
 #: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
 msgid "Refresh"
 msgstr "רענון"
 
 #: src/Views/DriversView.vala:55
-#, fuzzy
-#| msgid "Hardware Information"
 msgid "Refresh driver information"
-msgstr "פרטי חומרה"
+msgstr "רענון פרטי מנהל התקן"
 
 #: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
 msgid "Learn More…"
 msgstr "מידע נוסף…"
 
 #: src/Views/DriversView.vala:91
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install"
-msgstr "התקנת גרסת הקושחה נכשלה"
+msgstr "ההתקנה נכשלה"
 
 #: src/Views/DriversView.vala:92
-#, fuzzy
-#| msgid ""
-#| "This may have been caused by sideloaded or manually compiled software, a "
-#| "third-party software source, or a package manager error. Manually "
-#| "refreshing updates may resolve the issue."
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "may resolve the issue."
 msgstr ""
 "יכול להיות שזה קרה בגלל טעינה צדית או תוכנה שהודרה ידנית, מקור תוכנה מגורם "
-"צד־שלישי או שגיאה במנהל החבילות. רענון עדכונים ידנית עשוי לפתור את הבעיה "
-"הזאת."
+"צד־שלישי או שגיאה במנהל החבילות. רענון ידני עשוי לפתור את הבעיה הזאת."
 
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "%s מותקן…"
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
