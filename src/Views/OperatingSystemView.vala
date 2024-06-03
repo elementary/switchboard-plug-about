@@ -102,7 +102,7 @@ public class About.OperatingSystemView : Gtk.Box {
             use_markup = true,
             xalign = 0
         };
-        title.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
+        title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
         var kernel_version_label = new Gtk.Label ("%s %s".printf (uts_name.sysname, uts_name.release)) {
             selectable = true,
@@ -501,7 +501,7 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         var continue_button = dialog.add_button (_("Restore Settings"), Gtk.ResponseType.ACCEPT);
-        continue_button.get_style_context ().add_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
+        continue_button.add_css_class (Granite.STYLE_CLASS_DESTRUCTIVE_ACTION);
 
         dialog.response.connect ((response) => {
             dialog.destroy ();

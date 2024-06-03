@@ -42,7 +42,7 @@ public class About.Widgets.FirmwareUpdateRow : Gtk.ListBoxRow {
             halign = Gtk.Align.START,
             hexpand = true
         };
-        device_name_label.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
+        device_name_label.add_css_class (Granite.STYLE_CLASS_H3_LABEL);
 
         var version_label = new Gtk.Label (device.get_version ()) {
             wrap = true,
