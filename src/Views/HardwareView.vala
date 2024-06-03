@@ -170,7 +170,6 @@ public class About.HardwareView : Gtk.Box {
         });
     }
 
-
     private void on_hostname_entry_activate () {
         hostname_entry.secondary_icon_name = "process-working-symbolic";
         hostname_entry.add_css_class ("spin");
