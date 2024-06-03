@@ -35,8 +35,12 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.Stack button_stack;
 
     construct {
+        add_css_class ("operating-system-view");
+
         var style_provider = new Gtk.CssProvider ();
         style_provider.load_from_resource ("io/elementary/settings/system/OperatingSystemView.css");
+
+        Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (), style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         var uts_name = Posix.utsname ();
 
@@ -69,7 +73,6 @@ public class About.OperatingSystemView : Gtk.Box {
                     logo = new Adw.Avatar (128, "", false) {
                         custom_image = Gdk.Paintable.empty (128, 128)
                     };
-                    logo.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
                     logo_overlay.child = logo;
                     logo_overlay.add_overlay (icon);
@@ -77,7 +80,6 @@ public class About.OperatingSystemView : Gtk.Box {
                     // 128 minus 3px padding on each side
                     icon.pixel_size = 128 - 6;
                     icon.add_css_class ("logo");
-                    icon.get_style_context ().add_provider (style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
                     break;
                 }
