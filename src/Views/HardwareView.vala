@@ -21,6 +21,7 @@ public class About.HardwareView : Gtk.Box {
     private SessionManager? session_manager;
     private SwitcherooControl? switcheroo_interface;
 
+    private Gtk.Entry hostname_entry;
     private Gtk.Image manufacturer_logo;
 
     private Gtk.Label primary_graphics_info;
@@ -36,19 +37,18 @@ public class About.HardwareView : Gtk.Box {
 
         fetch_hardware_info ();
 
-        var hostname_info = new Gtk.Entry () {
+        hostname_entry = new Gtk.Entry () {
             xalign = 0,
             hexpand = true,
-            sensitive = has_hostname_permission (),
             text = get_host_name ()
         };
-        hostname_info.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
+        hostname_entry.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
-        var hostname_lock = new Gtk.Image.from_icon_name ("changes-prevent-symbolic") {
-            tooltip_text = _("You do not have permission to change this"),
-            visible = !has_hostname_permission ()
-        };
-        hostname_lock.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
+        if (!has_hostname_permission ()) {
+            hostname_entry.secondary_icon_name = "changes-prevent-symbolic";
+            hostname_entry.secondary_icon_tooltip_text = _("You do not have permission to change the device name");
+            hostname_entry.sensitive = false;
+        }
 
         var processor_info = new Gtk.Label (processor) {
             ellipsize = MIDDLE,
@@ -84,12 +84,8 @@ public class About.HardwareView : Gtk.Box {
             xalign = 0
         };
 
-        var hostname_box = new Gtk.Box (HORIZONTAL, 6);
-        hostname_box.append (hostname_info);
-        hostname_box.append (hostname_lock);
-
         var details_box = new Gtk.Box (VERTICAL, 6);
-        details_box.append (hostname_box);
+        details_box.append (hostname_entry);
 
         manufacturer_logo = new Gtk.Image () {
             halign = END,
@@ -158,8 +154,32 @@ public class About.HardwareView : Gtk.Box {
             update_manufacturer_logo ();
         });
 
-        hostname_info.activate.connect (() => {
-            set_host_name.begin (hostname_info.text);
+        hostname_entry.changed.connect (() => {
+            if (hostname_entry.text != get_host_name ()) {
+                hostname_entry.secondary_icon_name = "document-save-symbolic";
+                hostname_entry.secondary_icon_tooltip_text = _("Update Device name");
+            }
+        });
+
+        hostname_entry.activate.connect (on_hostname_entry_activate);
+
+        hostname_entry.icon_release.connect ((icon_pos) => {
+            if (icon_pos == SECONDARY) {
+                on_hostname_entry_activate ();
+            }
+        });
+    }
+
+
+    private void on_hostname_entry_activate () {
+        hostname_entry.secondary_icon_name = "process-working-symbolic";
+        hostname_entry.add_css_class ("spin");
+
+        set_host_name.begin (hostname_entry.text, (obj, res) => {
+            set_host_name.end (res);
+            hostname_entry.secondary_icon_name = "process-completed-symbolic";
+            hostname_entry.secondary_icon_tooltip_text = _("Device name saved");
+            hostname_entry.remove_css_class ("spin");
         });
     }
 
