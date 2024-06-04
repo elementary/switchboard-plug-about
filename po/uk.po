@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-05-31 12:19+0000\n"
-"PO-Revision-Date: 2024-04-09 21:13+0000\n"
+"PO-Revision-Date: 2024-06-03 17:16+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:45
@@ -43,7 +43,7 @@ msgstr "Мікропрограма"
 
 #: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
-msgstr ""
+msgstr "Драйвери"
 
 #: src/Plug.vala:119
 msgid "Operating System Information"
@@ -82,68 +82,50 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
+"Адаптери Wi-Fi Broadcom®, відеокарта NVIDIA® та деякі віртуальні машини "
+"можуть не працювати належним чином без додаткових драйверів."
 
 #: src/Views/DriversView.vala:25
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "No drivers available"
-msgstr "Доступне %i оновлення"
+msgstr "Немає доступних драйверів"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "Цей пристрій не потребує додаткових драйверів."
 
 #: src/Views/DriversView.vala:30
-#, fuzzy
-#| msgid "Checking for Updates"
 msgid "Checking for Drivers"
-msgstr "Перевірка наявності оновлень"
+msgstr "Перевірка наявності драйверів"
 
 #: src/Views/DriversView.vala:31
-#, fuzzy
-#| msgid "Connecting to the firmware service and searching for updates."
 msgid "Connecting to the driver service and searching for drivers."
-msgstr "Під'єднання до служби оновлення мікропрограми та пошук оновлень."
+msgstr "Під'єднання до служби оновлення драйверів та пошук оновлень для них."
 
 #: src/Views/DriversView.vala:51
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install driver"
-msgstr "Не вдалося встановити випуск мікропрограми"
+msgstr "Не вдалося встановити драйвер"
 
 #: src/Views/DriversView.vala:52
-#, fuzzy
-#| msgid "Manually refreshing updates may resolve the issue"
 msgid "Manually refreshing driver information may resolve the issue"
-msgstr "Оновлення вручну може усунути проблему"
+msgstr "Оновлення відомостей про драйвер вручну може усунути проблему"
 
 #: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
 msgid "Refresh"
 msgstr "Оновити"
 
 #: src/Views/DriversView.vala:55
-#, fuzzy
-#| msgid "Hardware Information"
 msgid "Refresh driver information"
-msgstr "Відомості про обладнання"
+msgstr "Оновлення відомостей про драйвер"
 
 #: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
 msgid "Learn More…"
 msgstr "Докладніше…"
 
 #: src/Views/DriversView.vala:91
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install"
-msgstr "Не вдалося встановити випуск мікропрограми"
+msgstr "Не вдалося встановити"
 
 #: src/Views/DriversView.vala:92
-#, fuzzy
-#| msgid ""
-#| "This may have been caused by sideloaded or manually compiled software, a "
-#| "third-party software source, or a package manager error. Manually "
-#| "refreshing updates may resolve the issue."
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -151,12 +133,12 @@ msgid ""
 msgstr ""
 "Це могло бути спричинено додатково завантаженим або скомпільованим вручну "
 "програмним забезпеченням, стороннім програмним забезпеченням або помилкою "
-"менеджера пакунків. Проблему може усунути перезапуск оновлення вручну."
+"менеджера пакунків. Проблему може усунути перезапуск вручну."
 
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "Встановлення %s…"
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
