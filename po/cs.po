@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-31 12:19+0000\n"
+"POT-Creation-Date: 2024-06-04 17:45+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -52,15 +52,15 @@ msgstr "Informace o operačním systému"
 msgid "Hardware Information"
 msgstr "Informace o hardware"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:216
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:218
 msgid "Restore Default Settings"
 msgstr "Obnovit výchozí nastavení"
 
-#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:131
 msgid "Suggest Translations"
 msgstr "Pomoci s překlady"
 
-#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:134
 msgid "Send Feedback"
 msgstr "Odeslat zpětnou vazbu"
 
@@ -68,7 +68,7 @@ msgstr "Odeslat zpětnou vazbu"
 msgid "Report a Problem"
 msgstr "Nahlásit problém"
 
-#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:124
 msgid "Get Support"
 msgstr "Získat podporu"
 
@@ -115,7 +115,7 @@ msgstr "Nepodařilo se nainstalovat vydání firmware"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:162
 msgid "Refresh"
 msgstr "Obnovit"
 
@@ -125,7 +125,7 @@ msgstr "Obnovit"
 msgid "Refresh driver information"
 msgstr "Informace o hardware"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:174
 msgid "Learn More…"
 msgstr ""
 
@@ -203,7 +203,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "V průběhu aktualizace zařízení neodpojujte."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:395
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:397
 msgid "Checking for Updates"
 msgstr "Kontrolují se aktualizace"
 
@@ -311,80 +311,95 @@ msgstr "Nepodařilo se nainstalovat vydání firmware"
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
 
-#: src/Views/HardwareView.vala:52
+#: src/Views/HardwareView.vala:49
+msgid "You do not have permission to change the device name"
+msgstr ""
+
+#: src/Views/HardwareView.vala:60
 #, c-format
 msgid "%s memory"
 msgstr "%s paměti"
 
-#: src/Views/HardwareView.vala:58 src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:350
 msgid "Unknown Graphics"
 msgstr "Neznámá grafika"
 
-#: src/Views/HardwareView.vala:73
+#: src/Views/HardwareView.vala:81
 msgid "Unknown storage"
 msgstr "Neznámé úložiště"
 
-#: src/Views/HardwareView.vala:121
+#: src/Views/HardwareView.vala:127
 msgid "Manufacturer Website"
 msgstr "Webové stránky výrobce"
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:160
+#, fuzzy
+#| msgid "%u Update Available"
+#| msgid_plural "%u Updates Available"
+msgid "Update device name"
+msgstr "Je k dispozici %u aktualizace"
+
+#: src/Views/HardwareView.vala:180
+msgid "Device name saved"
+msgstr ""
+
+#: src/Views/HardwareView.vala:274
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Dvoujádrový %s"
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:276
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Čtyřjádrový %s"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:278
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Osmijádrový %s"
 
-#: src/Views/HardwareView.vala:357
+#: src/Views/HardwareView.vala:390
 msgid "Unknown Processor"
 msgstr "Neznámý procesor"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:463
 msgid "Unknown"
 msgstr "Neznámé"
 
-#: src/Views/HardwareView.vala:485
+#: src/Views/HardwareView.vala:518
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s úložiště (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:487
+#: src/Views/HardwareView.vala:520
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s úložiště (eMMC)"
 
-#: src/Views/HardwareView.vala:489
+#: src/Views/HardwareView.vala:522
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s úložiště (SATA SSD)"
 
-#: src/Views/HardwareView.vala:492
+#: src/Views/HardwareView.vala:525
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s úložiště (pevný disk)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:497
+#: src/Views/HardwareView.vala:530
 #, c-format
 msgid "%s storage"
 msgstr "%s úložiště"
 
-#: src/Views/HardwareView.vala:596
+#: src/Views/HardwareView.vala:696
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/Views/HardwareView.vala:598
+#: src/Views/HardwareView.vala:698
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
@@ -392,71 +407,71 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/Views/HardwareView.vala:605
+#: src/Views/HardwareView.vala:705
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:119
+#: src/Views/OperatingSystemView.vala:121
 msgid "Website"
 msgstr "Webové stránky"
 
-#: src/Views/OperatingSystemView.vala:155
+#: src/Views/OperatingSystemView.vala:157
 msgid "Download"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:158
+#: src/Views/OperatingSystemView.vala:160
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: src/Views/OperatingSystemView.vala:184
+#: src/Views/OperatingSystemView.vala:186
 #, fuzzy
 #| msgid "All Updates"
 msgid "Automatic Updates"
 msgstr "Všechny aktualizace"
 
-#: src/Views/OperatingSystemView.vala:185
+#: src/Views/OperatingSystemView.vala:187
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:353
+#: src/Views/OperatingSystemView.vala:355
 #, c-format
 msgid "Built on %s"
 msgstr "Postaveno na %s"
 
-#: src/Views/OperatingSystemView.vala:372
+#: src/Views/OperatingSystemView.vala:374
 #, fuzzy
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
 msgid "System updates not available"
 msgstr "Je k dispozici %u aktualizace"
 
-#: src/Views/OperatingSystemView.vala:373
+#: src/Views/OperatingSystemView.vala:375
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:385
+#: src/Views/OperatingSystemView.vala:387
 #, fuzzy
 #| msgid "Up to Date"
 msgid "Up To Date"
 msgstr "Aktuální"
 
-#: src/Views/OperatingSystemView.vala:386
+#: src/Views/OperatingSystemView.vala:388
 #, c-format
 msgid "Last checked %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:401
+#: src/Views/OperatingSystemView.vala:403
 #, fuzzy
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
 msgid "Updates Available"
 msgstr "Je k dispozici %u aktualizace"
 
-#: src/Views/OperatingSystemView.vala:408
+#: src/Views/OperatingSystemView.vala:410
 #, fuzzy, c-format
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
@@ -466,47 +481,47 @@ msgstr[0] "Je k dispozici %u aktualizace"
 msgstr[1] "Jsou k dispozici %u aktualizace"
 msgstr[2] "Je k dispozici %u aktualizací"
 
-#: src/Views/OperatingSystemView.vala:419
+#: src/Views/OperatingSystemView.vala:421
 msgid "Unable to determine number of updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:425
+#: src/Views/OperatingSystemView.vala:427
 #, fuzzy
 #| msgid "All Updates"
 msgid "Downloading Updates"
 msgstr "Všechny aktualizace"
 
-#: src/Views/OperatingSystemView.vala:431
+#: src/Views/OperatingSystemView.vala:433
 #, fuzzy
 #| msgid "Restart"
 msgid "Restart Required"
 msgstr "Restart"
 
-#: src/Views/OperatingSystemView.vala:432
+#: src/Views/OperatingSystemView.vala:434
 msgid "A restart is required to finish installing updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:437
-#: src/Views/OperatingSystemView.vala:451
+#: src/Views/OperatingSystemView.vala:439
+#: src/Views/OperatingSystemView.vala:453
 msgid "Failed to download updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:438
+#: src/Views/OperatingSystemView.vala:440
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:452
+#: src/Views/OperatingSystemView.vala:454
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:494
+#: src/Views/OperatingSystemView.vala:496
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Systémová nastavení budou vrácena do výchozího stavu"
 
-#: src/Views/OperatingSystemView.vala:495
+#: src/Views/OperatingSystemView.vala:497
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -514,7 +529,7 @@ msgstr ""
 "Veškerá systémová nastavení a data budou vrácena do výchozího stavu. Osobní "
 "data, jako hudba či obrázky, tím nebudou ovlivněna."
 
-#: src/Views/OperatingSystemView.vala:503
+#: src/Views/OperatingSystemView.vala:505
 msgid "Restore Settings"
 msgstr "Obnovit nastavení"
 

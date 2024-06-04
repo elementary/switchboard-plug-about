@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-31 12:19+0000\n"
+"POT-Creation-Date: 2024-06-04 17:45+0000\n"
 "PO-Revision-Date: 2024-06-03 17:16+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -52,15 +52,15 @@ msgstr "Informació del sistema operatiu"
 msgid "Hardware Information"
 msgstr "Informació del maquinari"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:216
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:218
 msgid "Restore Default Settings"
 msgstr "Restaura els paràmetres per defecte"
 
-#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:131
 msgid "Suggest Translations"
 msgstr "Suggeriu traduccions"
 
-#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:134
 msgid "Send Feedback"
 msgstr "Envia el suggeriment"
 
@@ -68,7 +68,7 @@ msgstr "Envia el suggeriment"
 msgid "Report a Problem"
 msgstr "Informeu d'un problema"
 
-#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:124
 msgid "Get Support"
 msgstr "Obteniu assistència"
 
@@ -111,7 +111,7 @@ msgstr ""
 "L'actualització manual de la informació dels controladors pot resoldre el "
 "problema."
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:162
 msgid "Refresh"
 msgstr "Actualitza"
 
@@ -119,7 +119,7 @@ msgstr "Actualitza"
 msgid "Refresh driver information"
 msgstr "Actualitza la Informació dels controladors"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:174
 msgid "Learn More…"
 msgstr "Més informació…"
 
@@ -198,7 +198,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "No desendolleu el dispositiu durant l'actualització."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:395
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:397
 msgid "Checking for Updates"
 msgstr "Es comprova si hi ha actualitzacions."
 
@@ -307,108 +307,124 @@ msgstr ""
 "Un error del sistema ha evitat reiniciar automàticament a la configuració "
 "del microprogramari."
 
-#: src/Views/HardwareView.vala:52
+#: src/Views/HardwareView.vala:49
+msgid "You do not have permission to change the device name"
+msgstr ""
+
+#: src/Views/HardwareView.vala:60
 #, c-format
 msgid "%s memory"
 msgstr "Memòria: %s"
 
-#: src/Views/HardwareView.vala:58 src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:350
 msgid "Unknown Graphics"
 msgstr "Gràfics desconeguts"
 
-#: src/Views/HardwareView.vala:73
+#: src/Views/HardwareView.vala:81
 msgid "Unknown storage"
 msgstr "Emmagatzematge desconegut"
 
-#: src/Views/HardwareView.vala:121
+#: src/Views/HardwareView.vala:127
 msgid "Manufacturer Website"
 msgstr "Lloc web del fabricant"
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:160
+#, fuzzy
+#| msgid "No Updatable Devices"
+msgid "Update device name"
+msgstr "Dispositius no actualitzables"
+
+#: src/Views/HardwareView.vala:180
+#, fuzzy
+#| msgid "Device stages updates"
+msgid "Device name saved"
+msgstr "Etapes de l'actualització del dispositiu"
+
+#: src/Views/HardwareView.vala:274
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Nucli doble %s"
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:276
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Nucli quàdruple %s"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:278
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Nucli sèxtuple %s"
 
-#: src/Views/HardwareView.vala:357
+#: src/Views/HardwareView.vala:390
 msgid "Unknown Processor"
 msgstr "Processador desconegut"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:463
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: src/Views/HardwareView.vala:485
+#: src/Views/HardwareView.vala:518
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Emmagatzematge (SSD NVMe): %s"
 
-#: src/Views/HardwareView.vala:487
+#: src/Views/HardwareView.vala:520
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "Emmagatzematge (eMMC): %s"
 
-#: src/Views/HardwareView.vala:489
+#: src/Views/HardwareView.vala:522
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Emmagatzematge (SSD SATA): %s"
 
-#: src/Views/HardwareView.vala:492
+#: src/Views/HardwareView.vala:525
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "Emmagatzematge (HDD): %s"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:497
+#: src/Views/HardwareView.vala:530
 #, c-format
 msgid "%s storage"
 msgstr "Emmagatzematge: %s"
 
-#: src/Views/HardwareView.vala:596
+#: src/Views/HardwareView.vala:696
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "byte"
 msgstr[1] "bytes"
 
-#: src/Views/HardwareView.vala:598
+#: src/Views/HardwareView.vala:698
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
 msgstr[0] "%u byte"
 msgstr[1] "%u bytes"
 
-#: src/Views/HardwareView.vala:605
+#: src/Views/HardwareView.vala:705
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:119
+#: src/Views/OperatingSystemView.vala:121
 msgid "Website"
 msgstr "Lloc web"
 
-#: src/Views/OperatingSystemView.vala:155
+#: src/Views/OperatingSystemView.vala:157
 msgid "Download"
 msgstr "Baixa"
 
-#: src/Views/OperatingSystemView.vala:158
+#: src/Views/OperatingSystemView.vala:160
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: src/Views/OperatingSystemView.vala:184
+#: src/Views/OperatingSystemView.vala:186
 msgid "Automatic Updates"
 msgstr "Actualitzacions automàtiques"
 
-#: src/Views/OperatingSystemView.vala:185
+#: src/Views/OperatingSystemView.vala:187
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -416,68 +432,68 @@ msgstr ""
 "Les actualitzacions es baixaran automàticament. S'instal·laran quan es "
 "reiniciï el dispositiu."
 
-#: src/Views/OperatingSystemView.vala:353
+#: src/Views/OperatingSystemView.vala:355
 #, c-format
 msgid "Built on %s"
 msgstr "Construït sobre %s"
 
-#: src/Views/OperatingSystemView.vala:372
+#: src/Views/OperatingSystemView.vala:374
 msgid "System updates not available"
 msgstr "Actualitzacions del sistema no disponibles"
 
-#: src/Views/OperatingSystemView.vala:373
+#: src/Views/OperatingSystemView.vala:375
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 "No s'ha pogut connectar amb el fons. Proveu de tancar la sessió per resoldre "
 "el problema."
 
-#: src/Views/OperatingSystemView.vala:385
+#: src/Views/OperatingSystemView.vala:387
 msgid "Up To Date"
 msgstr "Al dia"
 
-#: src/Views/OperatingSystemView.vala:386
+#: src/Views/OperatingSystemView.vala:388
 #, c-format
 msgid "Last checked %s"
 msgstr "Darrera comprovació: %s"
 
-#: src/Views/OperatingSystemView.vala:401
+#: src/Views/OperatingSystemView.vala:403
 msgid "Updates Available"
 msgstr "Actualitzacions disponibles"
 
-#: src/Views/OperatingSystemView.vala:408
+#: src/Views/OperatingSystemView.vala:410
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
 msgstr[0] "%i actualització disponible"
 msgstr[1] "%i actualitzacions disponibles"
 
-#: src/Views/OperatingSystemView.vala:419
+#: src/Views/OperatingSystemView.vala:421
 msgid "Unable to determine number of updates"
 msgstr "No es pot determinar el nombre d'actualitzacions."
 
-#: src/Views/OperatingSystemView.vala:425
+#: src/Views/OperatingSystemView.vala:427
 msgid "Downloading Updates"
 msgstr "Es baixen les actualitzacions"
 
-#: src/Views/OperatingSystemView.vala:431
+#: src/Views/OperatingSystemView.vala:433
 msgid "Restart Required"
 msgstr "Cal reiniciar"
 
-#: src/Views/OperatingSystemView.vala:432
+#: src/Views/OperatingSystemView.vala:434
 msgid "A restart is required to finish installing updates"
 msgstr "Cal reiniciar per acabar d'instal·lar les actualitzacions."
 
-#: src/Views/OperatingSystemView.vala:437
-#: src/Views/OperatingSystemView.vala:451
+#: src/Views/OperatingSystemView.vala:439
+#: src/Views/OperatingSystemView.vala:453
 msgid "Failed to download updates"
 msgstr "Ha fallat baixar les actualitzacions."
 
-#: src/Views/OperatingSystemView.vala:438
+#: src/Views/OperatingSystemView.vala:440
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 "L'actualització manual de les actualitzacions pot resoldre el problema."
 
-#: src/Views/OperatingSystemView.vala:452
+#: src/Views/OperatingSystemView.vala:454
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -488,11 +504,11 @@ msgstr ""
 "paquets. L'actualització manual de les actualitzacions pot resoldre el "
 "problema."
 
-#: src/Views/OperatingSystemView.vala:494
+#: src/Views/OperatingSystemView.vala:496
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Els paràmetres del sistema es restauraran als valors de fàbrica"
 
-#: src/Views/OperatingSystemView.vala:495
+#: src/Views/OperatingSystemView.vala:497
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -501,7 +517,7 @@ msgstr ""
 "defecte. Això no afectarà les dades personals, com ara la música i les "
 "imatges."
 
-#: src/Views/OperatingSystemView.vala:503
+#: src/Views/OperatingSystemView.vala:505
 msgid "Restore Settings"
 msgstr "Restaura els paràmetres"
 
@@ -537,9 +553,6 @@ msgstr "Tanca"
 
 #~ msgid "PB"
 #~ msgstr "PB"
-
-#~ msgid "No Updatable Devices"
-#~ msgstr "Dispositius no actualitzables"
 
 #~ msgid "Internal device"
 #~ msgstr "Dispositiu intern"
@@ -593,9 +606,6 @@ msgstr "Tanca"
 
 #~ msgid "Cryptographic hash verification is available"
 #~ msgstr "Hi ha disponible el resum de la verificació criptogràfica."
-
-#~ msgid "Device stages updates"
-#~ msgstr "Etapes de l'actualització del dispositiu"
 
 #~ msgid "Device can recover flash failures"
 #~ msgstr "El dispositiu pot recuperar fallades de flaix."

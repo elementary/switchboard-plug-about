@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-31 12:19+0000\n"
+"POT-Creation-Date: 2024-06-04 17:45+0000\n"
 "PO-Revision-Date: 2024-06-03 17:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -52,15 +52,15 @@ msgstr "オペレーティングシステムの情報"
 msgid "Hardware Information"
 msgstr "ハードウェアの情報"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:216
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:218
 msgid "Restore Default Settings"
 msgstr "デフォルト設定を復元"
 
-#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:131
 msgid "Suggest Translations"
 msgstr "翻訳を提案"
 
-#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:134
 msgid "Send Feedback"
 msgstr "フィードバックを送信"
 
@@ -68,7 +68,7 @@ msgstr "フィードバックを送信"
 msgid "Report a Problem"
 msgstr "不具合を報告"
 
-#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:124
 msgid "Get Support"
 msgstr "サポートを受ける"
 
@@ -81,8 +81,8 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
-"Broadcom® Wi-Fi アダプター、NVIDIA® グラフィックス、および一部の仮想マシンは"
-"、追加のドライバーがないと正しく動作しないことがあります。"
+"Broadcom® Wi-Fi アダプター、NVIDIA® グラフィックス、および一部の仮想マシン"
+"は、追加のドライバーがないと正しく動作しないことがあります。"
 
 #: src/Views/DriversView.vala:25
 msgid "No drivers available"
@@ -108,7 +108,7 @@ msgstr "ドライバーをインストールできませんでした"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr "手動でドライバー情報を再読み込みすると問題が解消する可能性があります"
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:162
 msgid "Refresh"
 msgstr "再読み込み"
 
@@ -116,7 +116,7 @@ msgstr "再読み込み"
 msgid "Refresh driver information"
 msgstr "ドライバー情報を再読み込み"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:174
 msgid "Learn More…"
 msgstr "さらに詳しく…"
 
@@ -193,7 +193,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "アップデート中はデバイスを取り外さないでください。"
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:395
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:397
 msgid "Checking for Updates"
 msgstr "アップデートを確認しています"
 
@@ -301,106 +301,122 @@ msgstr ""
 "システムエラーのため、再起動して自動的にファームウェアの設定に入ることができ"
 "ませんでした。"
 
-#: src/Views/HardwareView.vala:52
+#: src/Views/HardwareView.vala:49
+msgid "You do not have permission to change the device name"
+msgstr ""
+
+#: src/Views/HardwareView.vala:60
 #, c-format
 msgid "%s memory"
 msgstr "%s メモリー"
 
-#: src/Views/HardwareView.vala:58 src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:350
 msgid "Unknown Graphics"
 msgstr "不明なグラフィックス"
 
-#: src/Views/HardwareView.vala:73
+#: src/Views/HardwareView.vala:81
 msgid "Unknown storage"
 msgstr "不明なストレージ"
 
-#: src/Views/HardwareView.vala:121
+#: src/Views/HardwareView.vala:127
 msgid "Manufacturer Website"
 msgstr "製造元の Web サイト"
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:160
+#, fuzzy
+#| msgid "No Updatable Devices"
+msgid "Update device name"
+msgstr "アップデート可能なデバイスがありません"
+
+#: src/Views/HardwareView.vala:180
+#, fuzzy
+#| msgid "Device stages updates"
+msgid "Device name saved"
+msgstr "デバイスはステージングアップデートに対応しています"
+
+#: src/Views/HardwareView.vala:274
 #, c-format
 msgid "Dual-Core %s"
 msgstr "デュアルコア %s"
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:276
 #, c-format
 msgid "Quad-Core %s"
 msgstr "クアッドコア %s"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:278
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "ヘキサコア %s"
 
-#: src/Views/HardwareView.vala:357
+#: src/Views/HardwareView.vala:390
 msgid "Unknown Processor"
 msgstr "不明なプロセッサー"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:463
 msgid "Unknown"
 msgstr "不明"
 
-#: src/Views/HardwareView.vala:485
+#: src/Views/HardwareView.vala:518
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s ストレージ (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:487
+#: src/Views/HardwareView.vala:520
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s ストレージ (eMMC)"
 
-#: src/Views/HardwareView.vala:489
+#: src/Views/HardwareView.vala:522
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s ストレージ (SATA SSD)"
 
-#: src/Views/HardwareView.vala:492
+#: src/Views/HardwareView.vala:525
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s ストレージ (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:497
+#: src/Views/HardwareView.vala:530
 #, c-format
 msgid "%s storage"
 msgstr "%s ストレージ"
 
-#: src/Views/HardwareView.vala:596
+#: src/Views/HardwareView.vala:696
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "バイト"
 
-#: src/Views/HardwareView.vala:598
+#: src/Views/HardwareView.vala:698
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
 msgstr[0] "%u バイト"
 
-#: src/Views/HardwareView.vala:605
+#: src/Views/HardwareView.vala:705
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:119
+#: src/Views/OperatingSystemView.vala:121
 msgid "Website"
 msgstr "Web サイト"
 
-#: src/Views/OperatingSystemView.vala:155
+#: src/Views/OperatingSystemView.vala:157
 msgid "Download"
 msgstr "ダウンロード"
 
-#: src/Views/OperatingSystemView.vala:158
+#: src/Views/OperatingSystemView.vala:160
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/Views/OperatingSystemView.vala:184
+#: src/Views/OperatingSystemView.vala:186
 msgid "Automatic Updates"
 msgstr "自動アップデート"
 
-#: src/Views/OperatingSystemView.vala:185
+#: src/Views/OperatingSystemView.vala:187
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -408,66 +424,66 @@ msgstr ""
 "アップデートを自動的にダウンロードし、デバイスの再起動時に自動的にインストー"
 "ルします。"
 
-#: src/Views/OperatingSystemView.vala:353
+#: src/Views/OperatingSystemView.vala:355
 #, c-format
 msgid "Built on %s"
 msgstr "%s ベース"
 
-#: src/Views/OperatingSystemView.vala:372
+#: src/Views/OperatingSystemView.vala:374
 msgid "System updates not available"
 msgstr "システムアップデート利用不可"
 
-#: src/Views/OperatingSystemView.vala:373
+#: src/Views/OperatingSystemView.vala:375
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 "バックエンドに接続できませんでした。問題を解消するには、ログアウトしてみてく"
 "ださい。"
 
-#: src/Views/OperatingSystemView.vala:385
+#: src/Views/OperatingSystemView.vala:387
 msgid "Up To Date"
 msgstr "最新の状態"
 
-#: src/Views/OperatingSystemView.vala:386
+#: src/Views/OperatingSystemView.vala:388
 #, c-format
 msgid "Last checked %s"
 msgstr "最終確認: %s"
 
-#: src/Views/OperatingSystemView.vala:401
+#: src/Views/OperatingSystemView.vala:403
 msgid "Updates Available"
 msgstr "アップデート利用可能"
 
-#: src/Views/OperatingSystemView.vala:408
+#: src/Views/OperatingSystemView.vala:410
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
 msgstr[0] "%i 件のアップデートが利用可能"
 
-#: src/Views/OperatingSystemView.vala:419
+#: src/Views/OperatingSystemView.vala:421
 msgid "Unable to determine number of updates"
 msgstr "アップデート件数を判断できません"
 
-#: src/Views/OperatingSystemView.vala:425
+#: src/Views/OperatingSystemView.vala:427
 msgid "Downloading Updates"
 msgstr "アップデートをダウンロードしています"
 
-#: src/Views/OperatingSystemView.vala:431
+#: src/Views/OperatingSystemView.vala:433
 msgid "Restart Required"
 msgstr "再起動が必要"
 
-#: src/Views/OperatingSystemView.vala:432
+#: src/Views/OperatingSystemView.vala:434
 msgid "A restart is required to finish installing updates"
 msgstr "アップデートのインストールを完了するには再起動が必要です"
 
-#: src/Views/OperatingSystemView.vala:437
-#: src/Views/OperatingSystemView.vala:451
+#: src/Views/OperatingSystemView.vala:439
+#: src/Views/OperatingSystemView.vala:453
 msgid "Failed to download updates"
 msgstr "アップデートのダウンロードに失敗"
 
-#: src/Views/OperatingSystemView.vala:438
+#: src/Views/OperatingSystemView.vala:440
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "手動でアップデートを再読み込みすると問題が解消する可能性があります"
 
-#: src/Views/OperatingSystemView.vala:452
+#: src/Views/OperatingSystemView.vala:454
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -477,11 +493,11 @@ msgstr ""
 "トリ、パッケージマネージャーのエラーなどに起因している可能性があります。この"
 "問題は、手動でアップデートを再読み込みすると解決することがあります。"
 
-#: src/Views/OperatingSystemView.vala:494
+#: src/Views/OperatingSystemView.vala:496
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "システム設定が出荷時のデフォルトに復元されます"
 
-#: src/Views/OperatingSystemView.vala:495
+#: src/Views/OperatingSystemView.vala:497
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -489,7 +505,7 @@ msgstr ""
 "すべてのシステム設定とデータがデフォルト値にリセットされます。音楽や写真など"
 "の個人データは影響を受けません。"
 
-#: src/Views/OperatingSystemView.vala:503
+#: src/Views/OperatingSystemView.vala:505
 msgid "Restore Settings"
 msgstr "設定を復元"
 
@@ -509,9 +525,6 @@ msgstr "閉じる"
 
 #~ msgid "Check for Updates"
 #~ msgstr "アップデートを確認"
-
-#~ msgid "No Updatable Devices"
-#~ msgstr "アップデート可能なデバイスがありません"
 
 #~ msgid "Internal device"
 #~ msgstr "内部デバイス"
@@ -563,9 +576,6 @@ msgstr "閉じる"
 
 #~ msgid "Cryptographic hash verification is available"
 #~ msgstr "暗号化されたハッシュによる検証が利用可能です"
-
-#~ msgid "Device stages updates"
-#~ msgstr "デバイスはステージングアップデートに対応しています"
 
 #~ msgid "Device can recover flash failures"
 #~ msgstr "書き込みに失敗してもデバイスを復元できます"

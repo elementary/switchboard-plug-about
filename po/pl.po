@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-31 12:19+0000\n"
+"POT-Creation-Date: 2024-06-04 17:45+0000\n"
 "PO-Revision-Date: 2024-04-13 19:13+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -53,15 +53,15 @@ msgstr "Informacje o systemie operacyjnym"
 msgid "Hardware Information"
 msgstr "Informacje o sprzęcie"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:216
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:218
 msgid "Restore Default Settings"
 msgstr "Przywróć ustawienia domyślne"
 
-#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:129
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:131
 msgid "Suggest Translations"
 msgstr "Zaproponuj tłumaczenie"
 
-#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:132
+#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:134
 msgid "Send Feedback"
 msgstr "Prześlij opinię"
 
@@ -69,7 +69,7 @@ msgstr "Prześlij opinię"
 msgid "Report a Problem"
 msgstr "Zgłoś błąd"
 
-#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:122
+#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:124
 msgid "Get Support"
 msgstr "Uzyskaj wsparcie"
 
@@ -118,7 +118,7 @@ msgstr "Niepowodzenie instalacji wydania oprogramowania"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr "Ręczne odświeżenie aktualizacji może rozwiązać problem"
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:160
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:162
 msgid "Refresh"
 msgstr "Odśwież"
 
@@ -128,7 +128,7 @@ msgstr "Odśwież"
 msgid "Refresh driver information"
 msgstr "Informacje o sprzęcie"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:172
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:174
 msgid "Learn More…"
 msgstr "Dowiedz się więcej…"
 
@@ -214,7 +214,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "Nie odłączaj tego urządzenia w trakcie aktualizacji."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:395
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:397
 msgid "Checking for Updates"
 msgstr "Sprawdzanie aktualizacji"
 
@@ -321,80 +321,94 @@ msgstr "Nie udało się zrestartować do ustawień firmware"
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr "Błąd systemu uniemożliwił automatyczny restart do ustawień firmware."
 
-#: src/Views/HardwareView.vala:52
+#: src/Views/HardwareView.vala:49
+msgid "You do not have permission to change the device name"
+msgstr ""
+
+#: src/Views/HardwareView.vala:60
 #, c-format
 msgid "%s memory"
 msgstr "%s pamięci"
 
-#: src/Views/HardwareView.vala:58 src/Views/HardwareView.vala:317
+#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:350
 msgid "Unknown Graphics"
 msgstr "Nieznany układ graficzny"
 
-#: src/Views/HardwareView.vala:73
+#: src/Views/HardwareView.vala:81
 msgid "Unknown storage"
 msgstr "Nieznana pamięć masowa"
 
-#: src/Views/HardwareView.vala:121
+#: src/Views/HardwareView.vala:127
 msgid "Manufacturer Website"
 msgstr "Strona internetowa producenta"
 
-#: src/Views/HardwareView.vala:241
+#: src/Views/HardwareView.vala:160
+#, fuzzy
+#| msgid "Updates Available"
+msgid "Update device name"
+msgstr "Dostępne ktualizacje"
+
+#: src/Views/HardwareView.vala:180
+msgid "Device name saved"
+msgstr ""
+
+#: src/Views/HardwareView.vala:274
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Dwurdzeniowy %s"
 
-#: src/Views/HardwareView.vala:243
+#: src/Views/HardwareView.vala:276
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Czterordzeniowy %s"
 
-#: src/Views/HardwareView.vala:245
+#: src/Views/HardwareView.vala:278
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Sześciordzeniowy %s"
 
-#: src/Views/HardwareView.vala:357
+#: src/Views/HardwareView.vala:390
 msgid "Unknown Processor"
 msgstr "Nieznany procesor"
 
-#: src/Views/HardwareView.vala:430
+#: src/Views/HardwareView.vala:463
 msgid "Unknown"
 msgstr "Nieznane"
 
-#: src/Views/HardwareView.vala:485
+#: src/Views/HardwareView.vala:518
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s pojemności dysku (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:487
+#: src/Views/HardwareView.vala:520
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s pojemności dysku (eMMC)"
 
-#: src/Views/HardwareView.vala:489
+#: src/Views/HardwareView.vala:522
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s pojemności dysku (SATA SSD)"
 
-#: src/Views/HardwareView.vala:492
+#: src/Views/HardwareView.vala:525
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s pojemności dysku (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:497
+#: src/Views/HardwareView.vala:530
 #, c-format
 msgid "%s storage"
 msgstr "%s pojemności dysku"
 
-#: src/Views/HardwareView.vala:596
+#: src/Views/HardwareView.vala:696
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "bajt"
 msgstr[1] "bajty"
 msgstr[2] "bajtów"
 
-#: src/Views/HardwareView.vala:598
+#: src/Views/HardwareView.vala:698
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
@@ -402,29 +416,29 @@ msgstr[0] "%u bajt"
 msgstr[1] "%u bajty"
 msgstr[2] "%u bajtów"
 
-#: src/Views/HardwareView.vala:605
+#: src/Views/HardwareView.vala:705
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:119
+#: src/Views/OperatingSystemView.vala:121
 msgid "Website"
 msgstr "Strona internetowa"
 
-#: src/Views/OperatingSystemView.vala:155
+#: src/Views/OperatingSystemView.vala:157
 msgid "Download"
 msgstr "Pobierz"
 
-#: src/Views/OperatingSystemView.vala:158
+#: src/Views/OperatingSystemView.vala:160
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: src/Views/OperatingSystemView.vala:184
+#: src/Views/OperatingSystemView.vala:186
 msgid "Automatic Updates"
 msgstr "Automatyczne aktualizacje"
 
-#: src/Views/OperatingSystemView.vala:185
+#: src/Views/OperatingSystemView.vala:187
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -432,35 +446,35 @@ msgstr ""
 "Aktualizacje zostaną pobrane automatycznie. Instalacja nastąpi po ponownym "
 "uruchomieniu urządzenia."
 
-#: src/Views/OperatingSystemView.vala:353
+#: src/Views/OperatingSystemView.vala:355
 #, c-format
 msgid "Built on %s"
 msgstr "Zbudowano na %s"
 
-#: src/Views/OperatingSystemView.vala:372
+#: src/Views/OperatingSystemView.vala:374
 msgid "System updates not available"
 msgstr "Brak dostępnych aktualizacji systemu"
 
-#: src/Views/OperatingSystemView.vala:373
+#: src/Views/OperatingSystemView.vala:375
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 "Nie udało się połączyć z serwerem. Spróbuj się wylogować by rozwiązać "
 "problem."
 
-#: src/Views/OperatingSystemView.vala:385
+#: src/Views/OperatingSystemView.vala:387
 msgid "Up To Date"
 msgstr "Aktualny"
 
-#: src/Views/OperatingSystemView.vala:386
+#: src/Views/OperatingSystemView.vala:388
 #, c-format
 msgid "Last checked %s"
 msgstr "Ostatnio sprawdzany %s"
 
-#: src/Views/OperatingSystemView.vala:401
+#: src/Views/OperatingSystemView.vala:403
 msgid "Updates Available"
 msgstr "Dostępne ktualizacje"
 
-#: src/Views/OperatingSystemView.vala:408
+#: src/Views/OperatingSystemView.vala:410
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
@@ -468,33 +482,33 @@ msgstr[0] "%i dostępna aktualizacja"
 msgstr[1] "%i dostępne aktualizacje"
 msgstr[2] "%i dostępnych aktualizacji"
 
-#: src/Views/OperatingSystemView.vala:419
+#: src/Views/OperatingSystemView.vala:421
 msgid "Unable to determine number of updates"
 msgstr "Nie udało się określić liczby aktualizacji"
 
-#: src/Views/OperatingSystemView.vala:425
+#: src/Views/OperatingSystemView.vala:427
 msgid "Downloading Updates"
 msgstr "Pobieranie aktualizacji"
 
-#: src/Views/OperatingSystemView.vala:431
+#: src/Views/OperatingSystemView.vala:433
 msgid "Restart Required"
 msgstr "Wymagane ponowne uruchomienie"
 
-#: src/Views/OperatingSystemView.vala:432
+#: src/Views/OperatingSystemView.vala:434
 msgid "A restart is required to finish installing updates"
 msgstr ""
 "Do zakończenia instalacji aktualizacji wymagane jest ponowne uruchomienie"
 
-#: src/Views/OperatingSystemView.vala:437
-#: src/Views/OperatingSystemView.vala:451
+#: src/Views/OperatingSystemView.vala:439
+#: src/Views/OperatingSystemView.vala:453
 msgid "Failed to download updates"
 msgstr "Nie udało się pobrać aktualizacji"
 
-#: src/Views/OperatingSystemView.vala:438
+#: src/Views/OperatingSystemView.vala:440
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "Ręczne odświeżenie aktualizacji może rozwiązać problem"
 
-#: src/Views/OperatingSystemView.vala:452
+#: src/Views/OperatingSystemView.vala:454
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -504,12 +518,12 @@ msgstr ""
 "oprogramowanie, źródło firm trzecich, lub błąd menadżera pakietów. Ręczne "
 "odświeżenie aktualizacji może rozwiązać ten problem."
 
-#: src/Views/OperatingSystemView.vala:494
+#: src/Views/OperatingSystemView.vala:496
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 "Ustawienia systemowe zostaną przywrócone do domyślnych wartości fabrycznych"
 
-#: src/Views/OperatingSystemView.vala:495
+#: src/Views/OperatingSystemView.vala:497
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -517,7 +531,7 @@ msgstr ""
 "Wszystkie ustawienia systemu i dane zostaną przywrócone do wartości "
 "domyślnych. Dane osobiste, takie jak muzyka i zdjęcia, nie będą naruszone."
 
-#: src/Views/OperatingSystemView.vala:503
+#: src/Views/OperatingSystemView.vala:505
 msgid "Restore Settings"
 msgstr "Przywróć ustawienia"
 
