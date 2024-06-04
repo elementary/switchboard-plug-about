@@ -157,7 +157,7 @@ public class About.HardwareView : Gtk.Box {
         hostname_entry.changed.connect (() => {
             if (hostname_entry.text != get_host_name ()) {
                 hostname_entry.secondary_icon_name = "document-save-symbolic";
-                hostname_entry.secondary_icon_tooltip_text = _("Update Device name");
+                hostname_entry.secondary_icon_tooltip_text = _("Update device name");
             }
         });
 
