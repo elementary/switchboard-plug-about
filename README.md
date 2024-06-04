@@ -17,6 +17,7 @@ You'll need the following dependencies:
 * libadwaita-1-dev
 * libappstream-dev
 * libpackagekit-glib2-dev
+* libpolkit-gobject-1-dev
 * meson
 * valac
 * switcheroo-control (at runtime)
