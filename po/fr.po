@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-04 17:45+0000\n"
-"PO-Revision-Date: 2024-05-15 14:13+0000\n"
+"PO-Revision-Date: 2024-06-06 06:13+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/fr/>\n"
@@ -42,7 +42,7 @@ msgstr "Micrologiciel"
 
 #: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
-msgstr ""
+msgstr "Pilotes"
 
 #: src/Plug.vala:119
 msgid "Operating System Information"
@@ -81,69 +81,53 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
+"Les adaptateurs Wi-Fi Broadcom®, les cartes graphiques NVIDIA® et certaines "
+"machines virtuelles peuvent ne pas fonctionner correctement sans pilotes "
+"additionnels."
 
 #: src/Views/DriversView.vala:25
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "No drivers available"
-msgstr "%i mise à jour disponible"
+msgstr "Aucun pilote disponible"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "Cet appareil ne nécessite aucun pilote additionnel."
 
 #: src/Views/DriversView.vala:30
-#, fuzzy
-#| msgid "Checking for Updates"
 msgid "Checking for Drivers"
-msgstr "Vérification des mises à jour"
+msgstr "Vérification des pilotes"
 
 #: src/Views/DriversView.vala:31
-#, fuzzy
-#| msgid "Connecting to the firmware service and searching for updates."
 msgid "Connecting to the driver service and searching for drivers."
-msgstr "Connexion au service du micrologiciel et recherche de mises à jour."
+msgstr "Connexion au service et recherche des pilotes."
 
 #: src/Views/DriversView.vala:51
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install driver"
-msgstr "Échec de l'installation du micrologiciel"
+msgstr "Échec de l'installation du pilote"
 
 #: src/Views/DriversView.vala:52
-#, fuzzy
-#| msgid "Manually refreshing updates may resolve the issue"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
-"L'actualisation manuelle des mises à jour pourrait résoudre le problème"
+"L'actualisation manuelle des informations du pilote pourrait résoudre le "
+"problème"
 
 #: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:162
 msgid "Refresh"
 msgstr "Actualiser"
 
 #: src/Views/DriversView.vala:55
-#, fuzzy
-#| msgid "Hardware Information"
 msgid "Refresh driver information"
-msgstr "Informations sur le matériel"
+msgstr "Actualiser les informations du pilote"
 
 #: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:174
 msgid "Learn More…"
 msgstr "En savoir plus…"
 
 #: src/Views/DriversView.vala:91
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install"
-msgstr "Échec de l'installation du micrologiciel"
+msgstr "Échec de l'installation"
 
 #: src/Views/DriversView.vala:92
-#, fuzzy
-#| msgid ""
-#| "This may have been caused by sideloaded or manually compiled software, a "
-#| "third-party software source, or a package manager error. Manually "
-#| "refreshing updates may resolve the issue."
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -151,12 +135,12 @@ msgid ""
 msgstr ""
 "Cela peut être dû à un logiciel téléchargé ou compilé manuellement, à une "
 "source logicielle tierce ou à une erreur du gestionnaire de paquets. "
-"L'actualisation manuelle des mises à jour peut résoudre le problème."
+"L'actualisation manuelle peut résoudre le problème."
 
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "Installation de %s…"
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
@@ -322,7 +306,7 @@ msgstr ""
 
 #: src/Views/HardwareView.vala:49
 msgid "You do not have permission to change the device name"
-msgstr ""
+msgstr "Vous n'avez pas l'autorisation de modifier le nom de l'appareil"
 
 #: src/Views/HardwareView.vala:60
 #, c-format
@@ -342,16 +326,12 @@ msgid "Manufacturer Website"
 msgstr "Site web du fabricant"
 
 #: src/Views/HardwareView.vala:160
-#, fuzzy
-#| msgid "No Updatable Devices"
 msgid "Update device name"
-msgstr "Aucune périphérique ne peut être mis à jour"
+msgstr "Mettre à jour le nom de l'appareil"
 
 #: src/Views/HardwareView.vala:180
-#, fuzzy
-#| msgid "Device is locked"
 msgid "Device name saved"
-msgstr "Le périphérique est verrouillé"
+msgstr "Nom de l'appareil enregistré"
 
 #: src/Views/HardwareView.vala:274
 #, c-format
