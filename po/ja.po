@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-04 17:45+0000\n"
-"PO-Revision-Date: 2024-06-03 17:16+0000\n"
+"PO-Revision-Date: 2024-06-06 06:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -303,7 +303,7 @@ msgstr ""
 
 #: src/Views/HardwareView.vala:49
 msgid "You do not have permission to change the device name"
-msgstr ""
+msgstr "デバイス名を変更する権限がありません"
 
 #: src/Views/HardwareView.vala:60
 #, c-format
@@ -323,16 +323,12 @@ msgid "Manufacturer Website"
 msgstr "製造元の Web サイト"
 
 #: src/Views/HardwareView.vala:160
-#, fuzzy
-#| msgid "No Updatable Devices"
 msgid "Update device name"
-msgstr "アップデート可能なデバイスがありません"
+msgstr "デバイス名を更新"
 
 #: src/Views/HardwareView.vala:180
-#, fuzzy
-#| msgid "Device stages updates"
 msgid "Device name saved"
-msgstr "デバイスはステージングアップデートに対応しています"
+msgstr "デバイス名を保存しました"
 
 #: src/Views/HardwareView.vala:274
 #, c-format
