@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-04 17:45+0000\n"
-"PO-Revision-Date: 2024-06-02 09:13+0000\n"
+"PO-Revision-Date: 2024-06-06 06:13+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -296,7 +296,7 @@ msgstr "שגיאת מערכת מנעה הפעלה אוטומטית מחדש לת
 
 #: src/Views/HardwareView.vala:49
 msgid "You do not have permission to change the device name"
-msgstr ""
+msgstr "אין לך הרשאה לשנות את שם המכשיר"
 
 #: src/Views/HardwareView.vala:60
 #, c-format
@@ -316,16 +316,12 @@ msgid "Manufacturer Website"
 msgstr "אתר היצרן"
 
 #: src/Views/HardwareView.vala:160
-#, fuzzy
-#| msgid "No Updatable Devices"
 msgid "Update device name"
-msgstr "אין התקנים שניתן לעדכן"
+msgstr "עדכון שם המכשיר"
 
 #: src/Views/HardwareView.vala:180
-#, fuzzy
-#| msgid "Device stages updates"
 msgid "Device name saved"
-msgstr "ההתקן מתעדכן בשלבים"
+msgstr "שם המכשיר נשמר"
 
 #: src/Views/HardwareView.vala:274
 #, c-format
