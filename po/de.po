@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-04 17:45+0000\n"
-"PO-Revision-Date: 2024-04-29 02:13+0000\n"
+"PO-Revision-Date: 2024-06-08 11:16+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:45
@@ -42,7 +42,7 @@ msgstr "Firmware"
 
 #: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
-msgstr ""
+msgstr "Treiber"
 
 #: src/Plug.vala:119
 msgid "Operating System Information"
@@ -81,42 +81,33 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
+"Broadcom®-Wi-Fi-Adapter, NVIDIA®-Grafikkarten und einige virtuelle Maschinen "
+"arbeiten möglicherweise ohne zusätzliche Treiber nicht korrekt."
 
 #: src/Views/DriversView.vala:25
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "No drivers available"
-msgstr "%u Aktualisierung verfügbar"
+msgstr "Keine Treiber verfügbar"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "Für dieses Gerät werden keine zusätzlichen Treiber benötigt."
 
 #: src/Views/DriversView.vala:30
-#, fuzzy
-#| msgid "Checking for Updates"
 msgid "Checking for Drivers"
-msgstr "Nach Aktualisierungen suchen"
+msgstr "Nach Treibern suchen"
 
 #: src/Views/DriversView.vala:31
-#, fuzzy
-#| msgid "Connecting to the firmware service and searching for updates."
 msgid "Connecting to the driver service and searching for drivers."
-msgstr "Mit Firmware-Dienst verbinden und nach Aktualisierungen suchen."
+msgstr "Mit Treiberdienst verbinden und nach Treibern suchen."
 
 #: src/Views/DriversView.vala:51
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install driver"
-msgstr "Installation der Firmware gescheitert"
+msgstr "Installation des Treibers gescheitert"
 
 #: src/Views/DriversView.vala:52
-#, fuzzy
-#| msgid "Manually refreshing updates may resolve the issue"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
-"Ein manuelles erneutes Abrufen der Aktualisierungen behebt das Problem "
+"Ein manuelles erneutes Abrufen der Treiberinformationen behebt das Problem "
 "möglicherweise"
 
 #: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:162
@@ -124,27 +115,18 @@ msgid "Refresh"
 msgstr "Aktualisieren"
 
 #: src/Views/DriversView.vala:55
-#, fuzzy
-#| msgid "Hardware Information"
 msgid "Refresh driver information"
-msgstr "Informationen zur Hardware"
+msgstr "Treiberinformationen aktualisieren"
 
 #: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:174
 msgid "Learn More…"
 msgstr "Mehr erfahren …"
 
 #: src/Views/DriversView.vala:91
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install"
-msgstr "Installation der Firmware gescheitert"
+msgstr "Installation gescheitert"
 
 #: src/Views/DriversView.vala:92
-#, fuzzy
-#| msgid ""
-#| "This may have been caused by sideloaded or manually compiled software, a "
-#| "third-party software source, or a package manager error. Manually "
-#| "refreshing updates may resolve the issue."
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -152,13 +134,13 @@ msgid ""
 msgstr ""
 "Der Grund könnte in per Sideload installierter oder manuell kompilierter "
 "Software, einer Software-Dritt-Quelle oder einem Fehler in der "
-"Paketverwaltung liegen. Ein manuelles erneutes Abrufen der Aktualisierungen "
-"behebt das Problem möglicherweise."
+"Paketverwaltung liegen. Ein manuelles Aktualisieren behebt das Problem "
+"möglicherweise."
 
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "%s installieren …"
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
@@ -328,7 +310,7 @@ msgstr ""
 
 #: src/Views/HardwareView.vala:49
 msgid "You do not have permission to change the device name"
-msgstr ""
+msgstr "Sie haben nicht die Berechtigung, den Gerätenamen zu ändern"
 
 #: src/Views/HardwareView.vala:60
 #, c-format
@@ -348,15 +330,12 @@ msgid "Manufacturer Website"
 msgstr "Hersteller-Internet-Seite"
 
 #: src/Views/HardwareView.vala:160
-#, fuzzy
-#| msgid "No Updatable Devices"
 msgid "Update device name"
-msgstr "Keine aktualisierbaren Geräte"
+msgstr "Gerätenamen aktualisieren"
 
 #: src/Views/HardwareView.vala:180
-#, fuzzy
 msgid "Device name saved"
-msgstr "Aktualisierungen erfolgen bei diesem Gerät gestaffelt"
+msgstr "Gerätenamen gespeichert"
 
 #: src/Views/HardwareView.vala:274
 #, c-format
