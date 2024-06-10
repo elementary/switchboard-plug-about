@@ -675,7 +675,12 @@ public class About.OperatingSystemView : Gtk.Box {
             );
         }
 
+        class construct {
+            set_accessible_role (LINK);
+        }
+
         construct {
+
             var image = new Gtk.Image.from_icon_name (icon_name) {
                 pixel_size = 16
             };
