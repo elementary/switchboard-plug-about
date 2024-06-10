@@ -21,7 +21,67 @@
 public class About.OperatingSystemView : Gtk.Box {
     private static Settings update_settings = new Settings ("io.elementary.settings-daemon.system-update");
 
-    private string support_url;
+    private static string _bug_url;
+    private static string bug_url {
+        get {
+            if (_bug_url == null) {
+                _bug_url = Environment.get_os_info (GLib.OsInfoKey.BUG_REPORT_URL);
+
+                if (_bug_url == null) {
+                    _bug_url = "https://docs.elementary.io/contributor-guide/feedback/reporting-issues";
+                }
+            }
+
+            return _bug_url;
+        }
+    }
+
+    private static string _documentation_url;
+    private static string documentation_url {
+        get {
+            if (_documentation_url == null) {
+                _documentation_url = Environment.get_os_info (GLib.OsInfoKey.DOCUMENTATION_URL);
+
+                if (_documentation_url == null) {
+                    _documentation_url = "https://elementary.io/docs/learning-the-basics";
+                }
+            }
+
+            return _documentation_url;
+        }
+    }
+
+    private static string _website_url;
+    private static string website_url {
+        get {
+            if (_website_url == null) {
+                _website_url = Environment.get_os_info (GLib.OsInfoKey.HOME_URL);
+
+                if (_website_url == null) {
+                    _website_url = "https://elementary.io";
+                }
+            }
+
+            return _website_url;
+        }
+    }
+
+
+    private static string _support_url;
+    private static string support_url {
+        get {
+            if (_support_url == null) {
+                _support_url = Environment.get_os_info (GLib.OsInfoKey.SUPPORT_URL);
+
+                if (_support_url == null) {
+                    _support_url = "https://elementary.io/support";
+                }
+            }
+
+            return _support_url;
+        }
+    }
+
     private File? logo_file;
     private Adw.Avatar? logo;
     private Gtk.StringList packages;
@@ -43,11 +103,6 @@ public class About.OperatingSystemView : Gtk.Box {
         Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (), style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         var uts_name = Posix.utsname ();
-
-        support_url = Environment.get_os_info (GLib.OsInfoKey.SUPPORT_URL);
-        if (support_url == "" || support_url == null) {
-            support_url = "https://elementary.io/support";
-        }
 
         var logo_icon_name = Environment.get_os_info ("LOGO");
         if (logo_icon_name == "" || logo_icon_name == null) {
@@ -112,29 +167,6 @@ public class About.OperatingSystemView : Gtk.Box {
         };
         kernel_version_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
         kernel_version_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
-
-        var website_url = Environment.get_os_info (GLib.OsInfoKey.HOME_URL);
-        if (website_url == "" || website_url == null) {
-            website_url = "https://elementary.io";
-        }
-
-        var website_label = new Gtk.LinkButton.with_label (website_url, _("Website"));
-
-
-        var help_button = new Gtk.LinkButton.with_label (support_url, _("Get Support")) {
-            halign = Gtk.Align.CENTER,
-            hexpand = true
-        };
-
-        var translate_button = new Gtk.LinkButton.with_label (
-            "https://l10n.elementary.io/projects/",
-            _("Suggest Translations")
-        );
-
-        var bug_button = new Gtk.Button.with_label (_("Send Feedback")) {
-            halign = END,
-            hexpand = true
-        };
 
         packages = new Gtk.StringList (null);
 
@@ -215,7 +247,54 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_list.get_first_child ().focusable = false;
         updates_list.get_last_child ().focusable = false;
 
+        var thebasics_link = new LinkRow (
+            documentation_url,
+            _("Basics Guide"),
+            "text-x-generic-symbolic",
+            "green"
+        );
+
+        var support_link = new LinkRow (
+            support_url,
+            _("Get Community Support"),
+            "help-contents-symbolic",
+            "blue"
+        );
+
+        var website_link = new LinkRow (
+            website_url,
+            _("Our Website"),
+            "view-reader-symbolic",
+            "slate"
+        );
+
+        var getinvolved_link = new LinkRow (
+            "https://elementary.io/get-involved",
+            _("Get Involved or Sponsor Us"),
+            "face-heart-symbolic",
+            "pink"
+        );
+
+        var links_list = new Gtk.ListBox () {
+            margin_bottom = 12,
+            margin_top = 12,
+            valign = CENTER,
+            show_separators = true,
+            selection_mode = NONE
+        };
+        links_list.add_css_class ("boxed-list");
+        links_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
+        links_list.append (thebasics_link);
+        links_list.append (support_link);
+        links_list.append (website_link);
+        links_list.append (getinvolved_link);
+
         var settings_restore_button = new Gtk.Button.with_label (_("Restore Default Settings"));
+
+        var bug_button = new Gtk.Button.with_label (_("Send Feedback")) {
+            halign = END,
+            hexpand = true
+        };
 
         var button_grid = new Gtk.Box (HORIZONTAL, 6);
         button_grid.append (settings_restore_button);
@@ -227,16 +306,18 @@ public class About.OperatingSystemView : Gtk.Box {
             vexpand = true
         };
         software_grid.attach (logo_overlay, 0, 0, 1, 4);
-        software_grid.attach (title, 1, 0, 3);
+        software_grid.attach (title, 1, 0);
 
-        software_grid.attach (kernel_version_label, 1, 2, 3);
-        software_grid.attach (updates_list, 1, 3, 3);
-        software_grid.attach (website_label, 1, 4);
-        software_grid.attach (help_button, 2, 4);
-        software_grid.attach (translate_button, 3, 4);
+        software_grid.attach (kernel_version_label, 1, 2);
+        software_grid.attach (updates_list, 1, 3);
+        software_grid.attach (links_list, 1, 4);
 
         var clamp = new Adw.Clamp () {
             child = software_grid
+        };
+
+        var scrolled_window = new Gtk.ScrolledWindow () {
+            child = clamp
         };
 
         margin_top = 12;
@@ -245,7 +326,7 @@ public class About.OperatingSystemView : Gtk.Box {
         margin_start = 12;
         orientation = Gtk.Orientation.VERTICAL;
         spacing = 12;
-        append (clamp);
+        append (scrolled_window);
         append (button_grid);
 
         var system_updates_settings = new Settings ("io.elementary.settings-daemon.system-update");
@@ -260,11 +341,15 @@ public class About.OperatingSystemView : Gtk.Box {
                     appinfo.launch (null, null);
                 } catch (Error e) {
                     critical (e.message);
-                    launch_support_url ();
+                    launch_uri (bug_url);
                 }
             } else {
-                launch_support_url ();
+                launch_uri (bug_url);
             }
+        });
+
+        links_list.row_activated.connect ((row) => {
+            launch_uri (((LinkRow) row).uri);
         });
 
         get_upstream_release.begin ();
@@ -483,12 +568,12 @@ public class About.OperatingSystemView : Gtk.Box {
         }
     }
 
-    private void launch_support_url () {
-        try {
-            AppInfo.launch_default_for_uri (support_url, null);
-        } catch (Error e) {
-            critical (e.message);
-        }
+    private void launch_uri (string uri) {
+        var uri_launcher = new Gtk.UriLauncher (uri);
+        uri_launcher.launch.begin (
+            ((Gtk.Application) GLib.Application.get_default ()).active_window,
+            null
+        );
     }
 
     private void settings_restore_clicked () {
@@ -573,5 +658,44 @@ public class About.OperatingSystemView : Gtk.Box {
         }
         settings.apply ();
         GLib.Settings.sync ();
+    }
+
+    private class LinkRow : Gtk.ListBoxRow {
+        public string uri { get; construct; }
+        public string icon_name { get; construct; }
+        public string label_string { get; construct; }
+        public string color { get; construct; }
+
+        public LinkRow (string uri, string label_string, string icon_name, string color) {
+            Object (
+                uri: uri,
+                label_string: label_string,
+                icon_name: icon_name,
+                color: color
+            );
+        }
+
+        construct {
+            var image = new Gtk.Image.from_icon_name (icon_name) {
+                pixel_size = 16
+            };
+            image.add_css_class (Granite.STYLE_CLASS_ACCENT);
+            image.add_css_class (color);
+
+            var left_label = new Gtk.Label (label_string) {
+                hexpand = true,
+                xalign = 0
+            };
+
+            var link_image = new Gtk.Image.from_icon_name ("adw-external-link-symbolic");
+
+            var box = new Gtk.Box (HORIZONTAL, 0);
+            box.append (image);
+            box.append (left_label);
+            box.append (link_image);
+
+            child = box;
+            add_css_class ("link");
+        }
     }
 }
