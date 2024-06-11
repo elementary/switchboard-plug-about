@@ -256,7 +256,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         var support_link = new LinkRow (
             support_url,
-            _("Get Community Support"),
+            _("Get Help"),
             "help-contents-symbolic",
             "blue"
         );
