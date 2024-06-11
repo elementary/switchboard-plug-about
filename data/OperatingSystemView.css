@@ -17,3 +17,12 @@
         0 2px 3px alpha(@accent_color_900, 0.2);
     -gtk-icon-style: symbolic;
 }
+
+row modelbutton {
+   padding: 3px 6px;
+}
+
+row.link box {
+    padding: 0 6px;
+    border-spacing: 12px;
+}
