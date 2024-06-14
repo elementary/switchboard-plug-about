@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-04 17:45+0000\n"
+"POT-Creation-Date: 2024-06-14 23:15+0000\n"
 "PO-Revision-Date: 2024-04-20 16:13+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -52,15 +52,15 @@ msgstr "Informações do sistema operativo"
 msgid "Hardware Information"
 msgstr "Informações do equipamento"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:218
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:292
 msgid "Restore Default Settings"
 msgstr "Restaurar definições predefinidas"
 
-#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:131
+#: src/Plug.vala:123
 msgid "Suggest Translations"
 msgstr "Sugerir traduções"
 
-#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:134
+#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:294
 msgid "Send Feedback"
 msgstr "Enviar Feedback"
 
@@ -68,7 +68,7 @@ msgstr "Enviar Feedback"
 msgid "Report a Problem"
 msgstr "Reportar um problema"
 
-#: src/Plug.vala:126 src/Views/OperatingSystemView.vala:124
+#: src/Plug.vala:126
 msgid "Get Support"
 msgstr "Obter suporte"
 
@@ -117,7 +117,7 @@ msgstr "Falha na instalação da versão do firmware"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr "A atualização manual das atualizações pode resolver o problema"
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:162
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:194
 msgid "Refresh"
 msgstr "Atualizar"
 
@@ -127,7 +127,7 @@ msgstr "Atualizar"
 msgid "Refresh driver information"
 msgstr "Informações do equipamento"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:174
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:206
 msgid "Learn More…"
 msgstr "Saiba mais…"
 
@@ -212,7 +212,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "Não desligue o dispositivo durante a atualização."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:397
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:482
 msgid "Checking for Updates"
 msgstr "A procurar por atualizações"
 
@@ -419,23 +419,19 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:121
-msgid "Website"
-msgstr "Website"
-
-#: src/Views/OperatingSystemView.vala:157
+#: src/Views/OperatingSystemView.vala:189
 msgid "Download"
 msgstr "Transferir"
 
-#: src/Views/OperatingSystemView.vala:160
+#: src/Views/OperatingSystemView.vala:192
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/Views/OperatingSystemView.vala:186
+#: src/Views/OperatingSystemView.vala:218
 msgid "Automatic Updates"
 msgstr "Atualizações automáticas"
 
-#: src/Views/OperatingSystemView.vala:187
+#: src/Views/OperatingSystemView.vala:219
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -443,68 +439,86 @@ msgstr ""
 "As atualizações serão transferidas automaticamente. Serão instaladas quando "
 "o dispositivo for reiniciado."
 
-#: src/Views/OperatingSystemView.vala:355
+#: src/Views/OperatingSystemView.vala:252
+msgid "Basics Guide"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:259
+msgid "Get Help"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:266
+#, fuzzy
+#| msgid "Website"
+msgid "Our Website"
+msgstr "Website"
+
+#: src/Views/OperatingSystemView.vala:273
+msgid "Get Involved or Sponsor Us"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:440
 #, c-format
 msgid "Built on %s"
 msgstr "Baseado no %s"
 
-#: src/Views/OperatingSystemView.vala:374
+#: src/Views/OperatingSystemView.vala:459
 msgid "System updates not available"
 msgstr "Atualizações do sistema não disponíveis"
 
-#: src/Views/OperatingSystemView.vala:375
+#: src/Views/OperatingSystemView.vala:460
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 "Não foi possível ligar ao backend. Tente terminar a sessão para resolver o "
 "problema."
 
-#: src/Views/OperatingSystemView.vala:387
+#: src/Views/OperatingSystemView.vala:472
 msgid "Up To Date"
 msgstr "Atualizado"
 
-#: src/Views/OperatingSystemView.vala:388
+#: src/Views/OperatingSystemView.vala:473
 #, c-format
 msgid "Last checked %s"
 msgstr "Última verificação %s"
 
-#: src/Views/OperatingSystemView.vala:403
+#: src/Views/OperatingSystemView.vala:488
 msgid "Updates Available"
 msgstr "Atualizações disponíveis"
 
-#: src/Views/OperatingSystemView.vala:410
+#: src/Views/OperatingSystemView.vala:495
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
 msgstr[0] "%i atualização disponível"
 msgstr[1] "%i atualizações disponíveis"
 
-#: src/Views/OperatingSystemView.vala:421
+#: src/Views/OperatingSystemView.vala:506
 msgid "Unable to determine number of updates"
 msgstr "Não foi possível determinar o número de atualizações"
 
-#: src/Views/OperatingSystemView.vala:427
+#: src/Views/OperatingSystemView.vala:512
 msgid "Downloading Updates"
 msgstr "A transferir atualizações"
 
-#: src/Views/OperatingSystemView.vala:433
+#: src/Views/OperatingSystemView.vala:518
 msgid "Restart Required"
 msgstr "Necessário reiniciar"
 
-#: src/Views/OperatingSystemView.vala:434
+#: src/Views/OperatingSystemView.vala:519
 msgid "A restart is required to finish installing updates"
 msgstr ""
 "É necessário reiniciar o sistema para concluir a instalação das atualizações"
 
-#: src/Views/OperatingSystemView.vala:439
-#: src/Views/OperatingSystemView.vala:453
+#: src/Views/OperatingSystemView.vala:524
+#: src/Views/OperatingSystemView.vala:538
 msgid "Failed to download updates"
 msgstr "Falha ao transferir atualizações"
 
-#: src/Views/OperatingSystemView.vala:440
+#: src/Views/OperatingSystemView.vala:525
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "A atualização manual das atualizações pode resolver o problema"
 
-#: src/Views/OperatingSystemView.vala:454
+#: src/Views/OperatingSystemView.vala:539
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -514,12 +528,12 @@ msgstr ""
 "sideload, uma fonte de software de terceiros ou um erro do gestor de "
 "pacotes. A atualização manual das atualizações pode resolver o problema."
 
-#: src/Views/OperatingSystemView.vala:496
+#: src/Views/OperatingSystemView.vala:581
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 "As definições de sistema serão restauradas para as definições de fábrica"
 
-#: src/Views/OperatingSystemView.vala:497
+#: src/Views/OperatingSystemView.vala:582
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -527,7 +541,7 @@ msgstr ""
 "Todas as definições e dados do sistema serão substituídos pelos valores "
 "predefinidos. Dados pessoais, como músicas e imagens, não são afetadas."
 
-#: src/Views/OperatingSystemView.vala:505
+#: src/Views/OperatingSystemView.vala:590
 msgid "Restore Settings"
 msgstr "Restaurar definições"
 
