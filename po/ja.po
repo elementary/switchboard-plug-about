@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 23:15+0000\n"
-"PO-Revision-Date: 2024-06-06 06:13+0000\n"
+"PO-Revision-Date: 2024-06-16 02:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:45
@@ -418,21 +418,19 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:252
 msgid "Basics Guide"
-msgstr ""
+msgstr "基本操作ガイド"
 
 #: src/Views/OperatingSystemView.vala:259
 msgid "Get Help"
-msgstr ""
+msgstr "サポートを受ける"
 
 #: src/Views/OperatingSystemView.vala:266
-#, fuzzy
-#| msgid "Website"
 msgid "Our Website"
-msgstr "Web サイト"
+msgstr "公式 Web サイト"
 
 #: src/Views/OperatingSystemView.vala:273
 msgid "Get Involved or Sponsor Us"
-msgstr ""
+msgstr "開発に参加、または資金提供"
 
 #: src/Views/OperatingSystemView.vala:440
 #, c-format
