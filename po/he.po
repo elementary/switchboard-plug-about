@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 23:15+0000\n"
-"PO-Revision-Date: 2024-06-06 06:13+0000\n"
+"PO-Revision-Date: 2024-06-16 02:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:45
@@ -418,14 +418,12 @@ msgid "Get Help"
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:266
-#, fuzzy
-#| msgid "Website"
 msgid "Our Website"
-msgstr "אתר אינטרנט"
+msgstr "אתר האינטרנט שלנו"
 
 #: src/Views/OperatingSystemView.vala:273
 msgid "Get Involved or Sponsor Us"
-msgstr ""
+msgstr "השתתפות או תמיכה במימון"
 
 #: src/Views/OperatingSystemView.vala:440
 #, c-format
