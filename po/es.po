@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 23:15+0000\n"
-"PO-Revision-Date: 2024-06-11 00:16+0000\n"
+"PO-Revision-Date: 2024-06-16 02:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/es/>\n"
@@ -42,7 +42,7 @@ msgstr "Firmware"
 
 #: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
-msgstr ""
+msgstr "Controladores"
 
 #: src/Plug.vala:119
 msgid "Operating System Information"
@@ -62,7 +62,7 @@ msgstr "Sugerir traducciones"
 
 #: src/Plug.vala:124 src/Views/OperatingSystemView.vala:294
 msgid "Send Feedback"
-msgstr "Enviar observaciones"
+msgstr "Enviar comentarios"
 
 #: src/Plug.vala:125
 msgid "Report a Problem"
@@ -70,7 +70,7 @@ msgstr "Informar de un problema"
 
 #: src/Plug.vala:126
 msgid "Get Support"
-msgstr "Obtener asistencia"
+msgstr "Obtener soporte"
 
 #: src/Plug.vala:127
 msgid "Updates"
@@ -81,59 +81,51 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
+"Los adaptadores de wifi de Broadcom®, procesadores gráficos de NVIDIA® y "
+"algunas máquinas virtuales podrían no funcionar sin controladores "
+"adicionales."
 
 #: src/Views/DriversView.vala:25
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "No drivers available"
-msgstr "%u actualización disponible"
+msgstr "No hay controladores disponibles"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "Este equipo no necesita controladores adicionales."
 
 #: src/Views/DriversView.vala:30
-#, fuzzy
-#| msgid "Checking for Updates"
 msgid "Checking for Drivers"
-msgstr "Comprobando actualizaciones"
+msgstr "Comprobando controladores"
 
 #: src/Views/DriversView.vala:31
-#, fuzzy
-#| msgid "Connecting to the firmware service and searching for updates."
 msgid "Connecting to the driver service and searching for drivers."
-msgstr "Conexión al servicio de firmware y búsqueda de actualizaciones."
+msgstr "Conectándose al servicio de controladores y buscando."
 
 #: src/Views/DriversView.vala:51
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install driver"
-msgstr "No se pudo instalar la versión de firmware"
+msgstr "No se pudo instalar el controlador"
 
 #: src/Views/DriversView.vala:52
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
+"Actualizar manualmente la información del controlador puede solucionar el "
+"problema"
 
 #: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:194
 msgid "Refresh"
 msgstr "Actualizar"
 
 #: src/Views/DriversView.vala:55
-#, fuzzy
-#| msgid "Hardware Information"
 msgid "Refresh driver information"
-msgstr "Información de hardware"
+msgstr "Actualizar información de hardware"
 
 #: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:206
 msgid "Learn More…"
-msgstr ""
+msgstr "Más información…"
 
 #: src/Views/DriversView.vala:91
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install"
-msgstr "No se pudo instalar la versión de firmware"
+msgstr "No se pudo instalar"
 
 #: src/Views/DriversView.vala:92
 msgid ""
@@ -141,11 +133,14 @@ msgid ""
 "third-party software source, or a package manager error. Manually refreshing "
 "may resolve the issue."
 msgstr ""
+"Esto puede deberse a una instalación externa o compilación manual de una "
+"aplicación, una fuente de aplicaciones de terceros, o un error en el gestor "
+"de paquetes. Actualizar manualmente podría solucionar el problema."
 
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "Instalando %s…"
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
@@ -177,7 +172,7 @@ msgstr "Actualizar"
 
 #: src/Views/FirmwareReleaseView.vala:201
 msgid "Up to date"
-msgstr "Actualizado"
+msgstr "Al día"
 
 #: src/Views/FirmwareReleaseView.vala:222
 msgid "less than a minute"
@@ -201,7 +196,7 @@ msgstr ""
 
 #: src/Views/FirmwareView.vala:42
 msgid "Do not unplug the device during the update."
-msgstr "No desconecte el dispositivo durante la actualización."
+msgstr "No desconecte el equipo durante la actualización."
 
 #: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:482
 msgid "Checking for Updates"
@@ -209,13 +204,11 @@ msgstr "Comprobando actualizaciones"
 
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
-msgstr "Conexión al servicio de firmware y búsqueda de actualizaciones."
+msgstr "Conectándose al servicio de firmware y buscando."
 
 #: src/Views/FirmwareView.vala:86
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"
-msgstr "No se pudo instalar la versión de firmware"
+msgstr "Reinicie para configurar el firmware…"
 
 #: src/Views/FirmwareView.vala:116
 msgid "Firmware Updates Are Not Available"
@@ -270,8 +263,7 @@ msgstr "Una actualización necesita reiniciar el equipo para completarse"
 
 #: src/Views/FirmwareView.vala:354
 msgid "This will close all open applications and restart this device."
-msgstr ""
-"Se cerrarán todas las aplicaciones abiertas y se reiniciará este dispositivo."
+msgstr "Se cerrarán todas las aplicaciones abiertas y se reiniciará el equipo."
 
 #: src/Views/FirmwareView.vala:362 src/Views/FirmwareView.vala:411
 msgid "Restart"
@@ -283,8 +275,7 @@ msgstr "Una actualización necesita apagar el equipo para completarse"
 
 #: src/Views/FirmwareView.vala:378
 msgid "This will close all open applications and turn off this device."
-msgstr ""
-"Se cerrarán todas las aplicaciones abiertas y se apagará este dispositivo."
+msgstr "Se cerrarán todas las aplicaciones abiertas y se apagará el equipo."
 
 #: src/Views/FirmwareView.vala:386
 msgid "Shut Down"
@@ -292,30 +283,29 @@ msgstr "Apagar"
 
 #: src/Views/FirmwareView.vala:401
 msgid "Restart to firmware setup"
-msgstr ""
+msgstr "Reiniciar para configurar firmware"
 
 #: src/Views/FirmwareView.vala:402
-#, fuzzy
-#| msgid "This will close all open applications and restart this device."
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
 msgstr ""
-"Se cerrarán todas las aplicaciones abiertas y se reiniciará este dispositivo."
+"Se cerrarán todas las aplicaciones abiertas, se reiniciará el equipo y se "
+"abrirá la ventana de configuración de firmware."
 
 #: src/Views/FirmwareView.vala:426
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Unable to restart to firmware setup"
-msgstr "No se pudo instalar la versión de firmware"
+msgstr "No se pudo reiniciar para configurar el firmware"
 
 #: src/Views/FirmwareView.vala:427
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
+"Un error del sistema no permitió reiniciar automáticamente y acceder a la "
+"configuración del firmware."
 
 #: src/Views/HardwareView.vala:49
 msgid "You do not have permission to change the device name"
-msgstr ""
+msgstr "No tiene permisos para cambiar el nombre del equipo"
 
 #: src/Views/HardwareView.vala:60
 #, c-format
@@ -335,14 +325,12 @@ msgid "Manufacturer Website"
 msgstr "Sitio web del fabricante"
 
 #: src/Views/HardwareView.vala:160
-#, fuzzy
-#| msgid "No Updatable Devices"
 msgid "Update device name"
-msgstr "No hay ningún dispositivo actualizable"
+msgstr "Actualizar el nombre del equipo"
 
 #: src/Views/HardwareView.vala:180
 msgid "Device name saved"
-msgstr ""
+msgstr "Se guardó el nombre del equipo"
 
 #: src/Views/HardwareView.vala:274
 #, c-format
@@ -396,59 +384,57 @@ msgstr "%s de almacenamiento"
 #: src/Views/HardwareView.vala:696
 msgid "byte"
 msgid_plural "bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "byte"
+msgstr[1] "bytes"
 
 #: src/Views/HardwareView.vala:698
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%u byte"
+msgstr[1] "%u bytes"
 
 #: src/Views/HardwareView.vala:705
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
-msgstr ""
+msgstr "%u %s"
 
 #: src/Views/OperatingSystemView.vala:189
 msgid "Download"
-msgstr ""
+msgstr "Descargar"
 
 #: src/Views/OperatingSystemView.vala:192
 msgid "Cancel"
 msgstr "Cancelar"
 
 #: src/Views/OperatingSystemView.vala:218
-#, fuzzy
-#| msgid "All Updates"
 msgid "Automatic Updates"
-msgstr "Todas las actualizaciones"
+msgstr "Actualizaciones automáticas"
 
 #: src/Views/OperatingSystemView.vala:219
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
+"Las actualizaciones se descargarán automáticamente. Serán instaladas cuando "
+"se reinicie el equipo."
 
 #: src/Views/OperatingSystemView.vala:252
 msgid "Basics Guide"
-msgstr ""
+msgstr "Guía de conceptos básicos"
 
 #: src/Views/OperatingSystemView.vala:259
 msgid "Get Help"
-msgstr ""
+msgstr "Obtener ayuda"
 
 #: src/Views/OperatingSystemView.vala:266
-#, fuzzy
-#| msgid "Website"
 msgid "Our Website"
-msgstr "Sitio web"
+msgstr "Nuestro sitio web"
 
 #: src/Views/OperatingSystemView.vala:273
 msgid "Get Involved or Sponsor Us"
-msgstr ""
+msgstr "Participar o patrocinarnos"
 
 #: src/Views/OperatingSystemView.vala:440
 #, c-format
@@ -456,71 +442,59 @@ msgid "Built on %s"
 msgstr "Basado en %s"
 
 #: src/Views/OperatingSystemView.vala:459
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "System updates not available"
-msgstr "%u actualización disponible"
+msgstr "Actualizaciones del sistema no disponibles"
 
 #: src/Views/OperatingSystemView.vala:460
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
+"No se pudo conectar a la base de datos. Intente cerrar sesión para "
+"solucionar el problema."
 
 #: src/Views/OperatingSystemView.vala:472
-#, fuzzy
-#| msgid "Up to Date"
 msgid "Up To Date"
 msgstr "Al día"
 
 #: src/Views/OperatingSystemView.vala:473
 #, c-format
 msgid "Last checked %s"
-msgstr ""
+msgstr "Última revisión %s"
 
 #: src/Views/OperatingSystemView.vala:488
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Updates Available"
-msgstr "%u actualización disponible"
+msgstr "Actualizaciones disponibles"
 
 #: src/Views/OperatingSystemView.vala:495
-#, fuzzy, c-format
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
+#, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
-msgstr[0] "%u actualización disponible"
-msgstr[1] "%u actualizaciones disponibles"
+msgstr[0] "%i actualización disponible"
+msgstr[1] "%i actualizaciones disponibles"
 
 #: src/Views/OperatingSystemView.vala:506
 msgid "Unable to determine number of updates"
-msgstr ""
+msgstr "No se puede determinar el número de actualizaciones"
 
 #: src/Views/OperatingSystemView.vala:512
-#, fuzzy
-#| msgid "All Updates"
 msgid "Downloading Updates"
-msgstr "Todas las actualizaciones"
+msgstr "Descargando actualizaciones"
 
 #: src/Views/OperatingSystemView.vala:518
-#, fuzzy
-#| msgid "Restart"
 msgid "Restart Required"
-msgstr "Reiniciar"
+msgstr "Se requiere reiniciar"
 
 #: src/Views/OperatingSystemView.vala:519
 msgid "A restart is required to finish installing updates"
-msgstr ""
+msgstr "Es necesario reiniciar para terminar de instalar las actualizaciones"
 
 #: src/Views/OperatingSystemView.vala:524
 #: src/Views/OperatingSystemView.vala:538
 msgid "Failed to download updates"
-msgstr ""
+msgstr "No se pudo descargar las actualizaciones"
 
 #: src/Views/OperatingSystemView.vala:525
 msgid "Manually refreshing updates may resolve the issue"
-msgstr ""
+msgstr "Refrescar las actualizaciones manualmente podría solucionar el problema"
 
 #: src/Views/OperatingSystemView.vala:539
 msgid ""
@@ -528,11 +502,13 @@ msgid ""
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
+"Esto puede deberse a una instalación externa o compilación manual de una "
+"aplicación, una fuente de aplicaciones de terceros, o un error en el gestor "
+"de paquetes. Refrescar las actualizaciones podría solucionar el problema."
 
 #: src/Views/OperatingSystemView.vala:581
 msgid "System Settings Will Be Restored to The Factory Defaults"
-msgstr ""
-"Las configuraciones del sistema se restaurarán a sus valores de fábrica"
+msgstr "La configuración del sistema se restaurará a sus valores de fábrica"
 
 #: src/Views/OperatingSystemView.vala:582
 msgid ""
@@ -549,14 +525,14 @@ msgstr "Restaurar configuración"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
-msgstr ""
+msgstr "Novedades"
 
 #: src/Widgets/UpdateDetailsDialog.vala:20
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%u paquete será actualizado"
+msgstr[1] "%u paquetes serán actualizados"
 
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
