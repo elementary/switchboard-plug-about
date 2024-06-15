@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 23:15+0000\n"
-"PO-Revision-Date: 2024-02-09 15:13+0000\n"
+"PO-Revision-Date: 2024-06-16 02:16+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/nb/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:45
@@ -42,7 +42,7 @@ msgstr "Fastvare"
 
 #: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
 msgid "Drivers"
-msgstr ""
+msgstr "Drivere"
 
 #: src/Plug.vala:119
 msgid "Operating System Information"
@@ -81,6 +81,8 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
+"Broadcom®-Wi-Fi adaptere, NVIDIA®-grafikk, og andre virtuelle maskiner "
+"trenger ofte ytterligere drivere."
 
 #: src/Views/DriversView.vala:25
 #, fuzzy
@@ -91,7 +93,7 @@ msgstr "%u oppgradering tilgjengelig"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "Enheten trenger ikke ytterligere drivere."
 
 #: src/Views/DriversView.vala:30
 #, fuzzy
@@ -151,7 +153,7 @@ msgstr ""
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "Installerer %s …"
 
 #: src/Views/FirmwareReleaseView.vala:28
 #, fuzzy
@@ -331,7 +333,7 @@ msgstr "En systemfeil forhindret automatisk omstart inn i fastvareoppsett."
 
 #: src/Views/HardwareView.vala:49
 msgid "You do not have permission to change the device name"
-msgstr ""
+msgstr "Du har ikke tilgang til å endre enhetsnavnet"
 
 #: src/Views/HardwareView.vala:60
 #, c-format
@@ -459,11 +461,11 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:252
 msgid "Basics Guide"
-msgstr ""
+msgstr "Grunnleggende veiledning"
 
 #: src/Views/OperatingSystemView.vala:259
 msgid "Get Help"
-msgstr ""
+msgstr "Få hjelp"
 
 #: src/Views/OperatingSystemView.vala:266
 #, fuzzy
@@ -473,7 +475,7 @@ msgstr "Nettside"
 
 #: src/Views/OperatingSystemView.vala:273
 msgid "Get Involved or Sponsor Us"
-msgstr ""
+msgstr "Involver deg og/eller spons utvikling"
 
 #: src/Views/OperatingSystemView.vala:440
 #, c-format
@@ -489,7 +491,7 @@ msgstr "%u oppgradering tilgjengelig"
 
 #: src/Views/OperatingSystemView.vala:460
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
-msgstr ""
+msgstr "Kunne ikke koble til bakenden. Prøv å logge ut for å løse problemet."
 
 #: src/Views/OperatingSystemView.vala:472
 #, fuzzy
