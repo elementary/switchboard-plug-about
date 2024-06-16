@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 23:15+0000\n"
-"PO-Revision-Date: 2024-06-16 02:16+0000\n"
+"PO-Revision-Date: 2024-06-17 03:16+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/nb/>\n"
@@ -421,20 +421,18 @@ msgstr[0] "byte"
 msgstr[1] "byte"
 
 #: src/Views/HardwareView.vala:698
-#, fuzzy, c-format
-#| msgid "byte"
-#| msgid_plural "bytes"
+#, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
-msgstr[0] "byte"
-msgstr[1] "byte"
+msgstr[0] "%u byte"
+msgstr[1] "%u byte"
 
 #: src/Views/HardwareView.vala:705
 #, fuzzy, c-format
 #| msgid "%llu %s"
 msgctxt "format-size"
 msgid "%u %s"
-msgstr "%llu %s"
+msgstr "%u %s"
 
 #: src/Views/OperatingSystemView.vala:189
 msgid "Download"
@@ -512,13 +510,11 @@ msgid "Updates Available"
 msgstr "%u oppgradering tilgjengelig"
 
 #: src/Views/OperatingSystemView.vala:495
-#, fuzzy, c-format
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
+#, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
-msgstr[0] "%u oppgradering tilgjengelig"
-msgstr[1] "%u oppgraderinger tilgjengelig"
+msgstr[0] "%i oppgradering tilgjengelig"
+msgstr[1] "%i oppgraderinger tilgjengelig"
 
 #: src/Views/OperatingSystemView.vala:506
 #, fuzzy
@@ -590,8 +586,8 @@ msgstr "Nyheter"
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
-msgstr[0] "%s pakke vil bli oppgradert"
-msgstr[1] "%s pakker vil bli oppgradert"
+msgstr[0] "%u pakke vil bli oppgradert"
+msgstr[1] "%u pakker vil bli oppgradert"
 
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
