@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 23:15+0000\n"
-"PO-Revision-Date: 2024-06-11 00:16+0000\n"
+"PO-Revision-Date: 2024-06-19 02:57+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/hu/>\n"
@@ -420,21 +420,19 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:252
 msgid "Basics Guide"
-msgstr ""
+msgstr "Útmutató az alapokhoz"
 
 #: src/Views/OperatingSystemView.vala:259
 msgid "Get Help"
-msgstr ""
+msgstr "Segítségkérés"
 
 #: src/Views/OperatingSystemView.vala:266
-#, fuzzy
-#| msgid "Website"
 msgid "Our Website"
-msgstr "Weboldal"
+msgstr "Weboldalunk"
 
 #: src/Views/OperatingSystemView.vala:273
 msgid "Get Involved or Sponsor Us"
-msgstr ""
+msgstr "Legyen Ön is részese vagy támogasson minket"
 
 #: src/Views/OperatingSystemView.vala:440
 #, c-format
