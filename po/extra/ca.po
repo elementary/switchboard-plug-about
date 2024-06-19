@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:15+0000\n"
+"POT-Creation-Date: 2024-06-19 16:22+0000\n"
 "PO-Revision-Date: 2023-01-26 18:46+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -19,117 +19,120 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.14.2\n"
 
-#: data/system.metainfo.xml.in:5
+#: data/system.metainfo.xml.in:10
 msgid "System"
 msgstr "Sistema"
 
-#: data/system.metainfo.xml.in:6
+#: data/system.metainfo.xml.in:11
 msgid "View operating system and hardware information"
 msgstr "Mostra la informació del sistema operatiu i del maquinari"
 
-#: data/system.metainfo.xml.in:13 data/system.metainfo.xml.in:28
+#: data/system.metainfo.xml.in:34
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/system.metainfo.xml.in:42 data/system.metainfo.xml.in:57
 msgid "New features:"
 msgstr "Característiques noves:"
 
-#: data/system.metainfo.xml.in:15
+#: data/system.metainfo.xml.in:44
 msgid "Add a button to restart to firmware setup"
 msgstr ""
 "Addició d'un botó per reiniciar i anar a la configuració del microprogramari"
 
-#: data/system.metainfo.xml.in:17 data/system.metainfo.xml.in:33
-#: data/system.metainfo.xml.in:41 data/system.metainfo.xml.in:68
+#: data/system.metainfo.xml.in:46 data/system.metainfo.xml.in:62
+#: data/system.metainfo.xml.in:71 data/system.metainfo.xml.in:99
 msgid "Minor updates:"
 msgstr "Actualitzacions menors:"
 
-#: data/system.metainfo.xml.in:19
+#: data/system.metainfo.xml.in:48
 msgid "Get more accurate memory and storage information"
 msgstr "Informació més precisa sobre memòria i emmagatzematge"
 
-#: data/system.metainfo.xml.in:20
+#: data/system.metainfo.xml.in:49
 msgid "Handle Ryzen CPU and AMD GPU vendor string"
 msgstr "Gestió de la cadena de proveïdors de CPU Ryzen i GPU AMD"
 
-#: data/system.metainfo.xml.in:21 data/system.metainfo.xml.in:35
-#: data/system.metainfo.xml.in:45 data/system.metainfo.xml.in:72
-#: data/system.metainfo.xml.in:78 data/system.metainfo.xml.in:83
-#: data/system.metainfo.xml.in:88
+#: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:64
+#: data/system.metainfo.xml.in:75 data/system.metainfo.xml.in:103
+#: data/system.metainfo.xml.in:110
 msgid "Updated translations"
 msgstr "Traduccions actualitzades"
 
-#: data/system.metainfo.xml.in:30
+#: data/system.metainfo.xml.in:59
 msgid "Added support for dark style manufacturer logos"
 msgstr ""
 "S'ha afegit suport per als logotips dels fabricants per a l'estil fosc."
 
-#: data/system.metainfo.xml.in:31
+#: data/system.metainfo.xml.in:60
 msgid "Added support for offline firmware updates"
 msgstr ""
 "S'ha afegit suport per a actualitzacions de microprogramari fora de línia."
 
-#: data/system.metainfo.xml.in:43
+#: data/system.metainfo.xml.in:73
 msgid "Use formatted device name when available"
 msgstr "Usa el nom del dispositiu formatat quan està disponible."
 
-#: data/system.metainfo.xml.in:44
+#: data/system.metainfo.xml.in:74
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr "Es mostra més informació per a certes GPU, inclosa Intel® Xe Graphics."
 
-#: data/system.metainfo.xml.in:51
+#: data/system.metainfo.xml.in:82
 msgid "Redesign and new features:"
 msgstr "Redisseny i funcions noves:"
 
-#: data/system.metainfo.xml.in:53
+#: data/system.metainfo.xml.in:84
 msgid "Rename from About to System"
 msgstr "Canvi de nom des de l'apartat Quant al sistema"
 
-#: data/system.metainfo.xml.in:54
+#: data/system.metainfo.xml.in:85
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr ""
 "Divisió de la informació del maquinari i del sistema operatiu a les seves "
 "pestanyes"
 
-#: data/system.metainfo.xml.in:55
+#: data/system.metainfo.xml.in:86
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
 "Redisseny de la pestanya del Sistema operatiu amb enllaços i botons més clars"
 
-#: data/system.metainfo.xml.in:56
+#: data/system.metainfo.xml.in:87
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
 "Addició d'una vista de microprogramari per gestionar les actualitzacions de "
 "microprogramari del dispositiu"
 
-#: data/system.metainfo.xml.in:58
+#: data/system.metainfo.xml.in:89
 msgid "More information:"
 msgstr "Més informació:"
 
-#: data/system.metainfo.xml.in:60
+#: data/system.metainfo.xml.in:91
 msgid "Provide information for ARM CPUs"
 msgstr "Es proporciona informació per a les CPU d'ARM."
 
-#: data/system.metainfo.xml.in:61
+#: data/system.metainfo.xml.in:92
 msgid "Provide information for more types of Graphics"
 msgstr "Proporciona informació per a més tipus de gràfics."
 
-#: data/system.metainfo.xml.in:63
+#: data/system.metainfo.xml.in:94
 msgid "Fixes:"
 msgstr "Correccions:"
 
-#: data/system.metainfo.xml.in:65
+#: data/system.metainfo.xml.in:96
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr ""
 "Solució d'un problema que provocava que la vista es destruís aviat en "
 "allunyar-se'n"
 
-#: data/system.metainfo.xml.in:66
+#: data/system.metainfo.xml.in:97
 msgid "Fix system memory calculation"
 msgstr "Correcció del càlcul de la memòria del sistema"
 
-#: data/system.metainfo.xml.in:70
+#: data/system.metainfo.xml.in:101
 msgid "Ellipsize long hardware names"
 msgstr "El·lipsi dels noms de maquinari llargs"
 
-#: data/system.metainfo.xml.in:71
+#: data/system.metainfo.xml.in:102
 msgid "Performance improvements"
 msgstr "Millores de rendiment"
 
