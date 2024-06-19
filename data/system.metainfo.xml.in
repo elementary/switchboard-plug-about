@@ -2,10 +2,39 @@
 <component type="addon">
   <id>io.elementary.settings.system</id>
   <extends>io.elementary.settings</extends>
+  <translation type="gettext">io.elementary.settings.system</translation>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+
+  <icon type="stock">application-x-firmware</icon>
   <name>System</name>
   <summary>View operating system and hardware information</summary>
-  <icon type="stock">application-x-firmware</icon>
-  <translation type="gettext">io.elementary.settings.system</translation>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/main/data/screenshot.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/main/data/screenshot-hardware.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/main/data/screenshot-firmware.png</image>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1" />
+
+  <url type="bugtracker">https://github.com/elementary/switchboard-plug-about/issues</url>
+  <url type="donation">https://elementary.io/get-involved#funding</url>
+  <url type="help">https://github.com/elementary/switchboard-plug-about/discussions</url>
+  <url type="homepage">https://elementary.io/</url>
+  <url type="translate">https://l10n.elementary.io/engage/switchboard/</url>
+
+  <developer id="org.elementaryos">
+    <name>elementary, Inc.</name>
+  </developer>
+  <project_group>elementary</project_group>
+  <update_contact>contact_at_elementary.io</update_contact>
 
   <releases>
     <release version="6.2.0" date="2023-01-26" urgency="medium">
@@ -36,6 +65,7 @@
         </ul>
       </description>
     </release>
+
     <release version="6.0.1" date="2021-08-23" urgency="medium">
       <description>
         <p>Minor updates:</p>
@@ -46,6 +76,7 @@
         </ul>
       </description>
     </release>
+
     <release version="6.0.0" date="2021-07-15" urgency="medium">
       <description>
         <p>Redesign and new features:</p>
@@ -73,35 +104,14 @@
         </ul>
       </description>
     </release>
+
     <release version="2.6.3" date="2020-05-28" urgency="medium">
       <description>
         <p>Updated translations</p>
       </description>
     </release>
-    <release version="2.6.2" date="2020-04-08" urgency="medium">
-      <description>
-        <p>Updated translations</p>
-      </description>
-    </release>
-    <release version="2.6.1" date="2019-11-15" urgency="medium">
-      <description>
-        <p>Updated translations</p>
-      </description>
-    </release>
+
+    <release version="2.6.2" date="2020-04-08" urgency="medium" />
+    <release version="2.6.1" date="2019-11-15" urgency="medium" />
   </releases>
-  <screenshots>
-    <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/main/data/screenshot.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/main/data/screenshot-hardware.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-about/main/data/screenshot-firmware.png</image>
-    </screenshot>
-  </screenshots>
-  <url type="homepage">https://elementary.io</url>
-  <url type="bugtracker">https://github.com/elementary/switchboard-plug-about/issues</url>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0+</project_license>
 </component>
