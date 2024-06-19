@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:15+0000\n"
-"PO-Revision-Date: 2024-06-06 06:13+0000\n"
+"POT-Creation-Date: 2024-06-19 16:22+0000\n"
+"PO-Revision-Date: 2024-06-19 16:22+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ru/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.5.5\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:45
@@ -420,21 +420,19 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:252
 msgid "Basics Guide"
-msgstr ""
+msgstr "Изучение основ"
 
 #: src/Views/OperatingSystemView.vala:259
 msgid "Get Help"
-msgstr ""
+msgstr "Получить помощь"
 
 #: src/Views/OperatingSystemView.vala:266
-#, fuzzy
-#| msgid "Website"
 msgid "Our Website"
-msgstr "Веб-сайт"
+msgstr "Наш веб-сайт"
 
 #: src/Views/OperatingSystemView.vala:273
 msgid "Get Involved or Sponsor Us"
-msgstr ""
+msgstr "Приобщиться или поддержать нас"
 
 #: src/Views/OperatingSystemView.vala:440
 #, c-format

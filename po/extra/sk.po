@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:15+0000\n"
+"POT-Creation-Date: 2024-06-19 16:22+0000\n"
 "PO-Revision-Date: 2022-02-26 00:14+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/about-"
@@ -19,114 +19,117 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/system.metainfo.xml.in:5
+#: data/system.metainfo.xml.in:10
 msgid "System"
 msgstr "Systém"
 
-#: data/system.metainfo.xml.in:6
+#: data/system.metainfo.xml.in:11
 msgid "View operating system and hardware information"
 msgstr "Zobrazujte informácie o operačnom systéme a hardvéri"
 
-#: data/system.metainfo.xml.in:13 data/system.metainfo.xml.in:28
+#: data/system.metainfo.xml.in:34
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/system.metainfo.xml.in:42 data/system.metainfo.xml.in:57
 msgid "New features:"
 msgstr "Nové funkcie:"
 
-#: data/system.metainfo.xml.in:15
+#: data/system.metainfo.xml.in:44
 msgid "Add a button to restart to firmware setup"
 msgstr ""
 
-#: data/system.metainfo.xml.in:17 data/system.metainfo.xml.in:33
-#: data/system.metainfo.xml.in:41 data/system.metainfo.xml.in:68
+#: data/system.metainfo.xml.in:46 data/system.metainfo.xml.in:62
+#: data/system.metainfo.xml.in:71 data/system.metainfo.xml.in:99
 msgid "Minor updates:"
 msgstr "Menšie aktualizácie:"
 
-#: data/system.metainfo.xml.in:19
+#: data/system.metainfo.xml.in:48
 #, fuzzy
 #| msgid "View operating system and hardware information"
 msgid "Get more accurate memory and storage information"
 msgstr "Zobrazujte informácie o operačnom systéme a hardvéri"
 
-#: data/system.metainfo.xml.in:20
+#: data/system.metainfo.xml.in:49
 msgid "Handle Ryzen CPU and AMD GPU vendor string"
 msgstr ""
 
-#: data/system.metainfo.xml.in:21 data/system.metainfo.xml.in:35
-#: data/system.metainfo.xml.in:45 data/system.metainfo.xml.in:72
-#: data/system.metainfo.xml.in:78 data/system.metainfo.xml.in:83
-#: data/system.metainfo.xml.in:88
+#: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:64
+#: data/system.metainfo.xml.in:75 data/system.metainfo.xml.in:103
+#: data/system.metainfo.xml.in:110
 msgid "Updated translations"
 msgstr "Aktualizované preklady"
 
-#: data/system.metainfo.xml.in:30
+#: data/system.metainfo.xml.in:59
 msgid "Added support for dark style manufacturer logos"
 msgstr "Pridaná podpora pre logá výrobcov s podporou tmavého štýlu"
 
-#: data/system.metainfo.xml.in:31
+#: data/system.metainfo.xml.in:60
 msgid "Added support for offline firmware updates"
 msgstr "Pridaná podpora pre offline aktualizácie firmvéru"
 
-#: data/system.metainfo.xml.in:43
+#: data/system.metainfo.xml.in:73
 msgid "Use formatted device name when available"
 msgstr "Použiť názov naformátovaného zariadenia, ak je to možné"
 
-#: data/system.metainfo.xml.in:44
+#: data/system.metainfo.xml.in:74
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr ""
 "Zobrazovať viac informácií pre určité grafické karty, vrátane Intel® Xe "
 "Graphics"
 
-#: data/system.metainfo.xml.in:51
+#: data/system.metainfo.xml.in:82
 msgid "Redesign and new features:"
 msgstr "Redizajn a nové funkcie:"
 
-#: data/system.metainfo.xml.in:53
+#: data/system.metainfo.xml.in:84
 msgid "Rename from About to System"
 msgstr "Premenovaná tabla O systéme na Systém"
 
-#: data/system.metainfo.xml.in:54
+#: data/system.metainfo.xml.in:85
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr "Rozdelené informácie o hardvéri a operačnom systéme na oddelené tably"
 
-#: data/system.metainfo.xml.in:55
+#: data/system.metainfo.xml.in:86
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
 "Redizajn tably Operačného systému s použitím jasnejších odkazov a tlačidiel"
 
-#: data/system.metainfo.xml.in:56
+#: data/system.metainfo.xml.in:87
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr "Pridané zobrazenie Firmvéru na správu aktualizácií firmvéru zariadení"
 
-#: data/system.metainfo.xml.in:58
+#: data/system.metainfo.xml.in:89
 msgid "More information:"
 msgstr "Viac informácií:"
 
-#: data/system.metainfo.xml.in:60
+#: data/system.metainfo.xml.in:91
 msgid "Provide information for ARM CPUs"
 msgstr "Poskytovať informácie o ARMových procesoroch"
 
-#: data/system.metainfo.xml.in:61
+#: data/system.metainfo.xml.in:92
 msgid "Provide information for more types of Graphics"
 msgstr "Poskytovať informácie pre viac typov grafických kariet"
 
-#: data/system.metainfo.xml.in:63
+#: data/system.metainfo.xml.in:94
 msgid "Fixes:"
 msgstr "Opravy:"
 
-#: data/system.metainfo.xml.in:65
+#: data/system.metainfo.xml.in:96
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr ""
 "Opravený problém, keď bolo zobrazenie zničené príliš skoro pri navigácií "
 "preč z okna"
 
-#: data/system.metainfo.xml.in:66
+#: data/system.metainfo.xml.in:97
 msgid "Fix system memory calculation"
 msgstr "Opravené výpočty systémovej pamäte"
 
-#: data/system.metainfo.xml.in:70
+#: data/system.metainfo.xml.in:101
 msgid "Ellipsize long hardware names"
 msgstr "Elipsovať dlhé názvy hardvéru"
 
-#: data/system.metainfo.xml.in:71
+#: data/system.metainfo.xml.in:102
 msgid "Performance improvements"
 msgstr "Zlepšenia výkonu"
 

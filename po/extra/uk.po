@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-14 23:15+0000\n"
+"POT-Creation-Date: 2024-06-19 16:22+0000\n"
 "PO-Revision-Date: 2023-01-28 05:25+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -20,113 +20,116 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.14.2\n"
 
-#: data/system.metainfo.xml.in:5
+#: data/system.metainfo.xml.in:10
 msgid "System"
 msgstr "Система"
 
-#: data/system.metainfo.xml.in:6
+#: data/system.metainfo.xml.in:11
 msgid "View operating system and hardware information"
 msgstr "Огляд операційної системи та подробиць про апаратні засоби"
 
-#: data/system.metainfo.xml.in:13 data/system.metainfo.xml.in:28
+#: data/system.metainfo.xml.in:34
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/system.metainfo.xml.in:42 data/system.metainfo.xml.in:57
 msgid "New features:"
 msgstr "Нові функції:"
 
-#: data/system.metainfo.xml.in:15
+#: data/system.metainfo.xml.in:44
 msgid "Add a button to restart to firmware setup"
 msgstr "Додано кнопку перезапуску до налаштування мікропрограми"
 
-#: data/system.metainfo.xml.in:17 data/system.metainfo.xml.in:33
-#: data/system.metainfo.xml.in:41 data/system.metainfo.xml.in:68
+#: data/system.metainfo.xml.in:46 data/system.metainfo.xml.in:62
+#: data/system.metainfo.xml.in:71 data/system.metainfo.xml.in:99
 msgid "Minor updates:"
 msgstr "Незначні оновлення:"
 
-#: data/system.metainfo.xml.in:19
+#: data/system.metainfo.xml.in:48
 msgid "Get more accurate memory and storage information"
 msgstr "Отримуйте точніші дані про пам'ять і сховище"
 
-#: data/system.metainfo.xml.in:20
+#: data/system.metainfo.xml.in:49
 msgid "Handle Ryzen CPU and AMD GPU vendor string"
 msgstr ""
 "Обробка лінійки постачальників процесорів Ryzen і графічних процесорів AMD"
 
-#: data/system.metainfo.xml.in:21 data/system.metainfo.xml.in:35
-#: data/system.metainfo.xml.in:45 data/system.metainfo.xml.in:72
-#: data/system.metainfo.xml.in:78 data/system.metainfo.xml.in:83
-#: data/system.metainfo.xml.in:88
+#: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:64
+#: data/system.metainfo.xml.in:75 data/system.metainfo.xml.in:103
+#: data/system.metainfo.xml.in:110
 msgid "Updated translations"
 msgstr "Оновлені переклади"
 
-#: data/system.metainfo.xml.in:30
+#: data/system.metainfo.xml.in:59
 msgid "Added support for dark style manufacturer logos"
 msgstr "Додано підтримку темного стилю логотипів виробників"
 
-#: data/system.metainfo.xml.in:31
+#: data/system.metainfo.xml.in:60
 msgid "Added support for offline firmware updates"
 msgstr "Додано підтримку офлайн оновлень мікропрограми"
 
-#: data/system.metainfo.xml.in:43
+#: data/system.metainfo.xml.in:73
 msgid "Use formatted device name when available"
 msgstr "Застосування назви відформатованого пристрою, якщо вона доступна"
 
-#: data/system.metainfo.xml.in:44
+#: data/system.metainfo.xml.in:74
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr ""
 "Показ додаткових відомостей про деякі графічні процесори, включно з Intel® "
 "Xe Graphics"
 
-#: data/system.metainfo.xml.in:51
+#: data/system.metainfo.xml.in:82
 msgid "Redesign and new features:"
 msgstr "Редизайн та нові можливості:"
 
-#: data/system.metainfo.xml.in:53
+#: data/system.metainfo.xml.in:84
 msgid "Rename from About to System"
 msgstr "Перейменування з вкладки Про систему"
 
-#: data/system.metainfo.xml.in:54
+#: data/system.metainfo.xml.in:85
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr "Розділено дані про обладнання та операційну систему на окремі вкладки"
 
-#: data/system.metainfo.xml.in:55
+#: data/system.metainfo.xml.in:86
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
 "Перероблено вкладки операційної системи з чіткішими посиланнями та кнопками"
 
-#: data/system.metainfo.xml.in:56
+#: data/system.metainfo.xml.in:87
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
 "Додано перегляд мікропрограми для керування оновленнями мікропрограми "
 "пристроїв"
 
-#: data/system.metainfo.xml.in:58
+#: data/system.metainfo.xml.in:89
 msgid "More information:"
 msgstr "Докладніші відомості:"
 
-#: data/system.metainfo.xml.in:60
+#: data/system.metainfo.xml.in:91
 msgid "Provide information for ARM CPUs"
 msgstr "Надає відомості про ARM-процесори"
 
-#: data/system.metainfo.xml.in:61
+#: data/system.metainfo.xml.in:92
 msgid "Provide information for more types of Graphics"
 msgstr "Надає відомості про більше типів графіки"
 
-#: data/system.metainfo.xml.in:63
+#: data/system.metainfo.xml.in:94
 msgid "Fixes:"
 msgstr "Виправлення:"
 
-#: data/system.metainfo.xml.in:65
+#: data/system.metainfo.xml.in:96
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr "Виправлено проблему, коли подання нищилося зарано під час переходів"
 
-#: data/system.metainfo.xml.in:66
+#: data/system.metainfo.xml.in:97
 msgid "Fix system memory calculation"
 msgstr "Виправлено обчислення системної пам'яті"
 
-#: data/system.metainfo.xml.in:70
+#: data/system.metainfo.xml.in:101
 msgid "Ellipsize long hardware names"
 msgstr "Ховання частини довгих назв обладнання"
 
-#: data/system.metainfo.xml.in:71
+#: data/system.metainfo.xml.in:102
 msgid "Performance improvements"
 msgstr "Поліпшено швидкодію"
 
