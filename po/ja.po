@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 23:15+0000\n"
-"PO-Revision-Date: 2024-06-16 02:16+0000\n"
+"PO-Revision-Date: 2024-06-19 16:22+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -221,7 +221,7 @@ msgstr "ファームウェアサービス利用不可"
 
 #: src/Views/FirmwareView.vala:120
 msgid "Please make sure “fwupd” is installed and enabled."
-msgstr "“fwupd” がインストール済みで有効になっているか確認してください。"
+msgstr "“fwupd”がインストール済みで有効になっているか確認してください。"
 
 #: src/Views/FirmwareView.vala:215
 #, c-format
@@ -236,7 +236,7 @@ msgstr "最新の状態"
 #: src/Views/FirmwareView.vala:227
 #, c-format
 msgid "“%s” is being updated"
-msgstr "“%s” をアップデートしています"
+msgstr "“%s”をアップデートしています"
 
 #: src/Views/FirmwareView.vala:310
 msgid "Failed to install firmware release"
@@ -245,7 +245,7 @@ msgstr "ファームウェアをインストールできませんでした"
 #: src/Views/FirmwareView.vala:331
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
-msgstr "“%s” は手動でアップデートモードに切り替える必要があります"
+msgstr "“%s”は手動でアップデートモードに切り替える必要があります"
 
 #: src/Views/FirmwareView.vala:340
 msgid "Continue"
