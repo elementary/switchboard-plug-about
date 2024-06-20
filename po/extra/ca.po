@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-19 16:52+0000\n"
-"PO-Revision-Date: 2023-01-26 18:46+0000\n"
+"PO-Revision-Date: 2024-06-20 18:16+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/system.metainfo.xml.in:10
 msgid "System"
@@ -29,7 +29,7 @@ msgstr "Mostra la informació del sistema operatiu i del maquinari"
 
 #: data/system.metainfo.xml.in:34
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/system.metainfo.xml.in:42 data/system.metainfo.xml.in:66
 #: data/system.metainfo.xml.in:81
@@ -39,10 +39,12 @@ msgstr "Característiques noves:"
 #: data/system.metainfo.xml.in:44
 msgid "Manage Operating System updates, including automatic updates"
 msgstr ""
+"Gestioneu les actualitzacions del sistema operatiu, incloses les "
+"actualitzacions automàtiques."
 
 #: data/system.metainfo.xml.in:45
 msgid "Manage additional drivers"
-msgstr ""
+msgstr "Gestioneu controladors addicionals."
 
 #: data/system.metainfo.xml.in:47 data/system.metainfo.xml.in:70
 #: data/system.metainfo.xml.in:86 data/system.metainfo.xml.in:95
@@ -53,6 +55,7 @@ msgstr "Actualitzacions menors:"
 #: data/system.metainfo.xml.in:49
 msgid "Improve operating system image for other Linux distributions"
 msgstr ""
+"Millora de la imatge del sistema operatiu per a altres distribucions de Linux"
 
 #: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:74
 #: data/system.metainfo.xml.in:88 data/system.metainfo.xml.in:99
