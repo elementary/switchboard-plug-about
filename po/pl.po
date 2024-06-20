@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-19 16:52+0000\n"
-"PO-Revision-Date: 2024-06-13 01:03+0000\n"
+"PO-Revision-Date: 2024-06-20 18:16+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/pl/>\n"
@@ -424,21 +424,19 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:252
 msgid "Basics Guide"
-msgstr ""
+msgstr "Przewodnik po podstawach"
 
 #: src/Views/OperatingSystemView.vala:259
 msgid "Get Help"
-msgstr ""
+msgstr "Uzyskaj pomoc"
 
 #: src/Views/OperatingSystemView.vala:266
-#, fuzzy
-#| msgid "Website"
 msgid "Our Website"
-msgstr "Strona internetowa"
+msgstr "Nasza strona internetowa"
 
 #: src/Views/OperatingSystemView.vala:273
 msgid "Get Involved or Sponsor Us"
-msgstr ""
+msgstr "Zaangażuj się lub sponsoruj nas"
 
 #: src/Views/OperatingSystemView.vala:440
 #, c-format
