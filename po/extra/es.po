@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-19 16:52+0000\n"
-"PO-Revision-Date: 2024-06-16 02:16+0000\n"
+"PO-Revision-Date: 2024-06-24 14:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/es/>\n"
@@ -29,7 +29,7 @@ msgstr "Vea información del sistema operativo y el equipo"
 
 #: data/system.metainfo.xml.in:34
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/system.metainfo.xml.in:42 data/system.metainfo.xml.in:66
 #: data/system.metainfo.xml.in:81
@@ -39,10 +39,12 @@ msgstr "Nuevas características:"
 #: data/system.metainfo.xml.in:44
 msgid "Manage Operating System updates, including automatic updates"
 msgstr ""
+"Se pueden gestionar las actualizaciones del sistema operativo, incluyendo "
+"actualizaciones automáticas"
 
 #: data/system.metainfo.xml.in:45
 msgid "Manage additional drivers"
-msgstr ""
+msgstr "Se pueden gestionar controladores adicionales"
 
 #: data/system.metainfo.xml.in:47 data/system.metainfo.xml.in:70
 #: data/system.metainfo.xml.in:86 data/system.metainfo.xml.in:95
@@ -53,6 +55,8 @@ msgstr "Actualizaciones menores:"
 #: data/system.metainfo.xml.in:49
 msgid "Improve operating system image for other Linux distributions"
 msgstr ""
+"Se mejoró la imagen ISO del sistema operativo para otras distribuciones de "
+"Linux"
 
 #: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:74
 #: data/system.metainfo.xml.in:88 data/system.metainfo.xml.in:99
