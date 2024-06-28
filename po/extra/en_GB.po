@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-19 16:52+0000\n"
-"PO-Revision-Date: 2023-02-18 10:25+0000\n"
+"PO-Revision-Date: 2024-06-29 15:16+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/about-plug-extra/en_GB/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/system.metainfo.xml.in:10
 msgid "System"
@@ -29,7 +29,7 @@ msgstr "View operating system and hardware information"
 
 #: data/system.metainfo.xml.in:34
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/system.metainfo.xml.in:42 data/system.metainfo.xml.in:66
 #: data/system.metainfo.xml.in:81
@@ -38,11 +38,11 @@ msgstr "New features:"
 
 #: data/system.metainfo.xml.in:44
 msgid "Manage Operating System updates, including automatic updates"
-msgstr ""
+msgstr "Manage Operating System updates, including automatic updates"
 
 #: data/system.metainfo.xml.in:45
 msgid "Manage additional drivers"
-msgstr ""
+msgstr "Manage additional drivers"
 
 #: data/system.metainfo.xml.in:47 data/system.metainfo.xml.in:70
 #: data/system.metainfo.xml.in:86 data/system.metainfo.xml.in:95
@@ -52,7 +52,7 @@ msgstr "Minor updates:"
 
 #: data/system.metainfo.xml.in:49
 msgid "Improve operating system image for other Linux distributions"
-msgstr ""
+msgstr "Improve operating system image for other Linux distributions"
 
 #: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:74
 #: data/system.metainfo.xml.in:88 data/system.metainfo.xml.in:99
