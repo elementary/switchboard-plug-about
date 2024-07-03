@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-19 16:52+0000\n"
-"PO-Revision-Date: 2024-06-22 14:16+0000\n"
+"PO-Revision-Date: 2024-07-04 08:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/system.metainfo.xml.in:10
 msgid "System"
@@ -29,7 +29,7 @@ msgstr "צפייה במידע חומרה ומערכת ההפעלה"
 
 #: data/system.metainfo.xml.in:34
 msgid "elementary, Inc."
-msgstr "elementary בע״מ."
+msgstr "elementary בע״מ"
 
 #: data/system.metainfo.xml.in:42 data/system.metainfo.xml.in:66
 #: data/system.metainfo.xml.in:81
