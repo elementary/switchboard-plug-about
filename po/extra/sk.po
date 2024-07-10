@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-19 16:52+0000\n"
-"PO-Revision-Date: 2022-02-26 00:14+0000\n"
+"PO-Revision-Date: 2024-07-11 08:16+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
-"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/about-"
-"plug-extra/sk/>\n"
+"Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
+"about-plug-extra/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/system.metainfo.xml.in:10
 msgid "System"
@@ -29,7 +29,7 @@ msgstr "Zobrazujte informácie o operačnom systéme a hardvéri"
 
 #: data/system.metainfo.xml.in:34
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/system.metainfo.xml.in:42 data/system.metainfo.xml.in:66
 #: data/system.metainfo.xml.in:81
@@ -39,10 +39,11 @@ msgstr "Nové funkcie:"
 #: data/system.metainfo.xml.in:44
 msgid "Manage Operating System updates, including automatic updates"
 msgstr ""
+"Spravujte aktualizácie operačného systému, vrátane automatických aktualizácií"
 
 #: data/system.metainfo.xml.in:45
 msgid "Manage additional drivers"
-msgstr ""
+msgstr "Spravujte dodatočné ovládače"
 
 #: data/system.metainfo.xml.in:47 data/system.metainfo.xml.in:70
 #: data/system.metainfo.xml.in:86 data/system.metainfo.xml.in:95
@@ -52,7 +53,7 @@ msgstr "Menšie aktualizácie:"
 
 #: data/system.metainfo.xml.in:49
 msgid "Improve operating system image for other Linux distributions"
-msgstr ""
+msgstr "Zlepšenie obrazu operačného systému pre ostatné Linuxové distribúcie"
 
 #: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:74
 #: data/system.metainfo.xml.in:88 data/system.metainfo.xml.in:99
@@ -62,17 +63,15 @@ msgstr "Aktualizované preklady"
 
 #: data/system.metainfo.xml.in:68
 msgid "Add a button to restart to firmware setup"
-msgstr ""
+msgstr "Pridanie tlačidla na reštart do nastavenia firmvéru"
 
 #: data/system.metainfo.xml.in:72
-#, fuzzy
-#| msgid "View operating system and hardware information"
 msgid "Get more accurate memory and storage information"
-msgstr "Zobrazujte informácie o operačnom systéme a hardvéri"
+msgstr "Získajte presnejšie informácie o pamäti a úložisku"
 
 #: data/system.metainfo.xml.in:73
 msgid "Handle Ryzen CPU and AMD GPU vendor string"
-msgstr ""
+msgstr "Spracovať text dodávateľa Ryzen CPU a AMD GPU"
 
 #: data/system.metainfo.xml.in:83
 msgid "Added support for dark style manufacturer logos"
