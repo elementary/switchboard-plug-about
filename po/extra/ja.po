@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-19 16:52+0000\n"
-"PO-Revision-Date: 2024-06-20 18:16+0000\n"
+"PO-Revision-Date: 2024-07-15 07:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/system.metainfo.xml.in:10
 msgid "System"
@@ -75,7 +75,7 @@ msgstr "Ryzen CPU と AMD GPU の製造元文字列を処理できるように�
 
 #: data/system.metainfo.xml.in:83
 msgid "Added support for dark style manufacturer logos"
-msgstr "ダークスタイル用のメーカーロゴに対応"
+msgstr "ダークモード用のメーカーロゴに対応"
 
 #: data/system.metainfo.xml.in:84
 msgid "Added support for offline firmware updates"
