@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-19 16:22+0000\n"
-"PO-Revision-Date: 2023-01-29 08:25+0000\n"
-"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"POT-Creation-Date: 2024-06-19 16:52+0000\n"
+"PO-Revision-Date: 2024-06-20 18:16+0000\n"
+"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/system.metainfo.xml.in:10
 msgid "System"
@@ -30,108 +30,122 @@ msgstr "Просмотр информации об операционной си
 
 #: data/system.metainfo.xml.in:34
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
-#: data/system.metainfo.xml.in:42 data/system.metainfo.xml.in:57
+#: data/system.metainfo.xml.in:42 data/system.metainfo.xml.in:66
+#: data/system.metainfo.xml.in:81
 msgid "New features:"
 msgstr "Новые возможности:"
 
 #: data/system.metainfo.xml.in:44
-msgid "Add a button to restart to firmware setup"
-msgstr "Добавлена кнопка перезагрузки в BIOS"
+msgid "Manage Operating System updates, including automatic updates"
+msgstr "Управление обновлениями ОС, включая автоматические обновления"
 
-#: data/system.metainfo.xml.in:46 data/system.metainfo.xml.in:62
-#: data/system.metainfo.xml.in:71 data/system.metainfo.xml.in:99
+#: data/system.metainfo.xml.in:45
+msgid "Manage additional drivers"
+msgstr "Управление дополнительными драйверами"
+
+#: data/system.metainfo.xml.in:47 data/system.metainfo.xml.in:70
+#: data/system.metainfo.xml.in:86 data/system.metainfo.xml.in:95
+#: data/system.metainfo.xml.in:123
 msgid "Minor updates:"
 msgstr "Незначительные обновления:"
 
-#: data/system.metainfo.xml.in:48
-msgid "Get more accurate memory and storage information"
-msgstr "Отображение более актуальной информации о памяти и хранилище"
-
 #: data/system.metainfo.xml.in:49
-msgid "Handle Ryzen CPU and AMD GPU vendor string"
-msgstr "Улучшена обработка строк производителя Ryzen CPU и AMD GPU"
+msgid "Improve operating system image for other Linux distributions"
+msgstr "Улучшено изображение ОС для других дистрибутивов Linux"
 
-#: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:64
-#: data/system.metainfo.xml.in:75 data/system.metainfo.xml.in:103
-#: data/system.metainfo.xml.in:110
+#: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:74
+#: data/system.metainfo.xml.in:88 data/system.metainfo.xml.in:99
+#: data/system.metainfo.xml.in:127
 msgid "Updated translations"
 msgstr "Обновлены переводы"
 
-#: data/system.metainfo.xml.in:59
+#: data/system.metainfo.xml.in:68
+msgid "Add a button to restart to firmware setup"
+msgstr "Добавлена кнопка перезагрузки в BIOS"
+
+#: data/system.metainfo.xml.in:72
+msgid "Get more accurate memory and storage information"
+msgstr "Отображение более актуальной информации о памяти и хранилище"
+
+#: data/system.metainfo.xml.in:73
+msgid "Handle Ryzen CPU and AMD GPU vendor string"
+msgstr "Улучшена обработка строк производителя Ryzen CPU и AMD GPU"
+
+#: data/system.metainfo.xml.in:83
 msgid "Added support for dark style manufacturer logos"
 msgstr "Добавлена поддержка тёмного стиля для логотипов производителей"
 
-#: data/system.metainfo.xml.in:60
+#: data/system.metainfo.xml.in:84
 msgid "Added support for offline firmware updates"
 msgstr "Добавлена поддержка автономных обновлений прошивок"
 
-#: data/system.metainfo.xml.in:73
+#: data/system.metainfo.xml.in:97
 msgid "Use formatted device name when available"
 msgstr "Применение красивого названия устройства, если оно доступно"
 
-#: data/system.metainfo.xml.in:74
+#: data/system.metainfo.xml.in:98
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr ""
 "Отображение большей информации для определённых видеокарт, включая Intel® Xe "
 "Graphics"
 
-#: data/system.metainfo.xml.in:82
+#: data/system.metainfo.xml.in:106
 msgid "Redesign and new features:"
 msgstr "Редизайн и новые возможности:"
 
-#: data/system.metainfo.xml.in:84
+#: data/system.metainfo.xml.in:108
 msgid "Rename from About to System"
 msgstr "Переименовано из «О системе» в «Система»"
 
-#: data/system.metainfo.xml.in:85
+#: data/system.metainfo.xml.in:109
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr ""
 "Информация об оборудовании и операционной системе разделена в отдельные "
 "вкладки"
 
-#: data/system.metainfo.xml.in:86
+#: data/system.metainfo.xml.in:110
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
 "Редизайн вкладки «Операционная система» с более понятными ссылками и кнопками"
 
-#: data/system.metainfo.xml.in:87
+#: data/system.metainfo.xml.in:111
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
 "Добавлена вкладка «Прошивка» для управления обновлениями прошивок устройств"
 
-#: data/system.metainfo.xml.in:89
+#: data/system.metainfo.xml.in:113
 msgid "More information:"
 msgstr "Больше информации:"
 
-#: data/system.metainfo.xml.in:91
+#: data/system.metainfo.xml.in:115
 msgid "Provide information for ARM CPUs"
 msgstr "Предоставление информации для процессоров ARM"
 
-#: data/system.metainfo.xml.in:92
+#: data/system.metainfo.xml.in:116
 msgid "Provide information for more types of Graphics"
 msgstr "Предоставление информации для большего количества видов графики"
 
-#: data/system.metainfo.xml.in:94
+#: data/system.metainfo.xml.in:118
 msgid "Fixes:"
 msgstr "Исправления:"
 
-#: data/system.metainfo.xml.in:96
+#: data/system.metainfo.xml.in:120
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr ""
 "Исправлена проблема, когда представление уничтожалось раньше времени при "
 "навигации в сторону"
 
-#: data/system.metainfo.xml.in:97
+#: data/system.metainfo.xml.in:121
 msgid "Fix system memory calculation"
 msgstr "Исправлено вычисление системной памяти"
 
-#: data/system.metainfo.xml.in:101
+#: data/system.metainfo.xml.in:125
 msgid "Ellipsize long hardware names"
 msgstr "Сокращение длинных названий оборудования"
 
-#: data/system.metainfo.xml.in:102
+#: data/system.metainfo.xml.in:126
 msgid "Performance improvements"
 msgstr "Улучшения производительности"
 
