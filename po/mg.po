@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-19 16:52+0000\n"
+"POT-Creation-Date: 2024-07-24 22:20+0000\n"
 "PO-Revision-Date: 2015-05-17 01:05+0000\n"
 "Last-Translator: akoho <Unknown>\n"
 "Language-Team: Malagasy <mg@li.org>\n"
@@ -26,52 +26,73 @@ msgstr ""
 msgid "View operating system and hardware information"
 msgstr ""
 
-#: src/Plug.vala:62
+#: src/Plug.vala:62 src/Plug.vala:119 src/Plug.vala:120 src/Plug.vala:121
+#: src/Plug.vala:122 src/Plug.vala:123 src/Plug.vala:124 src/Plug.vala:125
+#: src/Plug.vala:126 src/Plug.vala:127 src/Plug.vala:128
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Plug.vala:130 src/Plug.vala:131 src/Plug.vala:132
 msgid "Hardware"
 msgstr ""
 
-#: src/Plug.vala:64 src/Plug.vala:121 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:134 src/Plug.vala:135
+#: src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr ""
 
-#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
+#: src/Plug.vala:65 src/Plug.vala:137 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr ""
 
-#: src/Plug.vala:119
-msgid "Operating System Information"
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:218
+msgid "Automatic Updates"
 msgstr ""
 
-#: src/Plug.vala:120
-msgid "Hardware Information"
+#: src/Plug.vala:121 src/Views/OperatingSystemView.vala:252
+msgid "Basics Guide"
 msgstr ""
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:292
-msgid "Restore Default Settings"
-msgstr "Avereno tamin'ny voalohany"
-
-#: src/Plug.vala:123
-msgid "Suggest Translations"
-msgstr "Tondrozotram-pandikana"
-
-#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:294
-msgid "Send Feedback"
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:259
+msgid "Get Help"
 msgstr ""
 
-#: src/Plug.vala:125
-msgid "Report a Problem"
-msgstr "Hampita olana"
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:273
+msgid "Get Involved or Sponsor Us"
+msgstr ""
 
-#: src/Plug.vala:126
+#: src/Plug.vala:124
 msgid "Get Support"
 msgstr ""
 
-#: src/Plug.vala:127
-msgid "Updates"
+#: src/Plug.vala:125 src/Views/OperatingSystemView.vala:266
+#, fuzzy
+#| msgid "Website"
+msgid "Our Website"
+msgstr "Tranonkala"
+
+#: src/Plug.vala:126
+msgid "Report a Problem"
+msgstr "Hampita olana"
+
+#: src/Plug.vala:127 src/Views/OperatingSystemView.vala:292
+msgid "Restore Default Settings"
+msgstr "Avereno tamin'ny voalohany"
+
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:294
+msgid "Send Feedback"
+msgstr ""
+
+#: src/Plug.vala:131
+msgid "Device name"
+msgstr ""
+
+#: src/Plug.vala:132
+msgid "Host name"
+msgstr ""
+
+#: src/Plug.vala:135 src/Views/FirmwareView.vala:86
+msgid "Restart to Firmware Setup…"
 msgstr ""
 
 #: src/Views/DriversView.vala:20
@@ -195,10 +216,6 @@ msgstr "Hijery vaovao"
 
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
-msgstr ""
-
-#: src/Views/FirmwareView.vala:86
-msgid "Restart to Firmware Setup…"
 msgstr ""
 
 #: src/Views/FirmwareView.vala:116
@@ -401,32 +418,10 @@ msgstr ""
 msgid "Cancel"
 msgstr "Foano"
 
-#: src/Views/OperatingSystemView.vala:218
-msgid "Automatic Updates"
-msgstr ""
-
 #: src/Views/OperatingSystemView.vala:219
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:252
-msgid "Basics Guide"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:259
-msgid "Get Help"
-msgstr ""
-
-#: src/Views/OperatingSystemView.vala:266
-#, fuzzy
-#| msgid "Website"
-msgid "Our Website"
-msgstr "Tranonkala"
-
-#: src/Views/OperatingSystemView.vala:273
-msgid "Get Involved or Sponsor Us"
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:440
@@ -524,6 +519,9 @@ msgstr[1] ""
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr ""
+
+#~ msgid "Suggest Translations"
+#~ msgstr "Tondrozotram-pandikana"
 
 #~ msgid "Check for Updates"
 #~ msgstr "Hijery vaovao"

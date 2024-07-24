@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-19 16:52+0000\n"
+"POT-Creation-Date: 2024-07-24 22:20+0000\n"
 "PO-Revision-Date: 2024-06-20 18:16+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -29,53 +29,74 @@ msgstr "System"
 msgid "View operating system and hardware information"
 msgstr "Wyświetl informacje o systemie oraz sprzęcie"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:62 src/Plug.vala:119 src/Plug.vala:120 src/Plug.vala:121
+#: src/Plug.vala:122 src/Plug.vala:123 src/Plug.vala:124 src/Plug.vala:125
+#: src/Plug.vala:126 src/Plug.vala:127 src/Plug.vala:128
 msgid "Operating System"
 msgstr "System operacyjny"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Plug.vala:130 src/Plug.vala:131 src/Plug.vala:132
 msgid "Hardware"
 msgstr "Sprzęt"
 
-#: src/Plug.vala:64 src/Plug.vala:121 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:134 src/Plug.vala:135
+#: src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Oprogramowanie"
 
-#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
+#: src/Plug.vala:65 src/Plug.vala:137 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr "Sterowniki"
 
-#: src/Plug.vala:119
-msgid "Operating System Information"
-msgstr "Informacje o systemie operacyjnym"
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:218
+msgid "Automatic Updates"
+msgstr "Automatyczne aktualizacje"
 
-#: src/Plug.vala:120
-msgid "Hardware Information"
-msgstr "Informacje o sprzęcie"
+#: src/Plug.vala:121 src/Views/OperatingSystemView.vala:252
+msgid "Basics Guide"
+msgstr "Przewodnik po podstawach"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:292
-msgid "Restore Default Settings"
-msgstr "Przywróć ustawienia domyślne"
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:259
+msgid "Get Help"
+msgstr "Uzyskaj pomoc"
 
-#: src/Plug.vala:123
-msgid "Suggest Translations"
-msgstr "Zaproponuj tłumaczenie"
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:273
+msgid "Get Involved or Sponsor Us"
+msgstr "Zaangażuj się lub sponsoruj nas"
 
-#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:294
-msgid "Send Feedback"
-msgstr "Prześlij opinię"
-
-#: src/Plug.vala:125
-msgid "Report a Problem"
-msgstr "Zgłoś błąd"
-
-#: src/Plug.vala:126
+#: src/Plug.vala:124
 msgid "Get Support"
 msgstr "Uzyskaj wsparcie"
 
-#: src/Plug.vala:127
-msgid "Updates"
-msgstr "Aktualizacje"
+#: src/Plug.vala:125 src/Views/OperatingSystemView.vala:266
+msgid "Our Website"
+msgstr "Nasza strona internetowa"
+
+#: src/Plug.vala:126
+msgid "Report a Problem"
+msgstr "Zgłoś błąd"
+
+#: src/Plug.vala:127 src/Views/OperatingSystemView.vala:292
+msgid "Restore Default Settings"
+msgstr "Przywróć ustawienia domyślne"
+
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:294
+msgid "Send Feedback"
+msgstr "Prześlij opinię"
+
+#: src/Plug.vala:131
+#, fuzzy
+#| msgid "Device name saved"
+msgid "Device name"
+msgstr "Nazwa urządzenia zapisana"
+
+#: src/Plug.vala:132
+msgid "Host name"
+msgstr ""
+
+#: src/Plug.vala:135 src/Views/FirmwareView.vala:86
+msgid "Restart to Firmware Setup…"
+msgstr "Zrestartuj do ustawień Firmware…"
 
 #: src/Views/DriversView.vala:20
 msgid ""
@@ -203,10 +224,6 @@ msgstr "Sprawdzanie aktualizacji"
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Łączenie z usługą oprogramowania i sprawdzanie aktualizacji."
-
-#: src/Views/FirmwareView.vala:86
-msgid "Restart to Firmware Setup…"
-msgstr "Zrestartuj do ustawień Firmware…"
 
 #: src/Views/FirmwareView.vala:116
 msgid "Firmware Updates Are Not Available"
@@ -410,10 +427,6 @@ msgstr "Pobierz"
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: src/Views/OperatingSystemView.vala:218
-msgid "Automatic Updates"
-msgstr "Automatyczne aktualizacje"
-
 #: src/Views/OperatingSystemView.vala:219
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
@@ -421,22 +434,6 @@ msgid ""
 msgstr ""
 "Aktualizacje zostaną pobrane automatycznie. Instalacja nastąpi po ponownym "
 "uruchomieniu urządzenia."
-
-#: src/Views/OperatingSystemView.vala:252
-msgid "Basics Guide"
-msgstr "Przewodnik po podstawach"
-
-#: src/Views/OperatingSystemView.vala:259
-msgid "Get Help"
-msgstr "Uzyskaj pomoc"
-
-#: src/Views/OperatingSystemView.vala:266
-msgid "Our Website"
-msgstr "Nasza strona internetowa"
-
-#: src/Views/OperatingSystemView.vala:273
-msgid "Get Involved or Sponsor Us"
-msgstr "Zaangażuj się lub sponsoruj nas"
 
 #: src/Views/OperatingSystemView.vala:440
 #, c-format
@@ -542,6 +539,18 @@ msgstr[2] "%u pakietów zostanie zaktualizowanych"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Zamknij"
+
+#~ msgid "Operating System Information"
+#~ msgstr "Informacje o systemie operacyjnym"
+
+#~ msgid "Hardware Information"
+#~ msgstr "Informacje o sprzęcie"
+
+#~ msgid "Suggest Translations"
+#~ msgstr "Zaproponuj tłumaczenie"
+
+#~ msgid "Updates"
+#~ msgstr "Aktualizacje"
 
 #~ msgid "Check for Updates"
 #~ msgstr "Sprawdź aktualizacje"
