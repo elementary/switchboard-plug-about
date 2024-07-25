@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-19 16:52+0000\n"
+"POT-Creation-Date: 2024-07-24 22:20+0000\n"
 "PO-Revision-Date: 2024-07-11 08:16+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -28,53 +28,74 @@ msgstr "Systém"
 msgid "View operating system and hardware information"
 msgstr "Zobrazujte informácie o operačnom systéme a hardvéri"
 
-#: src/Plug.vala:62
+#: src/Plug.vala:62 src/Plug.vala:119 src/Plug.vala:120 src/Plug.vala:121
+#: src/Plug.vala:122 src/Plug.vala:123 src/Plug.vala:124 src/Plug.vala:125
+#: src/Plug.vala:126 src/Plug.vala:127 src/Plug.vala:128
 msgid "Operating System"
 msgstr "Operačný systém"
 
-#: src/Plug.vala:63
+#: src/Plug.vala:63 src/Plug.vala:130 src/Plug.vala:131 src/Plug.vala:132
 msgid "Hardware"
 msgstr "Hardvér"
 
-#: src/Plug.vala:64 src/Plug.vala:121 src/Views/FirmwareView.vala:35
+#: src/Plug.vala:64 src/Plug.vala:134 src/Plug.vala:135
+#: src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Firmvér"
 
-#: src/Plug.vala:65 src/Plug.vala:128 src/Views/DriversView.vala:19
+#: src/Plug.vala:65 src/Plug.vala:137 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr "Ovládače"
 
-#: src/Plug.vala:119
-msgid "Operating System Information"
-msgstr "Informácie o operačnom systéme"
+#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:218
+msgid "Automatic Updates"
+msgstr "Automatické aktualizácie"
 
-#: src/Plug.vala:120
-msgid "Hardware Information"
-msgstr "Informácie o hardvéri"
+#: src/Plug.vala:121 src/Views/OperatingSystemView.vala:252
+msgid "Basics Guide"
+msgstr "Sprievodca základmi"
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:292
-msgid "Restore Default Settings"
-msgstr "Obnoviť predvolené nastavenia"
+#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:259
+msgid "Get Help"
+msgstr "Získať pomoc"
 
-#: src/Plug.vala:123
-msgid "Suggest Translations"
-msgstr "Navrhnúť preklady"
+#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:273
+msgid "Get Involved or Sponsor Us"
+msgstr "Zapojte sa alebo nás podporte"
 
-#: src/Plug.vala:124 src/Views/OperatingSystemView.vala:294
-msgid "Send Feedback"
-msgstr "Poslať spätnú väzbu"
-
-#: src/Plug.vala:125
-msgid "Report a Problem"
-msgstr "Nahlásiť problém"
-
-#: src/Plug.vala:126
+#: src/Plug.vala:124
 msgid "Get Support"
 msgstr "Získať podporu"
 
-#: src/Plug.vala:127
-msgid "Updates"
-msgstr "Aktualizácie"
+#: src/Plug.vala:125 src/Views/OperatingSystemView.vala:266
+msgid "Our Website"
+msgstr "Naša webstránka"
+
+#: src/Plug.vala:126
+msgid "Report a Problem"
+msgstr "Nahlásiť problém"
+
+#: src/Plug.vala:127 src/Views/OperatingSystemView.vala:292
+msgid "Restore Default Settings"
+msgstr "Obnoviť predvolené nastavenia"
+
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:294
+msgid "Send Feedback"
+msgstr "Poslať spätnú väzbu"
+
+#: src/Plug.vala:131
+#, fuzzy
+#| msgid "Device name saved"
+msgid "Device name"
+msgstr "Názov zariadenia uložený"
+
+#: src/Plug.vala:132
+msgid "Host name"
+msgstr ""
+
+#: src/Plug.vala:135 src/Views/FirmwareView.vala:86
+msgid "Restart to Firmware Setup…"
+msgstr "Reštartovať do Nastavenia firmvéru…"
 
 #: src/Views/DriversView.vala:20
 msgid ""
@@ -203,10 +224,6 @@ msgstr "Hľadajú sa aktualizácie"
 #: src/Views/FirmwareView.vala:47
 msgid "Connecting to the firmware service and searching for updates."
 msgstr "Pripája sa k službe firmvéru a hľadajú sa aktualizácie."
-
-#: src/Views/FirmwareView.vala:86
-msgid "Restart to Firmware Setup…"
-msgstr "Reštartovať do Nastavenia firmvéru…"
 
 #: src/Views/FirmwareView.vala:116
 msgid "Firmware Updates Are Not Available"
@@ -408,10 +425,6 @@ msgstr "Stiahnuť"
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: src/Views/OperatingSystemView.vala:218
-msgid "Automatic Updates"
-msgstr "Automatické aktualizácie"
-
 #: src/Views/OperatingSystemView.vala:219
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
@@ -419,22 +432,6 @@ msgid ""
 msgstr ""
 "Aktualizácie budú automaticky stiahnuté. Nainštalujú sa po reštarte tohoto "
 "zariadenia."
-
-#: src/Views/OperatingSystemView.vala:252
-msgid "Basics Guide"
-msgstr "Sprievodca základmi"
-
-#: src/Views/OperatingSystemView.vala:259
-msgid "Get Help"
-msgstr "Získať pomoc"
-
-#: src/Views/OperatingSystemView.vala:266
-msgid "Our Website"
-msgstr "Naša webstránka"
-
-#: src/Views/OperatingSystemView.vala:273
-msgid "Get Involved or Sponsor Us"
-msgstr "Zapojte sa alebo nás podporte"
 
 #: src/Views/OperatingSystemView.vala:440
 #, c-format
@@ -538,6 +535,18 @@ msgstr[2] "%u balíčkov bude aktualizovaných"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Zatvoriť"
+
+#~ msgid "Operating System Information"
+#~ msgstr "Informácie o operačnom systéme"
+
+#~ msgid "Hardware Information"
+#~ msgstr "Informácie o hardvéri"
+
+#~ msgid "Suggest Translations"
+#~ msgstr "Navrhnúť preklady"
+
+#~ msgid "Updates"
+#~ msgstr "Aktualizácie"
 
 #~ msgid "Check for Updates"
 #~ msgstr "Skontrolovať aktualizácie"

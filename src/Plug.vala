@@ -116,15 +116,24 @@ public class About.Plug : Switchboard.Plug {
             (Gee.EqualDataFunc<string>)str_equal
         );
 
-        search_results.set ("%s → %s".printf (display_name, _("Operating System Information")), OPERATING_SYSTEM);
-        search_results.set ("%s → %s".printf (display_name, _("Hardware Information")), HARDWARE);
+        search_results.set ("%s → %s".printf (display_name, _("Operating System")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Operating System"), _("Automatic Updates")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Operating System"), _("Basics Guide")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Operating System"), _("Get Help")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Operating System"), _("Get Involved or Sponsor Us")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Operating System"), _("Get Support")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Operating System"), _("Our Website")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Operating System"), _("Report a Problem")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Operating System"), _("Restore Default Settings")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Operating System"), _("Send Feedback")), OPERATING_SYSTEM);
+
+        search_results.set ("%s → %s".printf (display_name, _("Hardware")), HARDWARE);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Hardware"), _("Device name")), HARDWARE);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Hardware"), _("Host name")), HARDWARE);
+
         search_results.set ("%s → %s".printf (display_name, _("Firmware")), FIRMWARE);
-        search_results.set ("%s → %s".printf (display_name, _("Restore Default Settings")), OPERATING_SYSTEM);
-        search_results.set ("%s → %s".printf (display_name, _("Suggest Translations")), OPERATING_SYSTEM);
-        search_results.set ("%s → %s".printf (display_name, _("Send Feedback")), OPERATING_SYSTEM);
-        search_results.set ("%s → %s".printf (display_name, _("Report a Problem")), OPERATING_SYSTEM);
-        search_results.set ("%s → %s".printf (display_name, _("Get Support")), OPERATING_SYSTEM);
-        search_results.set ("%s → %s".printf (display_name, _("Updates")), OPERATING_SYSTEM);
+        search_results.set ("%s → %s → %s".printf (display_name, _("Firmware"), _("Restart to Firmware Setup…")), FIRMWARE);
+
         search_results.set ("%s → %s".printf (display_name, _("Drivers")), DRIVERS);
 
         return search_results;
