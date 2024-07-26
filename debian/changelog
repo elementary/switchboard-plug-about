@@ -1,3 +1,9 @@
+io.elementary.settings.system (8.0.0) noble; urgency=medium
+
+  * Release 8.0.0
+
+ -- Danielle Foré <danielle@elementary.io>  Fri, 26 Jul 2024 10:02:45 -0700
+
 io.elementary.settings.system (6.2.0) jammy; urgency=medium
 
   * Release 6.2.0
