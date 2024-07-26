@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-24 22:20+0000\n"
-"PO-Revision-Date: 2024-06-18 09:16+0000\n"
+"PO-Revision-Date: 2024-07-26 01:16+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:45
@@ -84,14 +84,12 @@ msgid "Send Feedback"
 msgstr "Envia el suggeriment"
 
 #: src/Plug.vala:131
-#, fuzzy
-#| msgid "Device name saved"
 msgid "Device name"
-msgstr "S'ha desat el nom del dispositiu."
+msgstr "Nom del dispositiu"
 
 #: src/Plug.vala:132
 msgid "Host name"
-msgstr ""
+msgstr "Nom d'amfitrió"
 
 #: src/Plug.vala:135 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
