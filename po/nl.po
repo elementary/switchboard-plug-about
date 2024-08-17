@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-24 22:20+0000\n"
-"PO-Revision-Date: 2024-05-31 01:46+0000\n"
+"PO-Revision-Date: 2024-08-18 16:16+0000\n"
 "Last-Translator: DutchVipperloid <svenroelof@e.email>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:45
@@ -45,7 +45,7 @@ msgstr "Firmware"
 
 #: src/Plug.vala:65 src/Plug.vala:137 src/Views/DriversView.vala:19
 msgid "Drivers"
-msgstr ""
+msgstr "Stuurprogramma's"
 
 #: src/Plug.vala:120 src/Views/OperatingSystemView.vala:218
 msgid "Automatic Updates"
@@ -53,25 +53,23 @@ msgstr "Automatische updates"
 
 #: src/Plug.vala:121 src/Views/OperatingSystemView.vala:252
 msgid "Basics Guide"
-msgstr ""
+msgstr "Basisgids"
 
 #: src/Plug.vala:122 src/Views/OperatingSystemView.vala:259
 msgid "Get Help"
-msgstr ""
+msgstr "Krijg hulp"
 
 #: src/Plug.vala:123 src/Views/OperatingSystemView.vala:273
 msgid "Get Involved or Sponsor Us"
-msgstr ""
+msgstr "Help mee of sponsor ons"
 
 #: src/Plug.vala:124
 msgid "Get Support"
-msgstr "Krijg Ondersteuning"
+msgstr "Krijg ondersteuning"
 
 #: src/Plug.vala:125 src/Views/OperatingSystemView.vala:266
-#, fuzzy
-#| msgid "Website"
 msgid "Our Website"
-msgstr "Website"
+msgstr "Onze website"
 
 #: src/Plug.vala:126
 msgid "Report a Problem"
@@ -86,14 +84,12 @@ msgid "Send Feedback"
 msgstr "Feedback Verzenden"
 
 #: src/Plug.vala:131
-#, fuzzy
-#| msgid "Updates Available"
 msgid "Device name"
-msgstr "Updates zijn beschikbaar"
+msgstr "Apparaatnaam"
 
 #: src/Plug.vala:132
 msgid "Host name"
-msgstr ""
+msgstr "Hostnaam"
 
 #: src/Plug.vala:135 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
@@ -104,70 +100,54 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
+"Broadcom® Wi-Fi adapters, NVIDIA® grafische kaarten, en sommige virtuele "
+"machines zouden niet goed kunnen functioneren zonder aanvullende "
+"stuurprogramma's."
 
 #: src/Views/DriversView.vala:25
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "No drivers available"
-msgstr "%i update beschikbaar"
+msgstr "Geen stuurprogramma's beschikbaar"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "Dit apparaat heeft geen aanvullende stuurprogramma's nodig."
 
 #: src/Views/DriversView.vala:30
-#, fuzzy
-#| msgid "Checking for Updates"
 msgid "Checking for Drivers"
-msgstr "Controleren op updates"
+msgstr "Controleren op stuurprogramma's"
 
 #: src/Views/DriversView.vala:31
-#, fuzzy
-#| msgid "Connecting to the firmware service and searching for updates."
 msgid "Connecting to the driver service and searching for drivers."
-msgstr "Verbinden met de firmware-service en zoeken naar updates."
+msgstr ""
+"Verbinden met de stuurprogramma-service en zoeken naar stuurprogramma's."
 
 #: src/Views/DriversView.vala:51
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install driver"
-msgstr "Installeren van firmware-uitgave is mislukt"
+msgstr "Installeren van stuurprogramma mislukt"
 
 #: src/Views/DriversView.vala:52
-#, fuzzy
-#| msgid "Manually refreshing updates may resolve the issue"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
-"Het handmatig verversen van de updates zou het probleem mogelijk kunnen "
-"verhelpen"
+"Het handmatig verversen van de stuurprogrammainformatie zou het probleem "
+"mogelijk kunnen verhelpen"
 
 #: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:194
 msgid "Refresh"
 msgstr "Verversen"
 
 #: src/Views/DriversView.vala:55
-#, fuzzy
-#| msgid "Hardware Information"
 msgid "Refresh driver information"
-msgstr "Hardware informatie"
+msgstr "Ververs stuurprogramma informatie"
 
 #: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:206
 msgid "Learn More…"
 msgstr "Meer informatie…"
 
 #: src/Views/DriversView.vala:91
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install"
-msgstr "Installeren van firmware-uitgave is mislukt"
+msgstr "Installatie is mislukt"
 
 #: src/Views/DriversView.vala:92
-#, fuzzy
-#| msgid ""
-#| "This may have been caused by sideloaded or manually compiled software, a "
-#| "third-party software source, or a package manager error. Manually "
-#| "refreshing updates may resolve the issue."
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -175,13 +155,13 @@ msgid ""
 msgstr ""
 "Dit zou kunnen zijn veroorzaakt door sideloaded of handmatig gecompileerde "
 "software, softwarebronnen van een derde partij of een fout in de "
-"pakketbeheerder. Het handmatig vernieuwen van de updates zou dit probleem "
-"mogelijk kunnen verhelpen."
+"pakketbeheerder. Het handmatig verversen zou dit probleem mogelijk kunnen "
+"verhelpen."
 
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "%s installeren…"
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
