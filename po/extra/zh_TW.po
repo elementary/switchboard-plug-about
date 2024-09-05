@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-24 22:20+0000\n"
-"PO-Revision-Date: 2024-09-02 05:42+0000\n"
+"PO-Revision-Date: 2024-09-05 21:13+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/about-plug-extra/zh_Hant/>\n"
@@ -138,7 +138,7 @@ msgstr ""
 
 #: data/system.metainfo.xml.in:129
 msgid "Performance improvements"
-msgstr ""
+msgstr "效能改善"
 
 #~ msgid "About"
 #~ msgstr "關於"
