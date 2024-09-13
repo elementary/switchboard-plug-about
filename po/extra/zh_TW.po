@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-24 22:20+0000\n"
-"PO-Revision-Date: 2024-09-06 10:13+0000\n"
+"PO-Revision-Date: 2024-09-14 02:16+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/about-plug-extra/zh_Hant/>\n"
@@ -82,7 +82,7 @@ msgstr "支援離線韌體更新"
 
 #: data/system.metainfo.xml.in:100
 msgid "Use formatted device name when available"
-msgstr ""
+msgstr "可用時使用美化過的裝置名稱"
 
 #: data/system.metainfo.xml.in:101
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
