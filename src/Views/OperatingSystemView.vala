@@ -157,13 +157,15 @@ public class About.OperatingSystemView : Gtk.Box {
             ellipsize = Pango.EllipsizeMode.END,
             selectable = true,
             use_markup = true,
-            xalign = 0
+            xalign = 0,
+            hexpand = true
         };
         title.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
         var kernel_version_label = new Gtk.Label ("%s %s".printf (uts_name.sysname, uts_name.release)) {
             selectable = true,
-            xalign = 0
+            xalign = 0,
+            hexpand = true
         };
         kernel_version_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
         kernel_version_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
@@ -237,7 +239,8 @@ public class About.OperatingSystemView : Gtk.Box {
             margin_top = 12,
             valign = CENTER,
             show_separators = true,
-            selection_mode = NONE
+            selection_mode = NONE,
+            hexpand = true
         };
         updates_list.add_css_class ("boxed-list");
         updates_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
@@ -280,7 +283,8 @@ public class About.OperatingSystemView : Gtk.Box {
             margin_top = 12,
             valign = CENTER,
             show_separators = true,
-            selection_mode = NONE
+            selection_mode = NONE,
+            hexpand = true
         };
         links_list.add_css_class ("boxed-list");
         links_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
@@ -303,7 +307,8 @@ public class About.OperatingSystemView : Gtk.Box {
         software_grid = new Gtk.Grid () {
             column_spacing = 32,
             valign = Gtk.Align.CENTER,
-            vexpand = true
+            vexpand = true,
+            hexpand = true
         };
         software_grid.attach (logo_overlay, 0, 0, 1, 4);
         software_grid.attach (title, 1, 0);
@@ -439,7 +444,8 @@ public class About.OperatingSystemView : Gtk.Box {
         if (upstream_release != null) {
             var based_off = new Gtk.Label (_("Built on %s").printf (upstream_release)) {
                 selectable = true,
-                xalign = 0
+                xalign = 0,
+                hexpand = true
             };
             based_off.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
             based_off.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
