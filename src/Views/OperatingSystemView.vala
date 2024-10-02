@@ -174,6 +174,13 @@ public class About.OperatingSystemView : Gtk.Box {
         kernel_version_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
         kernel_version_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
+        var log_button = new Gtk.Button.from_icon_name ("system-logs-symbolic") {
+            tooltip_text = _("System logs"),
+            halign = END,
+            valign = BASELINE_CENTER,
+            hexpand = false
+        };
+
         packages = new Gtk.StringList (null);
 
         updates_image = new Gtk.Image () {
@@ -350,6 +357,7 @@ public class About.OperatingSystemView : Gtk.Box {
         };
         software_grid.attach (logo_overlay, 0, 0, 1, 4);
         software_grid.attach (title, 1, 0);
+        software_grid.attach (log_button, 2, 0);
 
         software_grid.attach (kernel_version_label, 1, 2);
         software_grid.attach (updates_list, 1, 3);
@@ -394,6 +402,13 @@ public class About.OperatingSystemView : Gtk.Box {
 
         sponsor_list.row_activated.connect ((row) => {
             launch_uri (((SponsorUsRow) row).uri);
+        });
+
+        log_button.clicked.connect (() => {
+            var logs_dialog = new LogsDialog () {
+                transient_for = (Gtk.Window) get_root ()
+            };
+            logs_dialog.present ();
         });
 
         links_list.row_activated.connect ((row) => {
