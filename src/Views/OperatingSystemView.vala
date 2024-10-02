@@ -300,6 +300,13 @@ public class About.OperatingSystemView : Gtk.Box {
             hexpand = true
         };
 
+        var log_button = new Gtk.Button.from_icon_name ("system-logs-symbolic") {
+            tooltip_text = _("System logs"),
+            halign = END,
+            valign = BASELINE_CENTER,
+            hexpand = false
+        };
+
         var button_grid = new Gtk.Box (HORIZONTAL, 6);
         button_grid.append (settings_restore_button);
         button_grid.append (bug_button);
@@ -312,10 +319,11 @@ public class About.OperatingSystemView : Gtk.Box {
         };
         software_grid.attach (logo_overlay, 0, 0, 1, 4);
         software_grid.attach (title, 1, 0);
+        software_grid.attach (log_button, 2, 0);
 
-        software_grid.attach (kernel_version_label, 1, 2);
-        software_grid.attach (updates_list, 1, 3);
-        software_grid.attach (links_list, 1, 4);
+        software_grid.attach (kernel_version_label, 1, 2, 2);
+        software_grid.attach (updates_list, 1, 3, 2);
+        software_grid.attach (links_list, 1, 4, 2);
 
         var clamp = new Adw.Clamp () {
             child = software_grid
@@ -351,6 +359,13 @@ public class About.OperatingSystemView : Gtk.Box {
             } else {
                 launch_uri (bug_url);
             }
+        });
+
+        log_button.clicked.connect (() => {
+            var logs_dialog = new LogsDialog () {
+                transient_for = (Gtk.Window) get_root ()
+            };
+            logs_dialog.present ();
         });
 
         links_list.row_activated.connect ((row) => {
