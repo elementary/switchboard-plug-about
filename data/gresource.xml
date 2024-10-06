@@ -3,4 +3,8 @@
   <gresource prefix="/io/elementary/settings/system">
     <file alias="OperatingSystemView.css" compressed="true">OperatingSystemView.css</file>
   </gresource>
+  
+  <gresource prefix="/io/elementary/settings/system/icons">
+    <file alias="32x32/categories/system-logs-symbolic.svg" compressed="true" preprocess="xml-stripblanks">system-logs-symbolic.svg</file>
+  </gresource>
 </gresources>

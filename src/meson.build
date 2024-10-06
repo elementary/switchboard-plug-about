@@ -5,6 +5,7 @@ plug_files = files(
     'Interfaces/FirmwareClient.vala',
     'Interfaces/LoginManager.vala',
     'Utils/ARMPartDecoder.vala',
+    'Utils' / 'SystemdLogModel.vala',
     'Views' / 'DriversView.vala',
     'Views/FirmwareReleaseView.vala',
     'Views/FirmwareView.vala',
@@ -12,7 +13,8 @@ plug_files = files(
     'Views/OperatingSystemView.vala',
     'Widgets/FirmwareUpdateRow.vala',
     'Widgets' / 'DriverRow.vala',
-    'Widgets' / 'UpdateDetailsDialog.vala'
+    'Widgets' / 'UpdateDetailsDialog.vala',
+    'Widgets' / 'LogsDialog.vala',
 )
 
 switchboard_dep = dependency('switchboard-3')
@@ -41,6 +43,7 @@ shared_module(
         dependency('gtk4'),
         dependency('libadwaita-1'),
         dependency('libgtop-2.0'),
+        dependency('libsystemd'),
         dependency('packagekit-glib2'),
         dependency('gudev-1.0'),
         dependency('udisks2'),
