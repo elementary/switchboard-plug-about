@@ -51,6 +51,7 @@ public class About.Plug : Switchboard.Plug {
 
     public override Gtk.Widget get_widget () {
         if (main_grid == null) {
+            Gtk.IconTheme.get_for_display (Gdk.Display.get_default ()).add_resource_path ("/io/elementary/settings/system/icons");
             operating_system_view = new OperatingSystemView ();
 
             var hardware_view = new HardwareView ();
