@@ -13,7 +13,7 @@ datadir = join_paths(prefix, get_option('datadir'))
 libdir = join_paths(prefix, get_option('libdir'))
 
 glib_dep = dependency('glib-2.0', version: '>=2.64.0')
-
+fwupd_dep = dependency('fwupd')
 appstream_dep = dependency ('appstream', version: '>=0.12.10')
 
 add_project_arguments(
@@ -29,6 +29,10 @@ vala_flags = []
 
 if glib_dep.version().version_compare ('>=2.73.0')
     vala_flags += ['--define', 'HAS_GLIB_2_73']
+endif
+
+if fwupd_dep.version().version_compare ('>=2.0.0')
+    vala_flags += ['--define', 'HAS_FWUPD_2_0']
 endif
 
 if appstream_dep.version().version_compare('>=1.0')

@@ -33,7 +33,7 @@ shared_module(
     config_vala,
     css_gresource,
     dependencies: [
-        dependency('fwupd'),
+        fwupd_dep,
         glib_dep,
         dependency('gio-2.0'),
         dependency('gobject-2.0'),
