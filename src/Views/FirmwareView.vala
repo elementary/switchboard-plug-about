@@ -124,7 +124,11 @@ public class About.FirmwareView : Switchboard.SettingsPage {
     }
 
     private void add_device (Fwupd.Device device) {
+#if HAS_FWUPD_2_0
+        if (device.has_flag (Fwupd.DeviceFlags.UPDATABLE)) {
+#else
         if (device.has_flag (Fwupd.DEVICE_FLAG_UPDATABLE)) {
+#endif
             FirmwareClient.get_upgrades.begin (fwupd_client, device.get_id (), (obj, res) => {
                 Fwupd.Release? release = null;
 
@@ -253,18 +257,35 @@ public class About.FirmwareView : Switchboard.SettingsPage {
     }
 
     private async void continue_update (Fwupd.Device device, Fwupd.Release release) {
+#if HAS_FWUPD_2_0
+        var locations = release.get_locations ();
+        // Typically the first URI will be the main HTTP mirror,
+        // it's unlikely that we'll be using IPFS/IPNS URLs anyway.
+        var path = yield download_file (device, locations.length > 0 ? locations[0] : "");
+#else
         var path = yield download_file (device, release.get_uri ());
+#endif
 
         try {
             var install_flags = Fwupd.InstallFlags.NONE;
+#if !HAS_FWUPD_2_0
             if (device.has_flag (Fwupd.DEVICE_FLAG_ONLY_OFFLINE)) {
                 install_flags = Fwupd.InstallFlags.OFFLINE;
             }
+#endif
 
             if (yield FirmwareClient.install (fwupd_client, device.get_id (), path, install_flags)) {
+#if HAS_FWUPD_2_0
+                if (device.has_flag (Fwupd.DeviceFlags.NEEDS_REBOOT)) {
+#else
                 if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_REBOOT)) {
+#endif
                     show_reboot_dialog ();
+#if HAS_FWUPD_2_0
+                } else if (device.has_flag (Fwupd.DeviceFlags.NEEDS_SHUTDOWN)) {
+#else
                 } else if (device.has_flag (Fwupd.DEVICE_FLAG_NEEDS_SHUTDOWN)) {
+#endif
                     show_shutdown_dialog ();
                 }
             }

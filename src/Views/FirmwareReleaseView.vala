@@ -194,7 +194,11 @@ public class About.FirmwareReleaseView : Gtk.Box {
         stack.visible_child = scrolled_window;
 
         var release_version = release.get_version ();
+#if HAS_FWUPD_2_0
+        if (release.get_flags () == Fwupd.ReleaseFlags.IS_UPGRADE && release_version != device.get_version ()) {
+#else
         if (release.get_flags () == Fwupd.RELEASE_FLAG_IS_UPGRADE && release_version != device.get_version ()) {
+#endif
             update_button.label = _("Update");
             update_button.sensitive = true;
         } else {
