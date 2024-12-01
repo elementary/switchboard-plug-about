@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-24 22:20+0000\n"
-"PO-Revision-Date: 2024-08-07 18:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-12-02 14:16+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/fi/>\n"
 "Language: fi\n"
@@ -39,10 +39,12 @@ msgstr "Uudet ominaisuudet:"
 #: data/system.metainfo.xml.in:47
 msgid "Manage Operating System updates, including automatic updates"
 msgstr ""
+"Hallitse käyttöjärjestelmän päivityksiä, mukaan lukien automaattisia "
+"päivityksiä"
 
 #: data/system.metainfo.xml.in:48
 msgid "Manage additional drivers"
-msgstr ""
+msgstr "Hallitse lisäajureita"
 
 #: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:73
 #: data/system.metainfo.xml.in:89 data/system.metainfo.xml.in:98
@@ -140,7 +142,7 @@ msgstr ""
 
 #: data/system.metainfo.xml.in:129
 msgid "Performance improvements"
-msgstr ""
+msgstr "Suorituskykyparannuksia"
 
 #~ msgid "About"
 #~ msgstr "Tietoja"
