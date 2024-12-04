@@ -20,4 +20,5 @@
 namespace About {
     private const string GETTEXT_PACKAGE = "@GETTEXT_PACKAGE@";
     private const string LOCALEDIR = "@LOCALEDIR@";
+    private const string GITHUB_TOKEN = "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";
 }
