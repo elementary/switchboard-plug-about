@@ -25,7 +25,7 @@ public class About.Plug : Switchboard.Plug {
     private const string DRIVERS = "drivers";
 
     private OperatingSystemView operating_system_view;
-    private Gtk.Grid main_grid;
+    private Adw.ToolbarView toolbarview;
     private Gtk.Stack stack;
 
     public Plug () {
@@ -50,7 +50,7 @@ public class About.Plug : Switchboard.Plug {
     }
 
     public override Gtk.Widget get_widget () {
-        if (main_grid == null) {
+        if (toolbarview == null) {
             operating_system_view = new OperatingSystemView ();
 
             var hardware_view = new HardwareView ();
@@ -80,12 +80,13 @@ public class About.Plug : Switchboard.Plug {
             };
             headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
 
-            main_grid = new Gtk.Grid ();
-            main_grid.attach (headerbar, 0, 0);
-            main_grid.attach (stack, 0, 1);
+            toolbarview = new Adw.ToolbarView () {
+                content = stack
+            };
+            toolbarview.add_top_bar (headerbar);
         }
 
-        return main_grid;
+        return toolbarview;
     }
 
     public override void shown () {
