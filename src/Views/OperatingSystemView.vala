@@ -336,7 +336,7 @@ public class About.OperatingSystemView : Gtk.Box {
         var scrolled_window = new Gtk.ScrolledWindow () {
             child = main_box
         };
-        
+
         spacing = 12;
         orientation = Gtk.Orientation.VERTICAL;
         append (scrolled_window);
