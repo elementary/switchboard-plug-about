@@ -250,6 +250,19 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_list.get_first_child ().focusable = false;
         updates_list.get_last_child ().focusable = false;
 
+        var sponsor_list = new Gtk.ListBox () {
+            margin_bottom = 12,
+            margin_top = 12,
+            valign = CENTER,
+            show_separators = true,
+            selection_mode = NONE,
+            hexpand = true
+        };
+        sponsor_list.add_css_class ("boxed-list");
+        sponsor_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
+
+        sponsor_list.append (new SponsorUsRow ());
+        
         var thebasics_link = new LinkRow (
             documentation_url,
             _("Basics Guide"),
@@ -273,7 +286,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         var getinvolved_link = new LinkRow (
             "https://elementary.io/get-involved",
-            _("Get Involved or Sponsor Us"),
+            _("Get Involved"),
             "face-heart-symbolic",
             "pink"
         );
@@ -315,7 +328,8 @@ public class About.OperatingSystemView : Gtk.Box {
 
         software_grid.attach (kernel_version_label, 1, 2);
         software_grid.attach (updates_list, 1, 3);
-        software_grid.attach (links_list, 1, 4);
+        software_grid.attach (sponsor_list, 1, 4);
+        software_grid.attach (links_list, 1, 5);
 
         var clamp = new Adw.Clamp () {
             child = software_grid
@@ -707,6 +721,54 @@ public class About.OperatingSystemView : Gtk.Box {
 
             child = box;
             add_css_class ("link");
+        }
+    }
+
+    private class SponsorUsRow : Gtk.ListBoxRow {
+        class construct {
+            set_accessible_role (LINK);
+        }
+
+        construct {
+            var image = new Gtk.Image.from_icon_name ("face-heart-symbolic") {
+                pixel_size = 16
+            };
+            image.add_css_class (Granite.STYLE_CLASS_ACCENT);
+            image.add_css_class ("pink");
+
+            var labels_stack = new Gtk.Stack () {
+                hexpand = true,
+                transition_type = SLIDE_UP_DOWN
+            };
+            labels_stack.add_named (new Gtk.Label (_("Sponsor Us")) {
+                halign = START
+            }, "title");
+            labels_stack.add_named (new Gtk.Label (_("23% towards $7,500 per month goal")) {
+                halign = START
+            }, "goal");
+
+            var progress_bar = new Gtk.ProgressBar ();
+
+            var link_image = new Gtk.Image.from_icon_name ("adw-external-link-symbolic");
+
+            var grid = new Gtk.Grid () {
+                column_spacing = 12,
+                row_spacing = 6,
+                margin_start = 6,
+                margin_end = 6
+            };
+            grid.attach (image, 0, 0, 1, 2);
+            grid.attach (labels_stack, 1, 0, 1, 1);
+            grid.attach (progress_bar, 1, 1, 1, 1);
+            grid.attach (link_image, 2, 0, 2, 2);
+
+            child = grid;
+            add_css_class ("link");
+
+            Timeout.add (3000, () => {
+                labels_stack.visible_child_name = labels_stack.visible_child_name == "title" ? "goal" : "title";
+                return true;
+            });
         }
     }
 }
