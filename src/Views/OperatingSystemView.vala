@@ -821,8 +821,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
                         var root = parser.get_root ();
                         if (root.get_node_type () == Json.NodeType.OBJECT) {
-                            var obj = root.get_object ();
-                            var sponsors_listing = obj
+                            var sponsors_listing = root.get_object ()
                                 .get_object_member ("data")
                                 .get_object_member ("organization")
                                 .get_object_member ("sponsorsListing")
