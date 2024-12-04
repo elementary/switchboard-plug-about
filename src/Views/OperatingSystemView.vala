@@ -261,7 +261,7 @@ public class About.OperatingSystemView : Gtk.Box {
         sponsor_list.add_css_class ("boxed-list");
         sponsor_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
-        sponsor_list.append (new SponsorUsRow ());
+        sponsor_list.append (new SponsorUsRow ("https://github.com/sponsors/elementary"));
         
         var thebasics_link = new LinkRow (
             documentation_url,
@@ -369,6 +369,10 @@ public class About.OperatingSystemView : Gtk.Box {
             } else {
                 launch_uri (bug_url);
             }
+        });
+
+        sponsor_list.row_activated.connect ((row) => {
+            launch_uri (((SponsorUsRow) row).uri);
         });
 
         links_list.row_activated.connect ((row) => {
@@ -729,6 +733,14 @@ public class About.OperatingSystemView : Gtk.Box {
     }
 
     private class SponsorUsRow : Gtk.ListBoxRow {
+        public string uri { get; construct; }
+
+        public SponsorUsRow (string uri) {
+            Object (
+                uri: uri
+            );
+        }
+        
         class construct {
             set_accessible_role (LINK);
         }
