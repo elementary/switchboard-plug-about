@@ -262,7 +262,7 @@ public class About.OperatingSystemView : Gtk.Box {
         sponsor_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
         sponsor_list.append (new SponsorUsRow ("https://github.com/sponsors/elementary"));
-        
+
         var thebasics_link = new LinkRow (
             documentation_url,
             _("Basics Guide"),
@@ -740,7 +740,7 @@ public class About.OperatingSystemView : Gtk.Box {
                 uri: uri
             );
         }
-        
+
         class construct {
             set_accessible_role (LINK);
         }
