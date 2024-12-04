@@ -792,7 +792,7 @@ public class About.OperatingSystemView : Gtk.Box {
             });
         }
 
-        private async void get_goal_progress (Gtk.LevelBar levelbar, Gtk.Label target_label) {
+        private void get_goal_progress (Gtk.LevelBar levelbar, Gtk.Label target_label) {
             new Thread<void*> ("get_goal_progress", () => {
                 var token = About.GITHUB_TOKEN;
                 var query = "{\"query\": \"query { organization(login: \\\"elementary\\\") { sponsorsListing { activeGoal { percentComplete, targetValue } } } }\"}";
