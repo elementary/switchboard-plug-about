@@ -301,9 +301,9 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         var button_grid = new Gtk.Box (HORIZONTAL, 6) {
+            margin_start = 12,
             margin_end = 12,
-            margin_bottom = 12,
-            margin_start = 12
+            margin_bottom = 12
         };
         button_grid.append (settings_restore_button);
         button_grid.append (bug_button);
@@ -322,23 +322,19 @@ public class About.OperatingSystemView : Gtk.Box {
         software_grid.attach (links_list, 1, 4);
 
         var clamp = new Adw.Clamp () {
-            child = software_grid
-        };
-
-        var main_box = new Gtk.Box (VERTICAL, 0) {
+            child = software_grid,
             margin_top = 12,
             margin_end = 12,
             margin_bottom = 12,
             margin_start = 12
         };
-        main_box.append (clamp);
 
         var scrolled_window = new Gtk.ScrolledWindow () {
-            child = main_box
+            child = clamp
         };
 
-        spacing = 12;
         orientation = Gtk.Orientation.VERTICAL;
+        spacing = 12;
         append (scrolled_window);
         append (button_grid);
 
