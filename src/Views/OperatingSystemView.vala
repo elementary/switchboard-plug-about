@@ -287,8 +287,8 @@ public class About.OperatingSystemView : Gtk.Box {
         var getinvolved_link = new LinkRow (
             "https://elementary.io/get-involved",
             _("Get Involved"),
-            "face-heart-symbolic",
-            "pink"
+            "applications-development-symbolic",
+            "purple"
         );
 
         var links_list = new Gtk.ListBox () {
