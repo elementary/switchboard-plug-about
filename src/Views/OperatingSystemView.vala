@@ -751,7 +751,7 @@ public class About.OperatingSystemView : Gtk.Box {
             };
             image.add_css_class (Granite.STYLE_CLASS_ACCENT);
             image.add_css_class ("pink");
-            
+
             var labels_stack = new Gtk.Stack () {
                 hexpand = true,
                 transition_type = SLIDE_UP_DOWN
