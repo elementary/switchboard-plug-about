@@ -808,7 +808,7 @@ public class About.OperatingSystemView : Gtk.Box {
                     string standard_error;
                     int exit_status;
 
-                    Process.spawn_command_line_sync(
+                    Process.spawn_command_line_sync (
                         curl_command,
                         out standard_output,
                         out standard_error,
@@ -823,10 +823,10 @@ public class About.OperatingSystemView : Gtk.Box {
                         if (root.get_node_type () == Json.NodeType.OBJECT) {
                             var obj = root.get_object ();
                             var sponsors_listing = obj
-                                .get_object_member("data")
-                                .get_object_member("organization")
-                                .get_object_member("sponsorsListing")
-                                .get_object_member("activeGoal");
+                                .get_object_member ("data")
+                                .get_object_member ("organization")
+                                .get_object_member ("sponsorsListing")
+                                .get_object_member ("activeGoal");
 
                             int64 percent_complete = sponsors_listing.get_int_member ("percentComplete");
                             double target_value = sponsors_listing.get_double_member ("targetValue");
@@ -837,7 +837,7 @@ public class About.OperatingSystemView : Gtk.Box {
                         }
                     }
                 } catch (Error e) {
-                    debug ("Error: %s\n".printf(e.message));
+                    debug ("Error: %s\n".printf (e.message));
                 }
 
                 return null;
