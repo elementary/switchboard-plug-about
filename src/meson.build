@@ -45,6 +45,7 @@ shared_module(
         dependency('gudev-1.0'),
         dependency('udisks2'),
         dependency('polkit-gobject-1'),
+        dependency('json-glib-1.0'),
         appstream_dep,
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep

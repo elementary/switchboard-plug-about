@@ -751,19 +751,23 @@ public class About.OperatingSystemView : Gtk.Box {
             };
             image.add_css_class (Granite.STYLE_CLASS_ACCENT);
             image.add_css_class ("pink");
-
+            
             var labels_stack = new Gtk.Stack () {
                 hexpand = true,
                 transition_type = SLIDE_UP_DOWN
             };
+
             labels_stack.add_named (new Gtk.Label (_("Sponsor Us")) {
                 halign = START
             }, "title");
-            labels_stack.add_named (new Gtk.Label (_("23% towards $7,500 per month goal")) {
-                halign = START
-            }, "goal");
 
-            var progress_bar = new Gtk.ProgressBar ();
+            var target_label = new Gtk.Label (null) {
+                halign = START
+            };
+
+            labels_stack.add_named (target_label, "goal");
+
+            var level_bar = new Gtk.LevelBar ();
 
             var link_image = new Gtk.Image.from_icon_name ("adw-external-link-symbolic");
 
@@ -775,15 +779,68 @@ public class About.OperatingSystemView : Gtk.Box {
             };
             grid.attach (image, 0, 0, 1, 2);
             grid.attach (labels_stack, 1, 0, 1, 1);
-            grid.attach (progress_bar, 1, 1, 1, 1);
+            grid.attach (level_bar, 1, 1, 1, 1);
             grid.attach (link_image, 2, 0, 2, 2);
 
             child = grid;
             add_css_class ("link");
+            get_goal_progress (level_bar, target_label);
 
             Timeout.add (3000, () => {
                 labels_stack.visible_child_name = labels_stack.visible_child_name == "title" ? "goal" : "title";
                 return true;
+            });
+        }
+
+        private async void get_goal_progress (Gtk.LevelBar levelbar, Gtk.Label target_label) {
+            new Thread<void*> ("get_goal_progress", () => {
+                var token = "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";
+                var query = "{\"query\": \"query { organization(login: \\\"elementary\\\") { sponsorsListing { activeGoal { percentComplete, targetValue } } } }\"}";
+                var curl_command = """
+                curl -X POST https://api.github.com/graphql \
+                -H "Authorization: Bearer %s" \
+                -H "Content-Type: application/json" \
+                -d '%s'
+                """.printf (token, query);
+
+                try {
+                    string standard_output;
+                    string standard_error;
+                    int exit_status;
+
+                    Process.spawn_command_line_sync(
+                        curl_command,
+                        out standard_output,
+                        out standard_error,
+                        out exit_status
+                    );
+
+                    if (exit_status == 0 && standard_output != null) {
+                        var parser = new Json.Parser ();
+                        parser.load_from_data (standard_output);
+
+                        var root = parser.get_root ();
+                        if (root.get_node_type () == Json.NodeType.OBJECT) {
+                            var obj = root.get_object ();
+                            var sponsors_listing = obj
+                                .get_object_member("data")
+                                .get_object_member("organization")
+                                .get_object_member("sponsorsListing")
+                                .get_object_member("activeGoal");
+
+                            int64 percent_complete = sponsors_listing.get_int_member ("percentComplete");
+                            double target_value = sponsors_listing.get_double_member ("targetValue");
+
+                            levelbar.value = percent_complete / 100.0;
+                            target_label.label = "%s%% towards $%s per month goal"
+                                .printf (percent_complete.to_string (), target_value.to_string ());
+                        }
+                    }
+                } catch (Error e) {
+                    debug ("Error: %s\n".printf(e.message));
+                }
+
+                return null;
             });
         }
     }
