@@ -300,7 +300,11 @@ public class About.OperatingSystemView : Gtk.Box {
             hexpand = true
         };
 
-        var button_grid = new Gtk.Box (HORIZONTAL, 6);
+        var button_grid = new Gtk.Box (HORIZONTAL, 6) {
+            margin_end = 12,
+            margin_bottom = 12,
+            margin_start = 12
+        };
         button_grid.append (settings_restore_button);
         button_grid.append (bug_button);
 
@@ -321,16 +325,20 @@ public class About.OperatingSystemView : Gtk.Box {
             child = software_grid
         };
 
-        var scrolled_window = new Gtk.ScrolledWindow () {
-            child = clamp
+        var main_box = new Gtk.Box (VERTICAL, 0) {
+            margin_top = 12,
+            margin_end = 12,
+            margin_bottom = 12,
+            margin_start = 12
         };
+        main_box.append (clamp);
 
-        margin_top = 12;
-        margin_end = 12;
-        margin_bottom = 12;
-        margin_start = 12;
-        orientation = Gtk.Orientation.VERTICAL;
+        var scrolled_window = new Gtk.ScrolledWindow () {
+            child = main_box
+        };
+        
         spacing = 12;
+        orientation = Gtk.Orientation.VERTICAL;
         append (scrolled_window);
         append (button_grid);
 
