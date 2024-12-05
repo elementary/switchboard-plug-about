@@ -828,10 +828,10 @@ public class About.OperatingSystemView : Gtk.Box {
                     double target_value = sponsors_listing.get_double_member ("targetValue");
 
                     levelbar.value = percent_complete / 100.0;
-                    target_label.label = _("%s%% towards $%s per month goal").printf (
+                    target_label.label = _("%s%% towards $%s per month goal".printf (
                         percent_complete.to_string (),
                         target_value.to_string ()
-                    );
+                    ));
 
                     details_revealer.reveal_child = true;
                 } catch (Error e) {
