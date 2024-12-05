@@ -41,6 +41,7 @@ shared_module(
         dependency('gtk4'),
         dependency('libadwaita-1'),
         dependency('libgtop-2.0'),
+        dependency('libsoup-3.0'),
         dependency('packagekit-glib2'),
         dependency('gudev-1.0'),
         dependency('udisks2'),
