@@ -767,7 +767,7 @@ public class About.OperatingSystemView : Gtk.Box {
             level_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
             level_bar.add_css_class ("pink");
 
-            var details_box = new Gtk.Box (VERTICAL, 6);
+            var details_box = new Gtk.Box (VERTICAL, 0);
             details_box.append (target_label);
             details_box.append (level_bar);
 
