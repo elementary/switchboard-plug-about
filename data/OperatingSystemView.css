@@ -33,5 +33,5 @@ levelbar.pink:not(:backdrop) block.filled {
 }
 
 levelbar.pink block.empty {
-    background-color: alpha(@text_color, 0.1);
+    background-color: alpha(@menu_separator, 0.6);
 }
