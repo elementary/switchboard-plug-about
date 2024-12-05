@@ -735,6 +735,8 @@ public class About.OperatingSystemView : Gtk.Box {
     private class SponsorUsRow : Gtk.ListBoxRow {
         public string uri { get; construct; }
 
+        private Gtk.Revealer details_revealer;
+
         public SponsorUsRow (string uri) {
             Object (
                 uri: uri
@@ -746,50 +748,47 @@ public class About.OperatingSystemView : Gtk.Box {
         }
 
         construct {
-            var image = new Gtk.Image.from_icon_name ("face-heart-symbolic") {
-                pixel_size = 16
-            };
+            var image = new Gtk.Image.from_icon_name ("face-heart-symbolic");
             image.add_css_class (Granite.STYLE_CLASS_ACCENT);
             image.add_css_class ("pink");
 
-            var labels_stack = new Gtk.Stack () {
-                hexpand = true,
-                transition_type = SLIDE_UP_DOWN
+            var main_label = new Gtk.Label (_("Sponsor Us")) {
+                halign = START,
+                hexpand = true
             };
-
-            labels_stack.add_named (new Gtk.Label (_("Sponsor Us")) {
-                halign = START
-            }, "title");
 
             var target_label = new Gtk.Label (null) {
                 halign = START
             };
-
-            labels_stack.add_named (target_label, "goal");
+            target_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
+            target_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
             var level_bar = new Gtk.LevelBar ();
+            level_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
+            level_bar.add_css_class ("pink");
+
+            var details_box = new Gtk.Box (VERTICAL, 0);
+            details_box.append (target_label);
+            details_box.append (level_bar);
+
+            details_revealer = new Gtk.Revealer () {
+                child = details_box,
+                reveal_child = false
+            };
 
             var link_image = new Gtk.Image.from_icon_name ("adw-external-link-symbolic");
 
             var grid = new Gtk.Grid () {
-                column_spacing = 12,
-                row_spacing = 6,
-                margin_start = 6,
-                margin_end = 6
+                valign = CENTER
             };
             grid.attach (image, 0, 0, 1, 2);
-            grid.attach (labels_stack, 1, 0, 1, 1);
-            grid.attach (level_bar, 1, 1, 1, 1);
+            grid.attach (main_label, 1, 0);
+            grid.attach (details_revealer, 1, 1);
             grid.attach (link_image, 2, 0, 2, 2);
 
             child = grid;
             add_css_class ("link");
             get_goal_progress (level_bar, target_label);
-
-            Timeout.add (3000, () => {
-                labels_stack.visible_child_name = labels_stack.visible_child_name == "title" ? "goal" : "title";
-                return true;
-            });
         }
 
         private void get_goal_progress (Gtk.LevelBar levelbar, Gtk.Label target_label) {
@@ -834,6 +833,7 @@ public class About.OperatingSystemView : Gtk.Box {
                         target_value.to_string ()
                     ));
 
+                    details_revealer.reveal_child = true;
                 } catch (Error e) {
                     critical (e.message);
                 }
