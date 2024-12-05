@@ -796,7 +796,7 @@ public class About.OperatingSystemView : Gtk.Box {
             var query = "{\"query\": \"query { organization(login: \\\"elementary\\\") { sponsorsListing { activeGoal { percentComplete, targetValue } } } }\"}";
 
             var message = new Soup.Message ("POST", "https://api.github.com/graphql");
-            message.request_headers.append ("Authorization", "Bearer %s".printf (About.GITHUB_TOKEN));
+            message.request_headers.append ("Authorization", "Bearer ghp_%s".printf (About.GITHUB_TOKEN));
             message.request_headers.append ("Content-Type", "application/json");
             message.request_headers.append ("User-Agent", "About.OperatingSystemView/1.0");
             message.set_request_body_from_bytes (null, new Bytes (query.data));
