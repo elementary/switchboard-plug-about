@@ -793,53 +793,50 @@ public class About.OperatingSystemView : Gtk.Box {
         }
 
         private void get_goal_progress (Gtk.LevelBar levelbar, Gtk.Label target_label) {
-            new Thread<void*> ("get_goal_progress", () => {
-                var token = About.GITHUB_TOKEN;
-                var query = "{\"query\": \"query { organization(login: \\\"elementary\\\") { sponsorsListing { activeGoal { percentComplete, targetValue } } } }\"}";
-                var curl_command = """
-                curl -X POST https://api.github.com/graphql \
-                -H "Authorization: Bearer %s" \
-                -H "Content-Type: application/json" \
-                -d '%s'
-                """.printf (token, query);
+            var query = "{\"query\": \"query { organization(login: \\\"elementary\\\") { sponsorsListing { activeGoal { percentComplete, targetValue } } } }\"}";
 
+            var message = new Soup.Message ("POST", "https://api.github.com/graphql");
+            message.request_headers.append ("Authorization", "Bearer %s".printf (About.GITHUB_TOKEN));
+            message.request_headers.append ("Content-Type", "application/json");
+            message.request_headers.append ("User-Agent", "About.OperatingSystemView/1.0");
+            message.set_request_body_from_bytes (null, new Bytes (query.data));
+
+            var session = new Soup.Session ();
+            session.send_and_read_async.begin (message, GLib.Priority.DEFAULT, null , (obj, res) => {
                 try {
-                    string standard_output;
-                    string standard_error;
-                    int exit_status;
+                    var bytes = session.send_and_read_async.end (res);
 
-                    Process.spawn_command_line_sync (
-                        curl_command,
-                        out standard_output,
-                        out standard_error,
-                        out exit_status
+                    var output = (string) bytes.get_data ();
+                    if (output == null) {
+                        return;
+                    }
+
+                    var parser = new Json.Parser ();
+                    parser.load_from_data (output);
+
+                    var root = parser.get_root ();
+                    if (root.get_node_type () != OBJECT) {
+                        return;
+                    }
+
+                    var sponsors_listing = root.get_object ()
+                        .get_object_member ("data")
+                        .get_object_member ("organization")
+                        .get_object_member ("sponsorsListing")
+                        .get_object_member ("activeGoal");
+
+                    int64 percent_complete = sponsors_listing.get_int_member ("percentComplete");
+                    double target_value = sponsors_listing.get_double_member ("targetValue");
+
+                    levelbar.value = percent_complete / 100.0;
+                    target_label.label = _("%s%% towards $%s per month goal").printf (
+                        percent_complete.to_string (),
+                        target_value.to_string ()
                     );
 
-                    if (exit_status == 0 && standard_output != null) {
-                        var parser = new Json.Parser ();
-                        parser.load_from_data (standard_output);
-
-                        var root = parser.get_root ();
-                        if (root.get_node_type () == Json.NodeType.OBJECT) {
-                            var sponsors_listing = root.get_object ()
-                                .get_object_member ("data")
-                                .get_object_member ("organization")
-                                .get_object_member ("sponsorsListing")
-                                .get_object_member ("activeGoal");
-
-                            int64 percent_complete = sponsors_listing.get_int_member ("percentComplete");
-                            double target_value = sponsors_listing.get_double_member ("targetValue");
-
-                            levelbar.value = percent_complete / 100.0;
-                            target_label.label = _("%s%% towards $%s per month goal")
-                                .printf (percent_complete.to_string (), target_value.to_string ());
-                        }
-                    }
                 } catch (Error e) {
-                    debug ("Error: %s\n".printf (e.message));
+                    critical (e.message);
                 }
-
-                return null;
             });
         }
     }
