@@ -22,7 +22,16 @@ row modelbutton {
    padding: 3px 6px;
 }
 
-row.link box {
+row.link > box,
+row.link > grid {
     padding: 0 6px;
-    border-spacing: 12px;
+    border-spacing: 12px 0;
+}
+
+levelbar.pink:not(:backdrop) block.filled {
+    background-color: @BUBBLEGUM_300;
+}
+
+levelbar.pink block.empty {
+    background-color: alpha(@text_color, 0.1);
 }
