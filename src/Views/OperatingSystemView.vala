@@ -827,9 +827,9 @@ public class About.OperatingSystemView : Gtk.Box {
                     int64 percent_complete = sponsors_listing.get_int_member ("percentComplete");
                     double target_value = sponsors_listing.get_double_member ("targetValue");
                     char currency[20];
+                    Monetary.strfmon (currency, "%5.0n", target_value);
 
                     var animation_target = new Adw.CallbackAnimationTarget ((val) => {
-                        Monetary.strfmon (currency, "%5.0n", target_value);
                         target_label.label = _("%.0f%% towards %s per month goal".printf (
                             Math.round (val),
                             (string) currency
