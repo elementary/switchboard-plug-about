@@ -830,6 +830,7 @@ public class About.OperatingSystemView : Gtk.Box {
                     Monetary.strfmon (currency, "%5.0n", target_value);
 
                     var animation_target = new Adw.CallbackAnimationTarget ((val) => {
+                        ///TRANSLATORS: first value is a percentage, second value is an amount in USD
                         target_label.label = _("%.0f%% towards %s per month goal".printf (
                             Math.round (val),
                             (string) currency
