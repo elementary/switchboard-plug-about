@@ -828,31 +828,25 @@ public class About.OperatingSystemView : Gtk.Box {
                     double target_value = sponsors_listing.get_double_member ("targetValue");
                     char currency[20];
 
-                    var label_animation_target = new Adw.CallbackAnimationTarget ((val) => {
+                    var animation_target = new Adw.CallbackAnimationTarget ((val) => {
                         Monetary.strfmon (currency, "%5.0n", target_value);
                         target_label.label = _("%.0f%% towards %s per month goal".printf (
                             Math.round (val),
                             (string) currency
                         ));
+
+                        levelbar.value = val / 100.0;
                     });
 
-                    var label_animation = new Adw.TimedAnimation (
+                    var animation = new Adw.TimedAnimation (
                         this, 0, percent_complete, 1000,
-                        label_animation_target
-                    ) {
-                        easing = EASE_IN_OUT_QUAD
-                    };
-
-                    var level_bar_animation = new Adw.TimedAnimation (
-                        this, 0, percent_complete / 100.0, 1000,
-                        new Adw.PropertyAnimationTarget (levelbar, "value")
+                        animation_target
                     ) {
                         easing = EASE_IN_OUT_QUAD
                     };
 
                     details_revealer.reveal_child = true;
-                    level_bar_animation.play ();
-                    label_animation.play ();
+                    animation.play ();
                 } catch (Error e) {
                     critical (e.message);
                 }
