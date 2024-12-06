@@ -826,50 +826,36 @@ public class About.OperatingSystemView : Gtk.Box {
 
                     int64 percent_complete = sponsors_listing.get_int_member ("percentComplete");
                     double target_value = sponsors_listing.get_double_member ("targetValue");
+                    char currency[20];
 
-                    animate_levelbar_and_label (levelbar, target_label, percent_complete, target_value);
+                    var label_animation_target = new Adw.CallbackAnimationTarget ((val) => {
+                        Monetary.strfmon (currency, "%5.0n", target_value);
+                        target_label.label = _("%.0f%% towards %s per month goal".printf (
+                            Math.round (val),
+                            (string) currency
+                        ));
+                    });
+
+                    var label_animation = new Adw.TimedAnimation (
+                        this, 0, percent_complete, 1000,
+                        label_animation_target
+                    ) {
+                        easing = EASE_IN_OUT_QUAD
+                    };
+
+                    var level_bar_animation = new Adw.TimedAnimation (
+                        this, 0, percent_complete / 100.0, 1000,
+                        new Adw.PropertyAnimationTarget (levelbar, "value")
+                    ) {
+                        easing = EASE_IN_OUT_QUAD
+                    };
 
                     details_revealer.reveal_child = true;
+                    level_bar_animation.play ();
+                    label_animation.play ();
                 } catch (Error e) {
                     critical (e.message);
                 }
-            });
-        }
-
-        private void animate_levelbar_and_label (Gtk.LevelBar levelbar, Gtk.Label target_label,
-            int64 percent_complete, double target_value) {
-            double current_value = 0.0;
-
-            uint interval = 20;
-            uint steps = 100;
-
-            double value_increment = percent_complete / 100.0 / steps;
-            double percent_increment = (int) (percent_complete / steps);
-
-            char currency[20];
-
-            GLib.Timeout.add (interval, () => {
-                if (current_value >= percent_complete / 100.0) {
-                    levelbar.value = percent_complete / 100.0;
-
-                    Monetary.strfmon (currency, "%5.0n", target_value);
-                    target_label.label = _("%.0f%% towards %s per month goal".printf (
-                        Math.round (current_value * 100),
-                        (string) currency
-                    ));
-                    return false;
-                }
-
-                current_value += value_increment;
-                levelbar.value = current_value;
-
-                Monetary.strfmon (currency, "%5.0n", target_value);
-                target_label.label = _("%.0f%% towards %s per month goal".printf (
-                    Math.round (current_value * 100),
-                    (string) currency
-                ));
-
-                return true;
             });
         }
     }
