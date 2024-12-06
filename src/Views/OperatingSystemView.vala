@@ -827,16 +827,43 @@ public class About.OperatingSystemView : Gtk.Box {
                     int64 percent_complete = sponsors_listing.get_int_member ("percentComplete");
                     double target_value = sponsors_listing.get_double_member ("targetValue");
 
-                    levelbar.value = percent_complete / 100.0;
-                    target_label.label = _("%s%% towards $%s per month goal".printf (
-                        percent_complete.to_string (),
-                        target_value.to_string ()
-                    ));
+                    animate_levelbar_and_label(levelbar, target_label, percent_complete, target_value);
 
                     details_revealer.reveal_child = true;
                 } catch (Error e) {
                     critical (e.message);
                 }
+            });
+        }
+
+        private void animate_levelbar_and_label(Gtk.LevelBar levelbar, Gtk.Label target_label,
+            int64 percent_complete, double target_value) {
+            double current_value = 0.0;
+
+            uint interval = 20;
+            uint steps = 100;
+
+            double value_increment = percent_complete / 100.0 / steps;
+            double percent_increment = (int)(percent_complete / steps);
+
+            GLib.Timeout.add(interval, () => {
+                if (current_value >= percent_complete / 100.0) {
+                    levelbar.value = percent_complete / 100.0;
+                    target_label.label = _("%s%% towards $%s per month goal".printf(
+                        percent_complete.to_string(),
+                        target_value.to_string()
+                    ));
+                    return false;
+                }
+
+                current_value += value_increment;
+                levelbar.value = current_value;
+                target_label.label = _("%s%% towards $%s per month goal".printf(
+                    Math.round (current_value * 100).to_string(),
+                    target_value.to_string()
+                ));
+
+                return true;
             });
         }
     }
