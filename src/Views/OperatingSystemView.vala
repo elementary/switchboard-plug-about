@@ -827,7 +827,7 @@ public class About.OperatingSystemView : Gtk.Box {
                     int64 percent_complete = sponsors_listing.get_int_member ("percentComplete");
                     double target_value = sponsors_listing.get_double_member ("targetValue");
 
-                    animate_levelbar_and_label(levelbar, target_label, percent_complete, target_value);
+                    animate_levelbar_and_label (levelbar, target_label, percent_complete, target_value);
 
                     details_revealer.reveal_child = true;
                 } catch (Error e) {
@@ -836,7 +836,7 @@ public class About.OperatingSystemView : Gtk.Box {
             });
         }
 
-        private void animate_levelbar_and_label(Gtk.LevelBar levelbar, Gtk.Label target_label,
+        private void animate_levelbar_and_label (Gtk.LevelBar levelbar, Gtk.Label target_label,
             int64 percent_complete, double target_value) {
             double current_value = 0.0;
 
@@ -844,23 +844,23 @@ public class About.OperatingSystemView : Gtk.Box {
             uint steps = 100;
 
             double value_increment = percent_complete / 100.0 / steps;
-            double percent_increment = (int)(percent_complete / steps);
+            double percent_increment = (int) (percent_complete / steps);
 
-            GLib.Timeout.add(interval, () => {
+            GLib.Timeout.add (interval, () => {
                 if (current_value >= percent_complete / 100.0) {
                     levelbar.value = percent_complete / 100.0;
-                    target_label.label = _("%s%% towards $%s per month goal".printf(
-                        percent_complete.to_string(),
-                        target_value.to_string()
+                    target_label.label = _("%s%% towards $%s per month goal".printf (
+                        percent_complete.to_string (),
+                        target_value.to_string ()
                     ));
                     return false;
                 }
 
                 current_value += value_increment;
                 levelbar.value = current_value;
-                target_label.label = _("%s%% towards $%s per month goal".printf(
-                    Math.round (current_value * 100).to_string(),
-                    target_value.to_string()
+                target_label.label = _("%s%% towards $%s per month goal".printf (
+                    Math.round (current_value * 100).to_string (),
+                    target_value.to_string ()
                 ));
 
                 return true;
