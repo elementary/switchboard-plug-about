@@ -846,21 +846,27 @@ public class About.OperatingSystemView : Gtk.Box {
             double value_increment = percent_complete / 100.0 / steps;
             double percent_increment = (int) (percent_complete / steps);
 
+            char currency[20];
+
             GLib.Timeout.add (interval, () => {
                 if (current_value >= percent_complete / 100.0) {
                     levelbar.value = percent_complete / 100.0;
-                    target_label.label = _("%s%% towards $%s per month goal".printf (
-                        percent_complete.to_string (),
-                        target_value.to_string ()
+
+                    Monetary.strfmon (currency, "%5.0n", target_value);
+                    target_label.label = _("%.0f%% towards %s per month goal".printf (
+                        Math.round (current_value * 100),
+                        (string) currency
                     ));
                     return false;
                 }
 
                 current_value += value_increment;
                 levelbar.value = current_value;
-                target_label.label = _("%s%% towards $%s per month goal".printf (
-                    Math.round (current_value * 100).to_string (),
-                    target_value.to_string ()
+
+                Monetary.strfmon (currency, "%5.0n", target_value);
+                target_label.label = _("%.0f%% towards %s per month goal".printf (
+                    Math.round (current_value * 100),
+                    (string) currency
                 ));
 
                 return true;
