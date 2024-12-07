@@ -829,10 +829,10 @@ public class About.OperatingSystemView : Gtk.Box {
 
                     var animation_target = new Adw.CallbackAnimationTarget ((val) => {
                         ///TRANSLATORS: first value is a percentage, second value is an amount in USD
-                        target_label.label = _("%.0f%% towards $%'5.0f per month goal".printf (
+                        target_label.label = _("%.0f%% towards $%'5.0f per month goal").printf (
                             Math.round (val),
                             target_value
-                        ));
+                        );
 
                         levelbar.value = val / 100.0;
                     });
