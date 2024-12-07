@@ -48,7 +48,6 @@ shared_module(
         dependency('polkit-gobject-1'),
         dependency('json-glib-1.0'),
         appstream_dep,
-        meson.get_compiler('vala').find_library('monetary', dirs: meson.project_source_root() / 'vapi'),
         meson.get_compiler('vala').find_library('posix'),
         switchboard_dep
     ],
