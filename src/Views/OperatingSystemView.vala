@@ -250,6 +250,19 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_list.get_first_child ().focusable = false;
         updates_list.get_last_child ().focusable = false;
 
+        var sponsor_list = new Gtk.ListBox () {
+            margin_bottom = 12,
+            margin_top = 12,
+            valign = CENTER,
+            show_separators = true,
+            selection_mode = NONE,
+            hexpand = true
+        };
+        sponsor_list.add_css_class ("boxed-list");
+        sponsor_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
+
+        sponsor_list.append (new SponsorUsRow ("https://github.com/sponsors/elementary"));
+
         var thebasics_link = new LinkRow (
             documentation_url,
             _("Basics Guide"),
@@ -273,9 +286,9 @@ public class About.OperatingSystemView : Gtk.Box {
 
         var getinvolved_link = new LinkRow (
             "https://elementary.io/get-involved",
-            _("Get Involved or Sponsor Us"),
-            "face-heart-symbolic",
-            "pink"
+            _("Get Involved"),
+            "applications-development-symbolic",
+            "purple"
         );
 
         var links_list = new Gtk.ListBox () {
@@ -319,7 +332,8 @@ public class About.OperatingSystemView : Gtk.Box {
 
         software_grid.attach (kernel_version_label, 1, 2);
         software_grid.attach (updates_list, 1, 3);
-        software_grid.attach (links_list, 1, 4);
+        software_grid.attach (sponsor_list, 1, 4);
+        software_grid.attach (links_list, 1, 5);
 
         var clamp = new Adw.Clamp () {
             child = software_grid,
@@ -355,6 +369,10 @@ public class About.OperatingSystemView : Gtk.Box {
             } else {
                 launch_uri (bug_url);
             }
+        });
+
+        sponsor_list.row_activated.connect ((row) => {
+            launch_uri (((SponsorUsRow) row).uri);
         });
 
         links_list.row_activated.connect ((row) => {
@@ -711,6 +729,127 @@ public class About.OperatingSystemView : Gtk.Box {
 
             child = box;
             add_css_class ("link");
+        }
+    }
+
+    private class SponsorUsRow : Gtk.ListBoxRow {
+        public string uri { get; construct; }
+
+        private Gtk.Revealer details_revealer;
+
+        public SponsorUsRow (string uri) {
+            Object (
+                uri: uri
+            );
+        }
+
+        class construct {
+            set_accessible_role (LINK);
+        }
+
+        construct {
+            var image = new Gtk.Image.from_icon_name ("face-heart-symbolic");
+            image.add_css_class (Granite.STYLE_CLASS_ACCENT);
+            image.add_css_class ("pink");
+
+            var main_label = new Gtk.Label (_("Sponsor Us")) {
+                halign = START,
+                hexpand = true
+            };
+
+            var target_label = new Gtk.Label (null) {
+                halign = START
+            };
+            target_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
+            target_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
+
+            var level_bar = new Gtk.LevelBar ();
+            level_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
+            level_bar.add_css_class ("pink");
+
+            var details_box = new Gtk.Box (VERTICAL, 0);
+            details_box.append (target_label);
+            details_box.append (level_bar);
+
+            details_revealer = new Gtk.Revealer () {
+                child = details_box,
+                reveal_child = false
+            };
+
+            var link_image = new Gtk.Image.from_icon_name ("adw-external-link-symbolic");
+
+            var grid = new Gtk.Grid () {
+                valign = CENTER
+            };
+            grid.attach (image, 0, 0, 1, 2);
+            grid.attach (main_label, 1, 0);
+            grid.attach (details_revealer, 1, 1);
+            grid.attach (link_image, 2, 0, 2, 2);
+
+            child = grid;
+            add_css_class ("link");
+            get_goal_progress (level_bar, target_label);
+        }
+
+        private void get_goal_progress (Gtk.LevelBar levelbar, Gtk.Label target_label) {
+            var query = "{\"query\": \"query { organization(login: \\\"elementary\\\") { sponsorsListing { activeGoal { percentComplete, targetValue } } } }\"}";
+
+            var message = new Soup.Message ("POST", "https://api.github.com/graphql");
+            message.request_headers.append ("Authorization", "Bearer ghp_%s".printf (About.GITHUB_TOKEN));
+            message.request_headers.append ("Content-Type", "application/json");
+            message.request_headers.append ("User-Agent", "About.OperatingSystemView/1.0");
+            message.set_request_body_from_bytes (null, new Bytes (query.data));
+
+            var session = new Soup.Session ();
+            session.send_and_read_async.begin (message, GLib.Priority.DEFAULT, null , (obj, res) => {
+                try {
+                    var bytes = session.send_and_read_async.end (res);
+
+                    var output = (string) bytes.get_data ();
+                    if (output == null) {
+                        return;
+                    }
+
+                    var parser = new Json.Parser ();
+                    parser.load_from_data (output);
+
+                    var root = parser.get_root ();
+                    if (root.get_node_type () != OBJECT) {
+                        return;
+                    }
+
+                    var sponsors_listing = root.get_object ()
+                        .get_object_member ("data")
+                        .get_object_member ("organization")
+                        .get_object_member ("sponsorsListing")
+                        .get_object_member ("activeGoal");
+
+                    int64 percent_complete = sponsors_listing.get_int_member ("percentComplete");
+                    double target_value = sponsors_listing.get_double_member ("targetValue");
+
+                    var animation_target = new Adw.CallbackAnimationTarget ((val) => {
+                        ///TRANSLATORS: first value is a percentage, second value is an amount in USD
+                        target_label.label = _("%.0f%% towards $%'5.0f per month goal").printf (
+                            Math.round (val),
+                            target_value
+                        );
+
+                        levelbar.value = val / 100.0;
+                    });
+
+                    var animation = new Adw.TimedAnimation (
+                        this, 0, percent_complete, 1000,
+                        animation_target
+                    ) {
+                        easing = EASE_IN_OUT_QUAD
+                    };
+
+                    details_revealer.reveal_child = true;
+                    animation.play ();
+                } catch (Error e) {
+                    critical (e.message);
+                }
+            });
         }
     }
 }

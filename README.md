@@ -18,6 +18,7 @@ You'll need the following dependencies:
 * libappstream-dev
 * libpackagekit-glib2-dev
 * libpolkit-gobject-1-dev
+* libsoup-3.0-dev
 * meson
 * valac
 * switcheroo-control (at runtime)
