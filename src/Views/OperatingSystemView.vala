@@ -792,14 +792,7 @@ public class About.OperatingSystemView : Gtk.Box {
         }
 
         private void get_goal_progress (Gtk.LevelBar levelbar, Gtk.Label target_label) {
-            var query = "{\"query\": \"query { organization(login: \\\"elementary\\\") { sponsorsListing { activeGoal { percentComplete, targetValue } } } }\"}";
-
-            var message = new Soup.Message ("POST", "https://api.github.com/graphql");
-            message.request_headers.append ("Authorization", "Bearer ghp_%s".printf (About.GITHUB_TOKEN));
-            message.request_headers.append ("Content-Type", "application/json");
-            message.request_headers.append ("User-Agent", "About.OperatingSystemView/1.0");
-            message.set_request_body_from_bytes (null, new Bytes (query.data));
-
+            var message = new Soup.Message ("GET", "https://elementary.io/api/sponsors_goal");
             var session = new Soup.Session ();
             session.send_and_read_async.begin (message, GLib.Priority.DEFAULT, null , (obj, res) => {
                 try {
@@ -818,14 +811,8 @@ public class About.OperatingSystemView : Gtk.Box {
                         return;
                     }
 
-                    var sponsors_listing = root.get_object ()
-                        .get_object_member ("data")
-                        .get_object_member ("organization")
-                        .get_object_member ("sponsorsListing")
-                        .get_object_member ("activeGoal");
-
-                    int64 percent_complete = sponsors_listing.get_int_member ("percentComplete");
-                    double target_value = sponsors_listing.get_double_member ("targetValue");
+                    int64 percent_complete = root.get_object ().get_int_member ("percent");
+                    double target_value = root.get_object ().get_double_member ("target");
 
                     var animation_target = new Adw.CallbackAnimationTarget ((val) => {
                         ///TRANSLATORS: first value is a percentage, second value is an amount in USD
