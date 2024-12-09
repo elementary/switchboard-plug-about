@@ -93,6 +93,7 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.Label updates_description;
     private Gtk.Revealer details_button_revealer;
     private Gtk.Stack button_stack;
+    private SponsorUsRow sponsor_us_row;
 
     construct {
         add_css_class ("operating-system-view");
@@ -250,6 +251,8 @@ public class About.OperatingSystemView : Gtk.Box {
         updates_list.get_first_child ().focusable = false;
         updates_list.get_last_child ().focusable = false;
 
+        sponsor_us_row = new SponsorUsRow ("https://github.com/sponsors/elementary");
+
         var sponsor_list = new Gtk.ListBox () {
             margin_bottom = 12,
             margin_top = 12,
@@ -261,7 +264,7 @@ public class About.OperatingSystemView : Gtk.Box {
         sponsor_list.add_css_class ("boxed-list");
         sponsor_list.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
-        sponsor_list.append (new SponsorUsRow ("https://github.com/sponsors/elementary"));
+        sponsor_list.append (sponsor_us_row);
 
         var thebasics_link = new LinkRow (
             documentation_url,
@@ -433,6 +436,14 @@ public class About.OperatingSystemView : Gtk.Box {
         } catch (Error e) {
             warning ("Failed to load logo file: %s", e.message);
         }
+    }
+
+    public void load_sponsors_goal (GLib.Cancellable cancellable) {
+        if (sponsor_us_row.was_loaded) {
+            return;
+        }
+
+        sponsor_us_row.get_goal_progress (cancellable);
     }
 
     private async void get_upstream_release () {
@@ -735,12 +746,20 @@ public class About.OperatingSystemView : Gtk.Box {
     private class SponsorUsRow : Gtk.ListBoxRow {
         public string uri { get; construct; }
 
+        private Gtk.Label target_label;
+        private Gtk.LevelBar levelbar;
         private Gtk.Revealer details_revealer;
 
         public SponsorUsRow (string uri) {
             Object (
                 uri: uri
             );
+        }
+
+        public bool was_loaded {
+            get {
+                return details_revealer.reveal_child;
+            }
         }
 
         class construct {
@@ -757,19 +776,19 @@ public class About.OperatingSystemView : Gtk.Box {
                 hexpand = true
             };
 
-            var target_label = new Gtk.Label (null) {
+            target_label = new Gtk.Label (null) {
                 halign = START
             };
             target_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
             target_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-            var level_bar = new Gtk.LevelBar ();
-            level_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
-            level_bar.add_css_class ("pink");
+            levelbar = new Gtk.LevelBar ();
+            levelbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+            levelbar.add_css_class ("pink");
 
             var details_box = new Gtk.Box (VERTICAL, 0);
             details_box.append (target_label);
-            details_box.append (level_bar);
+            details_box.append (levelbar);
 
             details_revealer = new Gtk.Revealer () {
                 child = details_box,
@@ -788,13 +807,12 @@ public class About.OperatingSystemView : Gtk.Box {
 
             child = grid;
             add_css_class ("link");
-            get_goal_progress (level_bar, target_label);
         }
 
-        private void get_goal_progress (Gtk.LevelBar levelbar, Gtk.Label target_label) {
+        public void get_goal_progress (GLib.Cancellable cancellable) {
             var message = new Soup.Message ("GET", "https://elementary.io/api/sponsors_goal");
             var session = new Soup.Session ();
-            session.send_and_read_async.begin (message, GLib.Priority.DEFAULT, null , (obj, res) => {
+            session.send_and_read_async.begin (message, GLib.Priority.DEFAULT, cancellable , (obj, res) => {
                 try {
                     var bytes = session.send_and_read_async.end (res);
 
