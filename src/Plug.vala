@@ -27,6 +27,7 @@ public class About.Plug : Switchboard.Plug {
     private OperatingSystemView operating_system_view;
     private Adw.ToolbarView toolbarview;
     private Gtk.Stack stack;
+    private GLib.Cancellable sponsors_goal_cancellable;
 
     public Plug () {
         GLib.Intl.bindtextdomain (About.GETTEXT_PACKAGE, About.LOCALEDIR);
@@ -91,9 +92,15 @@ public class About.Plug : Switchboard.Plug {
 
     public override void shown () {
         operating_system_view.load_logo.begin ();
+
+        sponsors_goal_cancellable = new GLib.Cancellable ();
+        operating_system_view.load_sponsors_goal (sponsors_goal_cancellable);
     }
 
     public override void hidden () {
+        if (sponsors_goal_cancellable != null) {
+            sponsors_goal_cancellable.cancel ();
+        }
     }
 
     public override void search_callback (string location) {
