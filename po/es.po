@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-09 18:51+0000\n"
-"PO-Revision-Date: 2024-07-26 01:16+0000\n"
+"PO-Revision-Date: 2024-12-10 11:51+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.8.4\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:46
@@ -61,7 +61,7 @@ msgstr "Obtener ayuda"
 
 #: src/Plug.vala:131
 msgid "Get Involved or Sponsor Us"
-msgstr "Participar o patrocinarnos"
+msgstr "Participa o patrocínanos"
 
 #: src/Plug.vala:132
 msgid "Get Support"
@@ -432,10 +432,8 @@ msgstr ""
 "se reinicie el equipo."
 
 #: src/Views/OperatingSystemView.vala:292
-#, fuzzy
-#| msgid "Get Involved or Sponsor Us"
 msgid "Get Involved"
-msgstr "Participar o patrocinarnos"
+msgstr "Participa"
 
 #: src/Views/OperatingSystemView.vala:478
 #, c-format
@@ -527,13 +525,13 @@ msgstr "Restaurar configuración"
 
 #: src/Views/OperatingSystemView.vala:774
 msgid "Sponsor Us"
-msgstr ""
+msgstr "Patrocínanos"
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
 #: src/Views/OperatingSystemView.vala:837
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
-msgstr ""
+msgstr "%.0f%% hacia el objetivo de $%'5.0f por mes"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
