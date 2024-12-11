@@ -204,7 +204,13 @@ public class About.HardwareView : Gtk.Box {
         get_system_interface_instance ();
 
         if (system_interface != null) {
-            manufacturer_logo.icon_name = system_interface.icon_name;
+            string? fallback_icon = system_interface.icon_name;
+
+            if (fallback_icon == null || fallback_icon.length == 0) {
+                fallback_icon = "computer";
+            }
+
+            manufacturer_logo.icon_name = fallback_icon;
         }
     }
 
@@ -639,9 +645,9 @@ public class About.HardwareView : Gtk.Box {
             return GLib.Environment.get_host_name ();
         }
 
-        string hostname = system_interface.pretty_hostname;
+        string? hostname = system_interface.pretty_hostname;
 
-        if (hostname.length == 0) {
+        if (hostname == null || hostname.length == 0) {
             hostname = system_interface.static_hostname;
         }
 
