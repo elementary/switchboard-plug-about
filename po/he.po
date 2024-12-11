@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-09 18:51+0000\n"
-"PO-Revision-Date: 2024-12-10 11:51+0000\n"
+"PO-Revision-Date: 2024-12-11 13:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -510,13 +510,13 @@ msgstr "שחזור הגדרות"
 
 #: src/Views/OperatingSystemView.vala:774
 msgid "Sponsor Us"
-msgstr ""
+msgstr "לממן אותנו"
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
 #: src/Views/OperatingSystemView.vala:837
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
-msgstr ""
+msgstr "%.0f%% לעבר יעד חודשי של $%'5.0f"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"

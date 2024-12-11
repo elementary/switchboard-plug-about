@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-09 18:51+0000\n"
-"PO-Revision-Date: 2024-09-06 10:13+0000\n"
+"PO-Revision-Date: 2024-12-11 13:16+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
-"switchboard/switchboard-plug-about/zh_Hant/>\n"
+"Language-Team: Chinese (Traditional Han script) <https://l10n.elementary.io/"
+"projects/switchboard/switchboard-plug-about/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.8.4\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:46
@@ -413,10 +413,8 @@ msgid ""
 msgstr "更新會自動下載。它們會在這台裝置重新啟動時安裝。"
 
 #: src/Views/OperatingSystemView.vala:292
-#, fuzzy
-#| msgid "Get Involved or Sponsor Us"
 msgid "Get Involved"
-msgstr "參與或贊助"
+msgstr "參與"
 
 #: src/Views/OperatingSystemView.vala:478
 #, c-format
@@ -502,13 +500,13 @@ msgstr "還原設定值"
 
 #: src/Views/OperatingSystemView.vala:774
 msgid "Sponsor Us"
-msgstr ""
+msgstr "贊助我們"
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
 #: src/Views/OperatingSystemView.vala:837
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
-msgstr ""
+msgstr "月份目標 $%2$'5.0f 的 %1$.0f%%"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
