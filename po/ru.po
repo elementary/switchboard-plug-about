@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-09 18:51+0000\n"
-"PO-Revision-Date: 2024-12-11 13:16+0000\n"
-"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"PO-Revision-Date: 2024-12-13 17:16+0000\n"
+"Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ru/>\n"
 "Language: ru\n"
@@ -530,7 +530,7 @@ msgstr "Спонсировать"
 #: src/Views/OperatingSystemView.vala:837
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
-msgstr "%.0f%% до %'5.0f$ в месяц"
+msgstr "%.0f%% до %'5.0f USD в месяц"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
