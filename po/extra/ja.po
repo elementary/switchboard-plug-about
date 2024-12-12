@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-09 18:51+0000\n"
-"PO-Revision-Date: 2024-07-15 07:16+0000\n"
+"PO-Revision-Date: 2024-12-12 05:36+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "about-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.8.4\n"
 
 #: data/system.metainfo.xml.in:10
 msgid "System"
@@ -35,7 +35,7 @@ msgstr "elementary, Inc."
 #: data/system.metainfo.xml.in:85 data/system.metainfo.xml.in:101
 #: data/system.metainfo.xml.in:110 data/system.metainfo.xml.in:138
 msgid "Minor updates:"
-msgstr "そのほかのアップデート:"
+msgstr "マイナーアップデート:"
 
 #: data/system.metainfo.xml.in:47 data/system.metainfo.xml.in:65
 #: data/system.metainfo.xml.in:89 data/system.metainfo.xml.in:103
