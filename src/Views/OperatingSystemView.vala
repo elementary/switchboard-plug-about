@@ -522,7 +522,7 @@ public class About.OperatingSystemView : Gtk.Box {
 
         update_progress_revealer.reveal_child = false;
         details_button_revealer.reveal_child = current_state.state == AVAILABLE || current_state.state == ERROR;
-        
+
         switch (current_state.state) {
             case UP_TO_DATE:
                 updates_image.icon_name = "process-completed";
@@ -602,7 +602,7 @@ public class About.OperatingSystemView : Gtk.Box {
         double downloaded_mb = (double) downloaded_size / (1024 * 1024);
         double total_mb = (double) download_size_max / (1024 * 1024);
 
-        return "%.2f MB / %.2f MB".printf(downloaded_mb, total_mb);
+        return "%.2f MB / %.2f MB".printf (downloaded_mb, total_mb);
     }
 
     private void details_clicked () {
