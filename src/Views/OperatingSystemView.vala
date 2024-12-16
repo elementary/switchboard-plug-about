@@ -603,10 +603,10 @@ public class About.OperatingSystemView : Gtk.Box {
         }
 
         uint64 downloaded_size = download_size_max - download_size_remaining;
-        string downloaded_size_str = GLib.format_size(downloaded_size);
-        string total_size_str = GLib.format_size(download_size_max);
+        string downloaded_size_str = GLib.format_size (downloaded_size);
+        string total_size_str = GLib.format_size (download_size_max);
 
-        return "%s / %s".printf(downloaded_size_str, total_size_str);
+        return "%s / %s".printf (downloaded_size_str, total_size_str);
     }
 
     private void details_clicked () {
