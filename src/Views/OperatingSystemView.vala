@@ -93,7 +93,7 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.Grid software_grid;
     private Gtk.Image updates_image;
     private Gtk.Label updates_title;
-    private Gtk.LevelBar update_progress_bar;
+    private Gtk.ProgressBar update_progress_bar;
     private Gtk.Revealer update_progress_revealer;
     private Gtk.Label updates_description;
     private Gtk.Revealer details_button_revealer;
@@ -188,7 +188,7 @@ public class About.OperatingSystemView : Gtk.Box {
             xalign = 0
         };
 
-        update_progress_bar = new Gtk.LevelBar.for_interval (0, 100) {
+        update_progress_bar = new Gtk.ProgressBar () {
             margin_top = 3
         };
 
@@ -197,7 +197,8 @@ public class About.OperatingSystemView : Gtk.Box {
         };
 
         updates_description = new Gtk.Label (null) {
-            xalign = 0
+            xalign = 0,
+            use_markup = true
         };
         updates_description.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
         updates_description.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
@@ -566,7 +567,7 @@ public class About.OperatingSystemView : Gtk.Box {
                 break;
             case DOWNLOADING:
                 update_progress_revealer.reveal_child = current_state.percentage > 0;
-                update_progress_bar.value = current_state.percentage;
+                update_progress_bar.fraction = current_state.percentage;
 
                 download_size_remaining = current_state.download_size_remaining;
                 if (download_size_remaining > download_size_max) {
@@ -575,7 +576,10 @@ public class About.OperatingSystemView : Gtk.Box {
 
                 updates_image.icon_name = "browser-download";
                 updates_title.label = _("Downloading Updates");
-                updates_description.label = "%s %s".printf (current_state.message, get_progress_text ());
+                updates_description.label = "%s <span font-features='tnum'>%s</span>".printf (
+                    current_state.message,
+                    get_progress_text ()
+                );
                 button_stack.visible_child_name = "cancel";
                 break;
             case RESTART_REQUIRED:
@@ -599,10 +603,10 @@ public class About.OperatingSystemView : Gtk.Box {
         }
 
         uint64 downloaded_size = download_size_max - download_size_remaining;
-        double downloaded_mb = (double) downloaded_size / (1024 * 1024);
-        double total_mb = (double) download_size_max / (1024 * 1024);
+        string downloaded_size_str = GLib.format_size(downloaded_size);
+        string total_size_str = GLib.format_size(download_size_max);
 
-        return "%.2f MB / %.2f MB".printf (downloaded_mb, total_mb);
+        return "%s / %s".printf(downloaded_size_str, total_size_str);
     }
 
     private void details_clicked () {
