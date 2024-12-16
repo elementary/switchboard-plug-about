@@ -203,7 +203,10 @@ public class About.HardwareView : Gtk.Box {
     private async void load_fallback_manufacturer_icon () {
         get_system_interface_instance ();
 
-        if (system_interface != null) {
+        bool is_hostname1_available = dbus_name_owner_exists (BusType.SYSTEM, "org.freedesktop.hostname1");
+        if (!is_hostname1_available) {
+            manufacturer_logo.icon_name = "computer";
+        } else {
             manufacturer_logo.icon_name = system_interface.icon_name;
         }
     }
@@ -573,6 +576,29 @@ public class About.HardwareView : Gtk.Box {
         string replacement;
     }
 
+    private bool dbus_name_owner_exists (BusType bus_type, string name) {
+        bool owner_exists = false;
+
+        var loop = new MainLoop ();
+        uint watch_id = Bus.watch_name (
+            bus_type,
+            name,
+            BusNameWatcherFlags.NONE,
+            // One of the handlers will be invoked after calling Bus.watch_name
+            () => {
+                owner_exists = true;
+                loop.quit ();
+            },
+            () => {
+                loop.quit ();
+            }
+        );
+        loop.run ();
+
+        Bus.unwatch_name (watch_id);
+        return owner_exists;
+    }
+
     private void get_system_interface_instance () {
         if (system_interface == null) {
             try {
@@ -635,7 +661,8 @@ public class About.HardwareView : Gtk.Box {
     private string get_host_name () {
         get_system_interface_instance ();
 
-        if (system_interface == null) {
+        bool is_hostname1_available = dbus_name_owner_exists (BusType.SYSTEM, "org.freedesktop.hostname1");
+        if (!is_hostname1_available) {
             return GLib.Environment.get_host_name ();
         }
 
@@ -651,7 +678,8 @@ public class About.HardwareView : Gtk.Box {
     private async void set_host_name (string hostname) {
         get_system_interface_instance ();
 
-        if (system_interface == null) {
+        bool is_hostname1_available = dbus_name_owner_exists (BusType.SYSTEM, "org.freedesktop.hostname1");
+        if (!is_hostname1_available) {
             return;
         }
 
