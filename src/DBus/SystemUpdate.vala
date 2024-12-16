@@ -13,6 +13,7 @@ public interface SystemUpdate : Object {
         State state;
         string message;
         uint percentage;
+        uint64 download_size_remaining;
     }
 
     public struct UpdateDetails {

@@ -82,6 +82,9 @@ public class About.OperatingSystemView : Gtk.Box {
         }
     }
 
+    private uint64 download_size_remaining = 0;
+    private uint64 download_size_max = 0;
+
     private File? logo_file;
     private Adw.Avatar? logo;
     private Gtk.StringList packages;
@@ -517,11 +520,9 @@ public class About.OperatingSystemView : Gtk.Box {
             return;
         }
 
-        print ("percentage: %s\n".printf (current_state.percentage.to_string ()));
-        update_progress_revealer.reveal_child = current_state.percentage > 0;
-        update_progress_bar.value = current_state.percentage;
+        update_progress_revealer.reveal_child = false;
         details_button_revealer.reveal_child = current_state.state == AVAILABLE || current_state.state == ERROR;
-
+        
         switch (current_state.state) {
             case UP_TO_DATE:
                 updates_image.icon_name = "process-completed";
@@ -564,9 +565,17 @@ public class About.OperatingSystemView : Gtk.Box {
                 }
                 break;
             case DOWNLOADING:
+                update_progress_revealer.reveal_child = current_state.percentage > 0;
+                update_progress_bar.value = current_state.percentage;
+
+                download_size_remaining = current_state.download_size_remaining;
+                if (download_size_remaining > download_size_max) {
+                    download_size_max = download_size_remaining;
+                }
+
                 updates_image.icon_name = "browser-download";
                 updates_title.label = _("Downloading Updates");
-                updates_description.label = current_state.message;
+                updates_description.label = "%s %s".printf (current_state.message, get_progress_text ());
                 button_stack.visible_child_name = "cancel";
                 break;
             case RESTART_REQUIRED:
@@ -582,6 +591,18 @@ public class About.OperatingSystemView : Gtk.Box {
                 button_stack.visible_child_name = "refresh";
                 break;
         }
+    }
+
+    public string get_progress_text () {
+        if (download_size_max == 0) {
+            return "";
+        }
+
+        uint64 downloaded_size = download_size_max - download_size_remaining;
+        double downloaded_mb = (double) downloaded_size / (1024 * 1024);
+        double total_mb = (double) download_size_max / (1024 * 1024);
+
+        return "%.2f MB / %.2f MB".printf(downloaded_mb, total_mb);
     }
 
     private void details_clicked () {
