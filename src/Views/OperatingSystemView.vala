@@ -90,6 +90,8 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.Grid software_grid;
     private Gtk.Image updates_image;
     private Gtk.Label updates_title;
+    private Gtk.LevelBar update_progress_bar;
+    private Gtk.Revealer update_progress_revealer;
     private Gtk.Label updates_description;
     private Gtk.Revealer details_button_revealer;
     private Gtk.Stack button_stack;
@@ -183,11 +185,23 @@ public class About.OperatingSystemView : Gtk.Box {
             xalign = 0
         };
 
+        update_progress_bar = new Gtk.LevelBar.for_interval (0, 100) {
+            margin_top = 3
+        };
+
+        update_progress_revealer = new Gtk.Revealer () {
+            child = update_progress_bar
+        };
+
         updates_description = new Gtk.Label (null) {
             xalign = 0
         };
         updates_description.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
         updates_description.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
+
+        var progress_description_box = new Gtk.Box (VERTICAL, 3);
+        progress_description_box.append (update_progress_revealer);
+        progress_description_box.append (updates_description);
 
         var update_button = new Gtk.Button.with_label (_("Download"));
         update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
@@ -231,7 +245,7 @@ public class About.OperatingSystemView : Gtk.Box {
         };
         updates_grid.attach (updates_image, 0, 0, 1, 2);
         updates_grid.attach (updates_title, 1, 0);
-        updates_grid.attach (updates_description, 1, 1);
+        updates_grid.attach (progress_description_box, 1, 1);
         updates_grid.attach (button_stack, 2, 0, 1, 2);
         updates_grid.attach (details_button_revealer, 1, 2, 2);
 
@@ -503,6 +517,9 @@ public class About.OperatingSystemView : Gtk.Box {
             return;
         }
 
+        print ("percentage: %s\n".printf (current_state.percentage.to_string ()));
+        update_progress_revealer.reveal_child = current_state.percentage > 0;
+        update_progress_bar.value = current_state.percentage;
         details_button_revealer.reveal_child = current_state.state == AVAILABLE || current_state.state == ERROR;
 
         switch (current_state.state) {

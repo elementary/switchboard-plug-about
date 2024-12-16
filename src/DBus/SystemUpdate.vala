@@ -12,6 +12,7 @@ public interface SystemUpdate : Object {
     public struct CurrentState {
         State state;
         string message;
+        uint percentage;
     }
 
     public struct UpdateDetails {
