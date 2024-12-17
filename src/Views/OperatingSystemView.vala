@@ -82,6 +82,9 @@ public class About.OperatingSystemView : Gtk.Box {
         }
     }
 
+    private uint64 download_size_remaining = 0;
+    private uint64 download_size_max = 0;
+
     private File? logo_file;
     private Adw.Avatar? logo;
     private Gtk.StringList packages;
@@ -90,6 +93,8 @@ public class About.OperatingSystemView : Gtk.Box {
     private Gtk.Grid software_grid;
     private Gtk.Image updates_image;
     private Gtk.Label updates_title;
+    private Gtk.ProgressBar update_progress_bar;
+    private Gtk.Revealer update_progress_revealer;
     private Gtk.Label updates_description;
     private Gtk.Revealer details_button_revealer;
     private Gtk.Stack button_stack;
@@ -183,11 +188,24 @@ public class About.OperatingSystemView : Gtk.Box {
             xalign = 0
         };
 
+        update_progress_bar = new Gtk.ProgressBar () {
+            margin_top = 3
+        };
+
+        update_progress_revealer = new Gtk.Revealer () {
+            child = update_progress_bar
+        };
+
         updates_description = new Gtk.Label (null) {
-            xalign = 0
+            xalign = 0,
+            use_markup = true
         };
         updates_description.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
         updates_description.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
+
+        var progress_description_box = new Gtk.Box (VERTICAL, 3);
+        progress_description_box.append (update_progress_revealer);
+        progress_description_box.append (updates_description);
 
         var update_button = new Gtk.Button.with_label (_("Download"));
         update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
@@ -231,7 +249,7 @@ public class About.OperatingSystemView : Gtk.Box {
         };
         updates_grid.attach (updates_image, 0, 0, 1, 2);
         updates_grid.attach (updates_title, 1, 0);
-        updates_grid.attach (updates_description, 1, 1);
+        updates_grid.attach (progress_description_box, 1, 1);
         updates_grid.attach (button_stack, 2, 0, 1, 2);
         updates_grid.attach (details_button_revealer, 1, 2, 2);
 
@@ -503,6 +521,7 @@ public class About.OperatingSystemView : Gtk.Box {
             return;
         }
 
+        update_progress_revealer.reveal_child = false;
         details_button_revealer.reveal_child = current_state.state == AVAILABLE || current_state.state == ERROR;
 
         switch (current_state.state) {
@@ -547,9 +566,20 @@ public class About.OperatingSystemView : Gtk.Box {
                 }
                 break;
             case DOWNLOADING:
+                update_progress_revealer.reveal_child = current_state.percentage > 0;
+                update_progress_bar.fraction = current_state.percentage / 100.0;
+
+                download_size_remaining = current_state.download_size_remaining;
+                if (download_size_remaining > download_size_max) {
+                    download_size_max = download_size_remaining;
+                }
+
                 updates_image.icon_name = "browser-download";
                 updates_title.label = _("Downloading Updates");
-                updates_description.label = current_state.message;
+                updates_description.label = "%s <span font-features='tnum'>%s</span>".printf (
+                    current_state.message,
+                    get_progress_text ()
+                );
                 button_stack.visible_child_name = "cancel";
                 break;
             case RESTART_REQUIRED:
@@ -565,6 +595,18 @@ public class About.OperatingSystemView : Gtk.Box {
                 button_stack.visible_child_name = "refresh";
                 break;
         }
+    }
+
+    public string get_progress_text () {
+        if (download_size_max == 0) {
+            return "";
+        }
+
+        uint64 downloaded_size = download_size_max - download_size_remaining;
+        string downloaded_size_str = GLib.format_size (downloaded_size);
+        string total_size_str = GLib.format_size (download_size_max);
+
+        return "%s / %s".printf (downloaded_size_str, total_size_str);
     }
 
     private void details_clicked () {
