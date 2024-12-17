@@ -567,7 +567,7 @@ public class About.OperatingSystemView : Gtk.Box {
                 break;
             case DOWNLOADING:
                 update_progress_revealer.reveal_child = current_state.percentage > 0;
-                update_progress_bar.fraction = current_state.percentage;
+                update_progress_bar.fraction = current_state.percentage / 100.0;
 
                 download_size_remaining = current_state.download_size_remaining;
                 if (download_size_remaining > download_size_max) {
