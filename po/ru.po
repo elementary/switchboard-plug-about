@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-09 18:51+0000\n"
-"PO-Revision-Date: 2024-12-13 17:16+0000\n"
+"PO-Revision-Date: 2024-12-20 05:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ru/>\n"
@@ -430,10 +430,8 @@ msgstr ""
 "перезагрузке устройства."
 
 #: src/Views/OperatingSystemView.vala:292
-#, fuzzy
-#| msgid "Get Involved or Sponsor Us"
 msgid "Get Involved"
-msgstr "Помочь в разработке"
+msgstr "Приобщиться"
 
 #: src/Views/OperatingSystemView.vala:478
 #, c-format
