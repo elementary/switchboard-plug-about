@@ -203,9 +203,19 @@ public class About.HardwareView : Gtk.Box {
     private async void load_fallback_manufacturer_icon () {
         get_system_interface_instance ();
 
-        if (system_interface != null) {
-            manufacturer_logo.icon_name = system_interface.icon_name;
+        if (system_interface == null) {
+            manufacturer_logo.icon_name = "computer";
+            return;
         }
+
+        string? icon_name = system_interface.icon_name;
+
+        if (icon_name == null || icon_name.length == 0) {
+            manufacturer_logo.icon_name = "computer";
+            return;
+        }
+
+        manufacturer_logo.icon_name = icon_name;
     }
 
     private string? try_get_arm_model (GLib.HashTable<string, string> values) {
@@ -639,10 +649,16 @@ public class About.HardwareView : Gtk.Box {
             return GLib.Environment.get_host_name ();
         }
 
-        string hostname = system_interface.pretty_hostname;
+        string? hostname = system_interface.pretty_hostname;
 
-        if (hostname.length == 0) {
+        // Fallback to static hostname when pretty hostname is unavailable
+        if (hostname == null || hostname.length == 0) {
             hostname = system_interface.static_hostname;
+        }
+
+        // Retrieve from GLib if we still need a fallback
+        if (hostname == null || hostname.length == 0) {
+            hostname = GLib.Environment.get_host_name ();
         }
 
         return hostname;
