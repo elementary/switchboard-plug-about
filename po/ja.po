@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-09 18:51+0000\n"
-"PO-Revision-Date: 2024-12-10 11:51+0000\n"
+"PO-Revision-Date: 2024-12-23 06:16+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ja/>\n"
@@ -475,7 +475,7 @@ msgstr "アップデートをダウンロードしています"
 
 #: src/Views/OperatingSystemView.vala:557
 msgid "Restart Required"
-msgstr "再起動が必要"
+msgstr "再起動が必要です"
 
 #: src/Views/OperatingSystemView.vala:558
 msgid "A restart is required to finish installing updates"
@@ -484,7 +484,7 @@ msgstr "アップデートのインストールを完了するには再起動が
 #: src/Views/OperatingSystemView.vala:563
 #: src/Views/OperatingSystemView.vala:577
 msgid "Failed to download updates"
-msgstr "アップデートのダウンロードに失敗"
+msgstr "アップデートをダウンロードできませんでした"
 
 #: src/Views/OperatingSystemView.vala:564
 msgid "Manually refreshing updates may resolve the issue"
