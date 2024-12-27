@@ -43,7 +43,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install Dependencies
         run: |
-          dnf install -y libadwaita-devel fwupd-devel granite-7-devel gtk4-devel libgtop2-devel libgudev-devel libudisks2-devel appstream-devel PackageKit-glib-devel polkit-devel meson valac
+          dnf install -y libadwaita-devel fwupd-devel granite-7-devel gtk4-devel libgtop2-devel libgudev-devel libudisks2-devel appstream-devel PackageKit-glib-devel polkit-devel libsoup3-devel meson valac
       - name: Build
         env:
           DESTDIR: out
