@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-09 18:51+0000\n"
+"POT-Creation-Date: 2024-12-27 20:58+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -47,17 +47,17 @@ msgstr "固件"
 msgid "Drivers"
 msgstr ""
 
-#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:221
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:219
 #, fuzzy
 #| msgid "All Updates"
 msgid "Automatic Updates"
 msgstr "全部更新"
 
-#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:271
+#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:269
 msgid "Basics Guide"
 msgstr ""
 
-#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:278
+#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:276
 msgid "Get Help"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Get Support"
 msgstr "获取支持"
 
-#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:285
+#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:283
 #, fuzzy
 #| msgid "Website"
 msgid "Our Website"
@@ -79,11 +79,11 @@ msgstr "项目主页"
 msgid "Report a Problem"
 msgstr "报告问题"
 
-#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:312
+#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:310
 msgid "Restore Default Settings"
 msgstr "重置设置"
 
-#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:314
+#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:312
 msgid "Send Feedback"
 msgstr "提交反馈"
 
@@ -140,7 +140,7 @@ msgstr "安装固件失败"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:197
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:195
 msgid "Refresh"
 msgstr "刷新"
 
@@ -150,7 +150,7 @@ msgstr "刷新"
 msgid "Refresh driver information"
 msgstr "硬件信息"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:209
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:207
 msgid "Learn More…"
 msgstr ""
 
@@ -224,7 +224,7 @@ msgstr "由设备制造商提供的固件更新可以提高性能并修复关键
 msgid "Do not unplug the device during the update."
 msgstr "升级期间请勿断开设备电源。"
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:521
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:528
 msgid "Checking for Updates"
 msgstr "正在检查更新"
 
@@ -420,59 +420,63 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr "%llu %s"
 
-#: src/Views/OperatingSystemView.vala:192
+#: src/Views/OperatingSystemView.vala:190
 msgid "Download"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:195
+#: src/Views/OperatingSystemView.vala:193
 msgid "Cancel"
 msgstr "取消"
 
-#: src/Views/OperatingSystemView.vala:222
+#: src/Views/OperatingSystemView.vala:220
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:292
+#: src/Views/OperatingSystemView.vala:290
 msgid "Get Involved"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:478
+#: src/Views/OperatingSystemView.vala:477
 #, c-format
 msgid "Built on %s"
 msgstr "基于 %s 构建"
 
-#: src/Views/OperatingSystemView.vala:498
+#: src/Views/OperatingSystemView.vala:497
 #, fuzzy
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
 msgid "System updates not available"
 msgstr "%u 更新可用"
 
-#: src/Views/OperatingSystemView.vala:499
+#: src/Views/OperatingSystemView.vala:498
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:511
+#: src/Views/OperatingSystemView.vala:510
 #, fuzzy
 #| msgid "Up to Date"
 msgid "Up To Date"
 msgstr "已是最新"
 
-#: src/Views/OperatingSystemView.vala:512
+#: src/Views/OperatingSystemView.vala:514
 #, c-format
 msgid "Last checked %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:527
+#: src/Views/OperatingSystemView.vala:521
+msgid "Last checked unknown"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:534
 #, fuzzy
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
 msgid "Updates Available"
 msgstr "%u 更新可用"
 
-#: src/Views/OperatingSystemView.vala:534
+#: src/Views/OperatingSystemView.vala:541
 #, fuzzy, c-format
 #| msgid "%u Update Available"
 #| msgid_plural "%u Updates Available"
@@ -480,63 +484,63 @@ msgid "%i update available"
 msgid_plural "%i updates available"
 msgstr[0] "%u 更新可用"
 
-#: src/Views/OperatingSystemView.vala:545
+#: src/Views/OperatingSystemView.vala:552
 msgid "Unable to determine number of updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:551
+#: src/Views/OperatingSystemView.vala:558
 #, fuzzy
 #| msgid "All Updates"
 msgid "Downloading Updates"
 msgstr "全部更新"
 
-#: src/Views/OperatingSystemView.vala:557
+#: src/Views/OperatingSystemView.vala:564
 #, fuzzy
 #| msgid "Restart"
 msgid "Restart Required"
 msgstr "重新启动"
 
-#: src/Views/OperatingSystemView.vala:558
+#: src/Views/OperatingSystemView.vala:565
 msgid "A restart is required to finish installing updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:563
-#: src/Views/OperatingSystemView.vala:577
+#: src/Views/OperatingSystemView.vala:570
+#: src/Views/OperatingSystemView.vala:584
 msgid "Failed to download updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:564
+#: src/Views/OperatingSystemView.vala:571
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:578
+#: src/Views/OperatingSystemView.vala:585
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:620
+#: src/Views/OperatingSystemView.vala:627
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "系统设置将会被重置为出厂默认值"
 
-#: src/Views/OperatingSystemView.vala:621
+#: src/Views/OperatingSystemView.vala:628
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 "所有系统设置参数将会被重置为默认值，个人数据，如音乐和照片等不会受影响。"
 
-#: src/Views/OperatingSystemView.vala:629
+#: src/Views/OperatingSystemView.vala:636
 msgid "Restore Settings"
 msgstr "重置设置"
 
-#: src/Views/OperatingSystemView.vala:774
+#: src/Views/OperatingSystemView.vala:781
 msgid "Sponsor Us"
 msgstr ""
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
-#: src/Views/OperatingSystemView.vala:837
+#: src/Views/OperatingSystemView.vala:844
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
 msgstr ""

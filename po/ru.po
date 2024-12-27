@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-09 18:51+0000\n"
+"POT-Creation-Date: 2024-12-27 20:58+0000\n"
 "PO-Revision-Date: 2024-12-20 05:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -48,15 +48,15 @@ msgstr "Прошивка"
 msgid "Drivers"
 msgstr "Драйверы"
 
-#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:221
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:219
 msgid "Automatic Updates"
 msgstr "Автоматические обновления"
 
-#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:271
+#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:269
 msgid "Basics Guide"
 msgstr "Изучение основ"
 
-#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:278
+#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:276
 msgid "Get Help"
 msgstr "Получить помощь"
 
@@ -68,7 +68,7 @@ msgstr "Приобщиться или поддержать нас"
 msgid "Get Support"
 msgstr "Получить поддержку"
 
-#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:285
+#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:283
 msgid "Our Website"
 msgstr "Наш веб-сайт"
 
@@ -76,11 +76,11 @@ msgstr "Наш веб-сайт"
 msgid "Report a Problem"
 msgstr "Сообщить об ошибке"
 
-#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:312
+#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:310
 msgid "Restore Default Settings"
 msgstr "Восстановить настройки"
 
-#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:314
+#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:312
 msgid "Send Feedback"
 msgstr "Отправить отзыв"
 
@@ -128,7 +128,7 @@ msgstr "Не удалось установить драйвер"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr "Ручное обновление информации о драйвере может решить проблему"
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:197
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:195
 msgid "Refresh"
 msgstr "Проверить обновления"
 
@@ -136,7 +136,7 @@ msgstr "Проверить обновления"
 msgid "Refresh driver information"
 msgstr "Обновить информацию о драйвере"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:209
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:207
 msgid "Learn More…"
 msgstr "Узнать больше…"
 
@@ -215,7 +215,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "Не отключайте устройство во время обновления."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:521
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:528
 msgid "Checking for Updates"
 msgstr "Проверка обновлений"
 
@@ -413,15 +413,15 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:192
+#: src/Views/OperatingSystemView.vala:190
 msgid "Download"
 msgstr "Скачать"
 
-#: src/Views/OperatingSystemView.vala:195
+#: src/Views/OperatingSystemView.vala:193
 msgid "Cancel"
 msgstr "Отменить"
 
-#: src/Views/OperatingSystemView.vala:222
+#: src/Views/OperatingSystemView.vala:220
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -429,39 +429,45 @@ msgstr ""
 "Автоматически загружать обновления. Они будут устанавливаться при "
 "перезагрузке устройства."
 
-#: src/Views/OperatingSystemView.vala:292
+#: src/Views/OperatingSystemView.vala:290
 msgid "Get Involved"
 msgstr "Приобщиться"
 
-#: src/Views/OperatingSystemView.vala:478
+#: src/Views/OperatingSystemView.vala:477
 #, c-format
 msgid "Built on %s"
 msgstr "Работает на базе %s"
 
-#: src/Views/OperatingSystemView.vala:498
+#: src/Views/OperatingSystemView.vala:497
 msgid "System updates not available"
 msgstr "Обновления системы недоступны"
 
-#: src/Views/OperatingSystemView.vala:499
+#: src/Views/OperatingSystemView.vala:498
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 "Не удалось подключиться к службе обновления. Попробуйте перезагрузить "
 "систему, чтобы решить эту проблему."
 
-#: src/Views/OperatingSystemView.vala:511
+#: src/Views/OperatingSystemView.vala:510
 msgid "Up To Date"
 msgstr "Обновления не требуются"
 
-#: src/Views/OperatingSystemView.vala:512
+#: src/Views/OperatingSystemView.vala:514
 #, c-format
 msgid "Last checked %s"
 msgstr "Последняя проверка: %s"
 
-#: src/Views/OperatingSystemView.vala:527
+#: src/Views/OperatingSystemView.vala:521
+#, fuzzy
+#| msgid "Last checked %s"
+msgid "Last checked unknown"
+msgstr "Последняя проверка: %s"
+
+#: src/Views/OperatingSystemView.vala:534
 msgid "Updates Available"
 msgstr "Доступны обновления"
 
-#: src/Views/OperatingSystemView.vala:534
+#: src/Views/OperatingSystemView.vala:541
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
@@ -469,32 +475,32 @@ msgstr[0] "Доступно %i обновление"
 msgstr[1] "Доступно %i обновления"
 msgstr[2] "Доступно %i обновлений"
 
-#: src/Views/OperatingSystemView.vala:545
+#: src/Views/OperatingSystemView.vala:552
 msgid "Unable to determine number of updates"
 msgstr "Не удалось определить количество обновлений"
 
-#: src/Views/OperatingSystemView.vala:551
+#: src/Views/OperatingSystemView.vala:558
 msgid "Downloading Updates"
 msgstr "Загрузка обновлений"
 
-#: src/Views/OperatingSystemView.vala:557
+#: src/Views/OperatingSystemView.vala:564
 msgid "Restart Required"
 msgstr "Требуется перезагрузка"
 
-#: src/Views/OperatingSystemView.vala:558
+#: src/Views/OperatingSystemView.vala:565
 msgid "A restart is required to finish installing updates"
 msgstr "Перезагрузка необходима для завершения установки обновлений"
 
-#: src/Views/OperatingSystemView.vala:563
-#: src/Views/OperatingSystemView.vala:577
+#: src/Views/OperatingSystemView.vala:570
+#: src/Views/OperatingSystemView.vala:584
 msgid "Failed to download updates"
 msgstr "Не удалось загрузить обновления"
 
-#: src/Views/OperatingSystemView.vala:564
+#: src/Views/OperatingSystemView.vala:571
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "Ручная проверка обновлений может решить проблему"
 
-#: src/Views/OperatingSystemView.vala:578
+#: src/Views/OperatingSystemView.vala:585
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -504,11 +510,11 @@ msgstr ""
 "обеспечением, сторонними репозиториями или ошибкой менеджера пакетов. Ручная "
 "проверка обновлений может решить эту проблему."
 
-#: src/Views/OperatingSystemView.vala:620
+#: src/Views/OperatingSystemView.vala:627
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Системные настройки будут восстановлены до настроек по умолчанию"
 
-#: src/Views/OperatingSystemView.vala:621
+#: src/Views/OperatingSystemView.vala:628
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -516,16 +522,16 @@ msgstr ""
 "Все системные настройки и данные будут сброшены до значений по умолчанию. "
 "Личные данные, такие как музыка и изображения, не будут затронуты."
 
-#: src/Views/OperatingSystemView.vala:629
+#: src/Views/OperatingSystemView.vala:636
 msgid "Restore Settings"
 msgstr "Восстановить настройки"
 
-#: src/Views/OperatingSystemView.vala:774
+#: src/Views/OperatingSystemView.vala:781
 msgid "Sponsor Us"
 msgstr "Спонсировать"
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
-#: src/Views/OperatingSystemView.vala:837
+#: src/Views/OperatingSystemView.vala:844
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
 msgstr "%.0f%% до %'5.0f USD в месяц"
