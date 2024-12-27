@@ -8,6 +8,7 @@
 
 public class About.HardwareView : Gtk.Box {
     private bool oem_enabled;
+    private string hostname;
     private string manufacturer_icon_path;
     private string? manufacturer_icon_dark_path = null;
     private string manufacturer_name;
@@ -37,10 +38,14 @@ public class About.HardwareView : Gtk.Box {
 
         fetch_hardware_info ();
 
+        get_host_name.begin ((obj, res) => {
+            hostname = get_host_name.end (res);
+            hostname_entry.text = hostname;
+        });
+
         hostname_entry = new Gtk.Entry () {
             xalign = 0,
-            hexpand = true,
-            text = get_host_name ()
+            hexpand = true
         };
         hostname_entry.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
 
@@ -155,7 +160,7 @@ public class About.HardwareView : Gtk.Box {
         });
 
         hostname_entry.changed.connect (() => {
-            if (hostname_entry.text != get_host_name ()) {
+            if (hostname_entry.text != hostname) {
                 hostname_entry.secondary_icon_name = "document-save-symbolic";
                 hostname_entry.secondary_icon_tooltip_text = _("Update device name");
             }
@@ -176,6 +181,7 @@ public class About.HardwareView : Gtk.Box {
 
         set_host_name.begin (hostname_entry.text, (obj, res) => {
             set_host_name.end (res);
+            hostname = hostname_entry.text;
             hostname_entry.secondary_icon_name = "process-completed-symbolic";
             hostname_entry.secondary_icon_tooltip_text = _("Device name saved");
             hostname_entry.remove_css_class ("spin");
@@ -203,7 +209,7 @@ public class About.HardwareView : Gtk.Box {
     private async void load_fallback_manufacturer_icon () {
         get_system_interface_instance ();
 
-        bool is_hostname1_available = dbus_name_owner_exists (BusType.SYSTEM, "org.freedesktop.hostname1");
+        bool is_hostname1_available = yield dbus_name_owner_exists (BusType.SYSTEM, "org.freedesktop.hostname1");
         if (!is_hostname1_available) {
             manufacturer_logo.icon_name = "computer";
         } else {
@@ -576,10 +582,9 @@ public class About.HardwareView : Gtk.Box {
         string replacement;
     }
 
-    private bool dbus_name_owner_exists (BusType bus_type, string name) {
+    private async bool dbus_name_owner_exists (BusType bus_type, string name) {
         bool owner_exists = false;
 
-        var loop = new MainLoop ();
         uint watch_id = Bus.watch_name (
             bus_type,
             name,
@@ -587,13 +592,13 @@ public class About.HardwareView : Gtk.Box {
             // One of the handlers will be invoked after calling Bus.watch_name
             () => {
                 owner_exists = true;
-                loop.quit ();
+                dbus_name_owner_exists.callback ();
             },
             () => {
-                loop.quit ();
+                dbus_name_owner_exists.callback ();
             }
         );
-        loop.run ();
+        yield;
 
         Bus.unwatch_name (watch_id);
         return owner_exists;
@@ -658,10 +663,10 @@ public class About.HardwareView : Gtk.Box {
         return hostname;
     }
 
-    private string get_host_name () {
+    private async string get_host_name () {
         get_system_interface_instance ();
 
-        bool is_hostname1_available = dbus_name_owner_exists (BusType.SYSTEM, "org.freedesktop.hostname1");
+        bool is_hostname1_available = yield dbus_name_owner_exists (BusType.SYSTEM, "org.freedesktop.hostname1");
         if (!is_hostname1_available) {
             return GLib.Environment.get_host_name ();
         }
@@ -678,7 +683,7 @@ public class About.HardwareView : Gtk.Box {
     private async void set_host_name (string hostname) {
         get_system_interface_instance ();
 
-        bool is_hostname1_available = dbus_name_owner_exists (BusType.SYSTEM, "org.freedesktop.hostname1");
+        bool is_hostname1_available = yield dbus_name_owner_exists (BusType.SYSTEM, "org.freedesktop.hostname1");
         if (!is_hostname1_available) {
             return;
         }
