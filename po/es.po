@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-27 20:58+0000\n"
-"PO-Revision-Date: 2024-12-10 11:51+0000\n"
+"PO-Revision-Date: 2024-12-27 21:37+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/es/>\n"
@@ -460,10 +460,8 @@ msgid "Last checked %s"
 msgstr "Última revisión %s"
 
 #: src/Views/OperatingSystemView.vala:521
-#, fuzzy
-#| msgid "Last checked %s"
 msgid "Last checked unknown"
-msgstr "Última revisión %s"
+msgstr "Última revisión desconocida"
 
 #: src/Views/OperatingSystemView.vala:534
 msgid "Updates Available"
