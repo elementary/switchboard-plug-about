@@ -344,7 +344,8 @@ public class About.OperatingSystemView : Gtk.Box {
 
         software_grid = new Gtk.Grid () {
             column_spacing = 32,
-            valign = Gtk.Align.CENTER,
+            margin_top = 12,
+            valign = Gtk.Align.START,
             vexpand = true,
             hexpand = true
         };
