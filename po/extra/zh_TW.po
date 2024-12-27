@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-24 22:20+0000\n"
+"POT-Creation-Date: 2024-12-09 18:51+0000\n"
 "PO-Revision-Date: 2024-09-14 02:16+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -31,112 +31,112 @@ msgstr "檢視作業系統和硬體資訊"
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/system.metainfo.xml.in:45 data/system.metainfo.xml.in:69
-#: data/system.metainfo.xml.in:84
-msgid "New features:"
-msgstr "新功能："
-
-#: data/system.metainfo.xml.in:47
-msgid "Manage Operating System updates, including automatic updates"
-msgstr "管理作業系統更新，包含自動更新"
-
-#: data/system.metainfo.xml.in:48
-msgid "Manage additional drivers"
-msgstr "管理額外驅動程式"
-
-#: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:73
-#: data/system.metainfo.xml.in:89 data/system.metainfo.xml.in:98
-#: data/system.metainfo.xml.in:126
+#: data/system.metainfo.xml.in:45 data/system.metainfo.xml.in:62
+#: data/system.metainfo.xml.in:85 data/system.metainfo.xml.in:101
+#: data/system.metainfo.xml.in:110 data/system.metainfo.xml.in:138
 msgid "Minor updates:"
 msgstr "小型更新："
 
-#: data/system.metainfo.xml.in:52
-msgid "Improve operating system image for other Linux distributions"
-msgstr "為其他 Linux 發行版改善作業系統圖片"
-
-#: data/system.metainfo.xml.in:53 data/system.metainfo.xml.in:77
-#: data/system.metainfo.xml.in:91 data/system.metainfo.xml.in:102
-#: data/system.metainfo.xml.in:130
+#: data/system.metainfo.xml.in:47 data/system.metainfo.xml.in:65
+#: data/system.metainfo.xml.in:89 data/system.metainfo.xml.in:103
+#: data/system.metainfo.xml.in:114 data/system.metainfo.xml.in:142
 msgid "Updated translations"
 msgstr "翻譯更新"
 
-#: data/system.metainfo.xml.in:71
+#: data/system.metainfo.xml.in:57 data/system.metainfo.xml.in:81
+#: data/system.metainfo.xml.in:96
+msgid "New features:"
+msgstr "新功能："
+
+#: data/system.metainfo.xml.in:59
+msgid "Manage Operating System updates, including automatic updates"
+msgstr "管理作業系統更新，包含自動更新"
+
+#: data/system.metainfo.xml.in:60
+msgid "Manage additional drivers"
+msgstr "管理額外驅動程式"
+
+#: data/system.metainfo.xml.in:64
+msgid "Improve operating system image for other Linux distributions"
+msgstr "為其他 Linux 發行版改善作業系統圖片"
+
+#: data/system.metainfo.xml.in:83
 msgid "Add a button to restart to firmware setup"
 msgstr "新增按鈕來重啟進入韌體設定"
 
-#: data/system.metainfo.xml.in:75
+#: data/system.metainfo.xml.in:87
 msgid "Get more accurate memory and storage information"
 msgstr "取得更準確的記憶體和儲存空間資訊"
 
-#: data/system.metainfo.xml.in:76
+#: data/system.metainfo.xml.in:88
 msgid "Handle Ryzen CPU and AMD GPU vendor string"
 msgstr "處理 Ryzen CPU 與 AMD GPU 的廠商字串"
 
-#: data/system.metainfo.xml.in:86
+#: data/system.metainfo.xml.in:98
 msgid "Added support for dark style manufacturer logos"
 msgstr "支援深色模式的製造商圖示"
 
-#: data/system.metainfo.xml.in:87
+#: data/system.metainfo.xml.in:99
 msgid "Added support for offline firmware updates"
 msgstr "支援離線韌體更新"
 
-#: data/system.metainfo.xml.in:100
+#: data/system.metainfo.xml.in:112
 msgid "Use formatted device name when available"
 msgstr "可用時使用美化過的裝置名稱"
 
-#: data/system.metainfo.xml.in:101
+#: data/system.metainfo.xml.in:113
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr "為 Intel® Xe Graphics 等等某些顯示卡顯示更多資訊"
 
-#: data/system.metainfo.xml.in:109
+#: data/system.metainfo.xml.in:121
 msgid "Redesign and new features:"
 msgstr "重新設計與新功能："
 
-#: data/system.metainfo.xml.in:111
+#: data/system.metainfo.xml.in:123
 msgid "Rename from About to System"
 msgstr "從「關於」重新命名為「系統」"
 
-#: data/system.metainfo.xml.in:112
+#: data/system.metainfo.xml.in:124
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr "將硬體與作業系統資訊分割成它們自己的分頁"
 
-#: data/system.metainfo.xml.in:113
+#: data/system.metainfo.xml.in:125
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr "重新設計作業系統分頁，提供更清楚的連結和按鈕"
 
-#: data/system.metainfo.xml.in:114
+#: data/system.metainfo.xml.in:126
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr "新增韌體檢視來管理裝置韌體更新"
 
-#: data/system.metainfo.xml.in:116
+#: data/system.metainfo.xml.in:128
 msgid "More information:"
 msgstr "更多資訊："
 
-#: data/system.metainfo.xml.in:118
+#: data/system.metainfo.xml.in:130
 msgid "Provide information for ARM CPUs"
 msgstr "提供 ARM CPU 的資訊"
 
-#: data/system.metainfo.xml.in:119
+#: data/system.metainfo.xml.in:131
 msgid "Provide information for more types of Graphics"
 msgstr "提供更多種類顯示卡的資訊"
 
-#: data/system.metainfo.xml.in:121
+#: data/system.metainfo.xml.in:133
 msgid "Fixes:"
 msgstr "修正："
 
-#: data/system.metainfo.xml.in:123
+#: data/system.metainfo.xml.in:135
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr "修正瀏覽離開時檢視會太早摧毀的問題"
 
-#: data/system.metainfo.xml.in:124
+#: data/system.metainfo.xml.in:136
 msgid "Fix system memory calculation"
 msgstr "修正系統記憶體容量計算"
 
-#: data/system.metainfo.xml.in:128
+#: data/system.metainfo.xml.in:140
 msgid "Ellipsize long hardware names"
 msgstr "省略太長的硬體名稱"
 
-#: data/system.metainfo.xml.in:129
+#: data/system.metainfo.xml.in:141
 msgid "Performance improvements"
 msgstr "效能改善"
 

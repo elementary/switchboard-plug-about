@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-24 22:20+0000\n"
+"POT-Creation-Date: 2024-12-09 18:51+0000\n"
 "PO-Revision-Date: 2024-06-24 14:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -31,127 +31,127 @@ msgstr "Vea información del sistema operativo y el equipo"
 msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
-#: data/system.metainfo.xml.in:45 data/system.metainfo.xml.in:69
-#: data/system.metainfo.xml.in:84
+#: data/system.metainfo.xml.in:45 data/system.metainfo.xml.in:62
+#: data/system.metainfo.xml.in:85 data/system.metainfo.xml.in:101
+#: data/system.metainfo.xml.in:110 data/system.metainfo.xml.in:138
+msgid "Minor updates:"
+msgstr "Actualizaciones menores:"
+
+#: data/system.metainfo.xml.in:47 data/system.metainfo.xml.in:65
+#: data/system.metainfo.xml.in:89 data/system.metainfo.xml.in:103
+#: data/system.metainfo.xml.in:114 data/system.metainfo.xml.in:142
+msgid "Updated translations"
+msgstr "Traducciones actualizadas"
+
+#: data/system.metainfo.xml.in:57 data/system.metainfo.xml.in:81
+#: data/system.metainfo.xml.in:96
 msgid "New features:"
 msgstr "Nuevas características:"
 
-#: data/system.metainfo.xml.in:47
+#: data/system.metainfo.xml.in:59
 msgid "Manage Operating System updates, including automatic updates"
 msgstr ""
 "Se pueden gestionar las actualizaciones del sistema operativo, incluyendo "
 "actualizaciones automáticas"
 
-#: data/system.metainfo.xml.in:48
+#: data/system.metainfo.xml.in:60
 msgid "Manage additional drivers"
 msgstr "Se pueden gestionar controladores adicionales"
 
-#: data/system.metainfo.xml.in:50 data/system.metainfo.xml.in:73
-#: data/system.metainfo.xml.in:89 data/system.metainfo.xml.in:98
-#: data/system.metainfo.xml.in:126
-msgid "Minor updates:"
-msgstr "Actualizaciones menores:"
-
-#: data/system.metainfo.xml.in:52
+#: data/system.metainfo.xml.in:64
 msgid "Improve operating system image for other Linux distributions"
 msgstr ""
 "Se mejoró la imagen ISO del sistema operativo para otras distribuciones de "
 "Linux"
 
-#: data/system.metainfo.xml.in:53 data/system.metainfo.xml.in:77
-#: data/system.metainfo.xml.in:91 data/system.metainfo.xml.in:102
-#: data/system.metainfo.xml.in:130
-msgid "Updated translations"
-msgstr "Traducciones actualizadas"
-
-#: data/system.metainfo.xml.in:71
+#: data/system.metainfo.xml.in:83
 msgid "Add a button to restart to firmware setup"
 msgstr "Se agregó un botón para reiniciar el equipo para configurar firmware"
 
-#: data/system.metainfo.xml.in:75
+#: data/system.metainfo.xml.in:87
 msgid "Get more accurate memory and storage information"
 msgstr "Ahora se ve información más precisa de la memoria y el almacenamiento"
 
-#: data/system.metainfo.xml.in:76
+#: data/system.metainfo.xml.in:88
 msgid "Handle Ryzen CPU and AMD GPU vendor string"
 msgstr ""
 "Se gestiona el uso de las etiquetas de proveedor de Ryzen CPU y AMD GPU"
 
-#: data/system.metainfo.xml.in:86
+#: data/system.metainfo.xml.in:98
 msgid "Added support for dark style manufacturer logos"
 msgstr ""
 "Se agregó compatibilidad para los logos de fabricantes en el estilo oscuro"
 
-#: data/system.metainfo.xml.in:87
+#: data/system.metainfo.xml.in:99
 msgid "Added support for offline firmware updates"
 msgstr "Se agregó soporte para actualizaciones de firmware sin conexión"
 
-#: data/system.metainfo.xml.in:100
+#: data/system.metainfo.xml.in:112
 msgid "Use formatted device name when available"
 msgstr ""
 "Se intenta utilizar nombres de dispositivos con formato si están disponibles"
 
-#: data/system.metainfo.xml.in:101
+#: data/system.metainfo.xml.in:113
 msgid "Display more information for certain GPUs, including Intel® Xe Graphics"
 msgstr ""
 "Se muestra más información para ciertas GPU, incluyendo gráficos Intel® Xe"
 
-#: data/system.metainfo.xml.in:109
+#: data/system.metainfo.xml.in:121
 msgid "Redesign and new features:"
 msgstr "Rediseños y nuevas características:"
 
-#: data/system.metainfo.xml.in:111
+#: data/system.metainfo.xml.in:123
 msgid "Rename from About to System"
 msgstr "Se cambió el nombre de «Acerca de» por «Sistema»"
 
-#: data/system.metainfo.xml.in:112
+#: data/system.metainfo.xml.in:124
 msgid "Split Hardware and Operating System info into their own tabs"
 msgstr ""
 "Se separó la información de hardware y del sistema operativo en sus propias "
 "pestañas"
 
-#: data/system.metainfo.xml.in:113
+#: data/system.metainfo.xml.in:125
 msgid "Redesign the Operating System tab with clearer links and buttons"
 msgstr ""
 "Se rediseñó la pestaña de sistema operativo con enlaces y botones más claros"
 
-#: data/system.metainfo.xml.in:114
+#: data/system.metainfo.xml.in:126
 msgid "Add a Firmware view to manage device firmware updates"
 msgstr ""
 "Se agregó una vista de Firmware para gestionar actualizaciones firmware de "
 "dispositivos"
 
-#: data/system.metainfo.xml.in:116
+#: data/system.metainfo.xml.in:128
 msgid "More information:"
 msgstr "Más información:"
 
-#: data/system.metainfo.xml.in:118
+#: data/system.metainfo.xml.in:130
 msgid "Provide information for ARM CPUs"
 msgstr "Se brinda información para CPU tipo ARM"
 
-#: data/system.metainfo.xml.in:119
+#: data/system.metainfo.xml.in:131
 msgid "Provide information for more types of Graphics"
 msgstr "Se brinda información para más tipos de tarjetas gráficas"
 
-#: data/system.metainfo.xml.in:121
+#: data/system.metainfo.xml.in:133
 msgid "Fixes:"
 msgstr "Correcciones:"
 
-#: data/system.metainfo.xml.in:123
+#: data/system.metainfo.xml.in:135
 msgid "Fix an issue where the view was destroyed early when navigating away"
 msgstr ""
 "Se corrigió un problema donde la vista se desaparecía antes de tiempo al "
 "cambiar de contexto"
 
-#: data/system.metainfo.xml.in:124
+#: data/system.metainfo.xml.in:136
 msgid "Fix system memory calculation"
 msgstr "Se corrigió un problema al calcular la memoria"
 
-#: data/system.metainfo.xml.in:128
+#: data/system.metainfo.xml.in:140
 msgid "Ellipsize long hardware names"
 msgstr "Los nombres largos de los dispositivos se truncan con una elipsis (…)"
 
-#: data/system.metainfo.xml.in:129
+#: data/system.metainfo.xml.in:141
 msgid "Performance improvements"
 msgstr "Mejoras de rendimiento"
 

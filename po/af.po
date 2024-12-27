@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-24 22:20+0000\n"
+"POT-Creation-Date: 2024-12-09 18:51+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Afrikaans <https://l10n.elementary.io/projects/switchboard/"
@@ -20,80 +20,80 @@ msgstr ""
 "X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
-#: src/Plug.vala:45
+#: src/Plug.vala:46
 msgid "System"
 msgstr ""
 
-#: src/Plug.vala:46
+#: src/Plug.vala:47
 msgid "View operating system and hardware information"
 msgstr ""
 
-#: src/Plug.vala:62 src/Plug.vala:119 src/Plug.vala:120 src/Plug.vala:121
-#: src/Plug.vala:122 src/Plug.vala:123 src/Plug.vala:124 src/Plug.vala:125
-#: src/Plug.vala:126 src/Plug.vala:127 src/Plug.vala:128
+#: src/Plug.vala:63 src/Plug.vala:127 src/Plug.vala:128 src/Plug.vala:129
+#: src/Plug.vala:130 src/Plug.vala:131 src/Plug.vala:132 src/Plug.vala:133
+#: src/Plug.vala:134 src/Plug.vala:135 src/Plug.vala:136
 msgid "Operating System"
 msgstr ""
 
-#: src/Plug.vala:63 src/Plug.vala:130 src/Plug.vala:131 src/Plug.vala:132
+#: src/Plug.vala:64 src/Plug.vala:138 src/Plug.vala:139 src/Plug.vala:140
 msgid "Hardware"
 msgstr "Hardeware"
 
-#: src/Plug.vala:64 src/Plug.vala:134 src/Plug.vala:135
+#: src/Plug.vala:65 src/Plug.vala:142 src/Plug.vala:143
 #: src/Views/FirmwareView.vala:35
 #, fuzzy
 #| msgid "Hardware"
 msgid "Firmware"
 msgstr "Hardeware"
 
-#: src/Plug.vala:65 src/Plug.vala:137 src/Views/DriversView.vala:19
+#: src/Plug.vala:66 src/Plug.vala:145 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr ""
 
-#: src/Plug.vala:120 src/Views/OperatingSystemView.vala:218
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:221
 msgid "Automatic Updates"
 msgstr ""
 
-#: src/Plug.vala:121 src/Views/OperatingSystemView.vala:252
+#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:271
 msgid "Basics Guide"
 msgstr ""
 
-#: src/Plug.vala:122 src/Views/OperatingSystemView.vala:259
+#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:278
 msgid "Get Help"
 msgstr ""
 
-#: src/Plug.vala:123 src/Views/OperatingSystemView.vala:273
+#: src/Plug.vala:131
 msgid "Get Involved or Sponsor Us"
 msgstr ""
 
-#: src/Plug.vala:124
+#: src/Plug.vala:132
 msgid "Get Support"
 msgstr ""
 
-#: src/Plug.vala:125 src/Views/OperatingSystemView.vala:266
+#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:285
 msgid "Our Website"
 msgstr ""
 
-#: src/Plug.vala:126
+#: src/Plug.vala:134
 msgid "Report a Problem"
 msgstr "Rapporteer 'n Probleem"
 
-#: src/Plug.vala:127 src/Views/OperatingSystemView.vala:292
+#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:312
 msgid "Restore Default Settings"
 msgstr ""
 
-#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:294
+#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:314
 msgid "Send Feedback"
 msgstr ""
 
-#: src/Plug.vala:131
+#: src/Plug.vala:139
 msgid "Device name"
 msgstr ""
 
-#: src/Plug.vala:132
+#: src/Plug.vala:140
 msgid "Host name"
 msgstr ""
 
-#: src/Plug.vala:135 src/Views/FirmwareView.vala:86
+#: src/Plug.vala:143 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
 msgstr ""
 
@@ -129,7 +129,7 @@ msgstr ""
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:194
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:197
 msgid "Refresh"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Refresh driver information"
 msgstr ""
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:206
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:209
 msgid "Learn More…"
 msgstr ""
 
@@ -181,19 +181,19 @@ msgstr ""
 msgid "There are no releases available for this device."
 msgstr ""
 
-#: src/Views/FirmwareReleaseView.vala:198 src/Widgets/FirmwareUpdateRow.vala:73
+#: src/Views/FirmwareReleaseView.vala:202 src/Widgets/FirmwareUpdateRow.vala:73
 msgid "Update"
 msgstr ""
 
-#: src/Views/FirmwareReleaseView.vala:201
+#: src/Views/FirmwareReleaseView.vala:205
 msgid "Up to date"
 msgstr ""
 
-#: src/Views/FirmwareReleaseView.vala:222
+#: src/Views/FirmwareReleaseView.vala:226
 msgid "less than a minute"
 msgstr ""
 
-#: src/Views/FirmwareReleaseView.vala:226
+#: src/Views/FirmwareReleaseView.vala:230
 #, c-format
 msgid "%llu minute"
 msgid_plural "%llu minutes"
@@ -210,7 +210,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:482
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:521
 #, fuzzy
 #| msgid "Check for Updates"
 msgid "Checking for Updates"
@@ -236,74 +236,74 @@ msgstr ""
 msgid "Please make sure “fwupd” is installed and enabled."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:215
+#: src/Views/FirmwareView.vala:219
 #, c-format
 msgid "%u Update Available"
 msgid_plural "%u Updates Available"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/FirmwareView.vala:219
+#: src/Views/FirmwareView.vala:223
 msgid "Up to Date"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:227
+#: src/Views/FirmwareView.vala:231
 #, c-format
 msgid "“%s” is being updated"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:310
+#: src/Views/FirmwareView.vala:331
 msgid "Failed to install firmware release"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:331
+#: src/Views/FirmwareView.vala:352
 #, c-format
 msgid "“%s” needs to manually be put in update mode"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:340
+#: src/Views/FirmwareView.vala:361
 msgid "Continue"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:353
+#: src/Views/FirmwareView.vala:374
 msgid "An update requires the system to restart to complete"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:354
+#: src/Views/FirmwareView.vala:375
 msgid "This will close all open applications and restart this device."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:362 src/Views/FirmwareView.vala:411
+#: src/Views/FirmwareView.vala:383 src/Views/FirmwareView.vala:432
 msgid "Restart"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:377
+#: src/Views/FirmwareView.vala:398
 msgid "An update requires the system to shut down to complete"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:378
+#: src/Views/FirmwareView.vala:399
 msgid "This will close all open applications and turn off this device."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:386
+#: src/Views/FirmwareView.vala:407
 msgid "Shut Down"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:401
+#: src/Views/FirmwareView.vala:422
 msgid "Restart to firmware setup"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:402
+#: src/Views/FirmwareView.vala:423
 msgid ""
 "This will close all open applications, restart this device, and open the "
 "firmware setup screen."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:426
+#: src/Views/FirmwareView.vala:447
 msgid "Unable to restart to firmware setup"
 msgstr ""
 
-#: src/Views/FirmwareView.vala:427
+#: src/Views/FirmwareView.vala:448
 msgid "A system error prevented automatically restarting into firmware setup."
 msgstr ""
 
@@ -410,97 +410,111 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:189
+#: src/Views/OperatingSystemView.vala:192
 msgid "Download"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:192
+#: src/Views/OperatingSystemView.vala:195
 msgid "Cancel"
 msgstr "Kanselleer"
 
-#: src/Views/OperatingSystemView.vala:219
+#: src/Views/OperatingSystemView.vala:222
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:440
+#: src/Views/OperatingSystemView.vala:292
+msgid "Get Involved"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:478
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:459
+#: src/Views/OperatingSystemView.vala:498
 msgid "System updates not available"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:460
+#: src/Views/OperatingSystemView.vala:499
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:472
+#: src/Views/OperatingSystemView.vala:511
 msgid "Up To Date"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:473
+#: src/Views/OperatingSystemView.vala:512
 #, c-format
 msgid "Last checked %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:488
+#: src/Views/OperatingSystemView.vala:527
 msgid "Updates Available"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:495
+#: src/Views/OperatingSystemView.vala:534
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/OperatingSystemView.vala:506
+#: src/Views/OperatingSystemView.vala:545
 msgid "Unable to determine number of updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:512
+#: src/Views/OperatingSystemView.vala:551
 msgid "Downloading Updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:518
+#: src/Views/OperatingSystemView.vala:557
 msgid "Restart Required"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:519
+#: src/Views/OperatingSystemView.vala:558
 msgid "A restart is required to finish installing updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:524
-#: src/Views/OperatingSystemView.vala:538
+#: src/Views/OperatingSystemView.vala:563
+#: src/Views/OperatingSystemView.vala:577
 msgid "Failed to download updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:525
+#: src/Views/OperatingSystemView.vala:564
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:539
+#: src/Views/OperatingSystemView.vala:578
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:581
+#: src/Views/OperatingSystemView.vala:620
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:582
+#: src/Views/OperatingSystemView.vala:621
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:590
+#: src/Views/OperatingSystemView.vala:629
 msgid "Restore Settings"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:774
+msgid "Sponsor Us"
+msgstr ""
+
+#. /TRANSLATORS: first value is a percentage, second value is an amount in USD
+#: src/Views/OperatingSystemView.vala:837
+#, c-format
+msgid "%.0f%% towards $%'5.0f per month goal"
 msgstr ""
 
 #: src/Widgets/UpdateDetailsDialog.vala:14

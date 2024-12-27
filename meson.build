@@ -1,7 +1,7 @@
 project(
     'system',
     'vala', 'c',
-    version: '8.0.0'
+    version: '8.1.0'
 )
 
 gettext_name = 'io.elementary.settings.' + meson.project_name()
