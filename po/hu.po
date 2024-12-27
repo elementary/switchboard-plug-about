@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-09 18:51+0000\n"
+"POT-Creation-Date: 2024-12-27 20:58+0000\n"
 "PO-Revision-Date: 2024-12-11 13:16+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
@@ -47,15 +47,15 @@ msgstr "Firmware"
 msgid "Drivers"
 msgstr "Illesztőprogramok"
 
-#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:221
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:219
 msgid "Automatic Updates"
 msgstr "Automatikus frissítések"
 
-#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:271
+#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:269
 msgid "Basics Guide"
 msgstr "Útmutató az alapokhoz"
 
-#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:278
+#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:276
 msgid "Get Help"
 msgstr "Segítségkérés"
 
@@ -67,7 +67,7 @@ msgstr "Csatlakozzon vagy támogasson minket"
 msgid "Get Support"
 msgstr "Segítség kérése"
 
-#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:285
+#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:283
 msgid "Our Website"
 msgstr "Weboldalunk"
 
@@ -75,11 +75,11 @@ msgstr "Weboldalunk"
 msgid "Report a Problem"
 msgstr "Hibajelentés"
 
-#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:312
+#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:310
 msgid "Restore Default Settings"
 msgstr "Alapértelmezett beállítások visszaállítása"
 
-#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:314
+#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:312
 msgid "Send Feedback"
 msgstr "Visszajelzés küldése"
 
@@ -130,7 +130,7 @@ msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
 "Az illesztőprogram-információk manuális frissítése megoldhatja a problémát"
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:197
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:195
 msgid "Refresh"
 msgstr "Frissítés"
 
@@ -138,7 +138,7 @@ msgstr "Frissítés"
 msgid "Refresh driver information"
 msgstr "Illesztőprogram-információk frissítése"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:209
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:207
 msgid "Learn More…"
 msgstr "További információk…"
 
@@ -216,7 +216,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "Ne vegye le a töltőről a készüléket a frissítés alatt."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:521
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:528
 msgid "Checking for Updates"
 msgstr "Frissítések keresése"
 
@@ -413,15 +413,15 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:192
+#: src/Views/OperatingSystemView.vala:190
 msgid "Download"
 msgstr "Letöltés"
 
-#: src/Views/OperatingSystemView.vala:195
+#: src/Views/OperatingSystemView.vala:193
 msgid "Cancel"
 msgstr "Mégsem"
 
-#: src/Views/OperatingSystemView.vala:222
+#: src/Views/OperatingSystemView.vala:220
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -429,71 +429,77 @@ msgstr ""
 "A frissítések automatikusan le lesznek töltve. A készülék újraindításakor "
 "kerülnek telepítésre."
 
-#: src/Views/OperatingSystemView.vala:292
+#: src/Views/OperatingSystemView.vala:290
 msgid "Get Involved"
 msgstr "Csatlakozzon"
 
-#: src/Views/OperatingSystemView.vala:478
+#: src/Views/OperatingSystemView.vala:477
 #, c-format
 msgid "Built on %s"
 msgstr "%s alapokon"
 
-#: src/Views/OperatingSystemView.vala:498
+#: src/Views/OperatingSystemView.vala:497
 msgid "System updates not available"
 msgstr "Nem érhetők el rendszerfrissítések"
 
-#: src/Views/OperatingSystemView.vala:499
+#: src/Views/OperatingSystemView.vala:498
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 "Nem sikerült csatlakozni a szerverhez. Próbáljon kijelentkezni a probléma "
 "megoldása érdekében."
 
-#: src/Views/OperatingSystemView.vala:511
+#: src/Views/OperatingSystemView.vala:510
 msgid "Up To Date"
 msgstr "Naprakész"
 
-#: src/Views/OperatingSystemView.vala:512
+#: src/Views/OperatingSystemView.vala:514
 #, c-format
 msgid "Last checked %s"
 msgstr "Utoljára ellenőrizve: %s"
 
-#: src/Views/OperatingSystemView.vala:527
+#: src/Views/OperatingSystemView.vala:521
+#, fuzzy
+#| msgid "Last checked %s"
+msgid "Last checked unknown"
+msgstr "Utoljára ellenőrizve: %s"
+
+#: src/Views/OperatingSystemView.vala:534
 msgid "Updates Available"
 msgstr "Frissítések érhetők el"
 
-#: src/Views/OperatingSystemView.vala:534
+#: src/Views/OperatingSystemView.vala:541
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
 msgstr[0] "%i frissítés érhető el"
 msgstr[1] "%i frissítés érhető el"
 
-#: src/Views/OperatingSystemView.vala:545
+#: src/Views/OperatingSystemView.vala:552
 msgid "Unable to determine number of updates"
 msgstr "Nem sikerült meghatározni a frissítések számát"
 
-#: src/Views/OperatingSystemView.vala:551
+#: src/Views/OperatingSystemView.vala:558
 msgid "Downloading Updates"
 msgstr "Frissítések letöltése"
 
-#: src/Views/OperatingSystemView.vala:557
+#: src/Views/OperatingSystemView.vala:564
 msgid "Restart Required"
 msgstr "Újraindítás szükséges"
 
-#: src/Views/OperatingSystemView.vala:558
+#: src/Views/OperatingSystemView.vala:565
 msgid "A restart is required to finish installing updates"
 msgstr "A frissítések befejezéséhez újraindításra van szükség"
 
-#: src/Views/OperatingSystemView.vala:563
-#: src/Views/OperatingSystemView.vala:577
+#: src/Views/OperatingSystemView.vala:570
+#: src/Views/OperatingSystemView.vala:584
 msgid "Failed to download updates"
 msgstr "Frissítések letöltése sikertelen"
 
-#: src/Views/OperatingSystemView.vala:564
+#: src/Views/OperatingSystemView.vala:571
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "A frissítések manuális keresése megoldhatja a problémát"
 
-#: src/Views/OperatingSystemView.vala:578
+#: src/Views/OperatingSystemView.vala:585
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -503,11 +509,11 @@ msgstr ""
 "féltől származó forrás vagy egy csomagkezelő-hiba lehet az oka. A "
 "frissítések manuális keresése megoldhatja a problémát."
 
-#: src/Views/OperatingSystemView.vala:620
+#: src/Views/OperatingSystemView.vala:627
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "A rendszerbeállítások visszaállnak a gyári alapértékekre"
 
-#: src/Views/OperatingSystemView.vala:621
+#: src/Views/OperatingSystemView.vala:628
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -515,16 +521,16 @@ msgstr ""
 "Minden rendszerbeállítás és adat visszaáll az alapértelmezett értékekre. Ez "
 "a személyes adatokra, például a zenékre és a képekre nem lesz hatással."
 
-#: src/Views/OperatingSystemView.vala:629
+#: src/Views/OperatingSystemView.vala:636
 msgid "Restore Settings"
 msgstr "A beállítások visszaállítása"
 
-#: src/Views/OperatingSystemView.vala:774
+#: src/Views/OperatingSystemView.vala:781
 msgid "Sponsor Us"
 msgstr "Támogasson minket"
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
-#: src/Views/OperatingSystemView.vala:837
+#: src/Views/OperatingSystemView.vala:844
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
 msgstr "%.0f%% teljesítve a(z) $%'5.0f havi célból"

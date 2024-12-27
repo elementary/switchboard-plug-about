@@ -19,8 +19,6 @@
 */
 
 public class About.OperatingSystemView : Gtk.Box {
-    private static Settings update_settings = new Settings ("io.elementary.settings-daemon.system-update");
-
     private static string _bug_url;
     private static string bug_url {
         get {
@@ -529,11 +527,19 @@ public class About.OperatingSystemView : Gtk.Box {
             case UP_TO_DATE:
                 updates_image.icon_name = "process-completed";
                 updates_title.label = _("Up To Date");
-                updates_description.label = _("Last checked %s").printf (
-                    Granite.DateTime.get_relative_datetime (
-                        new DateTime.from_unix_utc (update_settings.get_int64 ("last-refresh-time"))
-                    )
-                );
+
+                try {
+                    var last_refresh_time = yield update_proxy.get_last_refresh_time ();
+                    updates_description.label = _("Last checked %s").printf (
+                        Granite.DateTime.get_relative_datetime (
+                            new DateTime.from_unix_utc (last_refresh_time)
+                        )
+                    );
+                } catch (Error e) {
+                    critical ("Failed to get last refresh time from Updates Backend: %s", e.message);
+                    updates_description.label = _("Last checked unknown");
+                }
+
                 button_stack.visible_child_name = "refresh";
                 break;
             case CHECKING:
