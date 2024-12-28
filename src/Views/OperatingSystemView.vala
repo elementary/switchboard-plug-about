@@ -585,7 +585,7 @@ public class About.OperatingSystemView : Gtk.Box {
                 updates_title.label = _("Downloading Updates");
                 updates_description.label = "%s <span font-features='tnum'>%s</span>".printf (
                     current_state.message,
-                    get_progress_text ()
+                    to_progress_text (download_size_remaining, download_size_max)
                 );
                 button_stack.visible_child_name = "cancel";
                 break;
@@ -604,16 +604,16 @@ public class About.OperatingSystemView : Gtk.Box {
         }
     }
 
-    public string get_progress_text () {
-        if (download_size_max == 0) {
+    private string to_progress_text (uint64 remain_size, uint64 total_size) {
+        if (total_size == 0) {
             return "";
         }
 
-        uint64 downloaded_size = download_size_max - download_size_remaining;
-        string downloaded_size_str = GLib.format_size (downloaded_size);
-        string total_size_str = GLib.format_size (download_size_max);
+        uint64 current_size = total_size - remain_size;
+        string current_size_str = GLib.format_size (current_size);
+        string total_size_str = GLib.format_size (total_size);
 
-        return "%s / %s".printf (downloaded_size_str, total_size_str);
+        return "%s / %s".printf (current_size_str, total_size_str);
     }
 
     private void details_clicked () {
