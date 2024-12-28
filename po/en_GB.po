@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-27 20:58+0000\n"
-"PO-Revision-Date: 2024-12-11 13:16+0000\n"
+"PO-Revision-Date: 2024-12-28 05:10+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/en_GB/>\n"
@@ -450,10 +450,8 @@ msgid "Last checked %s"
 msgstr "Last checked %s"
 
 #: src/Views/OperatingSystemView.vala:521
-#, fuzzy
-#| msgid "Last checked %s"
 msgid "Last checked unknown"
-msgstr "Last checked %s"
+msgstr "Last checked unknown"
 
 #: src/Views/OperatingSystemView.vala:534
 msgid "Updates Available"
