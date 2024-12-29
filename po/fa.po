@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-09 18:51+0000\n"
+"POT-Creation-Date: 2024-12-27 20:58+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Persian <https://l10n.elementary.io/projects/switchboard/"
@@ -49,15 +49,15 @@ msgstr "سخت‌افزار"
 msgid "Drivers"
 msgstr ""
 
-#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:221
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:219
 msgid "Automatic Updates"
 msgstr ""
 
-#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:271
+#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:269
 msgid "Basics Guide"
 msgstr ""
 
-#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:278
+#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:276
 msgid "Get Help"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Get Support"
 msgstr ""
 
-#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:285
+#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:283
 msgid "Our Website"
 msgstr ""
 
@@ -77,11 +77,11 @@ msgstr ""
 msgid "Report a Problem"
 msgstr "گزارش ایراد"
 
-#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:312
+#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:310
 msgid "Restore Default Settings"
 msgstr ""
 
-#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:314
+#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:312
 msgid "Send Feedback"
 msgstr ""
 
@@ -127,7 +127,7 @@ msgstr ""
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:197
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:195
 msgid "Refresh"
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Refresh driver information"
 msgstr ""
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:209
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:207
 msgid "Learn More…"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:521
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:528
 msgid "Checking for Updates"
 msgstr ""
 
@@ -406,109 +406,113 @@ msgctxt "format-size"
 msgid "%u %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:192
+#: src/Views/OperatingSystemView.vala:190
 msgid "Download"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:195
+#: src/Views/OperatingSystemView.vala:193
 msgid "Cancel"
 msgstr "لغو"
 
-#: src/Views/OperatingSystemView.vala:222
+#: src/Views/OperatingSystemView.vala:220
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:292
+#: src/Views/OperatingSystemView.vala:290
 msgid "Get Involved"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:478
+#: src/Views/OperatingSystemView.vala:477
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:498
+#: src/Views/OperatingSystemView.vala:497
 msgid "System updates not available"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:499
+#: src/Views/OperatingSystemView.vala:498
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:511
+#: src/Views/OperatingSystemView.vala:510
 msgid "Up To Date"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:512
+#: src/Views/OperatingSystemView.vala:514
 #, c-format
 msgid "Last checked %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:527
-msgid "Updates Available"
+#: src/Views/OperatingSystemView.vala:521
+msgid "Last checked unknown"
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:534
+msgid "Updates Available"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:541
 #, c-format
 msgid "%i update available"
 msgid_plural "%i updates available"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/OperatingSystemView.vala:545
+#: src/Views/OperatingSystemView.vala:552
 msgid "Unable to determine number of updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:551
+#: src/Views/OperatingSystemView.vala:558
 msgid "Downloading Updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:557
+#: src/Views/OperatingSystemView.vala:564
 msgid "Restart Required"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:558
+#: src/Views/OperatingSystemView.vala:565
 msgid "A restart is required to finish installing updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:563
-#: src/Views/OperatingSystemView.vala:577
+#: src/Views/OperatingSystemView.vala:570
+#: src/Views/OperatingSystemView.vala:584
 msgid "Failed to download updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:564
+#: src/Views/OperatingSystemView.vala:571
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:578
+#: src/Views/OperatingSystemView.vala:585
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:620
+#: src/Views/OperatingSystemView.vala:627
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:621
+#: src/Views/OperatingSystemView.vala:628
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:629
+#: src/Views/OperatingSystemView.vala:636
 msgid "Restore Settings"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:774
+#: src/Views/OperatingSystemView.vala:781
 msgid "Sponsor Us"
 msgstr ""
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
-#: src/Views/OperatingSystemView.vala:837
+#: src/Views/OperatingSystemView.vala:844
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
 msgstr ""
