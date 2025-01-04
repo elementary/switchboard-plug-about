@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-27 20:58+0000\n"
-"PO-Revision-Date: 2024-12-11 13:16+0000\n"
+"PO-Revision-Date: 2024-12-31 10:16+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.4\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:46
@@ -464,10 +464,8 @@ msgid "Last checked %s"
 msgstr "Darrera comprovació: %s"
 
 #: src/Views/OperatingSystemView.vala:521
-#, fuzzy
-#| msgid "Last checked %s"
 msgid "Last checked unknown"
-msgstr "Darrera comprovació: %s"
+msgstr "Darrera comprovació desconeguda"
 
 #: src/Views/OperatingSystemView.vala:534
 msgid "Updates Available"
