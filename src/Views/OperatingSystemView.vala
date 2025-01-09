@@ -196,7 +196,8 @@ public class About.OperatingSystemView : Gtk.Box {
 
         updates_description = new Gtk.Label (null) {
             xalign = 0,
-            use_markup = true
+            use_markup = true,
+            wrap = true
         };
         updates_description.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
         updates_description.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
