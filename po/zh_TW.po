@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-27 20:58+0000\n"
-"PO-Revision-Date: 2024-12-11 13:16+0000\n"
+"PO-Revision-Date: 2025-01-17 18:16+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://l10n.elementary.io/"
 "projects/switchboard/switchboard-plug-about/zh_Hant/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.4\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:46
@@ -436,13 +436,11 @@ msgstr "最新狀態"
 #: src/Views/OperatingSystemView.vala:514
 #, c-format
 msgid "Last checked %s"
-msgstr "上次檢查 %s"
+msgstr "上次檢查：%s"
 
 #: src/Views/OperatingSystemView.vala:521
-#, fuzzy
-#| msgid "Last checked %s"
 msgid "Last checked unknown"
-msgstr "上次檢查 %s"
+msgstr "上次檢查：未知"
 
 #: src/Views/OperatingSystemView.vala:534
 msgid "Updates Available"
