@@ -24,7 +24,7 @@ Homepage: https://github.com/elementary/switchboard-plug-about
 
 Package: io.elementary.settings.system
 Architecture: any
-Depends: io.elementary.settings-daemon (>= 8.0.0),
+Depends: io.elementary.settings-daemon (>= 8.2.0),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: io.elementary.feedback, fwupd, switcheroo-control
