@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-27 20:58+0000\n"
+"POT-Creation-Date: 2025-02-12 18:58+0000\n"
 "PO-Revision-Date: 2015-05-17 01:05+0000\n"
 "Last-Translator: akoho <Unknown>\n"
 "Language-Team: Malagasy <mg@li.org>\n"
@@ -45,15 +45,15 @@ msgstr ""
 msgid "Drivers"
 msgstr ""
 
-#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:219
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:238
 msgid "Automatic Updates"
 msgstr ""
 
-#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:269
+#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:288
 msgid "Basics Guide"
 msgstr ""
 
-#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:276
+#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:295
 msgid "Get Help"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Get Support"
 msgstr ""
 
-#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:283
+#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:302
 #, fuzzy
 #| msgid "Website"
 msgid "Our Website"
@@ -75,11 +75,11 @@ msgstr "Tranonkala"
 msgid "Report a Problem"
 msgstr "Hampita olana"
 
-#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:310
+#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:329
 msgid "Restore Default Settings"
 msgstr "Avereno tamin'ny voalohany"
 
-#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:312
+#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:331
 msgid "Send Feedback"
 msgstr ""
 
@@ -127,7 +127,7 @@ msgstr ""
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:195
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:214
 msgid "Refresh"
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Refresh driver information"
 msgstr ""
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:207
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:226
 msgid "Learn More…"
 msgstr ""
 
@@ -208,7 +208,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr ""
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:528
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:548
 #, fuzzy
 #| msgid "Check for Updates"
 msgid "Checking for Updates"
@@ -314,7 +314,7 @@ msgstr ""
 msgid "%s memory"
 msgstr "Tadidy"
 
-#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:350
+#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:360
 #, fuzzy
 #| msgid "Graphics:"
 msgid "Unknown Graphics"
@@ -338,187 +338,187 @@ msgstr ""
 msgid "Device name saved"
 msgstr ""
 
-#: src/Views/HardwareView.vala:274
+#: src/Views/HardwareView.vala:284
 #, fuzzy, c-format
 #| msgid "Dual-Core"
 msgid "Dual-Core %s"
 msgstr "Roy-loha"
 
-#: src/Views/HardwareView.vala:276
+#: src/Views/HardwareView.vala:286
 #, fuzzy, c-format
 #| msgid "Quad-Core"
 msgid "Quad-Core %s"
 msgstr "Efa-doha"
 
-#: src/Views/HardwareView.vala:278
+#: src/Views/HardwareView.vala:288
 #, c-format
 msgid "Hexa-Core %s"
 msgstr ""
 
-#: src/Views/HardwareView.vala:390
+#: src/Views/HardwareView.vala:400
 #, fuzzy
 #| msgid "Processor:"
 msgid "Unknown Processor"
 msgstr "Atidoha"
 
-#: src/Views/HardwareView.vala:463
+#: src/Views/HardwareView.vala:473
 msgid "Unknown"
 msgstr "Tsy fahita"
 
-#: src/Views/HardwareView.vala:518
+#: src/Views/HardwareView.vala:528
 #, fuzzy, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "Fitahirizana"
 
-#: src/Views/HardwareView.vala:520
+#: src/Views/HardwareView.vala:530
 #, fuzzy, c-format
 msgid "%s storage (eMMC)"
 msgstr "Fitahirizana"
 
-#: src/Views/HardwareView.vala:522
+#: src/Views/HardwareView.vala:532
 #, fuzzy, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "Fitahirizana"
 
-#: src/Views/HardwareView.vala:525
+#: src/Views/HardwareView.vala:535
 #, fuzzy, c-format
 msgid "%s storage (HDD)"
 msgstr "Fitahirizana"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:530
+#: src/Views/HardwareView.vala:540
 #, fuzzy, c-format
 msgid "%s storage"
 msgstr "Fitahirizana"
 
-#: src/Views/HardwareView.vala:696
+#: src/Views/HardwareView.vala:712
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/HardwareView.vala:698
+#: src/Views/HardwareView.vala:714
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/HardwareView.vala:705
+#: src/Views/HardwareView.vala:721
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:190
+#: src/Views/OperatingSystemView.vala:209
 msgid "Download"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:193
+#: src/Views/OperatingSystemView.vala:212
 msgid "Cancel"
 msgstr "Foano"
 
-#: src/Views/OperatingSystemView.vala:220
+#: src/Views/OperatingSystemView.vala:239
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:290
+#: src/Views/OperatingSystemView.vala:309
 msgid "Get Involved"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:477
+#: src/Views/OperatingSystemView.vala:496
 #, c-format
 msgid "Built on %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:497
+#: src/Views/OperatingSystemView.vala:516
 msgid "System updates not available"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:498
+#: src/Views/OperatingSystemView.vala:517
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:510
+#: src/Views/OperatingSystemView.vala:530
 msgid "Up To Date"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:514
+#: src/Views/OperatingSystemView.vala:534
 #, c-format
 msgid "Last checked %s"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:521
+#: src/Views/OperatingSystemView.vala:541
 msgid "Last checked unknown"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:534
+#: src/Views/OperatingSystemView.vala:554
 msgid "Updates Available"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:541
+#: src/Views/OperatingSystemView.vala:561
 #, c-format
-msgid "%i update available"
-msgid_plural "%i updates available"
+msgid "%i update available (%s)"
+msgid_plural "%i updates available (%s)"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/Views/OperatingSystemView.vala:552
+#: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:558
+#: src/Views/OperatingSystemView.vala:586
 msgid "Downloading Updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:564
+#: src/Views/OperatingSystemView.vala:595
 msgid "Restart Required"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:565
+#: src/Views/OperatingSystemView.vala:596
 msgid "A restart is required to finish installing updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:570
-#: src/Views/OperatingSystemView.vala:584
+#: src/Views/OperatingSystemView.vala:601
+#: src/Views/OperatingSystemView.vala:627
 msgid "Failed to download updates"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:571
+#: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:585
+#: src/Views/OperatingSystemView.vala:628
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:627
+#: src/Views/OperatingSystemView.vala:670
 #, fuzzy
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Ho averina tamin'ny volohany ny firafitry ny system"
 
-#: src/Views/OperatingSystemView.vala:628
+#: src/Views/OperatingSystemView.vala:671
 #, fuzzy
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
 msgstr "Hiverina amin'ny voalohany daholo ny firafitra sy ny tahiry rehetra"
 
-#: src/Views/OperatingSystemView.vala:636
+#: src/Views/OperatingSystemView.vala:679
 msgid "Restore Settings"
 msgstr "Avereno ny firafitra"
 
-#: src/Views/OperatingSystemView.vala:781
+#: src/Views/OperatingSystemView.vala:824
 msgid "Sponsor Us"
 msgstr ""
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
-#: src/Views/OperatingSystemView.vala:844
+#: src/Views/OperatingSystemView.vala:887
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
 msgstr ""

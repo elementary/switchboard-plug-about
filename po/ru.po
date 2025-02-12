@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-27 20:58+0000\n"
+"POT-Creation-Date: 2025-02-12 18:58+0000\n"
 "PO-Revision-Date: 2024-12-29 13:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -48,15 +48,15 @@ msgstr "Прошивка"
 msgid "Drivers"
 msgstr "Драйверы"
 
-#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:219
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:238
 msgid "Automatic Updates"
 msgstr "Автоматические обновления"
 
-#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:269
+#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:288
 msgid "Basics Guide"
 msgstr "Изучение основ"
 
-#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:276
+#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:295
 msgid "Get Help"
 msgstr "Получить помощь"
 
@@ -68,7 +68,7 @@ msgstr "Приобщиться или поддержать нас"
 msgid "Get Support"
 msgstr "Получить поддержку"
 
-#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:283
+#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:302
 msgid "Our Website"
 msgstr "Наш веб-сайт"
 
@@ -76,11 +76,11 @@ msgstr "Наш веб-сайт"
 msgid "Report a Problem"
 msgstr "Сообщить об ошибке"
 
-#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:310
+#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:329
 msgid "Restore Default Settings"
 msgstr "Восстановить настройки"
 
-#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:312
+#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:331
 msgid "Send Feedback"
 msgstr "Отправить отзыв"
 
@@ -128,7 +128,7 @@ msgstr "Не удалось установить драйвер"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr "Ручное обновление информации о драйвере может решить проблему"
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:195
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:214
 msgid "Refresh"
 msgstr "Проверить обновления"
 
@@ -136,7 +136,7 @@ msgstr "Проверить обновления"
 msgid "Refresh driver information"
 msgstr "Обновить информацию о драйвере"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:207
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:226
 msgid "Learn More…"
 msgstr "Узнать больше…"
 
@@ -215,7 +215,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "Не отключайте устройство во время обновления."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:528
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:548
 msgid "Checking for Updates"
 msgstr "Проверка обновлений"
 
@@ -323,7 +323,7 @@ msgstr "У вас нет прав для изменения имени устр�
 msgid "%s memory"
 msgstr "Память: %s"
 
-#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:350
+#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:360
 msgid "Unknown Graphics"
 msgstr "Неизвестная графика"
 
@@ -343,63 +343,63 @@ msgstr "Обновить имя устройства"
 msgid "Device name saved"
 msgstr "Имя устройства сохранено"
 
-#: src/Views/HardwareView.vala:274
+#: src/Views/HardwareView.vala:284
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Двухъядерный %s"
 
-#: src/Views/HardwareView.vala:276
+#: src/Views/HardwareView.vala:286
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Четырёхъядерный %s"
 
-#: src/Views/HardwareView.vala:278
+#: src/Views/HardwareView.vala:288
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Шестиядерный %s"
 
-#: src/Views/HardwareView.vala:390
+#: src/Views/HardwareView.vala:400
 msgid "Unknown Processor"
 msgstr "Неизвестный процессор"
 
-#: src/Views/HardwareView.vala:463
+#: src/Views/HardwareView.vala:473
 msgid "Unknown"
 msgstr "Неизвестно"
 
-#: src/Views/HardwareView.vala:518
+#: src/Views/HardwareView.vala:528
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s хранилища (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:520
+#: src/Views/HardwareView.vala:530
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s хранилища (eMMC)"
 
-#: src/Views/HardwareView.vala:522
+#: src/Views/HardwareView.vala:532
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s хранилища (SATA SSD)"
 
-#: src/Views/HardwareView.vala:525
+#: src/Views/HardwareView.vala:535
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s хранилища (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:530
+#: src/Views/HardwareView.vala:540
 #, c-format
 msgid "%s storage"
 msgstr "%s хранилища"
 
-#: src/Views/HardwareView.vala:696
+#: src/Views/HardwareView.vala:712
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "байт"
 msgstr[1] "байта"
 msgstr[2] "байтов"
 
-#: src/Views/HardwareView.vala:698
+#: src/Views/HardwareView.vala:714
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
@@ -407,21 +407,21 @@ msgstr[0] "%u байт"
 msgstr[1] "%u байта"
 msgstr[2] "%u байтов"
 
-#: src/Views/HardwareView.vala:705
+#: src/Views/HardwareView.vala:721
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:190
+#: src/Views/OperatingSystemView.vala:209
 msgid "Download"
 msgstr "Скачать"
 
-#: src/Views/OperatingSystemView.vala:193
+#: src/Views/OperatingSystemView.vala:212
 msgid "Cancel"
 msgstr "Отменить"
 
-#: src/Views/OperatingSystemView.vala:220
+#: src/Views/OperatingSystemView.vala:239
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -429,76 +429,78 @@ msgstr ""
 "Автоматически загружать обновления. Они будут устанавливаться при "
 "перезагрузке устройства."
 
-#: src/Views/OperatingSystemView.vala:290
+#: src/Views/OperatingSystemView.vala:309
 msgid "Get Involved"
 msgstr "Приобщиться"
 
-#: src/Views/OperatingSystemView.vala:477
+#: src/Views/OperatingSystemView.vala:496
 #, c-format
 msgid "Built on %s"
 msgstr "Работает на базе %s"
 
-#: src/Views/OperatingSystemView.vala:497
+#: src/Views/OperatingSystemView.vala:516
 msgid "System updates not available"
 msgstr "Обновления системы недоступны"
 
-#: src/Views/OperatingSystemView.vala:498
+#: src/Views/OperatingSystemView.vala:517
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 "Не удалось подключиться к службе обновления. Попробуйте перезагрузить "
 "систему, чтобы решить эту проблему."
 
-#: src/Views/OperatingSystemView.vala:510
+#: src/Views/OperatingSystemView.vala:530
 msgid "Up To Date"
 msgstr "Обновления не требуются"
 
-#: src/Views/OperatingSystemView.vala:514
+#: src/Views/OperatingSystemView.vala:534
 #, c-format
 msgid "Last checked %s"
 msgstr "Последняя проверка: %s"
 
-#: src/Views/OperatingSystemView.vala:521
+#: src/Views/OperatingSystemView.vala:541
 msgid "Last checked unknown"
 msgstr "Последняя проверка: неизвестно"
 
-#: src/Views/OperatingSystemView.vala:534
+#: src/Views/OperatingSystemView.vala:554
 msgid "Updates Available"
 msgstr "Доступны обновления"
 
-#: src/Views/OperatingSystemView.vala:541
-#, c-format
-msgid "%i update available"
-msgid_plural "%i updates available"
+#: src/Views/OperatingSystemView.vala:561
+#, fuzzy, c-format
+#| msgid "%i update available"
+#| msgid_plural "%i updates available"
+msgid "%i update available (%s)"
+msgid_plural "%i updates available (%s)"
 msgstr[0] "Доступно %i обновление"
 msgstr[1] "Доступно %i обновления"
 msgstr[2] "Доступно %i обновлений"
 
-#: src/Views/OperatingSystemView.vala:552
+#: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
 msgstr "Не удалось определить количество обновлений"
 
-#: src/Views/OperatingSystemView.vala:558
+#: src/Views/OperatingSystemView.vala:586
 msgid "Downloading Updates"
 msgstr "Загрузка обновлений"
 
-#: src/Views/OperatingSystemView.vala:564
+#: src/Views/OperatingSystemView.vala:595
 msgid "Restart Required"
 msgstr "Требуется перезагрузка"
 
-#: src/Views/OperatingSystemView.vala:565
+#: src/Views/OperatingSystemView.vala:596
 msgid "A restart is required to finish installing updates"
 msgstr "Перезагрузка необходима для завершения установки обновлений"
 
-#: src/Views/OperatingSystemView.vala:570
-#: src/Views/OperatingSystemView.vala:584
+#: src/Views/OperatingSystemView.vala:601
+#: src/Views/OperatingSystemView.vala:627
 msgid "Failed to download updates"
 msgstr "Не удалось загрузить обновления"
 
-#: src/Views/OperatingSystemView.vala:571
+#: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "Ручная проверка обновлений может решить проблему"
 
-#: src/Views/OperatingSystemView.vala:585
+#: src/Views/OperatingSystemView.vala:628
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -508,11 +510,11 @@ msgstr ""
 "обеспечением, сторонними репозиториями или ошибкой менеджера пакетов. Ручная "
 "проверка обновлений может решить эту проблему."
 
-#: src/Views/OperatingSystemView.vala:627
+#: src/Views/OperatingSystemView.vala:670
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Системные настройки будут восстановлены до настроек по умолчанию"
 
-#: src/Views/OperatingSystemView.vala:628
+#: src/Views/OperatingSystemView.vala:671
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -520,16 +522,16 @@ msgstr ""
 "Все системные настройки и данные будут сброшены до значений по умолчанию. "
 "Личные данные, такие как музыка и изображения, не будут затронуты."
 
-#: src/Views/OperatingSystemView.vala:636
+#: src/Views/OperatingSystemView.vala:679
 msgid "Restore Settings"
 msgstr "Восстановить настройки"
 
-#: src/Views/OperatingSystemView.vala:781
+#: src/Views/OperatingSystemView.vala:824
 msgid "Sponsor Us"
 msgstr "Спонсировать"
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
-#: src/Views/OperatingSystemView.vala:844
+#: src/Views/OperatingSystemView.vala:887
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
 msgstr "%.0f%% до %'5.0f USD в месяц"
