@@ -558,10 +558,10 @@ public class About.OperatingSystemView : Gtk.Box {
                     var details = yield update_proxy.get_update_details ();
                     updates_description.label = dngettext (
                         GETTEXT_PACKAGE,
-                        "%i update available",
-                        "%i updates available",
+                        "%i update available (%s)",
+                        "%i updates available (%s)",
                         details.packages.length
-                    ).printf (details.packages.length);
+                    ).printf (details.packages.length, GLib.format_size (details.size));
 
                     if (Pk.Info.SECURITY in details.info) {
                         updates_image.icon_name = "software-update-urgent";
