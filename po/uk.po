@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-13 18:26+0000\n"
-"PO-Revision-Date: 2025-01-12 17:34+0000\n"
+"PO-Revision-Date: 2025-02-14 07:56+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/uk/>\n"
@@ -95,7 +95,7 @@ msgstr "Назва хосту"
 #. https://github.com/elementary/switchboard-plug-about/issues/219
 #: src/Plug.vala:142
 msgid "About This Device"
-msgstr ""
+msgstr "Про цей пристрій"
 
 #: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
@@ -474,14 +474,12 @@ msgid "Updates Available"
 msgstr "Доступні оновлення"
 
 #: src/Views/OperatingSystemView.vala:561
-#, fuzzy, c-format
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
+#, c-format
 msgid "%i update available (%s)"
 msgid_plural "%i updates available (%s)"
-msgstr[0] "Доступне %i оновлення"
-msgstr[1] "Доступні %i оновлення"
-msgstr[2] "Доступні %i оновлень"
+msgstr[0] "Доступне %i оновлення (%s)"
+msgstr[1] "Доступні %i оновлення (%s)"
+msgstr[2] "Доступні %i оновлень (%s)"
 
 #: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
