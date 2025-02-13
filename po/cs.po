@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-12 18:58+0000\n"
+"POT-Creation-Date: 2025-02-13 18:26+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -38,12 +38,12 @@ msgstr "Operační systém"
 msgid "Hardware"
 msgstr "Hardware"
 
-#: src/Plug.vala:65 src/Plug.vala:142 src/Plug.vala:143
+#: src/Plug.vala:65 src/Plug.vala:144 src/Plug.vala:145
 #: src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Firmware"
 
-#: src/Plug.vala:66 src/Plug.vala:145 src/Views/DriversView.vala:19
+#: src/Plug.vala:66 src/Plug.vala:147 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr ""
 
@@ -98,7 +98,12 @@ msgstr "Je k dispozici %u aktualizace"
 msgid "Host name"
 msgstr ""
 
-#: src/Plug.vala:143 src/Views/FirmwareView.vala:86
+#. https://github.com/elementary/switchboard-plug-about/issues/219
+#: src/Plug.vala:142
+msgid "About This Device"
+msgstr ""
+
+#: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 #, fuzzy
 #| msgid "Failed to install firmware release"
 msgid "Restart to Firmware Setup…"

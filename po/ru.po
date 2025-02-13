@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-12 18:58+0000\n"
+"POT-Creation-Date: 2025-02-13 18:26+0000\n"
 "PO-Revision-Date: 2024-12-29 13:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -39,12 +39,12 @@ msgstr "Операционная система"
 msgid "Hardware"
 msgstr "Оборудование"
 
-#: src/Plug.vala:65 src/Plug.vala:142 src/Plug.vala:143
+#: src/Plug.vala:65 src/Plug.vala:144 src/Plug.vala:145
 #: src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Прошивка"
 
-#: src/Plug.vala:66 src/Plug.vala:145 src/Views/DriversView.vala:19
+#: src/Plug.vala:66 src/Plug.vala:147 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr "Драйверы"
 
@@ -92,7 +92,12 @@ msgstr "Имя устройства"
 msgid "Host name"
 msgstr "Имя хоста"
 
-#: src/Plug.vala:143 src/Views/FirmwareView.vala:86
+#. https://github.com/elementary/switchboard-plug-about/issues/219
+#: src/Plug.vala:142
+msgid "About This Device"
+msgstr ""
+
+#: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
 msgstr "Перезагрузиться в BIOS…"
 

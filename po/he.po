@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-12 18:58+0000\n"
+"POT-Creation-Date: 2025-02-13 18:26+0000\n"
 "PO-Revision-Date: 2024-12-31 10:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -38,12 +38,12 @@ msgstr "מערכת הפעלה"
 msgid "Hardware"
 msgstr "חומרה"
 
-#: src/Plug.vala:65 src/Plug.vala:142 src/Plug.vala:143
+#: src/Plug.vala:65 src/Plug.vala:144 src/Plug.vala:145
 #: src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "קושחה"
 
-#: src/Plug.vala:66 src/Plug.vala:145 src/Views/DriversView.vala:19
+#: src/Plug.vala:66 src/Plug.vala:147 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr "מנהלי התקנים"
 
@@ -91,7 +91,12 @@ msgstr "שם המכשיר"
 msgid "Host name"
 msgstr "שם המארח"
 
-#: src/Plug.vala:143 src/Views/FirmwareView.vala:86
+#. https://github.com/elementary/switchboard-plug-about/issues/219
+#: src/Plug.vala:142
+msgid "About This Device"
+msgstr ""
+
+#: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
 msgstr "הפעלה מחדש לתוך הגדרות הקושחה…"
 
