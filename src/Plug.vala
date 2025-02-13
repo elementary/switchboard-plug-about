@@ -138,6 +138,8 @@ public class About.Plug : Switchboard.Plug {
         search_results.set ("%s → %s".printf (display_name, _("Hardware")), HARDWARE);
         search_results.set ("%s → %s → %s".printf (display_name, _("Hardware"), _("Device name")), HARDWARE);
         search_results.set ("%s → %s → %s".printf (display_name, _("Hardware"), _("Host name")), HARDWARE);
+        // https://github.com/elementary/switchboard-plug-about/issues/219
+        search_results.set ("%s → %s".printf (display_name, _("About This Device")), HARDWARE);
 
         search_results.set ("%s → %s".printf (display_name, _("Firmware")), FIRMWARE);
         search_results.set ("%s → %s → %s".printf (display_name, _("Firmware"), _("Restart to Firmware Setup…")), FIRMWARE);
