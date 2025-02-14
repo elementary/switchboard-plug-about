@@ -614,7 +614,7 @@ public class About.OperatingSystemView : Gtk.Box {
         string current_size_str = GLib.format_size (current_size);
         string total_size_str = GLib.format_size (total_size);
 
-        return "%s / %s".printf (current_size_str, total_size_str);
+        return _("%s of %s").printf (current_size_str, total_size_str);
     }
 
     private void details_clicked () {
