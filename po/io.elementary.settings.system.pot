@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: io.elementary.settings.system\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-13 18:26+0000\n"
+"POT-Creation-Date: 2025-02-14 23:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -479,6 +479,11 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:617
+#, c-format
+msgid "%s of %s"
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:628
