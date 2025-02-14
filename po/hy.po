@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-13 18:26+0000\n"
+"POT-Creation-Date: 2025-02-14 23:30+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Armenian <https://l10n.elementary.io/projects/switchboard/"
@@ -497,6 +497,11 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:617
+#, c-format
+msgid "%s of %s"
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:628

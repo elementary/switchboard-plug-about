@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-13 18:26+0000\n"
+"POT-Creation-Date: 2025-02-14 23:30+0000\n"
 "PO-Revision-Date: 2019-06-26 18:53+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -478,6 +478,11 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:617
+#, c-format
+msgid "%s of %s"
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:628

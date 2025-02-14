@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-13 18:26+0000\n"
+"POT-Creation-Date: 2025-02-14 23:30+0000\n"
 "PO-Revision-Date: 2024-04-20 16:13+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -531,6 +531,11 @@ msgstr "Falha ao transferir atualizações"
 #: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "A atualização manual das atualizações pode resolver o problema"
+
+#: src/Views/OperatingSystemView.vala:617
+#, c-format
+msgid "%s of %s"
+msgstr ""
 
 #: src/Views/OperatingSystemView.vala:628
 msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-13 18:26+0000\n"
+"POT-Creation-Date: 2025-02-14 23:30+0000\n"
 "PO-Revision-Date: 2014-07-08 06:04+0000\n"
 "Last-Translator: gudeta <gudbog@gmail.com>\n"
 "Language-Team: Oromo <om@li.org>\n"
@@ -483,6 +483,11 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:617
+#, c-format
+msgid "%s of %s"
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:628
