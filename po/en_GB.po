@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-14 23:30+0000\n"
-"PO-Revision-Date: 2024-12-28 05:10+0000\n"
+"PO-Revision-Date: 2025-02-16 03:16+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-about/en_GB/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.4\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:46
@@ -94,7 +94,7 @@ msgstr "Host name"
 #. https://github.com/elementary/switchboard-plug-about/issues/219
 #: src/Plug.vala:142
 msgid "About This Device"
-msgstr ""
+msgstr "About This Device"
 
 #: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
@@ -463,13 +463,11 @@ msgid "Updates Available"
 msgstr "Updates Available"
 
 #: src/Views/OperatingSystemView.vala:561
-#, fuzzy, c-format
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
+#, c-format
 msgid "%i update available (%s)"
 msgid_plural "%i updates available (%s)"
-msgstr[0] "%i update available"
-msgstr[1] "%i updates available"
+msgstr[0] "%i update available (%s)"
+msgstr[1] "%i updates available (%s)"
 
 #: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
@@ -499,7 +497,7 @@ msgstr "Manually refreshing updates may resolve the issue"
 #: src/Views/OperatingSystemView.vala:617
 #, c-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s of %s"
 
 #: src/Views/OperatingSystemView.vala:628
 msgid ""
