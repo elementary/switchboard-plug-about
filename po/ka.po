@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-14 23:30+0000\n"
-"PO-Revision-Date: 2024-01-25 21:26+0000\n"
+"PO-Revision-Date: 2025-02-17 04:16+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/ka/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:46
@@ -490,13 +490,11 @@ msgid "Updates Available"
 msgstr "ხელმისაწვდომია %u განახლება"
 
 #: src/Views/OperatingSystemView.vala:561
-#, fuzzy, c-format
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
+#, c-format
 msgid "%i update available (%s)"
 msgid_plural "%i updates available (%s)"
-msgstr[0] "ხელმისაწვდომია %i განახლება"
-msgstr[1] "ხელმისაწვდომია %i განახლება"
+msgstr[0] "ხელმისაწვდომია %i განახლება (%s)"
+msgstr[1] "ხელმისაწვდომია %i განახლება (%s)"
 
 #: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
