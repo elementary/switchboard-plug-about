@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-14 23:30+0000\n"
-"PO-Revision-Date: 2024-12-31 10:16+0000\n"
+"PO-Revision-Date: 2025-02-17 04:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-about/he/>\n"
@@ -496,7 +496,7 @@ msgstr "רענון העדכונים ידנית עשוי לפתור את הבעי
 #: src/Views/OperatingSystemView.vala:617
 #, c-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s מתוך %s"
 
 #: src/Views/OperatingSystemView.vala:628
 msgid ""
