@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-14 23:30+0000\n"
-"PO-Revision-Date: 2025-02-07 16:16+0000\n"
+"PO-Revision-Date: 2025-02-20 10:16+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
-"Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: French <https://l10n.elementary.io/projects/settings/"
 "switchboard-plug-about/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgstr "Nom d'hôte"
 #. https://github.com/elementary/switchboard-plug-about/issues/219
 #: src/Plug.vala:142
 msgid "About This Device"
-msgstr ""
+msgstr "À propos de cet appareil"
 
 #: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
@@ -474,13 +474,11 @@ msgid "Updates Available"
 msgstr "Mises à jour disponibles"
 
 #: src/Views/OperatingSystemView.vala:561
-#, fuzzy, c-format
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
+#, c-format
 msgid "%i update available (%s)"
 msgid_plural "%i updates available (%s)"
-msgstr[0] "%i mise à jour disponible"
-msgstr[1] "%i mises à jour disponibles"
+msgstr[0] "%i mise à jour disponible (%s)"
+msgstr[1] "%i mises à jour disponibles (%s)"
 
 #: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
@@ -512,7 +510,7 @@ msgstr ""
 #: src/Views/OperatingSystemView.vala:617
 #, c-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s sur %s"
 
 #: src/Views/OperatingSystemView.vala:628
 msgid ""
