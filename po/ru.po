@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-14 23:30+0000\n"
-"PO-Revision-Date: 2025-02-14 07:56+0000\n"
+"PO-Revision-Date: 2025-02-20 10:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
-"Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: Russian <https://l10n.elementary.io/projects/settings/"
 "switchboard-plug-about/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -506,7 +506,7 @@ msgstr "Ручная проверка обновлений может решит
 #: src/Views/OperatingSystemView.vala:617
 #, c-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s из %s"
 
 #: src/Views/OperatingSystemView.vala:628
 msgid ""
