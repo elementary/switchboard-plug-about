@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 23:30+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2024-01-25 02:35+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -505,13 +505,13 @@ msgid "Downloading Updates"
 msgstr "모두 업데이트"
 
 #: src/Views/OperatingSystemView.vala:595
-#, fuzzy
-#| msgid "Restart"
-msgid "Restart Required"
-msgstr "다시 시작"
+msgid "Restart to install pending updates"
+msgstr ""
 
 #: src/Views/OperatingSystemView.vala:596
-msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:601
@@ -574,6 +574,11 @@ msgstr[0] ""
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "닫기"
+
+#, fuzzy
+#~| msgid "Restart"
+#~ msgid "Restart Required"
+#~ msgstr "다시 시작"
 
 #~ msgid "Operating System Information"
 #~ msgstr "운영 체제 정보"

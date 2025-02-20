@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 23:30+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2025-02-17 04:16+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -477,11 +477,17 @@ msgid "Downloading Updates"
 msgstr "עדכונים מתקבלים"
 
 #: src/Views/OperatingSystemView.vala:595
-msgid "Restart Required"
-msgstr "צריך להפעיל מחדש"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid "Restart to install pending updates"
+msgstr "צריך להפעיל מחדש כדי לסיים להתקין את העדכונים"
 
 #: src/Views/OperatingSystemView.vala:596
-msgid "A restart is required to finish installing updates"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
 msgstr "צריך להפעיל מחדש כדי לסיים להתקין את העדכונים"
 
 #: src/Views/OperatingSystemView.vala:601
@@ -548,6 +554,9 @@ msgstr[1] "%u חבילות תשודרגנה"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "סגירה"
+
+#~ msgid "Restart Required"
+#~ msgstr "צריך להפעיל מחדש"
 
 #~ msgid "Operating System Information"
 #~ msgstr "פרטי מערכת הפעלה"

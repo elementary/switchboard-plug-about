@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 23:30+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2024-12-02 14:16+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -488,11 +488,17 @@ msgid "Downloading Updates"
 msgstr "Ladataan päivityksiä"
 
 #: src/Views/OperatingSystemView.vala:595
-msgid "Restart Required"
-msgstr "Uudelleenkäynnistys vaaditaan"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid "Restart to install pending updates"
+msgstr "Päivitysten viimeistely vaatii uudelleenkäynnistyksen"
 
 #: src/Views/OperatingSystemView.vala:596
-msgid "A restart is required to finish installing updates"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
 msgstr "Päivitysten viimeistely vaatii uudelleenkäynnistyksen"
 
 #: src/Views/OperatingSystemView.vala:601
@@ -556,6 +562,9 @@ msgstr[1] "%u pakettia päivitetään"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Sulje"
+
+#~ msgid "Restart Required"
+#~ msgstr "Uudelleenkäynnistys vaaditaan"
 
 #~ msgid "Operating System Information"
 #~ msgstr "Käyttöjärjestelmän tiedot"

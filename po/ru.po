@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 23:30+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2025-02-20 10:16+0000\n"
 "Last-Translator: кубик круглый <megarainbow29@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/settings/"
@@ -487,11 +487,17 @@ msgid "Downloading Updates"
 msgstr "Загрузка обновлений"
 
 #: src/Views/OperatingSystemView.vala:595
-msgid "Restart Required"
-msgstr "Требуется перезагрузка"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid "Restart to install pending updates"
+msgstr "Перезагрузка необходима для завершения установки обновлений"
 
 #: src/Views/OperatingSystemView.vala:596
-msgid "A restart is required to finish installing updates"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
 msgstr "Перезагрузка необходима для завершения установки обновлений"
 
 #: src/Views/OperatingSystemView.vala:601
@@ -559,6 +565,9 @@ msgstr[2] "%u пакетов будет обновлено"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Закрыть"
+
+#~ msgid "Restart Required"
+#~ msgstr "Требуется перезагрузка"
 
 #~ msgid "Operating System Information"
 #~ msgstr "Сведения об операционной системе"

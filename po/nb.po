@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 23:30+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2024-09-19 07:21+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -545,13 +545,14 @@ msgstr "Alle oppgraderinger"
 
 #: src/Views/OperatingSystemView.vala:595
 #, fuzzy
-#| msgid "Restart"
-msgid "Restart Required"
-msgstr "Omstart"
+msgid "Restart to install pending updates"
+msgstr "Omstart kreves for å installere alle oppgraderinger"
 
 #: src/Views/OperatingSystemView.vala:596
 #, fuzzy
-msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
 msgstr "Omstart kreves for å installere alle oppgraderinger"
 
 #: src/Views/OperatingSystemView.vala:601
@@ -623,6 +624,11 @@ msgstr[1] "%u pakker vil bli oppgradert"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Lukk"
+
+#, fuzzy
+#~| msgid "Restart"
+#~ msgid "Restart Required"
+#~ msgstr "Omstart"
 
 #~ msgid "Operating System Information"
 #~ msgstr "Operativsystemsinfo"

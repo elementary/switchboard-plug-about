@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 23:30+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2024-04-24 13:13+0000\n"
 "Last-Translator: Matheus Torres Carvalho <matheustcarvalho@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -516,13 +516,13 @@ msgid "Downloading Updates"
 msgstr "Todas as Atualizações"
 
 #: src/Views/OperatingSystemView.vala:595
-#, fuzzy
-#| msgid "Restart"
-msgid "Restart Required"
-msgstr "Reiniciar"
+msgid "Restart to install pending updates"
+msgstr ""
 
 #: src/Views/OperatingSystemView.vala:596
-msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:601
@@ -586,6 +586,11 @@ msgstr[1] ""
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Fechar"
+
+#, fuzzy
+#~| msgid "Restart"
+#~ msgid "Restart Required"
+#~ msgstr "Reiniciar"
 
 #~ msgid "Operating System Information"
 #~ msgstr "Informações do sistema operacional"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 23:30+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2024-12-28 09:04+0000\n"
 "Last-Translator: Marcin Serwin <marcin@serwin.dev>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -493,11 +493,18 @@ msgid "Downloading Updates"
 msgstr "Pobieranie aktualizacji"
 
 #: src/Views/OperatingSystemView.vala:595
-msgid "Restart Required"
-msgstr "Wymagane ponowne uruchomienie"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid "Restart to install pending updates"
+msgstr ""
+"Do zakończenia instalacji aktualizacji wymagane jest ponowne uruchomienie"
 
 #: src/Views/OperatingSystemView.vala:596
-msgid "A restart is required to finish installing updates"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
 msgstr ""
 "Do zakończenia instalacji aktualizacji wymagane jest ponowne uruchomienie"
 
@@ -567,6 +574,9 @@ msgstr[2] "%u pakietów zostanie zaktualizowanych"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Zamknij"
+
+#~ msgid "Restart Required"
+#~ msgstr "Wymagane ponowne uruchomienie"
 
 #~ msgid "Operating System Information"
 #~ msgstr "Informacje o systemie operacyjnym"

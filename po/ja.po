@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 23:30+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2024-12-28 05:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -485,11 +485,17 @@ msgid "Downloading Updates"
 msgstr "アップデートをダウンロードしています"
 
 #: src/Views/OperatingSystemView.vala:595
-msgid "Restart Required"
-msgstr "再起動が必要です"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid "Restart to install pending updates"
+msgstr "アップデートのインストールを完了するには再起動が必要です"
 
 #: src/Views/OperatingSystemView.vala:596
-msgid "A restart is required to finish installing updates"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
 msgstr "アップデートのインストールを完了するには再起動が必要です"
 
 #: src/Views/OperatingSystemView.vala:601
@@ -555,6 +561,9 @@ msgstr[0] "%u 件のパッケージがアップグレードされます"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "閉じる"
+
+#~ msgid "Restart Required"
+#~ msgstr "再起動が必要です"
 
 #~ msgid "Operating System Information"
 #~ msgstr "オペレーティングシステムの情報"

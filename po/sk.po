@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 23:30+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2024-07-11 08:16+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -497,11 +497,17 @@ msgid "Downloading Updates"
 msgstr "Sťahovanie aktualizácií"
 
 #: src/Views/OperatingSystemView.vala:595
-msgid "Restart Required"
-msgstr "Požadovaný reštart"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid "Restart to install pending updates"
+msgstr "Reštart je nevyhnutný pre dokončenie inštalácie aktualizácií"
 
 #: src/Views/OperatingSystemView.vala:596
-msgid "A restart is required to finish installing updates"
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
 msgstr "Reštart je nevyhnutný pre dokončenie inštalácie aktualizácií"
 
 #: src/Views/OperatingSystemView.vala:601
@@ -569,6 +575,9 @@ msgstr[2] "%u balíčkov bude aktualizovaných"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Zatvoriť"
+
+#~ msgid "Restart Required"
+#~ msgstr "Požadovaný reštart"
 
 #~ msgid "Operating System Information"
 #~ msgstr "Informácie o operačnom systéme"

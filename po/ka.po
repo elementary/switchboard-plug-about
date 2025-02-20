@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 23:30+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2025-02-17 04:16+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -507,13 +507,13 @@ msgid "Downloading Updates"
 msgstr "ყველა განახლება"
 
 #: src/Views/OperatingSystemView.vala:595
-#, fuzzy
-#| msgid "Restart"
-msgid "Restart Required"
-msgstr "გადატვირთვა"
+msgid "Restart to install pending updates"
+msgstr ""
 
 #: src/Views/OperatingSystemView.vala:596
-msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
 msgstr ""
 
 #: src/Views/OperatingSystemView.vala:601
@@ -576,6 +576,11 @@ msgstr[1] ""
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "დახურვა"
+
+#, fuzzy
+#~| msgid "Restart"
+#~ msgid "Restart Required"
+#~ msgstr "გადატვირთვა"
 
 #~ msgid "Operating System Information"
 #~ msgstr "ინფორმაცია ოპერაციული სისტემის შესახებ"
