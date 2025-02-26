@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 22:39+0000\n"
-"PO-Revision-Date: 2025-02-20 22:39+0000\n"
+"PO-Revision-Date: 2025-02-26 20:05+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/settings/"
 "switchboard-plug-about/hu/>\n"
@@ -486,18 +486,15 @@ msgid "Downloading Updates"
 msgstr "Frissítések letöltése"
 
 #: src/Views/OperatingSystemView.vala:595
-#, fuzzy
-#| msgid "A restart is required to finish installing updates"
 msgid "Restart to install pending updates"
-msgstr "A frissítések befejezéséhez újraindításra van szükség"
+msgstr "Indítsa újra a frissítések befejezéséhez"
 
 #: src/Views/OperatingSystemView.vala:596
-#, fuzzy
-#| msgid "A restart is required to finish installing updates"
 msgid ""
 "Updates have been downloaded. A restart is required to finish installing "
 "them."
-msgstr "A frissítések befejezéséhez újraindításra van szükség"
+msgstr ""
+"A frissítések letöltve. A telepítés befejezéséhez újraindításra van szükség."
 
 #: src/Views/OperatingSystemView.vala:601
 #: src/Views/OperatingSystemView.vala:627
