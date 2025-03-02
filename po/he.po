@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 22:39+0000\n"
-"PO-Revision-Date: 2025-02-17 04:16+0000\n"
+"PO-Revision-Date: 2025-03-02 10:06+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: Hebrew <https://l10n.elementary.io/projects/settings/"
 "switchboard-plug-about/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,7 @@ msgstr "שם המארח"
 #. https://github.com/elementary/switchboard-plug-about/issues/219
 #: src/Plug.vala:142
 msgid "About This Device"
-msgstr ""
+msgstr "על המכשיר הזה"
 
 #: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
@@ -460,13 +460,11 @@ msgid "Updates Available"
 msgstr "עדכונים זמינים"
 
 #: src/Views/OperatingSystemView.vala:561
-#, fuzzy, c-format
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
+#, c-format
 msgid "%i update available (%s)"
 msgid_plural "%i updates available (%s)"
-msgstr[0] "עדכון אחד זמין"
-msgstr[1] "%u עדכונים זמינים"
+msgstr[0] "עדכון אחד זמין (%s)"
+msgstr[1] "%i עדכונים זמינים (%s)"
 
 #: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
@@ -477,18 +475,14 @@ msgid "Downloading Updates"
 msgstr "עדכונים מתקבלים"
 
 #: src/Views/OperatingSystemView.vala:595
-#, fuzzy
-#| msgid "A restart is required to finish installing updates"
 msgid "Restart to install pending updates"
-msgstr "צריך להפעיל מחדש כדי לסיים להתקין את העדכונים"
+msgstr "צריך להפעיל מחדש כדי להתקין את העדכונים הממתינים"
 
 #: src/Views/OperatingSystemView.vala:596
-#, fuzzy
-#| msgid "A restart is required to finish installing updates"
 msgid ""
 "Updates have been downloaded. A restart is required to finish installing "
 "them."
-msgstr "צריך להפעיל מחדש כדי לסיים להתקין את העדכונים"
+msgstr "עדכונים ירדו. צריך להפעיל מחדש כדי לסיים להתקין אותם."
 
 #: src/Views/OperatingSystemView.vala:601
 #: src/Views/OperatingSystemView.vala:627
