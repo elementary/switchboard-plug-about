@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 22:39+0000\n"
-"PO-Revision-Date: 2024-12-28 09:04+0000\n"
+"PO-Revision-Date: 2025-03-08 12:45+0000\n"
 "Last-Translator: Marcin Serwin <marcin@serwin.dev>\n"
-"Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: Polish <https://l10n.elementary.io/projects/settings/"
 "switchboard-plug-about/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.10.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:46
@@ -95,7 +95,7 @@ msgstr "Nazwa hosta"
 #. https://github.com/elementary/switchboard-plug-about/issues/219
 #: src/Plug.vala:142
 msgid "About This Device"
-msgstr ""
+msgstr "O tym urządzeniu"
 
 #: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
@@ -475,14 +475,12 @@ msgid "Updates Available"
 msgstr "Dostępne ktualizacje"
 
 #: src/Views/OperatingSystemView.vala:561
-#, fuzzy, c-format
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
+#, c-format
 msgid "%i update available (%s)"
 msgid_plural "%i updates available (%s)"
-msgstr[0] "%i dostępna aktualizacja"
-msgstr[1] "%i dostępne aktualizacje"
-msgstr[2] "%i dostępnych aktualizacji"
+msgstr[0] "%i dostępna aktualizacja (%s)"
+msgstr[1] "%i dostępne aktualizacje (%s)"
+msgstr[2] "%i dostępnych aktualizacji (%s)"
 
 #: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
@@ -493,20 +491,16 @@ msgid "Downloading Updates"
 msgstr "Pobieranie aktualizacji"
 
 #: src/Views/OperatingSystemView.vala:595
-#, fuzzy
-#| msgid "A restart is required to finish installing updates"
 msgid "Restart to install pending updates"
-msgstr ""
-"Do zakończenia instalacji aktualizacji wymagane jest ponowne uruchomienie"
+msgstr "Uruchom ponownie by zainstalować oczekujące aktualizacje"
 
 #: src/Views/OperatingSystemView.vala:596
-#, fuzzy
-#| msgid "A restart is required to finish installing updates"
 msgid ""
 "Updates have been downloaded. A restart is required to finish installing "
 "them."
 msgstr ""
-"Do zakończenia instalacji aktualizacji wymagane jest ponowne uruchomienie"
+"Aktualizacje zostały pobrane. Do zakończenia ich instalacji wymagane jest "
+"ponowne uruchomienie."
 
 #: src/Views/OperatingSystemView.vala:601
 #: src/Views/OperatingSystemView.vala:627
@@ -520,7 +514,7 @@ msgstr "Ręczne odświeżenie aktualizacji może rozwiązać problem"
 #: src/Views/OperatingSystemView.vala:617
 #, c-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s z %s"
 
 #: src/Views/OperatingSystemView.vala:628
 msgid ""
