@@ -121,6 +121,7 @@ public class About.LogsDialog : Granite.Dialog {
 
         refresh_button.clicked.connect (model.refresh);
         search_entry.search_changed.connect (on_search_changed);
+        scrolled.edge_reached.connect (on_edge_reached);
 
         response.connect (() => close ());
     }
@@ -159,5 +160,11 @@ public class About.LogsDialog : Granite.Dialog {
 
     private void on_search_changed (Gtk.SearchEntry entry) {
         model.search (entry.text);
+    }
+
+    private void on_edge_reached (Gtk.PositionType pos) {
+        if (pos == BOTTOM) {
+            model.load_chunk ();
+        }
     }
 }

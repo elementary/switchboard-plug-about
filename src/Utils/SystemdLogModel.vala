@@ -32,6 +32,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
     private string current_search_term = "";
 
     private Gee.ArrayList<SystemdLogEntry> entries;
+    private bool loading = false;
     private bool eof = false;
     private int current_section_start = 0;
     private DateTime? current_section_time;
@@ -93,16 +94,25 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
         load_chunk ();
     }
 
-    private void load_chunk () {
-        if (eof) {
+    public void load_chunk () {
+        if (eof || loading) {
             return;
         }
+
+        loading = true;
 
         var start_items = get_n_items ();
 
         Idle.add (() => {
             load_timed ();
-            return !eof && get_n_items () - start_items < CHUNK_SIZE ? Source.CONTINUE : Source.REMOVE;
+            var keep_going = !eof && get_n_items () - start_items < CHUNK_SIZE;
+
+            if (keep_going) {
+                return Source.CONTINUE;
+            } else {
+                loading = false;
+                return Source.REMOVE;
+            }
         });
     }
 
