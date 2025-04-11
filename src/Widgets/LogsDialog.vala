@@ -3,29 +3,44 @@
  * SPDX-FileCopyrightText: 2024 elementary, Inc. (https://elementary.io)
  */
 
-public class About.LogRow : Granite.Bin {
-    private Gtk.Label origin;
-    private Gtk.Label message;
+public class About.LogCell : Granite.Bin {
+    public enum CellType {
+        ORIGIN,
+        MESSAGE
+    }
+
+    public CellType cell_type { get; construct; }
+
+    private Gtk.Label label;
+
+    public LogCell (CellType cell_type) {
+        Object (cell_type: cell_type);
+    }
 
     construct {
-        origin = new Gtk.Label (null);
-        message = new Gtk.Label (null) {
+        label = new Gtk.Label (null) {
             ellipsize = END,
-            hexpand = true,
-            halign = START,
             single_line_mode = true,
+            halign = START,
         };
 
-        var box = new Gtk.Box (HORIZONTAL, 6);
-        box.append (origin);
-        box.append (message);
+        if (cell_type == ORIGIN) {
+            label.max_width_chars = 10;
+            label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
+        }
 
-        child = box;
+        child = label;
     }
 
     public void bind (SystemdLogEntry entry) {
-        origin.label = entry.origin;
-        message.label = entry.message;
+        switch (cell_type) {
+            case ORIGIN:
+                label.label = entry.origin;
+                break;
+            case MESSAGE:
+                label.label = entry.message;
+                break;
+        }
     }
 }
 
@@ -56,18 +71,30 @@ public class About.LogsDialog : Granite.Dialog {
 
         var search_entry = new Gtk.SearchEntry ();
 
-        var factory = new Gtk.SignalListItemFactory ();
-        factory.setup.connect (setup);
-        factory.bind.connect (bind);
-
         model = new SystemdLogModel ();
 
         var selection_model = new Gtk.NoSelection (model);
 
-        var list_view = new Gtk.ListView (selection_model, factory);
+        var origin_factory = new Gtk.SignalListItemFactory ();
+        origin_factory.setup.connect (setup_origin);
+        origin_factory.bind.connect (bind);
+
+        var origin_column = new Gtk.ColumnViewColumn (_("Sender"), origin_factory);
+
+        var message_factory = new Gtk.SignalListItemFactory ();
+        message_factory.setup.connect (setup_message);
+        message_factory.bind.connect (bind);
+
+        var message_column = new Gtk.ColumnViewColumn (_("Message"), message_factory) {
+            expand = true
+        };
+
+        var column_view = new Gtk.ColumnView (selection_model);
+        column_view.append_column (origin_column);
+        column_view.append_column (message_column);
 
         var scrolled = new Gtk.ScrolledWindow () {
-            child = list_view,
+            child = column_view,
             hscrollbar_policy = NEVER,
             max_content_height = 400,
             propagate_natural_height = true
@@ -92,16 +119,21 @@ public class About.LogsDialog : Granite.Dialog {
         response.connect (() => close ());
     }
 
-    private void setup (Object obj) {
+    private void setup_origin (Object obj) {
         var item = (Gtk.ListItem) obj;
-        item.child = new LogRow ();
+        item.child = new LogCell (ORIGIN);
+    }
+
+    private void setup_message (Object obj) {
+        var item = (Gtk.ListItem) obj;
+        item.child = new LogCell (MESSAGE);
     }
 
     private void bind (Object obj) {
         var item = (Gtk.ListItem) obj;
         var entry = (SystemdLogEntry) item.item;
-        var row = (LogRow) item.child;
-        row.bind (entry);
+        var cell = (LogCell) item.child;
+        cell.bind (entry);
     }
 
     private void on_search_changed (Gtk.SearchEntry entry) {
