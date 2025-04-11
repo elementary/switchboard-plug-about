@@ -6,9 +6,15 @@
 public class About.SystemdLogEntry : GLib.Object {
     public string origin { get; construct; }
     public string message { get; construct; }
+    public string formatted_time { get; construct; }
 
-    public SystemdLogEntry (string origin, string message) {
-        Object (origin: origin, message: message);
+    public uint section_start { get; set; }
+
+    public SystemdLogEntry (string origin, string message, DateTime time) {
+        Object (
+            origin: origin, message: message,
+            formatted_time: time.format (Granite.DateTime.get_default_time_format (false, true))
+        );
     }
 
     public bool matches (string term) {
@@ -16,7 +22,7 @@ public class About.SystemdLogEntry : GLib.Object {
     }
 }
 
-public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
+public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionModel {
     private const int CHUNK_SIZE = 200;
     private const int64 CHUNK_TIME = 1000; // 1 millisecond
 
@@ -27,6 +33,9 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
 
     private Gee.ArrayList<SystemdLogEntry> entries;
     private bool eof = false;
+    private int current_section_start = 0;
+    private DateTime? current_section_time;
+    private HashTable<uint, uint> section_end_for_start = new HashTable<uint, uint> (null, null);
 
     construct {
         entries = new Gee.ArrayList<SystemdLogEntry> ();
@@ -58,6 +67,9 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
 
         eof = false;
         journal.flush_matches ();
+        current_section_start = 0;
+        current_section_time = null;
+        section_end_for_start.remove_all ();
     }
 
     private void init () {
@@ -137,17 +149,47 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
         var origin = ((string) comm_data).offset ("_COMM=".length);
         var message = ((string) data).offset("MESSAGE=".length);
 
-        var entry = new SystemdLogEntry (origin, message);
+        uint64 time;
+        res = journal.get_realtime_usec (out time);
+        if (res != 0) {
+            critical ("Failed to get time: %s", strerror (-res));
+            time = 0;
+        }
+
+        var dt = new DateTime.from_unix_local ((int64) (time / TimeSpan.SECOND));
+
+        var entry = new SystemdLogEntry (origin, message, dt);
 
         if (current_search_term.strip () != "" && !entry.matches (current_search_term)) {
             return true;
         }
+
+        if (!update_current_range (dt)) {
+            section_end_for_start[current_section_start] = entries.size;
+            current_section_start = entries.size;
+        }
+
+        entry.section_start = current_section_start;
 
         entries.add (entry);
 
         items_changed (entries.size - 1, 0, 1);
 
         return true;
+    }
+
+    private bool update_current_range (DateTime dt) {
+        if (current_section_time == null) {
+            current_section_time = dt;
+            return true;
+        }
+
+        if (current_section_time.equal (dt)) {
+            return true;
+        } else {
+            current_section_time = dt;
+            return false;
+        }
     }
 
     public void search (string term) {
@@ -176,5 +218,22 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
 
     public uint get_n_items () {
         return entries.size;
+    }
+
+    public void get_section (uint for_position, out uint section_start, out uint section_end) {
+        if (for_position >= entries.size) {
+            // Documentation mandates this
+            section_start = entries.size;
+            section_end = uint.MAX;
+            return;
+        }
+
+        section_start = entries[(int) for_position].section_start;
+
+        if (section_start in section_end_for_start) {
+            section_end = section_end_for_start[section_start];
+        } else {
+            section_end = entries.size;
+        }
     }
 }

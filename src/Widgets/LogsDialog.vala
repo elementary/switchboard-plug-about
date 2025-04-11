@@ -75,6 +75,10 @@ public class About.LogsDialog : Granite.Dialog {
 
         var selection_model = new Gtk.NoSelection (model);
 
+        var header_factory = new Gtk.SignalListItemFactory ();
+        header_factory.setup.connect (setup_header);
+        header_factory.bind.connect (bind_header);
+
         var origin_factory = new Gtk.SignalListItemFactory ();
         origin_factory.setup.connect (setup_origin);
         origin_factory.bind.connect (bind);
@@ -89,7 +93,9 @@ public class About.LogsDialog : Granite.Dialog {
             expand = true
         };
 
-        var column_view = new Gtk.ColumnView (selection_model);
+        var column_view = new Gtk.ColumnView (selection_model) {
+            header_factory = header_factory,
+        };
         column_view.append_column (origin_column);
         column_view.append_column (message_column);
 
@@ -117,6 +123,21 @@ public class About.LogsDialog : Granite.Dialog {
         search_entry.search_changed.connect (on_search_changed);
 
         response.connect (() => close ());
+    }
+
+    private void setup_header (Object obj) {
+        var item = (Gtk.ListHeader) obj;
+        item.child = new Gtk.Label (null) {
+            halign = START,
+            use_markup = true
+        };
+    }
+
+    private void bind_header (Object obj) {
+        var item = (Gtk.ListHeader) obj;
+        var entry = (SystemdLogEntry) item.item;
+        var label = (Gtk.Label) item.child;
+        label.label = "<b>%s</b>".printf (entry.formatted_time);
     }
 
     private void setup_origin (Object obj) {
