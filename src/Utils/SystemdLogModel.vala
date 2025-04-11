@@ -4,65 +4,27 @@
  */
 
 public class About.SystemdLogEntry : GLib.Object {
-    public unowned SystemdLogModel model { get; construct; }
-    public int pos { get; construct; }
+    public string origin { get; construct; }
+    public string message { get; construct; }
 
-    public string origin { get; private set; default = ""; }
-    public string message { get; private set; default = ""; }
-
-    private bool loaded = false;
-
-    public SystemdLogEntry (SystemdLogModel model, int pos) {
-        Object (model: model, pos: pos);
-    }
-
-    public void queue_load () {
-        if (loaded) {
-            return;
-        }
-        loaded = true;
-
-        Idle.add (load, GLib.Priority.LOW);
-    }
-
-    private bool load () {
-        model.goto (pos);
-
-        unowned uint8[] data;
-        unowned uint8[] comm_data;
-        int res = model.journal.get_data ("MESSAGE", out data);
-        if (res != 0) {
-            critical ("%s", strerror(-res));
-            return Source.REMOVE;
-        }
-
-        res = model.journal.get_data ("_COMM", out comm_data);
-        if (res != 0) {
-            critical ("%s %s", strerror(-res), (string) comm_data);
-            comm_data = "_COMM=kernel".data;
-        }
-
-        origin = ((string) comm_data).offset ("_COMM=".length);
-        message = ((string) data).offset("MESSAGE=".length);
-
-        return Source.REMOVE;
+    public SystemdLogEntry (string origin, string message) {
+        Object (origin: origin, message: message);
     }
 }
 
 public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
-    private const int CHUNK = 2000;
+    private const int CHUNK_SIZE = 200;
+    private const int64 CHUNK_TIME = 1000; // 1 millisecond
 
-    private Systemd.Journal _journal;
-    public Systemd.Journal journal { get { return _journal; } }
+    private Systemd.Journal journal;
 
-    private GLib.HashTable<uint, SystemdLogEntry> cached_entries;
-    private int current_line = int.MAX;
-    private uint num_entries = 0;
+    private Gee.ArrayList<SystemdLogEntry> entries;
+    private bool eof = false;
 
     construct {
-        cached_entries = new GLib.HashTable<uint, SystemdLogEntry>(GLib.direct_hash, GLib.direct_equal);
+        entries = new Gee.ArrayList<SystemdLogEntry> ();
 
-        int res = Systemd.Journal.open_namespace (out _journal, null, LOCAL_ONLY);
+        int res = Systemd.Journal.open_namespace (out journal, null, LOCAL_ONLY);
         if (res != 0) {
             critical ("%s", strerror(-res));
             return;
@@ -79,105 +41,79 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
         journal.add_conjunction ();
         journal.seek_tail ();
         journal.previous ();
-        current_line = 0;
 
-        load_data.begin ();
-    }
-
-    public void goto (int pos) {
-        if (current_line == pos) {
-            return;
-        }
-
-        var diff = current_line - pos;
-
-        int res;
-        if (diff < 0) {
-            res = journal.previous_skip (-diff);
-        } else {
-            res = journal.next_skip (diff);
-        }
-
-        if (res < 0) {
-            critical ("Failed to go to pos %d: %s", pos, strerror(-res));
-            return;
-        }
-
-        current_line = pos;
+        load_chunk ();
     }
 
     private void load_chunk () {
-        int to_load = CHUNK;
+        if (eof) {
+            return;
+        }
+
+        var start_items = get_n_items ();
+
         Idle.add (() => {
-            load_next_entry ();
-            to_load--;
-            return (to_load > 0 ? Source.CONTINUE : Source.REMOVE);
-        }, GLib.Priority.LOW);
+            load_timed ();
+            return !eof && get_n_items () - start_items < CHUNK_SIZE ? Source.CONTINUE : Source.REMOVE;
+        });
     }
 
-    private void load_next_entry () {
-        num_entries++;
-        items_changed (num_entries - 1, 0, 1);
-    }
-
-    private uint load_next_entries () {
-        if (current_line != num_entries) {
-            int res = journal.seek_head ();
-            current_line = 0;
-            if (res != 0) {
-                critical ("%s", strerror(-res));
-                return 0;
-            }
-
-            if (num_entries > 0) {
-                res = journal.next_skip (num_entries);
-                //  current_line += num_entries;
-                if (res < 0) {
-                    critical ("%s", strerror(-res));
-                    return 0;
-                }
-            }
+    private void load_timed () {
+        if (eof) {
+            return;
         }
 
-        int res = journal.next ();
+        var start_time = get_monotonic_time ();
+
+        while (get_monotonic_time () - start_time < CHUNK_TIME) {
+            if (!load_next_entry ()) {
+                eof = true;
+                break;
+            }
+        }
+    }
+
+    private bool load_next_entry () {
+        int res = journal.previous ();
+        if (res == 0) {
+            return false;
+        }
+
         if (res < 0) {
-            critical ("%s", strerror(-res));
-            return 0;
+            critical ("Failed to go to next aka previous entry: %s", strerror (-res));
+            return false;
         }
 
-        current_line += res;
-        num_entries += res;
-        return res;
-    }
+        unowned uint8[] data;
+        unowned uint8[] comm_data;
+        res = journal.get_data ("MESSAGE", out data);
+        if (res != 0) {
+            critical ("Failed to get message: %s", strerror (-res));
+            return true; // Don't eof just skip it
+        }
 
-    private async void load_data () {
-        GLib.Idle.add(() => {
-            load_chunk ();
-            return Source.REMOVE;
-            //  uint added = 0, old_num_entries = 0;
-            //  lock (journal) {
-            //      old_num_entries = num_entries;
-            //      added = load_next_entries ();
-            //  }
-            //  if (added > 0) {
-            //      items_changed (old_num_entries, 0, added);
-            //      return Source.CONTINUE;
-            //  } else {
-            //      return Source.REMOVE;
-            //  }
-        }, GLib.Priority.LOW);
+        res = journal.get_data ("_COMM", out comm_data);
+        if (res != 0) {
+            critical ("Failed to get sender: %s", strerror(-res));
+            comm_data = "_COMM=kernel".data;
+        }
+
+        var origin = ((string) comm_data).offset ("_COMM=".length);
+        var message = ((string) data).offset("MESSAGE=".length);
+
+        entries.add (new SystemdLogEntry (origin, message));
+
+        items_changed (entries.size - 1, 0, 1);
+
+        return true;
     }
 
     public Object? get_item (uint position) {
-        SystemdLogEntry? entry = null;
-        entry = cached_entries.get (position);
-        if (entry != null) {
-            return entry;
+        if (position >= entries.size) {
+            return null;
+        } else {
+            return entries[(int) position];
         }
-
-        entry = new SystemdLogEntry (this, (int) position);
-        cached_entries[position] = entry;
-        return entry;
     }
 
     public Type get_item_type () {
@@ -185,6 +121,6 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
     }
 
     public uint get_n_items () {
-        return num_entries;
+        return entries.size;
     }
 }

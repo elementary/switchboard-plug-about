@@ -4,36 +4,32 @@
  */
 
 public class About.LogRow : Granite.Bin {
-    private Gtk.Label sender;
+    private Gtk.Label origin;
     private Gtk.Label message;
 
     construct {
-        sender = new Gtk.Label (null);
+        origin = new Gtk.Label (null);
         message = new Gtk.Label (null) {
-            wrap = true,
+            ellipsize = END,
             hexpand = true,
             halign = START,
+            single_line_mode = true,
         };
 
         var box = new Gtk.Box (HORIZONTAL, 6);
-        box.append (sender);
+        box.append (origin);
         box.append (message);
 
         child = box;
     }
 
-    public void bind (SystemdLogEntry row) {
-        row.bind_property ("origin", sender, "label", SYNC_CREATE);
-        row.bind_property ("message", message, "label", SYNC_CREATE);
-        row.queue_load ();
+    public void bind (SystemdLogEntry entry) {
+        origin.label = entry.origin;
+        message.label = entry.message;
     }
 }
 
 public class About.LogsDialog : Granite.Dialog {
-
-    public LogsDialog () {
-    }
-
     construct {
         title = _("System Logs");
         modal = true;
@@ -72,9 +68,7 @@ public class About.LogsDialog : Granite.Dialog {
 
         add_button (_("Close"), Gtk.ResponseType.CLOSE);
 
-        response.connect (() => {
-            close ();
-        });
+        response.connect (() => close ());
     }
 
     private void setup (Object obj) {
