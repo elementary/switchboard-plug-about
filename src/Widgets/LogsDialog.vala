@@ -30,22 +30,39 @@ public class About.LogRow : Granite.Bin {
 }
 
 public class About.LogsDialog : Granite.Dialog {
+    private SystemdLogModel model;
+
     construct {
         title = _("System Logs");
         modal = true;
+        default_height = 500;
+        default_width = 500;
 
         var title_label = new Gtk.Label (
             _("System Logs")
         ) {
-            halign = START
+            hexpand = true,
+            xalign = 0
         };
         title_label.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
+
+        var refresh_button = new Gtk.Button.from_icon_name ("view-refresh-symbolic") {
+            tooltip_text = _("Load new entries")
+        };
+
+        var top_box = new Gtk.Box (HORIZONTAL, 6);
+        top_box.append (title_label);
+        top_box.append (refresh_button);
+
+        var search_entry = new Gtk.SearchEntry ();
 
         var factory = new Gtk.SignalListItemFactory ();
         factory.setup.connect (setup);
         factory.bind.connect (bind);
 
-        var selection_model = new Gtk.NoSelection (new About.SystemdLogModel ());
+        model = new SystemdLogModel ();
+
+        var selection_model = new Gtk.NoSelection (model);
 
         var list_view = new Gtk.ListView (selection_model, factory);
 
@@ -61,12 +78,16 @@ public class About.LogsDialog : Granite.Dialog {
         };
 
         var box = new Gtk.Box (VERTICAL, 12);
-        box.append (title_label);
+        box.append (top_box);
+        box.append (search_entry);
         box.append (frame);
 
         get_content_area ().append (box);
 
         add_button (_("Close"), Gtk.ResponseType.CLOSE);
+
+        refresh_button.clicked.connect (model.refresh);
+        search_entry.search_changed.connect (on_search_changed);
 
         response.connect (() => close ());
     }
@@ -81,5 +102,9 @@ public class About.LogsDialog : Granite.Dialog {
         var entry = (SystemdLogEntry) item.item;
         var row = (LogRow) item.child;
         row.bind (entry);
+    }
+
+    private void on_search_changed (Gtk.SearchEntry entry) {
+        model.search (entry.text);
     }
 }

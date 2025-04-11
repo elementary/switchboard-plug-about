@@ -10,6 +10,10 @@ public class About.SystemdLogEntry : GLib.Object {
     public SystemdLogEntry (string origin, string message) {
         Object (origin: origin, message: message);
     }
+
+    public bool matches (string term) {
+        return origin.contains (term) || message.contains (term);
+    }
 }
 
 public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
@@ -17,6 +21,9 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
     private const int64 CHUNK_TIME = 1000; // 1 millisecond
 
     private Systemd.Journal journal;
+    private string current_boot_id;
+    private uint64 current_tail = 0;
+    private string current_search_term = "";
 
     private Gee.ArrayList<SystemdLogEntry> entries;
     private bool eof = false;
@@ -37,10 +44,39 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
             return;
         }
 
-        journal.add_match ("_BOOT_ID=%s".printf(boot_id.str).data);
+        current_boot_id = boot_id.str;
+
+        init ();
+    }
+
+    private void reset () {
+        if (!entries.is_empty) {
+            var removed = entries.size;
+            entries.clear ();
+            items_changed (0, removed, 0);
+        }
+
+        eof = false;
+        journal.flush_matches ();
+    }
+
+    private void init () {
+        //TODO: Add exact matches, allow to filter by boot
+        journal.add_match ("_BOOT_ID=%s".printf(current_boot_id).data);
         journal.add_conjunction ();
-        journal.seek_tail ();
-        journal.previous ();
+
+        if (current_tail == 0) {
+            journal.seek_tail ();
+            journal.previous ();
+            int res = journal.get_realtime_usec (out current_tail);
+            if (res != 0) {
+                critical ("Failed to get tail realtime: %s", strerror(-res));
+                return;
+            }
+        } else {
+            journal.seek_realtime_usec (current_tail);
+            journal.previous ();
+        }
 
         load_chunk ();
     }
@@ -101,11 +137,29 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel {
         var origin = ((string) comm_data).offset ("_COMM=".length);
         var message = ((string) data).offset("MESSAGE=".length);
 
-        entries.add (new SystemdLogEntry (origin, message));
+        var entry = new SystemdLogEntry (origin, message);
+
+        if (current_search_term.strip () != "" && !entry.matches (current_search_term)) {
+            return true;
+        }
+
+        entries.add (entry);
 
         items_changed (entries.size - 1, 0, 1);
 
         return true;
+    }
+
+    public void search (string term) {
+        reset ();
+        current_search_term = term;
+        init ();
+    }
+
+    public void refresh () {
+        reset ();
+        current_tail = 0;
+        init ();
     }
 
     public Object? get_item (uint position) {
