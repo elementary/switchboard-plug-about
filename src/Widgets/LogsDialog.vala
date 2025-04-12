@@ -138,7 +138,7 @@ public class About.LogsDialog : Granite.Dialog {
         var item = (Gtk.ListHeader) obj;
         var entry = (SystemdLogEntry) item.item;
         var label = (Gtk.Label) item.child;
-        label.label = "<b>%s</b>".printf (entry.formatted_time);
+        label.label = "<b>%s</b>".printf (entry.relative_time);
     }
 
     private void setup_origin (Object obj) {

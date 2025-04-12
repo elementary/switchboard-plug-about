@@ -6,29 +6,57 @@
 public class About.SystemdLogEntry : GLib.Object {
     public string origin { get; construct; }
     public string message { get; construct; }
-    public string formatted_time { get; construct; }
+    public string relative_time { get; construct; }
 
     public uint section_start { get; set; }
 
     public SystemdLogEntry (string origin, string message, DateTime time) {
         Object (
             origin: origin, message: message,
-            formatted_time: time.format (Granite.DateTime.get_default_time_format (false, true))
+            relative_time: format_time (time)
         );
     }
 
     public bool matches (string term) {
         return origin.contains (term) || message.contains (term);
     }
+
+    private static string format_time (DateTime time) {
+        var diff = SystemdLogModel.get_stable_now ().difference (time);
+        if (diff < TimeSpan.SECOND) {
+            return _("Now");
+        } else if (diff < TimeSpan.MINUTE) {
+            var seconds = diff / TimeSpan.SECOND;
+            return dngettext (GETTEXT_PACKAGE, "%ds ago", "%ds ago", (ulong) seconds).printf ((int) seconds);
+        } else if (diff < TimeSpan.HOUR) {
+            var minutes = diff / TimeSpan.MINUTE;
+            var seconds = (diff - minutes * TimeSpan.MINUTE) / TimeSpan.SECOND;
+
+            if (seconds == 0) {
+                return dngettext (GETTEXT_PACKAGE, "%dm ago", "%dm ago", (ulong) minutes).printf ((int) minutes);
+            }
+
+            // I think the plural form is according to the last one??
+            return dngettext (GETTEXT_PACKAGE, "%dm %ds ago", "%dm %ds ago", (ulong) seconds).printf ((int) minutes, (int) seconds);
+        }
+
+        return time.format (Granite.DateTime.get_default_time_format ());
+    }
 }
 
 public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionModel {
+    private static DateTime? now;
+
+    public static DateTime get_stable_now () {
+        return now;
+    }
+
     private const int CHUNK_SIZE = 200;
     private const int64 CHUNK_TIME = 1000; // 1 millisecond
 
     private Systemd.Journal journal;
-    private string current_boot_id;
-    private uint64 current_tail = 0;
+    private Systemd.Id128 current_boot_id;
+    private uint64 current_tail_time = 0;
     private string current_search_term = "";
 
     // These fields are for the listmodel and section model implementation
@@ -49,14 +77,11 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
             return;
         }
 
-        Systemd.Id128 boot_id;
-        res = Systemd.Id128.boot (out boot_id);
+        res = Systemd.Id128.boot (out current_boot_id);
         if (res != 0) {
             critical ("%s", strerror(-res));
             return;
         }
-
-        current_boot_id = boot_id.str;
 
         init ();
     }
@@ -78,20 +103,22 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
     }
 
     private void init () {
+        now = new DateTime.now_utc ();
+
         //TODO: Add exact matches, allow to filter by boot
-        journal.add_match ("_BOOT_ID=%s".printf(current_boot_id).data);
+        journal.add_match ("_BOOT_ID=%s".printf(current_boot_id.str).data);
         journal.add_conjunction ();
 
-        if (current_tail == 0) {
+        if (current_tail_time == 0) {
             journal.seek_tail ();
             journal.previous ();
-            int res = journal.get_realtime_usec (out current_tail);
+            int res = journal.get_realtime_usec (out current_tail_time);
             if (res != 0) {
                 critical ("Failed to get tail realtime: %s", strerror(-res));
                 return;
             }
         } else {
-            journal.seek_realtime_usec (current_tail);
+            journal.seek_realtime_usec (current_tail_time);
             journal.previous ();
         }
 
@@ -154,7 +181,6 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
 
         res = journal.get_data ("_COMM", out comm_data);
         if (res != 0) {
-            critical ("Failed to get sender: %s", strerror(-res));
             comm_data = "_COMM=kernel".data;
         }
 
@@ -168,7 +194,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
             time = 0;
         }
 
-        var dt = new DateTime.from_unix_local ((int64) (time / TimeSpan.SECOND));
+        var dt = new DateTime.from_unix_utc ((int64) (time / TimeSpan.SECOND));
 
         var entry = new SystemdLogEntry (origin, message, dt);
 
@@ -196,7 +222,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
             return true;
         }
 
-        if (current_section_time.equal (dt)) {
+        if (current_section_time.difference (dt) <= TimeSpan.SECOND) {
             return true;
         } else {
             current_section_time = dt;
@@ -212,7 +238,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
 
     public void refresh () {
         reset ();
-        current_tail = 0;
+        current_tail_time = 0;
         init ();
     }
 
