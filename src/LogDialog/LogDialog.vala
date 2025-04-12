@@ -56,6 +56,7 @@ public class About.LogDialog : Granite.Dialog {
 
         var column_view = new Gtk.ColumnView (selection_model) {
             header_factory = header_factory,
+            single_click_activate = true,
         };
         column_view.append_column (origin_column);
         column_view.append_column (message_column);

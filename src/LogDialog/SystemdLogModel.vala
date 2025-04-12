@@ -32,13 +32,13 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
 
         int res = Systemd.Journal.open_namespace (out journal, null, LOCAL_ONLY);
         if (res != 0) {
-            critical ("%s", strerror(-res));
+            critical ("%s", strerror (-res));
             return;
         }
 
         res = Systemd.Id128.boot (out current_boot_id);
         if (res != 0) {
-            critical ("%s", strerror(-res));
+            critical ("%s", strerror (-res));
             return;
         }
 
@@ -147,7 +147,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
         }
 
         var origin = ((string) comm_data).offset ("_COMM=".length);
-        var message = ((string) data).offset("MESSAGE=".length);
+        var message = ((string) data).offset ("MESSAGE=".length);
 
         uint64 time;
         res = journal.get_realtime_usec (out time);
@@ -214,7 +214,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
     }
 
     public Type get_item_type () {
-        return typeof(SystemdLogEntry);
+        return typeof (SystemdLogEntry);
     }
 
     public uint get_n_items () {
