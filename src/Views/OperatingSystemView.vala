@@ -405,10 +405,9 @@ public class About.OperatingSystemView : Gtk.Box {
         });
 
         log_button.clicked.connect (() => {
-            var logs_dialog = new LogsDialog () {
+            new LogDialog () {
                 transient_for = (Gtk.Window) get_root ()
-            };
-            logs_dialog.present ();
+            }.present ();
         });
 
         links_list.row_activated.connect ((row) => {
