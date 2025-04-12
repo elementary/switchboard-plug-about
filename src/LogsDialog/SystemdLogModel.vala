@@ -150,6 +150,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
             return;
         }
 
+        var start_entries = entries.size;
         var start_time = get_monotonic_time ();
 
         while (get_monotonic_time () - start_time < CHUNK_TIME) {
@@ -158,6 +159,8 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
                 break;
             }
         }
+
+        items_changed (start_entries, 0, entries.size - start_entries);
     }
 
     private bool load_next_entry () {
@@ -198,20 +201,20 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
 
         var entry = new SystemdLogEntry (origin, message, dt);
 
+        // Filter if we're searching. We drop them and don't add them and use a filter model
+        // because when searching for e.g. a non existent term this would fill up memory *quick*
         if (current_search_term.strip () != "" && !entry.matches (current_search_term)) {
             return true;
         }
 
+        // Update sections (group entries that have a timestamp from the same second)
         if (!update_current_range (dt)) {
             section_end_for_start[current_section_start] = entries.size;
             current_section_start = entries.size;
         }
-
         entry.section_start = current_section_start;
 
         entries.add (entry);
-
-        items_changed (entries.size - 1, 0, 1);
 
         return true;
     }
@@ -232,6 +235,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
 
     public void search (string term) {
         reset ();
+        //TODO: tokenize etc.
         current_search_term = term;
         init ();
     }
