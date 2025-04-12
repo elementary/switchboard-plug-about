@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2024 elementary, Inc. (https://elementary.io)
+ * SPDX-FileCopyrightText: 2025 elementary, Inc. (https://elementary.io)
  */
 
 public class About.LogCell : Granite.Bin {
@@ -46,6 +46,8 @@ public class About.LogCell : Granite.Bin {
 
 public class About.LogsDialog : Granite.Dialog {
     private SystemdLogModel model;
+    private LogDetailsView details_view;
+    private Adw.NavigationView navigation_view;
 
     construct {
         title = _("System Logs");
@@ -106,8 +108,17 @@ public class About.LogsDialog : Granite.Dialog {
             propagate_natural_height = true
         };
 
+        var list_page = new Adw.NavigationPage (scrolled, "list");
+
+        details_view = new LogDetailsView ();
+
+        navigation_view = new Adw.NavigationView ();
+        navigation_view.add (list_page);
+
         var frame = new Gtk.Frame (null) {
-            child = scrolled
+            child = navigation_view,
+            hexpand = true,
+            vexpand = true
         };
 
         var box = new Gtk.Box (VERTICAL, 12);
@@ -121,6 +132,7 @@ public class About.LogsDialog : Granite.Dialog {
 
         refresh_button.clicked.connect (model.refresh);
         search_entry.search_changed.connect (on_search_changed);
+        column_view.activate.connect (on_activate);
         scrolled.edge_reached.connect (on_edge_reached);
 
         response.connect (() => close ());
@@ -160,6 +172,11 @@ public class About.LogsDialog : Granite.Dialog {
 
     private void on_search_changed (Gtk.SearchEntry entry) {
         model.search (entry.text);
+    }
+
+    private void on_activate (uint pos) {
+        details_view.entry = (SystemdLogEntry) model.get_item (pos);
+        navigation_view.push (details_view);
     }
 
     private void on_edge_reached (Gtk.PositionType pos) {

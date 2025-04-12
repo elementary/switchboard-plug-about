@@ -4,6 +4,7 @@ plug_files = files(
     'DBus' / 'Drivers.vala',
     'Interfaces/FirmwareClient.vala',
     'Interfaces/LoginManager.vala',
+    'LogsDialog' / 'LogDetailsView.vala',
     'LogsDialog' / 'LogsDialog.vala',
     'LogsDialog' / 'SystemdLogModel.vala',
     'Utils/ARMPartDecoder.vala',

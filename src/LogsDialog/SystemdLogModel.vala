@@ -1,18 +1,19 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2024 elementary, Inc. (https://elementary.io)
+ * SPDX-FileCopyrightText: 2025 elementary, Inc. (https://elementary.io)
  */
 
 public class About.SystemdLogEntry : GLib.Object {
     public string origin { get; construct; }
     public string message { get; construct; }
+    public DateTime dt { get; construct; }
     public string relative_time { get; construct; }
 
     public uint section_start { get; set; }
 
     public SystemdLogEntry (string origin, string message, DateTime time) {
         Object (
-            origin: origin, message: message,
+            origin: origin, message: message, dt: time,
             relative_time: format_time (time)
         );
     }
@@ -150,7 +151,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
             return;
         }
 
-        var start_entries = entries.size;
+        var start_n_items = entries.size;
         var start_time = get_monotonic_time ();
 
         while (get_monotonic_time () - start_time < CHUNK_TIME) {
@@ -160,7 +161,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
             }
         }
 
-        items_changed (start_entries, 0, entries.size - start_entries);
+        items_changed (start_n_items, 0, entries.size - start_n_items);
     }
 
     private bool load_next_entry () {
