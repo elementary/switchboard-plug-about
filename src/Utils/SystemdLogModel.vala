@@ -31,9 +31,11 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
     private uint64 current_tail = 0;
     private string current_search_term = "";
 
+    // These fields are for the listmodel and section model implementation
+    // and only used for loading and in the implementations
     private Gee.ArrayList<SystemdLogEntry> entries;
-    private bool loading = false;
     private bool eof = false;
+    private bool loading = false;
     private int current_section_start = 0;
     private DateTime? current_section_time;
     private HashTable<uint, uint> section_end_for_start = new HashTable<uint, uint> (null, null);
@@ -67,10 +69,12 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
         }
 
         eof = false;
-        journal.flush_matches ();
+        loading = false; // Cancels ongoing load
         current_section_start = 0;
         current_section_time = null;
         section_end_for_start.remove_all ();
+
+        journal.flush_matches ();
     }
 
     private void init () {
@@ -104,15 +108,13 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
         var start_items = get_n_items ();
 
         Idle.add (() => {
-            load_timed ();
-            var keep_going = !eof && get_n_items () - start_items < CHUNK_SIZE;
-
-            if (keep_going) {
-                return Source.CONTINUE;
-            } else {
-                loading = false;
+            if (!loading) { // We were cancelled
                 return Source.REMOVE;
             }
+
+            load_timed ();
+            loading = !eof && get_n_items () - start_items < CHUNK_SIZE;
+            return loading ? Source.CONTINUE : Source.REMOVE;
         });
     }
 
