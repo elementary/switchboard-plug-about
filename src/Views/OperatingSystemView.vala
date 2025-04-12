@@ -359,10 +359,10 @@ public class About.OperatingSystemView : Gtk.Box {
         software_grid.attach (title, 1, 0);
         software_grid.attach (log_button, 2, 0);
 
-        software_grid.attach (kernel_version_label, 1, 2);
-        software_grid.attach (updates_list, 1, 3);
-        software_grid.attach (sponsor_list, 1, 4);
-        software_grid.attach (links_list, 1, 5);
+        software_grid.attach (kernel_version_label, 1, 2, 2);
+        software_grid.attach (updates_list, 1, 3, 2);
+        software_grid.attach (sponsor_list, 1, 4, 2);
+        software_grid.attach (links_list, 1, 5, 2);
 
         var clamp = new Adw.Clamp () {
             child = software_grid,
