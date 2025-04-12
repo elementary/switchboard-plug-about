@@ -65,7 +65,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
         now = new DateTime.now_utc ();
 
         //TODO: Add exact matches, allow to filter by boot
-        journal.add_match ("_BOOT_ID=%s".printf(current_boot_id.str).data);
+        journal.add_match ("_BOOT_ID=%s".printf (current_boot_id.str).data);
         journal.add_conjunction ();
 
         if (current_tail_time == 0) {
@@ -73,7 +73,7 @@ public class About.SystemdLogModel : GLib.Object, GLib.ListModel, Gtk.SectionMod
             journal.previous ();
             int res = journal.get_realtime_usec (out current_tail_time);
             if (res != 0) {
-                critical ("Failed to get tail realtime: %s", strerror(-res));
+                critical ("Failed to get tail realtime: %s", strerror (-res));
                 return;
             }
         } else {
