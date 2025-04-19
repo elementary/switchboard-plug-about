@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 22:39+0000\n"
-"PO-Revision-Date: 2024-04-20 16:13+0000\n"
+"PO-Revision-Date: 2025-04-19 23:04+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: Portuguese <https://l10n.elementaryos.org/projects/settings/"
 "switchboard-plug-about/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.10.4\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:46
@@ -45,7 +45,7 @@ msgstr "Firmware"
 
 #: src/Plug.vala:66 src/Plug.vala:147 src/Views/DriversView.vala:19
 msgid "Drivers"
-msgstr ""
+msgstr "Controladores"
 
 #: src/Plug.vala:128 src/Views/OperatingSystemView.vala:238
 msgid "Automatic Updates"
@@ -53,25 +53,23 @@ msgstr "Atualizações automáticas"
 
 #: src/Plug.vala:129 src/Views/OperatingSystemView.vala:288
 msgid "Basics Guide"
-msgstr ""
+msgstr "Guia básico"
 
 #: src/Plug.vala:130 src/Views/OperatingSystemView.vala:295
 msgid "Get Help"
-msgstr ""
+msgstr "Obter ajuda"
 
 #: src/Plug.vala:131
 msgid "Get Involved or Sponsor Us"
-msgstr ""
+msgstr "Participe ou patrocine-nos"
 
 #: src/Plug.vala:132
 msgid "Get Support"
 msgstr "Obter suporte"
 
 #: src/Plug.vala:133 src/Views/OperatingSystemView.vala:302
-#, fuzzy
-#| msgid "Website"
 msgid "Our Website"
-msgstr "Website"
+msgstr "O nosso Website"
 
 #: src/Plug.vala:134
 msgid "Report a Problem"
@@ -86,19 +84,17 @@ msgid "Send Feedback"
 msgstr "Enviar Feedback"
 
 #: src/Plug.vala:139
-#, fuzzy
-#| msgid "Device stages updates"
 msgid "Device name"
-msgstr "Atualizações de fases do dispositivo"
+msgstr "Nome do dispositivo"
 
 #: src/Plug.vala:140
 msgid "Host name"
-msgstr ""
+msgstr "Nome da máquina"
 
 #. https://github.com/elementary/switchboard-plug-about/issues/219
 #: src/Plug.vala:142
 msgid "About This Device"
-msgstr ""
+msgstr "Acerca deste dispositivo"
 
 #: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
@@ -109,23 +105,20 @@ msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
 msgstr ""
+"Adaptadores Wi-Fi Broadcom®, placas gráficas NVIDIA® e algumas máquinas "
+"virtuais podem não funcionar corretamente sem controladores adicionais."
 
 #: src/Views/DriversView.vala:25
-#, fuzzy
-#| msgid "%i update available"
-#| msgid_plural "%i updates available"
 msgid "No drivers available"
-msgstr "%i atualização disponível"
+msgstr "Sem controladores disponíveis"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "Este dispositivo não necessita de quaisquer controladores adicionais."
 
 #: src/Views/DriversView.vala:30
-#, fuzzy
-#| msgid "Checking for Updates"
 msgid "Checking for Drivers"
-msgstr "A procurar por atualizações"
+msgstr "A procurar por controladores"
 
 #: src/Views/DriversView.vala:31
 #, fuzzy
@@ -183,7 +176,7 @@ msgstr ""
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "A instalar %s…"
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
@@ -344,7 +337,7 @@ msgstr ""
 
 #: src/Views/HardwareView.vala:49
 msgid "You do not have permission to change the device name"
-msgstr ""
+msgstr "Não tem permissão para alterar o nome do dispositivo"
 
 #: src/Views/HardwareView.vala:60
 #, c-format
@@ -461,7 +454,7 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:309
 msgid "Get Involved"
-msgstr ""
+msgstr "Participe"
 
 #: src/Views/OperatingSystemView.vala:496
 #, c-format
@@ -542,7 +535,7 @@ msgstr "A atualização manual das atualizações pode resolver o problema"
 #: src/Views/OperatingSystemView.vala:617
 #, c-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s de %s"
 
 #: src/Views/OperatingSystemView.vala:628
 msgid ""
@@ -573,13 +566,13 @@ msgstr "Restaurar definições"
 
 #: src/Views/OperatingSystemView.vala:824
 msgid "Sponsor Us"
-msgstr ""
+msgstr "Patrocine-nos"
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
 #: src/Views/OperatingSystemView.vala:887
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
-msgstr ""
+msgstr "%.0f%% para o objetivo de $%'5.0f por mês"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
