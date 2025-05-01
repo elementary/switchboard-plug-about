@@ -49,6 +49,7 @@
       </description>
       <issues>
         <issue url="https://github.com/elementary/switchboard-plug-about/issues/219">show when search for "About"</issue>
+        <issue url="https://github.com/elementary/switchboard/discussions/343">About the "Restart required" message</issue>
       </issues>
     </release>
 
