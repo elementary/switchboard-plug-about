@@ -1,0 +1,147 @@
+/*
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2025 elementary, Inc. (https://elementary.io)
+ */
+
+public class About.LogDialog : Granite.Dialog {
+    private SystemdLogModel model;
+    private LogDetailsView details_view;
+    private Adw.NavigationView navigation_view;
+
+    construct {
+        title = _("System Logs");
+        modal = true;
+        default_height = 500;
+        default_width = 500;
+
+        var title_label = new Gtk.Label (
+            _("System Logs")
+        ) {
+            hexpand = true,
+            xalign = 0
+        };
+        title_label.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
+
+        var refresh_button = new Gtk.Button.from_icon_name ("view-refresh-symbolic") {
+            tooltip_text = _("Load new entries")
+        };
+
+        var top_box = new Gtk.Box (HORIZONTAL, 6);
+        top_box.append (title_label);
+        top_box.append (refresh_button);
+
+        var search_entry = new Gtk.SearchEntry ();
+
+        model = new SystemdLogModel ();
+
+        var selection_model = new Gtk.NoSelection (model);
+
+        var header_factory = new Gtk.SignalListItemFactory ();
+        header_factory.setup.connect (setup_header);
+        header_factory.bind.connect (bind_header);
+
+        var origin_factory = new Gtk.SignalListItemFactory ();
+        origin_factory.setup.connect (setup_origin);
+        origin_factory.bind.connect (bind);
+
+        var origin_column = new Gtk.ColumnViewColumn (_("Sender"), origin_factory);
+
+        var message_factory = new Gtk.SignalListItemFactory ();
+        message_factory.setup.connect (setup_message);
+        message_factory.bind.connect (bind);
+
+        var message_column = new Gtk.ColumnViewColumn (_("Message"), message_factory) {
+            expand = true
+        };
+
+        var column_view = new Gtk.ColumnView (selection_model) {
+            header_factory = header_factory,
+            single_click_activate = true,
+        };
+        column_view.append_column (origin_column);
+        column_view.append_column (message_column);
+
+        var scrolled = new Gtk.ScrolledWindow () {
+            child = column_view,
+            hscrollbar_policy = NEVER,
+            max_content_height = 400,
+            propagate_natural_height = true
+        };
+
+        var list_page = new Adw.NavigationPage (scrolled, "list");
+
+        details_view = new LogDetailsView ();
+
+        navigation_view = new Adw.NavigationView ();
+        navigation_view.add (list_page);
+
+        var frame = new Gtk.Frame (null) {
+            child = navigation_view,
+            hexpand = true,
+            vexpand = true
+        };
+
+        var box = new Gtk.Box (VERTICAL, 12);
+        box.append (top_box);
+        box.append (search_entry);
+        box.append (frame);
+
+        get_content_area ().append (box);
+
+        add_button (_("Close"), Gtk.ResponseType.CLOSE);
+
+        refresh_button.clicked.connect (model.refresh);
+        search_entry.search_changed.connect (on_search_changed);
+        column_view.activate.connect (on_activate);
+        scrolled.edge_reached.connect (on_edge_reached);
+
+        response.connect (() => close ());
+    }
+
+    private void setup_header (Object obj) {
+        var item = (Gtk.ListHeader) obj;
+        item.child = new Gtk.Label (null) {
+            halign = START,
+            use_markup = true
+        };
+    }
+
+    private void bind_header (Object obj) {
+        var item = (Gtk.ListHeader) obj;
+        var entry = (SystemdLogEntry) item.item;
+        var label = (Gtk.Label) item.child;
+        label.label = "<b>%s</b>".printf (entry.relative_time);
+    }
+
+    private void setup_origin (Object obj) {
+        var item = (Gtk.ListItem) obj;
+        item.child = new LogCell (ORIGIN);
+    }
+
+    private void setup_message (Object obj) {
+        var item = (Gtk.ListItem) obj;
+        item.child = new LogCell (MESSAGE);
+    }
+
+    private void bind (Object obj) {
+        var item = (Gtk.ListItem) obj;
+        var entry = (SystemdLogEntry) item.item;
+        var cell = (LogCell) item.child;
+        cell.bind (entry);
+    }
+
+    private void on_search_changed (Gtk.SearchEntry entry) {
+        model.search (entry.text);
+    }
+
+    private void on_activate (uint pos) {
+        details_view.entry = (SystemdLogEntry) model.get_item (pos);
+        navigation_view.push (details_view);
+    }
+
+    private void on_edge_reached (Gtk.PositionType pos) {
+        if (pos == BOTTOM) {
+            model.load_chunk ();
+        }
+    }
+}
