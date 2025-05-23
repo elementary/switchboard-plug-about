@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 22:39+0000\n"
-"PO-Revision-Date: 2025-02-26 20:05+0000\n"
+"PO-Revision-Date: 2025-05-24 13:55+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
-"Language-Team: Hungarian <https://l10n.elementary.io/projects/settings/"
+"Language-Team: Hungarian <https://l10n.elementaryos.org/projects/settings/"
 "switchboard-plug-about/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:46
@@ -424,7 +424,7 @@ msgstr "Letöltés"
 
 #: src/Views/OperatingSystemView.vala:212
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "Mégse"
 
 #: src/Views/OperatingSystemView.vala:239
 msgid ""
