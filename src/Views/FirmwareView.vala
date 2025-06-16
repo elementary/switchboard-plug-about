@@ -21,7 +21,7 @@
 
 public class About.FirmwareView : Switchboard.SettingsPage {
     private Gtk.Stack stack;
-    private Adw.Leaflet deck;
+    private Adw.NavigationView navigation_view;
     private FirmwareReleaseView firmware_release_view;
     private Granite.Placeholder progress_alert_view;
     private Granite.Placeholder placeholder_alert_view;
@@ -60,20 +60,18 @@ public class About.FirmwareView : Switchboard.SettingsPage {
             child = update_list
         };
 
+        var update_page = new Adw.NavigationPage (update_scrolled, _("All Updates"));
+
         firmware_release_view = new FirmwareReleaseView ();
 
-        deck = new Adw.Leaflet () {
-            can_navigate_back = true,
-            can_unfold = false
-        };
-        deck.append (update_scrolled);
-        deck.append (firmware_release_view);
-        deck.visible_child = update_scrolled;
+        navigation_view = new Adw.NavigationView ();
+        navigation_view.add (update_page);
+        navigation_view.add_css_class (Granite.STYLE_CLASS_VIEW);
 
         stack = new Gtk.Stack () {
             transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT
         };
-        stack.add_child (deck);
+        stack.add_child (navigation_view);
         stack.add_child (progress_alert_view);
 
         var frame = new Gtk.Frame (null) {
@@ -120,7 +118,7 @@ public class About.FirmwareView : Switchboard.SettingsPage {
             placeholder_alert_view.description = _("Please make sure “fwupd” is installed and enabled.");
         }
 
-        stack.visible_child = deck;
+        stack.visible_child = navigation_view;
     }
 
     private void add_device (Fwupd.Device device) {
@@ -161,7 +159,7 @@ public class About.FirmwareView : Switchboard.SettingsPage {
         if (widget is Widgets.FirmwareUpdateRow) {
             var row = (Widgets.FirmwareUpdateRow) widget;
             firmware_release_view.update_view (row.device, row.release);
-            deck.visible_child = firmware_release_view;
+            navigation_view.push (firmware_release_view);
         }
     }
 
@@ -170,7 +168,7 @@ public class About.FirmwareView : Switchboard.SettingsPage {
 
         add_device (device);
 
-        stack.visible_child = deck;
+        stack.visible_child = navigation_view;
     }
 
     private void on_device_removed (Fwupd.Client client, Fwupd.Device device) {
@@ -245,7 +243,7 @@ public class About.FirmwareView : Switchboard.SettingsPage {
                 if (response == Gtk.ResponseType.ACCEPT) {
                     continue_update.begin (device, release);
                 } else {
-                    stack.visible_child = deck;
+                    stack.visible_child = navigation_view;
                     return;
                 }
             });
@@ -293,7 +291,7 @@ public class About.FirmwareView : Switchboard.SettingsPage {
             show_error_dialog (device, e.message);
         }
 
-        stack.visible_child = deck;
+        stack.visible_child = navigation_view;
         update_list_view.begin ();
     }
 
