@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-09 18:51+0000\n"
-"PO-Revision-Date: 2024-12-18 23:16+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
+"PO-Revision-Date: 2025-02-26 20:05+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: Ukrainian <https://l10n.elementary.io/projects/settings/"
 "switchboard-plug-about/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.8.4\n"
+"X-Generator: Weblate 5.9.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:46
@@ -39,24 +39,24 @@ msgstr "Операційна система"
 msgid "Hardware"
 msgstr "Обладнання"
 
-#: src/Plug.vala:65 src/Plug.vala:142 src/Plug.vala:143
+#: src/Plug.vala:65 src/Plug.vala:144 src/Plug.vala:145
 #: src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Мікропрограма"
 
-#: src/Plug.vala:66 src/Plug.vala:145 src/Views/DriversView.vala:19
+#: src/Plug.vala:66 src/Plug.vala:147 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr "Драйвери"
 
-#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:221
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:238
 msgid "Automatic Updates"
 msgstr "Автооновлення"
 
-#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:271
+#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:288
 msgid "Basics Guide"
 msgstr "Посібник з основ"
 
-#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:278
+#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:295
 msgid "Get Help"
 msgstr "Отримати довідку"
 
@@ -68,7 +68,7 @@ msgstr "Долучайтеся або спонсоруйте нас"
 msgid "Get Support"
 msgstr "Отримати допомогу"
 
-#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:285
+#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:302
 msgid "Our Website"
 msgstr "Наш вебсайт"
 
@@ -76,11 +76,11 @@ msgstr "Наш вебсайт"
 msgid "Report a Problem"
 msgstr "Повідомити про проблему"
 
-#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:312
+#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:329
 msgid "Restore Default Settings"
 msgstr "Відновити типові налаштування"
 
-#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:314
+#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:331
 msgid "Send Feedback"
 msgstr "Надіслати відгук"
 
@@ -92,7 +92,12 @@ msgstr "Назва пристрою"
 msgid "Host name"
 msgstr "Назва хосту"
 
-#: src/Plug.vala:143 src/Views/FirmwareView.vala:86
+#. https://github.com/elementary/switchboard-plug-about/issues/219
+#: src/Plug.vala:142
+msgid "About This Device"
+msgstr "Про цей пристрій"
+
+#: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
 msgstr "Перезапустити для налаштування мікропрограми…"
 
@@ -128,7 +133,7 @@ msgstr "Не вдалося встановити драйвер"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr "Оновлення відомостей про драйвер вручну може усунути проблему"
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:197
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:214
 msgid "Refresh"
 msgstr "Оновити"
 
@@ -136,7 +141,7 @@ msgstr "Оновити"
 msgid "Refresh driver information"
 msgstr "Оновлення відомостей про драйвер"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:209
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:226
 msgid "Learn More…"
 msgstr "Докладніше…"
 
@@ -215,7 +220,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "Не від'єднуйте пристрій від мережі під час оновлення."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:521
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:548
 msgid "Checking for Updates"
 msgstr "Перевірка наявності оновлень"
 
@@ -326,7 +331,7 @@ msgstr "У вас немає дозволу на зміну назви прис�
 msgid "%s memory"
 msgstr "%s пам'яті"
 
-#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:350
+#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:360
 msgid "Unknown Graphics"
 msgstr "Невідома графіка"
 
@@ -346,63 +351,63 @@ msgstr "Оновити назву пристрою"
 msgid "Device name saved"
 msgstr "Назву пристрою збережено"
 
-#: src/Views/HardwareView.vala:274
+#: src/Views/HardwareView.vala:284
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Двоядерний %s"
 
-#: src/Views/HardwareView.vala:276
+#: src/Views/HardwareView.vala:286
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Чотириядерний %s"
 
-#: src/Views/HardwareView.vala:278
+#: src/Views/HardwareView.vala:288
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Шестиядерний %s"
 
-#: src/Views/HardwareView.vala:390
+#: src/Views/HardwareView.vala:400
 msgid "Unknown Processor"
 msgstr "Невідомий процесор"
 
-#: src/Views/HardwareView.vala:463
+#: src/Views/HardwareView.vala:473
 msgid "Unknown"
 msgstr "Невідомо"
 
-#: src/Views/HardwareView.vala:518
+#: src/Views/HardwareView.vala:528
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s сховища (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:520
+#: src/Views/HardwareView.vala:530
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s сховища (eMMC)"
 
-#: src/Views/HardwareView.vala:522
+#: src/Views/HardwareView.vala:532
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s сховища (SATA SSD)"
 
-#: src/Views/HardwareView.vala:525
+#: src/Views/HardwareView.vala:535
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s сховища (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:530
+#: src/Views/HardwareView.vala:540
 #, c-format
 msgid "%s storage"
 msgstr "%s сховища"
 
-#: src/Views/HardwareView.vala:696
+#: src/Views/HardwareView.vala:712
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "байт"
 msgstr[1] "байти"
 msgstr[2] "байтів"
 
-#: src/Views/HardwareView.vala:698
+#: src/Views/HardwareView.vala:714
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
@@ -410,21 +415,21 @@ msgstr[0] "%u байт"
 msgstr[1] "%u байти"
 msgstr[2] "%u байтів"
 
-#: src/Views/HardwareView.vala:705
+#: src/Views/HardwareView.vala:721
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:192
+#: src/Views/OperatingSystemView.vala:209
 msgid "Download"
 msgstr "Завантажити"
 
-#: src/Views/OperatingSystemView.vala:195
+#: src/Views/OperatingSystemView.vala:212
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/Views/OperatingSystemView.vala:222
+#: src/Views/OperatingSystemView.vala:239
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -432,72 +437,84 @@ msgstr ""
 "Оновлення завантажуватимуться автоматично. Вони встановлюватимуться після "
 "перезапуску цього пристрою."
 
-#: src/Views/OperatingSystemView.vala:292
+#: src/Views/OperatingSystemView.vala:309
 msgid "Get Involved"
 msgstr "Долучитися"
 
-#: src/Views/OperatingSystemView.vala:478
+#: src/Views/OperatingSystemView.vala:496
 #, c-format
 msgid "Built on %s"
 msgstr "Побудовано на %s"
 
-#: src/Views/OperatingSystemView.vala:498
+#: src/Views/OperatingSystemView.vala:516
 msgid "System updates not available"
 msgstr "Системні оновлення недоступні"
 
-#: src/Views/OperatingSystemView.vala:499
+#: src/Views/OperatingSystemView.vala:517
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 "Не вдалося під'єднатися до серверної частини. Спробуйте вийти з системи, щоб "
 "усунути проблему."
 
-#: src/Views/OperatingSystemView.vala:511
+#: src/Views/OperatingSystemView.vala:530
 msgid "Up To Date"
 msgstr "В актуальному стані"
 
-#: src/Views/OperatingSystemView.vala:512
+#: src/Views/OperatingSystemView.vala:534
 #, c-format
 msgid "Last checked %s"
 msgstr "Востаннє перевірено %s"
 
-#: src/Views/OperatingSystemView.vala:527
+#: src/Views/OperatingSystemView.vala:541
+msgid "Last checked unknown"
+msgstr "Час останньої перевірки невідомий"
+
+#: src/Views/OperatingSystemView.vala:554
 msgid "Updates Available"
 msgstr "Доступні оновлення"
 
-#: src/Views/OperatingSystemView.vala:534
+#: src/Views/OperatingSystemView.vala:561
 #, c-format
-msgid "%i update available"
-msgid_plural "%i updates available"
-msgstr[0] "Доступне %i оновлення"
-msgstr[1] "Доступні %i оновлення"
-msgstr[2] "Доступні %i оновлень"
+msgid "%i update available (%s)"
+msgid_plural "%i updates available (%s)"
+msgstr[0] "Доступне %i оновлення (%s)"
+msgstr[1] "Доступні %i оновлення (%s)"
+msgstr[2] "Доступні %i оновлень (%s)"
 
-#: src/Views/OperatingSystemView.vala:545
+#: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
 msgstr "Неможливо визначити кількість оновлень"
 
-#: src/Views/OperatingSystemView.vala:551
+#: src/Views/OperatingSystemView.vala:586
 msgid "Downloading Updates"
 msgstr "Завантаження оновлень"
 
-#: src/Views/OperatingSystemView.vala:557
-msgid "Restart Required"
-msgstr "Потрібен перезапуск"
+#: src/Views/OperatingSystemView.vala:595
+msgid "Restart to install pending updates"
+msgstr "Перезапустити, щоб установити оновлення з черги"
 
-#: src/Views/OperatingSystemView.vala:558
-msgid "A restart is required to finish installing updates"
-msgstr "Для завершення встановлення оновлень потрібен перезапуск"
+#: src/Views/OperatingSystemView.vala:596
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
+msgstr ""
+"Оновлення завантажені. Щоб завершити їхнє встановлення потрібен перезапуск."
 
-#: src/Views/OperatingSystemView.vala:563
-#: src/Views/OperatingSystemView.vala:577
+#: src/Views/OperatingSystemView.vala:601
+#: src/Views/OperatingSystemView.vala:627
 msgid "Failed to download updates"
 msgstr "Не вдалося завантажити оновлення"
 
-#: src/Views/OperatingSystemView.vala:564
+#: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "Оновлення вручну може усунути проблему"
 
-#: src/Views/OperatingSystemView.vala:578
+#: src/Views/OperatingSystemView.vala:617
+#, c-format
+msgid "%s of %s"
+msgstr "%s з %s"
+
+#: src/Views/OperatingSystemView.vala:628
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -507,11 +524,11 @@ msgstr ""
 "програмним забезпеченням, стороннім програмним забезпеченням або помилкою "
 "менеджера пакунків. Проблему може усунути перезапуск оновлення вручну."
 
-#: src/Views/OperatingSystemView.vala:620
+#: src/Views/OperatingSystemView.vala:670
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Системні налаштування буде відновлено до типових заводських"
 
-#: src/Views/OperatingSystemView.vala:621
+#: src/Views/OperatingSystemView.vala:671
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -519,16 +536,16 @@ msgstr ""
 "Всі налаштування системи та дані буде відновлено до типових значень. Це не "
 "вплине на особисті дані, такі як музика та зображення."
 
-#: src/Views/OperatingSystemView.vala:629
+#: src/Views/OperatingSystemView.vala:679
 msgid "Restore Settings"
 msgstr "Відновити налаштування"
 
-#: src/Views/OperatingSystemView.vala:774
+#: src/Views/OperatingSystemView.vala:824
 msgid "Sponsor Us"
 msgstr "Підтримати нас"
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
-#: src/Views/OperatingSystemView.vala:837
+#: src/Views/OperatingSystemView.vala:887
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
 msgstr "%.0f%% до мети $%'5.0f на місяць"
@@ -548,6 +565,9 @@ msgstr[2] "%u пакунків буде оновлено"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Закрити"
+
+#~ msgid "Restart Required"
+#~ msgstr "Потрібен перезапуск"
 
 #~ msgid "Operating System Information"
 #~ msgstr "Відомості про операційну систему"

@@ -1,11 +1,11 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2021-2023 elementary, Inc. (https://elementary.io)
+ * SPDX-FileCopyrightText: 2021-2025 elementary, Inc. (https://elementary.io)
  *
  * Authored by: Marius Meisenzahl <mariusmeisenzahl@gmail.com>
  */
 
-public class About.FirmwareReleaseView : Gtk.Box {
+public class About.FirmwareReleaseView : Adw.NavigationPage {
     public signal void update (Fwupd.Device device, Fwupd.Release release);
 
     private Fwupd.Device device;
@@ -22,15 +22,11 @@ public class About.FirmwareReleaseView : Gtk.Box {
     private Gtk.Label vendor_value_label;
     private Gtk.Label size_value_label;
     private Gtk.Label install_duration_value_label;
-    private Adw.Leaflet? deck;
 
     construct {
         var back_button = new Gtk.Button.with_label (_("All Updates")) {
-            halign = START,
-            margin_top = 6,
-            margin_end = 6,
-            margin_bottom = 6,
-            margin_start = 6,
+            action_name = "navigation.pop",
+            halign = START
         };
         back_button.add_css_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
@@ -38,13 +34,10 @@ public class About.FirmwareReleaseView : Gtk.Box {
             ellipsize = END,
             use_markup = true
         };
+        title_label.add_css_class ("title");
 
         update_button = new Gtk.Button.with_label ("") {
             halign = END,
-            margin_top = 6,
-            margin_end = 6,
-            margin_bottom = 6,
-            margin_start = 6,
             sensitive = false
         };
         update_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
@@ -53,12 +46,13 @@ public class About.FirmwareReleaseView : Gtk.Box {
             child = update_button
         };
 
-        var header_box = new Gtk.CenterBox () {
+        var header_bar = new Gtk.HeaderBar () {
             hexpand = true,
-            start_widget = back_button,
-            center_widget = title_label,
-            end_widget = update_button_revealer
+            show_title_buttons = false,
+            title_widget = title_label
         };
+        header_bar.pack_start (back_button);
+        header_bar.pack_end (update_button_revealer);
 
         summary_label = new Gtk.Label ("") {
             halign = START,
@@ -151,20 +145,20 @@ public class About.FirmwareReleaseView : Gtk.Box {
         stack.add_child (placeholder);
         stack.add_child (scrolled_window);
 
-        orientation = VERTICAL;
-        add_css_class (Granite.STYLE_CLASS_VIEW);
-        append (header_box);
-        append (new Gtk.Separator (HORIZONTAL));
-        append (stack);
+        var toolbarview = new Adw.ToolbarView () {
+            content = stack,
+            top_bar_style = RAISED_BORDER
+        };
+        toolbarview.add_top_bar (header_bar);
 
-        back_button.clicked.connect (() => {
-            go_back ();
-        });
+        child = toolbarview;
 
         update_button.clicked.connect (() => {
-            go_back ();
+            activate_action ("navigation.pop", null);
             update (device, release);
         });
+
+        bind_property ("title", title_label, "label");
     }
 
     public void update_view (Fwupd.Device device, Fwupd.Release? release) {
@@ -173,7 +167,7 @@ public class About.FirmwareReleaseView : Gtk.Box {
 
         var device_name = device.get_name ();
 
-        title_label.label = "<b>%s</b>".printf (device_name);
+        title = device_name;
         update_button_revealer.reveal_child = release != null;
 
         if (release == null) {
@@ -232,13 +226,5 @@ public class About.FirmwareReleaseView : Gtk.Box {
                 duration_minutes
             ).printf (duration_minutes);
         }
-    }
-
-    private void go_back () {
-        if (deck == null) {
-            deck = (Adw.Leaflet) get_ancestor (typeof (Adw.Leaflet));
-        }
-
-        deck.navigate (BACK);
     }
 }

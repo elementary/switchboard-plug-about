@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-09 18:51+0000\n"
-"PO-Revision-Date: 2024-12-11 13:16+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
+"PO-Revision-Date: 2025-05-24 13:55+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
-"Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
+"Language-Team: Hungarian <https://l10n.elementaryos.org/projects/settings/"
 "switchboard-plug-about/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.4\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:46
@@ -38,24 +38,24 @@ msgstr "Operációs rendszer"
 msgid "Hardware"
 msgstr "Hardver"
 
-#: src/Plug.vala:65 src/Plug.vala:142 src/Plug.vala:143
+#: src/Plug.vala:65 src/Plug.vala:144 src/Plug.vala:145
 #: src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Firmware"
 
-#: src/Plug.vala:66 src/Plug.vala:145 src/Views/DriversView.vala:19
+#: src/Plug.vala:66 src/Plug.vala:147 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr "Illesztőprogramok"
 
-#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:221
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:238
 msgid "Automatic Updates"
 msgstr "Automatikus frissítések"
 
-#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:271
+#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:288
 msgid "Basics Guide"
 msgstr "Útmutató az alapokhoz"
 
-#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:278
+#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:295
 msgid "Get Help"
 msgstr "Segítségkérés"
 
@@ -67,7 +67,7 @@ msgstr "Csatlakozzon vagy támogasson minket"
 msgid "Get Support"
 msgstr "Segítség kérése"
 
-#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:285
+#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:302
 msgid "Our Website"
 msgstr "Weboldalunk"
 
@@ -75,11 +75,11 @@ msgstr "Weboldalunk"
 msgid "Report a Problem"
 msgstr "Hibajelentés"
 
-#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:312
+#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:329
 msgid "Restore Default Settings"
 msgstr "Alapértelmezett beállítások visszaállítása"
 
-#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:314
+#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:331
 msgid "Send Feedback"
 msgstr "Visszajelzés küldése"
 
@@ -91,7 +91,12 @@ msgstr "Készüléknév"
 msgid "Host name"
 msgstr "Kiszolgálónév"
 
-#: src/Plug.vala:143 src/Views/FirmwareView.vala:86
+#. https://github.com/elementary/switchboard-plug-about/issues/219
+#: src/Plug.vala:142
+msgid "About This Device"
+msgstr "A készülékről"
+
+#: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
 msgstr "Újraindítás a firmwarebeállításokba…"
 
@@ -130,7 +135,7 @@ msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
 "Az illesztőprogram-információk manuális frissítése megoldhatja a problémát"
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:197
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:214
 msgid "Refresh"
 msgstr "Frissítés"
 
@@ -138,7 +143,7 @@ msgstr "Frissítés"
 msgid "Refresh driver information"
 msgstr "Illesztőprogram-információk frissítése"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:209
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:226
 msgid "Learn More…"
 msgstr "További információk…"
 
@@ -216,7 +221,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "Ne vegye le a töltőről a készüléket a frissítés alatt."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:521
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:548
 msgid "Checking for Updates"
 msgstr "Frissítések keresése"
 
@@ -325,7 +330,7 @@ msgstr "Nincs engedélye megváltoztatni a készülék nevét"
 msgid "%s memory"
 msgstr "%s memória"
 
-#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:350
+#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:360
 msgid "Unknown Graphics"
 msgstr "Ismeretlen grafikus kártya"
 
@@ -345,83 +350,83 @@ msgstr "Készüléknév frissítése"
 msgid "Device name saved"
 msgstr "Készüléknév elmentve"
 
-#: src/Views/HardwareView.vala:274
+#: src/Views/HardwareView.vala:284
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Kétmagos %s"
 
-#: src/Views/HardwareView.vala:276
+#: src/Views/HardwareView.vala:286
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Négymagos %s"
 
-#: src/Views/HardwareView.vala:278
+#: src/Views/HardwareView.vala:288
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Nyolcmagos %s"
 
-#: src/Views/HardwareView.vala:390
+#: src/Views/HardwareView.vala:400
 msgid "Unknown Processor"
 msgstr "Ismeretlen processzor"
 
-#: src/Views/HardwareView.vala:463
+#: src/Views/HardwareView.vala:473
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: src/Views/HardwareView.vala:518
+#: src/Views/HardwareView.vala:528
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s tárhely (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:520
+#: src/Views/HardwareView.vala:530
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s tárhely (eMMC)"
 
-#: src/Views/HardwareView.vala:522
+#: src/Views/HardwareView.vala:532
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s tárhely (SATA SSD)"
 
-#: src/Views/HardwareView.vala:525
+#: src/Views/HardwareView.vala:535
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s tárhely (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:530
+#: src/Views/HardwareView.vala:540
 #, c-format
 msgid "%s storage"
 msgstr "%s tárhely"
 
-#: src/Views/HardwareView.vala:696
+#: src/Views/HardwareView.vala:712
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "bájt"
 msgstr[1] "bájt"
 
-#: src/Views/HardwareView.vala:698
+#: src/Views/HardwareView.vala:714
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
 msgstr[0] "%u bájt"
 msgstr[1] "%u bájt"
 
-#: src/Views/HardwareView.vala:705
+#: src/Views/HardwareView.vala:721
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:192
+#: src/Views/OperatingSystemView.vala:209
 msgid "Download"
 msgstr "Letöltés"
 
-#: src/Views/OperatingSystemView.vala:195
+#: src/Views/OperatingSystemView.vala:212
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "Mégse"
 
-#: src/Views/OperatingSystemView.vala:222
+#: src/Views/OperatingSystemView.vala:239
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -429,71 +434,83 @@ msgstr ""
 "A frissítések automatikusan le lesznek töltve. A készülék újraindításakor "
 "kerülnek telepítésre."
 
-#: src/Views/OperatingSystemView.vala:292
+#: src/Views/OperatingSystemView.vala:309
 msgid "Get Involved"
 msgstr "Csatlakozzon"
 
-#: src/Views/OperatingSystemView.vala:478
+#: src/Views/OperatingSystemView.vala:496
 #, c-format
 msgid "Built on %s"
 msgstr "%s alapokon"
 
-#: src/Views/OperatingSystemView.vala:498
+#: src/Views/OperatingSystemView.vala:516
 msgid "System updates not available"
 msgstr "Nem érhetők el rendszerfrissítések"
 
-#: src/Views/OperatingSystemView.vala:499
+#: src/Views/OperatingSystemView.vala:517
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 "Nem sikerült csatlakozni a szerverhez. Próbáljon kijelentkezni a probléma "
 "megoldása érdekében."
 
-#: src/Views/OperatingSystemView.vala:511
+#: src/Views/OperatingSystemView.vala:530
 msgid "Up To Date"
 msgstr "Naprakész"
 
-#: src/Views/OperatingSystemView.vala:512
+#: src/Views/OperatingSystemView.vala:534
 #, c-format
 msgid "Last checked %s"
 msgstr "Utoljára ellenőrizve: %s"
 
-#: src/Views/OperatingSystemView.vala:527
+#: src/Views/OperatingSystemView.vala:541
+msgid "Last checked unknown"
+msgstr "Utoljára ellenőrizve ismeretlen időben"
+
+#: src/Views/OperatingSystemView.vala:554
 msgid "Updates Available"
 msgstr "Frissítések érhetők el"
 
-#: src/Views/OperatingSystemView.vala:534
+#: src/Views/OperatingSystemView.vala:561
 #, c-format
-msgid "%i update available"
-msgid_plural "%i updates available"
-msgstr[0] "%i frissítés érhető el"
-msgstr[1] "%i frissítés érhető el"
+msgid "%i update available (%s)"
+msgid_plural "%i updates available (%s)"
+msgstr[0] "%i frissítés érhető el (%s)"
+msgstr[1] "%i frissítés érhető el (%s)"
 
-#: src/Views/OperatingSystemView.vala:545
+#: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
 msgstr "Nem sikerült meghatározni a frissítések számát"
 
-#: src/Views/OperatingSystemView.vala:551
+#: src/Views/OperatingSystemView.vala:586
 msgid "Downloading Updates"
 msgstr "Frissítések letöltése"
 
-#: src/Views/OperatingSystemView.vala:557
-msgid "Restart Required"
-msgstr "Újraindítás szükséges"
+#: src/Views/OperatingSystemView.vala:595
+msgid "Restart to install pending updates"
+msgstr "Indítsa újra a frissítések befejezéséhez"
 
-#: src/Views/OperatingSystemView.vala:558
-msgid "A restart is required to finish installing updates"
-msgstr "A frissítések befejezéséhez újraindításra van szükség"
+#: src/Views/OperatingSystemView.vala:596
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
+msgstr ""
+"A frissítések letöltve. A telepítés befejezéséhez újraindításra van szükség."
 
-#: src/Views/OperatingSystemView.vala:563
-#: src/Views/OperatingSystemView.vala:577
+#: src/Views/OperatingSystemView.vala:601
+#: src/Views/OperatingSystemView.vala:627
 msgid "Failed to download updates"
 msgstr "Frissítések letöltése sikertelen"
 
-#: src/Views/OperatingSystemView.vala:564
+#: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
 msgstr "A frissítések manuális keresése megoldhatja a problémát"
 
-#: src/Views/OperatingSystemView.vala:578
+#: src/Views/OperatingSystemView.vala:617
+#, c-format
+msgid "%s of %s"
+msgstr "%s / %s"
+
+#: src/Views/OperatingSystemView.vala:628
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
@@ -503,11 +520,11 @@ msgstr ""
 "féltől származó forrás vagy egy csomagkezelő-hiba lehet az oka. A "
 "frissítések manuális keresése megoldhatja a problémát."
 
-#: src/Views/OperatingSystemView.vala:620
+#: src/Views/OperatingSystemView.vala:670
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "A rendszerbeállítások visszaállnak a gyári alapértékekre"
 
-#: src/Views/OperatingSystemView.vala:621
+#: src/Views/OperatingSystemView.vala:671
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -515,16 +532,16 @@ msgstr ""
 "Minden rendszerbeállítás és adat visszaáll az alapértelmezett értékekre. Ez "
 "a személyes adatokra, például a zenékre és a képekre nem lesz hatással."
 
-#: src/Views/OperatingSystemView.vala:629
+#: src/Views/OperatingSystemView.vala:679
 msgid "Restore Settings"
 msgstr "A beállítások visszaállítása"
 
-#: src/Views/OperatingSystemView.vala:774
+#: src/Views/OperatingSystemView.vala:824
 msgid "Sponsor Us"
 msgstr "Támogasson minket"
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
-#: src/Views/OperatingSystemView.vala:837
+#: src/Views/OperatingSystemView.vala:887
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
 msgstr "%.0f%% teljesítve a(z) $%'5.0f havi célból"
@@ -543,6 +560,9 @@ msgstr[1] "%u csomag lesz frissítve"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Bezárás"
+
+#~ msgid "Restart Required"
+#~ msgstr "Újraindítás szükséges"
 
 #~ msgid "Operating System Information"
 #~ msgstr "Az operációs rendszer információi"

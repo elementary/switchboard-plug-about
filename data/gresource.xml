@@ -3,4 +3,23 @@
   <gresource prefix="/io/elementary/settings/system">
     <file alias="OperatingSystemView.css" compressed="true">OperatingSystemView.css</file>
   </gresource>
+  <gresource prefix="/io/elementary/settings/icons">
+    <file alias="24x24/devices/application-x-firmware.svg"compressed="true">icons/24/application-x-firmware.svg</file>
+    <file alias="32x32/devices/application-x-firmware.svg"compressed="true">icons/32/application-x-firmware.svg</file>
+    <file alias="48x48/devices/application-x-firmware.svg"compressed="true">icons/48/application-x-firmware.svg</file>
+
+    <file alias="32x32/devices/application-certificate.svg"compressed="true">icons/32/application-certificate.svg</file>
+    <file alias="32x32/devices/auth-fingerprint.svg"compressed="true">icons/32/auth-fingerprint.svg</file>
+    <file alias="32x32/devices/computer.svg"compressed="true">icons/32/computer.svg</file>
+    <file alias="32x32/devices/input-touchpad.svg"compressed="true">icons/32/input-touchpad.svg</file>
+    <file alias="32x32/devices/media-memory.svg"compressed="true">icons/32/media-memory.svg</file>
+    <file alias="32x32/devices/thunderbolt.svg"compressed="true">icons/32/thunderbolt.svg</file>
+    <file alias="32x32/devices/usb-receiver.svg"compressed="true">icons/32/usb-receiver.svg</file>
+
+    <!--FIXME: symlinks-->
+    <file alias="32x32/devices/dock-usb.svg"compressed="true">icons/32/application-x-firmware.svg</file>
+    <file alias="32x32/devices/drive-multidisk.svg"compressed="true">icons/32/application-x-firmware.svg</file>
+    <file alias="32x32/devices/gpu.svg"compressed="true">icons/32/application-x-firmware.svg</file>
+    <file alias="32x32/devices/usb-hub.svg"compressed="true">icons/32/application-x-firmware.svg</file>
+  </gresource>
 </gresources>

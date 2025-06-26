@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-09 18:51+0000\n"
+"POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2024-12-02 14:16+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -38,24 +38,24 @@ msgstr "Käyttöjärjestelmä"
 msgid "Hardware"
 msgstr "Laitteisto"
 
-#: src/Plug.vala:65 src/Plug.vala:142 src/Plug.vala:143
+#: src/Plug.vala:65 src/Plug.vala:144 src/Plug.vala:145
 #: src/Views/FirmwareView.vala:35
 msgid "Firmware"
 msgstr "Laiteohjelmisto"
 
-#: src/Plug.vala:66 src/Plug.vala:145 src/Views/DriversView.vala:19
+#: src/Plug.vala:66 src/Plug.vala:147 src/Views/DriversView.vala:19
 msgid "Drivers"
 msgstr "Ajurit"
 
-#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:221
+#: src/Plug.vala:128 src/Views/OperatingSystemView.vala:238
 msgid "Automatic Updates"
 msgstr "Automaattiset päivitykset"
 
-#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:271
+#: src/Plug.vala:129 src/Views/OperatingSystemView.vala:288
 msgid "Basics Guide"
 msgstr "Käyttöopas"
 
-#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:278
+#: src/Plug.vala:130 src/Views/OperatingSystemView.vala:295
 msgid "Get Help"
 msgstr "Tuki"
 
@@ -67,7 +67,7 @@ msgstr "Osallistu tai sponsoroi"
 msgid "Get Support"
 msgstr "Hanki tukea"
 
-#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:285
+#: src/Plug.vala:133 src/Views/OperatingSystemView.vala:302
 msgid "Our Website"
 msgstr "Verkkosivusto"
 
@@ -75,11 +75,11 @@ msgstr "Verkkosivusto"
 msgid "Report a Problem"
 msgstr "Ilmoita ongelmasta"
 
-#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:312
+#: src/Plug.vala:135 src/Views/OperatingSystemView.vala:329
 msgid "Restore Default Settings"
 msgstr "Palauta oletusasetukset"
 
-#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:314
+#: src/Plug.vala:136 src/Views/OperatingSystemView.vala:331
 msgid "Send Feedback"
 msgstr "Lähetä palautetta"
 
@@ -91,7 +91,12 @@ msgstr "Laitenimi"
 msgid "Host name"
 msgstr "Isäntänimi"
 
-#: src/Plug.vala:143 src/Views/FirmwareView.vala:86
+#. https://github.com/elementary/switchboard-plug-about/issues/219
+#: src/Plug.vala:142
+msgid "About This Device"
+msgstr ""
+
+#: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
 msgstr "Käynnistä uudelleen laiteohjelmiston asetuksiin…"
 
@@ -127,7 +132,7 @@ msgstr "Ajurin asennus epäonnistui"
 msgid "Manually refreshing driver information may resolve the issue"
 msgstr ""
 
-#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:197
+#: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:214
 msgid "Refresh"
 msgstr "Päivitä"
 
@@ -135,7 +140,7 @@ msgstr "Päivitä"
 msgid "Refresh driver information"
 msgstr "Päivitä ajuritiedot"
 
-#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:209
+#: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:226
 msgid "Learn More…"
 msgstr "Lue lisää…"
 
@@ -210,7 +215,7 @@ msgstr ""
 msgid "Do not unplug the device during the update."
 msgstr "Älä kytke laitetta irti päivityksen aikana."
 
-#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:521
+#: src/Views/FirmwareView.vala:46 src/Views/OperatingSystemView.vala:548
 msgid "Checking for Updates"
 msgstr "Tarkistetaan päivityksiä"
 
@@ -321,7 +326,7 @@ msgstr "Sinulla ei ole oikeutta vaihtaa laitenimeä"
 msgid "%s memory"
 msgstr "%s keskusmuistia"
 
-#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:350
+#: src/Views/HardwareView.vala:66 src/Views/HardwareView.vala:360
 msgid "Unknown Graphics"
 msgstr "Tuntematon grafiikka"
 
@@ -341,83 +346,83 @@ msgstr "Päivitä laitenimi"
 msgid "Device name saved"
 msgstr "Laitenimi tallennettu"
 
-#: src/Views/HardwareView.vala:274
+#: src/Views/HardwareView.vala:284
 #, c-format
 msgid "Dual-Core %s"
 msgstr "Tuplaydin %s"
 
-#: src/Views/HardwareView.vala:276
+#: src/Views/HardwareView.vala:286
 #, c-format
 msgid "Quad-Core %s"
 msgstr "Neliydin %s"
 
-#: src/Views/HardwareView.vala:278
+#: src/Views/HardwareView.vala:288
 #, c-format
 msgid "Hexa-Core %s"
 msgstr "Heksaydin %s"
 
-#: src/Views/HardwareView.vala:390
+#: src/Views/HardwareView.vala:400
 msgid "Unknown Processor"
 msgstr "Tuntematon suoritin"
 
-#: src/Views/HardwareView.vala:463
+#: src/Views/HardwareView.vala:473
 msgid "Unknown"
 msgstr "Tuntematon"
 
-#: src/Views/HardwareView.vala:518
+#: src/Views/HardwareView.vala:528
 #, c-format
 msgid "%s storage (NVMe SSD)"
 msgstr "%s tallennustilaa (NVMe SSD)"
 
-#: src/Views/HardwareView.vala:520
+#: src/Views/HardwareView.vala:530
 #, c-format
 msgid "%s storage (eMMC)"
 msgstr "%s tallennustilaa (eMMC)"
 
-#: src/Views/HardwareView.vala:522
+#: src/Views/HardwareView.vala:532
 #, c-format
 msgid "%s storage (SATA SSD)"
 msgstr "%s tallennustilaa (SATA SSD)"
 
-#: src/Views/HardwareView.vala:525
+#: src/Views/HardwareView.vala:535
 #, c-format
 msgid "%s storage (HDD)"
 msgstr "%s tallennustilaa (HDD)"
 
 #. Set fallback string for the device type
-#: src/Views/HardwareView.vala:530
+#: src/Views/HardwareView.vala:540
 #, c-format
 msgid "%s storage"
 msgstr "%s tallennustilaa"
 
-#: src/Views/HardwareView.vala:696
+#: src/Views/HardwareView.vala:712
 msgid "byte"
 msgid_plural "bytes"
 msgstr[0] "tavu"
 msgstr[1] "tavua"
 
-#: src/Views/HardwareView.vala:698
+#: src/Views/HardwareView.vala:714
 #, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
 msgstr[0] "%u tavu"
 msgstr[1] "%u tavua"
 
-#: src/Views/HardwareView.vala:705
+#: src/Views/HardwareView.vala:721
 #, c-format
 msgctxt "format-size"
 msgid "%u %s"
 msgstr "%u %s"
 
-#: src/Views/OperatingSystemView.vala:192
+#: src/Views/OperatingSystemView.vala:209
 msgid "Download"
 msgstr "Lataa"
 
-#: src/Views/OperatingSystemView.vala:195
+#: src/Views/OperatingSystemView.vala:212
 msgid "Cancel"
 msgstr "Peru"
 
-#: src/Views/OperatingSystemView.vala:222
+#: src/Views/OperatingSystemView.vala:239
 msgid ""
 "Updates will be automatically downloaded. They will be installed when this "
 "device is restarted."
@@ -425,84 +430,103 @@ msgstr ""
 "Päivitykset ladataan automaattisesti. Ne asennetaan, kun laite käynnistetään "
 "uudelleen."
 
-#: src/Views/OperatingSystemView.vala:292
+#: src/Views/OperatingSystemView.vala:309
 #, fuzzy
 #| msgid "Get Involved or Sponsor Us"
 msgid "Get Involved"
 msgstr "Osallistu tai sponsoroi"
 
-#: src/Views/OperatingSystemView.vala:478
+#: src/Views/OperatingSystemView.vala:496
 #, c-format
 msgid "Built on %s"
 msgstr "Pohjana %s"
 
-#: src/Views/OperatingSystemView.vala:498
+#: src/Views/OperatingSystemView.vala:516
 msgid "System updates not available"
 msgstr "Järjestelmäpäivityksiä ei saatavilla"
 
-#: src/Views/OperatingSystemView.vala:499
+#: src/Views/OperatingSystemView.vala:517
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
 msgstr ""
 "Yhteyttä taustaosaan ei voitu muodostaa. Kokeile kirjautua ulos ja uudelleen "
 "sisään selvittääksesi ongelman."
 
-#: src/Views/OperatingSystemView.vala:511
+#: src/Views/OperatingSystemView.vala:530
 msgid "Up To Date"
 msgstr "Ajan tasalla"
 
-#: src/Views/OperatingSystemView.vala:512
+#: src/Views/OperatingSystemView.vala:534
 #, c-format
 msgid "Last checked %s"
 msgstr "Viimeksi tarkistettu %s"
 
-#: src/Views/OperatingSystemView.vala:527
+#: src/Views/OperatingSystemView.vala:541
+#, fuzzy
+#| msgid "Last checked %s"
+msgid "Last checked unknown"
+msgstr "Viimeksi tarkistettu %s"
+
+#: src/Views/OperatingSystemView.vala:554
 msgid "Updates Available"
 msgstr "Päivityksiä saatavilla"
 
-#: src/Views/OperatingSystemView.vala:534
-#, c-format
-msgid "%i update available"
-msgid_plural "%i updates available"
+#: src/Views/OperatingSystemView.vala:561
+#, fuzzy, c-format
+#| msgid "%i update available"
+#| msgid_plural "%i updates available"
+msgid "%i update available (%s)"
+msgid_plural "%i updates available (%s)"
 msgstr[0] "%i päivitys saatavilla"
 msgstr[1] "%i päivitystä saatavilla"
 
-#: src/Views/OperatingSystemView.vala:545
+#: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
 msgstr "Päivitysten määrää ei voitu määrittää"
 
-#: src/Views/OperatingSystemView.vala:551
+#: src/Views/OperatingSystemView.vala:586
 msgid "Downloading Updates"
 msgstr "Ladataan päivityksiä"
 
-#: src/Views/OperatingSystemView.vala:557
-msgid "Restart Required"
-msgstr "Uudelleenkäynnistys vaaditaan"
-
-#: src/Views/OperatingSystemView.vala:558
-msgid "A restart is required to finish installing updates"
+#: src/Views/OperatingSystemView.vala:595
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid "Restart to install pending updates"
 msgstr "Päivitysten viimeistely vaatii uudelleenkäynnistyksen"
 
-#: src/Views/OperatingSystemView.vala:563
-#: src/Views/OperatingSystemView.vala:577
+#: src/Views/OperatingSystemView.vala:596
+#, fuzzy
+#| msgid "A restart is required to finish installing updates"
+msgid ""
+"Updates have been downloaded. A restart is required to finish installing "
+"them."
+msgstr "Päivitysten viimeistely vaatii uudelleenkäynnistyksen"
+
+#: src/Views/OperatingSystemView.vala:601
+#: src/Views/OperatingSystemView.vala:627
 msgid "Failed to download updates"
 msgstr "Päivitysten lataaminen epäonnistui"
 
-#: src/Views/OperatingSystemView.vala:564
+#: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:578
+#: src/Views/OperatingSystemView.vala:617
+#, c-format
+msgid "%s of %s"
+msgstr ""
+
+#: src/Views/OperatingSystemView.vala:628
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "updates may resolve the issue."
 msgstr ""
 
-#: src/Views/OperatingSystemView.vala:620
+#: src/Views/OperatingSystemView.vala:670
 msgid "System Settings Will Be Restored to The Factory Defaults"
 msgstr "Järjestelmän asetukset palautetaan oletusasetuksiin"
 
-#: src/Views/OperatingSystemView.vala:621
+#: src/Views/OperatingSystemView.vala:671
 msgid ""
 "All system settings and data will be reset to the default values. Personal "
 "data, such as music and pictures, will be unaffected."
@@ -510,16 +534,16 @@ msgstr ""
 "Kaikki järjestelmän asetukset ja tiedot palautetaan oletusarvoihin. Tämä ei "
 "vaikuta henkilökohtaisiin tietoihisi, kuten musiikkiin ja kuviin."
 
-#: src/Views/OperatingSystemView.vala:629
+#: src/Views/OperatingSystemView.vala:679
 msgid "Restore Settings"
 msgstr "Palauta oletusasetukset"
 
-#: src/Views/OperatingSystemView.vala:774
+#: src/Views/OperatingSystemView.vala:824
 msgid "Sponsor Us"
 msgstr ""
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
-#: src/Views/OperatingSystemView.vala:837
+#: src/Views/OperatingSystemView.vala:887
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
 msgstr ""
@@ -538,6 +562,9 @@ msgstr[1] "%u pakettia päivitetään"
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
 msgstr "Sulje"
+
+#~ msgid "Restart Required"
+#~ msgstr "Uudelleenkäynnistys vaaditaan"
 
 #~ msgid "Operating System Information"
 #~ msgstr "Käyttöjärjestelmän tiedot"

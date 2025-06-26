@@ -12,11 +12,13 @@ public interface SystemUpdate : Object {
     public struct CurrentState {
         State state;
         string message;
+        uint percentage;
+        uint64 download_size_remaining;
     }
 
     public struct UpdateDetails {
         string[] packages;
-        int size;
+        uint64 size;
         Pk.Info[] info;
     }
 
@@ -27,4 +29,5 @@ public interface SystemUpdate : Object {
     public abstract async void cancel () throws DBusError, IOError;
     public abstract async void check_for_updates (bool force, bool notify) throws DBusError, IOError;
     public abstract async void update () throws DBusError, IOError;
+    public abstract async int64 get_last_refresh_time () throws DBusError, IOError;
 }
