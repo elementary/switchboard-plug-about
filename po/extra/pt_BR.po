@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 22:39+0000\n"
 "PO-Revision-Date: 2025-07-26 16:55+0000\n"
-"Last-Translator: Guilherme Faura <guilhermefaura@gmail.com>\n"
+"Last-Translator: Gustavo Silva <g.costasalles@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementaryos.org/projects/"
 "settings/about-plug-extra/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -53,10 +53,12 @@ msgstr "Novas funcionalidades:"
 #: data/system.metainfo.xml.in:86
 msgid "Manage Operating System updates, including automatic updates"
 msgstr ""
+"Gerenciar atualizações do Sistema Operacional, incluindo atualizações "
+"automáticas"
 
 #: data/system.metainfo.xml.in:87
 msgid "Manage additional drivers"
-msgstr ""
+msgstr "Gerenciar drivers adicionais"
 
 #: data/system.metainfo.xml.in:91
 msgid "Improve operating system image for other Linux distributions"
