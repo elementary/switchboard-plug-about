@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 22:39+0000\n"
-"PO-Revision-Date: 2024-01-25 02:35+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
-"switchboard/switchboard-plug-about/zh_Hans/>\n"
+"PO-Revision-Date: 2025-08-03 04:55+0000\n"
+"Last-Translator: JieXu <xujie0739@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://"
+"l10n.elementaryos.org/projects/settings/switchboard-plug-about/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:10+0000\n"
 
 #: src/Plug.vala:46
@@ -45,35 +45,31 @@ msgstr "固件"
 
 #: src/Plug.vala:66 src/Plug.vala:147 src/Views/DriversView.vala:19
 msgid "Drivers"
-msgstr ""
+msgstr "驱动"
 
 #: src/Plug.vala:128 src/Views/OperatingSystemView.vala:238
-#, fuzzy
-#| msgid "All Updates"
 msgid "Automatic Updates"
-msgstr "全部更新"
+msgstr "自动更新"
 
 #: src/Plug.vala:129 src/Views/OperatingSystemView.vala:288
 msgid "Basics Guide"
-msgstr ""
+msgstr "基础使用指南"
 
 #: src/Plug.vala:130 src/Views/OperatingSystemView.vala:295
 msgid "Get Help"
-msgstr ""
+msgstr "获取帮助"
 
 #: src/Plug.vala:131
 msgid "Get Involved or Sponsor Us"
-msgstr ""
+msgstr "参与或赞助"
 
 #: src/Plug.vala:132
 msgid "Get Support"
 msgstr "获取支持"
 
 #: src/Plug.vala:133 src/Views/OperatingSystemView.vala:302
-#, fuzzy
-#| msgid "Website"
 msgid "Our Website"
-msgstr "项目主页"
+msgstr "我们的网站"
 
 #: src/Plug.vala:134
 msgid "Report a Problem"
@@ -88,19 +84,17 @@ msgid "Send Feedback"
 msgstr "提交反馈"
 
 #: src/Plug.vala:139
-#, fuzzy
-#| msgid "Device is locked"
 msgid "Device name"
-msgstr "设备已锁定"
+msgstr "设备名称"
 
 #: src/Plug.vala:140
 msgid "Host name"
-msgstr ""
+msgstr "主机名称"
 
 #. https://github.com/elementary/switchboard-plug-about/issues/219
 #: src/Plug.vala:142
 msgid "About This Device"
-msgstr ""
+msgstr "关于这台设备"
 
 #: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
@@ -110,72 +104,61 @@ msgstr "重启至固件设置界面…"
 msgid ""
 "Broadcom® Wi-Fi adapters, NVIDIA® graphics, and some virtual machines may "
 "not function properly without additional drivers."
-msgstr ""
+msgstr "Broadcom® Wi-Fi 适配器、NVIDIA® "
+"显卡和一些虚拟机可能需要安装额外的驱动程序才能正常运行。"
 
 #: src/Views/DriversView.vala:25
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "No drivers available"
-msgstr "%u 更新可用"
+msgstr "没有可用的驱动程序"
 
 #: src/Views/DriversView.vala:26
 msgid "This device doesn't need any additional drivers."
-msgstr ""
+msgstr "这台设备无需安装额外的驱动程序。"
 
 #: src/Views/DriversView.vala:30
-#, fuzzy
-#| msgid "Checking for Updates"
 msgid "Checking for Drivers"
-msgstr "正在检查更新"
+msgstr "正在检查驱动程序"
 
 #: src/Views/DriversView.vala:31
-#, fuzzy
-#| msgid "Connecting to the firmware service and searching for updates."
 msgid "Connecting to the driver service and searching for drivers."
-msgstr "正在连接固件服务并查找更新。"
+msgstr "正在连接驱动服务以查找驱动程序。"
 
 #: src/Views/DriversView.vala:51
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install driver"
-msgstr "安装固件失败"
+msgstr "安装驱动程序失败"
 
 #: src/Views/DriversView.vala:52
 msgid "Manually refreshing driver information may resolve the issue"
-msgstr ""
+msgstr "手动刷新驱动程序信息可能可以解决此问题"
 
 #: src/Views/DriversView.vala:55 src/Views/OperatingSystemView.vala:214
 msgid "Refresh"
 msgstr "刷新"
 
 #: src/Views/DriversView.vala:55
-#, fuzzy
-#| msgid "Hardware Information"
 msgid "Refresh driver information"
-msgstr "硬件信息"
+msgstr "刷新驱动程序信息"
 
 #: src/Views/DriversView.vala:56 src/Views/OperatingSystemView.vala:226
 msgid "Learn More…"
-msgstr ""
+msgstr "了解更多…"
 
 #: src/Views/DriversView.vala:91
-#, fuzzy
-#| msgid "Failed to install firmware release"
 msgid "Failed to install"
-msgstr "安装固件失败"
+msgstr "安装失败"
 
 #: src/Views/DriversView.vala:92
 msgid ""
 "This may have been caused by sideloaded or manually compiled software, a "
 "third-party software source, or a package manager error. Manually refreshing "
 "may resolve the issue."
-msgstr ""
+msgstr "这可能是由于侧载或自行编译的软件、第三方软件源或软件包管理器的错误所导致。手"
+"动刷新可能可以解决该问题。"
 
 #: src/Views/DriversView.vala:156
 #, c-format
 msgid "Installing %s…"
-msgstr ""
+msgstr "正在安装 %s…"
 
 #: src/Views/FirmwareReleaseView.vala:28
 msgid "All Updates"
@@ -261,7 +244,7 @@ msgstr[0] "%u 更新可用"
 
 #: src/Views/FirmwareView.vala:223
 msgid "Up to Date"
-msgstr "已是最新"
+msgstr "已是最新版本"
 
 #: src/Views/FirmwareView.vala:231
 #, c-format
@@ -325,7 +308,7 @@ msgstr "某个系统错误已阻止自动重启至固件设置界面。"
 
 #: src/Views/HardwareView.vala:49
 msgid "You do not have permission to change the device name"
-msgstr ""
+msgstr "您无权更改设备名称"
 
 #: src/Views/HardwareView.vala:60
 #, c-format
@@ -345,17 +328,12 @@ msgid "Manufacturer Website"
 msgstr "项目网站"
 
 #: src/Views/HardwareView.vala:160
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Update device name"
-msgstr "%u 更新可用"
+msgstr "更改设备名称"
 
 #: src/Views/HardwareView.vala:180
-#, fuzzy
-#| msgid "Device is locked"
 msgid "Device name saved"
-msgstr "设备已锁定"
+msgstr "设备名称已保存"
 
 #: src/Views/HardwareView.vala:284
 #, c-format
@@ -398,7 +376,7 @@ msgstr "%s SATA 固态硬盘"
 #: src/Views/HardwareView.vala:535
 #, c-format
 msgid "%s storage (HDD)"
-msgstr "%s 机械硬盘"
+msgstr "%s 机械硬盘 (HDD)"
 
 #. Set fallback string for the device type
 #: src/Views/HardwareView.vala:540
@@ -412,22 +390,20 @@ msgid_plural "bytes"
 msgstr[0] "字节"
 
 #: src/Views/HardwareView.vala:714
-#, fuzzy, c-format
-#| msgid "byte"
-#| msgid_plural "bytes"
+#, c-format
 msgid "%u byte"
 msgid_plural "%u bytes"
-msgstr[0] "字节"
+msgstr[0] "%u 字节"
 
 #: src/Views/HardwareView.vala:721
-#, fuzzy, c-format
+#, c-format
 msgctxt "format-size"
 msgid "%u %s"
-msgstr "%llu %s"
+msgstr "%u %s"
 
 #: src/Views/OperatingSystemView.vala:209
 msgid "Download"
-msgstr ""
+msgstr "下载"
 
 #: src/Views/OperatingSystemView.vala:212
 msgid "Cancel"
@@ -441,7 +417,7 @@ msgstr ""
 
 #: src/Views/OperatingSystemView.vala:309
 msgid "Get Involved"
-msgstr ""
+msgstr "参与"
 
 #: src/Views/OperatingSystemView.vala:496
 #, c-format
@@ -449,79 +425,67 @@ msgid "Built on %s"
 msgstr "基于 %s 构建"
 
 #: src/Views/OperatingSystemView.vala:516
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "System updates not available"
-msgstr "%u 更新可用"
+msgstr "系统更新暂不可用"
 
 #: src/Views/OperatingSystemView.vala:517
 msgid "Couldn't connect to the backend. Try logging out to resolve the issue."
-msgstr ""
+msgstr "无法连接到后台服务，请尝试注销以解决此问题。"
 
 #: src/Views/OperatingSystemView.vala:530
-#, fuzzy
-#| msgid "Up to Date"
 msgid "Up To Date"
-msgstr "已是最新"
+msgstr "最新版本"
 
 #: src/Views/OperatingSystemView.vala:534
 #, c-format
 msgid "Last checked %s"
-msgstr ""
+msgstr "上次检查：%s"
 
 #: src/Views/OperatingSystemView.vala:541
 msgid "Last checked unknown"
-msgstr ""
+msgstr "上次檢查：未知"
 
 #: src/Views/OperatingSystemView.vala:554
-#, fuzzy
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
 msgid "Updates Available"
-msgstr "%u 更新可用"
+msgstr "检测到有可用更新"
 
 #: src/Views/OperatingSystemView.vala:561
-#, fuzzy, c-format
-#| msgid "%u Update Available"
-#| msgid_plural "%u Updates Available"
+#, c-format
 msgid "%i update available (%s)"
 msgid_plural "%i updates available (%s)"
-msgstr[0] "%u 更新可用"
+msgstr[0] "有 %i 项更新（%s）"
 
 #: src/Views/OperatingSystemView.vala:572
 msgid "Unable to determine number of updates"
-msgstr ""
+msgstr "无法确定更新数量"
 
 #: src/Views/OperatingSystemView.vala:586
-#, fuzzy
-#| msgid "All Updates"
 msgid "Downloading Updates"
-msgstr "全部更新"
+msgstr "正在下载更新"
 
 #: src/Views/OperatingSystemView.vala:595
 msgid "Restart to install pending updates"
-msgstr ""
+msgstr "重启以安装待处理的更新"
 
 #: src/Views/OperatingSystemView.vala:596
 msgid ""
 "Updates have been downloaded. A restart is required to finish installing "
 "them."
-msgstr ""
+msgstr "更新已完成下载，需重新启动以完成安装。"
 
 #: src/Views/OperatingSystemView.vala:601
 #: src/Views/OperatingSystemView.vala:627
 msgid "Failed to download updates"
-msgstr ""
+msgstr "无法下载更新"
 
 #: src/Views/OperatingSystemView.vala:602
 msgid "Manually refreshing updates may resolve the issue"
-msgstr ""
+msgstr "手动刷新更新可能有助于解决此问题"
 
 #: src/Views/OperatingSystemView.vala:617
 #, c-format
 msgid "%s of %s"
-msgstr ""
+msgstr "%s / %s"
 
 #: src/Views/OperatingSystemView.vala:628
 msgid ""
@@ -547,23 +511,23 @@ msgstr "重置设置"
 
 #: src/Views/OperatingSystemView.vala:824
 msgid "Sponsor Us"
-msgstr ""
+msgstr "赞助我們"
 
 #. /TRANSLATORS: first value is a percentage, second value is an amount in USD
 #: src/Views/OperatingSystemView.vala:887
 #, c-format
 msgid "%.0f%% towards $%'5.0f per month goal"
-msgstr ""
+msgstr "每月目标 $%'5.0f 的 %.0f%% 已达成"
 
 #: src/Widgets/UpdateDetailsDialog.vala:14
 msgid "What's New"
-msgstr ""
+msgstr "新功能"
 
 #: src/Widgets/UpdateDetailsDialog.vala:20
 #, c-format
 msgid "%u package will be upgraded"
 msgid_plural "%u packages will be upgraded"
-msgstr[0] ""
+msgstr[0] "%u 个软件包将会被更新"
 
 #: src/Widgets/UpdateDetailsDialog.vala:67
 msgid "Close"
