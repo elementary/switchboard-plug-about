@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-about\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-20 22:39+0000\n"
-"PO-Revision-Date: 2025-03-01 15:25+0000\n"
+"PO-Revision-Date: 2025-08-30 22:55+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://l10n.elementary.io/projects/settings/"
+"Language-Team: Japanese <https://l10n.elementaryos.org/projects/settings/"
 "switchboard-plug-about/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:09+0000\n"
 
 #: src/Plug.vala:46
@@ -98,7 +98,7 @@ msgstr "このデバイスについて"
 
 #: src/Plug.vala:145 src/Views/FirmwareView.vala:86
 msgid "Restart to Firmware Setup…"
-msgstr "再起動してファームウェアの設定に入る…"
+msgstr "再起動してファームウェア設定に入る…"
 
 #: src/Views/DriversView.vala:20
 msgid ""
@@ -301,7 +301,7 @@ msgstr "シャットダウン"
 
 #: src/Views/FirmwareView.vala:422
 msgid "Restart to firmware setup"
-msgstr "再起動してファームウェアの設定に入る"
+msgstr "再起動してファームウェア設定に入る"
 
 #: src/Views/FirmwareView.vala:423
 msgid ""
@@ -313,13 +313,12 @@ msgstr ""
 
 #: src/Views/FirmwareView.vala:447
 msgid "Unable to restart to firmware setup"
-msgstr "再起動してファームウェアの設定に入ることができませんでした"
+msgstr "再起動してファームウェア設定に入ることができませんでした"
 
 #: src/Views/FirmwareView.vala:448
 msgid "A system error prevented automatically restarting into firmware setup."
-msgstr ""
-"システムエラーのため、再起動して自動的にファームウェアの設定に入ることができ"
-"ませんでした。"
+msgstr "システムエラーのため、再起動して自動的にファームウェア設定に入ることができま"
+"せんでした。"
 
 #: src/Views/HardwareView.vala:49
 msgid "You do not have permission to change the device name"
